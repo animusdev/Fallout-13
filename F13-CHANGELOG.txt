@@ -1,0 +1,494 @@
+-=o=- Full changelog of Fallout 13 -=o=-
+
+It took us more than a year to assemble all the fixes, features, graphics and sounds together.
+We couldn't afford automatic change logging or other fancy features.
+Instead you can have this odd and barely readable changelog to satisfy your curiosity.
+If you are not sure if you can figure out all that messy stuff, notable features of F13 may also be found at our devblog:  https://www.reddit.com/r/Fallout13/
+
+Part I: Fallout 13 Build Specific Features
+The unique content created by Fallout 13 team and our dear friends who wanted to contribute to the project on their own.
+
+#1 - Ivan_Mrr
+
+Ivan is pro-level graphic artist, who spared some time to create awesome sprites for our project.
+
+*Entirely new cryo.
+*Cool new tables!
+*Additional ladder icon in structures.
+*trash.dmi and some trash like barrels and tires for sure.
+*More wall and floor types, as the floors didn't fit in the floors.dmi we have added the floors2.dmi and floors3.dmi
+*Tons of decals in decals.dmi (wasteland, asphalt and vault decals too.)
+*wasteland_doors.dmi
+*obstacles.dmi : metal fences, blue and yellow handrails - all these are coded in already.
+*Cactus and tree parts in wasteland.dmi
+*Wasteland trees in deadtrees.dmi
+*gear.dmi - Vault door with open and closing animation sequences.
+
+#2 - WalterJe
+
+WalterJe is one of notable Space Station 13 graphic artists, whose content is present in builds of various communities including /tg/ Station 13 and all which use TG codebase, Animus Station and Tau Ceti Station as well.
+And he created quite some sprites for F13 specifically.
+
+*Motion tracker with sound. Coded in the build.
+*Modern fancy backpacks.
+*Legendary computers from IRL like early models of Apple and Lunar.
+*Added krotchy doll with sounds. Coded in the build.
+*Entirely updated genetics and cloning.
+*New chairs made in style of Goon Station, to look right with goon's content as well.
+*Makeshift knife, machete, frying pan, hammer and golf club in weapons.dmi
+*Wasteland motorcycle with animations and a dune buggy vehicles. They work just fine in-game, easy spawn, both include sounds for engine start.
+
+#3 - BartNixon
+
+Bart is the one who started to create the thing two years ago for a global event, but it has turned into a separate codebase.
+Being a designer in real life, he created various sprites from a scratch to fit in Fallout 13 universe.
+
+*Created glowing mushrooms and added them to wasteland.dmi
+*Filled decal.dm with various decorative decal instances along with the ones from Mr. R.
+*Passports in bureaucracy.
+*Better Nuka Cola. Now with code!
+*Nuka Cola vending machine.
+*Radiation King Radio in radio.dmi
+*New APC's.
+
+Bart's code stuff:
+
+*Created f13_example_0 map to provide a mapping example. 
+*Turned Central Command updates into Radio Broadcasts and changed the general system to work with this one. Morse code is strong in this one.
+*Total hair overhaul! Added different hairstyles and facial hair, renamed quite some hairstyles and fixed the sprites. Adapted the all the lists according to the type and style of hair.
+*Moved all skirts and female uniforms to a dedicated subtype - under/female/
+*Coded the specific Fallout 13 clothing - can be discovered searching for "f13" in item spawn search.
+*Restored legacy body bags.
+*New text formating style for ingame chat, and new colors for admin chat etc.
+*Moved all vehicle icons to a special folder. 
+All vehicle icons are now called small_vehicles.dmi and medium_vehicles.dmi
+*Cops can be dirty too - allowed Security Officer and Detective to be an antag.
+
+#4 - WB
+
+WB was the very first coder from /tg/ Station 13 to provide his help with the project. 
+
+*New loading screen system - smooth and random swap of lobby images Fallout style.
+*Holodisks with animations when played.
+
+#5 - Nienhaus
+
+Our dear friend from Urist McStation, one of the most notable Space Station 13 spriters, who created content for most of SS13 codebases. His content can be found everywhere from /tg/ Station 13 to Baystation 12 and all the derivatives of them.
+
+*Wasteland piano sprites.
+*Mr.Handy and Mr.Gutsy!
+*Barrel cactus at wasteland.dmi and barrel cactus fruit in food.dmi
+*Grand food update. Pre-war foods added to food.dmi and remaining junk in janitor.dmi
+*Added various clothing for characters, pre-War outfits and such.
+*Also added content from other of his projects, mafia and cowboy stuff.
+
+#6 - MrSnapwalk
+
+We wish there were more people who have heard of MrSnapwalk, aside from Baystation 12 or UristMcStation. Skilled and creative spriter with impressive music talent.
+
+*Stimpack and Med-X (syringes), Radaway (bloodpack), Hydra, Psycho, Jet, Rebound (syringes), Mentats, Turbo, rad-x, steady (chemical)
+*Replaced syringes to a med-x similar variant. 
+*Classic fallout terminal in computers.dmi
+*Protectron, Robobrain and Eyebot robots!
+
+#7 - A3lex33
+
+Some people believe this particular coder is the future of the project. Sure thing he got some skills, and the rumors can be true. If he won't stop coding the cool stuff of course. 
+
+*obstacles.dm for some wasteland related objects.
+*Coded fences (can cut through the specific parts of these with wirecutters), and fence doors. 
+*Total remake of NanoUI style! Now it's more of an 80's computer terminal.
+
+#8 - Uboaaaaaa
+
+A great visual artist from the type of traditional arts, future programmer a one who contributed the very first animal mobs to the project.
+
+*Mole rat and cazador icons.
+*Some awesome female haircuts. Coded in the build.
+
+#9 - Llego_man007
+
+This man knows how to sprite some fancy clothing. And so he did fill the F13 with quality content to the edge.
+
+*Various clothing sprites, suits, armor, uniforms, coats - you name it.
+
+#10 - BlackJack22
+
+A beginner level spriter, a person who is responsible for the project's revival after a year long freeze.
+Special thanks to you BlackJack22.
+
+*New intercom sprite.
+*New glass shards.
+
+#11 - Murmillo
+
+A huge fan of Fallout series and an active supporter of a project who made a tiny contribution to leave his mark on the F13. We had xenomorph aliens before, now we have alien hunter - fearsome and sometimes invisible Predator.
+
+*Metal chestplate.
+*Predator mob.
+
+#12 - Lydee
+
+A person who made the whole Fallout 13 possible by inspiring some people to begin the project in the first place.
+
+*Holodisk icons with animation sequence.
+*Classic military stimpack.
+
+#13 - Alexlox
+
+A spriter who could create so much more good things if he wanted to.
+
+*We have two guitars now. Which is great, for some Lonesome Drifters.
+
+#14 - Harvester
+
+An artist with a strong desire to make his own version of Fallout 13 the way he wants it to be.
+
+*Burn barrel with animation
+
+#15 - DoctorWho08
+
+Shady entity with specific style and behaviour, but nevertheless - it is here, and it can do some good deeds.
+
+MFP jacket from Mad Max 1979
+
+#16 - Incoming5643
+
+Someone who doesn't even know of Fallout 13 (yet), but sure can join our lovely team any time. 
+
+*Added large metal boxes of RobCo with code (brilliant for mob-containment purposes)
+
+Part II: Manual Fixes
+It's the code selectively ported from /tg/ Station 13 and other various sources we don't account as our own and don't claim any rights for it's creation.
+But without these, the build could not exist on it's own.
+Most of the following are more Space Station 13 related, but some of them do really affect F13 as well.
+Original creators of Manual Fix code are listed along with the changes they made.
+Notable features have comments stating the change of mechanics or provide the explanation of their in-game use.
+
+#1 - KorPhaeron
+
+ATTENTION!
+*Dual wielding guns.
+Pick two, fire both! On harm intent only, and a slight delay between off_hand shots.
+
+*AI can no longer bolt drop pod doors.
+*Added WARNING SPACE signs in front of the drop pod room.
+*Nerfed ultimate stealth weapon (fork) - now it will show attack animation when trying to target eyes.
+*Removed the excess janitors bucket from the Nuke ops bathroom. 
+*Using challenge ops delays evac. shuttle refuel.
+*Supermatter logging fix by KorPhaeron. It deleted people before trying to generate the log message, resulting in "has consumed null".
+*Energy axe typo fixed. 
+*Fixed away mission pamphlet desc.
+*Made observers be capable of orbiting and AI eye and clicking the (F) link on AI speech will make you orbit their camera eye. 
+
+ATTENTION!
+*And weapon skin change is performed on alt+click only, instead of normal click.
+
+*Fixed AI satellite secure storage name.
+*Also non cultists can't use Godstaff to convert structures anymore.
+*Fixed guardians/parasites always being named "Guardian Spirit" after they died.
+*Also buffed cakehat.
+*PDA messages now have a (F) link for ghosts.
+*Various PDA fixes.
+*Added unrestricted foam force weapons for admin spawn. 
+*Fixed Grey Tide (spear) exploits.
+*Fixed successive generations of Grey Tide clones not despawning.
+*Revive now removes hallucination.
+*Walls are now a slightly higher layer than floors.
+*Made practice lasers a lot scarier.
+*Lusty Xenomorph Maid spawns from slime core. Badmins can spawn: alien/maid.
+*pAI can use internal PDA again.
+*Chaplain has got theatre access.
+*Re-added hunger to the game.
+*Responding to a centcomm message resets the machines cooldown.
+
+#2 - LanCartwright
+
+*Reduced earrape from chainsaws (hit-sound replaced).
+
+ATTENTION!
+*Made all firearms hardcore - if you have no armor at all, you are really fucked.
+Realistic gun damage, consistent body armour protection, realistic bullet changes.
+More unacidable items and total gun and armor renovation.
+Also the 375 ammo got rekt (in code), and replaced with .44 Magnum.
+Do you feel lucky now, punk?
+
+#3 - tkdrg
+
+*Finally fixed special completion for real.
+*Fixed weird lizard feature issues.
+*Also fixed unpowered windoors being stuck closed. 
+*Manual bans will now add notes automatically.
+*Fixed secbot construction dupe.
+*Removed stealthmins from the orbit list and makes them invisible. Remember to always use dsay instead of say to avoid the (F) links!
+*Checking antagonists will now message admins.
+*Added a message_admins() when a flamethrower is lit.
+*Fixed create revolutionares bugs.
+*Janitor belt can hold janicart keys, while utility belt and secbelt can hold any keys.
+*Added a "no power" warning emote to cyborgs.
+*Admin moreinfo links to antags in ahelp are now red.
+*Jet fuel can't melt steel beams (reinforced floor won't burn away).
+
+ATTENTION!
+*Admin item duplicator.
+Added a "dupe marked datum" option to Game Panel)
+Instructions:
+tkdrg: You click "mark datum" in the dropdown and then open game panel and click "duplicate marked datum" . Also the dropdown isn't easily spammable for badm- I mean, for events.
+
+*Floor level objects will now be protected from explosions until they are exposed.
+(Note for the last referenced feature: It didn't break the game but it seems it doesn't work.)
+
+#4 - RemieRichards
+
+*Get_turf_pixel() is now more accurate:
+Returns a turf closer to the center in even multiples of world.icon_size (64,128, etc.)
+Handles irregular (non-world.icon_size sized objects) better.
+Now handles Matrix X/Y shifts.
+*Made ATMOS SPEED ZOOM ZOOM WEEE optimised two loops that Dunc missed.
+
+ATTENTION!
+*Added custom maploader.
+Admin with +Debug can safely spawn map piece 30x30 tiles, using a load map template command from Debug menu. Map spawns in a "green" highlited zone with various objects, items and structures for different purposes, if the map was included into the special folder in the build.
+Use this to load f13_example_0.dmm for instance.
+ONCE AGAIN:
+Admins with +DEBUG can now Load map files in the _map/templates folder where they (or their ghost) is standing.
+
+*Also improved the speed of the for()loops in the maploader procs. Removed assumptions that the coordinates exist (NO MORE RUNTIMES AT MAP EDGES WOOO!)
+
+ATTENTION!
+*Created simple Vehicle Framework, so now you can create easy vehicles like a boss.
+All vehicles moved to modules/vehicles.
+This allowed us to create various fallout vehicles with sounds.
+
+#5 - MrStonedOne
+
+*Clear orbit on exit, also orbits now resets the atom's transform immediately.
+*In addition Removes the sleep from the top of orbit, makes orbit check for var changes.
+*Made no grav movement use can_pass rather then density - fixed no gravity around the blob.
+*Atmos dynamic wait tweaked.
+*Made reset vars handle lists properly.
+*Smooth pixel screens shakes!
+*Maploader paths fix.
+*Made emoji parsing return the text if they runtime.
+
+#6 - Incoming564
+
+*Depriciated *stopwag. *wag is now a toggle.
+*Fixed a rare issue with the imposter event (RPG loot).
+*The AI can recall the shuttle now.
+*Added a fix to touch attack hands getting loose from their owners.
+
+ATTENTION!
+*Very special monkey has gained a few persistence save file features.
+If Caesar / Toecutter / Humungus / Immortan is alive till the end of the round - it will return in the next one keeping the items it had on the head and in mouth slots. If it dies - it's sucessor will appear bearing the family name and keeping the loot.
+If it's gibbed, a new wasteland legend is born from a scratch.
+
+#7 - Chnkr
+
+*Robocop laws are back to normal.
+
+#8 - AnturK
+
+*Low Midichlorians: Added cooldown on tk throwing.
+*Made Ghost HUD toggle persistent.
+*Fixed anomalies spawning same place.
+*Fixed HandOfGod ghost image.
+*Fixed bot topics.
+*Fixes teleporter hub working without power.
+*Fixed mule crate.
+*Hallucinations code cleanup.
+*Added helper for creating human looking simple animals.
+*code/datums/datacore.dm code cleanup: made manifest entries use get_flat_human_icon
+*Fixed specific hostile mobs walking in space.
+*Fixed hivelord brood feature not to spam the fuck out of the server.
+*Removed some unused code - modules.dm entirely removed.
+*Maploader and templates fixes, awesome!
+
+#9 - The-Albinobigfoot
+
+*Nuclear Operatives can buy no-slips again.
+
+#10 - Thunder12345
+
+ATTENTION!
+*Made holoparasites vulnerable to EMPs
+Manufacturing cost concerns have resulted in newly produced holoparasites suffering a significant vulnerability to EMPs. Crews are now recommended to engage with the station's ion rifle.
+Alternative solution to nerfing holoparasites, instead of increasing the cost, to give them a significant vulnerability.
+Every hit from the ion rifle multiplies the damage_transfer of the stand by a factor of 1.15, and forces it to recall. Forced recalls will not respect the usual cooldown.
+
+*Improved admin-to-playerghost Offer Control (+ Fixed offer control to ghosts not working on mindless mobs).
+
+#11 - AssassinT90
+
+*fixed emaged door bug.
+
+#12 - Robertha89
+
+*made medibeam researchable.
+
+#13 - Buggy123
+
+*buffed IEDS. They now have a small explosion capable of destroying things.
+
+#14 - Bawhoppen
+
+*Amateur medieval enthusiasts have found a quick way to easily make wooden bucklers. 
+(Also can be worn on back)
+
+#15 - Anonus and Joan
+
+*Replaced every book sprite in the game with new, consistent versions.
+Except the one-use wizard spellbooks, which already got new sprites.
+
+#16 - TheRealGLH
+
+*Made containment fields and electric chairs use electrocute_act.
+
+#17 - Swankcookie
+
+*holopad fun fix (you can block it with runes, but also it has fixed layer).
+
+#18 - PKPenguin321
+
+*Lowered thermals TC cost 6 -> 4
+*Buffs tablecrafting! Now everything is way faster!
+*Gave chameleon suit some armor +10
+
+ATTENTION!
+*Added BOLAS weapon! Craft it with wire and metal sheets and you can slow down / weaken and capture people!
+There are three types of these: makeshift bola, raider bola, and tribal bola with different stats and effects.
+
+#19 - bgobandit
+
+*Fixed extra messages while grabbing someone who is buckled.
+*HUD icons for cooks.
+*Added shots of wine and other things.
+*More emojis.
+*Use wirecutters to completely remove the poster.
+*Cat fixes and fully functional space cat!
+
+#20 - okaw
+
+*Changed bartender shoes to laceup
+
+#21 - lordpidey
+
+*Detectives camera is now a subtype.
+
+#22 - duncathan
+
+*Added Cat behaviour
+*Graffiti desc fix.
+*Ghosts remain orbitting the nuclear disc when it gets "destroyed".
+
+#23 - phil235
+
+*Fixed inventory things appearing above the nuke cinematic.
+
+#24 - Lobachevskiy
+
+*Made police and telebatons respect shields.
+
+#25 - Xhuis
+
+*Made stunbaton respect shields.
+
+#26 - octareenroon91
+
+*Made player-medbot get blood scans on examine.
+
+#27 -  TrustyGun
+
+*Toy fake-handcuffs for fun!
+
+#28 - Razharas
+
+*Made it possible to wrench PDA painters
+*All of the bottom gateway parts are passable (very tiny parts of gateway on the bottom)
+
+#29 - WJohn
+
+*Medbeam icon improved.
+*Better lizards
+
+#30 - neersighted
+
+*FINAL FIX OF NANOUI BEFORE IT WAS BURRIED FOREVER AND REPLACED WITH TGUI
+
+#31 - GunHog
+
+*Gave ghosts a full Security HUD.
+
+#32 - Shadowlight213
+
+*Added admin button to change central command's name.
+
+#33 - erwgd
+
+*Plasmameme tank improvements
+
+#34 - Izmann
+
+*Added a way to change vehicles view range
+
+#35 - Supermichael777
+
+ATTENTION!
+*Added safeties for all the guns. Hold the alt key and click the gun to use it.
+
+#36 - Gyaviste
+
+*Nerfed restriction on client uploads to the server, from 1MB to 2MB (you can now normaly uppload slightly larger music files and images)
+*Added the Edit Appearance admintool.
+
+#37 - HoldMePlease: 
+
+ATTENTION!
+*Changed F1 - F11 hotkey macross to Baystation model, with personal additions to it. 
+*Changed hotkey help file as well.
+
+f1 - ahelp
+f2 - OOC
+f3 - say
+f4 - me
+f5 - asay
+f6 - player panel
+f7 - admin PM
+f8 - admin mob invisibility
+f9 - aghost
+f10 - null (really, it has no function yet)
+f11 - buildmode
+f12 - HUD mode for all the players.
+
+Atlas Station awesomeness:
+
+*Every mob can be Forced Say.
+*You can change uniform without dropping stuff.
+*Added flashlight sounds.
+*Added lighter and zippo sounds.
+*Added washing machine sound.
+*Added air alarm - red alert sound.
+*Added matches lit and hit sounds - also nerfed match to lit with probability of 50%.
+
+Part III: Soundjob
+It took quite some time to create the atmosphere, and sound does about 70% of the job.
+
+Sounds which were replaced:
+
+*adminhelp
+*All ambigen sounds at ambience folder - and coded them in areas.dm
+*Gunshot_silenced.ogg
+*timer.ogg with Counter-Strike bomb beep.
+*Better grillehit.ogg
+*Better smoke.ogg
+*Better twobeep.ogg
+*All of robot signals.
+
+Sounds which were replaced via Code as well:
+
+*Lobby music for your listening pleasure.
+*All the end round sounds.
+*Sounds for basic airlock, added closing sound and forced closing.
+*Explosions.
+*Added distant explosion sound instance.
+*Added sounds for turret opening and closing.

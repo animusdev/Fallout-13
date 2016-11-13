@@ -1,0 +1,1074 @@
+macro "borghotkeymode"
+	elem 
+		name = "TAB"
+		command = ".winset \"mainwindow.macro=borgmacro hotkey_toggle.is-checked=false input.focus=true input.background-color=#D3B5B5\""
+	elem 
+		name = "CENTER+REP"
+		command = ".center"
+	elem 
+		name = "NORTHEAST"
+		command = ".northeast"
+	elem 
+		name = "SOUTHEAST"
+		command = ".southeast"
+	elem 
+		name = "NORTHWEST"
+		command = "unequip-module"
+	elem 
+		name = "CTRL+WEST"
+		command = "westface"
+	elem 
+		name = "WEST+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+NORTH"
+		command = "northface"
+	elem 
+		name = "NORTH+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+EAST"
+		command = "eastface"
+	elem 
+		name = "EAST+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+SOUTH"
+		command = "southface"
+	elem 
+		name = "SOUTH+REP"
+		command = ".south"
+	elem 
+		name = "INSERT"
+		command = "a-intent right"
+	elem 
+		name = "DELETE"
+		command = "delete-key-pressed"
+	elem 
+		name = "1"
+		command = "toggle-module 1"
+	elem 
+		name = "CTRL+1"
+		command = "toggle-module 1"
+	elem 
+		name = "2"
+		command = "toggle-module 2"
+	elem 
+		name = "CTRL+2"
+		command = "toggle-module 2"
+	elem 
+		name = "3"
+		command = "toggle-module 3"
+	elem 
+		name = "CTRL+3"
+		command = "toggle-module 3"
+	elem 
+		name = "4"
+		command = "a-intent left"
+	elem 
+		name = "CTRL+4"
+		command = "a-intent left"
+	elem 
+		name = "A+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+A+REP"
+		command = ".west"
+	elem 
+		name = "B"
+		command = "resist"
+	elem 
+		name = "CTRL+B"
+		command = "resist"
+	elem 
+		name = "D+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+D+REP"
+		command = ".east"
+	elem 
+		name = "F"
+		command = "a-intent left"
+	elem 
+		name = "CTRL+F"
+		command = "a-intent left"
+	elem 
+		name = "G"
+		command = "a-intent right"
+	elem 
+		name = "CTRL+G"
+		command = "a-intent right"
+	elem 
+		name = "O"
+		command = "ooc"
+	elem 
+		name = "CTRL+O"
+		command = "ooc"
+	elem 
+		name = "Q"
+		command = "unequip-module"
+	elem 
+		name = "CTRL+Q"
+		command = "unequip-module"
+	elem "s_key"
+		name = "S+REP"
+		command = ".south"
+	elem 
+		name = "CTRL+S+REP"
+		command = ".south"
+	elem 
+		name = "T"
+		command = "say"
+	elem "w_key"
+		name = "W+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+W+REP"
+		command = ".north"
+	elem 
+		name = "X"
+		command = ".northeast"
+	elem 
+		name = "CTRL+X"
+		command = ".northeast"
+	elem 
+		name = "Y"
+		command = "Activate-Held-Object"
+	elem 
+		name = "CTRL+Y"
+		command = "Activate-Held-Object"
+	elem 
+		name = "Z"
+		command = "Activate-Held-Object"
+	elem 
+		name = "CTRL+Z"
+		command = "Activate-Held-Object"
+	elem 
+		name = "F1"
+		command = "adminhelp"
+	elem 
+		name = "CTRL+SHIFT+F1+REP"
+		command = ".options"
+	elem 
+		name = "F2"
+		command = "ooc"
+	elem 
+		name = "SHIFT+F2+REP"
+		command = ".screenshot"
+	elem 
+		name = "F3"
+		command = "say"
+	elem 
+		name = "F4"
+		command = "me"
+	elem 
+		name = "F5"
+		command = "asay"
+	elem 
+		name = "F6"
+		command = "Player-Panel"
+	elem 
+		name = "F7"
+		command = "Admin-PM"
+	elem 
+		name = "F8"
+		command = "Invisimin"
+	elem 
+		name = "F9"
+		command = "Aghost"
+	elem 
+		name = "F11"
+		command = "Toggle-Build-Mode-Self"
+	elem 
+		name = "F12"
+		command = "F12"
+
+macro "macro"
+	elem 
+		name = "TAB"
+		command = ".winset \"mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true input.background-color=#F0F0F0\""
+	elem 
+		name = "CENTER+REP"
+		command = ".center"
+	elem 
+		name = "NORTHEAST"
+		command = ".northeast"
+	elem 
+		name = "SOUTHEAST"
+		command = ".southeast"
+	elem 
+		name = "SOUTHWEST"
+		command = ".southwest"
+	elem 
+		name = "NORTHWEST"
+		command = ".northwest"
+	elem 
+		name = "CTRL+WEST"
+		command = "westface"
+	elem 
+		name = "WEST+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+NORTH"
+		command = "northface"
+	elem 
+		name = "NORTH+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+EAST"
+		command = "eastface"
+	elem 
+		name = "EAST+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+SOUTH"
+		command = "southface"
+	elem 
+		name = "SOUTH+REP"
+		command = ".south"
+	elem 
+		name = "INSERT"
+		command = "a-intent right"
+	elem 
+		name = "DELETE"
+		command = "delete-key-pressed"
+	elem 
+		name = "CTRL+1"
+		command = "a-intent help"
+	elem 
+		name = "CTRL+2"
+		command = "a-intent disarm"
+	elem 
+		name = "CTRL+3"
+		command = "a-intent grab"
+	elem 
+		name = "CTRL+4"
+		command = "a-intent harm"
+	elem 
+		name = "CTRL+A+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+B"
+		command = "resist"
+	elem 
+		name = "CTRL+D+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+E"
+		command = "quick-equip"
+	elem 
+		name = "CTRL+F"
+		command = "a-intent left"
+	elem 
+		name = "CTRL+G"
+		command = "a-intent right"
+	elem 
+		name = "CTRL+O"
+		command = "ooc"
+	elem 
+		name = "CTRL+Q"
+		command = ".northwest"
+	elem 
+		name = "CTRL+R"
+		command = ".southwest"
+	elem 
+		name = "CTRL+S+REP"
+		command = ".south"
+	elem 
+		name = "CTRL+W+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+X"
+		command = ".northeast"
+	elem 
+		name = "CTRL+Y"
+		command = "Activate-Held-Object"
+	elem 
+		name = "CTRL+Z"
+		command = "Activate-Held-Object"
+	elem 
+		name = "F1"
+		command = "adminhelp"
+	elem 
+		name = "CTRL+SHIFT+F1+REP"
+		command = ".options"
+	elem 
+		name = "F2"
+		command = "ooc"
+	elem 
+		name = "SHIFT+F2+REP"
+		command = ".screenshot"
+	elem 
+		name = "F3"
+		command = "say"
+	elem 
+		name = "F4"
+		command = "me"
+	elem 
+		name = "F5"
+		command = "asay"
+	elem 
+		name = "F6"
+		command = "Player-Panel"
+	elem 
+		name = "F7"
+		command = "Admin-PM"
+	elem 
+		name = "F8"
+		command = "Invisimin"
+	elem 
+		name = "F9"
+		command = "Aghost"
+	elem 
+		name = "F11"
+		command = "Toggle-Build-Mode-Self"
+	elem 
+		name = "F12"
+		command = "F12"
+
+macro "hotkeymode"
+	elem 
+		name = "TAB"
+		command = ".winset \"mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true input.background-color=#D3B5B5\""
+	elem 
+		name = "CENTER+REP"
+		command = ".center"
+	elem 
+		name = "NORTHEAST"
+		command = ".northeast"
+	elem 
+		name = "SOUTHEAST"
+		command = ".southeast"
+	elem 
+		name = "SOUTHWEST"
+		command = ".southwest"
+	elem 
+		name = "NORTHWEST"
+		command = ".northwest"
+	elem 
+		name = "CTRL+WEST"
+		command = "westface"
+	elem 
+		name = "WEST+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+NORTH"
+		command = "northface"
+	elem 
+		name = "NORTH+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+EAST"
+		command = "eastface"
+	elem 
+		name = "EAST+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+SOUTH"
+		command = "southface"
+	elem 
+		name = "SOUTH+REP"
+		command = ".south"
+	elem 
+		name = "INSERT"
+		command = "a-intent right"
+	elem 
+		name = "DELETE"
+		command = "delete-key-pressed"
+	elem 
+		name = "1"
+		command = "a-intent help"
+	elem 
+		name = "CTRL+1"
+		command = "a-intent help"
+	elem 
+		name = "2"
+		command = "a-intent disarm"
+	elem 
+		name = "CTRL+2"
+		command = "a-intent disarm"
+	elem 
+		name = "3"
+		command = "a-intent grab"
+	elem 
+		name = "CTRL+3"
+		command = "a-intent grab"
+	elem 
+		name = "4"
+		command = "a-intent harm"
+	elem 
+		name = "CTRL+4"
+		command = "a-intent harm"
+	elem 
+		name = "A+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+A+REP"
+		command = ".west"
+	elem 
+		name = "B"
+		command = "resist"
+	elem 
+		name = "CTRL+B"
+		command = "resist"
+	elem 
+		name = "D+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+D+REP"
+		command = ".east"
+	elem 
+		name = "E"
+		command = "quick-equip"
+	elem 
+		name = "CTRL+E"
+		command = "quick-equip"
+	elem 
+		name = "F"
+		command = "a-intent left"
+	elem 
+		name = "CTRL+F"
+		command = "a-intent left"
+	elem 
+		name = "G"
+		command = "a-intent right"
+	elem 
+		name = "CTRL+G"
+		command = "a-intent right"
+	elem 
+		name = "M"
+		command = "me"
+	elem 
+		name = "O"
+		command = "ooc"
+	elem 
+		name = "CTRL+O"
+		command = "ooc"
+	elem 
+		name = "Q"
+		command = ".northwest"
+	elem 
+		name = "CTRL+Q"
+		command = ".northwest"
+	elem 
+		name = "R"
+		command = ".southwest"
+	elem 
+		name = "CTRL+R"
+		command = ".southwest"
+	elem "s_key"
+		name = "S+REP"
+		command = ".south"
+	elem 
+		name = "CTRL+S+REP"
+		command = ".south"
+	elem 
+		name = "T"
+		command = "say"
+	elem "w_key"
+		name = "W+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+W+REP"
+		command = ".north"
+	elem 
+		name = "X"
+		command = ".northeast"
+	elem 
+		name = "CTRL+X"
+		command = ".northeast"
+	elem 
+		name = "Y"
+		command = "Activate-Held-Object"
+	elem 
+		name = "CTRL+Y"
+		command = "Activate-Held-Object"
+	elem 
+		name = "Z"
+		command = "Activate-Held-Object"
+	elem 
+		name = "CTRL+Z"
+		command = "Activate-Held-Object"
+	elem 
+		name = "F1"
+		command = "adminhelp"
+	elem 
+		name = "CTRL+SHIFT+F1+REP"
+		command = ".options"
+	elem 
+		name = "F2"
+		command = "ooc"
+	elem 
+		name = "SHIFT+F2+REP"
+		command = ".screenshot"
+	elem 
+		name = "F3"
+		command = "say"
+	elem 
+		name = "F4"
+		command = "me"
+	elem 
+		name = "F5"
+		command = "asay"
+	elem 
+		name = "F6"
+		command = "Player-Panel"
+	elem 
+		name = "F7"
+		command = "Admin-PM"
+	elem 
+		name = "F8"
+		command = "Invisimin"
+	elem 
+		name = "F9"
+		command = "Aghost"
+	elem 
+		name = "F11"
+		command = "Toggle-Build-Mode-Self"
+	elem 
+		name = "F12"
+		command = "F12"
+
+macro "borgmacro"
+	elem 
+		name = "TAB"
+		command = ".winset \"mainwindow.macro=borghotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true input.background-color=#F0F0F0\""
+	elem 
+		name = "CENTER+REP"
+		command = ".center"
+	elem 
+		name = "NORTHEAST"
+		command = ".northeast"
+	elem 
+		name = "SOUTHEAST"
+		command = ".southeast"
+	elem 
+		name = "NORTHWEST"
+		command = "unequip-module"
+	elem 
+		name = "CTRL+WEST"
+		command = "westface"
+	elem 
+		name = "WEST+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+NORTH"
+		command = "northface"
+	elem 
+		name = "NORTH+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+EAST"
+		command = "eastface"
+	elem 
+		name = "EAST+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+SOUTH"
+		command = "southface"
+	elem 
+		name = "SOUTH+REP"
+		command = ".south"
+	elem 
+		name = "INSERT"
+		command = "a-intent right"
+	elem 
+		name = "DELETE"
+		command = "delete-key-pressed"
+	elem 
+		name = "CTRL+1"
+		command = "toggle-module 1"
+	elem 
+		name = "CTRL+2"
+		command = "toggle-module 2"
+	elem 
+		name = "CTRL+3"
+		command = "toggle-module 3"
+	elem 
+		name = "CTRL+4"
+		command = "a-intent left"
+	elem 
+		name = "CTRL+A+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+B"
+		command = "resist"
+	elem 
+		name = "CTRL+D+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+F"
+		command = "a-intent left"
+	elem 
+		name = "CTRL+G"
+		command = "a-intent right"
+	elem 
+		name = "CTRL+O"
+		command = "ooc"
+	elem 
+		name = "CTRL+Q"
+		command = "unequip-module"
+	elem 
+		name = "CTRL+S+REP"
+		command = ".south"
+	elem 
+		name = "CTRL+W+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+X"
+		command = ".northeast"
+	elem 
+		name = "CTRL+Y"
+		command = "Activate-Held-Object"
+	elem 
+		name = "CTRL+Z"
+		command = "Activate-Held-Object"
+	elem 
+		name = "F1"
+		command = "adminhelp"
+	elem 
+		name = "CTRL+SHIFT+F1+REP"
+		command = ".options"
+	elem 
+		name = "F2"
+		command = "ooc"
+	elem 
+		name = "SHIFT+F2+REP"
+		command = ".screenshot"
+	elem 
+		name = "F3"
+		command = "say"
+	elem 
+		name = "F4"
+		command = "me"
+	elem 
+		name = "F5"
+		command = "asay"
+	elem 
+		name = "F6"
+		command = "Player-Panel"
+	elem 
+		name = "F7"
+		command = "Admin-PM"
+	elem 
+		name = "F8"
+		command = "Invisimin"
+	elem 
+		name = "F9"
+		command = "Aghost"
+	elem 
+		name = "F11"
+		command = "Toggle-Build-Mode-Self"
+	elem 
+		name = "F12"
+		command = "F12"
+
+
+menu "menu"
+	elem 
+		name = "&File"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&Quick screenshot\tF2"
+		command = ".screenshot auto"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Save screenshot as...\tShift+F2"
+		command = ".screenshot"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = ""
+		command = ""
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Reconnect"
+		command = ".reconnect"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Quit"
+		command = ".quit"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Icons"
+		command = ""
+		saved-params = "is-checked"
+	elem "stretch"
+		name = "&Stretch to fit"
+		command = ".winset \"mapwindow.map.icon-size=0\""
+		category = "&Icons"
+		is-checked = true
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon96"
+		name = "&96x96 (3x)"
+		command = ".winset \"mapwindow.map.icon-size=96\""
+		category = "&Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon64"
+		name = "&64x64 (2x)"
+		command = ".winset \"mapwindow.map.icon-size=64\""
+		category = "&Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon48"
+		name = "&48x48 (1.5x)"
+		command = ".winset \"mapwindow.map.icon-size=48\""
+		category = "&Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon32"
+		name = "&32x32"
+		command = ".winset \"mapwindow.map.icon-size=32\""
+		category = "&Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem 
+		name = ""
+		command = ""
+		category = "&Icons"
+		saved-params = "is-checked"
+	elem "textmode"
+		name = "&Text"
+		command = ".winset \"menu.textmode.is-checked=true?mapwindow.map.text-mode=true:mapwindow.map.text-mode=false\""
+		category = "&Icons"
+		can-check = true
+		saved-params = "is-checked"
+	elem 
+		name = "&Help"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&Admin help\tF1"
+		command = "adminhelp"
+		category = "&Help"
+		saved-params = "is-checked"
+	elem 
+		name = "&Hotkeys"
+		command = "hotkeys-help"
+		category = "&Help"
+		saved-params = "is-checked"
+
+
+window "mainwindow"
+	elem "mainwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x440
+		anchor1 = none
+		anchor2 = none
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Space Station 13"
+		is-maximized = true
+		icon = 'icons\\ss13_64.png'
+		macro = "macro"
+		menu = "menu"
+	elem "asset_cache_browser"
+		type = BROWSER
+		pos = 424,208
+		size = 1x1
+		anchor1 = none
+		anchor2 = none
+		is-visible = false
+		saved-params = ""
+	elem "hotkey_toggle"
+		type = BUTTON
+		pos = 560,420
+		size = 80x20
+		anchor1 = 100,100
+		anchor2 = none
+		saved-params = ""
+		text = "Hotkey Toggle"
+		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.background-color=#D3B5B5 : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true input.background-color=#F0F0F0\""
+		button-type = pushbox
+	elem "mainvsplit"
+		type = CHILD
+		pos = 3,0
+		size = 634x416
+		anchor1 = 0,0
+		anchor2 = 100,100
+		saved-params = "splitter"
+		right = "rpane"
+		is-vert = true
+	elem "input"
+		type = INPUT
+		pos = 3,420
+		size = 517x20
+		anchor1 = 0,100
+		anchor2 = 100,100
+		background-color = #d3b5b5
+		is-default = true
+		border = sunken
+		saved-params = "command"
+	elem "saybutton"
+		type = BUTTON
+		pos = 520,420
+		size = 40x20
+		anchor1 = 100,100
+		anchor2 = none
+		saved-params = "is-checked"
+		text = "Chat"
+		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
+		button-type = pushbox
+	elem "tooltip"
+		type = BROWSER
+		pos = 0,0
+		size = 999x999
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		is-visible = false
+		saved-params = ""
+		auto-format = false
+
+window "mapwindow"
+	elem "mapwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "map"
+		type = MAP
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		font-family = "Arial"
+		font-size = 7
+		text-color = none
+		is-default = true
+		drop-zone = true
+		saved-params = "icon-size"
+		on-show = ".winset\"mainwindow.mainvsplit.left=mapwindow\""
+		on-hide = ".winset\"mainwindow.mainvsplit.left=\""
+
+window "outputwindow"
+	elem "outputwindow"
+		type = MAIN
+		pos = 219,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "output"
+		type = OUTPUT
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #ffffff
+		is-default = true
+		saved-params = "max-lines"
+		style = ".system {color:#ff0000;}"
+
+window "rpane"
+	elem "rpane"
+		type = MAIN
+		pos = 219,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		is-pane = true
+	elem "rpanewindow"
+		type = CHILD
+		pos = 0,0
+		size = 640x499
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = none
+		saved-params = "splitter"
+		right = "outputwindow"
+		is-vert = false
+	elem "reportissueb"
+		type = BUTTON
+		pos = 480,0
+		size = 67x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Report Issue"
+		command = "report-issue"
+		group = "rpanemode"
+	elem "changelogb"
+		type = BUTTON
+		pos = 336,0
+		size = 67x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		is-disabled = true
+		saved-params = "is-checked"
+		text = "Changelog"
+		command = "Changelog"
+		group = "rpanemode"
+	elem "rulesb"
+		type = BUTTON
+		pos = 272,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Rules"
+		command = "rules"
+		group = "rpanemode"
+	elem "githubb"
+		type = BUTTON
+		pos = 408,0
+		size = 67x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		is-disabled = true
+		saved-params = "is-checked"
+		text = "Github"
+		command = "github"
+		group = "rpanemode"
+	elem "forumb"
+		type = BUTTON
+		pos = 208,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "VK"
+		command = "vk"
+		group = "rpanemode"
+	elem "wikib"
+		type = BUTTON
+		pos = 144,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		is-disabled = true
+		saved-params = "is-checked"
+		text = "Wiki"
+		command = "wiki"
+		group = "rpanemode"
+	elem "textb"
+		type = BUTTON
+		pos = 0,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		saved-params = "is-checked"
+		text = "Text"
+		command = ".winset \"rpanewindow.left=;\""
+		is-checked = true
+		group = "rpanemode"
+		button-type = pushbox
+	elem "browseb"
+		type = BUTTON
+		pos = 552,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		saved-params = "is-checked"
+		text = "Browser"
+		command = ".winset \"rpanewindow.left=browserwindow\""
+		group = "rpanemode"
+		button-type = pushbox
+	elem "infob"
+		type = BUTTON
+		pos = 64,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		saved-params = "is-checked"
+		text = "Info"
+		command = ".winset \"rpanewindow.left=infowindow\""
+		group = "rpanemode"
+		button-type = pushbox
+
+window "browserwindow"
+	elem "browserwindow"
+		type = MAIN
+		pos = 219,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Browser"
+		is-pane = true
+	elem "browser"
+		type = BROWSER
+		pos = 0,0
+		size = 640x499
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #ffffff
+		is-default = true
+		saved-params = ""
+		on-show = ".winset\"rpane.infob.is-visible=true?rpane.infob.pos=130,0;rpane.textb.is-visible=true;rpane.browseb.is-visible=true;rpane.browseb.is-checked=true;rpane.rpanewindow.pos=0,30;rpane.rpanewindow.size=0x0;rpane.rpanewindow.left=browserwindow\""
+		on-hide = ".winset\"rpane.infob.is-visible=true?rpane.infob.is-checked=true rpane.infob.pos=65,0 rpane.rpanewindow.left=infowindow:rpane.rpanewindow.left=textwindow rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0\""
+
+window "infowindow"
+	elem "infowindow"
+		type = MAIN
+		pos = 219,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Info"
+		is-pane = true
+	elem "info"
+		type = INFO
+		pos = 0,0
+		size = 638x475
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #ffffff
+		is-default = true
+		drop-zone = true
+		saved-params = ""
+		highlight-color = #00aa00
+		tab-background-color = none
+		allow-html = false
+		on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
+		on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
+
