@@ -1,9 +1,10 @@
 ##Fallout 13 Alpha 0.4
 
-**Devblog:** https://forum.ss13.ru/index.php?showtopic=15035 <BR>
-**Code:** https://github.com/PahomLancer/Vault-113-Restoration. <BR>
-
 ##Credits
+Code: Jackerzz
+Graphics: Urgot
+
+##Old Credits
 **Code:** Pahomlancer, alexix1989, antonikon, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please. <BR>
 **Graphics / Sprites / Icons:** Pahomlancer, DeadSpreeng, Ivan_mrr, Nienhaus, WalterJe, MrSnapwalk, BartNixon, Llego_man007, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, DoctorWho08, Alexlox.
 
