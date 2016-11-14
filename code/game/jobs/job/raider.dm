@@ -30,7 +30,7 @@ Raider
 	//suit = pick(/obj/item/clothing/suit/armor/f13/supafly,\
 		/obj/item/clothing/suit/armor/f13/bmetalarmor,\
 		/obj/item/clothing/suit/armor/f13/yankee)
-	head = /obj/item/clothing/head/helmet/f13/supaflyhelmet
+	//head = /obj/item/clothing/head/helmet/f13/supaflyhelmet
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
 	r_pocket = /obj/item/weapon/lighter
 	//backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1,\

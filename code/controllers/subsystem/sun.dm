@@ -94,7 +94,7 @@ var/datum/subsystem/sun/SSsun
 					g.sun_light = sun_light
 					g.redraw_lighting()
 					g.update_sunlight()
-				else if(turf.loc == space)
+				else if(turf.loc == space || istype(turf,/turf/ground/mountain))
 					turf.redraw_lighting()
 			sleep(1.5)
 		sleep(100)

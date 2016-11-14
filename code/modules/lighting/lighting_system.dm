@@ -147,7 +147,7 @@
 			own = owner
 			if(istype(T, /turf/ground))
 				var/turf/ground/g = T
-				if(g.sun_light)
+				if(g.sun_light && !istype(T, /turf/ground/mountain))
 					continue
 			if(T.lighting_lumcount >= own.sun_light)
 				continue
@@ -337,7 +337,7 @@
 				lighting_object.luminosity = 1
 				newalpha = 255 - Clamp((min(lighting_lumcount+t.sun_light,10)) * LIGHTING_CAP_FRAC, 0, 255)
 			else
-				newalpha = LIGHTING_DARKEST_VISIBLE_ALPHA - 1
+				newalpha = min(255 - Clamp((lighting_lumcount) * LIGHTING_CAP_FRAC, 0, 255), LIGHTING_DARKEST_VISIBLE_ALPHA - 1)
 		if(newalpha == -1)
 			if(lighting_lumcount <= 0)
 				newalpha = 255

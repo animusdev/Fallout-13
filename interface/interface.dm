@@ -29,8 +29,8 @@
 	set desc = "Show Server Rules."
 	set hidden = 1
 	if(config.rulesurl)
-		if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
-			return
+		//if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
+		//	return
 		src << browse('html/rules.html', "window=changes;size=675x650")
 	else
 		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>"

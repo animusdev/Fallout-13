@@ -62,9 +62,9 @@
 	var/server
 	var/banappeals
 	var/wikiurl = "http://wasteland.expert" // default wiki link
-	var/forumurl = "http://wasteland.expert" // default forums
-	var/rulesurl = "https://www.reddit.com/r/Fallout13/" // default rules
-	var/githuburl = "https://github.com/BartNixon/Fallout13" //default github
+	var/forumurl = "https://vk.com/the_fallout_13" // default forums
+	var/rulesurl = "html/rules.html" // default rules
+	var/githuburl = "https://bitbucket.org/Jackerzz/fallout/issues?status=new&status=open" //default github
 
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0

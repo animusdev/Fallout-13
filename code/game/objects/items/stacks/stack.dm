@@ -163,7 +163,7 @@
 	if (R.one_per_turf && (locate(R.result_type) in usr.loc))
 		usr << "<span class='warning'>There is another [R.title] here!</span>"
 		return 0
-	if (R.on_floor && (!istype(usr.loc, /turf/simulated/floor) || !istype(usr.loc, /turf/ground)))
+	if (R.on_floor && (!istype(usr.loc, /turf/simulated/floor) && !istype(usr.loc, /turf/ground)))
 		usr << "<span class='warning'>\The [R.title] must be constructed on the floor!</span>"
 		return 0
 	return 1
