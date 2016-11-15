@@ -688,19 +688,6 @@ var/global/list/g_fancy_list_of_types = null
 	if(!holder)	return
 	debug_variables(huds[i])
 
-/client/proc/debug_sun_light()
-	set category = "Debug"
-	set name = "Toogle Sun Light"
-
-	var/area/space/s = locate(/area/space) in world
-	if(sun_exist)
-		s.lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
-	else
-		s.lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
-	sun_exist = !sun_exist
-	for(var/turf/T in s)
-		T.init_lighting()
-
 /*/client/proc/library_debug_cat() //Easy to use library debug tool. Doesn't work yet. Shame.
 	set category = "Debug"
 	set name = "Library: Catalog"

@@ -98,6 +98,7 @@ var/list/teleportlocs = list()
 //	lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
 	power_light = 0
 	power_equip = 0
+	open_space = 1
 	power_environ = 0
 	valid_territory = 0
 	ambientsounds = list('sound/ambience/ambispace.ogg','sound/ambience/title2.ogg',)

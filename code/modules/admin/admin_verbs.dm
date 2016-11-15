@@ -142,7 +142,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/create_outfits,
 	/client/proc/debug_huds,
 	/client/proc/map_template_load,
-	/client/proc/debug_sun_light
 	)
 var/list/admin_verbs_possess = list(
 	/proc/possess,

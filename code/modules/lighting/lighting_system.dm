@@ -44,6 +44,7 @@
 	var/cap = 0
 	var/changed = 0
 	var/list/effect = list()
+	var/list/sun_effect = list()
 	var/__x = 0		//x coordinate at last update
 	var/__y = 0		//y coordinate at last update
 
@@ -110,6 +111,13 @@
 			T.affecting_lights -= src
 
 	effect.Cut()
+	for(var/turf/T in sun_effect)
+		T.update_lumcount(-sun_effect[T], "sun")
+
+		if(T.affecting_lights && T.affecting_lights.len)
+			T.affecting_lights -= src
+	sun_effect.Cut()
+
 
 //Apply a new effect.
 /datum/light_source/proc/add_effect()
@@ -140,32 +148,26 @@
 		center_strength = LIGHTING_CAP/LIGHTING_LUM_FOR_FULL_BRIGHT*(luminosity)
 	else
 		center_strength = cap
-
+	var/turf/ground/own = owner
 	for(var/turf/T in view(range+1, To))
-		var/turf/ground/own
-		if(istype(owner, /turf/ground)) //No light from /turf/ground to /turf/ground if it not mountain
-			own = owner
+		if(istype(own)) //No light from /turf/ground to /turf/ground if it not mountain
 			if(istype(T, /turf/ground))
 				var/turf/ground/g = T
-				if(g.sun_light && !istype(T, /turf/ground/mountain))
+				if(g.open_space)
 					continue
-			if(T.lighting_lumcount >= own.sun_light)
-				continue
 #ifdef LIGHTING_CIRCULAR
 		var/distance = cheap_hypotenuse(T.x, T.y, __x, __y)
 #else
 		var/distance = max(abs(T,x - __x), abs(T.y - __y))
 #endif
-
-		var/delta_lumcount
-		if(!istype(own))
-			delta_lumcount = Clamp(center_strength * (range - distance) / range, 0, LIGHTING_CAP)
-		else
-			delta_lumcount = min(Clamp(center_strength * (range - distance) / range, 0, LIGHTING_CAP), own.sun_light - T.lighting_lumcount )
-
+		var/delta_lumcount = Clamp(center_strength * (range - distance) / range, 0, LIGHTING_CAP)
 		if(delta_lumcount > 0)
-			effect[T] = delta_lumcount
-			T.update_lumcount(delta_lumcount)
+			if(istype(own) && own.sun_light)
+				sun_effect[T] = delta_lumcount
+				T.update_lumcount(delta_lumcount, "sun")
+			else
+				effect[T] = delta_lumcount
+				T.update_lumcount(delta_lumcount)
 
 			if(!T.affecting_lights)
 				T.affecting_lights = list()
@@ -265,6 +267,7 @@
 
 /turf
 	var/lighting_lumcount = 0
+	var/sun_lumcount = 0
 	var/lighting_changed = 0
 	var/atom/movable/light/lighting_object //Will be null for space turfs and anything in a static lighting area
 	var/list/affecting_lights			//not initialised until used (even empty lists reserve a fair bit of memory)
@@ -279,12 +282,12 @@
 		qdel(light)
 
 	var/old_lumcount = lighting_lumcount - initial(lighting_lumcount)
+	var/old_sun_lum = sun_lumcount
 	//var/oldbaseturf = baseturf
 
 	var/list/our_lights //reset affecting_lights if needed
 	if(opacity != initial(path:opacity) && old_lumcount)
 		UpdateAffectingLights()
-
 	if(affecting_lights)
 		our_lights = affecting_lights.Copy()
 
@@ -294,6 +297,7 @@
 
 	lighting_changed = 1 //Don't add ourself to SSlighting.changed_turfs
 	update_lumcount(old_lumcount)
+	update_lumcount(old_sun_lum,"sun")
 	//baseturf = oldbaseturf
 	lighting_object = locate() in src
 	init_lighting()
@@ -302,8 +306,11 @@
 		S.update_starlight()
 	for(var/turf/ground/S in RANGE_TURFS(1,src))
 		S.update_sunlight()
-/turf/proc/update_lumcount(amount)
-	lighting_lumcount += amount
+/turf/proc/update_lumcount(amount, type = "dynamic")
+	if(type == "dynamic")
+		lighting_lumcount += amount
+	else if("sun")
+		sun_lumcount += amount
 	if(!lighting_changed)
 		SSlighting.changed_turfs += src
 		lighting_changed = 1
@@ -336,15 +343,15 @@
 			if(t.sun_light > 0)
 				lighting_object.luminosity = 1
 				newalpha = 255 - Clamp((min(lighting_lumcount+t.sun_light,10)) * LIGHTING_CAP_FRAC, 0, 255)
-			else
-				newalpha = min(255 - Clamp((lighting_lumcount) * LIGHTING_CAP_FRAC, 0, 255), LIGHTING_DARKEST_VISIBLE_ALPHA - 1)
+			else if(t.open_space)
+				newalpha = min(255 - Clamp((lighting_lumcount) * LIGHTING_CAP_FRAC, 0, 255), LIGHTING_DARKEST_VISIBLE_ALPHA - 2)
 		if(newalpha == -1)
-			if(lighting_lumcount <= 0)
+			if(lighting_lumcount <= 0 && sun_lumcount <= 0)
 				newalpha = 255
 			else
 				lighting_object.luminosity = 1
 				if(lighting_lumcount < LIGHTING_CAP)
-					var/num = Clamp(lighting_lumcount * LIGHTING_CAP_FRAC, 0, 255)
+					var/num = Clamp((lighting_lumcount + min(sun_lumcount, global_sun_light)) * LIGHTING_CAP_FRAC, 0, 255)
 					newalpha = 255-num
 				else //if(lighting_lumcount >= LIGHTING_CAP)
 					newalpha = 0
@@ -369,6 +376,7 @@
 
 /area
 	var/lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED	//Turn this flag off to make the area fullbright
+	var/open_space = 0	//Need for sun light check
 
 /area/New()
 	. = ..()

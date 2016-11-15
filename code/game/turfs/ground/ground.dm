@@ -1,4 +1,3 @@
-var/global/sun_exist = 1
 
 /turf/ground
 	icon = 'icons/turf/floors3.dmi'
@@ -8,18 +7,27 @@ var/global/sun_exist = 1
 	temperature = T20C
 	oxygen = MOLES_O2STANDARD
 	nitrogen = MOLES_N2STANDARD
-	var/sun_light = 10
+	var/sun_light
+	var/open_space = 1
 
-///turf/ground/New()
-//	..()
+turf/ground/New()
+	..()
+	var/area/area = src.loc
+	if(area && area.open_space)
+		open_space = 1
+		sun_light = global_sun_light
+	else
+		open_space = 0
+		sun_light = 0
 /turf/ground/Destroy()
 	return QDEL_HINT_LETMELIVE
 
 /turf/ground/proc/update_sunlight()
-	if(sun_light && sun_exist)
+	if(sun_light && open_space)
 		for(var/turf/T in RANGE_TURFS(1,src))
-			if(istype(T,/turf/ground/mountain) || istype(T,/turf/simulated))
-				SetLuminosity(min(sun_light, 7),0)
+			var/turf/ground/turf = T
+			if(istype(T,/turf/simulated) || (turf && !turf.open_space))
+				SetLuminosity(sun_light,0)
 				return
 	SetLuminosity(0)
 
@@ -102,6 +110,7 @@ var/global/sun_exist = 1
 	name = "\proper mountain"
 	icon_state = "mountain0"
 	sun_light = 0
+	open_space = 0
 
 /turf/ground/mountain/New()
 	icon_state = "mountain[rand(1,10)]"

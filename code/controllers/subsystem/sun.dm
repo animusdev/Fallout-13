@@ -1,4 +1,5 @@
 var/datum/subsystem/sun/SSsun
+var/global_sun_light = 10
 //For now it's using for change times of day
 /datum/subsystem/sun
 	name = "Sun"
@@ -63,39 +64,40 @@ var/datum/subsystem/sun/SSsun
 		return
 	var/x
 	var/y
-	var/sun_light
 	var/sun_light_finish
 	var/turf/ground/turf
-	var/area/space/space = locate(/area/space) in world
+//	var/area/space/space = locate(/area/space) in world
 	is_working = 1
 	//space.lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 	if(current_time_of_day == "day")
-		sun_light = 10
+		global_sun_light = 10
 		sun_light_finish = 1
 		world << "It's evening"
 	else
-		sun_light = 1
+		global_sun_light = 1
 		sun_light_finish = 10
 		world << "It's morning"
 	for(,,)
 		if(current_time_of_day == "day")
-			if(sun_light == sun_light_finish - 1)
+			if(global_sun_light == sun_light_finish - 1)
 				break
-			sun_light--
+			global_sun_light--
 		else
-			if(sun_light == sun_light_finish + 1)
+			if(global_sun_light == sun_light_finish + 1)
 				break
-			sun_light++
+			global_sun_light++
 		for(x=world.maxx, x>1, x--)
 			for(y=1, y<world.maxy, y++)
 				turf = locate(x,y,sunz)
-				if(istype(turf,/turf/ground) && !istype(turf,/turf/ground/mountain))
+				if(istype(turf,/turf/ground))
 					var/turf/ground/g = turf
-					g.sun_light = sun_light
+					if(!g.open_space)
+						continue
+					g.sun_light = global_sun_light
 					g.redraw_lighting()
 					g.update_sunlight()
-				else if(turf.loc == space || istype(turf,/turf/ground/mountain))
-					turf.redraw_lighting()
+		//		else if(turf.loc == space || istype(turf,/turf/ground/mountain))
+		//			turf.redraw_lighting()
 			sleep(1.5)
 		sleep(100)
 	is_working = 0

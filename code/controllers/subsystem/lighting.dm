@@ -8,7 +8,7 @@ var/datum/subsystem/lighting/SSlighting
 	wait = 1
 	dynamic_wait = 1
 	dwait_delta = 3
-	dwait_lower = 1
+	dwait_lower = 2
 	display = 5
 
 	var/list/changed_lights = list()		//list of all datum/light_source that need updating
