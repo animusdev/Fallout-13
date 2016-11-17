@@ -85,7 +85,7 @@ var/global_sun_light = 10
 			if(global_sun_light <= 0)
 				global_sun_light = 0.2
 		else
-			if(global_sun_light == sun_light_finish + 1)
+			if(global_sun_light == sun_light_finish + 1.2)
 				break
 			global_sun_light++
 		for(x=world.maxx, x>1, x--)

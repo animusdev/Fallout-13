@@ -113,6 +113,7 @@
 	effect.Cut()
 	for(var/turf/T in sun_effect)
 		T.update_lumcount(-sun_effect[T], "sun")
+		//T.affected_sun--
 		if(T.affecting_lights && T.affecting_lights.len)
 			T.affecting_lights -= src
 	sun_effect.Cut()
@@ -149,7 +150,7 @@
 		center_strength = cap
 	var/turf/ground/own = owner
 	for(var/turf/T in view(range+1, To))
-		if(istype(own)) //No light from /turf/ground to /turf/ground if it not mountain
+		if(istype(own)&& own.open_space) //No light from /turf/ground to /turf/ground if it not mountain
 			if(istype(T, /turf/ground))
 				var/turf/ground/g = T
 				if(g.open_space)
@@ -163,7 +164,6 @@
 		if(delta_lumcount > 0)
 			if(istype(own) && own.sun_light)
 				sun_effect[T] = delta_lumcount
-			//	T.sun_sourcecount++
 				T.affected_sun = own.sun_light
 				T.update_lumcount(delta_lumcount, "sun")
 			else
@@ -311,7 +311,7 @@
 /turf/proc/update_lumcount(amount, type = "dynamic")
 	if(type == "dynamic")
 		lighting_lumcount += amount
-	else if("sun")
+	if(type == "sun")
 		sun_lumcount += amount
 	if(!lighting_changed)
 		SSlighting.changed_turfs += src
@@ -353,7 +353,7 @@
 			else
 				lighting_object.luminosity = 1
 				if(lighting_lumcount < LIGHTING_CAP)
-					var/num = Clamp((lighting_lumcount + min(sun_lumcount, affected_sun)) * LIGHTING_CAP_FRAC, 0, 255)
+					var/num = Clamp((lighting_lumcount + (min(sun_lumcount, affected_sun))) * LIGHTING_CAP_FRAC, 0, 255)
 					newalpha = 255-num
 				else //if(lighting_lumcount >= LIGHTING_CAP)
 					newalpha = 0
