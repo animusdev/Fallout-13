@@ -71,7 +71,7 @@ var/global_sun_light = 10
 	//space.lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 	if(current_time_of_day == "day")
 		global_sun_light = 10
-		sun_light_finish = 1
+		sun_light_finish = 0.2
 		world << "It's evening"
 	else
 		global_sun_light = 1
@@ -79,9 +79,11 @@ var/global_sun_light = 10
 		world << "It's morning"
 	for(,,)
 		if(current_time_of_day == "day")
-			if(global_sun_light == sun_light_finish - 1)
+			if(global_sun_light < 0.2)
 				break
 			global_sun_light--
+			if(global_sun_light <= 0)
+				global_sun_light = 0.2
 		else
 			if(global_sun_light == sun_light_finish + 1)
 				break

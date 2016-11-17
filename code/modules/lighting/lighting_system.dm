@@ -113,7 +113,6 @@
 	effect.Cut()
 	for(var/turf/T in sun_effect)
 		T.update_lumcount(-sun_effect[T], "sun")
-
 		if(T.affecting_lights && T.affecting_lights.len)
 			T.affecting_lights -= src
 	sun_effect.Cut()
@@ -164,6 +163,8 @@
 		if(delta_lumcount > 0)
 			if(istype(own) && own.sun_light)
 				sun_effect[T] = delta_lumcount
+			//	T.sun_sourcecount++
+				T.affected_sun = own.sun_light
 				T.update_lumcount(delta_lumcount, "sun")
 			else
 				effect[T] = delta_lumcount
@@ -268,6 +269,7 @@
 /turf
 	var/lighting_lumcount = 0
 	var/sun_lumcount = 0
+	var/affected_sun
 	var/lighting_changed = 0
 	var/atom/movable/light/lighting_object //Will be null for space turfs and anything in a static lighting area
 	var/list/affecting_lights			//not initialised until used (even empty lists reserve a fair bit of memory)
@@ -343,15 +345,15 @@
 			if(t.sun_light > 0)
 				lighting_object.luminosity = 1
 				newalpha = 255 - Clamp((min(lighting_lumcount+t.sun_light,10)) * LIGHTING_CAP_FRAC, 0, 255)
-			else if(t.open_space)
-				newalpha = min(255 - Clamp((lighting_lumcount) * LIGHTING_CAP_FRAC, 0, 255), LIGHTING_DARKEST_VISIBLE_ALPHA - 2)
+		//	else if(t.open_space)
+		//		newalpha = min(255 - Clamp((lighting_lumcount) * LIGHTING_CAP_FRAC, 0, 255), LIGHTING_DARKEST_VISIBLE_ALPHA - 2)
 		if(newalpha == -1)
 			if(lighting_lumcount <= 0 && sun_lumcount <= 0)
 				newalpha = 255
 			else
 				lighting_object.luminosity = 1
 				if(lighting_lumcount < LIGHTING_CAP)
-					var/num = Clamp((lighting_lumcount + min(sun_lumcount, global_sun_light)) * LIGHTING_CAP_FRAC, 0, 255)
+					var/num = Clamp((lighting_lumcount + min(sun_lumcount, affected_sun)) * LIGHTING_CAP_FRAC, 0, 255)
 					newalpha = 255-num
 				else //if(lighting_lumcount >= LIGHTING_CAP)
 					newalpha = 0
