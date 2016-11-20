@@ -53,10 +53,10 @@ var/global_sun_light = 10
 			continue
 		SC.update()
 
-	if(world.time >= next_changing)
+	if(last_fire >= next_changing)
 		spawn(0)
 			toogle_times()
-			next_changing = world.time + times_changing
+			next_changing = next_changing + times_changing
 
 /datum/subsystem/sun/proc/toogle_times()
 	if(is_working)
