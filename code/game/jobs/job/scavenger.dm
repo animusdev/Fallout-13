@@ -35,9 +35,9 @@ Scavenger
 	r_pocket = /obj/item/weapon/lighter
 	if (prob(50))
 		glasses = /obj/item/clothing/glasses/sunglasses
-	if (prob(80))
-		l_hand = pick(/obj/item/weapon/kitchen/knife,\
-			/obj/item/weapon/storage/toolbox/mechanical)
+	//if (prob(80))
+	//	l_hand = pick(/obj/item/weapon/kitchen/knife,\
+	//		/obj/item/weapon/storage/toolbox/mechanical)
 	//back = /obj/item/weapon/storage/backpack
 	//backpack = /obj/item/weapon/storage/backpack
 	//satchel = /obj/item/weapon/storage/backpack/satchel_norm

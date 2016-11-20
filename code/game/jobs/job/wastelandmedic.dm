@@ -25,8 +25,8 @@ Wastelandmedic
 /datum/outfit/job/wastelandmedic/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(/obj/item/clothing/under/f13/doctor)
-	mask = /obj/item/clothing/mask/surgical
-	gloves = /obj/item/clothing/gloves/color/white
+//	mask = /obj/item/clothing/mask/surgical
+//	gloves = /obj/item/clothing/gloves/color/white
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
 	r_pocket = /obj/item/weapon/lighter
 	//back = /obj/item/weapon/storage/backpack

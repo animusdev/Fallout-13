@@ -472,6 +472,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	w_class = 1
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
+	materials = list(MAT_METAL=500)
 	var/lit = 0
 	var/sound_toggleON = 'sound/f13items/zippo_on.ogg'
 	var/sound_toggleOFF = 'sound/f13items/zippo_off.ogg'
