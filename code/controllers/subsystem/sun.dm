@@ -55,13 +55,13 @@ var/global_sun_light = 10
 
 	if(last_fire >= next_changing)
 		spawn(0)
-			toogle_times()
-			next_changing = last_fire + times_changing
+			if(toogle_times())
+				next_changing = last_fire + times_changing
 
 /datum/subsystem/sun/proc/toogle_times()
 	if(is_working)
 		usr << "Not now"
-		return
+		return 0
 	var/x
 	var/y
 	var/sun_light_finish
@@ -79,13 +79,13 @@ var/global_sun_light = 10
 		current_time_of_day = "morning"
 	for(,,)
 		if(current_time_of_day == "morning")
-			if(global_sun_light < 0.2)
+			if(global_sun_light <= 0.2)
 				break
 			global_sun_light--
 			if(global_sun_light <= 0)
 				global_sun_light = 0.2
 		else
-			if(global_sun_light == sun_light_finish + 1.2)
+			if(global_sun_light >= sun_light_finish + 1.2)
 				break
 			global_sun_light++
 		for(x=world.maxx, x>1, x--)
@@ -109,6 +109,7 @@ var/global_sun_light = 10
 	else
 		current_time_of_day = "day"
 		world << "It's day"
+	return 1
 	//	space.lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
 
 
