@@ -23,7 +23,7 @@ var/global_sun_light = 10
 	rate = rand(50,200)/100			// 50% - 200% of standard rotation
 	if(prob(50))					// same chance to rotate clockwise than counter-clockwise
 		rate = -rate
-	next_changing = world.time + times_changing
+	next_changing = times_changing
 
 
 /datum/subsystem/sun/stat_entry(msg)
@@ -56,7 +56,7 @@ var/global_sun_light = 10
 	if(last_fire >= next_changing)
 		spawn(0)
 			toogle_times()
-			next_changing = next_changing + times_changing
+			next_changing = last_fire + times_changing
 
 /datum/subsystem/sun/proc/toogle_times()
 	if(is_working)
@@ -72,13 +72,13 @@ var/global_sun_light = 10
 	if(current_time_of_day == "day")
 		global_sun_light = 10
 		sun_light_finish = 0.2
-		world << "It's evening"
+		current_time_of_day= "evening"
 	else
 		global_sun_light = 1
 		sun_light_finish = 10
-		world << "It's morning"
+		current_time_of_day = "morning"
 	for(,,)
-		if(current_time_of_day == "day")
+		if(current_time_of_day == "morning")
 			if(global_sun_light < 0.2)
 				break
 			global_sun_light--
@@ -103,7 +103,7 @@ var/global_sun_light = 10
 			sleep(1.5)
 		sleep(100)
 	is_working = 0
-	if(current_time_of_day == "day")
+	if(current_time_of_day == "evening")
 		current_time_of_day = "night"
 		world << "It's night"
 	else
