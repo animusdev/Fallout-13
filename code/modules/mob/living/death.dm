@@ -37,7 +37,8 @@
 /mob/living/death(gibbed)
 	eye_blind = max(eye_blind, 1)
 	timeofdeath = world.time
-
+	if(spawner)
+		spawner.mob_death(src)
 	living_mob_list -= src
 	if(!gibbed)
 		dead_mob_list += src
