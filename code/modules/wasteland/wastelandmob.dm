@@ -151,3 +151,34 @@
 	if(!gibbed)
 		visible_message("<span class='danger'>\the [src] stops moving...</span>")
 	..()
+	//RAd scorpion
+/mob/living/simple_animal/hostile/rad_scorpion
+	name = "giant rad scorpion"
+	desc = "Furry and black, it makes you shudder to look at it. This one has deep red eyes."
+	icon_state = "guard"
+	icon_living = "guard"
+	icon_dead = "guard_dead"
+	speak_emote = list("chitters")
+	//emote_hear = list("chitters")
+	speak_chance = 5
+	turns_per_move = 5
+	see_in_dark = 10
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/weapon/reagent_containers/food/snacks/spiderleg = 8)
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "hits"
+	maxHealth = 200
+	health = 200
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	faction = list("scorpions")
+	var/busy = 0
+	pass_flags = PASSTABLE
+	move_to_delay = 6
+	ventcrawler = 2
+	attacktext = "bites"
+	attack_sound = 'sound/weapons/bite.ogg'
+	unique_name = 1
+	gold_core_spawnable = 1
+	see_invisible = SEE_INVISIBLE_MINIMUM
+	see_in_dark = 4

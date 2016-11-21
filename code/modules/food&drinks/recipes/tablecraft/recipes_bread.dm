@@ -24,7 +24,7 @@
 	category = CAT_FOOD
 
 /datum/table_recipe/spidermeatbread
-	name = "Spidermeat bread"
+	name = "Radscorpion bread"
 	reqs = list(
 		/obj/item/weapon/reagent_containers/food/snacks/store/bread/plain = 1,
 		/obj/item/weapon/reagent_containers/food/snacks/meat/cutlet/spider = 3,

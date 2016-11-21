@@ -329,7 +329,7 @@ var/global/list/rockTurfEdgeCache
 
 /turf/simulated/floor/plating/asteroid/airless/cave
 	var/length = 100
-	var/mob_spawn_list = list("Badmutant" = 1, "Casador" = 3, "Rat" = 20)
+	var/mob_spawn_list// = list("Badmutant" = 1, "Casador" = 3, "Rat" = 20)
 	var/sanity = 1
 	turf_type = /turf/simulated/floor/plating/asteroid/airless
 

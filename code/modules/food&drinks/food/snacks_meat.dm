@@ -80,8 +80,8 @@
 	filling_color = "#F0E68C"
 
 /obj/item/weapon/reagent_containers/food/snacks/spiderleg
-	name = "spider leg"
-	desc = "A still twitching leg of a giant spider... you don't really want to eat this, do you?"
+	name = "scorpion leg"
+	desc = "A still twitching leg of a giant radscorpion... you don't really want to eat this, do you?"
 	icon_state = "spiderleg"
 	list_reagents = list("nutriment" = 2, "toxin" = 2)
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/boiledspiderleg
@@ -219,8 +219,8 @@
 	eatverb = pick("slurp","sip","suck","inhale","drink")
 
 /obj/item/weapon/reagent_containers/food/snacks/boiledspiderleg
-	name = "boiled spider leg"
-	desc = "A giant spider's leg that's still twitching after being cooked. Gross!"
+	name = "boiled radscorp leg"
+	desc = "A giant radscorp's leg that's still twitching after being cooked. Gross!"
 	icon_state = "spiderlegcooked"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "capsaicin" = 2, "vitamin" = 2)

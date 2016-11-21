@@ -159,8 +159,8 @@
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet/xeno
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider
-	name = "spider meat"
-	desc = "A slab of spider meat."
+	name = "radscorpion's meat"
+	desc = "A slab of radsocrpion meat."
 	icon_state = "spidermeat"
 	list_reagents = list("nutriment" = 3, "toxin" = 3, "vitamin" = 1)
 	filling_color = "#7CFC00"
@@ -196,7 +196,7 @@
 	name = "xeno steak"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/spider
-	name = "spider steak"
+	name = "radscorpion steak"
 
 
 
@@ -244,7 +244,7 @@
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/cutlet/xeno
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet/spider
-	name = "raw spider cutlet"
+	name = "raw radscorpion cutlet"
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/cutlet/spider
 
 
@@ -273,5 +273,5 @@
 	name = "xeno cutlet"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/cutlet/spider
-	name = "spider cutlet"
+	name = "radscorpion cutlet"
 

@@ -8,6 +8,8 @@
 	var/datum/mind/mind
 	var/list/datum/action/actions = list()
 
+	var/obj/structure/mob_spawner/spawner
+
 	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
 
 	var/obj/screen/flash = null
