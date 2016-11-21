@@ -53,7 +53,7 @@ var/global_sun_light = 10
 			continue
 		SC.update()
 
-	if(last_fire >= next_changing)
+	if(!is_working && last_fire >= next_changing)
 		spawn(0)
 			if(toogle_times())
 				next_changing = last_fire + times_changing
@@ -73,19 +73,23 @@ var/global_sun_light = 10
 		global_sun_light = 10
 		sun_light_finish = 0.2
 		current_time_of_day= "evening"
-	else
-		global_sun_light = 1
+		world << "It's evening"
+	else if(current_time_of_day == "night")
+		global_sun_light = 0.2
 		sun_light_finish = 10
 		current_time_of_day = "morning"
+		world << "It's morning"
+	else
+		world << "DEBUG: NIGHT IS BROKEN"
 	for(,,)
-		if(current_time_of_day == "morning")
+		if(current_time_of_day == "evening")
 			if(global_sun_light <= 0.2)
 				break
 			global_sun_light--
 			if(global_sun_light <= 0)
 				global_sun_light = 0.2
-		else
-			if(global_sun_light >= sun_light_finish + 1.2)
+		else if(current_time_of_day == "morning")
+			if(global_sun_light >= (sun_light_finish + 1.2))
 				break
 			global_sun_light++
 		for(x=world.maxx, x>1, x--)
@@ -106,7 +110,7 @@ var/global_sun_light = 10
 	if(current_time_of_day == "evening")
 		current_time_of_day = "night"
 		world << "It's night"
-	else
+	else if(current_time_of_day == "morning")
 		current_time_of_day = "day"
 		world << "It's day"
 	return 1
