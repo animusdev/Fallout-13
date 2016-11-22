@@ -80,6 +80,7 @@
 		if(bti)
 			t.baseturf_icon = bti
 			t.baseturf_dir = btd
+	return t
 
 /turf/simulated/proc/is_shielded()
 

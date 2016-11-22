@@ -105,7 +105,7 @@
 //Remove current effect
 /datum/light_source/proc/remove_effect().
 	for(var/turf/T in effect)
-		T.update_lumcount(-effect[T])
+		T.update_lumcount(-effect[T], "dynamic")
 
 		if(T.affecting_lights && T.affecting_lights.len)
 			T.affecting_lights -= src
@@ -168,7 +168,7 @@
 				T.update_lumcount(delta_lumcount, "sun")
 			else
 				effect[T] = delta_lumcount
-				T.update_lumcount(delta_lumcount)
+				T.update_lumcount(delta_lumcount, "dynamic")
 
 			if(!T.affecting_lights)
 				T.affecting_lights = list()
