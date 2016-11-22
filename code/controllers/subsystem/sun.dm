@@ -3,7 +3,7 @@ var/global_sun_light = 10
 //For now it's using for change times of day
 /datum/subsystem/sun
 	name = "Sun"
-	wait = 600
+	wait = 60
 	priority = 2
 
 	var/angle
@@ -18,18 +18,20 @@ var/global_sun_light = 10
 	var/next_changing = 0
 /datum/subsystem/sun/New()
 	NEW_SS_GLOBAL(SSsun)
+	/*
 
 	angle = rand (0,360)			// the station position to the sun is randomised at round start
 	rate = rand(50,200)/100			// 50% - 200% of standard rotation
 	if(prob(50))					// same chance to rotate clockwise than counter-clockwise
 		rate = -rate
-	next_changing = times_changing
+	*/
 
 
-/datum/subsystem/sun/stat_entry(msg)
-	..("P:[solars.len]")
+/datum/subsystem/sun/Initialize()
+	next_changing = times_changing + world.time
 
 /datum/subsystem/sun/fire()
+/*
 	angle = (360 + angle + rate * 6) % 360	 // increase/decrease the angle to the sun, adjusted by the rate
 
 	// now calculate and cache the (dx,dy) increments for line drawing
@@ -52,7 +54,7 @@ var/global_sun_light = 10
 			solars.Remove(SC)
 			continue
 		SC.update()
-
+*/
 	if(!is_working && last_fire >= next_changing)
 		spawn(0)
 			if(toogle_times())
@@ -60,7 +62,7 @@ var/global_sun_light = 10
 
 /datum/subsystem/sun/proc/toogle_times()
 	if(is_working)
-		usr << "Not now"
+		world << "Not now"
 		return 0
 	var/x
 	var/y
@@ -71,11 +73,11 @@ var/global_sun_light = 10
 	//space.lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 	if(current_time_of_day == "day")
 		global_sun_light = 10
-		sun_light_finish = 0.2
+		sun_light_finish = 0.3
 		current_time_of_day= "evening"
 		world << "It's evening"
 	else if(current_time_of_day == "night")
-		global_sun_light = 0.2
+		global_sun_light = 0.3
 		sun_light_finish = 10
 		current_time_of_day = "morning"
 		world << "It's morning"
@@ -83,13 +85,13 @@ var/global_sun_light = 10
 		world << "DEBUG: NIGHT IS BROKEN"
 	for(,,)
 		if(current_time_of_day == "evening")
-			if(global_sun_light <= 0.2)
+			if(global_sun_light <= 0.3)
 				break
 			global_sun_light--
 			if(global_sun_light <= 0)
-				global_sun_light = 0.2
+				global_sun_light = 0.3
 		else if(current_time_of_day == "morning")
-			if(global_sun_light >= (sun_light_finish + 1.2))
+			if(global_sun_light >= (sun_light_finish + 0.3))
 				break
 			global_sun_light++
 		for(x=world.maxx, x>1, x--)

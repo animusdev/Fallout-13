@@ -9,7 +9,6 @@
 		return
 	if(!loc)
 		return
-	var/datum/gas_mixture/environment = loc.return_air()
 
 	if(stat != DEAD)
 
@@ -29,7 +28,7 @@
 		handle_random_events()
 
 		. = 1
-
+	var/datum/gas_mixture/environment = loc.return_air()
 	//Handle temperature/pressure differences between body and environment
 	if(environment)
 		handle_environment(environment)

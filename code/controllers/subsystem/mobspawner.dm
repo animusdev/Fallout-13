@@ -2,7 +2,7 @@
 var/datum/subsystem/mobspawner/SSMOBSPAWNER
 /datum/subsystem/mobspawner
 	name = "Mob Spawner"
-	wait = 30
+	wait = 20
 	obj/effect/statclick/statclick
 	var/list/spawners = list()
 

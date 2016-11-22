@@ -4,7 +4,7 @@
 
 	var/slowdown = 0 //negative for faster, positive for slower
 	var/intact = 1
-	var/baseturf = /turf/space
+	var/baseturf = /turf/ground/desert
 	var/baseturf_icon
 	var/baseturf_dir
 

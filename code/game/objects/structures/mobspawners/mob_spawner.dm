@@ -14,7 +14,6 @@
 	var/list/spawned_mobs = list()
 
 /obj/structure/mob_spawner/New()
-			Spawn()
 			next_spawn = world.time + spawn_delay
 			SSMOBSPAWNER.ass_spawner(src)
 /obj/structure/mob_spawner/Destroy()
@@ -29,17 +28,17 @@
 	spawned_mobs += mob
 	next_spawn = world.time + spawn_delay
 /obj/structure/mob_spawner/proc/check()
-	if((curr_count <= max_count) && (world.time >= next_spawn))
-		for(var/mob/A in range(10))
-			if(!istype(spawnmob))
-				return
+	if((curr_count < max_count) && (world.time >= next_spawn))
+		for(var/client/A in range(10))
+			if(!istype(A))
+				return 0//No one can see spawn
 		return 1
 	return 0
 obj/structure/mob_spawner/proc/mob_death(var/mob/b)
 	b.spawner = null
 	spawned_mobs -= b
 	curr_count--
-	if(self_destruct && (curr_count >= max_count))
+	if(self_destruct && (curr_count >= 0))
 		qdel(src)
 	else
 		curr_count = 0
@@ -55,12 +54,12 @@ obj/structure/mob_spawner/proc/mob_death(var/mob/b)
 /obj/structure/mob_spawner/molerat
 	spawnmob = /mob/living/simple_animal/hostile/molerat
 	spawn_delay = 300
-	max_count = 10
+	max_count = 5
 /obj/structure/mob_spawner/gekkon
 	spawnmob = /mob/living/simple_animal/hostile/gekkon
 	spawn_delay = 1000
-	max_count = 20
+	max_count = 5
 /obj/structure/mob_spawner/rad_scorpion
 	spawnmob = /mob/living/simple_animal/hostile/rad_scorpion
 	spawn_delay = 2000
-	max_count = 20
+	max_count = 5
