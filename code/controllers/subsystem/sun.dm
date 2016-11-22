@@ -14,7 +14,7 @@ var/global_sun_light = 10
 	var/sunz = 1 //z coord where times of day are changing
 	var/current_time_of_day = "day"
 	var/is_working = 0
-	var/times_changing = 1800
+	var/times_changing = 18000
 	var/next_changing = 0
 /datum/subsystem/sun/New()
 	NEW_SS_GLOBAL(SSsun)
