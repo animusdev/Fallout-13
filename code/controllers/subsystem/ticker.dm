@@ -52,7 +52,7 @@ var/datum/subsystem/ticker/ticker
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
 
-	login_music = pickweight(list('sound/f13music/new_vegas_show_1.ogg' = 49, 'sound/f13music/new_vegas_show_2.ogg' = 49, 'sound/f13music/new_vegas_show_3.ogg' = 49, 'sound/f13music/new_vegas_show_4.ogg' = 49, 'sound/f13music/new_vegas_show_5.ogg' = 49, 'sound/f13music/new_vegas_show_6.ogg' = 49, 'sound/f13music/new_vegas_show_7.ogg' = 49)) // choose title music!
+	login_music = pickweight(list('sound/f13music/AKISS.ogg' = 49, 'sound/f13music/20CAR.ogg' = 49, 'sound/f13music/17ARROYO.ogg' = 49, 'sound/f13music/13CARVRN.ogg' = 49, 'sound/f13music/12JUNKTN.ogg' = 49, 'sound/f13music/new_vegas_show_6.ogg' = 49, 'sound/f13music/f13standby.ogg' = 80)) // choose title music!
 	if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
 		login_music = 'sound/f13music/mysterious_stranger.ogg'
 
@@ -69,7 +69,7 @@ var/datum/subsystem/ticker/ticker
 		if(GAME_STATE_STARTUP)
 			timeLeft = config.lobby_countdown * 10
 			world << "<b><font color='blue'>Welcome to the pre-game lobby!</font></b>"
-			world << "Please, setup your character and select ready. Game will start in [config.lobby_countdown] seconds"
+			world << "Please, setup your character and select ready, and prepare to survive. Game will start in [config.lobby_countdown] seconds"
 			current_state = GAME_STATE_PREGAME
 
 		if(GAME_STATE_PREGAME)
