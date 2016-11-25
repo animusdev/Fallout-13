@@ -10,6 +10,4 @@
 	return
 
 /mob/proc/death(gibbed)
-	if(src.spawner)
-		src.spawner.mob_death(src)
 	return
