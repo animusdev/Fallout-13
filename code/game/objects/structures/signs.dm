@@ -193,8 +193,8 @@
 /obj/structure/sign/maltesefalcon/right
 	icon_state = "maltesefalcon-right"
 
-/obj/structure/sign/science			//These 3 have multiple types, just var-edit the icon_state to whatever one you want on the map
-	name = "\improper SCIENCE"
+/obj/structure/sign/science
+	name = "SCIENCE"
 	desc = "A sign labelling an area where research and science is performed."
 	icon_state = "science1"
 

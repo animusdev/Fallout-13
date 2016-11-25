@@ -1,7 +1,7 @@
 
 //########################## POSTERS ##################################
 
-#define NUM_OF_POSTER_DESIGNS 36 // contraband posters
+#define NUM_OF_POSTER_DESIGNS 35 // contraband posters
 
 #define NUM_OF_POSTER_DESIGNS_LEGIT 35 // corporate approved posters
 
@@ -174,7 +174,7 @@ list(name = "- Fallout", desc = " War. War never changes.") )
 	desc = "A large piece of space-resistant printed paper."
 	icon = 'icons/obj/contraband.dmi'
 	anchored = 1
-	var/serial_number	//Will hold the value of src.loc if nobody initialises it
+	var/serial_number = 0	//Will hold the value of src.loc if nobody initialises it
 	var/ruined = 0
 	var/official = 0
 	var/placespeed = 37 // don't change this, otherwise the animation will not sync to the progress bar
@@ -182,7 +182,7 @@ list(name = "- Fallout", desc = " War. War never changes.") )
 /obj/structure/sign/poster/New(serial,rolled_official)
 	serial_number = serial
 	official = rolled_official
-	if(serial_number == loc)
+	if(serial_number ==  0)
 		if(!official)
 			serial_number = rand(1, NUM_OF_POSTER_DESIGNS)	//This is for the mappers that want individual posters without having to use rolled posters.
 		if(official)
@@ -195,6 +195,7 @@ list(name = "- Fallout", desc = " War. War never changes.") )
 		icon_state = "poster[serial_number]_legit"
 		name += legitposters[serial_number][POSTERNAME]
 		desc += legitposters[serial_number][POSTERDESC]
+
 	..()
 
 /obj/structure/sign/poster/attackby(obj/item/I, mob/user, params)
