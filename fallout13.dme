@@ -156,7 +156,6 @@
 #include "code\controllers\subsystem\lighting.dm"
 #include "code\controllers\subsystem\machines.dm"
 #include "code\controllers\subsystem\mobs.dm"
-#include "code\controllers\subsystem\mobspawner.dm"
 #include "code\controllers\subsystem\nano.dm"
 #include "code\controllers\subsystem\npcpool.dm"
 #include "code\controllers\subsystem\objects.dm"

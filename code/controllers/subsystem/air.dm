@@ -175,6 +175,8 @@ var/datum/subsystem/air/SSair
 		z_finish = z_level
 	var/list/turfs_to_init = block(locate(1, 1, z_start), locate(world.maxx, world.maxy, z_finish))
 	for(var/turf/simulated/T in turfs_to_init)
+		if(!istype(T))
+			continue
 		T.CalculateAdjacentTurfs()
 		T.excited = 0
 		active_turfs -= T
@@ -186,7 +188,7 @@ var/datum/subsystem/air/SSair
 				var/turf/enemy_tile = get_step(T, direction)
 				if(istype(enemy_tile,/turf/simulated/))
 					var/turf/simulated/enemy_simulated = enemy_tile
-					if(!T.air.compare(enemy_simulated.air))
+					if(!enemy_simulated.air.compare(enemy_simulated.air))
 						T.excited = 1
 						active_turfs |= T
 						break

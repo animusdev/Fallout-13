@@ -2,13 +2,13 @@
 //#define TESTING				//Enables in-depth debug messages to runtime log (used for debugging)								//By using the testing("message") proc you can create debug-feedback for people with this
 								//uncommented, but not visible in the release version)
 
-#define PRELOAD_RSC	2			/*set to:
+#define PRELOAD_RSC	1			/*set to:
 								0 to allow using external resources or on-demand behaviour;
 								1 to use the default behaviour;
 								2 for preloading absolutely everything;
 								*/
 
-#define BACKGROUND_ENABLED 1    // The default value for all uses of set background. Set background can cause gradual lag and is recommended you only turn this on if necessary.
+#define BACKGROUND_ENABLED 0    // The default value for all uses of set background. Set background can cause gradual lag and is recommended you only turn this on if necessary.
 								// 1 will enable set background. 0 will disable set background.
 
 #define INACTIVITY_KICK	6000	//10 minutes in ticks (approx.)
