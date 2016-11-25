@@ -206,9 +206,9 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=[config.discordurl]>" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -274,7 +274,7 @@ var/failed_db_connections = 0
 	var/address = sqladdress
 	var/port = sqlport
 
-	dbcon.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
+	dbcon.Connect("dbi:mysql,[db],[address],[port]","[user]","[pass]")
 	. = dbcon.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
