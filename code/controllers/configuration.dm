@@ -34,10 +34,10 @@
 	var/log_pda = 0						// log pda messages
 	var/log_hrefs = 0					// logs all links clicked in-game. Could be used for debugging and tracking down exploits
 	var/sql_enabled = 0					// for sql switching
-	var/allow_admin_ooccolor = 0		// Allows admins with relevant permissions to have their own ooc colour
-	var/allow_vote_restart = 0 			// allow votes to restart
+	var/allow_admin_ooccolor = 1		// Allows admins with relevant permissions to have their own ooc colour
+	var/allow_vote_restart = 1 			// allow votes to restart
 	var/allow_vote_mode = 0				// allow votes to change mode
-	var/vote_delay = 6000				// minimum time between voting sessions (deciseconds, 10 minute default)
+	var/vote_delay = 60000				// minimum time between voting sessions (deciseconds, 10 minute default)
 	var/vote_period = 600				// length of voting period (deciseconds, default 1 minute)
 	var/vote_no_default = 0				// vote does not default to nochange/norestart (tbi)
 	var/vote_no_dead = 0				// dead people can't vote (tbi)
@@ -47,7 +47,7 @@
 	var/fps = 10
 	var/allow_holidays = 0				//toggles whether holiday-specific content should be used
 
-	var/hostedby = null
+	var/hostedby = "Enclave"
 	var/respawn = 1
 	var/guest_jobban = 1
 	var/usewhitelist = 0
@@ -61,11 +61,11 @@
 
 	var/server
 	var/banappeals
-	var/wikiurl = "http://wasteland.expert" // default wiki link
+	var/wikiurl = "http://www.fallss.esy.es/wiki/doku.php?id=ru:start" // default wiki link
 	var/forumurl = "https://vk.com/the_fallout_13" // default forums
 	var/rulesurl = "html/rules.html" // default rules
 	var/githuburl = "https://bitbucket.org/Jackerzz/fallout/issues?status=new&status=open" //default github
-
+	var/discordurl = "https://discord.gg/fECUGbv"
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0
 
@@ -136,8 +136,8 @@
 	var/revival_brain_life = -1
 
 	var/rename_cyborg = 0
-	var/ooc_during_round = 0
-	var/emojis = 0
+	var/ooc_during_round = 1
+	var/emojis = 1
 
 	//Used for modifying movement speed for mobs.
 	//Unversal modifiers
