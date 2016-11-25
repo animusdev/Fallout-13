@@ -23,12 +23,20 @@ turf/ground/New()
 	return QDEL_HINT_LETMELIVE
 
 /turf/ground/proc/update_sunlight()
+	var/lum = 0
 	if(sun_light && open_space)
 		for(var/turf/T in RANGE_TURFS(1,src))
-			var/turf/ground/turf = T
-			if(istype(T,/turf/simulated) || (turf && !turf.open_space))
-				SetLuminosity(sun_light,0)
-				return
+			if(istype(T,/turf/simulated))
+				lum = 1
+				break
+			else if(istype(T,/turf/ground))
+				var/turf/ground/g = T
+				if(g.open_space)
+					lum = 1
+					break
+	if(lum)
+		SetLuminosity(sun_light,0)
+		return
 	SetLuminosity(0)
 
 /turf/ground/return_air()
