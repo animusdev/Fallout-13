@@ -7,6 +7,7 @@
 	temperature = T20C
 	oxygen = MOLES_O2STANDARD
 	nitrogen = MOLES_N2STANDARD
+	smooth = SMOOTH_TRUE
 	var/sun_light
 	var/open_space = 1
 
@@ -71,7 +72,7 @@ turf/ground/New()
 	var/turf/t = ..()
 
 	smooth_icon_neighbors(src)
-
+	src.fullUpdateMineralOverlays(src)
 	t.baseturf = bt
 	t.baseturf_icon = bti
 	t.baseturf_dir = btd
