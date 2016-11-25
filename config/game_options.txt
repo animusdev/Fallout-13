@@ -260,7 +260,7 @@ JOIN_WITH_MUTANT_RACE
 ## Disabling humans is possible but a bit buggy. Some code relies on the notion that white people exist in space.
 ROUNDSTART_RACES human
 ROUNDSTART_RACES ghoul
-ROUNDSTART_RACES bigmutant
+#ROUNDSTART_RACES bigmutant
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
 #ROUNDSTART_RACES lizard
