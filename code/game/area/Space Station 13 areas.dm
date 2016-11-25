@@ -101,7 +101,7 @@ var/list/teleportlocs = list()
 	open_space = 1
 	power_environ = 0
 	valid_territory = 0
-	ambientsounds = list('sound/ambience/ambispace.ogg','sound/ambience/title2.ogg',)
+	ambientsounds = list('sound/f13ambience/wasteland.ogg','sound/f13music/22VCITY.ogg','sound/f13music/07DESERT.ogg', 'sound/f13music/03aWRLDMP.ogg')
 	blob_allowed = 0 //Eating up space doesn't count for victory as a blob.
 
 /area/space/nearstation
