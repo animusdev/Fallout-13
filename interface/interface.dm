@@ -1,7 +1,19 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
-/*
+
+/client/verb/discord()
+	set name = "Discord"
+	set desc = "Visit the discord."
+	set hidden = 1
+	if(config.discordurl)
+		if(alert("This will open the discord in your browser. Are you sure?",,"Yes","No")=="No")
+			return
+		src << link(config.discordurl)
+	else
+		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
+	return
+
 /client/verb/wiki()
-	set name = "wiki"
+	set name = "Wiki"
 	set desc = "Visit the wiki."
 	set hidden = 1
 	if(config.wikiurl)
@@ -11,7 +23,7 @@
 	else
 		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
 	return
-*/
+
 /client/verb/vk()
 	set name = "VK"
 	set desc = "Visit the VK."
@@ -29,9 +41,7 @@
 	set desc = "Show Server Rules."
 	set hidden = 1
 	if(config.rulesurl)
-		//if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
-		//	return
-		src << browse('html/rules.html', "window=changes;size=675x650")
+		src << browse('html/rules.html', "size=64x22;window=freezer")
 	else
 		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>"
 	return
