@@ -56,21 +56,16 @@ var/global_sun_light = 10
 		SC.update()
 */
 	if(!is_working && last_fire >= next_changing)
+		is_working = 1
 		spawn(0)
 			if(toogle_times())
 				next_changing = last_fire + times_changing
 
 /datum/subsystem/sun/proc/toogle_times()
-	if(is_working)
-		world << "Not now"
-		return 0
 	var/x
 	var/y
 	var/sun_light_finish
 	var/turf/ground/turf
-//	var/area/space/space = locate(/area/space) in world
-	is_working = 1
-	//space.lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 	if(current_time_of_day == "day")
 		global_sun_light = 10
 		sun_light_finish = 0.3
@@ -108,13 +103,13 @@ var/global_sun_light = 10
 		//			turf.redraw_lighting()
 			sleep(1.5)
 		sleep(100)
-	is_working = 0
 	if(current_time_of_day == "evening")
 		current_time_of_day = "night"
 		world << "It's night"
 	else if(current_time_of_day == "morning")
 		current_time_of_day = "day"
 		world << "It's day"
+	is_working = 0
 	return 1
 	//	space.lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
 
