@@ -5,8 +5,8 @@ var/datum/subsystem/lighting/SSlighting
 /datum/subsystem/lighting
 	name = "Lighting"
 	priority = 1
-	wait = 1
-	dynamic_wait = 1
+	wait = 0.1
+	dynamic_wait = 0
 	dwait_delta = 1
 	dwait_lower = 2
 	dwait_delta = 2
