@@ -81,11 +81,11 @@ var/global/datum/controller/master/Master = new()
 	if (zlevel && zlevel > 0 && zlevel <= world.maxz)
 		for(var/datum/subsystem/SS in subsystems)
 			SS.Initialize(world.timeofday, zlevel)
-			sleep(-1)
+			sleep(1)
 	else
 		for(var/datum/subsystem/SS in subsystems)
 			SS.Initialize(world.timeofday, zlevel)
-			sleep(-1)
+			sleep(1)
 
 	sortTim(subsystems, /proc/cmp_subsystem_display)
 

@@ -1,3 +1,4 @@
+
 #define SOLAR_MAX_DIST 40
 #define SOLARGENRATE 1500
 

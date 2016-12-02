@@ -1,117 +1,80 @@
 var/datum/subsystem/sun/SSsun
-var/global_sun_light = 10
 //For now it's using for change times of day
 /datum/subsystem/sun
 	name = "Sun"
-	wait = 600
+	wait = 2
 	priority = 2
 
-	var/angle
-	var/dx
-	var/dy
-	var/rate
-	var/list/solars	= list()
+
 	var/sunz = 1 //z coord where times of day are changing
 	var/current_time_of_day = "day"
 	var/is_working = 0
-	var/times_changing = 18000
-	var/next_changing = 0
+	var/change_rate = 18000
+	var/global_sun_light = 10
+	var/next_change = 0
+	var/max_sun = 10
+	var/min_sun = 0.3
+	var/sun_light_finish = 0
+	var/curx
+	var/dif = 0
 /datum/subsystem/sun/New()
 	NEW_SS_GLOBAL(SSsun)
-	/*
-
-	angle = rand (0,360)			// the station position to the sun is randomised at round start
-	rate = rand(50,200)/100			// 50% - 200% of standard rotation
-	if(prob(50))					// same chance to rotate clockwise than counter-clockwise
-		rate = -rate
-	*/
 
 
-/datum/subsystem/sun/Initialize()
-	next_changing = times_changing + world.time
+/datum/subsystem/sun/Initialize(start_timeofday, zlevel)
+	next_change = change_rate + world.time
+	..()
 
 /datum/subsystem/sun/fire()
-/*
-	angle = (360 + angle + rate * 6) % 360	 // increase/decrease the angle to the sun, adjusted by the rate
+		//<<1.NEED FOR WORK?>>
+	if(is_working)
+		///////////////////////
+		/////////////////////
+		//<<2.WORK HARD>>//
+		/////////////////
+		//<<2.1 Updating y line of turfes>>//
+		for(var/turf/t in block(locate(curx,1,sunz), locate(curx,world.maxy,sunz)))
+			if(istype(t, /turf/ground))
+				var/turf/ground/temp = t
+				if(!temp.open_space)
+					continue
+				temp.sun_light = global_sun_light
+				temp.redraw_lighting()
+				temp.update_sunlight()
 
-	// now calculate and cache the (dx,dy) increments for line drawing
-	var/s = sin(angle)
-	var/c = cos(angle)
+		//<<2.2 Checking finish>>//
+		if(sun_light_finish == global_sun_light)
 
-	// Either "abs(s) < abs(c)" or "abs(s) >= abs(c)"
-	// In both cases, the greater is greater than 0, so, no "if 0" check is needed for the divisions
+			if(dif == 1)
 
-	if(abs(s) < abs(c))
-		dx = s / abs(c)
-		dy = c / abs(c)
-	else
-		dx = s / abs(s)
-		dy = c / abs(s)
+				current_time_of_day = "day"
+			else
+				current_time_of_day = "night"
+			is_working = 0
+			next_change += change_rate
+			return
+		//<<2.3 Setting up new level of  sun light at the turf>>//
+		curx--
+		if(curx <= 0)
+			curx = world.maxy
+			global_sun_light = global_sun_light + dif
+			if(global_sun_light > max_sun)
+				global_sun_light = max_sun
+			if(global_sun_light < min_sun)
+				global_sun_light = min_sun
 
-	//now tell the solar control computers to update their status and linked devices
-	for(var/obj/machinery/power/solar_control/SC in solars)
-		if(!SC.powernet)
-			solars.Remove(SC)
-			continue
-		SC.update()
-*/
-	if(!is_working && last_fire >= next_changing)
-		is_working = 1
-		spawn(0)
-			if(toogle_times())
-				next_changing = last_fire + times_changing
+	/////////simple waiting//////
+	else if (world.time > next_change)//Waiting for work
+		if(current_time_of_day == "day")
+			sun_light_finish = min_sun
+			current_time_of_day= "evening"
+			is_working = 1
+			dif = -1
+		else if(current_time_of_day == "night")
 
-/datum/subsystem/sun/proc/toogle_times()
-	var/x
-	var/y
-	var/sun_light_finish
-	var/turf/ground/turf
-	if(current_time_of_day == "day")
-		global_sun_light = 10
-		sun_light_finish = 0.3
-		current_time_of_day= "evening"
-		world << "It's evening"
-	else if(current_time_of_day == "night")
-		global_sun_light = 0.3
-		sun_light_finish = 10
-		current_time_of_day = "morning"
-		world << "It's morning"
-	else
-		world << "DEBUG: NIGHT IS BROKEN"
-	for(,,)
-		if(current_time_of_day == "evening")
-			if(global_sun_light <= 0.3)
-				break
-			global_sun_light--
-			if(global_sun_light <= 0)
-				global_sun_light = 0.3
-		else if(current_time_of_day == "morning")
-			if(global_sun_light >= (sun_light_finish + 0.3))
-				break
-			global_sun_light++
-		for(x=world.maxx, x>1, x--)
-			for(y=1, y<world.maxy, y++)
-				turf = locate(x,y,sunz)
-				if(istype(turf,/turf/ground))
-					var/turf/ground/g = turf
-					if(!g.open_space)
-						continue
-					g.sun_light = global_sun_light
-					g.redraw_lighting()
-					g.update_sunlight()
-		//		else if(turf.loc == space || istype(turf,/turf/ground/mountain))
-		//			turf.redraw_lighting()
-			sleep(1.5)
-		sleep(100)
-	if(current_time_of_day == "evening")
-		current_time_of_day = "night"
-		world << "It's night"
-	else if(current_time_of_day == "morning")
-		current_time_of_day = "day"
-		world << "It's day"
-	is_working = 0
-	return 1
-	//	space.lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
-
-
-
+			sun_light_finish = max_sun
+			current_time_of_day = "morning"
+			is_working = 1
+			dif = 1
+		curx = world.maxx
+		global_sun_light += dif

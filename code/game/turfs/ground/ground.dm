@@ -16,7 +16,7 @@ turf/ground/New()
 	var/area/area = src.loc
 	if(area && area.open_space)
 		open_space = 1
-		sun_light = global_sun_light
+		sun_light = SSsun.global_sun_light
 	else
 		open_space = 0
 		sun_light = 0

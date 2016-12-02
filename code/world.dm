@@ -1,6 +1,6 @@
 /world
 	mob = /mob/new_player
-	turf = /turf/simulated/floor/plating/asteroid
+	turf = /turf/ground/desert
 	area = /area/awaymission
 	view = "15x15"
 	cache_lifespan = 7
@@ -9,7 +9,6 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 
 /world/New()
 	map_ready = 1
-
 #if (PRELOAD_RSC == 0)
 	external_rsc_urls = file2list("config/external_rsc_urls.txt","\n")
 	var/i=1
@@ -65,7 +64,6 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	#else
 	map_name = "Unknown"
 	#endif
-
 
 	return
 

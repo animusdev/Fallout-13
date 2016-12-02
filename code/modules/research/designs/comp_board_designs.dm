@@ -190,7 +190,7 @@
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/powermonitor
 	category = list("Computer Boards")
-
+/*
 /datum/design/solarcontrol
 	name = "Computer Design (Solar Control)"
 	desc = "Allows for the construction of circuit boards used to build a solar control console."
@@ -200,7 +200,7 @@
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/solar_control
 	category = list("Computer Boards")
-
+*/
 /datum/design/prisonmanage
 	name = "Computer Design (Prisoner Management Console)"
 	desc = "Allows for the construction of circuit boards used to build a prisoner management console."

@@ -132,10 +132,10 @@
 /obj/item/weapon/circuitboard/turbine_control
 	name = "circuit board (Turbine control)"
 	build_path = /obj/machinery/computer/turbine_computer
-/obj/item/weapon/circuitboard/solar_control
+/*obj/item/weapon/circuitboard/solar_control
 	name = "circuit board (Solar Control)"  //name fixed 250810
 	build_path = /obj/machinery/power/solar_control
-	origin_tech = "programming=2;powerstorage=2"
+	origin_tech = "programming=2;powerstorage=2"*/
 /obj/item/weapon/circuitboard/powermonitor
 	name = "circuit board (Power Monitor)"  //name fixed 250810
 	build_path = /obj/machinery/computer/monitor
