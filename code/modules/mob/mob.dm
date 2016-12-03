@@ -658,6 +658,8 @@ var/list/slot_equipment_priority = list( \
 		if (nextmap && istype(nextmap))
 			stat(null, "Next Map: [nextmap.friendlyname]")
 		stat(null, "Server Time: [time2text(world.realtime, "YYYY-MM-DD hh:mm")]")
+		if(config.sun_enabled)
+			stat(null, "Time Of Day: [SSsun.current_time_of_day]")
 		var/ETA
 		switch(SSshuttle.emergency.mode)
 			if(SHUTTLE_RECALL)

@@ -47,6 +47,11 @@
 	var/fps = 10
 	var/allow_holidays = 0				//toggles whether holiday-specific content should be used
 
+	var/sun_enabled = 1
+	var/max_sunlight = 10
+	var/min_sunlight = 0.2
+	var/time_of_day_rate = 18000
+
 	var/hostedby = "Enclave"
 	var/respawn = 1
 	var/guest_jobban = 1
@@ -538,7 +543,7 @@
 				if("assistant_cap")
 					config.assistant_cap			= text2num(value)
 				if("starlight")
-					config.starlight			= 1
+					config.starlight				= 1
 				if("grey_assistants")
 					config.grey_assistants			= 1
 				if("no_summon_guns")
@@ -549,6 +554,14 @@
 					config.no_summon_events			= 1
 				if("reactionary_explosions")
 					config.reactionary_explosions	= 1
+				if("sun_enabled")
+					config.sun_enabled				= text2num(value)
+				if("max_sunlight")
+					config.max_sunlight				= text2num(value)
+				if("min_sunlight")
+					config.min_sunlight				= text2num(value)
+				if("time_of_day_rate")
+					config.time_of_day_rate			= text2num(value)
 				if("bombcap")
 					var/BombCap = text2num(value)
 					if (!BombCap)

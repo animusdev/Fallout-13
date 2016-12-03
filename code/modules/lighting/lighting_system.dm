@@ -93,6 +93,27 @@
 
 	return 1
 
+/datum/light_source/proc/update_sunlight()
+	var/turf/ground/own = owner
+	own.luminosity = own.sun_light
+	var/range = owner.get_light_range(radius)
+	var/center_strength = LIGHTING_CAP/LIGHTING_LUM_FOR_FULL_BRIGHT*(luminosity)
+	for(var/turf/T in sun_effect)
+		T.update_lumcount(-sun_effect[T], "sun")
+#ifdef LIGHTING_CIRCULAR
+		var/distance = cheap_hypotenuse(T.x, T.y, __x, __y)
+#else
+		var/distance = max(abs(T,x - __x), abs(T.y - __y))
+#endif
+		var/delta_lumcount = Clamp(center_strength * (range - distance) / range, 0, LIGHTING_CAP)
+		if(delta_lumcount > 0)
+			if(istype(own) && own.sun_light)
+				sun_effect[T] = delta_lumcount
+				T.affected_sun = own.sun_light
+				T.update_lumcount(delta_lumcount, "sun")
+		else
+			T.affecting_lights -= src
+			sun_effect -= T
 //Tell the lighting subsystem to check() next fire
 /datum/light_source/proc/changed()
 	if(owner)
@@ -103,7 +124,7 @@
 		SSlighting.changed_lights |= src
 
 //Remove current effect
-/datum/light_source/proc/remove_effect().
+/datum/light_source/proc/remove_effect()
 	for(var/turf/T in effect)
 		T.update_lumcount(-effect[T], "dynamic")
 
