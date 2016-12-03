@@ -22,8 +22,9 @@
 	var/mapstart = findtext(map_file,"\n(1,1,") //todo replace with something saner
 	var/content = copytext(map_file,findtext(map_file,quote+"\n",mapstart,0)+2,findtext(map_file,"\n"+quote,mapstart,0)+1)
 	var/line_len = length(copytext(content,1,findtext(content,"\n",2,0)))
-
-	width = line_len/key_len
+	width = 0
+	if(key_len)
+		width = line_len/key_len
 	height = length(content)/(line_len+1)
 
 /datum/map_template/proc/load(turf/T, centered = FALSE)

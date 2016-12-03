@@ -9,6 +9,7 @@
 	icon_state = "gavelhammer"
 	force = 5
 	throwforce = 6
+	slot_flags = SLOT_BELT
 	w_class = 2
 	attack_verb = list("bashed", "battered", "judged", "whacked")
 	burn_state = FLAMMABLE

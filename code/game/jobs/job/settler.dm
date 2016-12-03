@@ -30,9 +30,8 @@ Settler
 		/obj/item/clothing/under/f13/lumberjack,\
 		/obj/item/clothing/under/f13/roving)
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	r_pocket = /obj/item/weapon/lighter
-	if (prob(50))
-		glasses = /obj/item/clothing/glasses/sunglasses
+	r_pocket = /obj/item/device/flashlight/flare/torch
+	belt = pick (simple_start_weapon)
 	//if (prob(80))
 	//	l_hand = pick(/obj/item/weapon/kitchen/knife)
 

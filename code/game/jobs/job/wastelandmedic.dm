@@ -28,7 +28,8 @@ Wastelandmedic
 //	mask = /obj/item/clothing/mask/surgical
 //	gloves = /obj/item/clothing/gloves/color/white
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	r_pocket = /obj/item/weapon/lighter
+	r_pocket = /obj/item/device/flashlight/flare/torch
+	belt = pick (simple_start_weapon)
 	//back = /obj/item/weapon/storage/backpack
 	//backpack = /obj/item/weapon/storage/backpack
 	//satchel = /obj/item/weapon/storage/backpack/satchel_norm
@@ -37,7 +38,5 @@ Wastelandmedic
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/stack/coin/coins = 1)
-	if (prob(50))
-		glasses = /obj/item/clothing/glasses/sunglasses
 //	if (prob(80))
 //		l_hand = pick(/obj/item/weapon/kitchen/knife)

@@ -139,6 +139,13 @@
 	back = /obj/item/weapon/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
+	var/list/simple_start_weapon = list(/obj/item/weapon/crowbar,/obj/item/weapon/golf,
+				/obj/item/weapon/hatchet,/obj/item/weapon/shovel,
+				/obj/item/weapon/wrench,
+				/obj/item/weapon/pipe, /obj/item/weapon/melee/chainofcommand,
+				/obj/item/weapon/gavelhammer,/obj/item/weapon/cultivator,
+				/obj/item/weapon/extinguisher)
+
 	var/backpack = /obj/item/weapon/storage/backpack
 	var/satchel  = /obj/item/weapon/storage/backpack/satchel_norm
 	var/box = /obj/item/weapon/storage/box/survival

@@ -30,7 +30,11 @@ Regulator
 	//suit = /obj/item/clothing/suit/armor/vest/det_suit
 	head = /obj/item/clothing/head/fluff/cowboy
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	r_pocket = /obj/item/weapon/lighter
+	r_pocket = /obj/item/device/flashlight/flare/torch
+	if (prob(50))
+		belt = /obj/item/weapon/melee/classic_baton
+	else
+		belt = pick (simple_start_weapon)
 	//suit_store = /obj/item/weapon/gun/projectile/automatic/pistol/m1911
 	//suit_store = /obj/item/weapon/gun/projectile/shotgun/boltaction
 	//back = /obj/item/weapon/storage/backpack
@@ -40,9 +44,4 @@ Regulator
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/stack/coin/coins = 1)
-
-	if (prob(50))
-		glasses = /obj/item/clothing/glasses/sunglasses
-	if (prob(20))
-		l_hand = /obj/item/weapon/melee/classic_baton
 

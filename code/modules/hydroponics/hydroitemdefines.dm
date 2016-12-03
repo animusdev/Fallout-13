@@ -79,6 +79,7 @@
 	icon_state = "hatchet"
 	flags = CONDUCT
 	force = 12
+	slot_flags = SLOT_BELT
 	w_class = 1
 	throwforce = 15
 	throw_speed = 3
