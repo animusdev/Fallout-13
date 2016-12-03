@@ -13,11 +13,50 @@
 	var/vehicle_move_delay = 2 //tick delay between movements, lower = faster, higher = slower
 	var/auto_door_open = TRUE
 	var/view_range = 7
+	var/obj/item/weapon/stock_parts/cell/high/bcell = null
+	var/movecost = 5
 
 	//Pixels
 	var/generic_pixel_x = 0 //All dirs show this pixel_x for the driver
 	var/generic_pixel_y = 0 //All dirs shwo this pixel_y for the driver
 
+/obj/vehicle/CheckParts()
+	bcell = locate(/obj/item/weapon/stock_parts/cell) in contents
+	update_icon()
+
+/obj/vehicle/examine(mob/user)
+	..()
+	if(bcell)
+		user <<"<span class='notice'>The vehicle is [round(bcell.percent())]% charged.</span>"
+	else
+		user <<"<span class='warning'>The vehicle does not have a power source installed.</span>"
+
+/obj/vehicle/attackby(obj/item/weapon/W, mob/user, params)
+	if(istype(W, /obj/item/weapon/stock_parts/cell))
+		var/obj/item/weapon/stock_parts/cell/C = W
+		if(bcell)
+			user << "<span class='notice'>[src] already has a cell.</span>"
+		else
+			if(C.maxcharge < movecost)
+				user << "<span class='notice'>[src] requires a higher capacity cell.</span>"
+				return
+			if(!user.unEquip(W))
+				return
+			W.loc = src
+			bcell = W
+			user << "<span class='notice'>You install a cell in [src].</span>"
+			update_icon()
+
+	else if(istype(W, /obj/item/weapon/screwdriver))
+		if(bcell)
+			bcell.updateicon()
+			bcell.loc = get_turf(src.loc)
+			bcell = null
+			user << "<span class='notice'>You remove the cell from [src].</span>"
+			update_icon()
+			return
+		..()
+	return
 
 /obj/vehicle/New()
 	..()
@@ -100,25 +139,34 @@
 		for (stepcounter = 0; stepcounter<addsteps; ++stepcounter)
 			step(src, direction)
 
+/obj/vehicle/proc/deductcharge(chrgdeductamt)
+	if(bcell)
+		. = bcell.use(chrgdeductamt)
+	return 0
+
 //MOVEMENT
 /obj/vehicle/relaymove(mob/user, direction)
 	if(user.incapacitated())
 		unbuckle_mob()
+	if(bcell && bcell.charge > movecost)
+		if(keycheck(user))
+			if(!Process_Spacemove(direction) || !has_gravity(src.loc) || world.time < next_vehicle_move || !isturf(loc))
+				return
+			next_vehicle_move = world.time + vehicle_move_delay
 
-	if(keycheck(user))
-		if(!Process_Spacemove(direction) || !has_gravity(src.loc) || world.time < next_vehicle_move || !isturf(loc))
-			return
-		next_vehicle_move = world.time + vehicle_move_delay
+			movebasedondelay(direction)
 
-		movebasedondelay(direction)
+			if(buckled_mob)
+				if(buckled_mob.loc != loc)
+					buckled_mob.buckled = null //Temporary, so Move() succeeds.
+					buckled_mob.buckled = src //Restoring
 
-		if(buckled_mob)
-			if(buckled_mob.loc != loc)
-				buckled_mob.buckled = null //Temporary, so Move() succeeds.
-				buckled_mob.buckled = src //Restoring
+			handle_vehicle_layer()
+			handle_vehicle_offsets()
 
-		handle_vehicle_layer()
-		handle_vehicle_offsets()
+			deductcharge(movecost)
+		else
+			user << "<span class='notice'>You'll need charged cell to drive \the [name].</span>"
 	else
 		user << "<span class='notice'>You'll need the keys in one of your hands to drive \the [name].</span>"
 

@@ -1,7 +1,7 @@
 //Motorcycle
 /obj/vehicle/motorcycle
 	name = "motorcycle"
-	desc = "Wanderer Motors LLC.<br>It needs a diesel fuel to run."
+	desc = "Wanderer Motors LLC."
 	icon = 'icons/obj/vehicles/medium_vehicles.dmi'
 	icon_state = "bike"
 	keytype = /obj/item/key
@@ -23,6 +23,33 @@ obj/vehicle/motorcycle/post_buckle_mob(mob/living/M)
 		playsound(src.loc, engine_sound, 50, 0, 0)
 	else
 		overlays -= bikecover
+
+obj/vehicle/motorcycle/attackby(obj/item/weapon/W, mob/user, params)
+	if(istype(W, /obj/item/weapon/stock_parts/cell))
+		var/obj/item/weapon/stock_parts/cell/C = W
+		if(bcell)
+			user << "<span class='notice'>[src] already has a cell.</span>"
+		else
+			if(C.maxcharge < movecost)
+				user << "<span class='notice'>[src] requires a higher capacity cell.</span>"
+				return
+			if(!user.unEquip(W))
+				return
+			W.loc = src
+			bcell = W
+			user << "<span class='notice'>You install a cell in [src].</span>"
+			update_icon()
+
+	else if(istype(W, /obj/item/weapon/screwdriver))
+		if(bcell)
+			bcell.updateicon()
+			bcell.loc = get_turf(src.loc)
+			bcell = null
+			user << "<span class='notice'>You remove the cell from [src].</span>"
+			update_icon()
+			return
+		..()
+	return
 
 /obj/vehicle/motorcycle/handle_vehicle_layer()
 	if(dir & NORTH|SOUTH)
