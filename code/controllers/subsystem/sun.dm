@@ -13,7 +13,7 @@ var/datum/subsystem/sun/SSsun
 	var/global_sun_light = 10
 	var/next_change = 0
 	var/max_sun = 10
-	var/min_sun = 0.2
+	var/min_sun = 0.6
 	var/curx
 	var/dif = 0
 /datum/subsystem/sun/New()
@@ -53,7 +53,9 @@ var/datum/subsystem/sun/SSsun
 		//<<2.3 Checking finish>>//
 		if(global_sun_light == 0)
 			global_sun_light = min_sun
-		if(global_sun_light < min_sun || global_sun_light > max_sun)
+		if(global_sun_light > max_sun)
+			global_sun_light = max_sun
+		if(global_sun_light < min_sun || global_sun_light == max_sun)
 
 			if(dif == 1)
 				global_sun_light = max_sun
@@ -62,7 +64,6 @@ var/datum/subsystem/sun/SSsun
 				global_sun_light = min_sun
 				current_time_of_day = "Night"
 			is_working = 0
-			next_change += change_rate
 			return
 	/////////simple waiting//////
 	else if (world.time > next_change)//Waiting for work
@@ -74,6 +75,7 @@ var/datum/subsystem/sun/SSsun
 			current_time_of_day = "Morning"
 			is_working = 1
 			dif = 1
+		next_change = world.time + change_rate
 		curx = world.maxx
 		global_sun_light += dif
 /datum/subsystem/sun/stat_entry(msg)
