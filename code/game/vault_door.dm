@@ -3,64 +3,61 @@
 	icon = 'icons/obj/doors/gear.dmi'
 	icon_state = "closed"
 	density = 1
+	opacity = 1
+	layer = 4.2
 	anchored = 1
-	var/state = 0
-	//0 - closed
-	//1 - opening
-	//2 - closing
-	//3 - opened
+	var/is_busy = 0
+	var/destroyed = 0
 
-/obj/structure/vaultdoor/New()
-	..()
-	pixel_x = -32
-	pixel_y = -32
+/obj/structure/vaultdoor/blob_act()
+	if(prob(1))
+		qdel(src)
+	return
 
-/obj/structure/vaultdoor/proc/start_open()
-	playsound(loc, 'sound/f13machines/doorgear_open.ogg', 50, 0, 10)
-	state = 1
-	sleep(110)
-	mid_open()
 
-/obj/structure/vaultdoor/proc/start_close()
-	playsound(loc, 'sound/f13machines/doorgear_close.ogg', 50, 0, 10)
-	state = 2
-	sleep(90)
-	mid_close()
-
-/obj/structure/vaultdoor/proc/mid_open()
-	icon_state = "opening"
-	sleep(40)
-	finish_open()
-
-/obj/structure/vaultdoor/proc/mid_close()
-	icon_state = "closing"
-	density = 1
-	sleep(60)
-	finish_close()
-
-/obj/structure/vaultdoor/proc/finish_open()
-	state = 3
-	density = 0
-	icon_state = "open"
-
-/obj/structure/vaultdoor/proc/finish_close()
-	state = 0
-	icon_state = "closed"
-
+/obj/structure/vaultdoor/ex_act(severity, target)
+	if(severity == 1)
+		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
+		s.set_up(2, 1, src)
+		s.start()
+		destroy()
+		return
+/obj/structure/vaultdoor/proc/destroy()
+	icon_state = "empty"
+	src.SetOpacity(0)
+	src.density = 0
+	destroyed = 1
 /obj/structure/vaultdoor/proc/open()
-	if (state == 0)
-		start_open()
-
+	is_busy = 1
+	flick("opening", src)
+	icon_state = "open"
+	playsound(loc, 'sound/f13machines/doorgear_open.ogg', 50, 0, 10)
+	sleep(30)
+	src.SetOpacity(0)
+	src.density = 0
+	is_busy = 0
 /obj/structure/vaultdoor/proc/close()
-	if (state == 3)
-		start_close()
+	is_busy = 1
+	flick("closing", src)
+	icon_state = "close"
+	playsound(loc, 'sound/f13machines/doorgear_close.ogg', 50, 0, 10)
+	sleep(30)
+	src.SetOpacity(1)
+	src.density = 1
+	is_busy = 0
 
 /obj/structure/vaultdoor/proc/vaultactivate()
-	if (state==0)
+	if(destroyed)
+		usr << "<span class='warning'>[src] is broken</span>"
+		return
+	if(is_busy)
+		usr << "<span class='warning'>[src] is busy</span>"
+		return
+	if (density)
 		open()
-	else if (state == 3)
-		close()
-
+		return
+	close()
+//Я не хочу переделывать это дерьмо
 /obj/machinery/doorButtons/vaultButton
 	name = "vault access"
 	icon = 'icons/obj/lever.dmi'
