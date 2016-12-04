@@ -39,7 +39,7 @@
 /obj/structure/vaultdoor/proc/close()
 	is_busy = 1
 	flick("closing", src)
-	icon_state = "close"
+	icon_state = "closed"
 	playsound(loc, 'sound/f13machines/doorgear_close.ogg', 50, 0, 10)
 	sleep(30)
 	src.SetOpacity(1)
