@@ -40,10 +40,7 @@
 	set name = "Rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	if(config.rulesurl)
-		src << browse('html/rules.html', "size=64x22;window=freezer")
-	else
-		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>"
+	src << browse('html/rules.html', "size=320x160;window=rules")
 	return
 /*
 /client/verb/github()
