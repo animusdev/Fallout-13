@@ -26,6 +26,13 @@
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 20
 
+/obj/item/ammo_box/c2mm
+	name = "ammo box (2mm)"
+	icon_state = "2mmbox"
+	origin_tech = "combat=6"
+	ammo_type = /obj/item/ammo_casing/c2mm
+	max_ammo = 20
+
 /obj/item/ammo_box/c45
 	name = "ammo box (.45)"
 	icon_state = "45box"

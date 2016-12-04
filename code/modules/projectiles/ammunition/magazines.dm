@@ -157,6 +157,15 @@
 
 ///////////EXTERNAL MAGAZINES////////////////
 
+/obj/item/ammo_box/magazine/pipeammo
+	name = "ammo for pipe rifle"
+	icon_state = "pipeammo"
+	origin_tech = "combat=2"
+	ammo_type = /obj/item/ammo_casing/c10mm
+	caliber = "10mm"
+	max_ammo = 1
+	multiple_sprites = 2
+
 /obj/item/ammo_box/magazine/m10mm
 	name = "pistol magazine (10mm)"
 	icon_state = "9x19p"
@@ -370,3 +379,16 @@ obj/item/ammo_box/magazine/tommygunm45
 /obj/item/ammo_box/magazine/toy/m762/update_icon()
 	..()
 	icon_state = "a762-[round(ammo_count(),10)]"
+
+//gauss
+
+/obj/item/ammo_box/magazine/m2mm
+	name = "gauss magazine (.2mm)"
+	icon_state = "2mm"
+	ammo_type = /obj/item/ammo_casing/c2mm
+	caliber = "2mm"
+	multiple_sprites = 2
+	max_ammo = 20
+
+//bozar
+

@@ -64,3 +64,18 @@
 	desc = "A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo."
 	icon_state = "deaglecamo"
 	item_state = "deagleg"
+
+//pipegun
+
+/obj/item/weapon/gun/projectile/automatic/pistol/pipegun
+	name = "Pipe rifle"
+	desc = "This is a hand-made single shot rifle."
+	icon_state = "pipe-gun"
+	w_class = 3
+	force = 13
+	origin_tech = "combat=2;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/pipeammo
+	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
+	burst_size = 1
+	fire_delay = 0
+	action_button_name = null

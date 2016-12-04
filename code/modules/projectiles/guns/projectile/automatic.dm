@@ -261,3 +261,20 @@
 	can_suppress = 0
 	burst_size = 3
 	fire_delay = 1
+
+
+//bozar
+
+/obj/item/weapon/gun/projectile/automatic/bozar
+	name = "Bozar"
+	desc = "The ultimate refinement of the sniper's art. Although, somewhat finicky and prone to jamming if not kept scrupulously clean, the big weapon's accuracy more than makes up for its extra maintenance requirements."
+	icon_state = "bozar"
+	item_state = "bozar"
+	slot_flags = 0
+	origin_tech = "combat=6;materials=5"
+	mag_type = /obj/item/ammo_box/magazine/m556
+	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
+	can_suppress = 0
+	burst_size = 15
+	fire_delay = 1
+

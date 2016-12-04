@@ -18,6 +18,14 @@
 	caliber = "10mm"
 	projectile_type = /obj/item/projectile/bullet/midbullet3
 
+/obj/item/ammo_casing/c2mm
+	desc = "A 2mm nail."
+	caliber = "2mm"
+	icon_state = "nail2mm"
+	projectile_type = /obj/item/projectile/bullet/nail
+
+
+
 /obj/item/ammo_casing/c9mm
 	desc = "A 9mm bullet casing."
 	caliber = "9mm"

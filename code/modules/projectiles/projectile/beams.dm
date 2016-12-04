@@ -16,6 +16,20 @@
 	hitsound = 'sound/f13weapons/plasmarifle.ogg'
 	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
 
+/obj/item/projectile/beam/turbo_plasma_beam
+	name = "turbo_plasma_beam"
+	icon_state = "plasma_beam"
+	damage = 75
+	hitsound = 'sound/f13weapons/plasmarifle.ogg'
+	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
+
+/obj/item/projectile/beam/plasma_pistol_beam
+	name = "plasma_pistol_beam"
+	icon_state = "plasma_beam"
+	damage = 30
+	hitsound = 'sound/f13weapons/plasmarifle.ogg'
+	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
+
 /obj/item/projectile/beam/practice
 	name = "laser"
 	damage = 0

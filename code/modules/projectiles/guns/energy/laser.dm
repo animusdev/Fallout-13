@@ -124,3 +124,53 @@
 	pin = /obj/item/device/firing_pin/tag/red
 	ammo_x_offset = 2
 	selfcharge = 1
+
+
+
+
+
+/obj/item/weapon/gun/energy/laser/wattz1000
+	name = "Laser pistol"
+	desc = "A Wattz 1000 Laser Pistol. Civilian model, so the wattage is lower than military or police versions"
+	icon_state = "wattz1000"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser)
+	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	origin_tech = "combat=2;magnets=2"
+
+
+
+/obj/item/weapon/gun/energy/laser/glock86
+	name ="Glock86"
+	item_state = "glock86"
+	icon_state = "glock86"
+	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
+	origin_tech = "combat=2;magnets=3"
+	ammo_type = list(/obj/item/ammo_casing/energy/plasmapistol)
+	ammo_x_offset = 1
+	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+
+
+
+/obj/item/weapon/gun/energy/wattz2000
+	name = "wattz2000"
+	desc = "A Wattz 2000 Laser Rifle"
+	icon_state = "wattz2000"
+	item_state = "wattz2000"
+	w_class = 4
+	force = 10
+	flags =  CONDUCT
+	origin_tech = "combat=4;materials=3;powerstorage=3"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
+	ammo_x_offset = 3
+	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+
+
+/obj/item/weapon/gun/energy/laser/turbo_plasma_rifle
+	name ="turbo plasma rifle"
+	item_state = "Turbo_plasma_rifle"
+	icon_state = "Turbo_plasma_rifle"
+	desc = "A modified winchester P94 plasma rifle. The plasma bolt chamber has been hotwired to accelerate the bolt formation process."
+	origin_tech = "combat=6;magnets=6"
+	ammo_type = list(/obj/item/ammo_casing/energy/turbo_plasmagun)
+	ammo_x_offset = 1
+	cell_type = /obj/item/weapon/stock_parts/cell/device/laser

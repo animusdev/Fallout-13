@@ -194,3 +194,9 @@
 		weaken = 0
 		nodamage = 1
 	. = ..() // Execute the rest of the code.
+
+/obj/item/projectile/bullet/nail //gauss gun f2
+	name = "nail"
+	icon_state = "nail"
+	damage = 45
+	armour_penetration = 75

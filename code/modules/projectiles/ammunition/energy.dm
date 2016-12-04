@@ -21,6 +21,16 @@
 	e_cost = 83
 	select_name = "kill"
 
+/obj/item/ammo_casing/energy/turbo_plasmagun
+	projectile_type = /obj/item/projectile/beam/turbo_plasma_beam
+	e_cost = 50
+	select_name = "kill"
+
+/obj/item/ammo_casing/energy/plasmapistol
+	projectile_type = /obj/item/projectile/beam/plasma_pistol_beam
+	e_cost = 100
+	select_name = "kill"
+
 /obj/item/ammo_casing/energy/laser/hos
 	e_cost = 100
 
