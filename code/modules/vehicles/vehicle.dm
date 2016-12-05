@@ -14,7 +14,7 @@
 	var/auto_door_open = TRUE
 	var/view_range = 7
 	var/obj/item/weapon/stock_parts/cell/high/bcell = null
-	var/movecost = 5
+	var/movecost = 3
 
 	//Pixels
 	var/generic_pixel_x = 0 //All dirs show this pixel_x for the driver
