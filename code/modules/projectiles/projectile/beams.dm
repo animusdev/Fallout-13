@@ -116,3 +116,7 @@
 /obj/item/projectile/beam/lasertag/bluetag
 	icon_state = "bluelaser"
 	suit_types = list(/obj/item/clothing/suit/redtag)
+
+/obj/item/projectile/beam/robotlaser
+	name = "laser beam"
+	damage = 65
