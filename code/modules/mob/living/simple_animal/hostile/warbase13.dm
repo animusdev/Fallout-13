@@ -10,7 +10,7 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 2
+	speed = 4
 	stat_attack = 1
 	robust_searching = 1
 	maxHealth = 230
