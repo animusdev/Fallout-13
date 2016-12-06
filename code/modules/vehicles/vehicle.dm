@@ -166,9 +166,9 @@
 
 			deductcharge(movecost)
 		else
-			user << "<span class='notice'>You'll need charged cell to drive \the [name].</span>"
+			user << "<span class='notice'>You'll need  the keys in one of your hands to drive \the [name].</span>"
 	else
-		user << "<span class='notice'>You'll need the keys in one of your hands to drive \the [name].</span>"
+		user << "<span class='notice'>You'll need the charged cell to drive \the [name].</span>"
 
 
 /obj/vehicle/Move(NewLoc,Dir=0,step_x=0,step_y=0)
