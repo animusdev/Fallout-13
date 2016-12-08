@@ -180,11 +180,11 @@
 
 					speed = round(speed)
 					step_towards(src, locate(new_x, new_y, z))
-					if(speed <= 1)
+					if(speed < 1)
 						pixel_x = pixel_x_offset
 						pixel_y = pixel_y_offset
 					else
-						animate(src, pixel_x = pixel_x_offset, pixel_y = pixel_y_offset, time = max(1, (speed <= 3 ? speed - 1 : speed)))
+						animate(src, pixel_x = pixel_x_offset, pixel_y = pixel_y_offset, time = max(1, speed), flags = ANIMATION_END_NOW)
 
 					if(original && (original.layer>=2.75) || ismob(original))
 						if(loc == get_turf(original))
