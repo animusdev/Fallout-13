@@ -404,26 +404,27 @@
 
 /obj/item/weapon/gun/AltClick(mob/user)
 	..()
-	if(!in_range(src, user))
-		user << "<span class='warning'>You are too far away!</span>"
-		return
-	if(user.incapacitated())
-		user << "<span class='warning'>You can't do that right now!</span>"
-		return
-	if(unique_reskin && !reskinned && loc == user)
-		reskin_gun(user)
-		return
-	if(safetyposition == 1)
-		user << "<span class='warning'>You flip the safety to FIRE.</span>"
-		safetyposition = 0
-		if(safetybroken == 0)
-			safetyon = !safetyon
-		return
-	else
-		user << "<span class='warning'>You flip the safety to SAFE.</span>"
-		safetyposition = 1
-		if(safetybroken == 0)
-			safetyon = !safetyon
+	if(istype(user, /mob/living))
+		if(!in_range(src, user))
+			user << "<span class='warning'>You are too far away!</span>"
+			return
+		if(user.incapacitated())
+			user << "<span class='warning'>You can't do that right now!</span>"
+			return
+		if(unique_reskin && !reskinned && loc == user)
+			reskin_gun(user)
+			return
+		if(safetyposition == 1)
+			user << "<span class='warning'>You flip the safety to FIRE.</span>"
+			safetyposition = 0
+			if(safetybroken == 0)
+				safetyon = !safetyon
+			return
+		else
+			user << "<span class='warning'>You flip the safety to SAFE.</span>"
+			safetyposition = 1
+			if(safetybroken == 0)
+				safetyon = !safetyon
 
 /obj/item/weapon/gun/proc/reskin_gun(mob/M)
 	var/choice = input(M,"Warning, you can only reskin your weapon once!","Reskin Gun") in options
