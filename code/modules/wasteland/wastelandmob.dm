@@ -103,6 +103,7 @@
 	//speak_chance = 40
 	//speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	//speak_emote = list("shouts", "yells")
+	pixel_w = -16
 	speed = 3
 	turns_per_move = 5
 	response_help = "touches"
