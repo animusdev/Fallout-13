@@ -9,7 +9,8 @@
 
 BEFORE ADDING ADMINS TO FALLOUT 13 READ ADMIN_RANKS.TXT
 ###############################################################################################
-Maxyo = Scribe
-Jackerzz = Scribe
-Urgot = Elder
+Maxyo = President
+Jackerzz = President
 Carnelia = Knight
+Sasichkamega = Developer
+Leonister = Spriter

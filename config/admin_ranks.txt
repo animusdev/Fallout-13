@@ -37,4 +37,6 @@ Elder   		= +EVERYTHING
 
 President		= +EVERYTHING
 
-Scribe			= +DEBUG +VAREDIT +SERVER +SPAWN
+Spriter = +VAREDIT +SPAWN
+
+Developer			= +DEBUG +VAREDIT +SERVER +SPAWN
