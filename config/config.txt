@@ -116,7 +116,7 @@ ALLOW_WEBCLIENT
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 # Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
-SERVER 89.169.0.224:5003
+SERVER 92.222.238.93:4738
 
 ## forum address
 FORUMURL https://vk.com/ss_fallout13
