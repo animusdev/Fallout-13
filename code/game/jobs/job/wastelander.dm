@@ -1,30 +1,31 @@
-/*
-Wastelandmedic
-*/
-/datum/job/wastelandmedic
-	title = "Wastelandmedic"
-	flag = WASTELANDMEDIC
+/datum/job/wastelander
+	title = "Wastelander"
+	flag = WASTELANDER
 	department_flag = CIVILIAN
-	faction = "Desert" //desert faction shall disable appearing as scavenger after readying
+	faction = "Wasteland" //desert faction shall disable appearing as scavenger after readying
 	total_positions = 4
 	spawn_positions = -1 //does not matter for late join
 	supervisors = "nobody"
 	selection_color = "#dddddd"
 	access = list()
 	minimal_access = list()
-	outfit = /datum/outfit/job/wastelandmedic
+	outfit = /datum/outfit/job/wastelander
 
-/datum/outfit/job/wastelandmedic
-	name = "Wastelandmedic"
+/datum/outfit/job/wastelander
+	name = "Wastelander"
 	id = null
 	ears = null
 	belt = null
 	backpack = null
 	satchel = null
 
-/datum/outfit/job/wastelandmedic/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
-	uniform = pick(/obj/item/clothing/under/f13/doctor)
+	uniform = pick(/obj/item/clothing/under/f13/settler,\
+		/obj/item/clothing/under/f13/brahmin,\
+		/obj/item/clothing/under/f13/machinist,\
+		/obj/item/clothing/under/f13/lumberjack,\
+		/obj/item/clothing/under/f13/roving)
 //	mask = /obj/item/clothing/mask/surgical
 //	gloves = /obj/item/clothing/gloves/color/white
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival

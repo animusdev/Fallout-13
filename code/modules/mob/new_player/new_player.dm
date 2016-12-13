@@ -334,7 +334,7 @@
 		if(job && IsJobAvailable(job.title))
 			available_job_count++;*/
 
-	dat += "<div class='clearBoth'>Spawn as wastelander:</div><br>"
+	dat += "<div class='clearBoth'>Spawn as some wastelander:</div><br>"
 	dat += "<div class='jobs'><div class='jobsColumn'>"
 	/*var/job_count = 0
 	for(var/datum/job/job in SSjob.occupations)

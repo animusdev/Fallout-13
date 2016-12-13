@@ -29,7 +29,7 @@ var/datum/subsystem/job/SSjob
 		var/datum/job/job = new J()
 		if(!job)
 			continue
-		if(job.faction != "Desert")
+		if(job.faction != "Wasteland")
 			continue
 		desert_occupations += job
 
