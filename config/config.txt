@@ -119,7 +119,7 @@ ALLOW_WEBCLIENT
 SERVER 89.169.0.224:5003
 
 ## forum address
-FORUMURL https://vk.com/the_fallout_13
+FORUMURL https://vk.com/ss_fallout13
 
 ## Wiki address
 # WIKIURL http://www.fallss.esy.es/wiki/doku.php?id=start
