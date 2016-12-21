@@ -206,7 +206,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += " ("
 	s += "<a href=[config.discordurl]>" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord Channel"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -217,7 +217,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 			features += master_mode
 	else
 		features += "<b>STARTING</b>"
-
+/*
 	if (!enter_allowed)
 		features += "closed"
 
@@ -238,7 +238,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 		features += "~[n] players"
 	else if (n > 0)
 		features += "~[n] player"
-
+*/
 	/*
 	is there a reason for this? the byond site shows 'hosted by X' when there is a proper host already.
 	if (host)
