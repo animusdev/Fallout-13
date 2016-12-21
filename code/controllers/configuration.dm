@@ -49,7 +49,7 @@
 
 	var/sun_enabled = 1
 	var/max_sunlight = 10
-	var/min_sunlight = 0.2
+	var/min_sunlight = 0.3
 	var/time_of_day_rate = 18000
 
 	var/hostedby = "Enclave"

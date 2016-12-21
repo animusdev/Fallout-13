@@ -95,25 +95,30 @@
 
 /datum/light_source/proc/update_sunlight()
 	var/turf/ground/own = owner
+	if(!istype(own))
+		return
 	own.luminosity = own.sun_light
+	luminosity = own.sun_light
+//	cap = own.sun_light
+	radius = max(LIGHTING_MIN_RADIUS, luminosity)
 	var/range = owner.get_light_range(radius)
-	var/center_strength = LIGHTING_CAP/LIGHTING_LUM_FOR_FULL_BRIGHT*(luminosity)
+	var/center_strength = own.sun_light
 	for(var/turf/T in sun_effect)
-		T.update_lumcount(-sun_effect[T], "sun")
 #ifdef LIGHTING_CIRCULAR
 		var/distance = cheap_hypotenuse(T.x, T.y, __x, __y)
 #else
 		var/distance = max(abs(T,x - __x), abs(T.y - __y))
 #endif
 		var/delta_lumcount = Clamp(center_strength * (range - distance) / range, 0, LIGHTING_CAP)
-		if(delta_lumcount > 0)
-			if(istype(own) && own.sun_light)
-				sun_effect[T] = delta_lumcount
-				T.affected_sun = own.sun_light
-				T.update_lumcount(delta_lumcount, "sun")
-		else
-			T.affecting_lights -= src
-			sun_effect -= T
+		sun_effect[T] = delta_lumcount
+		T.affecting_sunlights[src] = delta_lumcount
+		if(T.affected_sunlight == src)
+			T.update_sunlum()
+			T.update_lumcount(0)
+		if(T.sun_lum < delta_lumcount)
+			T.sun_lum = delta_lumcount
+			T.affected_sunlight = src
+			T.update_lumcount(0)
 //Tell the lighting subsystem to check() next fire
 /datum/light_source/proc/changed()
 	if(owner)
@@ -126,17 +131,19 @@
 //Remove current effect
 /datum/light_source/proc/remove_effect()
 	for(var/turf/T in effect)
-		T.update_lumcount(-effect[T], "dynamic")
+		T.update_lumcount(-effect[T])
 
 		if(T.affecting_lights && T.affecting_lights.len)
 			T.affecting_lights -= src
 
 	effect.Cut()
 	for(var/turf/T in sun_effect)
-		T.update_lumcount(-sun_effect[T], "sun")
 		//T.affected_sun--
-		if(T.affecting_lights && T.affecting_lights.len)
-			T.affecting_lights -= src
+		if(T.affecting_sunlights && T.affecting_sunlights.len)
+			T.affecting_sunlights -= src
+		if(T.affected_sunlight == src)
+			T.update_sunlum()
+			T.update_lumcount(0)
 	sun_effect.Cut()
 
 
@@ -145,12 +152,22 @@
 	// only do this if the light is turned on and is on the map
 	if(!owner || !owner.loc)
 		return 0
+
+	var/turf/ground/own = owner
+	if(istype(own))
+		owner.luminosity = own.sun_light
+		luminosity = own.sun_light
+//		cap = own.sun_light
+		radius = max(LIGHTING_MIN_RADIUS, luminosity)
+
 	var/range = owner.get_light_range(radius)
 	if(range <= 0 || luminosity <= 0)
 		owner.luminosity = 0
 		return 0
 
 	effect = list()
+	sun_effect = list()
+
 	var/turf/To = get_turf(owner)
 
 
@@ -162,6 +179,7 @@
 			break
 
 	owner.luminosity = range
+
 	if (!range)
 		return 0
 	var/center_strength = 0
@@ -169,9 +187,10 @@
 		center_strength = LIGHTING_CAP/LIGHTING_LUM_FOR_FULL_BRIGHT*(luminosity)
 	else
 		center_strength = cap
-	var/turf/ground/own = owner
+	if(istype(own))
+		center_strength = own.sun_light
 	for(var/turf/T in view(range+1, To))
-		if(istype(own)&& own.open_space) //No light from /turf/ground to /turf/ground if it not mountain
+		if(istype(own)&& own.open_space) //No light from /turf/ground to /turf/ground if it not mountain. Just for optimizing
 			if(istype(T, /turf/ground))
 				var/turf/ground/g = T
 				if(g.open_space)
@@ -185,15 +204,20 @@
 		if(delta_lumcount > 0)
 			if(istype(own) && own.sun_light)
 				sun_effect[T] = delta_lumcount
-				T.affected_sun = own.sun_light
-				T.update_lumcount(delta_lumcount, "sun")
+				if(T.sun_lum < delta_lumcount)
+					T.sun_lum = delta_lumcount
+					T.affected_sunlight = src
+					T.update_lumcount(0)
+				if(!T.affecting_sunlights)
+					T.affecting_sunlights = list()
+				T.affecting_sunlights[src] = delta_lumcount
 			else
 				effect[T] = delta_lumcount
-				T.update_lumcount(delta_lumcount, "dynamic")
+				T.update_lumcount(delta_lumcount)
 
-			if(!T.affecting_lights)
-				T.affecting_lights = list()
-			T.affecting_lights |= src
+				if(!T.affecting_lights)
+					T.affecting_lights = list()
+				T.affecting_lights |= src
 
 	return 1
 
@@ -289,12 +313,12 @@
 
 /turf
 	var/lighting_lumcount = 0
-	var/sun_lumcount = 0
-	var/affected_sun
+	var/sun_lum = 0
+	var/affected_sunlight
 	var/lighting_changed = 0
 	var/atom/movable/light/lighting_object //Will be null for space turfs and anything in a static lighting area
 	var/list/affecting_lights			//not initialised until used (even empty lists reserve a fair bit of memory)
-
+	var/list/affecting_sunlights
 /turf/ChangeTurf(path)
 	if(!path || path == type) //Sucks this is here but it would cause problems otherwise.
 		return ..()
@@ -305,22 +329,26 @@
 		qdel(light)
 
 	var/old_lumcount = lighting_lumcount - initial(lighting_lumcount)
-	var/old_sun_lum = sun_lumcount
+	var/old_sun_lum = sun_lum
 	//var/oldbaseturf = baseturf
 
 	var/list/our_lights //reset affecting_lights if needed
+	var/list/our_sunlights
+
 	if(opacity != initial(path:opacity) && old_lumcount)
 		UpdateAffectingLights()
 	if(affecting_lights)
 		our_lights = affecting_lights.Copy()
-
+	if(affecting_sunlights)
+		our_sunlights = affecting_sunlights.Copy()
 	. = ..() //At this point the turf has changed
 
 	affecting_lights = our_lights
+	affecting_sunlights = our_sunlights
 
 	lighting_changed = 1 //Don't add ourself to SSlighting.changed_turfs
 	update_lumcount(old_lumcount)
-	update_lumcount(old_sun_lum,"sun")
+	sun_lum = old_sun_lum
 	//baseturf = oldbaseturf
 	lighting_object = locate() in src
 	init_lighting()
@@ -329,11 +357,8 @@
 		S.update_starlight()
 	for(var/turf/ground/S in RANGE_TURFS(1,src))
 		S.update_sunlight()
-/turf/proc/update_lumcount(amount, type = "dynamic")
-	if(type == "dynamic")
-		lighting_lumcount += amount
-	if(type == "sun")
-		sun_lumcount += amount
+/turf/proc/update_lumcount(amount)
+	lighting_lumcount += amount
 	if(!lighting_changed)
 		SSlighting.changed_turfs += src
 		lighting_changed = 1
@@ -341,6 +366,13 @@
 /turf/space/update_lumcount(amount) //Keep track in case the turf becomes a floor at some point, but don't process.
 	lighting_lumcount += amount
 
+/turf/proc/update_sunlum()
+	sun_lum = 0
+	affected_sunlight = null
+	for(var/datum/light_source/light in affecting_sunlights)
+		if(affecting_sunlights[light] > sun_lum)
+			sun_lum = affecting_sunlights[light]
+			affected_sunlight = light
 /turf/proc/init_lighting()
 	var/area/A = loc
 	if((!IS_DYNAMIC_LIGHTING(A) || istype(src, /turf/space)) && !istype(src, /turf/ground))
@@ -366,17 +398,15 @@
 			if(t.sun_light > 0)
 				lighting_object.luminosity = 1
 				newalpha = 255 - Clamp((min(lighting_lumcount+t.sun_light,10)) * LIGHTING_CAP_FRAC, 0, 255)
-		//	else if(t.open_space)
-		//		newalpha = min(255 - Clamp((lighting_lumcount) * LIGHTING_CAP_FRAC, 0, 255), LIGHTING_DARKEST_VISIBLE_ALPHA - 2)
 		if(newalpha == -1)
-			if(lighting_lumcount <= 0 && sun_lumcount <= 0)
+			if(lighting_lumcount <= 0 && sun_lum <= 0)
 				newalpha = 255
 			else
 				lighting_object.luminosity = 1
 				if(lighting_lumcount < LIGHTING_CAP)
-					var/num = Clamp((lighting_lumcount + (min(sun_lumcount, affected_sun))) * LIGHTING_CAP_FRAC, 0, 255)
+					var/num = Clamp((lighting_lumcount + sun_lum) * LIGHTING_CAP_FRAC, 0, 255)
 					newalpha = 255-num
-				else //if(lighting_lumcount >= LIGHTING_CAP)
+				else
 					newalpha = 0
 		if(newalpha >= LIGHTING_DARKEST_VISIBLE_ALPHA)
 			newalpha = 255
@@ -439,6 +469,9 @@
 	if(affecting_lights)
 		for(var/datum/light_source/thing in affecting_lights)
 			thing.changed()			//force it to update at next process()
+	if(affecting_sunlights)
+		for(var/datum/light_source/thing in affecting_sunlights)
+			thing.changed()
 
 
 #define LIGHTING_MAX_LUMINOSITY_STATIC	8	//Maximum luminosity to reduce lag.

@@ -317,7 +317,7 @@ REACTIONARY_EXPLOSIONS
 #You can enable/disable that, you can change max/min sun light power, and you can change time delay of changing. Do as you please, dude.
 SUN_ENABLED 1
 MAX_SUNLIGHT 10
-MIN_SUNLIGHT 0.6
+MIN_SUNLIGHT 0.3
 TIME_OF_DAY_RATE 18000
 
 

@@ -9,11 +9,12 @@ var/datum/subsystem/sun/SSsun
 	var/sunz = 1 //z coord where times of day are changing
 	var/current_time_of_day = "Day"
 	var/is_working = 0
+	var/is_apply_sunlight = 0
 	var/change_rate = 18000
 	var/global_sun_light = 10
 	var/next_change = 0
 	var/max_sun = 10
-	var/min_sun = 0.6
+	var/min_sun = 0.3
 	var/curx
 	var/dif = 0
 /datum/subsystem/sun/New()
@@ -38,46 +39,50 @@ var/datum/subsystem/sun/SSsun
 		/////////////////
 		//<<2.1 Setting up new level of  sun light at the turf>>//
 		if(curx <= 0)
-			curx = world.maxy
-			global_sun_light += dif
+			curx = world.maxx
+			is_apply_sunlight = 0
 		//<<2.3 Updating y line of turfes>>//
-		for(var/turf/t in block(locate(curx,1,sunz), locate(curx,world.maxy,sunz)))
-			if(istype(t, /turf/ground))
-				var/turf/ground/temp = t
-				if(!temp.open_space)
-					continue
-				temp.sun_light = global_sun_light
-				temp.redraw_lighting()
-				temp.light.update_sunlight()
-		curx--
+		if(is_apply_sunlight)
+			for(var/turf/t in block(locate(curx,1,sunz), locate(curx,world.maxy,sunz)))
+				if(istype(t, /turf/ground))
+					var/turf/ground/temp = t
+					if(!temp.open_space)
+						continue
+					temp.sun_light = global_sun_light
+					temp.redraw_lighting()
+					temp.light.update_sunlight()
+			curx--
+			return
 		//<<2.3 Checking finish>>//
-		if(global_sun_light == 0)
-			global_sun_light = min_sun
-		if(global_sun_light > max_sun)
-			global_sun_light = max_sun
-		if(global_sun_light < min_sun || global_sun_light == max_sun)
+		if(global_sun_light == min_sun || global_sun_light == max_sun)
 
 			if(dif == 1)
-				global_sun_light = max_sun
 				current_time_of_day = "Day"
 			else
-				global_sun_light = min_sun
 				current_time_of_day = "Night"
 			is_working = 0
 			return
+
+		global_sun_light += dif
+		if(global_sun_light < min_sun)
+			global_sun_light = min_sun
+		if(global_sun_light > max_sun)
+			global_sun_light = max_sun
+		is_apply_sunlight = 1
 	/////////simple waiting//////
 	else if (world.time > next_change)//Waiting for work
 		if(current_time_of_day == "Day")
 			current_time_of_day= "Evening"
-			is_working = 1
 			dif = -1
 		else if(current_time_of_day == "Night")
 			current_time_of_day = "Morning"
-			is_working = 1
 			dif = 1
+			global_sun_light = 0
+		is_working = 1
+		global_sun_light += dif
+		is_apply_sunlight = 1
 		next_change = world.time + change_rate
 		curx = world.maxx
-		global_sun_light += dif
 /datum/subsystem/sun/stat_entry(msg)
 	msg += "Sun\[[global_sun_light]]"
 	..(msg)
