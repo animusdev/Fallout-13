@@ -40,7 +40,13 @@
 	set name = "Rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	src << browse('html/rules.html', "size=320x160;window=rules")
+	getFiles(
+		'html/ru_rules.html',
+		'html/eng_rules.html',
+		'html/ru.gif',
+		'html/en.gif'
+	)
+	src << browse('html/rules.html', "size=320x640;window=rules")
 	return
 /*
 /client/verb/github()
