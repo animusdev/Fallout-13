@@ -3,6 +3,7 @@ author: "Maxyo
 delete-after: True
 
 changes: 
-  - rscadd: "Thirst. Жажда"
-  - rscadd: "Starving is deadly. Голод смертелен"
-  - rscadd: "Wild plants. Дикие растения"
+  - bugfix: "Исправлены правила."
+  - bugfix: "Исправлены некоторые ошибки карты."
+  - rscadd: "Трава теперь расставляется равномерно по пустоши."
+  - rscadd: "Спавн диких растений происходит более сбалансировано."
