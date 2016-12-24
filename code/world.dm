@@ -211,11 +211,10 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += ")"
 
 	var/list/features = list()
-
-	if(ticker)
-		if(master_mode)
-			features += master_mode
-	else
+	if(!ticker)
+		//if(master_mode)
+			//features += master_mode
+	//else
 		features += "<b>STARTING</b>"
 /*
 	if (!enter_allowed)
@@ -246,7 +245,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	*/
 
 	if (!host && config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+		features += "Under <b>[config.hostedby]</b> Protectorate"
 
 	if (features)
 		s += ": [list2text(features, ", ")]"
