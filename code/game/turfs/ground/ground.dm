@@ -8,6 +8,7 @@
 	oxygen = MOLES_O2STANDARD
 	nitrogen = MOLES_N2STANDARD
 	smooth = SMOOTH_TRUE
+	var/obj/structure/flora/grass/wasteland/grass = null
 	var/sun_light
 	var/open_space = 1
 
@@ -68,6 +69,8 @@ turf/ground/New()
 	var/bt = src.type
 	var/bti = icon_state
 	var/btd = dir
+	if(grass)
+		qdel(grass)
 
 	var/turf/t = ..()
 
@@ -109,6 +112,8 @@ turf/ground/New()
 /turf/ground/desert/New()
 	..()
 	icon_state = "wasteland[rand(1,31)]"
+	if(prob(30))
+		grass = new(src)
 
 /turf/ground/road
 	name = "\proper road"
