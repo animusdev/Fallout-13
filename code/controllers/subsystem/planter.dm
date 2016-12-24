@@ -23,8 +23,8 @@
 	if(turf != null && turf.contents.len <= 1)
 		var/ob
 		if(istype(turf,/turf/ground/desert))
-			ob = pick(wild_plants)
+			ob = pickweight(wild_plants)
 		else
-			ob = pick(wild_cave_plants)
+			ob = pickweight(wild_cave_plants)
 		var/obj/machinery/hydroponics/soil/wild_plant/plant = new ob
 		plant.loc = turf

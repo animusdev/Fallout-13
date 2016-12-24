@@ -1074,20 +1074,29 @@
 		qdel(src)
 
 var/list/wild_plants = list(
-/obj/machinery/hydroponics/soil/wild_plant/mutfruit, /obj/machinery/hydroponics/soil/wild_plant/xander,
-/obj/machinery/hydroponics/soil/wild_plant/broc, /obj/machinery/hydroponics/soil/wild_plant/cornseed,
-/obj/machinery/hydroponics/soil/wild_plant/cornseed, /obj/machinery/hydroponics/soil/wild_plant/feracactus,
-/obj/machinery/hydroponics/soil/wild_plant/cherryseed, /obj/machinery/hydroponics/soil/wild_plant/ambrosiavulgarisseed,
-/obj/machinery/hydroponics/soil/wild_plant/lemonseed, /obj/machinery/hydroponics/soil/wild_plant/pumpkinseed,
-/obj/machinery/hydroponics/soil/wild_plant/watermelonseed, /obj/machinery/hydroponics/soil/wild_plant/sunflowerseed,
-/obj/machinery/hydroponics/soil/wild_plant/carrotseed, /obj/machinery/hydroponics/soil/wild_plant/tobacco_seed,
-/obj/machinery/hydroponics/soil/wild_plant/wheatseed, /obj/machinery/hydroponics/soil/wild_plant/potatoseed,
-/obj/machinery/hydroponics/soil/wild_plant/coffee_arabica_seed
+/obj/machinery/hydroponics/soil/wild_plant/mutfruit = 40,
+/obj/machinery/hydroponics/soil/wild_plant/xander = 40,
+/obj/machinery/hydroponics/soil/wild_plant/broc = 40,
+/obj/machinery/hydroponics/soil/wild_plant/cornseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/feracactus = 40,
+/obj/machinery/hydroponics/soil/wild_plant/cherryseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/ambrosiavulgarisseed = 1,
+/obj/machinery/hydroponics/soil/wild_plant/lemonseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/pumpkinseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/watermelonseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/sunflowerseed = 1,
+/obj/machinery/hydroponics/soil/wild_plant/carrotseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/tobacco_seed = 1,
+/obj/machinery/hydroponics/soil/wild_plant/wheatseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/potatoseed = 10,
+/obj/machinery/hydroponics/soil/wild_plant/coffee_arabica_seed = 1
 )
 
 var/list/wild_cave_plants = list(
-/obj/machinery/hydroponics/soil/wild_plant/glowshroom, /obj/machinery/hydroponics/soil/wild_plant/glowcap,
-/obj/machinery/hydroponics/soil/wild_plant/plumpmycelium, /obj/machinery/hydroponics/soil/wild_plant/fungus
+/obj/machinery/hydroponics/soil/wild_plant/glowshroom = 50,
+/obj/machinery/hydroponics/soil/wild_plant/glowcap = 50,
+/obj/machinery/hydroponics/soil/wild_plant/plumpmycelium = 10,
+/obj/machinery/hydroponics/soil/wild_plant/fungus = 50
 )
 
 /obj/machinery/hydroponics/soil/wild_plant
