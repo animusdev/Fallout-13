@@ -208,7 +208,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 //	s += "[game_version]"
 	s += "Discord Channel"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
-	s += ")"
+	s += ")<br>"
 
 	var/list/features = list()
 	if(!ticker)
