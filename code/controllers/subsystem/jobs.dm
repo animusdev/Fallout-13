@@ -17,10 +17,24 @@ var/datum/subsystem/job/SSjob
 /datum/subsystem/job/Initialize(timeofday, zlevel)
 	if (zlevel)
 		return ..()
+	SetupFaction()
+	SetupStatus()
 	SetupOccupations()
 	if(config.load_jobs_from_txt)
 		LoadJobs()
 	..()
+
+/datum/subsystem/job/proc/SetupFaction()
+	var/list/factions = subtypesof(/datum/f13_faction)
+	for(var/F in factions)
+		var/datum/f13_faction/faction = new F()
+		human_factions[faction.name] = faction
+/datum/subsystem/job/proc/SetupStatus()
+	var/list/status = subtypesof(/datum/status)
+	for(var/S in status)
+		var/datum/status/stat = new S()
+		human_status[stat.name] = stat
+
 
 /datum/subsystem/job/proc/SetupDesertOccupations()
 	desert_occupations = list()
@@ -29,7 +43,8 @@ var/datum/subsystem/job/SSjob
 		var/datum/job/job = new J()
 		if(!job)
 			continue
-		if(job.faction != "Wasteland")
+		var/datum/f13_faction/faction = get_faction_datum(job.faction)
+		if(faction && !faction.can_spawn)
 			continue
 		desert_occupations += job
 
@@ -413,6 +428,8 @@ var/datum/subsystem/job/SSjob
 			H << "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>"
 	else
 		H << "<b>As the [rank], your main and only goal is to survive in the wasteland.</b>"
+	H.set_status(job.status)
+	H.set_faction(job.faction)
 	H.update_hud() 	// Tmp fix for Github issue 1006. TODO: make all procs in update_icons.dm do client.screen |= equipment no matter what.
 	return 1
 

@@ -107,6 +107,7 @@
 	var/music_lastplayed = "null"
 
 	var/job = null//Living
+	var/status = null
 
 	var/radiation = 0//Carbon
 

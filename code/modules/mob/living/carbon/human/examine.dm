@@ -159,6 +159,8 @@
 		else*/
 		msg += "[t_He] [t_is] wearing \icon[wear_id] \a [wear_id].\n"
 
+	msg += "[src.status] from [src.faction]. \n"
+
 	//Jitters
 	switch(jitteriness)
 		if(300 to INFINITY)

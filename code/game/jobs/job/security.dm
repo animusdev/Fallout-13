@@ -128,7 +128,8 @@ Ranger
 	flag = DETECTIVE
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "NCR"
+	status = "Ranger"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
@@ -165,7 +166,8 @@ Legion
 	flag = LEGRECRUIT
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Legion"
+	status = "Recruit"
 	total_positions = 10
 	spawn_positions = 10
 	supervisors = "the head of security"
@@ -210,7 +212,8 @@ Legion
 	flag = LEGDECAN
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Legion"
+	status = "Decan"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the head of security"
@@ -255,7 +258,8 @@ Legion
 	flag = LEGVEX
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Legion"
+	status = "Vexillarius"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the head of security"
@@ -299,7 +303,8 @@ Legion
 	flag = LEGCENTURION
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Legion"
+	status = "Centurion"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
@@ -343,7 +348,8 @@ Legion
 	flag = LEGLEGAT
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Legion"
+	status = "Legat"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
@@ -388,7 +394,8 @@ Security Officer
 	flag = OFFICER
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Vault"
+	status = "Member"
 	total_positions = 8 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 8 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	supervisors = "the head of security, and the head of your assigned department (if applicable)"

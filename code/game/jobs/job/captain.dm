@@ -6,7 +6,8 @@ Captain
 	flag = CAPTAIN
 	department_head = list("Centcom")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Vault"
+	status = "Overseer"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Vault-tec"
