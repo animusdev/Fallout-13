@@ -57,7 +57,8 @@ Scientist
 	flag = SCIENTIST
 	department_head = list("Research Director")
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Vault"
+	status = "Member"
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the research director"

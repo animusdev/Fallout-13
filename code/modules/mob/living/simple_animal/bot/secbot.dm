@@ -53,10 +53,10 @@
 /mob/living/simple_animal/bot/secbot/New()
 	..()
 	icon_state = "secbot[on]"
-	spawn(3)
-		var/datum/job/detective/J = new/datum/job/detective
-		access_card.access += J.get_access()
-		prev_access = access_card.access
+//	spawn(3)
+//		var/datum/job/detective/J = new/datum/job/detective
+//		access_card.access += J.get_access()
+//		prev_access = access_card.access
 
 	//SECHUD
 	var/datum/atom_hud/secsensor = huds[DATA_HUD_SECURITY_ADVANCED]

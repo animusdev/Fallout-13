@@ -44,12 +44,12 @@ var/datum/subsystem/job/SSjob
 		if(!job)
 			continue
 		var/datum/f13_faction/faction = get_faction_datum(job.faction)
-		if(faction && !faction.can_spawn)
+		if(faction == null || !faction.late_join)
 			continue
 		desert_occupations += job
 
 
-/datum/subsystem/job/proc/SetupOccupations(faction = "Station")
+/datum/subsystem/job/proc/SetupOccupations()
 	SetupDesertOccupations()
 	occupations = list()
 	var/list/all_jobs = subtypesof(/datum/job)
@@ -60,7 +60,9 @@ var/datum/subsystem/job/SSjob
 	for(var/J in all_jobs)
 		var/datum/job/job = new J()
 		if(!job)	continue
-		if(job.faction != faction)	continue
+		var/datum/f13_faction/F = get_faction_datum(job.faction)
+		if(F == null || !F.first_spawn)
+			continue
 		if(!job.config_check()) continue
 		occupations += job
 

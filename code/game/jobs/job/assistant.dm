@@ -5,7 +5,8 @@ Assistant
 	title = "Vault dweller"
 	flag = ASSISTANT
 	department_flag = CIVILIAN
-	faction = "Station"
+	faction = "Vault"
+	status = "Member"
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "absolutely everyone"

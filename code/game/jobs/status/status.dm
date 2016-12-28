@@ -2,7 +2,7 @@ var/human_status = list()
 
 proc/get_status_datum(status)
 	if(!human_status[status])
-		return 0
+		return null
 	return human_status[status]
 
 /datum/status
@@ -10,23 +10,26 @@ proc/get_status_datum(status)
 
 	var/desc = ""
 
-	var/welcome_text = "You are welcome"
+	var/welcome_text = ""
 
 	var/verbs = list()
 
 	var/change_faction = 1
 
+	var/purge_faction = null
+
 	var/list/can_invite_to = new()
 
 	var/can_invite_to_himself = 0
 
-	var/color = "#ff0000"
+	var/color = ""
 
 /datum/status/New()
 	..()
 	if(can_invite_to_himself)
 		can_invite_to += "[name]"
-	verbs += /mob/proc/convert_to_wastelander
+	if(name != "Wastelander")
+		verbs += /mob/proc/convert_to_wastelander
 	if(can_invite_to.len)
 		verbs += /mob/proc/convert_to_status
 
@@ -34,16 +37,23 @@ mob/proc/set_status(var/status)
 	var/datum/status/S = get_status_datum(status)
 	var/datum/status/last_S = get_status_datum(src.status)
 	if(!S)
-		return
+		return 0
 	if(last_S)
 		src.verbs -= last_S.verbs
+
+
 	src.status = S.name
-	var/text = ""
-	text += "Now you are <span style='color: [S.color]'>[S.name]</span><br>"
-	text += "<h2>[S.welcome_text]</h2><br>"
-	text += "[S.desc]<br>"
+	var/text
+	text += "Now you are <span style='color: [S.color]'>[S.name]</span>"
+	if(S.welcome_text)
+		text += "<br>[S.welcome_text]"
 	src << text
 	src.verbs += S.verbs
+
+	if(S.purge_faction != null)
+		src.set_faction(S.purge_faction)
+
+	return 1
 
 /mob/proc/convert_to_wastelander()
 	set name = "Become Wastelander"
@@ -55,7 +65,7 @@ mob/proc/set_status(var/status)
 	set_status("Wastelander")
 
 
-/mob/proc/convert_to_status(mob/M in view(), status in get_can_invite_status())
+/mob/proc/convert_to_status(mob/M in oview(), status in get_can_invite_status())
 	set name = "Invite To"
 	set category = "Abilities"
 	if(!M.mind || !M.client)
@@ -110,17 +120,25 @@ mob/proc/set_status(var/status)
 
 /datum/status/raider
 	name = "Raider"
-	change_faction = 1
+	purge_faction = "Wasteland"
 	can_invite_to_himself = 1
+	color = "#FF0000"
 
 /datum/status/wastelander
 	name = "Wastelander"
-	change_faction = 1
+	purge_faction = "Wasteland"
 
-/datum/status/vault/member
+/datum/status/member
 	name = "Member"
 	change_faction = 1
+
+/datum/status/den/sheriff
+	name = "Sheriff"
+	can_invite_to = list("Member")
+	purge_faction = "Den"
+
+
 /datum/status/vault/overseer
 	name = "Overseer"
-	change_faction = 1
 	can_invite_to = list("Member")
+	purge_faction = "Vault"
