@@ -432,6 +432,12 @@ var/datum/subsystem/job/SSjob
 		H << "<b>As the [rank], your main and only goal is to survive in the wasteland.</b>"
 	H.set_status(job.status)
 	H.set_faction(job.faction)
+	if(SSsun.global_sun_light < 5)
+		for(var/obj/item/I in H.contents)
+			if(istype(I,/obj/item/device/flashlight/flare/torch))
+				var/obj/item/device/flashlight/flare/torch/T = I
+				H.put_in_hands(T)
+				T.attack_self(H)
 	H.update_hud() 	// Tmp fix for Github issue 1006. TODO: make all procs in update_icons.dm do client.screen |= equipment no matter what.
 	return 1
 
