@@ -3,6 +3,7 @@
 	flag = WASTELANDER
 	department_flag = CIVILIAN
 	faction = "Wasteland" //desert faction shall disable appearing as scavenger after readying
+	status = "Wastelander"
 	total_positions = 4
 	spawn_positions = -1 //does not matter for late join
 	supervisors = "nobody"

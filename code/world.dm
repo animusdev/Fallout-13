@@ -271,7 +271,7 @@ var/failed_db_connections = 0
 	var/address = sqladdress
 	var/port = sqlport
 
-	dbcon.Connect("dbi:mysql,[db],[address],[port]","[user]","[pass]")
+	dbcon.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
 	. = dbcon.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.

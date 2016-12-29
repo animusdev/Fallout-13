@@ -36,9 +36,6 @@
 
 	msg += "<EM>[src.name]</EM>!\n"
 
-	if(!skipface && job == "Raider")
-		msg += "<span class='warning'>[t_He] is a raider!</span>\n"
-
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))
 		//Ties
@@ -158,6 +155,15 @@
 			msg += "<span class='warning'>[t_He] [t_is] wearing \icon[wear_id] \a [wear_id] yet something doesn't seem right...</span>\n"
 		else*/
 		msg += "[t_He] [t_is] wearing \icon[wear_id] \a [wear_id].\n"
+	if(src.status != "Wastelander" && !skipface)
+		var/datum/status/S = get_status_datum(src.status)
+		if(S != null && S.name != "Wastelander")
+			msg += "[t_He] [t_is] <span style='color: [S.color]'>[S.name]</span>"
+			if(src.faction && !istype(src.faction, /list))
+				var/datum/f13_faction/F = get_faction_datum(src.faction)
+				if(F != null && F.name != "Wasteland")
+					msg += " from <span style='color: [F.color]'>[F.name]</span>"
+			msg += "\n"
 
 	//Jitters
 	switch(jitteriness)

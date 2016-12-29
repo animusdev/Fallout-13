@@ -8,6 +8,12 @@ var/const/LEGRECRUIT		=(1<<1)
 
 var/const/DETECTIVE			=(1<<3)
 
+var/const/SHERIFF			=(1<<6)
+var/const/SETTLER			=(1<<7)
+
+var/const/SERGEANT			=(1<<14)
+var/const/RANGER			=(1<<15)
+
 var/const/OFFICER			=(1<<4)
 var/const/LEGDECAN			=(1<<5)
 var/const/ENGINEER			=(1<<6)
@@ -57,8 +63,6 @@ var/const/RAIDER        	=(1<<18)
 
 var/list/assistant_occupations = list(
 	"Assistant",
-//	"Atmospheric Technician",
-//	"Cargo Technician",
 //	"Chaplain",
 //	"Lawyer",
 //	"Librarian",
@@ -102,8 +106,8 @@ var/list/science_positions = list(
 
 var/list/supply_positions = list(
 //	"Head of Personnel",
-//	"Quartermaster",
-//	"Cargo Technician",
+	"Sheriff",
+	"Settler",
 //	"Shaft Miner",
 )
 

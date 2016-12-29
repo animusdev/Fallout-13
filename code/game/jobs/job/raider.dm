@@ -6,6 +6,7 @@ Raider
 	flag = RAIDER
 	department_flag = CIVILIAN
 	faction = "Wasteland" //desert faction shall disable appearing as scavenger after readying
+	status = "Raider"
 	total_positions = 3
 	spawn_positions = -1 //does not matter for late join
 	supervisors = "nobody"

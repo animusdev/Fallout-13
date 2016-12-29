@@ -59,7 +59,8 @@ Station Engineer
 	flag = ENGINEER
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Vault"
+	status = "Member"
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the chief engineer"

@@ -112,8 +112,19 @@ turf/ground/New()
 /turf/ground/desert/New()
 	..()
 	icon_state = "wasteland[rand(1,31)]"
-	if(prob(30))
+	plant_grass()
+
+/turf/ground/desert/proc/plant_grass()
+	if(prob(0.1))
 		grass = new(src)
+	else
+		var/chance = 0
+		for(var/turf/ground/desert/T in RANGE_TURFS(1,src))
+			if(T.grass)
+				chance += 40
+		if(prob(chance))
+			grass = new(src)
+
 
 /turf/ground/road
 	name = "\proper road"
