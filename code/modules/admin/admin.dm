@@ -11,6 +11,12 @@ var/global/floorIsLava = 0
 
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 
+/datum/admins/proc/clear_blood()
+	set category = "Admin"
+	set name = "Clear Blood"
+	for(var/obj/effect/decal/cleanable/C in world)
+		qdel(C)
+
 /datum/admins/proc/show_player_panel(mob/M in mob_list)
 	set category = "Admin"
 	set name = "Show Player Panel"
