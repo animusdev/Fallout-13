@@ -341,7 +341,7 @@
 	//invis_view = SEE_INVISIBLE_MINIMUM
 //Power armor helmets
 
-/obj/item/clothing/head/helmet/f13/advhelmet
+/obj/item/clothing/head/helmet/power_armor/encl
 	name = "advanced Mk I power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet"
@@ -358,7 +358,7 @@
 	burn_state = FIRE_PROOF
 	unacidable = 1
 
-/obj/item/clothing/head/helmet/f13/t45bhelmet
+/obj/item/clothing/head/helmet/power_armor/ncr
 	name = "NCR power helmet"
 	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
 	icon_state = "t45bhelmet"
@@ -370,7 +370,7 @@
 	strip_delay = 100
 	burn_state = FIRE_PROOF
 
-/obj/item/clothing/head/helmet/f13/t45dhelmet
+/obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
@@ -387,7 +387,7 @@
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 
-/obj/item/clothing/head/helmet/f13/t45dhelmet/attack_self(mob/user)
+/obj/item/clothing/head/helmet/power_armor/t45d/attack_self(mob/user)
 	if(!isturf(user.loc))
 		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>" //To prevent some lighting anomalities.
 		return
@@ -401,20 +401,20 @@
 	else
 		turn_off(user)
 
-/obj/item/clothing/head/helmet/f13/t45dhelmet/pickup(mob/user)
+/obj/item/clothing/head/helmet/power_armor/t45d/pickup(mob/user)
 	if(on)
 		user.AddLuminosity(brightness_on)
 		SetLuminosity(0)
 
-/obj/item/clothing/head/helmet/f13/t45dhelmet/dropped(mob/user)
+/obj/item/clothing/head/helmet/power_armor/t45d/dropped(mob/user)
 	if(on)
 		user.AddLuminosity(-brightness_on)
 		SetLuminosity(brightness_on)
 
-/obj/item/clothing/head/helmet/f13/t45dhelmet/proc/turn_on(mob/user)
+/obj/item/clothing/head/helmet/power_armor/t45d/proc/turn_on(mob/user)
 	user.AddLuminosity(brightness_on)
 
-/obj/item/clothing/head/helmet/f13/t45dhelmet/proc/turn_off(mob/user)
+/obj/item/clothing/head/helmet/power_armor/t45d/proc/turn_off(mob/user)
 	user.AddLuminosity(-brightness_on)
 
 //LightToggle

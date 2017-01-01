@@ -472,7 +472,7 @@
 	put_on_delay = 60
 	strip_delay = 60
 
-/obj/item/clothing/suit/armor/f13/t45bpowerarmor
+/obj/item/clothing/suit/armor/power_armor/ncr
 	name = "NCR power armor"
 	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."
 	icon_state = "t45bpowerarmor"
@@ -486,7 +486,7 @@
 	put_on_delay = 100
 	strip_delay = 200
 
-/obj/item/clothing/suit/armor/f13/t45dpowerarmor
+/obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
@@ -500,7 +500,7 @@
 	put_on_delay = 100
 	strip_delay = 200
 
-/obj/item/clothing/suit/armor/f13/advpowerarmor
+/obj/item/clothing/suit/armor/power_armor/encl
 	name = "advanced power armor Mk I"
 	desc = "An advanced suit of armor typically used by the Enclave. It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor"

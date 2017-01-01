@@ -58,8 +58,8 @@
 	gloves = /obj/item/clothing/gloves/combat
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat
-	suit = /obj/item/clothing/suit/armor/f13/t45bpowerarmor
-	head = /obj/item/clothing/head/helmet/f13/t45bhelmet
+	suit = /obj/item/clothing/suit/armor/power_armor/ncr
+	head = /obj/item/clothing/head/helmet/power_armor/ncr
 	glasses = /obj/item/clothing/glasses/night
 	suit_store = /obj/item/weapon/gun/projectile/automatic/assault_rifle
 	backpack_contents = list(/obj/item/weapon/gun/projectile/automatic/pistol/deagle = 1, \

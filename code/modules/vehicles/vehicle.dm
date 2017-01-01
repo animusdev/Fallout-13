@@ -146,6 +146,11 @@
 
 //MOVEMENT
 /obj/vehicle/relaymove(mob/user, direction)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(istype(H.wear_suit,/obj/item/clothing/suit/armor/power_armor))
+			user << "<span class='notice'>Armor is too heavy to go.</span>"
+			return
 	if(user.incapacitated())
 		unbuckle_mob()
 	if(bcell && bcell.charge > movecost)
