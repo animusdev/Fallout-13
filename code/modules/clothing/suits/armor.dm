@@ -473,16 +473,18 @@
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/t45bpowerarmor
-	name = "NCR salvaged power armor"
-	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
+	name = "NCR power armor"
+	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 70, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 80)
-	slowdown = 2
+	slowdown = 1.5
+	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	put_on_delay = 100
-	strip_delay = 100
+	strip_delay = 200
 
 /obj/item/clothing/suit/armor/f13/t45dpowerarmor
 	name = "T-45d power armor"
@@ -490,7 +492,7 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 80, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 80)
+	armor = list(melee = 70, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 80)
 	slowdown = 1.5
 	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
@@ -505,7 +507,7 @@
 	item_state = "advpowerarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	slowdown = 1
-	armor = list(melee = 90, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 90)
+	armor = list(melee = 75, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 80)
 	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS

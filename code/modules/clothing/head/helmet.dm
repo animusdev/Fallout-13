@@ -319,7 +319,7 @@
 	desc = "It's metal legion legat helmet."
 	icon_state = "leglegat"
 	item_state = "leglegat"
-	armor = list(melee = 85, bullet = 50, laser = 35,energy = 25, bomb = 50, bio = 0, rad = 60)
+	armor = list(melee = 75, bullet = 50, laser = 35,energy = 25, bomb = 50, bio = 0, rad = 60)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 10
@@ -347,7 +347,7 @@
 	icon_state = "advhelmet"
 	item_state = "advhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE | BLOCKHAIR
-	armor = list(melee = 90, bullet = 70, laser = 70,energy = 70, bomb = 50, bio = 100, rad = 50)
+	armor = list(melee = 75, bullet = 60, laser = 60,energy = 60, bomb = 60, bio = 100, rad = 80)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -359,12 +359,12 @@
 	unacidable = 1
 
 /obj/item/clothing/head/helmet/f13/t45bhelmet
-	name = "salvaged power helmet"
+	name = "NCR power helmet"
 	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 30, bio = 100, rad = 20)
+	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 50, bio = 100, rad = 60)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 20
 	strip_delay = 100
@@ -376,7 +376,7 @@
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE | BLOCKHAIR
-	armor = list(melee = 80, bullet = 60, laser = 60,energy = 60, bomb = 40, bio = 100, rad = 40)
+	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 50, bio = 100, rad = 60)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
