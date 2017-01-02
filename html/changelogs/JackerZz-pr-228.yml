@@ -1,14 +1,12 @@
 author: JackerZz
 delete-after: True
 changes: 
-  - wip: "Система фракций."
-  - rscadd: "Изменен алгоритм распространения травы."
-  - rscadd: "Факел теперь поджигается если вы спавнитесь в темноте."
-  - rscadd: "Изменения карты."
-  - rscadd: "Костры."
-  - tweak: "Целебный порошок больше не наносит повреждения мозгу."
-  - tweak: "Порошок и стимпак теперь лечат от токсинов."
-  - tweak: "В силовой броне теперь нельзя ездить на мотоцикле."
-  - bugfix: "Исправлена 'Я'."
-  - bugfix: "Понёрфлена силовая броня."
-  - bugfix: "Убраны пустынные турфы в шахтах."
+  - wip: "Faction system."
+  - rscadd: "The algorithm grass spread."
+  - rscadd: "Torch will be fired if you spawn in the dark."
+  - rscadd: "Map changes."
+  - rscadd: "Campfire."
+  - tweak: "No brain damage for healing powder."
+  - tweak: "Healing powder and stipmak healing toxins."
+  - tweak: "No riding with power armor."
+  - bugfix: "power armor characteristics decreased."
