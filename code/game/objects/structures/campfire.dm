@@ -14,20 +14,72 @@
 	icon = 'icons/camp.dmi'
 	icon_state = "campfire20"
 
+/obj/structure/campfire/Destroy()
+	SSobj.processing.Remove(src)
+	..()
+
 /obj/structure/campfire/attackby(obj/item/P, mob/user, params)
-	if(istype(P, /obj/item/device/flashlight/flare))
+	if(istype(P, /obj/item/weapon/weldingtool))
+		var/obj/item/weapon/weldingtool/WT = P
+		if(WT.isOn())
+			fire(user)
+	else if(istype(P, /obj/item/device/flashlight/flare))
 		var/obj/item/device/flashlight/flare/F = P
 		if(F.on)
+			fire(user)
+	else if(istype(P, /obj/item/weapon/lighter))
+		var/obj/item/weapon/lighter/L = P
+		if(L.lit)
+			fire(user)
+	else if(istype(P, /obj/item/candle))
+		var/obj/item/candle/C = P
+		if(C.lit)
 			fire(user)
 	else if(istype(P, /obj/item/weapon/match))
 		var/obj/item/weapon/match/M = P
 		if(M.lit)
 			fire(user)
+	else if(istype(P, /obj/item/clothing/mask/cigarette))
+		var/obj/item/clothing/mask/cigarette/M = P
+		if(M.lit)
+			fire(user)
+	else if(istype(P, /obj/item/stack/sheet/mineral/wood))
+		var/obj/item/stack/sheet/mineral/wood/W = P
+		if(fuel > 400)
+			user << "You can't add anymore"
+			return
+		if(W.use(1))
+			user.visible_message("[user] has added fuel to [src].", "<span class='notice'>You have added fuel to [src].</span>")
+			fuel += 60
+	else if(istype(P, /obj/item/weapon/reagent_containers/food/snacks))
+		if(!ishuman(user))
+			return
+		var/mob/living/carbon/human/H = user
+		var/obj/item/weapon/reagent_containers/food/snacks/F = P
+		user << "You begin cook [F.name]"
+		if(do_after(user, 20, target = src))
+			if(F.cooked_type)
+				H.drop_item()
+				var/obj/item/weapon/reagent_containers/food/snacks/S = new F.cooked_type ()
+				H.put_in_active_hand(S)
+				F.initialize_cooked_food(S, 0.8)
+				feedback_add_details("food_made","[F.type]")
+			else
+				H.drop_item()
+				var/obj/item/weapon/reagent_containers/food/snacks/S = new /obj/item/weapon/reagent_containers/food/snacks/badrecipe()
+				H.put_in_active_hand(S)
+			qdel(F)
+
 /obj/structure/campfire/process()
 	var/turf/location = get_turf(src)
 	fuel--
+	if(fuel > 200)
+		SetLuminosity(8)
+	else if(fuel > 100)
+		SetLuminosity(5)
+	else
+		SetLuminosity(2)
 	if(fuel <= 0)
-		SSobj.processing.Remove(src)
 		new /obj/effect/decal/cleanable/ash(location)
 		qdel(src)
 
