@@ -1,7 +1,5 @@
-﻿author: "JackerZz
-
+author: JackerZz
 delete-after: True
-
 changes: 
   - wip: "Система фракций."
   - rscadd: "Изменен алгоритм распространения травы."
