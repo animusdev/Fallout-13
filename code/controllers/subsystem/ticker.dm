@@ -52,7 +52,7 @@ var/datum/subsystem/ticker/ticker
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
 
-	login_music = pickweight(list('sound/f13music/AKISS.ogg' = 5, 'sound/f13music/20CAR.ogg' = 5, 'sound/f13music/17ARROYO.ogg' = 5, 'sound/f13music/13CARVRN.ogg' = 5, 'sound/f13music/f13standby.ogg' = 80)) // choose title music!
+	login_music = pickweight(list('sound/f13music/AKISS.ogg' = 5, 'sound/f13music/20CAR.ogg' = 5, 'sound/f13music/17ARROYO.ogg' = 5, 'sound/f13music/13CARVRN.ogg' = 5, 'sound/f13music/f13standby.ogg' = 40, 'sound/f13music/11-the-brotherhood-of-steel.ogg' = 40)) // choose title music!
 	if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
 		login_music = 'sound/f13music/mysterious_stranger.ogg'
 
