@@ -325,6 +325,14 @@
 	parts = list(/obj/item/device/camera = 1)
 	category = CAT_MISC
 */
+/obj/item/weapon/storage/backpack/satchel
+/datum/table_recipe/satchel
+	name = "Satchel"
+	result = /obj/item/weapon/storage/backpack/satchel
+	time = 15
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2)
+	parts = list()
+	category = CAT_MISC
 
 /datum/table_recipe/leatherarmor
 	name = "leather armor"

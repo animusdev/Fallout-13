@@ -196,7 +196,7 @@
 /obj/item/weapon/storage/backpack/satchel
 	name = "leather satchel"
 	desc = "It's a very fancy satchel made with fine leather."
-	icon_state = "satchel"
+	icon_state = "leather_bag"
 	burn_state = FIRE_PROOF
 
 /obj/item/weapon/storage/backpack/satchel/withwallet/New()
