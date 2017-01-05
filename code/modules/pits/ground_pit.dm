@@ -143,7 +143,7 @@
 	pitcontents = list()
 	dug = 1
 //	icon_plating = "[environment_type]_dug"
-	icon_state = "desert_dug"
+	icon_state = "wasteland33"
 	slowdown = 0
 	if (gravebody!=null)
 		if (user!=null)

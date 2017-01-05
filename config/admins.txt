@@ -11,6 +11,7 @@ BEFORE ADDING ADMINS TO FALLOUT 13 READ ADMIN_RANKS.TXT
 ###############################################################################################
 Maxyo = President
 Jackerzz = President
+BartNixon = Elder
 Carnelia = Knight
 Sasichkamega = Developer
 Leonister = Spriter
