@@ -30,7 +30,7 @@
 Apprentice
 Initiate		= +ADMIN
 Knight	                = +@
-Overseer		= +@ +SPAWN +REJUV +VAREDIT +BAN
+Overseer		= +@ +SPAWN +REJUV +VAREDIT +BAN +FUN +BUILDMODE
 Paladin			= +@ +POSSESS +BUILDMODE +SERVER +FUN
 Sentinel        	= +@ +STEALTH +SOUNDS +DEBUG
 Elder   		= +EVERYTHING
@@ -39,4 +39,4 @@ President		= +EVERYTHING
 
 Spriter = +VAREDIT +SPAWN
 
-Developer			= +DEBUG +VAREDIT +SERVER +SPAWN
+Developer			= +DEBUG +VAREDIT +SERVER +SPAWN +FUN +BAN +ADMIN +POSSESS +SOUNDS

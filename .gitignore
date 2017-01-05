@@ -18,6 +18,7 @@ $RECYCLE.BIN/
 *.backup
 *.before
 
+config/
 /data/*
 /data/investigate
 # Windows Installer files

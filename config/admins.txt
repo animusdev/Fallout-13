@@ -12,10 +12,10 @@ BEFORE ADDING ADMINS TO FALLOUT 13 READ ADMIN_RANKS.TXT
 Maxyo = President
 Jackerzz = President
 FighterX2500 = Elder
+BartNixon = Elder
 Carnelia = Knight
 Omen111 = Developer
 FurryDog = Overseer
 Khargal = Developer
 Torsmerty = Overseer
 Budrockstar = Overseer
-BartNixon = Elder

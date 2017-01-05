@@ -531,11 +531,11 @@ var/global/list/rockTurfEdgeCache
 
 /turf/simulated/floor/plating/asteroid/desert
 	name = "desert"
-	desc = "Looks hot."
+	desc = "It's hot on the outside."
 	icon = 'icons/turf/floors3.dmi'
 	baseturf = /turf/simulated/floor/plating/asteroid/desert
-	icon_state = "desert"
-	icon_plating = "desert"
+	icon_state = "wasteland1"
+	icon_plating = "wasteland1"
 	//temperature = 370
 	slowdown = 2
 	environment_type = "desert"

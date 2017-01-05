@@ -1,5 +1,5 @@
 ## Server name: This appears at the top of the screen in-game. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
-SERVERNAME [RU\ENG] Fallout 13 - Under Soviet Protectorate - Regular Updates - High RP
+SERVERNAME [RU\ENG] Fallout 13 - New Features - Lag Free
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
 STATIONNAME Deadly Wasteland
@@ -78,7 +78,7 @@ ALLOW_VOTE_RESTART
 VOTE_DELAY 6000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
-VOTE_PERIOD 60000
+VOTE_PERIOD 6000
 
 ## prevents dead players from voting or starting votes
 # NO_DEAD_VOTE
