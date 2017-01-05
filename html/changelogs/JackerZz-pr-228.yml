@@ -1,12 +1,5 @@
 author: JackerZz
 delete-after: True
 changes: 
-  - wip: "Faction system."
-  - rscadd: "The algorithm grass spread."
-  - rscadd: "Torch will be fired if you spawn in the dark."
-  - rscadd: "Map changes."
-  - rscadd: "Campfire."
-  - tweak: "No brain damage for healing powder."
-  - tweak: "Healing powder and stipmak healing toxins."
-  - tweak: "No riding with power armor."
-  - bugfix: "power armor characteristics decreased."
+  - tweak: "Upgrade mechanic of windows."
+  - tweak: "New locations on map."
