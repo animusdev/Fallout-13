@@ -14,6 +14,7 @@ var/datum/subsystem/vote/SSvote
 	var/list/choices = list()
 	var/list/voted = list()
 	var/list/voting = list()
+	var/begin_sound = 'sound/f13music/mysterious_stranger.ogg'
 
 /datum/subsystem/vote/New()
 	NEW_SS_GLOBAL(SSvote)
@@ -167,6 +168,7 @@ var/datum/subsystem/vote/SSvote
 			text += "\n[question]"
 		log_vote(text)
 		world << "\n<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period/10] seconds to vote.</font>"
+		world << sound(begin_sound, repeat = 0, wait = 0, volume = 85, channel = 12)
 		time_remaining = round(config.vote_period/10)
 		return 1
 	return 0
