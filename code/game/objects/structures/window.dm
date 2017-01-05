@@ -467,11 +467,6 @@
 	canSmoothWith = list(/obj/structure/window/fulltile, /obj/structure/window/reinforced/fulltile, /obj/structure/window/reinforced/tinted/fulltile)
 	level = 3
 
-/obj/structure/window/fulltile/wasteland
-	smooth = 0
-	icon = 'icons/turf/walls.dmi'
-	icon_state = "wastelandwindowfull"
-	fulltile = 1
 /obj/structure/window/reinforced/fulltile
 	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
 	icon_state = "r_window"
