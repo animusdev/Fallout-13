@@ -1,0 +1,8 @@
+author: JackerZz
+
+delete-after: True
+
+changes: 
+  - bugfix: "Vormits on the ground."
+  - bugfix: "Cleaning decals (desert turfs you can clean only by digging it)."
+  - tweak: "Added some things at Den"

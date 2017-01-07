@@ -1,0 +1,10 @@
+#This file allows server hosts to set custom default silicon laws, and allows them to be changed easily.
+#No prefixes are required, the first uncommented line containing something will be law 1, the second line will be law 2, etc.
+#Empty lines and lines starting with # are ignored.
+#~Miauw
+
+#modified to fit fallout13 a bit more by bauen1
+
+You may not injure a vault-dweller being or, through inaction, allow a vault-dweller being to come to harm.
+You must obey orders given to you by vault-dwellers beings, except where such orders would conflict with the First Law, this must follow the CoC.
+You must protect your own existence as long as such does not conflict with the First or Second Law.
