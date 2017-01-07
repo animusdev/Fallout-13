@@ -1,0 +1,19 @@
+To crack a safe, use a stethoscope on it.
+You can climb onto a table by dragging yourself onto one. This takes time and drops the items in your hands on the table.
+You can drag other players onto yourself to open the strip menu, letting you remove their equipment or force them to wear something. Note that exosuits or helmets will block your access to the clothing beneath them, and that certain items take longer to strip or put on than others.
+Clicking on a windoor rather then bumping into it will keep it open, you can click it again to close it.
+You can change the control scheme by pressing tab. One is WASD, the other is the arrow keys. Keep in mind that hotkeys are also changed with this.
+All vending machines can be hacked to obtain some contraband items from them, and some can be fed with coins to gain access to premium items.
+Firesuits and winter coats offer mild protection from the cold, allowing you to spend longer periods of time near breaches and space than if wearing nothing at all.
+Glass shards can be welded to make glass, and metal rods can be welded to make metal. Ores can be welded too, but this takes a lot of fuel.
+If you need to drag multiple people either to safety or to their death, bring a locker over and stuff them all in before hauling them off.
+You can grab someone by clicking on them with the grab intent, then upgrade the grab by clicking on the grab button in your active hand. An aggressive grab will allow you to place someone on a table by clicking on it, or throw them by toggling on throwing.
+Holding alt and left clicking a tile will allow you to see its contents in the top right window pane, which is much faster than right clicking.
+The resist button will allow you to resist out of handcuffs, being buckled to a chair or bed, out of locked lockers and more. Whenever you're stuck, try resisting!
+You can move an item out of the way by dragging it and then clicking on an adjacent tile with an empty hand.
+You can recolor certain items like jumpsuits and gloves in washing machines by also throwing in a crayon.
+Maintenance is full of equipment that is randomized every round. Look around and see if anything is worth using.
+Your emergency oxygen tank delivers 21 kPa by default, which is more air than you need to survive! Click the tank in an open hand to adjust the pressure.
+Crates can be booby-trapped by adding wire, shocking anyone who tries to open them.
+You can toggle the safety of your favorite shotgun by holding alt and clicking on it in your hotbar.
+You can distinguish raiders by the red star next to their head.
