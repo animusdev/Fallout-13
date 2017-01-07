@@ -1,7 +1,0 @@
-<!-- Most valid html will work in here, excluding images. -->
-
-<h1>Welcome to Fallout 13</h1>
-
-<i><b>The development is on early Alpha stage, so don't expect the full size wasteland or lots of other post-nuclear miracles you dream of.
-
-<i>The server is running a Fallout 13 Git build, based off /tg/ Station 13.</i>
