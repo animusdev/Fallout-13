@@ -16,7 +16,7 @@
 /area
 	var/global/global_uid = 0
 	var/radiation = 0
-	var/uid
+	var/uid //1 - 2 : outside the structures, 3 - 9 : inside the structures, 10 - 14 : vault specific
 	var/list/ambientsounds = list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen2.ogg',\
 									'sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg',\
 									'sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg',\

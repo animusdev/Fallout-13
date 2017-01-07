@@ -73,17 +73,14 @@
 
 	var/list/large_dense = list()
 	//Next, check objects to block entry that are on the border
-	var/atom/movable/B = null
 	for(var/atom/movable/border_obstacle in src)
 		if(border_obstacle.flags&ON_BORDER)
 			if(!border_obstacle.CanPass(mover, mover.loc, 1) && (forget != border_obstacle))
-				if(B == null || B.layer < border_obstacle)
-					B = border_obstacle
+				mover.Bump(border_obstacle, 1)
+				return 0
 		else
 			large_dense += border_obstacle
-	if(istype(B))
-		mover.Bump(B, 1)
-		return 0
+
 	//Then, check the turf itself
 	if (!src.CanPass(mover, src))
 		mover.Bump(src, 1)

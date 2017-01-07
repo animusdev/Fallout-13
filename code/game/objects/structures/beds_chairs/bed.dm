@@ -100,6 +100,10 @@
 		M.pixel_x = M.get_standard_pixel_x_offset(M.lying)
 		M.pixel_y = M.get_standard_pixel_y_offset(M.lying)
 
+/obj/structure/stool/bed/roller/CanPass(atom/movable/mover)
+	if(ishuman(mover) && mover.checkpass(PASSCRAWL))
+		return 0
+	return ..()
 
 /obj/item/roller
 	name = "roller bed"

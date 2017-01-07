@@ -35,6 +35,20 @@
 	status = CB_MESS
 	update()
 
+/proc/count_occurrences(string, substring)
+	var/count = 0
+	var/found = 0
+	var/length = length(substring)
+
+	found = findtext(string, substring)
+
+	while(found)
+		count++
+		found += length
+		found = findtext(string, substring, found)
+
+	return count
+
 /obj/structure/chalkboard/verb/wrtite()
 	set src in oview(1)
 	set name = "Write"
@@ -61,7 +75,7 @@
 		return
 
 	//t = checkhtml(t)
-	t = sanitize(t, list("\n"="\[br\]")) //"ÿ"=LETTER_255
+	t = sanitize(t, list("\n"="\[br\]")) //"?"=LETTER_255
 
 	//t = replacetext(t, "\n", "<BR>")
 	t = parsepencode(t) // Encode everything from pencode to html

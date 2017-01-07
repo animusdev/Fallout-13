@@ -3,9 +3,10 @@
 #define NUMBURYTIMES 3
 
 /obj/dugpit/ground
-	name = "Pit"
+	name = "pit"
 	anchored = 1
-	icon = 'icons/obj/Pit.dmi'
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "pit"
 	mouse_opacity = 0
 
 /obj/dugpit/ground/return_air()

@@ -13,9 +13,6 @@
 	desc = "Looks like this would make good cover."
 	anchored = 1
 	density = 1
-	mouse_opacity = 2
-	layer = 5
-	flags = ON_BORDER
 	var/health = 100
 	var/maxhealth = 100
 	var/proj_pass_rate = 50 //How many projectiles will pass the cover. Lower means stronger cover

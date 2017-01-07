@@ -500,7 +500,7 @@
 	put_on_delay = 100
 	strip_delay = 200
 
-/obj/item/clothing/suit/armor/power_armor/encl
+/obj/item/clothing/suit/armor/power_armor/enclave
 	name = "advanced power armor Mk I"
 	desc = "An advanced suit of armor typically used by the Enclave. It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor"
@@ -513,5 +513,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
+	unacidable = 1
 	put_on_delay = 100
 	strip_delay = 200

@@ -7,7 +7,7 @@ var/sound/admin_sound
 	set name = "Play Global Sound"
 	if(!check_rights(R_SOUNDS))	return
 
-	admin_sound = sound(S, repeat = 0, wait = 1, channel = SOUND_CHANNEL_ADMIN)
+	admin_sound = sound(S, repeat = 0, wait = 0, channel = SOUND_CHANNEL_ADMIN)
 	admin_sound.priority = 250
 	admin_sound.status = SOUND_UPDATE|SOUND_STREAM
 

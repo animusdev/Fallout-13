@@ -341,7 +341,7 @@
 	//invis_view = SEE_INVISIBLE_MINIMUM
 //Power armor helmets
 
-/obj/item/clothing/head/helmet/power_armor/encl
+/obj/item/clothing/head/helmet/power_armor/enclave
 	name = "advanced Mk I power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet"
@@ -353,10 +353,10 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	unacidable = 1
 	put_on_delay = 20
 	strip_delay = 200
 	burn_state = FIRE_PROOF
-	unacidable = 1
 
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "NCR power helmet"

@@ -6,6 +6,8 @@ sound/f13music/new_vegas_show_4.ogg
 sound/f13music/new_vegas_show_5.ogg
 sound/f13music/new_vegas_show_6.ogg
 sound/f13music/new_vegas_show_7.ogg
+sound/f13music/new_vegas_show_bonus_1.ogg
+sound/f13music/new_vegas_show_bonus_2.ogg
 sound/ambience/title1.ogg
 sound/ambience/title2.ogg
 sound/ambience/title3.ogg

@@ -46,6 +46,7 @@
 #define PASSTABLE		1
 #define PASSGLASS		2
 #define PASSGRILLE		4
+#define PASSCRAWL		16
 #define PASSBLOB		8
 #define PASSMOB			16
 #define LETPASSTHROW	32
