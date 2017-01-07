@@ -281,7 +281,7 @@ var/list/blood_splatter_icons = list()
 	return 0
 
 /atom/proc/add_vomit_floor(mob/living/carbon/M, toxvomit = 0)
-	if( istype(src, /turf/simulated) )
+	if( istype(src, /turf) )
 		var/obj/effect/decal/cleanable/vomit/this = new /obj/effect/decal/cleanable/vomit(src)
 		if(M.reagents)
 			M.reagents.trans_to(this, M.reagents.total_volume / 10)
@@ -296,7 +296,7 @@ var/list/blood_splatter_icons = list()
 
 // Only adds blood on the floor -- Skie
 /atom/proc/add_blood_floor(mob/living/carbon/M)
-	if(istype(src, /turf/simulated))
+	if(istype(src, /turf))
 		if(M.has_dna())	//mobs with dna = (monkeys + humans at time of writing)
 			var/obj/effect/decal/cleanable/blood/B = locate() in contents
 			if(!B)

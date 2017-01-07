@@ -124,6 +124,9 @@
 					gets_dug(user)
 					new /obj/item/weapon/ore/glass(src)
 					new /obj/item/weapon/ore/glass(src)
+					for(var/obj/effect/O in src)
+						if(is_cleanable(O))
+							qdel(O)
 	else
 		//not digging
 		if (dug)
