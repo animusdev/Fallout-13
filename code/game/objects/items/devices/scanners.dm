@@ -92,6 +92,9 @@ MASS SPECTROMETER
 	return
 /obj/item/device/healthanalyzer/attack(mob/living/M, mob/living/carbon/human/user)
 
+	if(!istype(M))
+		return
+
 	// Clumsiness/brain damage check
 	if ((user.disabilities & CLUMSY || user.getBrainLoss() >= 60) && prob(50))
 		user << "<span class='notice'>You stupidly try to analyze the floor's vitals!</span>"
