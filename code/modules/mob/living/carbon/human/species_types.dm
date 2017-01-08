@@ -11,9 +11,10 @@
 	mutant_bodyparts = list("tail_human", "ears")
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None")
 	use_skintones = 1
+	whitelist_req = 0
 
 /datum/species/human/spec_life(mob/living/carbon/human/H)
-	if (H.getToxLoss()>175 && prob(1))
+	if (H.getToxLoss()>175 && prob(10))
 		H << "<span class='danger'>You transform!</span>"
 		H.set_species(/datum/species/ghoul)
 		H.adjustToxLoss(-100)

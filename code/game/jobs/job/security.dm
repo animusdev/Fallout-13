@@ -319,6 +319,8 @@ Legion
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
+	whitelist_on = 1
+
 	outfit = /datum/outfit/job/leglegat
 
 	access = list()

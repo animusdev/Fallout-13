@@ -19,7 +19,7 @@
 		return
 
 	if(!holder)
-		if(!ooc_allowed)
+		if(!ooc_allowed && !check_whitelist(src))
 			src << "<span class='danger'>OOC is globally muted.</span>"
 			return
 		if(!dooc_allowed && (mob.stat == DEAD))
@@ -94,6 +94,10 @@ var/global/normal_ooc_colour = "#002eb8"
 /client/verb/colorooc()
 	set name = "Set Your OOC Color"
 	set category = "Preferences"
+
+	if(!check_whitelist(mob))
+		mob << "This function aviable only for donaters"
+		return
 
 	if(!holder || check_rights_for(src, R_ADMIN))
 		if(!is_content_unlocked())	return

@@ -43,6 +43,8 @@
 
 	var/outfit = null
 
+	var/whitelist_on = 0
+
 //Only override this proc
 /datum/job/proc/equip_items(mob/living/carbon/human/H)
 

@@ -474,7 +474,13 @@ var/list/preferences_datums = list()
 		var/prefUpperLevel = -1 // level to assign on left click
 		var/prefLowerLevel = -1 // level to assign on right click
 
-		if(GetJobDepartment(job, 1) & job.flag)
+		if(config.usewhitelist && job.whitelist_on && !check_whitelist(user))
+			prefLevelLabel = "Donate"
+			prefLevelColor = "red"
+			prefUpperLevel = 4
+			prefLowerLevel = 4
+
+		else if(GetJobDepartment(job, 1) & job.flag)
 			prefLevelLabel = "High"
 			prefLevelColor = "slateblue"
 			prefUpperLevel = 4
@@ -853,6 +859,9 @@ var/list/preferences_datums = list()
 					if(result)
 						var/newtype = roundstart_species[result]
 						pref_species = new newtype()
+						if(pref_species.whitelist_req && !check_whitelist(user))
+							user << "<font class='warning'>Race changing aviable only for donaters</font>"
+							return
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
 						var/temp_hsv = RGBtoHSV(features["mcolor"])
 						if(features["mcolor"] == "#000" || (!(MUTCOLORS_PARTSONLY in pref_species.specflags) && ReadHSV(temp_hsv)[3] < ReadHSV("#7F7F7F")[3]))

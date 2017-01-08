@@ -47,6 +47,8 @@
 	selection_color = "#FF97D2"
 	minimal_player_age = 7
 
+	whitelist_on = 1
+
 	outfit = /datum/outfit/job/sergeant
 
 	access = list()
