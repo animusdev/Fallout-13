@@ -233,7 +233,7 @@
 						vote_on_poll(pollid, optionid, 1)
 
 /mob/new_player/proc/IsJobAvailable(rank)
-	var/datum/job/job = SSjob.GetJob(rank)
+	/*var/datum/job/job = SSjob.GetJob(rank)
 	if(!job)
 		return 0
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
@@ -244,17 +244,18 @@
 				if(J && J.current_positions < J.total_positions && J.title != job.title)
 					return 0
 		else
-			return 0
+			return 0*/
 
+	//wasteland jobs are always available
+	return 1
 
-
-	if(jobban_isbanned(src,rank))
+	/*if(jobban_isbanned(src,rank))
 		return 0
 	if(!job.player_old_enough(src.client))
 		return 0
 	if(config.enforce_human_authority && !client.prefs.pref_species.qualifies_for_rank(rank, client.prefs.features))
 		return 0
-	return 1
+	return 1*/
 
 
 /mob/new_player/proc/AttemptLateSpawn(rank)
