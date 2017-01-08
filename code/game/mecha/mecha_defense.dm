@@ -265,7 +265,6 @@
 				var/obj/item/weapon/stock_parts/cell/C = W
 				user << "<span class='notice'>You install the powercell.</span>"
 				C.forceMove(src)
-				C.use(C.charge * 0.8)
 				src.cell = C
 				src.log_message("Powercell installed")
 			else
