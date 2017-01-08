@@ -30,7 +30,7 @@
 
 	message_admins("[key_name_admin(src)] has started answering [key_name(M.key, 0, 0)]'s prayer.")
 	var/msg = input("Message:", text("Subtle PM to [M.key]")) as text
-
+	msg = sanitize(msg)
 	if (!msg)
 		message_admins("[key_name_admin(src)] decided not to answer [key_name(M.key, 0, 0)]'s prayer")
 		return
@@ -55,6 +55,7 @@
 
 	if (!msg)
 		return
+	msg = sanitize(msg)
 	world << "[msg]"
 	log_admin("GlobalNarrate: [key_name(usr)] : [msg]")
 	message_admins("<span class='adminnotice'><b> GlobalNarrate: [key_name_admin(usr)] :</b> [msg]<BR></span>")
@@ -78,7 +79,7 @@
 
 	if( !msg )
 		return
-
+	msg = sanitize(msg)
 	M << msg
 	log_admin("DirectNarrate: [key_name(usr)] to ([M.name]/[M.key]): [msg]")
 	message_admins("<span class='adminnotice'><b> DirectNarrate: [key_name(usr)] to ([M.name]/[M.key]):</b> [msg]<BR></span>")

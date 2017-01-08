@@ -48,7 +48,6 @@
 		return
 	message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help.")
 	var/msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
-	msg = sanitize(msg)
 	if (!msg)
 		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help.")
 		return
@@ -62,6 +61,7 @@
 		return
 
 	var/client/C
+	msg = sanitize(msg)
 	if(istext(whom))
 		if(cmptext(copytext(whom,1,2),"@"))
 			whom = findStealthKey(whom)
@@ -76,7 +76,7 @@
 	//get message text, limit it's length.and clean/escape html
 	if(!msg)
 		msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
-
+		msg = sanitize(msg)
 		if(!msg)	return
 		if(!C)
 			if(holder)	src << "<font color='red'>Error: Admin-PM: Client not found.</font>"
