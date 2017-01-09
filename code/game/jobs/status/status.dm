@@ -24,6 +24,8 @@ proc/get_status_datum(status)
 
 	var/color = ""
 
+	var/craft_recipes = list()
+
 /datum/status/New()
 	..()
 	if(can_invite_to_himself)
@@ -40,6 +42,7 @@ mob/proc/set_status(var/status)
 		return 0
 	if(last_S)
 		src.verbs -= last_S.verbs
+		src.allow_recipes -= last_S.craft_recipes
 
 
 	src.status = S.name
@@ -49,7 +52,7 @@ mob/proc/set_status(var/status)
 		text += "<br>[S.welcome_text]"
 	src << text
 	src.verbs += S.verbs
-
+	src.allow_recipes += S.craft_recipes
 	if(S.purge_faction != null)
 		src.set_faction(S.purge_faction)
 
@@ -98,21 +101,26 @@ mob/proc/set_status(var/status)
 	name = "Vexillarius"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Decan")
+	craft_recipes = list(/datum/table_recipe/legion_vex_armor, /datum/table_recipe/legion_vex_helm)
 
 /datum/status/legion/centurion
 	name = "Centurion"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Decan", "Vexillarius")
+	craft_recipes = list(/datum/table_recipe/legion_cent_armor, /datum/table_recipe/legion_cent_helm)
 
 /datum/status/legion/legat
 	name = "Legat"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Decan", "Vexillarius", "Legat")
+	craft_recipes = list(/datum/table_recipe/legion_legat_armor, /datum/table_recipe/legion_legat_helm, \
+	/datum/table_recipe/legion_legat_gloves, /datum/table_recipe/legion_legat_shoes)
 
 /datum/status/ncr/ranger
 	name = "Ranger"
 	change_faction = 1
 	can_invite_to = list("Recruit")
+	craft_recipes = list(/datum/table_recipe/ncr_ranger_helm, /datum/table_recipe/ncr_ranger_armor)
 /datum/status/ncr/sergeant
 	name = "Sergeant"
 	change_faction = 1
@@ -123,6 +131,8 @@ mob/proc/set_status(var/status)
 	purge_faction = "Wasteland"
 	can_invite_to_himself = 1
 	color = "#FF0000"
+	craft_recipes = list(/datum/table_recipe/raider_yankee_armor, /datum/table_recipe/raider_supafly_armor, \
+	/datum/table_recipe/raider_supafly_helmet, /datum/table_recipe/raider_yankee_helmet)
 
 /datum/status/wastelander
 	name = "Wastelander"

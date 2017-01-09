@@ -472,6 +472,16 @@
 	put_on_delay = 60
 	strip_delay = 60
 
+/obj/item/clothing/suit/armor/f13/ncrarmor
+	name = "NCR combat armor"
+	desc = "This armor military grade is a modification of battle armor and was originally designed for a special purpose police units in Los Angeles."
+	icon_state = "ncr_armor"
+	item_state = "ncr_armor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 40, bullet = 35, laser = 30, energy = 20, bomb = 20, bio = 0, rad = 40)
+	put_on_delay = 60
+	strip_delay = 60
+
 /obj/item/clothing/suit/armor/power_armor/ncr
 	name = "NCR power armor"
 	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."

@@ -255,7 +255,7 @@
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/combat
-	name = "combat_helmet"
+	name = "combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"

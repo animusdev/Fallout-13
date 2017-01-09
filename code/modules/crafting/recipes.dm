@@ -8,6 +8,7 @@
 	var/parts[] = list() //type paths of items that will be placed in the result
 	var/chem_catalysts[] = list() //like tools but for reagents
 	var/category = CAT_NONE //where it shows up in the crafting UI
+	var/show = 1
 
 
 /datum/table_recipe/pin_removal
@@ -438,3 +439,180 @@
 	result = /obj/item/clothing/head/lizard
 	time = 20
 	reqs = list(/obj/item/stack/sheet/animalhide/lizard = 1)
+
+//////// LEGION
+
+/datum/table_recipe/legion_recruit_armor
+	name = "Legion recruit clothing"
+	result = /obj/item/clothing/suit/armor/f13/legrecruit
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_recruit_helm
+	name = "Legion recruit helmet"
+	result = /obj/item/clothing/head/helmet/f13/legrecruit
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_vex_armor
+	name = "Legion vexillarius clothing"
+	result = /obj/item/clothing/suit/armor/f13/legvexil
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_vex_helm
+	name = "Legion vexillarius helmet"
+	result = /obj/item/clothing/head/helmet/f13/legvexil
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_cent_armor
+	name = "Legion centurion clothing"
+	result = /obj/item/clothing/suit/armor/f13/legcenturion
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_cent_helm
+	name = "Legion centurion helmet"
+	result = /obj/item/clothing/head/helmet/f13/legcenturion
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_legat_armor
+	name = "Legion legat clothing"
+	result = /obj/item/clothing/suit/armor/f13/leglegat
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_legat_helm
+	name = "Legion legat helmet"
+	result = /obj/item/clothing/head/helmet/f13/leglegat
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_legat_gloves
+	name = "Legion legat gloves"
+	result = /obj/item/clothing/gloves/f13/legionlegat
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/legion_legat_shoes
+	name = "Legion legat shoes"
+	result = /obj/item/clothing/shoes/legionlegat
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/////// NCR
+
+/datum/table_recipe/ncr_combat_armor
+	name = "NCR recruit armor"
+	result = /obj/item/clothing/suit/armor/f13/ncrarmor
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/ncr_ranger_armor
+	name = "NCR ranger armor"
+	result = /obj/item/clothing/suit/armor/f13/rangercombat
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 3,
+				/obj/item/stack/sheet/metal = 8)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/ncr_ranger_helm
+	name = "NCR ranger helmet"
+	result = /obj/item/clothing/head/helmet/f13/rangercombat
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 3,
+				/obj/item/stack/sheet/metal = 8)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/////// RAIDERS
+
+/datum/table_recipe/raider_yankee_armor
+	name = "raider yankee armor"
+	result = /obj/item/clothing/suit/armor/f13/yankee
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/raider_supafly_armor
+	name = "raider supa-fly armor"
+	result = /obj/item/clothing/suit/armor/f13/supafly
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/raider_supafly_helmet
+	name = "raider supa-fly helmet"
+	result =/obj/item/clothing/head/helmet/f13/supaflyhelmet
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+
+/datum/table_recipe/raider_yankee_helmet
+	name = "raider yankee yankee"
+	result = /obj/item/clothing/head/helmet/f13/yankee
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_ARMOR
+

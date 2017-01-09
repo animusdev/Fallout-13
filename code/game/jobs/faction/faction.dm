@@ -18,12 +18,24 @@ proc/get_faction_datum(faction)
 	var/color = "#ff0000"
 
 	var/actions = list()
+
+	var/list/craft_recipes = list()
+
 mob/proc/set_faction(var/faction)
 	var/datum/f13_faction/F = human_factions[faction]
+	var/datum/f13_faction/last_F = human_factions[src.faction]
 	if(!F)
 		return 0
+	if(F.name == src.faction)
+		return 1
+	if(last_F)
+		src.allow_recipes -= last_F.craft_recipes
+
 	src.faction = F.name
 	src << "Now you are in <span>[F.name]</span>"
+
+	src.allow_recipes += F.craft_recipes
+
 	if(F.welcome_text)
 		src << F.welcome_text
 	return 1
@@ -40,10 +52,12 @@ mob/proc/set_faction(var/faction)
 1. As an NCR soldier you must uphold the law around town, kill any raiders you see,  find and kill everyone Legion member<br>\
 2. As an NCR soldier you must protect the innocent wastelanders from the horrors the wasteland brings<br>\
 3. Protect yourself above all others, your important to the NCR and we can't afford to lose you.<br>"
+	craft_recipes = list(/datum/table_recipe/ncr_combat_armor)
 /datum/f13_faction/legion
 	name = "Legion"
 	first_spawn = 1
 	color = "#C24D44"
+	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm)
 	welcome_text = "Your current objectives:<br>\
 	1. As a member of The Legion you must obey all orders given by anyone out ranking out<br>\
 	2. You must enslave the occupants of the wasteland, kill any that resist unless they can be over powered<br>\

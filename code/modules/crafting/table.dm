@@ -202,6 +202,8 @@
 		for(var/datum/table_recipe/R in table_recipes)
 			if(R.category != categories[viewing_category])
 				continue
+			if(!(R.show || (R.type in user.allow_recipes)))
+				continue
 			if(check_contents(R))
 				can_craft += R
 			else

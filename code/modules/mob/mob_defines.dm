@@ -62,6 +62,8 @@
 	var/eye_stat = null//Living, potentially Carbon
 	var/lastpuke = 0
 
+	var/list/allow_recipes = list()
+
 	var/in_whitelist = -1
 
 	var/name_archive //For admin things like possession
