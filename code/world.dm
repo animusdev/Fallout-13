@@ -209,7 +209,9 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += "Discord Channel"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")<br>"
-
+	s += "<img src='http://i.imgur.com/M9lZ7dr.gif'><br>"
+	s += "Under <b>[config.hostedby]</b> Protectorate"
+/*
 	var/list/features = list()
 	if(!ticker)
 		//if(master_mode)
@@ -248,8 +250,8 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 		features += "Under <b>[config.hostedby]</b> Protectorate"
 
 	if (features)
-		s += ": [list2text(features, ", ")]"
-
+		s += " [list2text(features, ", ")]"
+*/
 	/* does this help? I do not know */
 	if (src.status != s)
 		src.status = s
