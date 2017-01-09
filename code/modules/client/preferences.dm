@@ -860,6 +860,7 @@ var/list/preferences_datums = list()
 						var/newtype = roundstart_species[result]
 						pref_species = new newtype()
 						if(pref_species.whitelist_req && !check_whitelist(user))
+							pref_species = new /datum/species/human()
 							user << "<font class='warning'>Race changing aviable only for donaters</font>"
 							return
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
