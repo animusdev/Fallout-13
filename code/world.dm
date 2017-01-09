@@ -1,7 +1,7 @@
 /world
 	mob = /mob/new_player
-	turf = /turf/simulated/mineral
-	area = /area/mine/unexplored
+	turf = /turf/ground/desert
+	area = /area/awaymission
 	view = "15x15"
 	cache_lifespan = 7
 
