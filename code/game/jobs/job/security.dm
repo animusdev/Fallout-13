@@ -213,7 +213,8 @@ Legion
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
 	/obj/item/stack/coin/coins = 3, \
-	/obj/item/weapon/machete = 1)
+	/obj/item/weapon/machete = 1, \
+	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //vexillarius
 /datum/job/legvex
@@ -258,7 +259,8 @@ Legion
 	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/weapon/machete = 1, \
-	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 4)
+	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 4, \
+	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //centurion
 /datum/job/legcenturion
@@ -303,7 +305,8 @@ Legion
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
-	/obj/item/weapon/powergauntlet = 1)
+	/obj/item/weapon/powergauntlet = 1, \
+	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //legat
 /datum/job/leglegat
@@ -350,7 +353,8 @@ Legion
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
-	/obj/item/weapon/powergauntlet = 1)
+	/obj/item/weapon/powergauntlet = 1, \
+	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 /*
 Security Officer
 */
