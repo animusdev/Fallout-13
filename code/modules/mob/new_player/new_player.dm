@@ -286,7 +286,12 @@
 					continue
 
 	character.loc = D
-
+	if(SSsun.global_sun_light < 5)
+		for(var/obj/item/I in character.contents)
+			if(istype(I,/obj/item/device/flashlight/flare/torch))
+				var/obj/item/device/flashlight/flare/torch/T = I
+				character.put_in_hands(T)
+				T.attack_self(character)
 	if(character.mind.assigned_role != "Cyborg")
 		data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
