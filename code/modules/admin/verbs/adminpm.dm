@@ -61,7 +61,6 @@
 		return
 
 	var/client/C
-	msg = sanitize(msg)
 	if(istext(whom))
 		if(cmptext(copytext(whom,1,2),"@"))
 			whom = findStealthKey(whom)

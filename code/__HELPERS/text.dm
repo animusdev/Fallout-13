@@ -65,10 +65,10 @@ proc/sanitize(var/t)
 	return t
 
 /proc/sanitize_ya(var/t)
-	var/index = findtext(t, "?")
+	var/index = findtext(t, "ÿ")
 	while(index)
 		t = copytext(t, 1, index) + "____255;" + copytext(t, index+1)
-		index = findtext(t, "?")
+		index = findtext(t, "ÿ")
 
 	t = html_encode(t)
 
