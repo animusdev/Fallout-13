@@ -279,8 +279,8 @@
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/legvexil
-	name = "legion vexillarius helmet"
-	desc = "It's leather legion vexillarius helmet."
+	name = "legion vexillarius hat"
+	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	armor = list(melee = 40, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
@@ -291,8 +291,8 @@
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/legdecan
-	name = "legion decan helmet"
-	desc = "It's leather legion decan helmet."
+	name = "legion decanus helmet"
+	desc = "It's leather legion decanus helmet."
 	icon_state = "legdecan"
 	item_state = "legdecan"
 	armor = list(melee = 45, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
@@ -301,6 +301,13 @@
 	put_on_delay = 10
 	strip_delay = 50
 	burn_state = FIRE_PROOF
+
+/obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles.
+	name = "legion decanus helmet"
+	desc = "It's leather legion decanus helmet.<br>This one has particularly spiky feathers..."
+	icon_state = "legdecanalt"
+	item_state = "legdecanalt"
+	flags = HEADCOVERSEYES | BLOCKHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
 	name = "legion centurion helmet"

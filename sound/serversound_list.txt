@@ -1,4 +1,9 @@
 ## Feel Free to add more to this ##
+sound/f13music/Jet_garage.ogg
+sound/f13music/Jet_mama.ogg
+sound/f13music/Jet_news.ogg
+sound/f13music/Jet_rimshot.ogg
+sound/f13music/Jet_war.ogg
 sound/f13music/new_vegas_show_1.ogg
 sound/f13music/new_vegas_show_2.ogg
 sound/f13music/new_vegas_show_3.ogg
