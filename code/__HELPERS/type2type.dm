@@ -297,8 +297,10 @@
 	return .
 
 /proc/ui_style2icon(ui_style)
+	return 'icons/mob/screen_fallout.dmi'
 	switch(ui_style)
 		if("Retro")		return 'icons/mob/screen_retro.dmi'
+		if("Fallout")	return 'icons/mob/screen_fallout.dmi'
 		if("Plasmafire")	return 'icons/mob/screen_plasmafire.dmi'
 		else			return 'icons/mob/screen_midnight.dmi'
 
