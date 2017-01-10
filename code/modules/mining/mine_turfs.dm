@@ -99,7 +99,7 @@ var/global/list/rockTurfEdgeCache
 	var/mineralSpawnChanceList = list(
 		"Uranium" = 5, "Diamond" = 1, "Gold" = 10,
 		"Silver" = 12, "Plasma" = 20, "Iron" = 40,
-		"Gibtonite" = 4, "Cave" = 2, "BScrystal" = 1,
+		"Gibtonite" = 4, "Cave" = 1, "BScrystal" = 1,
 		/*, "Adamantine" =5*/)
 		//Currently, Adamantine won't spawn as it has no uses. -Durandan
 	var/mineralChance = 13
@@ -125,7 +125,7 @@ var/global/list/rockTurfEdgeCache
 				if("Plasma")
 					M = new/turf/simulated/mineral/plasma(src)
 				if("Cave")
-					new/turf/simulated/floor/plating/asteroid/airless/cave(src)
+					new/turf/ground/mountain/cave(src)
 				if("Gibtonite")
 					M = new/turf/simulated/mineral/gibtonite(src)
 				if("Bananium")
@@ -327,13 +327,13 @@ var/global/list/rockTurfEdgeCache
 
 ////////////////////////////////End Gibtonite
 
-/turf/simulated/floor/plating/asteroid/airless/cave
+/turf/ground/mountain/cave
 	var/length = 100
-	var/mob_spawn_list// = list("Badmutant" = 1, "Casador" = 3, "Rat" = 20)
+	var/mob_spawn_list = list("Casador" = 1, "Rat" = 1, "None" = 98)
 	var/sanity = 1
-	turf_type = /turf/simulated/floor/plating/asteroid/airless
+	var/turf_type = /turf/ground/mountain
 
-/turf/simulated/floor/plating/asteroid/airless/cave/New(loc, var/length, var/go_backwards = 1, var/exclude_dir = -1)
+/turf/ground/mountain/cave/New(loc, var/length, var/go_backwards = 1, var/exclude_dir = -1)
 
 	// If length (arg2) isn't defined, get a random length; otherwise assign our length to the length arg.
 	if(!length)
@@ -354,7 +354,7 @@ var/global/list/rockTurfEdgeCache
 	SpawnFloor(src)
 	..()
 
-/turf/simulated/floor/plating/asteroid/airless/cave/proc/make_tunnel(dir)
+/turf/ground/mountain/cave/proc/make_tunnel(dir)
 
 	var/turf/simulated/mineral/tunnel = src
 	var/next_angle = pick(45, -45)
@@ -392,7 +392,7 @@ var/global/list/rockTurfEdgeCache
 			dir = angle2dir(dir2angle(dir) + next_angle)
 
 
-/turf/simulated/floor/plating/asteroid/airless/cave/proc/SpawnFloor(turf/T)
+/turf/ground/mountain/cave/proc/SpawnFloor(turf/T)
 	for(var/turf/S in range(2,T))
 		if(istype(S, /turf/space) || istype(S.loc, /area/mine/explored))
 			sanity = 0
@@ -405,8 +405,8 @@ var/global/list/rockTurfEdgeCache
 	spawn(2)
 		t.fullUpdateMineralOverlays()
 
-/turf/simulated/floor/plating/asteroid/airless/cave/proc/SpawnMonster(turf/T)
-	if(prob(30))
+/turf/ground/mountain/cave/proc/SpawnMonster(turf/T)
+	if(prob(2))
 		if(istype(loc, /area/mine/explored))
 			return
 		for(var/atom/A in ultra_range(25,T))//Lowers chance of mob clumps
@@ -495,11 +495,6 @@ var/global/list/rockTurfEdgeCache
 		return
 
 /**********************Asteroid**************************/
-
-/turf/simulated/floor/plating/asteroid/airless
-	//now with air(i hope)
-	turf_type = /turf/simulated/floor/plating/asteroid/airless
-	//temperature = TCMB
 
 /turf/simulated/floor/plating/asteroid/basalt
 	name = "volcanic floor"
