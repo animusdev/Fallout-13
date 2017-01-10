@@ -181,7 +181,7 @@ var/global/max_secret_rooms = 6
 			valid = 0
 			continue
 
-		if(locate(/turf/ground/mountain) in range(5,T))//A little less strict than the other checks due to tunnels
+		if(locate(/turf/simulated/floor) in range(5,T))//A little less strict than the other checks due to tunnels
 			valid = 0
 			continue
 
