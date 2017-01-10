@@ -96,7 +96,7 @@ var/global/normal_ooc_colour = "#002eb8"
 	set category = "Preferences"
 
 	if(!check_whitelist(mob))
-		mob << "This function aviable only for donaters"
+		mob << "This function available only for donaters"
 		return
 
 	if(!holder || check_rights_for(src, R_ADMIN))

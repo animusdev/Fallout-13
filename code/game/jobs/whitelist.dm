@@ -7,6 +7,8 @@ var/list/whitelist
 	if(!whitelist.len)	whitelist = null
 
 /proc/check_whitelist(mob/M /*, var/rank*/)
+	if(!config.usewhitelist)
+		return 1
 	if(M.in_whitelist != -1)
 		return M.in_whitelist
 	if(check_whitelist_db(M))

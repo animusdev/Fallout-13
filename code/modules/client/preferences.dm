@@ -26,7 +26,7 @@ var/list/preferences_datums = list()
 										//autocorrected this round, not that you'd need to check that.
 
 
-	var/UI_style = "Midnight"
+	var/UI_style = "Fallout"
 	var/nanoui_fancy = TRUE
 	var/toggles = TOGGLES_DEFAULT
 	var/chat_toggles = TOGGLES_DEFAULT_CHAT
@@ -474,7 +474,7 @@ var/list/preferences_datums = list()
 		var/prefUpperLevel = -1 // level to assign on left click
 		var/prefLowerLevel = -1 // level to assign on right click
 
-		if(config.usewhitelist && job.whitelist_on && !check_whitelist(user))
+		if(job.whitelist_on && !check_whitelist(user))
 			prefLevelLabel = "Donate"
 			prefLevelColor = "red"
 			prefUpperLevel = 4
@@ -861,7 +861,7 @@ var/list/preferences_datums = list()
 						pref_species = new newtype()
 						if(pref_species.whitelist_req && !check_whitelist(user))
 							pref_species = new /datum/species/human()
-							user << "<font class='warning'>Race changing aviable only for donaters</font>"
+							user << "<font class='warning'>Race changing available only for donaters</font>"
 							return
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
 						var/temp_hsv = RGBtoHSV(features["mcolor"])
@@ -1021,6 +1021,8 @@ var/list/preferences_datums = list()
 							UI_style = "Plasmafire"
 						if("Plasmafire")
 							UI_style = "Retro"
+						if("Retro")
+							UI_style = "Fallout"
 						else
 							UI_style = "Midnight"
 
