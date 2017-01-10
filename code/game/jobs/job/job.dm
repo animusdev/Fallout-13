@@ -45,6 +45,8 @@
 
 	var/whitelist_on = 0
 
+	var/donaters = 0
+
 //Only override this proc
 /datum/job/proc/equip_items(mob/living/carbon/human/H)
 

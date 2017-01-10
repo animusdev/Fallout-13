@@ -22,7 +22,7 @@ proc/get_status_datum(status)
 
 	var/can_invite_to_himself = 0
 
-	var/color = ""
+	var/color = "#171717"
 
 	var/craft_recipes = list()
 
@@ -47,7 +47,7 @@ mob/proc/set_status(var/status)
 
 	src.status = S.name
 	var/text
-	text += "Now you are <span style='color: [S.color]'>[S.name]</span>"
+	text += "<span class='notice'>Now you are <span style='color: [S.color];'>[S.name]</span></span>"
 	if(S.welcome_text)
 		text += "<br>[S.welcome_text]"
 	src << text
@@ -96,36 +96,37 @@ mob/proc/set_status(var/status)
 	name = "Decan"
 	change_faction = 1
 	can_invite_to = list("Recruit")
-
+	color = "#A6423B"
 /datum/status/legion/vexillarius
 	name = "Vexillarius"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Decan")
 	craft_recipes = list(/datum/table_recipe/legion_vex_armor, /datum/table_recipe/legion_vex_helm)
-
+	color = "#983C36"
 /datum/status/legion/centurion
 	name = "Centurion"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Decan", "Vexillarius")
 	craft_recipes = list(/datum/table_recipe/legion_cent_armor, /datum/table_recipe/legion_cent_helm)
-
+	color = "#8D3731"
 /datum/status/legion/legat
 	name = "Legat"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Decan", "Vexillarius", "Legat")
 	craft_recipes = list(/datum/table_recipe/legion_legat_armor, /datum/table_recipe/legion_legat_helm, \
 	/datum/table_recipe/legion_legat_gloves, /datum/table_recipe/legion_legat_shoes)
-
+	color = "#7A302A"
 /datum/status/ncr/ranger
 	name = "Ranger"
 	change_faction = 1
 	can_invite_to = list("Recruit")
 	craft_recipes = list(/datum/table_recipe/ncr_ranger_helm, /datum/table_recipe/ncr_ranger_armor)
+	color = "#020070"
 /datum/status/ncr/sergeant
 	name = "Sergeant"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Ranger")
-
+	color = "02005C"
 /datum/status/raider
 	name = "Raider"
 	purge_faction = "Wasteland"
@@ -146,9 +147,11 @@ mob/proc/set_status(var/status)
 	name = "Sheriff"
 	can_invite_to = list("Member")
 	purge_faction = "Den"
+	color = "#704200"
 
 
 /datum/status/vault/overseer
 	name = "Overseer"
 	can_invite_to = list("Member")
 	purge_faction = "Vault"
+	color = "#00491A"

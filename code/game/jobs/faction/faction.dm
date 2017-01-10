@@ -15,7 +15,7 @@ proc/get_faction_datum(faction)
 
 	var/welcome_text = ""
 
-	var/color = "#ff0000"
+	var/color = "#171717"
 
 	var/actions = list()
 
@@ -32,7 +32,7 @@ mob/proc/set_faction(var/faction)
 		src.allow_recipes -= last_F.craft_recipes
 
 	src.faction = F.name
-	src << "Now you are in <span>[F.name]</span>"
+	src << "<span class='notice'>You are joined to <span style='color: [F.color];'>[F.name]</span> faction</span>"
 
 	src.allow_recipes += F.craft_recipes
 
@@ -67,4 +67,5 @@ mob/proc/set_faction(var/faction)
 	late_join = 1
 /datum/f13_faction/den
 	name = "Den"
+	color = "#804B00"
 	first_spawn = 1
