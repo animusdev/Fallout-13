@@ -329,7 +329,7 @@ var/global/list/rockTurfEdgeCache
 
 /turf/ground/mountain/cave
 	var/length = 100
-	var/mob_spawn_list = list("Casador" = 1, "Rat" = 1, "None" = 98)
+	var/mob_spawn_list// = list("Casador" = 1, "Rat" = 1, "None" = 98)
 	var/sanity = 1
 	var/turf_type = /turf/ground/mountain
 
