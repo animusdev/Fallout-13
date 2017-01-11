@@ -183,3 +183,16 @@
 	gold_core_spawnable = 1
 	see_invisible = SEE_INVISIBLE_MINIMUM
 	see_in_dark = 4
+/mob/living/simple_animal/hostile/rad_scorpion/blue
+	name = "giant rad scorpion"
+	desc = "Furry and black, it makes you shudder to look at it. This one has deep red eyes."
+	icon_state = "radscorpion"
+	icon_living = "radscorpion"
+	icon_dead = "radscorpion_d"
+	icon_gib = "radscorpion_g"
+	maxHealth = 200
+	health = 200
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+	move_to_delay = 5
+	faction = list("scorpions")
