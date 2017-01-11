@@ -41,4 +41,4 @@
 
 /mob/living/simple_animal/hostile/ghoul/glowing/New()
 	..()
-	SetLuminosity(4)
+	SetLuminosity(1)
