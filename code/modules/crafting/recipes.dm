@@ -442,6 +442,16 @@
 
 //////// LEGION
 
+/datum/table_recipe/legion_encryption_key
+	name = "Legion encryption key"
+	result = /obj/item/device/encryptionkey/headset_leg
+	reqs = list(/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/sheet/metal = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_MISC
+
 /datum/table_recipe/legion_recruit_armor
 	name = "Legion recruit clothing"
 	result = /obj/item/clothing/suit/armor/f13/legrecruit
@@ -544,6 +554,16 @@
 
 /////// NCR
 
+/datum/table_recipe/ncr_encryption_key
+	name = "NCR encryption key"
+	result = /obj/item/device/encryptionkey/headset_ncr
+	reqs = list(/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/sheet/metal = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_MISC
+
 /datum/table_recipe/ncr_combat_armor
 	name = "NCR recruit armor"
 	result = /obj/item/clothing/suit/armor/f13/ncrarmor
@@ -573,6 +593,30 @@
 	time = 120
 	show = 0
 	category = CAT_ARMOR
+
+/////// DEN
+
+/datum/table_recipe/den_encryption_key
+	name = "Den encryption key"
+	result = /obj/item/device/encryptionkey/headset_den
+	reqs = list(/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/sheet/metal = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_MISC
+
+/////// Vault
+
+/datum/table_recipe/vlt_encryption_key
+	name = "Vault encryption key"
+	result = /obj/item/device/encryptionkey/headset_vlt
+	reqs = list(/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/sheet/metal = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	show = 0
+	category = CAT_MISC
 
 /////// RAIDERS
 

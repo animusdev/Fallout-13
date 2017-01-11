@@ -44,6 +44,7 @@ mob/proc/set_faction(var/faction)
 	name = "Vault"
 	first_spawn = 1
 	color = "#005A20"
+	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
 /datum/f13_faction/ncr
 	name = "NCR"
 	first_spawn = 1
@@ -52,12 +53,13 @@ mob/proc/set_faction(var/faction)
 1. As an NCR soldier you must uphold the law around town, kill any raiders you see,  find and kill everyone Legion member<br>\
 2. As an NCR soldier you must protect the innocent wastelanders from the horrors the wasteland brings<br>\
 3. Protect yourself above all others, your important to the NCR and we can't afford to lose you.<br>"
-	craft_recipes = list(/datum/table_recipe/ncr_combat_armor)
+	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key)
 /datum/f13_faction/legion
 	name = "Legion"
 	first_spawn = 1
 	color = "#C24D44"
-	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm)
+	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
+						 /datum/table_recipe/legion_encryption_key)
 	welcome_text = "Your current objectives:<br>\
 	1. As a member of The Legion you must obey all orders given by anyone out ranking out<br>\
 	2. You must enslave the occupants of the wasteland, kill any that resist unless they can be over powered<br>\
@@ -69,3 +71,4 @@ mob/proc/set_faction(var/faction)
 	name = "Den"
 	color = "#804B00"
 	first_spawn = 1
+	craft_recipes = list(/datum/table_recipe/den_encryption_key)
