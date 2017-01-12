@@ -61,7 +61,7 @@
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/moleratmeat = 1)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat = 1)
 	maxHealth = 50
 	health = 50
 	faction = list("wmob")
@@ -86,7 +86,7 @@
 	maxHealth = 60
 	health = 60
 	butcher_results = list(/obj/item/stack/sheet/gekkonhide = 1, \
-	/obj/item/weapon/reagent_containers/food/snacks/gekkonmeat = 1)
+	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/gekkon = 1)
 	faction = list("wmobs")
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -103,13 +103,12 @@
 	//speak_chance = 40
 	//speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	//speak_emote = list("shouts", "yells")
-//	pixel_w = -16
 	speed = 3
 	turns_per_move = 5
 	response_help = "touches"
 	response_disarm = "tries to push aside"
 	response_harm = "hits"
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/deathmeat = 5)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5)
 	maxHealth = 500
 	health = 500
 	force_threshold = 20
