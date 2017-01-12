@@ -96,7 +96,10 @@
 /mob/living/simple_animal/handle_regular_status_updates()
 	if(..()) //alive
 		if(health < 1)
-			death()
+			if(getBruteLoss() > maxHealth*1.1 && prob(25))
+				gib()
+			else
+				death()
 			return 0
 		return 1
 
