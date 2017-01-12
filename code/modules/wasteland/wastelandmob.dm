@@ -122,7 +122,7 @@
 
 /mob/living/simple_animal/hostile/badmutant
 	name = "Mutant"
-	desc = "A huge mutant"
+	desc = "A huge and ugly super mutant."
 	icon = 'icons/mob/hulk.dmi'
 	icon_state = "hulk_113_s"
 	icon_dead = "hulk_113_s"
@@ -152,7 +152,21 @@
 	if(!gibbed)
 		visible_message("<span class='danger'>\the [src] stops moving...</span>")
 	..()
-	//RAd scorpion
+
+/mob/living/simple_animal/hostile/badmutant/goodmutant
+	name = "Brah Min"
+	desc = "A huge and ugly super mutant.<br>He behaves like totally insane and it seems he can speak only English language.<br>He's all concerned only about his (probably not much so) brahmins."
+	icon = 'icons/mob/hulk.dmi'
+	icon_state = "hulk_brahmin_s"
+	icon_dead = "hulk_brahmin_s"
+	speak_chance = 30
+	speak = list("HEY YOU! THESE ARE MY BRAHMIN!", "AND I SAY, HEY HEY HEY HEY! I SAID HEY, WHAT'S GOING ON?", "WHAT DO YOU WANT FROM MY BRAHMIN?!", "ME GONNA CLEAN BRAHMIN POOP AGAIN NOW!", "I LOVE BRAHMIN, BRAHMIN ARE GOOD, JUST POOP MUCH!", "DO NOT SPEAK TO MY BRAHMIN EVER AGAIN YOU HEAR?!", "BAD RAIDERS COME TO STEAL MY BRAHMIN - I CRUSH THEIR HEADS WITH MY BRAHMIN POOP SHOWEL!", "DO NOT COME TO MY BRAHMIN! DO NOT TOUCH MY BRAHMIN! DO NOT LOOK AT MY BRAHMIN!", "I'M WATCHING YOU AND MY BRAHIMN WATCH TOO!", "BRAHMIN SAY MOO, AND I'M SAYING - HEY, GET YOUR UGLY FACE OUT OF MY WAY!")
+	speak_emote = list("shouts", "yells")
+	faction = list("Wasteland")
+	attack_sound = 'sound/misc/gameover.ogg'
+
+//RAd scorpion
+
 /mob/living/simple_animal/hostile/rad_scorpion
 	name = "giant rad scorpion"
 	desc = "Furry and black, it makes you shudder to look at it. This one has deep red eyes."
@@ -183,6 +197,7 @@
 	gold_core_spawnable = 1
 	see_invisible = SEE_INVISIBLE_MINIMUM
 	see_in_dark = 4
+
 /mob/living/simple_animal/hostile/rad_scorpion/blue
 	name = "giant rad scorpion"
 	desc = "Furry and black, it makes you shudder to look at it. This one has deep red eyes."

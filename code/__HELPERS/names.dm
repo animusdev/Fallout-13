@@ -60,7 +60,7 @@ var/religion_name = null
 		station_name = new_station_name()
 
 	if (config && config.server_name)
-		world.name = "[config.server_name]"
+		world.name = "[config.server_name][config.server_name==station_name ? "" : ": [station_name]"]"
 	else
 		world.name = station_name
 
@@ -74,7 +74,7 @@ var/religion_name = null
 
 	//Rare: Pre-Prefix
 	if (prob(10))
-		name = pick("Traders of", "Merchants of", "Brotherhood of", "Mutants of", "Ghouls of", "Followers of", "Soldiers of", "Raiders of", "Slavers of", "Slaves of", "Outcasts of", "Guild of", "Squad of", "State of", "Scientists of", "Gun Runners of", "Union of", "Alliance of", "Government of", "Tribe of", "Rangers of", "Remnants of", "Gang of", "Experiment of", "Ultra quest of", "Secret knowledge of", "Top Secret of", "Crazed", "Crazy", "Insane", "Mad", "Psychotic", "Wild")
+		name = pick("Traders of", "Merchants of", "Brotherhood of", "Mutants of", "Ghouls of", "Followers of", "Soldiers of", "Raiders of", "Slavers of", "Slaves of", "Outcasts of", "Guild of", "Squad of", "State of", "Scientists of", "Gun Runners of", "Union of", "Alliance of", "Government of", "Tribe of", "Rangers of", "Remnants of", "Gang of", "Experiment of", "Ultra Quest of", "Secret Knowledge of", "Top Secret of", "Crazed", "Crazy", "Insane", "Mad", "Psychotic", "Wild")
 		new_station_name = name + " "
 		name = ""
 
@@ -86,7 +86,7 @@ var/religion_name = null
 		name = holiday.getStationPrefix()
 		//get normal name
 	if(!name)
-		name = pick("", "Enclave", "Steel", "Ghoul", "Crimson", "Regulator", "Super Mutant", "The Apocalypse", "Ranger", "Psychic", "Underground", "Conspiracy", "Rogue", "New California Republic", "Vault Tec", "Nuka Cola", "Sunset Sarsaparilla", "The Vault Dweller", "The Chosen One", "The Lone Wanderer", "The Courier", "The Sole Survivor", "North", "West", "East", "South", "Overseer", "Elder", "President", "Caesar's", "Imperial", "Unidentified", "Deathclaw", "Control", "Brahmin", "Glowing One", "Gecko", "Mole rat", "Tunnel Snake", "Skeleton", "Death", "Rad scorpion", "Fat Man", "Gentleman", "Capitalist", "Communist", "Radroach", "Robot", "Eyebot", "Sentry bot", "Protectron", "Robobrain", "Mister Handy", "Mister Gutsy", "PDQ-88b Securitron", "Liberty Prime", "Dwarf", "G.E.C.K.", "Terminal", "RobCo", "REPCONN", "Vertibird", "Supply", "Military", "Mirelurk", "GNR", "Science", "Tribesmen")
+		name = pick("", "Enclave", "Steel", "Ghoul", "Crimson", "Regulator", "Super Mutant", "The Apocalypse", "Ranger", "Psychic", "Underground", "Conspiracy", "Rogue", "New California Republic", "Vault Tec", "Nuka Cola", "Sunset Sarsaparilla", "The Vault Dweller", "The Chosen One", "The Lone Wanderer", "The Courier", "The Sole Survivor", "North", "West", "East", "South", "Overseer", "Elder", "President", "Caesar's", "Imperial", "Unidentified", "Deathclaw", "Control", "Brahmin", "Glowing One", "Gecko", "Mole rat", "Tunnel Snake", "Skeleton", "Death", "Rad scorpion", "Fat Man", "Gentleman", "Capitalist", "Communist", "Radroach", "Robot", "Eyebot", "Sentry bot", "Protectron", "Robobrain", "Mister Handy", "Mister Gutsy", "PDQ-88b Securitron", "Liberty Prime", "Dwarf", "G.E.C.K.", "Terminal", "RobCo", "REPCONN", "Vertibird", "Supply", "Military", "Mirelurk", "GNR", "Science", "Tribesmen", "Minutemen")
 	if(name)
 		new_station_name += name + " "
 
