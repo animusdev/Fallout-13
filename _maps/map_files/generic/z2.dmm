@@ -214,7 +214,7 @@
 "ef" = (/obj/item/weapon/storage/toolbox/mechanical,/turf/simulated/floor/plating,/area/centcom/ferry)
 "eg" = (/obj/item/weapon/wrench,/turf/simulated/floor/plating,/area/centcom/ferry)
 "eh" = (/obj/machinery/door/airlock/centcom{name = "briefing room";opacity = 1;req_access_txt = "101"},/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
-"ei" = (/obj/structure/rack,/obj/item/clothing/suit/armor/power_armor/enclave,/obj/item/clothing/head/helmet/power_armor/enclave,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
+"ei" = (/obj/structure/rack,/obj/item/clothing/suit/armor/power_armor/advanced,/obj/item/clothing/head/helmet/power_armor/advanced,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
 "ej" = (/obj/structure/rack,/obj/item/weapon/motiontracker/advanced,/obj/item/clothing/head/soft/f13/enclave,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
 "ek" = (/obj/structure/rack,/obj/item/weapon/gun/projectile/automatic/pistol/deagle,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
 "el" = (/obj/structure/table/reinforced,/obj/item/weapon/storage/box/emps,/obj/item/weapon/gun/energy/ionrifle{pin = /obj/item/device/firing_pin},/turf/simulated/floor/plasteel/black,/area/centcom/ferry)

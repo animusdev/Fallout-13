@@ -338,7 +338,7 @@
 	icon_state = "metal_chestplate"
 	item_state = "metal_chestplate"
 	body_parts_covered = CHEST
-	armor = list(melee = 60, bullet = 40, laser = 30, energy = 15, bomb = 30, bio = 0, rad = 5)
+	armor = list(melee = 60, bullet = 40, laser = 30, energy = 10, bomb = 30, bio = 0, rad = 0)
 	slowdown = 0.5
 	put_on_delay = 30
 	strip_delay = 10
@@ -351,7 +351,7 @@
 	icon_state = "armorkit"
 	item_state = "armorkit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 30, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	put_on_delay = 30
 	strip_delay = 30
 
@@ -361,7 +361,7 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 50, bullet = 20, laser = 5, energy = 5, bomb = 5, bio = 0, rad = 0)
+	armor = list(melee = 50, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0)
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 20
 	strip_delay = 40
@@ -372,7 +372,7 @@
 	icon_state = "yankee"
 	item_state = "yankee"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 60, bullet = 20, laser = 5, energy = 5, bomb = 5, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 30, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40
@@ -383,7 +383,7 @@
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 50, bullet = 30, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 40, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40
@@ -394,31 +394,31 @@
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 60, bullet = 35, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 5)
+	armor = list(melee = 70, bullet = 50, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
 	slowdown = 1
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/ibmetalarmor
-	name = "metal armor mark 1"
-	desc = "A set of improved metal armor made from various bits of scrap metal and upgraded with plasteel. Will protect against bullets and dissipate lasers a bit better, still slowing you"
+	name = "metal armor Mk I"
+	desc = "A set of improved metal armor made from various bits of scrap metal and upgraded with plasteel.<br>Will protect against bullets and dissipate lasers a bit better, still slowing you down."
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 60, bullet = 40, laser = 25, energy = 20, bomb = 20, bio = 0, rad = 5)
-	slowdown = 0.5
+	armor = list(melee = 70, bullet = 60, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 0)
+	slowdown = 1
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/legrecruit
-	name = "legion recruit armor"
-	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units. Like most Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
+	name = "Legion recruit armor"
+	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 55, bullet = 25, laser = 15, energy = 10, bomb = 40, bio = 0, rad = 0)
+	armor = list(melee = 50, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -428,7 +428,7 @@
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 60, bullet = 30, laser = 15, energy = 10, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 30, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -438,7 +438,7 @@
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 80, bullet = 40, laser = 35, energy = 20, bomb = 20, bio = 0, rad = 35)
+	armor = list(melee = 70, bullet = 40, laser = 30, energy = 20, bomb = 20, bio = 0, rad = 30)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -448,7 +448,7 @@
 	icon_state = "leglegat"
 	item_state = "leglegat"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 85, bullet = 50, laser = 35, energy = 30, bomb = 30, bio = 0, rad = 45)
+	armor = list(melee = 80, bullet = 50, laser = 40, energy = 30, bomb = 30, bio = 0, rad = 40)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -458,7 +458,7 @@
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 50, laser = 25, energy = 20, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 50, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -468,7 +468,7 @@
 	icon_state = "ranger"
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 60, bullet = 60, laser = 45, energy = 20, bomb = 20, bio = 0, rad = 80)
+	armor = list(melee = 70, bullet = 60, laser = 40, energy = 40, bomb = 40, bio = 0, rad = 80)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -478,7 +478,7 @@
 	icon_state = "ncr_armor"
 	item_state = "ncr_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 40, bullet = 35, laser = 30, energy = 20, bomb = 20, bio = 0, rad = 40)
+	armor = list(melee = 60, bullet = 40, laser = 30, energy = 20, bomb = 20, bio = 0, rad = 40)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -488,8 +488,8 @@
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 70, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 80)
-	slowdown = 1.5
+	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
+	slowdown = 2
 	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -502,22 +502,39 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 70, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 80)
-	slowdown = 1.5
+	armor = list(melee = 70, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 70)
+	slowdown = 1
 	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	put_on_delay = 100
 	strip_delay = 200
 
-/obj/item/clothing/suit/armor/power_armor/enclave
+/obj/item/clothing/suit/armor/power_armor/advanced
 	name = "advanced power armor Mk I"
-	desc = "An advanced suit of armor typically used by the Enclave. It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
-	icon_state = "advpowerarmor"
-	item_state = "advpowerarmor"
+	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
+	icon_state = "advanced"
+	item_state = "advanced"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	slowdown = 1
-	armor = list(melee = 75, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 80)
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
+	flags = STOPSPRESSUREDMAGE
+	flags_inv = HIDEJUMPSUIT
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
+	unacidable = 1
+	put_on_delay = 100
+	strip_delay = 200
+
+/obj/item/clothing/suit/armor/power_armor/superadvanced
+	name = "advanced power armor Mk II"
+	desc = "It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
+	icon_state = "superadvanced"
+	item_state = "superadvanced"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	slowdown = 1
+	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
 	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS

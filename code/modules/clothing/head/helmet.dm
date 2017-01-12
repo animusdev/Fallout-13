@@ -221,7 +221,7 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 10, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/helmet/f13/broken
@@ -230,7 +230,7 @@
 	icon_state = "brokenhelmet"
 	item_state = "brokenhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 30, bullet = 25, laser = 5,energy = 5, bomb = 5, bio = 0, rad = 10)
+	armor = list(melee = 30, bullet = 20, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 10)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/helmet/f13/yankee
@@ -239,7 +239,7 @@
 	icon_state = "yankee"
 	item_state = "yankee"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 50, bullet = 20, laser = 5,energy = 5, bomb = 5, bio = 0, rad = 0)
+	armor = list(melee = 50, bullet = 20, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/helmet/f13/eyebot
@@ -248,7 +248,7 @@
 	icon_state = "eyebot"
 	item_state = "eyebot"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 50, bullet = 10, laser = 15,energy = 15, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 50, bullet = 30, laser = 10,energy = 10, bomb = 10, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 10
 	strip_delay = 50
@@ -259,7 +259,7 @@
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
-	armor = list(melee = 45, bullet = 45, laser = 15,energy = 25, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 50, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -271,7 +271,7 @@
 	desc = "It's leather legion recruit helmet."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
-	armor = list(melee = 35, bullet = 15, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -295,7 +295,7 @@
 	desc = "It's leather legion decanus helmet."
 	icon_state = "legdecan"
 	item_state = "legdecan"
-	armor = list(melee = 45, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -314,7 +314,7 @@
 	desc = "It's metal legion centurion helmet."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
-	armor = list(melee = 75, bullet = 40, laser = 25,energy = 15, bomb = 40, bio = 0, rad = 50)
+	armor = list(melee = 70, bullet = 40, laser = 30, energy = 20, bomb = 20, bio = 0, rad = 30)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -326,7 +326,7 @@
 	desc = "It's metal legion legat helmet."
 	icon_state = "leglegat"
 	item_state = "leglegat"
-	armor = list(melee = 75, bullet = 50, laser = 35,energy = 25, bomb = 50, bio = 0, rad = 60)
+	armor = list(melee = 80, bullet = 50, laser = 40, energy = 30, bomb = 30, bio = 0, rad = 40)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 10
@@ -338,7 +338,7 @@
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ranger"
 	item_state = "ranger"
-	armor = list(melee = 55, bullet = 50, laser = 35,energy = 25, bomb = 10, bio = 0, rad = 90)
+	armor = list(melee = 70, bullet = 60, laser = 40, energy = 40, bomb = 40, bio = 0, rad = 80)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 10
@@ -348,13 +348,13 @@
 	//invis_view = SEE_INVISIBLE_MINIMUM
 //Power armor helmets
 
-/obj/item/clothing/head/helmet/power_armor/enclave
+/obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced Mk I power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advhelmet"
-	item_state = "advhelmet"
+	icon_state = "advanced"
+	item_state = "advanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE | BLOCKHAIR
-	armor = list(melee = 75, bullet = 60, laser = 60,energy = 60, bomb = 60, bio = 100, rad = 80)
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -371,7 +371,7 @@
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
-	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 50, bio = 100, rad = 60)
+	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	put_on_delay = 20
 	strip_delay = 100
@@ -383,7 +383,7 @@
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE | BLOCKHAIR
-	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 50, bio = 100, rad = 60)
+	armor = list(melee = 70, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 70)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT

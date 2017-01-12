@@ -77,13 +77,13 @@
 
 //cow
 /mob/living/simple_animal/cow
-	name = "cow"
-	desc = "Known for their milk, just don't tip them over."
+	name = "brahmin"
+	desc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
 	icon_state = "cow"
 	icon_living = "cow"
 	icon_dead = "cow_dead"
 	icon_gib = "cow_gib"
-	speak = list("moo?","moo","MOOOOOO")
+	speak = list("Moo?","Moo!","MOOOOOO","Heeey brooo!","Heeey yooou!")
 	speak_emote = list("moos","moos hauntingly")
 	emote_hear = list("brays.")
 	emote_see = list("shakes its head.")
