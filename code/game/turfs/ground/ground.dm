@@ -98,7 +98,7 @@ turf/ground/New()
 /turf/ground/desert
 	name = "\proper desert"
 	icon_state = "wasteland1"
-	slowdown = 2
+	slowdown = 1
 	//PIT
 	var/turf_type = /turf/ground/desert
 	var/dug = 0
