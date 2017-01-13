@@ -209,7 +209,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += "Discord Channel"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")<br>"
-	s += "<img src='http://i.imgur.com/xIU2CWu.gif'><br>"
+	s += "<img src='http://i.imgur.com/bwkdv8N.gif'><br>"
 	s += "Under <b>[config.hostedby]</b> Protectorate"
 /*
 	var/list/features = list()
