@@ -49,10 +49,10 @@
 	icon_state = "hulk_brahmin_s"
 	icon_dead = "hulk_brahmin_s"
 	speak_chance = 30
-	speak = list("Hey you! These are my brahmins!", "And I say, hey hey hey hey! I said hey, what's going on?", "What do you want from my brahmins?!", "Me gonna clean brahmin poop again now!", "I love brahmins, brahmins are good, just poop much!", "Do not speak to my brahmins ever again, you hear?!", "Bad raiders come to steal my brahmins - I crush their heads with my brahmin poop showel!", "Do not come to my brahmins! Do not touch my brahmins! Do not look at my brahmins!", "I'm watching you, and my brahmins watch too!", "Brahmins say moo, and I'm saying - hey, get your ugly face out of my way!")
+	speak = list("Hey you! These are my brahmins!", "And I say, hey hey hey hey! I said hey, what's going on?", "What do you want from my brahmins?!", "Me gonna clean brahmin poop again now!", "I love brahmins, brahmins are good, just poop much!", "Do not speak to my brahmins ever again, you hear?!", "Bad raiders come to steal my brahmins - I crush their heads with my brahmin poop shovel!", "Do not come to my brahmins! Do not touch my brahmins! Do not look at my brahmins!", "I'm watching you, and my brahmins watch too!", "Brahmins say moo, and I'm saying - hey, get your ugly face out of my way!")
 	speak_emote = list("shouts", "yells")
 	emote_hear = list("looks around", "takes combat position", "is counting brahmins","yawns")
-	emote_see = list("raises his brahmin poop showel", "sticks his showel into a large pile of brahmin feces", "showels brahmin feces away", "waves his brahmin poop showel above his head angrily")
+	emote_see = list("raises his brahmin poop shovel", "sticks his shovel into a large pile of brahmin feces", "shovels brahmin feces away", "waves his brahmin poop shovel above his head angrily")
 	response_help  = "touches"
 	response_disarm = "pushes"
 	response_harm   = "punches"
