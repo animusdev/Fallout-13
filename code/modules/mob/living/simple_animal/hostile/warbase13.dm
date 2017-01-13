@@ -19,6 +19,7 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 30
 	minimum_distance = 2
+	retreat_distance = 2
 	attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = "harm"
