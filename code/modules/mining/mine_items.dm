@@ -75,6 +75,14 @@
 /obj/item/weapon/pickaxe/proc/playDigSound()
 	playsound(src, pick(digsound),50,1)
 
+/obj/item/weapon/pickaxe/rust
+	name = "rusty pickaxe"
+	desc = "This pickaxe has seen better days."
+	icon_state = "pickaxe_rust"
+	force = 12
+	throwforce = 8
+	digspeed = 45
+
 /obj/item/weapon/pickaxe/silver
 	name = "silver-plated pickaxe"
 	icon_state = "spickaxe"

@@ -64,6 +64,10 @@
 	return
 
 /obj/structure/simple_door/attackby(obj/item/weapon/I, mob/living/user, params)
+	if(!istype(I, /obj/item/stack/sheet/mineral/wood))
+		for(var/obj/structure/barricade/wooden/planks/P in src.loc)
+			P.attackby(I, user, params)
+			return
 	if(istype(I, /obj/item/weapon/screwdriver) && do_after(user, 5, target = src))
 		for(var/i = 1, i <= material_count, i++)
 			new material_type(get_turf(src))
@@ -76,6 +80,9 @@
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
 	if(isliving(user))
 		var/mob/living/M = user
+		if(/obj/structure/barricade in src.loc)
+			M << "It won't budge!"
+			return 0
 		if(M.client)
 			if(iscarbon(M))
 				var/mob/living/carbon/C = M

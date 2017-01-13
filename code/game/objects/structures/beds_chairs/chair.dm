@@ -91,9 +91,9 @@
 	buildstackamount = 3
 
 /obj/structure/bed/chair/wood/normal
-	icon_state = "wooden_chair"
+	icon_state = "wooden_chair_settler"//"wooden_chair"
 	name = "wooden chair"
-	desc = "This chair is good as new.<br>Old is never too old to not be in fashion."
+	desc = "A chair built from scavanged wood."//"This chair is good as new.<br>Old is never too old to not be in fashion."
 
 /obj/structure/bed/chair/wood/worn
 	icon_state = "wooden_chair_alt"

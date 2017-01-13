@@ -453,6 +453,13 @@
 	burn_state = FLAMMABLE
 	burntime = 20
 
+//A table that'd be built by players, since their constructions would be... less impressive than their prewar counterparts.
+//Building the table frame produces this.
+/obj/structure/table/wood/settler
+	desc = "A wooden table constructed from planks, probably from a settler."
+	icon_state = "wood_table"
+	burntime = 10 //Takes less time to burn since it wasn't treated like the prewar tables would've been
+
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
 	name = "gambling table"
 	desc = "A seedy table for seedy dealings in seedy places."
@@ -554,6 +561,14 @@
 	anchored = 1
 	pass_flags = LETPASSTHROW //You can throw objects over this, despite it's density.
 	var/health = 5
+	var/newparts = /obj/item/weapon/rack_parts
+
+/obj/structure/rack/rust
+	name = "rusty rack"
+	desc = "A rack, rusted with age."
+	icon_state = "rack_rust"
+	health = 3
+	newparts = /obj/item/weapon/rack_parts/rust
 
 /obj/structure/rack/ex_act(severity, target)
 	switch(severity)
@@ -655,8 +670,8 @@
 /obj/structure/rack/proc/rack_destroy()
 	if(!(flags&NODECONSTRUCT))
 		density = 0
-		var/obj/item/weapon/rack_parts/newparts = new(loc)
-		transfer_fingerprints_to(newparts)
+		var/obj/structure/rack/R = new newparts(loc)
+		transfer_fingerprints_to(R)
 	qdel(src)
 
 
@@ -686,6 +701,21 @@
 		if(!user.drop_item())
 			return
 		var/obj/structure/rack/R = new /obj/structure/rack( user.loc )
+		R.add_fingerprint(user)
+		qdel(src)
+		return
+
+/obj/item/weapon/rack_parts/rust
+	name = "rusty rack parts"
+	desc = "Old parts of a rack."
+	icon_state = "rack_parts_rust"
+
+/obj/item/weapon/rack_parts/rusted/attack_self(mob/user)
+	user << "<span class='notice'>You start constructing rack...</span>"
+	if (do_after(user, 50, target = src))
+		if(!user.drop_item())
+			return
+		var/obj/structure/rack/R = new /obj/structure/rack/rust( user.loc )
 		R.add_fingerprint(user)
 		qdel(src)
 		return

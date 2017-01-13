@@ -57,7 +57,7 @@
 	new /obj/item/weapon/rcd(src)
 
 /obj/structure/closet/crate/freezer
-	desc = "A freezer."
+	desc = "An old, rusted freezer, still good at keeping things cold."
 	name = "freezer"
 	icon_crate = "freezer"
 	icon_state = "freezer"
