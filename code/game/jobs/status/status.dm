@@ -78,6 +78,8 @@ mob/proc/set_status(var/status)
 	if(alert(M, "[src.name] invite you to be [status]?",,"Yes","No")=="No")
 		src << "<span class='warning'>[M.name] refused your suggestion</span>"
 		return
+	else
+		src << "<span class='notice'>[M.name] accepted your suggestion</span>"
 	var/datum/status/S = get_status_datum(status)
 	if(S && S.change_faction)
 		M.set_faction(src.faction)
@@ -126,7 +128,7 @@ mob/proc/set_status(var/status)
 	name = "Sergeant"
 	change_faction = 1
 	can_invite_to = list("Recruit", "Ranger")
-	color = "02005C"
+	color = "#02005C"
 /datum/status/raider
 	name = "Raider"
 	purge_faction = "Wasteland"

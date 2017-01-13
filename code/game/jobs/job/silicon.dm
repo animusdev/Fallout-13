@@ -10,7 +10,7 @@ AI
 	status = "Member"
 	total_positions = 0
 	spawn_positions = 1
-	selection_color = "#ccffcc"
+	selection_color = "#005A20"
 	supervisors = "your laws"
 	req_admin_notify = 1
 	minimal_player_age = 30
@@ -35,7 +35,7 @@ Cyborg
 	total_positions = 0
 	spawn_positions = 1
 	supervisors = "your laws and the AI"	//Nodrak
-	selection_color = "#ddffdd"
+	selection_color = "#005A20"
 	minimal_player_age = 21
 
 /datum/job/cyborg/equip(mob/living/carbon/human/H)

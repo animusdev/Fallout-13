@@ -8,7 +8,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
-	selection_color = "#ffddf0"
+	selection_color = "#020070"
 	minimal_player_age = 7
 
 	outfit = /datum/outfit/job/ranger
@@ -44,7 +44,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
-	selection_color = "#FF97D2"
+	selection_color = "#02005C"
 	minimal_player_age = 7
 
 	whitelist_on = 1

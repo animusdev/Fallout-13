@@ -7,7 +7,7 @@
 	total_positions = 1
 	spawn_positions = 1 //does not matter for late join
 	supervisors = "nobody"
-	selection_color = "#ECFF33"
+	selection_color = "#704200"
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
@@ -40,7 +40,7 @@
 	total_positions = 10
 	spawn_positions = 10 //does not matter for late join
 	supervisors = "nobody"
-	selection_color = "#F1FF66"
+	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/settler

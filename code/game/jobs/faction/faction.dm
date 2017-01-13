@@ -17,7 +17,9 @@ proc/get_faction_datum(faction)
 
 	var/color = "#171717"
 
-	var/actions = list()
+	var/list/verbs = list()
+
+	var/head_status = null
 
 	var/list/craft_recipes = list()
 
@@ -29,12 +31,15 @@ mob/proc/set_faction(var/faction)
 	if(F.name == src.faction)
 		return 1
 	if(last_F)
+		src.verbs -= last_F.verbs
 		src.allow_recipes -= last_F.craft_recipes
 
 	src.faction = F.name
 	src << "<span class='notice'>You are joined to <span style='color: [F.color];'>[F.name]</span> faction</span>"
 
 	src.allow_recipes += F.craft_recipes
+	src.verbs += F.verbs
+
 
 	if(F.welcome_text)
 		src << F.welcome_text
@@ -44,11 +49,13 @@ mob/proc/set_faction(var/faction)
 	name = "Vault"
 	first_spawn = 1
 	color = "#005A20"
+	head_status = "Overseer"
 	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
 /datum/f13_faction/ncr
 	name = "NCR"
 	first_spawn = 1
 	color = "#020080"
+	head_status = "Sergeant"
 	welcome_text = "Your current objectives:<br>\
 1. As an NCR soldier you must uphold the law around town, kill any raiders you see,  find and kill everyone Legion member<br>\
 2. As an NCR soldier you must protect the innocent wastelanders from the horrors the wasteland brings<br>\
@@ -57,6 +64,7 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/legion
 	name = "Legion"
 	first_spawn = 1
+	head_status = "Legat"
 	color = "#C24D44"
 	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
 						 /datum/table_recipe/legion_encryption_key)
@@ -71,4 +79,5 @@ mob/proc/set_faction(var/faction)
 	name = "Den"
 	color = "#804B00"
 	first_spawn = 1
+	head_status = "Sheriff"
 	craft_recipes = list(/datum/table_recipe/den_encryption_key)
