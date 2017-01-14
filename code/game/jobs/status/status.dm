@@ -5,6 +5,14 @@ proc/get_status_datum(status)
 		return null
 	return human_status[status]
 
+proc/remove_everyone_from_status(status)
+	var/datum/status/S = get_status_datum(status)
+	if(!S)
+		return 0
+	for(var/mob/M in world)
+		if(M.status == S.name)
+			M.set_status("Wastelander")
+
 /datum/status
 	var/name = "UNKNOWN"
 
@@ -47,7 +55,7 @@ mob/proc/set_status(var/status)
 
 	src.status = S.name
 	var/text
-	text += "<span class='notice'>Now you are <span style='color: [S.color];'>[S.name]</span></span>"
+	text += "<span class='notice'>Now you are <span style='color: [S.color];'>[S.name]</span>.</span>"
 	if(S.welcome_text)
 		text += "<br>[S.welcome_text]"
 	src << text
@@ -76,10 +84,10 @@ mob/proc/set_status(var/status)
 	if(M.status == status)
 		return
 	if(alert(M, "[src.name] invite you to be [status]?",,"Yes","No")=="No")
-		src << "<span class='warning'>[M.name] refused your suggestion</span>"
+		src << "<span class='warning'>[M.name] refused your suggestion.</span>"
 		return
 	else
-		src << "<span class='notice'>[M.name] accepted your suggestion</span>"
+		src << "<span class='notice'>[M.name] accepted your suggestion.</span>"
 	var/datum/status/S = get_status_datum(status)
 	if(S && S.change_faction)
 		M.set_faction(src.faction)
