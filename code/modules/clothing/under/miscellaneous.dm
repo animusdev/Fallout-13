@@ -1040,6 +1040,11 @@
 	item_color = "vault13"
 
 
+/obj/item/clothing/under/f13/ncr
+	name = "NCR trooper jumpsuit"
+	desc = "Regular NCR uniform."
+	icon_state = "ncrt"
+	item_color = "ncrt"
 
 //Fallout 13 goes rampage at this point. The following uniforms provide decent deffence bonus.
 
