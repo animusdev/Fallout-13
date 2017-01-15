@@ -10,6 +10,23 @@
 	item_state = "broken_beer" //Generic held-item sprite until unique ones are made.
 	var/const/duration = 13 //Directly relates to the 'weaken' duration. Lowered by armor (i.e. helmets)
 	var/isGlass = 1 //Whether the 'bottle' is made of glass or not so that milk cartons dont shatter when someone gets hit by it
+	var/opened = 0
+
+/obj/item/weapon/reagent_containers/food/drinks/bottle/attack_hand(mob/user)
+	if(!opened)
+		opened = !opened
+		user.visible_message("[user] pops the cap off of [src].")
+		var/obj/item/stack/caps/C = new /obj/item/stack/caps(src.loc)
+		C.pickup(user)
+		if(!user.put_in_active_hand(C))
+			C.dropped(user)
+		return
+	..()
+
+/obj/item/weapon/reagent_containers/food/drinks/bottle/examine(mob/user)
+	..()
+	if(opened)
+		user << "<span class='danger'>It's already been opened.</span>"
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/throw_impact(atom/target,mob/thrower)
 	..(target,thrower)

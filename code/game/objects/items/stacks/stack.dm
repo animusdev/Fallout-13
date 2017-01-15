@@ -220,15 +220,23 @@
 /obj/item/stack/attack_hand(mob/user)
 	if (user.get_inactive_hand() == src)
 		if(zero_amount())	return
-		var/obj/item/stack/F = new src.type( user, 1)
-		. = F
-		F.copy_evidences(src)
-		user.put_in_hands(F)
-		src.add_fingerprint(user)
-		F.add_fingerprint(user)
-		use(1)
-		if (src && usr.machine==src)
-			spawn(0) src.interact(usr)
+//		var/obj/item/stack/F = new src.type( user, 1)
+//		. = F
+		if(amount == 1)
+			user.put_in_active_hand(src)
+			return
+		var/new_stack = input(user, "How much would you like to transfer?:\n(1-[amount])", "Stack Splitting") as num|null
+		if(new_stack)
+			var/obj/item/stack/F = new src.type( user, 1)
+			. = F
+			F.amount = max(min(round(text2num(new_stack)), amount),1)
+			F.copy_evidences(src)
+			user.put_in_hands(F)
+			src.add_fingerprint(user)
+			F.add_fingerprint(user)
+			use(new_stack)
+			if (src && usr.machine==src)
+				spawn(0) src.interact(usr)
 	else
 		..()
 	return

@@ -30,8 +30,8 @@
 
 /obj/item/weapon/storage/book/bible/booze/New()
 	..()
-	new /obj/item/weapon/reagent_containers/food/drinks/beer(src)
-	new /obj/item/weapon/reagent_containers/food/drinks/beer(src)
+	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer(src)
+	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer(src)
 	new /obj/item/stack/spacecash(src)
 	new /obj/item/stack/spacecash(src)
 	new /obj/item/stack/spacecash(src)
