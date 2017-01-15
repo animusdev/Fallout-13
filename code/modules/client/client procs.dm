@@ -54,6 +54,7 @@
 	..()	//redirect to hsrc.Topic()
 
 /client/proc/is_content_unlocked()
+	return check_whitelist(src.mob)
 	if(!prefs.unlock_content)
 		src << "Become a BYOND member to access member-perks and features, as well as support the engine that makes this game possible. Only 10 bucks for 3 months! <a href='http://www.byond.com/membership'>Click Here to find out more</a>."
 		return 0
