@@ -48,6 +48,8 @@
 	icon = 'icons/mob/hulk.dmi'
 	icon_state = "hulk_brahmin_s"
 	icon_dead = "hulk_brahmin_s"
+	maxHealth = 300
+	health = 300
 	speak_chance = 30
 	speak = list("Hey you! These are my brahmins!", "And I say, hey hey hey hey! I said hey, what's going on?", "What do you want from my brahmins?!", "Me gonna clean brahmin poop again now!", "I love brahmins, brahmins are good, just poop much!", "Do not speak to my brahmins ever again, you hear?!", "Bad raiders come to steal my brahmins - I crush their heads with my brahmin poop shovel!", "Do not come to my brahmins! Do not touch my brahmins! Do not look at my brahmins!", "I'm watching you, and my brahmins watch too!", "Brahmins say moo, and I'm saying - hey, get your ugly face out of my way!")
 	speak_emote = list("shouts", "yells")
@@ -68,6 +70,26 @@
 	if(!gibbed)
 		visible_message("<span class='danger'>\the [src] shouts something incoherent about brahmins for the last time and stops moving...</span>")
 	..()
+
+/mob/living/simple_animal/pet/dog/protectron
+	name = "Marvin"
+	desc = "A standard RobCo RX2 V1.16.4 'vault helper', loaded with Vault protocols.<br>Looks like it was kept operational for an indefinite period of time - a body is covered in cracks and dents of various size, that have been repared so many times you are amazed the machine is still functioning at all."
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "protectron"
+	icon_dead = "protectron_dead"
+	maxHealth = 50
+	health = 50
+	speak_chance = 30
+	speak = list("Welcome to Vault 113! On behalf of Vault-Tec Corporation we wish you a good stay!", "Vault Dweller - remember the basic rules! 1. Always abide the Overseer and his orders! 2. Never under any circumstances leave the safety of the Vault, unless the Overseer orders to! 3. If you feel sick or strange - contact the medical personnel immediately!", "If Overseer orders you to evacuate the Vault - remember the Vault-Tec Vault Evacuation Protocol! 1. Line up in an orderly fashion! 2. To avoid the instant eye damage because of bright sun light - use protective eye wear! 3. Once outside the Vault, be prepared to live a life new! With help from the Garden of Eden Creation Kit! 4. Use G.E.C.K. to create the New World you've been waiting for!", "Vault Dweller, remember - I'm a robot. I'm not a refrigerator.", "You can blame the RobCo Industries for making androids with Genuine People Personalities. I'm a personality prototype. You can tell, can't you...?", " Here I am, brain the size of a planet, and they ask me to take you to the Overseer. Call that job satisfaction, 'cause I don't.", "The first ten million years were the worst. And the second ten million: they were the worst, too. The third ten million I didn't enjoy at all. After that, I went into a bit of a decline.", "You think you've got problems. What are you supposed to do if you are a manically depressed robot? No, don't even bother answering. I'm 50,000 times more intelligent than you and even I don't know the answer.", "Ghastly, isn't it? All the doors in this Vault have been programmed to have a cheery and sunny disposition.", "It is better not to leave the safety of the Vault. I've calculated your chance of survival, but I don't think you'll like it.")
+	speak_emote = list("shouts", "yells")
+	emote_hear = list("beeps", "buzzes", "is scanning the enviroment","is experiencing a slight system lag")
+	emote_see = list("waves its manipulators", "is calculating chances of survival", "has something going deep inside of its CPU", "recovers from another system error")
+	response_help  = "shakes manipulator"
+	response_disarm = "pushes"
+	response_harm   = "punches"
+	luminocity = 3
+	attack_sound = 'sound/voice/liveagain.ogg'
+	butcher_results = list(/obj/effect/gibspawner/robot = 1)
 
 /mob/living/simple_animal/pet/dog/corgi/New()
 	..()

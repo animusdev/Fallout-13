@@ -133,8 +133,8 @@
 	response_help = "touches"
 	response_disarm = "tries to push aside"
 	response_harm = "hits"
-	maxHealth = 250
-	health = 250
+	maxHealth = 300
+	health = 300
 	force_threshold = 15
 	faction = list("wmaster")
 	melee_damage_lower = 25
