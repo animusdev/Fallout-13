@@ -8,7 +8,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Vault-tec"
-	selection_color = "#00491A"
+	selection_color = "#005A20"
 	req_admin_notify = 1
 	minimal_player_age = 14
 

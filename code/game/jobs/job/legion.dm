@@ -58,7 +58,7 @@ Legion
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the head of security"
-	selection_color = "#A6423B"
+	selection_color = "#C24D44"
 	minimal_player_age = 7
 
 	outfit = /datum/outfit/job/legdecan
@@ -105,7 +105,7 @@ Legion
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the head of security"
-	selection_color = "#983C36"
+	selection_color = "#C24D44"
 	minimal_player_age = 7
 
 	outfit = /datum/outfit/job/legvex
@@ -151,7 +151,7 @@ Legion
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
-	selection_color = "#8D3731"
+	selection_color = "#C24D44"
 	minimal_player_age = 7
 
 	outfit = /datum/outfit/job/legcenturion
@@ -197,7 +197,7 @@ Legion
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of security"
-	selection_color = "#7A302A"
+	selection_color = "#C24D44"
 	minimal_player_age = 7
 
 	whitelist_on = 1

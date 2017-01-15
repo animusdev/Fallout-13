@@ -34,7 +34,7 @@ proc/get_faction_members(var/faction)
 
 mob/proc/begin_head_voting()
 	set name = "Leader Voting"
-	set category = "Abilities"
+	set category = "Faction"
 	var/datum/f13_faction/F = get_faction_datum(src.faction)
 
 	if(!F || !F.head_status)
@@ -42,9 +42,11 @@ mob/proc/begin_head_voting()
 
 	if(F.voting)
 		src << "<span class='warning'>Voting is going on.</span>"
+		return 0
 
 	if(src.status == F.head_status)
-		src << "<span class='notice'> You already [F.head_status].</span>"
+		src << "<span class='notice'>You already [F.head_status].</span>"
+		return 0
 
 	if(alert("You are sure?",,"Yes","No")=="No")
 		return 0
@@ -164,7 +166,8 @@ mob/proc/set_faction(var/faction)
 	name = "NCR"
 	first_spawn = 1
 	color = "#020080"
-	head_status = "Sergeant"
+	head_status = "Squad Leader"
+	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Your current objectives:<br>\
 1. As an NCR soldier you must uphold the law around town, kill any raiders you see,  find and kill everyone Legion member<br>\
 2. As an NCR soldier you must protect the innocent wastelanders from the horrors the wasteland brings<br>\

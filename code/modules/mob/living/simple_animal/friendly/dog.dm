@@ -87,12 +87,12 @@
 	response_help  = "shakes manipulator"
 	response_disarm = "pushes"
 	response_harm   = "punches"
-	luminocity = 3
 	attack_sound = 'sound/voice/liveagain.ogg'
 	butcher_results = list(/obj/effect/gibspawner/robot = 1)
 
 /mob/living/simple_animal/pet/dog/corgi/New()
 	..()
+	SetLuminosity(1)
 	regenerate_icons()
 
 

@@ -68,7 +68,7 @@ mob/proc/set_status(var/status)
 
 /mob/proc/convert_to_wastelander()
 	set name = "Become Wastelander"
-	set category = "Abilities"
+	set category = "Faction"
 	if(status == "Wastelander")
 		return
 	if(alert("You are sure?",,"Yes","No")=="No")
@@ -78,7 +78,7 @@ mob/proc/set_status(var/status)
 
 /mob/proc/convert_to_status(mob/M in oview(), status in get_can_invite_status())
 	set name = "Invite To"
-	set category = "Abilities"
+	set category = "Faction"
 	if(!M.mind || !M.client)
 		return
 	if(M.status == status)
@@ -129,13 +129,26 @@ mob/proc/set_status(var/status)
 /datum/status/ncr/ranger
 	name = "Ranger"
 	change_faction = 1
-	can_invite_to = list("Recruit")
+//	can_invite_to = list("Recruit")
 	craft_recipes = list(/datum/table_recipe/ncr_ranger_helm, /datum/table_recipe/ncr_ranger_armor)
 	color = "#020070"
-/datum/status/ncr/sergeant
-	name = "Sergeant"
+
+/datum/status/ncr/squad_leader
+	name = "Squad Leader"
 	change_faction = 1
-	can_invite_to = list("Recruit", "Ranger")
+	can_invite_to = list("Recruit", "Ranger", "Trooper", "Elite Trooper")
+	color = "#02005C"
+
+/datum/status/ncr/trooper
+	name = "Trooper"
+	change_faction = 1
+//	can_invite_to = list("Recruit", "Ranger")
+	color = "#02005C"
+
+/datum/status/ncr/elite_trooper
+	name = "Elite Trooper"
+	change_faction = 1
+//	can_invite_to = list("Recruit", "Ranger")
 	color = "#02005C"
 /datum/status/raider
 	name = "Raider"

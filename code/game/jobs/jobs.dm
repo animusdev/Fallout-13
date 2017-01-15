@@ -11,6 +11,8 @@ var/const/DETECTIVE			=(1<<3)
 var/const/SHERIFF			=(1<<6)
 var/const/SETTLER			=(1<<7)
 
+var/const/SQDLEAD			=(1<<8)
+var/const/TROOPER			=(1<<2)
 var/const/SERGEANT			=(1<<14)
 var/const/RANGER			=(1<<15)
 

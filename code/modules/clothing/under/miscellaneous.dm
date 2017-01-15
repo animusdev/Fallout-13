@@ -1043,6 +1043,7 @@
 /obj/item/clothing/under/f13/ncr
 	name = "NCR trooper jumpsuit"
 	desc = "Regular NCR uniform."
+	armor = list(melee = 10, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "ncrt"
 	item_color = "ncrt"
 
