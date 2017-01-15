@@ -20,7 +20,7 @@
 	name = "Ranger"
 	id = null
 	gloves = /obj/item/clothing/gloves/combat
-	uniform = /obj/item/clothing/under/f13/cowboyb
+	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/rangercombat
@@ -58,7 +58,7 @@
 	name = "Sergeant"
 	id = null
 	gloves = /obj/item/clothing/gloves/combat
-	uniform = /obj/item/clothing/under/f13/cowboyb
+	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat
 	suit = /obj/item/clothing/suit/armor/power_armor/ncr
 	head = /obj/item/clothing/head/helmet/power_armor/ncr

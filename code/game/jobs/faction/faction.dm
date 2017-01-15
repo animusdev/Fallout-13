@@ -33,9 +33,10 @@ proc/get_faction_members(var/faction)
 	var/voting = 0
 
 mob/proc/begin_head_voting()
-	set name = "Vote to new leader"
+	set name = "Leader Voting"
 	set category = "Abilities"
 	var/datum/f13_faction/F = get_faction_datum(src.faction)
+
 	if(!F || !F.head_status)
 		return 0
 
@@ -45,13 +46,16 @@ mob/proc/begin_head_voting()
 	if(src.status == F.head_status)
 		src << "<span class='notice'> You already [F.head_status].</span>"
 
+	if(alert("You are sure?",,"Yes","No")=="No")
+		return 0
+
 	var/list/all_members = get_faction_members(F.name)
 	var/list/all_head_candidates = list()
 	for(var/mob/M in all_members)
 		if(M.stat != DEAD && M.ckey)
 			all_head_candidates += M
 	if(all_head_candidates.len < 2)
-		src << "<span class='notice'>You are the last member from your faction.</span>"
+		src << "<span class='notice'>You are the last member of your faction.</span>"
 		src.set_status(F.head_status)
 		return 1
 
@@ -76,9 +80,16 @@ mob/proc/begin_head_voting()
 		spawn(0)
 			var/choice = input(M,"Make a choice") in correct_candidates
 			if(choice == M)
-				M.say("I'm voting for myself")
+				M.say(pick("I'm voting for myself", "I'm gonna be the new [F.head_status]!", "No one other but myself is worthy."))
 			else
-				M.say("Vote to [choice]")
+				if(prob(1))
+					if(prob(50))
+						M.say("TRUMP FOREVER! MAKE WASTELAND GREAT AGAIN!!!")
+					else
+						M.say("PUTIN THE BEST!!!")
+					sleep(20)
+					M.say("I changed my mind...")
+				M.say(pick("I vote for [choice].", "[choice] - I choose you!", "I choose [choice] to be [F.head_status].", "I believe [choice] is worthy to be our leader."))
 			choices[choice] += 1
 			voters_count -= 1
 
@@ -97,10 +108,13 @@ mob/proc/begin_head_voting()
 			favorite = M
 	if(favorite == null)
 		src << "<span class='warning'>No one has voted.</span>"
+		F.voting = 0
 		return 0
 	for(var/mob/M in choices)
 		if(choices[M] == choices[favorite] && M != favorite)
 			src << "<span class='warning'>You need to make a choice together.</span>"
+			say("We need make a choice together.")
+			F.voting = 0
 			return 0
 	if(favorite == src)
 		say("So, i think i'm is a new [F.head_status]")
