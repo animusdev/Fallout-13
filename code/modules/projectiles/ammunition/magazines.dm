@@ -13,7 +13,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder
 	name = "revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/m44
-	caliber = "357"
+	caliber = "44"
 	max_ammo = 7
 
 /obj/item/ammo_box/magazine/internal/cylinder/ammo_count(countempties = 1)
