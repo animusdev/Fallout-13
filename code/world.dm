@@ -166,8 +166,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	for(var/client/C in clients)
 		if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 			C << link("byond://[config.server]")
-	if(file("/root/Reboot.sh"))
-		shell("./root/Reboot.sh")
+		shell("sh /root/Reboot.sh")
 	..(0)
 
 
