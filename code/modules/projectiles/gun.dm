@@ -36,7 +36,7 @@
 	var/heavy_weapon = 0
 
 	var/safetyposition = 1				//the safety position you see not the one you have 0 = off
-	var/safetyon = 1				//the safetys actual position
+	var/safetyon = 0				//the safetys actual position
 	var/safetybroken = 0				//whether the safetys lever is atached
 
 	var/spread = 0						//spread induced by the gun itself.
