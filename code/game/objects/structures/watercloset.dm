@@ -476,3 +476,11 @@
 	icon_state = "puddle-splash"
 	..()
 	icon_state = "puddle"
+
+/obj/structure/sink/well
+	name = "well"
+	desc = "A large well, reaching down to pure, unradiated ground water."
+	icon = 'icons/obj/billboard.dmi'
+	icon_state = "well"
+	bound_x = 64
+	bound_y = 64

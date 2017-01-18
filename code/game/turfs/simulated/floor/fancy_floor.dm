@@ -5,9 +5,15 @@
  */
 
 /turf/simulated/floor/wood
-	icon_state = "wood"
+	icon = 'icons/turf/floors/wood.dmi'
+	icon_state = "wood1"
 	floor_tile = /obj/item/stack/tile/wood
-	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
+	broken_states = list("wood-b1","wood-b2","wood-b3","wood-b4")
+
+/turf/simulated/floor/wood/New()
+	..()
+	if(!broken && !burnt)
+		icon_state = "wood[rand(1,3)]"
 
 /turf/simulated/floor/wood/attackby(obj/item/C, mob/user, params)
 	if(..())
@@ -20,6 +26,15 @@
 		make_plating()
 		playsound(src, 'sound/items/Screwdriver.ogg', 80, 1)
 		return
+
+/turf/simulated/floor/wood/broken
+	icon_state = "wood-b"
+	broken = 1
+
+/turf/simulated/floor/wood/broken/New()
+	..()
+	if(icon_state != "wood-b")
+		icon_state = pick(broken_states)
 
 /turf/simulated/floor/grass
 	name = "Grass patch"

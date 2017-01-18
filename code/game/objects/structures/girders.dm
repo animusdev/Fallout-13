@@ -364,3 +364,8 @@
 			if(prob(5))
 				new /obj/effect/decal/remains/human(loc)
 				qdel(src)
+
+
+//Not a subtype because not similar code-wise but in this file because it's still similar
+/obj/structure/wooden_girder
+	name = "wooden girder"

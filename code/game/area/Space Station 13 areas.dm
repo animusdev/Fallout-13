@@ -598,6 +598,7 @@ var/list/teleportlocs = list()
 /area/library
  	name = "Library"
  	icon_state = "library"
+ 	open_space = 1
 
 /area/chapel/main
 	name = "Chapel"

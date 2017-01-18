@@ -476,9 +476,10 @@
 
 /obj/structure/window/fulltile/wasteland
 	smooth = 0
-	icon = 'icons/turf/walls.dmi'
-	icon_state = "wastelandwindowfull"
+	icon = 'icons/obj/windows.dmi'
+	icon_state = "window"
 	fulltile = 1
+
 /obj/structure/window/reinforced/fulltile
 	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
 	icon_state = "r_window"

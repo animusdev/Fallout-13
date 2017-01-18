@@ -130,6 +130,10 @@ turf/ground/New()
 	name = "\proper road"
 	icon_state = "outermiddle"
 
+/turf/ground/road/pavement
+	name = "pavement"
+	icon_state = "outershade"
+
 /turf/ground/mountain
 	icon = 'icons/turf/floors2.dmi'
 	name = "\proper mountain"

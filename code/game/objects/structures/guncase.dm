@@ -7,7 +7,7 @@
 	anchored = 0
 	density = 1
 	opacity = 0
-	var/case_type = null
+	var/case_type = "shotgun"//null
 	var/gun_category = /obj/item/weapon/gun
 	var/open = 1
 	var/capacity = 4
@@ -59,6 +59,7 @@
 		update_icon()
 
 /obj/structure/guncase/proc/ShowWindow(mob/user)
+	user.set_machine(src)
 	var/dat = {"<div class='block'>
 				<h3>Stored Guns</h3>
 				<table align='center'>"}
@@ -82,11 +83,12 @@
 			else
 				O.loc = get_turf(src)
 			update_icon()
+			updateUsrDialog()
 
 /obj/structure/guncase/shotgun
 	name = "shotgun locker"
 	desc = "A locker that holds shotguns."
-	case_type = "shotgun"
+//	case_type = "shotgun"
 	gun_category = /obj/item/weapon/gun/projectile/shotgun
 
 /obj/structure/guncase/ecase

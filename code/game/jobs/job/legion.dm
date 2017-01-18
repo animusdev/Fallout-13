@@ -44,7 +44,7 @@ Legion
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 1, \
+	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/machete = 1)
 
 //decan
@@ -90,7 +90,7 @@ Legion
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
-	/obj/item/stack/coin/coins = 3, \
+	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
@@ -134,7 +134,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 3, \
+	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 4, \
@@ -181,7 +181,7 @@ Legion
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/stack/coin/coins = 3, \
+	/obj/item/stack/caps = 3, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
 	/obj/item/weapon/powergauntlet = 1, \
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
@@ -229,7 +229,7 @@ Legion
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/stack/coin/coins = 3, \
+	/obj/item/stack/caps = 3, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1, \
 	/obj/item/weapon/powergauntlet = 1, \
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
