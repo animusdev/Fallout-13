@@ -107,7 +107,7 @@
 	response_disarm = "pushes"
 	response_harm   = "kicks"
 	attack_sound = 'sound/voice/hiss6.ogg'
-	butcher_results = list(/obj/effect/gibspawner/robot = 1)
+	butcher_results = list(/obj/effect/gibspawner/xeno = 1)
 
 /mob/living/simple_animal/pet/dog/corgi/New()
 	..()
