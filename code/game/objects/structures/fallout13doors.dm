@@ -17,6 +17,7 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
+	var/opaque = 1
 	var/manual_opened = 0
 	var/material_count = 10
 	var/material_type = /obj/item/stack/sheet/mineral/wood
@@ -26,6 +27,7 @@
 /obj/structure/simple_door/New(location)
 	..()
 	icon_state = door_type
+	SetOpacity(opaque)
 	return
 
 /obj/structure/simple_door/Bumped(atom/user)
@@ -43,7 +45,7 @@
 /obj/structure/simple_door/proc/Close()
 	icon_state = door_type
 	playsound(src.loc, close_sound, 30, 0, 0)
-	SetOpacity(1)
+	SetOpacity(opaque)
 	density = 1
 	manual_opened = 0
 
@@ -133,7 +135,7 @@
 
 /obj/structure/simple_door/dirtyglass
 	door_type = "dirtyglass"
-
+	opaque = 0
 /obj/structure/simple_door/fakeglass
 	door_type = "fakeglass"
 	name = "damaged wooden door"
@@ -143,10 +145,11 @@
 	door_type = "brokenglass"
 	name = "shattered door"
 	desc = "It still opens and closes."
+	opaque = 0
 
 /obj/structure/simple_door/glass
 	door_type = "glass"
-	opacity = 1
+	opaque = 0
 
 /obj/structure/simple_door/metal
 	name = "metal door"
@@ -157,5 +160,7 @@
 /obj/structure/simple_door/metal/dirtystore
 	door_type = "dirtystore"
 	desc = "It's a metal door with dirty glass."
+	opaque = 0
 /obj/structure/simple_door/metal/store
 	door_type = "store"
+	opaque = 0

@@ -144,10 +144,52 @@
 	var/flickering = 0
 	var/light_type = /obj/item/weapon/light/tube		// the type of light item
 	var/fitting = "tube"
+	var/sun_triger = 0
 	var/switchcount = 0			// count of number of times switched on/off
 								// this is used to calc the probability the light burns out
 
 	var/rigged = 0				// true if rigged to explode
+
+
+/obj/machinery/light/lamp_post
+	name = "street light"
+	icon_state = "lamppost0"
+	base_state = "lamppost"
+	icon = 'icons/obj/lamppost.dmi'
+	fitting = "lamp post"
+	brightness = 6
+	active_power_usage = 100
+	density = 0
+	layer = 8
+	pixel_x = -80
+	bound_x = -32
+	sun_triger = 1
+	desc = "a post supporting a usually outdoor lamp or lantern."
+	light_type = null
+
+/obj/machinery/light/lamp_post/process()
+	..()
+	if(sun_triger)
+		if(SSsun.global_sun_light < 5 && !on)
+			seton(1)
+		if(SSsun.global_sun_light >= 5 && on)
+			seton(0)
+/////////CLOSE YOUR EYES NOW!
+/obj/machinery/light/lamp_post/attackby()
+	return 0
+/obj/machinery/light/lamp_post/attack_alien()
+	return 0
+/obj/machinery/light/lamp_post/attack_animal()
+	return 0
+/obj/machinery/light/lamp_post/attack_hand()
+	return 0
+/obj/machinery/light/lamp_post/attack_tk()
+	return 0
+/obj/machinery/light/lamp_post/explode()
+	return 0
+/obj/machinery/light/lamp_post/broken()
+	return 0
+/////////Now you can open them
 
 // the smaller bulb light fixture
 
@@ -221,10 +263,10 @@
 	if(on)
 		if(!light || light.luminosity != brightness)
 			switchcount++
-			if(rigged)
+			if(rigged && fitting != "lamp post")
 				if(status == LIGHT_OK && trigger)
 					explode()
-			else if( prob( min(60, switchcount*switchcount*0.01) ) )
+			else if( prob( min(60, switchcount*switchcount*0.01) ) && fitting != "lamp post")
 				if(status == LIGHT_OK && trigger)
 					status = LIGHT_BURNED
 					icon_state = "[base_state]-burned"
