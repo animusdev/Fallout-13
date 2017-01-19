@@ -14,7 +14,7 @@
 /obj/vehicle/motorcycle/New()
 	..()
 	if(!bikecover)
-		bikecover = image("icons/obj/vehicles/medium_vehicles.dmi", "bike_cover")
+		bikecover = image("icons/obj/vehicles/medium_vehicles.dmi", "[initial(icon_state)]_cover")//"bike_cover")
 		bikecover.layer = MOB_LAYER + 0.1
 
 obj/vehicle/motorcycle/post_buckle_mob(mob/living/M)
@@ -73,3 +73,16 @@ obj/vehicle/motorcycle/attackby(obj/item/weapon/W, mob/user, params)
 			if(WEST)
 				buckled_mob.pixel_x = 2
 				buckled_mob.pixel_y = 5
+
+
+/obj/vehicle/motorcycle/rust
+	name = "rusty motorcycle"
+	icon_state = "bike_rust_med"
+
+/obj/vehicle/motorcycle/motor_green
+	name = "motor green motorcycle"
+	icon_state = "motor_green"
+
+/obj/vehicle/motorcycle/scrambler
+	name = "scrambler motorcycle"
+	icon_state = "scrambler"
