@@ -413,7 +413,7 @@
 	name = "Stimpak"
 	result = /obj/item/weapon/reagent_containers/pill/patch/stimpak
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1,
-				/obj/item/weapon/reagent_containers/food/drinks/nukacola = 1)
+				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1)
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
 	time = 60
 	category = CAT_MED

@@ -157,12 +157,12 @@
 
 /turf/simulated/wall/mineral/wood/New()
 	..()
-	for(var/turf/simulated/wall/mineral/wood/W in orange(src,1))
+	for(var/turf/simulated/wall/mineral/wood/W in range(src,1))
 		W.relativewall()
 	..()
 
 /turf/simulated/wall/mineral/wood/Del()
-	for(var/turf/simulated/wall/mineral/wood/W in orange(src,1))
+	for(var/turf/simulated/wall/mineral/wood/W in range(src,1))
 		W.relativewall()
 	..()
 

@@ -40,7 +40,7 @@
 	icon_state = "klamat"
 
 /obj/structure/showcase/sign/den
-	name = "Klamat"
+	name = "Den"
 	desc = "A sign showing the name of the Den settlement."
 	icon_state = "den"
 

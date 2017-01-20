@@ -28,6 +28,13 @@
 	if(opened)
 		user << "<span class='danger'>It's already been opened.</span>"
 
+/obj/item/weapon/reagent_containers/food/drinks/bottle/canconsume(mob/eater, mob/user)
+	if(opened)
+		return 1
+	else
+		user << "You can't drink this while there's still a bottlecap on it!"
+		return 0
+
 /obj/item/weapon/reagent_containers/food/drinks/bottle/throw_impact(atom/target,mob/thrower)
 	..(target,thrower)
 	SplashReagents(target)

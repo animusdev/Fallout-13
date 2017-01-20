@@ -108,12 +108,12 @@
 
 /turf/simulated/wall/composite/New()
 	..()
-	for(var/turf/simulated/wall/composite/W in orange(src,1))
+	for(var/turf/simulated/wall/composite/W in range(src,1))
 		W.relativewall()
 	..()
 
 /turf/simulated/wall/composite/Del()
-	for(var/turf/simulated/wall/composite/W in orange(src,1))
+	for(var/turf/simulated/wall/composite/W in range(src,1))
 		W.relativewall()
 	..()
 
@@ -124,7 +124,6 @@
 		var/turf/T = get_step(src,cdir)
 		if(istype(T, /turf/simulated/wall/composite))
 			junction |= cdir
-			break
 	icon_state = "[walltype][junction]"
 
 
