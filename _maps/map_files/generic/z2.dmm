@@ -49,7 +49,7 @@
 "aW" = (/obj/structure/window/reinforced/tinted{tag = "icon-twindow (WEST)";icon_state = "twindow";dir = 8},/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion";dir = 8},/turf/simulated/floor/plating/asteroid{tag = "icon-wasteland32";icon_state = "wasteland32"},/area/shuttle/syndicate)
 "aX" = (/turf/indestructible/fakeglass{icon_state = "fakewindows2";dir = 8},/area/syndicate_mothership)
 "aY" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/snacks/pizzaslice/mushroom,/turf/simulated/floor/plasteel/bar{dir = 2},/area/syndicate_mothership)
-"aZ" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/drinks/beer{pixel_x = 5;pixel_y = -2},/obj/item/toy/cards/deck/syndicate{icon_state = "deck_syndicate_full";pixel_x = -6;pixel_y = 6},/turf/simulated/floor/plasteel/bar{dir = 2},/area/syndicate_mothership)
+"aZ" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/drinks/bottle/beer{pixel_x = 5;pixel_y = -2},/obj/item/toy/cards/deck/syndicate{icon_state = "deck_syndicate_full";pixel_x = -6;pixel_y = 6},/turf/simulated/floor/plasteel/bar{dir = 2},/area/syndicate_mothership)
 "ba" = (/obj/machinery/computer/telecrystals/uplinker,/turf/simulated/floor/plasteel/podhatch{dir = 8},/area/syndicate_mothership)
 "bb" = (/obj/structure/table,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/obj/item/weapon/reagent_containers/food/condiment/peppermill,/obj/machinery/camera/autoname,/turf/simulated/floor/plasteel/cafeteria,/area/centcom/evac)
 "bc" = (/obj/structure/table,/turf/simulated/floor/plasteel/cafeteria,/area/centcom/evac)

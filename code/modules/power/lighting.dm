@@ -161,8 +161,8 @@
 	active_power_usage = 100
 	density = 0
 	layer = 8
-	pixel_x = -80
-	bound_x = -32
+//	pixel_x = -80
+//	bound_x = -32
 	sun_triger = 1
 	desc = "a post supporting a usually outdoor lamp or lantern."
 	light_type = null
