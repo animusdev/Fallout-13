@@ -34,6 +34,8 @@ proc/remove_everyone_from_status(status)
 
 	var/craft_recipes = list()
 
+	var/flag = null
+
 /datum/status/New()
 	..()
 	if(can_invite_to_himself)
@@ -42,6 +44,14 @@ proc/remove_everyone_from_status(status)
 		verbs += /mob/proc/convert_to_wastelander
 	if(can_invite_to.len)
 		verbs += /mob/proc/convert_to_status
+
+mob/proc/get_flag()
+	var/datum/status/S = get_status_datum(src.status)
+	var/datum/f13_faction/F = get_faction_datum(faction)
+
+	if(!S.flag)
+		return F.flag
+	return null
 
 mob/proc/set_status(var/status)
 	var/datum/status/S = get_status_datum(status)
