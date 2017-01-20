@@ -30,6 +30,8 @@ proc/get_faction_members(var/faction)
 
 	var/list/craft_recipes = list()
 
+	var/flag = null
+
 	var/voting = 0
 
 mob/proc/begin_head_voting()
@@ -167,6 +169,7 @@ mob/proc/set_faction(var/faction)
 	first_spawn = 1
 	color = "#020080"
 	head_status = "Squad Leader"
+	flag = "ncr"
 	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Your current objectives:<br>\
 1. As an NCR soldier you must uphold the law around town, kill any raiders you see,  find and kill everyone Legion member<br>\
@@ -178,6 +181,7 @@ mob/proc/set_faction(var/faction)
 	first_spawn = 1
 	head_status = "Legat"
 	color = "#C24D44"
+	flag = "legion"
 	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
 						 /datum/table_recipe/legion_encryption_key)
 	welcome_text = "Your current objectives:<br>\
