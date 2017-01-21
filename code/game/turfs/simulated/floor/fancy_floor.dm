@@ -12,6 +12,7 @@
 
 /turf/simulated/floor/wood/New()
 	..()
+	icon = 'icons/turf/floors/wood.dmi' // REMOVE IT WHEN MAP FIX
 	if(!broken && !burnt)
 		icon_state = "wood[rand(1,3)]"
 
