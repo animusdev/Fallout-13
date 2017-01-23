@@ -1,4 +1,4 @@
-/*/datum/job/sheriff
+/datum/job/sheriff
 	title = "Sheriff"
 	flag = SHERIFF
 	department_flag = CIVILIAN
@@ -61,5 +61,3 @@
 		/obj/item/clothing/under/f13/lumberjack,\
 		/obj/item/clothing/under/f13/roving)
 	ears = /obj/item/device/radio/headset/headset_den
-
-	*/
