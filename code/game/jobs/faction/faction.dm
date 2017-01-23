@@ -159,7 +159,8 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/vault
 	name = "Vault"
-	first_spawn = 1
+	first_spawn = 0
+	late_join = 0
 	color = "#005A20"
 	head_status = "Overseer"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -167,6 +168,7 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/ncr
 	name = "NCR"
 	first_spawn = 1
+	late_join = 1
 	color = "#020080"
 	head_status = "Squad Leader"
 	flag = "ncr"
@@ -179,6 +181,7 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/legion
 	name = "Legion"
 	first_spawn = 1
+	late_join = 1
 	head_status = "Legat"
 	color = "#C24D44"
 	flag = "legion"
@@ -190,11 +193,13 @@ mob/proc/set_faction(var/faction)
 	3. As a Legion solider you will kill any NCR you come across, fight to your death for Caesar!!"
 /datum/f13_faction/wasteland
 	name = "Wasteland"
-	late_join = 1
+	first_spawn = 0
+	late_join = 0
 /datum/f13_faction/den
 	name = "Den"
 	color = "#804B00"
-	first_spawn = 1
+	first_spawn = 0
+	late_join = 0
 	head_status = "Sheriff"
 	verbs = list(/mob/proc/begin_head_voting)
 	craft_recipes = list(/datum/table_recipe/den_encryption_key)

@@ -9,7 +9,7 @@ Legion
 	department_flag = ENGSEC
 	faction = "Legion"
 	status = "Recruit"
-	total_positions = 10
+	total_positions = 100
 	spawn_positions = 10
 	supervisors = "the head of security"
 	selection_color = "#C24D44"

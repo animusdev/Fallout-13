@@ -114,7 +114,7 @@
 	department_flag = ENGSEC
 	faction = "NCR"
 	status = "Trooper"
-	total_positions = 2
+	total_positions = 20
 	spawn_positions = 2
 	supervisors = "the head of security"
 	selection_color = "#020070"
