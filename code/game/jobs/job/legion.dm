@@ -9,8 +9,8 @@ Legion
 	department_flag = ENGSEC
 	faction = "Legion"
 	status = "Recruit"
-	total_positions = 20
-	spawn_positions = 20
+	total_positions = 10
+	spawn_positions = 10
 	supervisors = "the head of security"
 	selection_color = "#C24D44"
 	minimal_player_age = 7
