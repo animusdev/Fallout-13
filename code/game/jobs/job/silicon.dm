@@ -1,7 +1,7 @@
 /*
 AI
 */
-
+/*
 /datum/job/ai
 	title = "AI"
 	flag = AI
@@ -14,7 +14,7 @@ AI
 	supervisors = "your laws"
 	req_admin_notify = 1
 	minimal_player_age = 30
-
+*/
 /datum/job/ai/equip(mob/living/carbon/human/H)
 	if(!H)	return 0
 
@@ -25,7 +25,7 @@ AI
 
 /*
 Cyborg
-*/
+
 /datum/job/cyborg
 	title = "Cyborg"
 	flag = CYBORG
@@ -37,7 +37,7 @@ Cyborg
 	supervisors = "your laws and the AI"	//Nodrak
 	selection_color = "#005A20"
 	minimal_player_age = 21
-
+*/
 /datum/job/cyborg/equip(mob/living/carbon/human/H)
 	if(!H)	return 0
 	return H.Robotize()

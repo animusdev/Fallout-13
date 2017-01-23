@@ -1,4 +1,4 @@
-/datum/job/captain
+/*/datum/job/captain
 	title = "Overseer"
 	flag = CAPTAIN
 	department_head = list("Centcom")
@@ -16,7 +16,7 @@
 
 	access = list() 			//See get_access()
 	minimal_access = list() 	//See get_access()
-
+*/
 /datum/job/captain/get_access()
 	return get_all_accesses()
 
@@ -52,7 +52,7 @@
 	L.imp_in = H
 	L.implanted = 1
 	H.sec_hud_set_implants()
-
+/*
 /datum/job/engineer
 	title = "Engineer"
 	flag = ENGINEER
@@ -71,7 +71,7 @@
 									access_external_airlocks, access_construction, access_atmospherics, access_tcomsat)
 	minimal_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 									access_external_airlocks, access_construction, access_tcomsat)
-
+*/
 /datum/outfit/job/engineer
 	name = "Engineer"
 
@@ -86,6 +86,7 @@
 	satchel = /obj/item/weapon/storage/backpack/satchel_eng
 	box = /obj/item/weapon/storage/box/engineer
 	pda_slot = slot_l_store
+/*
 /datum/job/doctor
 	title = "Medical Doctor"
 	flag = DOCTOR
@@ -102,7 +103,7 @@
 
 	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_mineral_storeroom)
 	minimal_access = list(access_medical, access_morgue, access_surgery)
-
+*/
 /datum/outfit/job/doctor
 	name = "Medical Doctor"
 
@@ -116,7 +117,7 @@
 
 	backpack = /obj/item/weapon/storage/backpack/medic
 	satchel = /obj/item/weapon/storage/backpack/satchel_med
-
+/*
 /datum/job/scientist
 	title = "Scientist"
 	flag = SCIENTIST
@@ -133,7 +134,7 @@
 
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
-
+*/
 /datum/outfit/job/scientist
 	name = "Scientist"
 
@@ -142,6 +143,7 @@
 	uniform = /obj/item/clothing/under/f13/vault/v13
 	//shoes = /obj/item/clothing/shoes/sneakers/white
 	suit = /obj/item/clothing/suit/toggle/labcoat/science
+	/*
 /datum/job/officer
 	title = "Security Officer"
 	flag = OFFICER
@@ -159,7 +161,7 @@
 
 	access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue, access_weapons, access_forensics_lockers)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_court, access_weapons) //But see /datum/job/warden/get_access()
-
+*/
 /datum/job/officer/get_access()
 	var/list/L = list()
 	L |= ..() | check_config_for_sec_maint()
@@ -285,7 +287,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 /obj/item/device/radio/headset/headset_sec/alt/department/sci
 	keyslot = new /obj/item/device/encryptionkey/headset_sec
 	keyslot2 = new /obj/item/device/encryptionkey/headset_sci
-
+/*
 /datum/job/assistant
 	title = "Vault dweller"
 	flag = ASSISTANT
@@ -299,7 +301,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit = /datum/outfit/job/assistant
-
+*/
 /datum/job/assistant/get_access()
 	if((config.jobs_have_maint_access & ASSISTANTS_HAVE_MAINT_ACCESS) || !config.jobs_have_minimal_access) //Config has assistant maint access set
 		. = ..()
