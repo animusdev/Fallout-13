@@ -2,7 +2,7 @@
 
 ##Credits
 Code: JackerZz, BartNixon, Omen111, Chowder McArthor, Matt.
-Graphics: Urgot, Leonister, Neinhouse, BartNixon, Omen111.
+Graphics: Urgot, Leonister, Neinhouse, BartNixon, Omen111, Nienhaus.
 Sounds: BartNixon.
 Map: Omen111, BartNixon, Urgot, Chowder McArthor, MalinaBoy, JackerZz.
 
