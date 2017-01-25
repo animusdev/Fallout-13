@@ -1,8 +1,10 @@
-##Fallout 13 Alpha 0.4
+##Fallout 13 Alpha 0.5
 
 ##Credits
-Code: Jackerzz
-Graphics: Urgot
+Code: JackerZz, BartNixon, Omen111, Chowder McArthor, Matt.
+Graphics: Urgot, Leonister, Neinhouse, BartNixon, Omen111, Nienhaus.
+Sounds: BartNixon.
+Map: Omen111, BartNixon, Urgot, Chowder McArthor, MalinaBoy, JackerZz.
 
 ##Old Credits
 **Code:** Pahomlancer, alexix1989, antonikon, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please. <BR>
