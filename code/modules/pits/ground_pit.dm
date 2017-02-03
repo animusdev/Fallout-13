@@ -14,7 +14,7 @@
 
 	GM.oxygen = 0
 	GM.carbon_dioxide = 0
-	GM.nitrogen = 0
+	GM.nitrogen = 10000
 	GM.toxins = 0
 
 	GM.temperature = parent.temperature
