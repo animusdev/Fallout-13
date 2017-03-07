@@ -157,6 +157,7 @@
 	var/obj/item/curr = held_items[hand_index]
 	if(!curr)
 		I.forceMove(get_turf(src))
+		I.loc = src
 		held_items[hand_index] = I
 		I.layer = ABOVE_HUD_LAYER
 		I.plane = ABOVE_HUD_PLANE
