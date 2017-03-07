@@ -4,6 +4,7 @@
 	obj_integrity = 150
 	max_integrity = 150
 	icon_state = "single"
+	density = 1
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 
 /obj/structure/barrel/dangerous
