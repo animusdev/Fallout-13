@@ -35,8 +35,8 @@
 		var/obj/item/weapon/weldingtool/WT = P
 		if(WT.isOn())
 			fire(user)
-	else if(istype(P, /obj/item/device/flashlight/torch/flarered))
-		var/obj/item/device/flashlight/torch/flarered/F = P
+	else if(istype(P, /obj/item/device/flashlight/torch/flare))
+		var/obj/item/device/flashlight/torch/flare/F = P
 		if(F.on)
 			fire(user)
 	else if(istype(P, /obj/item/weapon/lighter))

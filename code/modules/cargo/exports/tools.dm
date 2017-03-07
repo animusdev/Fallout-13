@@ -75,7 +75,7 @@
 /datum/export/flashlight/torch/flarered
 	cost = 2
 	unit_name = "flare"
-	export_types = list(/obj/item/device/flashlight/torch/flarered)
+	export_types = list(/obj/item/device/flashlight/torch/flare)
 
 /datum/export/flashlight/seclite
 	cost = 10

@@ -236,38 +236,26 @@
 
 //Flares
 
-/obj/item/device/flashlight/torch/flarered
+/obj/item/device/flashlight/torch/flare
 	name = "flare"
 	desc = "A red flare. There are instructions on the side, it reads 'pull cord, make light'."
 	w_class = WEIGHT_CLASS_SMALL
 	brightness_on = 8 // Pretty bright.
 	icon_state = "flarered"
-	item_state = "torch"
+	item_state = "flare"
 	light_color = LIGHT_COLOR_FLARE
 	on_damage = 7
 	slot_flags = null
 
-/obj/item/device/flashlight/torch/flaregreen
-	name = "flare"
+/obj/item/device/flashlight/torch/flare/green
 	desc = "A green flare. There are instructions on the side, it reads 'pull cord, make light'."
-	w_class = WEIGHT_CLASS_SMALL
-	brightness_on = 8 // Pretty bright.
 	icon_state = "flaregreen"
-	item_state = "flare"
 	light_color = LIGHT_COLOR_GLARE
-	on_damage = 7
-	slot_flags = null
 
-/obj/item/device/flashlight/torch/flareblue
-	name = "flare"
+/obj/item/device/flashlight/torch/flare/blue
 	desc = "A blue flare. There are instructions on the side, it reads 'pull cord, make light'."
-	w_class = WEIGHT_CLASS_SMALL
-	brightness_on = 8 // Pretty bright.
 	icon_state = "flareblue"
-	item_state = "flare"
 	light_color = LIGHT_COLOR_VANHELSING
-	on_damage = 7
-	slot_flags = null
 
 /obj/item/device/flashlight/lantern
 	name = "lantern"

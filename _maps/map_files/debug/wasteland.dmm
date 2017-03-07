@@ -247,7 +247,7 @@
 "eM" = (/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
 "eN" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
 "eO" = (/obj/machinery/light/small/red{dir = 8},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"eP" = (/obj/item/device/flashlight/torch/flarered,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"eP" = (/obj/item/device/flashlight/torch/flare,/turf/open/indestructible/ground/mountain,/area/f13/caves)
 "eQ" = (/obj/item/clothing/under/f13/rag,/turf/open/indestructible/ground/mountain,/area/f13/caves)
 "eR" = (/obj/effect/decal/cleanable/blood/tracks,/turf/open/indestructible/ground/mountain,/area/f13/caves)
 "eS" = (/obj/effect/decal/cleanable/cobweb/cobweb2,/turf/open/indestructible/ground/mountain,/area/f13/caves)
