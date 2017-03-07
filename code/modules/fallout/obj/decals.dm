@@ -7,13 +7,13 @@
 	icon_state = "goo1"
 	anchored = 1
 	level = 2.1
+	light_color = LIGHT_COLOR_SLIME_LAMP
+	light_power = 1
+	light_range = 2
 
 /obj/effect/decal/goo/New()
 	..()
 	icon_state = "goo[rand(1,13)]"
-	light_color = LIGHT_COLOR_SLIME_LAMP
-	light_power = 1
-	light_range = 2
 
 /obj/effect/decal/decoration //Generic decoration. See decals.dmi - there are more things to choose the proper icon_state in map editor.
 	name = "rag"
