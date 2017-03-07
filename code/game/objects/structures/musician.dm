@@ -1,4 +1,4 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
+
 
 /datum/song
 	var/name = "Untitled"
@@ -83,18 +83,18 @@
 			cur_acc[i] = "n"
 
 		for(var/line in lines)
-			//world << line
-			for(var/beat in text2list(lowertext(line), ","))
-				//world << "beat: [beat]"
-				var/list/notes = text2list(beat, "/")
-				for(var/note in text2list(notes[1], "-"))
-					//world << "note: [note]"
+//			to_chat(world, line)
+			for(var/beat in splittext(lowertext(line), ","))
+//				to_chat(world, "beat: [beat]")
+				var/list/notes = splittext(beat, "/")
+				for(var/note in splittext(notes[1], "-"))
+//					to_chat(world, "note: [note]")
 					if(!playing || shouldStopPlaying(user))//If the instrument is playing, or special case
 						playing = 0
 						return
 					if(lentext(note) == 0)
 						continue
-					//world << "Parse: [copytext(note,1,2)]"
+//					to_chat(world, "Parse: [copytext(note,1,2)]")
 					var/cur_note = text2ascii(note) - 96
 					if(cur_note < 1 || cur_note > 7)
 						continue
@@ -192,7 +192,7 @@
 	else if(href_list["import"])
 		var/t = ""
 		do
-			t = html_encode(input(usr, "Please paste the entire song, formatted:", text("[]", name), t)  as message)
+			t = html_encode_ru(input(usr, "Please paste the entire song, formatted:", text("[]", name), t)  as message)
 			if(!in_range(instrumentObj, usr))
 				return
 
@@ -204,19 +204,19 @@
 
 		//split into lines
 		spawn()
-			lines = text2list(t, "\n")
+			lines = splittext(t, "\n")
 			if(copytext(lines[1],1,6) == "BPM: ")
 				tempo = sanitize_tempo(600 / text2num(copytext(lines[1],6)))
 				lines.Cut(1,2)
 			else
 				tempo = sanitize_tempo(5) // default 120 BPM
 			if(lines.len > 50)
-				usr << "Too many lines!"
+				to_chat(usr, "Too many lines!")
 				lines.Cut(51)
 			var/linenum = 1
 			for(var/l in lines)
 				if(lentext(l) > 50)
-					usr << "Line [linenum] too long!"
+					to_chat(usr, "Line [linenum] too long!")
 					lines.Remove(l)
 				else
 					linenum++
@@ -246,7 +246,7 @@
 			playsong(usr)
 
 	else if(href_list["newline"])
-		var/newline = html_encode(input("Enter your line: ", instrumentObj.name) as text|null)
+		var/newline = html_encode_ru(input("Enter your line: ", instrumentObj.name) as text|null)
 		if(!newline || !in_range(instrumentObj, usr))
 			return
 		if(lines.len > 50)
@@ -263,7 +263,7 @@
 
 	else if(href_list["modifyline"])
 		var/num = round(text2num(href_list["modifyline"]),1)
-		var/content = html_encode(input("Enter your line: ", instrumentObj.name, lines[num]) as text|null)
+		var/content = html_encode_ru(input("Enter your line: ", instrumentObj.name, lines[num]) as text|null)
 		if(!content || !in_range(instrumentObj, usr))
 			return
 		if(lentext(content) > 50)
@@ -308,16 +308,17 @@
 
 
 /obj/structure/piano/New()
+	..()
 	song = new("piano", src)
 
 	if(prob(50))
-		name = "grand piano"
-		desc = "An old grand piano.<br>In a pretty good shape after all the decades."
-		icon_state = "old"
+		name = "space minimoog"
+		desc = "This is a minimoog, like a space piano, but more spacey!"
+		icon_state = "minimoog"
 	else
-		name = "shattered grand piano"
-		desc = "A very old grand piano.<br>It sure is a bit shattered..."
-		icon_state = "oldshattered"
+		name = "space piano"
+		desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
+		icon_state = "piano"
 
 /obj/structure/piano/Destroy()
 	qdel(song)
@@ -330,7 +331,7 @@
 
 /obj/structure/piano/attack_hand(mob/user)
 	if(!user.IsAdvancedToolUser())
-		user << "<span class='warning'>You don't have the dexterity to do this!</span>"
+		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return 1
 	interact(user)
 
@@ -347,22 +348,22 @@
 /obj/structure/piano/attackby(obj/item/O, mob/user, params)
 	if (istype(O, /obj/item/weapon/wrench))
 		if (!anchored && !isinspace())
-			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-			user << "<span class='notice'> You begin to tighten \the [src] to the floor...</span>"
-			if (do_after(user, 20/O.toolspeed, target = src))
+			playsound(src.loc, O.usesound, 50, 1)
+			to_chat(user, "<span class='notice'> You begin to tighten \the [src] to the floor...</span>")
+			if (do_after(user, 20*O.toolspeed, target = src))
 				user.visible_message( \
 					"[user] tightens \the [src]'s casters.", \
 					"<span class='notice'>You tighten \the [src]'s casters. Now it can be played again.</span>", \
 					"<span class='italics'>You hear ratchet.</span>")
 				anchored = 1
 		else if(anchored)
-			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-			user << "<span class='notice'> You begin to loosen \the [src]'s casters...</span>"
-			if (do_after(user, 40/O.toolspeed, target = src))
+			playsound(src.loc, O.usesound, 50, 1)
+			to_chat(user, "<span class='notice'> You begin to loosen \the [src]'s casters...</span>")
+			if (do_after(user, 40*O.toolspeed, target = src))
 				user.visible_message( \
 					"[user] loosens \the [src]'s casters.", \
 					"<span class='notice'>You loosen \the [src]. Now it can be pulled somewhere else.</span>", \
 					"<span class='italics'>You hear ratchet.</span>")
 				anchored = 0
 	else
-		..()
+		return ..()

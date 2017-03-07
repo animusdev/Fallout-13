@@ -6,8 +6,7 @@
 
 /obj/effect/particle_effect/expl_particles/New()
 	..()
-	spawn (15)
-		qdel(src)
+	QDEL_IN(src, 15)
 
 /datum/effect_system/expl_particles
 	number = 10
@@ -24,22 +23,35 @@
 
 /obj/effect/explosion
 	name = "fire"
-	icon = 'icons/effects/160x160.dmi'
-	icon_state = "epicexplosion"
+	icon = 'icons/effects/96x96.dmi'
+	icon_state = "explosion"
 	opacity = 1
 	anchored = 1
-	level = 5
 	mouse_opacity = 0
-	pixel_x = -64
+	pixel_x = -32
 	pixel_y = -32
+
+/obj/effect/explosion/epic
+	icon = 'icons/effects/160x160.dmi'
+	icon_state = "epicexplosion"
+	pixel_x = -64
+	pixel_y = -64
+
+/obj/effect/explosion/epic/New()
+	..()
+	set_light(10, l_color = LIGHT_COLOR_FIRE)
+	QDEL_IN(src, 16.8)
 
 /obj/effect/explosion/New()
 	..()
-	spawn (10)
-		qdel(src)
-	return
+	set_light(8, l_color = LIGHT_COLOR_FIRE)
+	QDEL_IN(src, 10)
+
+/obj/effect/explosion/ex_act(severity, target)
+	return 0
 
 /datum/effect_system/explosion
+	var/epic = 0
 
 /datum/effect_system/explosion/set_up(loca)
 	if(isturf(loca))
@@ -48,11 +60,19 @@
 		location = get_turf(loca)
 
 /datum/effect_system/explosion/start()
-	new/obj/effect/explosion( location )
+	if(epic)
+		new/obj/effect/explosion/epic(location)
+	else
+		new/obj/effect/explosion( location )
 	var/datum/effect_system/expl_particles/P = new/datum/effect_system/expl_particles()
 	P.set_up(10, 0, location)
 	P.start()
-	spawn(5)
+
+/datum/effect_system/explosion/smoke
+
+/datum/effect_system/explosion/smoke/start()
+	..()
+	spawn(15)
 		var/datum/effect_system/smoke_spread/S = new
 		S.set_up(2, location)
 		S.start()

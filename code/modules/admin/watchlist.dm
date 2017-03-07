@@ -15,7 +15,7 @@
 		target_ckey = new_ckey
 	var/target_sql_ckey = sanitizeSQL(target_ckey)
 	if(check_watchlist(target_sql_ckey))
-		usr << "<span class='redtext'>[target_sql_ckey] is already on the watchlist.</span>"
+		to_chat(usr, "<span class='redtext'>[target_sql_ckey] is already on the watchlist.</span>")
 		return
 	var/reason = input(usr,"Please State Reason","Reason") as message
 	if(!reason)
@@ -35,6 +35,8 @@
 	message_admins("[key_name_admin(usr)] has added [target_ckey] to the watchlist - Reason: [reason]", 1)
 	if(browse)
 		watchlist_show(target_sql_ckey)
+
+	add_note(target_ckey, "Added to Watchlist - [reason]", null, usr.ckey, 0, null, 1)
 
 /client/proc/watchlist_remove(target_ckey, browse = 0)
 	var/target_sql_ckey = sanitizeSQL(target_ckey)

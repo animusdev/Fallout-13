@@ -7,7 +7,7 @@
 /mob/living/silicon/ai/compose_track_href(atom/movable/speaker, namepart)
 	var/mob/M = speaker.GetSource()
 	if(M)
-		return "<a href='?src=\ref[src];track=[html_encode(namepart)]'>"
+		return "<a href='?src=\ref[src];track=[html_encode_ru(namepart)]'>"
 	return ""
 
 /mob/living/silicon/ai/compose_job(atom/movable/speaker, message_langs, raw_message, radio_freq)
@@ -19,7 +19,7 @@
 
 /mob/living/silicon/ai/radio(message, message_mode, list/spans)
 	if(!radio_enabled || aiRestorePowerRoutine || stat) //AI cannot speak if radio is disabled (via intellicard) or depowered.
-		src << "<span class='danger'>Your radio transmitter is offline!</span>"
+		to_chat(src, "<span class='danger'>Your radio transmitter is offline!</span>")
 		return 0
 	..()
 
@@ -47,12 +47,13 @@
 	if (!message)
 		return
 
-	var/obj/machinery/hologram/holopad/T = current
+	var/obj/machinery/holopad/T = current
 	if(istype(T) && T.masters[src])//If there is a hologram and its master is the user.
 		send_speech(message, 7, T, "robot", get_spans())
-		src << "<i><span class='game say'>Holopad transmitted, <span class='name'>[real_name]</span> <span class='message robot'>\"[message]\"</span></span></i>"//The AI can "hear" its own message.
+		to_chat(src, "<i><span class='game say'>Holopad transmitted, <span class='name'>[real_name]</span> <span class='message robot'>\"[message]\"</span></span></i>")//The AI can "hear" its own message.
+
 	else
-		src << "No holopad connected."
+		to_chat(src, "No holopad connected.")
 	return
 
 
@@ -92,7 +93,7 @@ var/const/VOX_DELAY = 600
 
 /mob/living/silicon/ai/proc/announcement()
 	if(announcing_vox > world.time)
-		src << "<span class='notice'>Please wait [round((announcing_vox - world.time) / 10)] seconds.</span>"
+		to_chat(src, "<span class='notice'>Please wait [round((announcing_vox - world.time) / 10)] seconds.</span>")
 		return
 
 	var/message = input(src, "WARNING: Misuse of this verb can result in you being job banned. More help is available in 'Announcement Help'", "Announcement", src.last_announcement) as text
@@ -106,10 +107,10 @@ var/const/VOX_DELAY = 600
 		return
 
 	if(control_disabled)
-		src << "<span class='notice'>Wireless interface disabled, unable to interact with announcement PA.</span>"
+		to_chat(src, "<span class='notice'>Wireless interface disabled, unable to interact with announcement PA.</span>")
 		return
 
-	var/list/words = text2list(trim(message), " ")
+	var/list/words = splittext(trim(message), " ")
 	var/list/incorrect_words = list()
 
 	if(words.len > 30)
@@ -124,7 +125,7 @@ var/const/VOX_DELAY = 600
 			incorrect_words += word
 
 	if(incorrect_words.len)
-		src << "<span class='notice'>These words are not available on the announcement system: [english_list(incorrect_words)].</span>"
+		to_chat(src, "<span class='notice'>These words are not available on the announcement system: [english_list(incorrect_words)].</span>")
 		return
 
 	announcing_vox = world.time + VOX_DELAY
@@ -139,7 +140,7 @@ var/const/VOX_DELAY = 600
 			var/turf/T = get_turf(M)
 			var/turf/our_turf = get_turf(src)
 			if(T.z == our_turf.z)
-				M << "<b><font size = 3><font color = red>AI announcement:</font color> [message]</font size></b>"
+				to_chat(M, "<b><font size = 3><font color = red>AI announcement:</font color> [message]</font size></b>")
 */
 
 
@@ -157,12 +158,12 @@ var/const/VOX_DELAY = 600
 		if(!only_listener)
 			// Play voice for all mobs in the z level
 			for(var/mob/M in player_list)
-				if(M.client && !M.ear_deaf)
+				if(M.client && !M.ear_deaf && (M.client.prefs.toggles & SOUND_ANNOUNCEMENTS))
 					var/turf/T = get_turf(M)
 					if(T.z == z_level)
-						M << voice
+						to_chat(M, voice)
 		else
-			only_listener << voice
+			to_chat(only_listener, voice)
 		return 1
 	return 0
 

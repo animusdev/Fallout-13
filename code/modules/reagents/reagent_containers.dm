@@ -3,9 +3,9 @@
 	desc = "..."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = null
-	w_class = 1
+	w_class = WEIGHT_CLASS_TINY
 	var/amount_per_transfer_from_this = 5
-	var/list/possible_transfer_amounts = list(5,10,15,25,30)
+	var/list/possible_transfer_amounts = list(5,10,15,20,25,30)
 	var/volume = 30
 	var/list/list_reagents = null
 	var/spawned_disease = null
@@ -14,7 +14,7 @@
 
 /obj/item/weapon/reagent_containers/New(location, vol = 0)
 	..()
-	if (vol > 0)
+	if (isnum(vol) && vol > 0)
 		volume = vol
 	create_reagents(volume)
 	if(spawned_disease)
@@ -34,11 +34,12 @@
 					amount_per_transfer_from_this = possible_transfer_amounts[i+1]
 				else
 					amount_per_transfer_from_this = possible_transfer_amounts[1]
-				user << "<span class='notice'>[src]'s transfer amount is now [amount_per_transfer_from_this] units.</span>"
+				to_chat(user, "<span class='notice'>[src]'s transfer amount is now [amount_per_transfer_from_this] units.</span>")
 				return
 
 /obj/item/weapon/reagent_containers/attack(mob/M, mob/user, def_zone)
-	return
+	if(user.a_intent == INTENT_HARM)
+		return ..()
 
 /obj/item/weapon/reagent_containers/afterattack(obj/target, mob/user , flag)
 	return
@@ -61,8 +62,8 @@
 	else if(C.is_mouth_covered(mask_only = 1))
 		covered = "mask"
 	if(covered)
-		var/who = (isnull(user) || eater == user) ? "your" : "their"
-		user << "<span class='warning'>You have to remove [who] [covered] first!</span>"
+		var/who = (isnull(user) || eater == user) ? "your" : "[eater.p_their()]"
+		to_chat(user, "<span class='warning'>You have to remove [who] [covered] first!</span>")
 		return 0
 	return 1
 
@@ -70,21 +71,25 @@
 	if(reagents)
 		for(var/datum/reagent/R in reagents.reagent_list)
 			R.on_ex_act()
-	..()
+	if(!qdeleted(src))
+		..()
 
-/obj/item/weapon/reagent_containers/fire_act()
+/obj/item/weapon/reagent_containers/fire_act(exposed_temperature, exposed_volume)
 	reagents.chem_temp += 30
 	reagents.handle_reactions()
 	..()
 
 /obj/item/weapon/reagent_containers/throw_impact(atom/target)
 	. = ..()
+	SplashReagents(target, TRUE)
 
+/obj/item/weapon/reagent_containers/proc/SplashReagents(atom/target, thrown = FALSE)
 	if(!reagents || !reagents.total_volume || !spillable)
 		return
 
 	if(ismob(target) && target.reagents)
-		reagents.total_volume *= rand(5,10) * 0.1 //Not all of it makes contact with the target
+		if(thrown)
+			reagents.total_volume *= rand(5,10) * 0.1 //Not all of it makes contact with the target
 		var/mob/M = target
 		var/R
 		target.visible_message("<span class='danger'>[M] has been splashed with something!</span>", \
@@ -97,7 +102,7 @@
 			add_logs(thrownby, M, "splashed", R)
 		reagents.reaction(target, TOUCH)
 
-	else if((target.CanPass(src, get_turf(src))) && thrownby && thrownby.mind && thrownby.mind.assigned_role == "Bartender")
+	else if((target.CanPass(src, get_turf(src))) && thrown && thrownby && thrownby.mind && thrownby.mind.assigned_role == "Bartender")
 		visible_message("<span class='notice'>[src] lands onto the [target.name] without spilling a single drop.</span>")
 		return
 
@@ -108,3 +113,9 @@
 			return
 
 	reagents.clear_reagents()
+
+/obj/item/weapon/reagent_containers/microwave_act(obj/machinery/microwave/M)
+	if(is_open_container())
+		reagents.chem_temp = max(reagents.chem_temp, 1000)
+		reagents.handle_reactions()
+	..()

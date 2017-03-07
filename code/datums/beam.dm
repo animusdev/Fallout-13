@@ -13,20 +13,16 @@
 	var/target_oldloc = null
 	var/origin_oldloc = null
 	var/static_beam = 0
-	var/layer
 	var/beam_type = /obj/effect/ebeam //must be subtype
 
 
-/datum/beam/New(beam_origin,beam_target,beam_icon='icons/effects/beam.dmi',beam_icon_state="b_beam",time=50,maxdistance=10,btype = /obj/effect/ebeam, beam_layer)
+/datum/beam/New(beam_origin,beam_target,beam_icon='icons/effects/beam.dmi',beam_icon_state="b_beam",time=50,maxdistance=10,btype = /obj/effect/ebeam,beam_sleep_time=3)
 	endtime = world.time+time
 	origin = beam_origin
-	origin_oldloc = origin.loc
-	if(isarea(origin_oldloc))
-		origin_oldloc = origin
+	origin_oldloc =	get_turf(origin)
 	target = beam_target
-	target_oldloc = target.loc
-	if(isarea(target_oldloc))
-		target_oldloc = target
+	target_oldloc = get_turf(target)
+	sleep_time = beam_sleep_time
 	if(origin_oldloc == origin && target_oldloc == target)
 		static_beam = 1
 	max_distance = maxdistance
@@ -34,15 +30,16 @@
 	icon = beam_icon
 	icon_state = beam_icon_state
 	beam_type = btype
-	layer = beam_layer
 
 
 /datum/beam/proc/Start()
 	Draw()
 	while(!finished && origin && target && world.time < endtime && get_dist(origin,target)<max_distance && origin.z == target.z)
-		if(!static_beam && (origin.loc != origin_oldloc || target.loc != target_oldloc))
-			origin_oldloc = origin.loc //so we don't keep checking against their initial positions, leading to endless Reset()+Draw() calls
-			target_oldloc = target.loc
+		var/origin_turf = get_turf(origin)
+		var/target_turf = get_turf(target)
+		if(!static_beam && (origin_turf != origin_oldloc || target_turf != target_oldloc))
+			origin_oldloc = origin_turf //so we don't keep checking against their initial positions, leading to endless Reset()+Draw() calls
+			target_oldloc = target_turf
 			Reset()
 			Draw()
 		sleep(sleep_time)
@@ -81,8 +78,6 @@
 	for(N in 0 to length-1 step 32)//-1 as we want < not <=, but we want the speed of X in Y to Z and step X
 		var/obj/effect/ebeam/X = new beam_type(origin_oldloc)
 		X.owner = src
-		if(layer)
-			X.layer = layer
 		elements |= X
 
 		//Assign icon, for main segments it's base_icon, for the end, it's icon+icon_state
@@ -120,6 +115,7 @@
 
 		X.pixel_x = Pixel_x
 		X.pixel_y = Pixel_y
+		CHECK_TICK
 
 
 /obj/effect/ebeam
@@ -133,8 +129,8 @@
 	return ..()
 
 
-/atom/proc/Beam(atom/BeamTarget,icon_state="b_beam",icon='icons/effects/beam.dmi',time=50, maxdistance=10,beam_type=/obj/effect/ebeam, beam_layer=null)
-	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type, beam_layer)
+/atom/proc/Beam(atom/BeamTarget,icon_state="b_beam",icon='icons/effects/beam.dmi',time=50, maxdistance=10,beam_type=/obj/effect/ebeam,beam_sleep_time = 3)
+	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type,beam_sleep_time)
 	spawn(0)
 		newbeam.Start()
 	return newbeam

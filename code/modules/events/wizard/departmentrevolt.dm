@@ -1,7 +1,7 @@
 /datum/round_event_control/wizard/deprevolt //stationwide!
 	name = "Departmental Uprising"
 	weight = 0 //An order that requires order in a round of chaos was maybe not the best idea. Requiescat in pace departmental uprising August 2014 - March 2015
-	typepath = /datum/round_event/wizard/deprevolt/
+	typepath = /datum/round_event/wizard/deprevolt
 	max_occurrences = 1
 	earliest_start = 0
 
@@ -45,7 +45,7 @@
 						ticker.mode.traitors += M
 						M.special_role = "separatist"
 						H.attack_log += "\[[time_stamp()]\] <font color='red'>Was made into a separatist, long live [nation]!</font>"
-						H << "<B>You are a separatist! [nation] forever! Protect the soverignty of your newfound land with your comrades in arms!</B>"
+						to_chat(H, "<B>You are a separatist! [nation] forever! Protect the soverignty of your newfound land with your comrades in arms!</B>")
 	if(citizens.len)
 		var/message
 		for(var/job in jobs_to_revolt)

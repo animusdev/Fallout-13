@@ -4,7 +4,7 @@
 
 var/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","Epsilon","Zeta","Eta","Theta","Iota","Kappa","Lambda","Mu","Nu","Xi","Omicron","Pi","Rho","Sigma","Tau","Upsilon","Phi","Chi","Psi","Omega")
 var/list/slots = list("head", "wear_mask", "back", "wear_suit", "w_uniform", "shoes", "belt", "gloves", "glasses", "ears", "wear_id", "s_store")
-var/list/slot2slot = list("head" = slot_head, "wear_mask" = slot_wear_mask, "back" = slot_back, "wear_suit" = slot_wear_suit, "w_uniform" = slot_w_uniform, "shoes" = slot_shoes, "belt" = slot_belt, "gloves" = slot_gloves, "glasses" = slot_glasses, "ears" = slot_ears, "wear_id" = slot_wear_id, "s_store" = slot_s_store)
+var/list/slot2slot = list("head" = slot_head, "wear_mask" = slot_wear_mask, "neck" = slot_neck, "back" = slot_back, "wear_suit" = slot_wear_suit, "w_uniform" = slot_w_uniform, "shoes" = slot_shoes, "belt" = slot_belt, "gloves" = slot_gloves, "glasses" = slot_glasses, "ears" = slot_ears, "wear_id" = slot_wear_id, "s_store" = slot_s_store)
 var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mask" = /obj/item/clothing/mask/changeling, "back" = /obj/item/changeling, "wear_suit" = /obj/item/clothing/suit/changeling, "w_uniform" = /obj/item/clothing/under/changeling, "shoes" = /obj/item/clothing/shoes/changeling, "belt" = /obj/item/changeling, "gloves" = /obj/item/clothing/gloves/changeling, "glasses" = /obj/item/clothing/glasses/changeling, "ears" = /obj/item/changeling, "wear_id" = /obj/item/changeling, "s_store" = /obj/item/changeling)
 
 
@@ -23,6 +23,10 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	recommended_enemies = 4
 	reroll_friendly = 1
 
+	announce_span = "green"
+	announce_text = "Alien changelings have infiltrated the crew!\n\
+	<span class='green'>Changelings</span>: Accomplish the objectives assigned to you.\n\
+	<span class='notice'>Crew</span>: Root out and eliminate the changeling menace."
 
 	var/const/prob_int_murder_target = 50 // intercept names the assassination target half the time
 	var/const/prob_right_murder_target_l = 25 // lower bound on probability of naming right assassination target
@@ -45,10 +49,6 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 
 	var/changeling_team_objective_type = null //If this is not null, we hand our this objective to all lings
 
-/datum/game_mode/changeling/announce()
-	world << "<b>The current game mode is - Changeling!</b>"
-	world << "<b>There are alien changelings on the station. Do not let the changelings succeed!</b>"
-
 /datum/game_mode/changeling/pre_setup()
 
 	if(config.protect_roles_from_antagonist)
@@ -70,8 +70,8 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 			var/datum/mind/changeling = pick(antag_candidates)
 			antag_candidates -= changeling
 			changelings += changeling
+			changeling.special_role = "Changeling"
 			changeling.restricted_roles = restricted_jobs
-			modePlayer += changelings
 		return 1
 	else
 		return 0
@@ -94,11 +94,11 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	for(var/datum/mind/changeling in changelings)
 		log_game("[changeling.key] (ckey) has been selected as a changeling")
 		changeling.current.make_changeling()
-		changeling.special_role = "Changeling"
 		forge_changeling_objectives(changeling)
 		greet_changeling(changeling)
+		ticker.mode.update_changeling_icons_added(changeling)
+	modePlayer += changelings
 	..()
-	return
 
 /datum/game_mode/changeling/make_antag_chance(mob/living/carbon/human/character) //Assigns changeling to latejoiners
 	var/changelingcap = min( round(joined_player_list.len/(config.changeling_scaling_coeff*2))+2, round(joined_player_list.len/config.changeling_scaling_coeff) )
@@ -106,7 +106,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 		return
 	if(ticker.mode.changelings.len <= (changelingcap - 2) || prob(100 - (config.changeling_scaling_coeff*2)))
 		if(ROLE_CHANGELING in character.client.prefs.be_special)
-			if(!jobban_isbanned(character.client, ROLE_CHANGELING) && !jobban_isbanned(character.client, "Syndicate"))
+			if(!jobban_isbanned(character, ROLE_CHANGELING) && !jobban_isbanned(character, "Syndicate"))
 				if(age_check(character.client))
 					if(!(character.job in restricted_jobs))
 						character.mind.make_Changling()
@@ -197,19 +197,19 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 
 /datum/game_mode/proc/greet_changeling(datum/mind/changeling, you_are=1)
 	if (you_are)
-		changeling.current << "<span class='boldannounce'>You are [changeling.changeling.changelingID], a changeling! You have absorbed and taken the form of a human.</span>"
-	changeling.current << "<span class='boldannounce'>Use say \":g message\" to communicate with your fellow changelings.</span>"
-	changeling.current << "<b>You must complete the following tasks:</b>"
+		to_chat(changeling.current, "<span class='boldannounce'>You are [changeling.changeling.changelingID], a changeling! You have absorbed and taken the form of a human.</span>")
+	to_chat(changeling.current, "<span class='boldannounce'>Use say \":g message\" to communicate with your fellow changelings.</span>")
+	to_chat(changeling.current, "<b>You must complete the following tasks:</b>")
 
 	if (changeling.current.mind)
 		var/mob/living/carbon/human/H = changeling.current
 		if(H.mind.assigned_role == "Clown")
-			H << "You have evolved beyond your clownish nature, allowing you to wield weapons without harming yourself."
+			to_chat(H, "You have evolved beyond your clownish nature, allowing you to wield weapons without harming yourself.")
 			H.dna.remove_mutation(CLOWNMUT)
 
 	var/obj_count = 1
 	for(var/datum/objective/objective in changeling.objectives)
-		changeling.current << "<b>Objective #[obj_count]</b>: [objective.explanation_text]"
+		to_chat(changeling.current, "<b>Objective #[obj_count]</b>: [objective.explanation_text]")
 		obj_count++
 	return
 
@@ -269,7 +269,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 				feedback_add_details("changeling_success","FAIL")
 			text += "<br>"
 
-		world << text
+		to_chat(world, text)
 
 
 	return 1
@@ -289,6 +289,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	var/changelingID = "Changeling"
 	var/geneticdamage = 0
 	var/isabsorbing = 0
+	var/islinking = 0
 	var/geneticpoints = 10
 	var/purchasedpowers = list()
 	var/mimicing = ""
@@ -296,12 +297,16 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	var/changeling_speak = 0
 	var/datum/dna/chosen_dna
 	var/obj/effect/proc_holder/changeling/sting/chosen_sting
+	var/datum/cellular_emporium/cellular_emporium
+	var/datum/action/innate/cellular_emporium/emporium_action
 
 /datum/changeling/New(var/gender=FEMALE)
 	..()
 	var/honorific
-	if(gender == FEMALE)	honorific = "Ms."
-	else					honorific = "Mr."
+	if(gender == FEMALE)
+		honorific = "Ms."
+	else
+		honorific = "Mr."
 	if(possible_changeling_IDs.len)
 		changelingID = pick(possible_changeling_IDs)
 		possible_changeling_IDs -= changelingID
@@ -309,9 +314,19 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	else
 		changelingID = "[honorific] [rand(1,999)]"
 
+	cellular_emporium = new(src)
+	emporium_action = new(cellular_emporium)
+
+/datum/changeling/Destroy()
+	qdel(cellular_emporium)
+	cellular_emporium = null
+	qdel(emporium_action)
+	emporium_action = null
+	. = ..()
 
 /datum/changeling/proc/regenerate(var/mob/living/carbon/the_ling)
 	if(istype(the_ling))
+		emporium_action.Grant(the_ling)
 		if(the_ling.stat == DEAD)
 			chem_charges = min(max(0, chem_charges + chem_recharge_rate - chem_recharge_slowdown), (chem_storage*0.5))
 			geneticdamage = max(LING_DEAD_GENETICDAMAGE_HEAL_CAP,geneticdamage-1)
@@ -336,25 +351,25 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 		var/datum/changelingprofile/prof = stored_profiles[1]
 		if(prof.dna == user.dna && stored_profiles.len >= dna_max)//If our current DNA is the stalest, we gotta ditch it.
 			if(verbose)
-				user << "<span class='warning'>We have reached our capacity to store genetic information! We must transform before absorbing more.</span>"
+				to_chat(user, "<span class='warning'>We have reached our capacity to store genetic information! We must transform before absorbing more.</span>")
 			return
 	if(!target)
 		return
 	if((target.disabilities & NOCLONE) || (target.disabilities & HUSK))
 		if(verbose)
-			user << "<span class='warning'>DNA of [target] is ruined beyond usability!</span>"
+			to_chat(user, "<span class='warning'>DNA of [target] is ruined beyond usability!</span>")
 		return
 	if(!ishuman(target))//Absorbing monkeys is entirely possible, but it can cause issues with transforming. That's what lesser form is for anyway!
 		if(verbose)
-			user << "<span class='warning'>We could gain no benefit from absorbing a lesser creature.</span>"
+			to_chat(user, "<span class='warning'>We could gain no benefit from absorbing a lesser creature.</span>")
 		return
 	if(has_dna(target.dna))
 		if(verbose)
-			user << "<span class='warning'>We already have this DNA in storage!</span>"
+			to_chat(user, "<span class='warning'>We already have this DNA in storage!</span>")
 		return
 	if(!target.has_dna())
 		if(verbose)
-			user << "<span class='warning'>[target] is not compatible with our biology.</span>"
+			to_chat(user, "<span class='warning'>[target] is not compatible with our biology.</span>")
 		return
 	return 1
 
@@ -482,7 +497,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 
 /datum/changelingprofile/Destroy()
 	qdel(dna)
-	return ..()
+	. = ..()
 
 /datum/changelingprofile/proc/copy_profile(datum/changelingprofile/newprofile)
 	newprofile.name = name
@@ -498,3 +513,13 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	newprofile.underwear = underwear
 	newprofile.undershirt = undershirt
 	newprofile.socks = socks
+
+/datum/game_mode/proc/update_changeling_icons_added(datum/mind/changling_mind)
+	var/datum/atom_hud/antag/hud = huds[ANTAG_HUD_CHANGELING]
+	hud.join_hud(changling_mind.current)
+	set_antag_hud(changling_mind.current, "changling")
+
+/datum/game_mode/proc/update_changeling_icons_removed(datum/mind/changling_mind)
+	var/datum/atom_hud/antag/hud = huds[ANTAG_HUD_CHANGELING]
+	hud.leave_hud(changling_mind.current)
+	set_antag_hud(changling_mind.current, null)

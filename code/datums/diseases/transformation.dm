@@ -22,42 +22,36 @@
 	switch(stage)
 		if(1)
 			if (prob(stage_prob) && stage1)
-				affected_mob << pick(stage1)
+				to_chat(affected_mob, pick(stage1))
 		if(2)
 			if (prob(stage_prob) && stage2)
-				affected_mob << pick(stage2)
+				to_chat(affected_mob, pick(stage2))
 		if(3)
 			if (prob(stage_prob*2) && stage3)
-				affected_mob << pick(stage3)
+				to_chat(affected_mob, pick(stage3))
 		if(4)
 			if (prob(stage_prob*2) && stage4)
-				affected_mob << pick(stage4)
+				to_chat(affected_mob, pick(stage4))
 		if(5)
 			do_disease_transformation(affected_mob)
 
 /datum/disease/transformation/proc/do_disease_transformation(mob/living/affected_mob)
 	if(istype(affected_mob, /mob/living/carbon) && affected_mob.stat != DEAD)
 		if(stage5)
-			affected_mob << pick(stage5)
+			to_chat(affected_mob, pick(stage5))
 		if(jobban_isbanned(affected_mob, new_form))
 			affected_mob.death(1)
 			return
-		if(affected_mob.notransform)	return
+		if(affected_mob.notransform)
+			return
 		affected_mob.notransform = 1
-		affected_mob.canmove = 0
-		affected_mob.icon = null
-		affected_mob.overlays.Cut()
-		affected_mob.invisibility = 101
-		for(var/obj/item/W in affected_mob)
-			if(istype(W, /obj/item/weapon/implant))
-				qdel(W)
-				continue
-			W.layer = initial(W.layer)
-			W.loc = affected_mob.loc
-			W.dropped(affected_mob)
+		for(var/obj/item/W in affected_mob.get_equipped_items())
+			affected_mob.unEquip(W)
+		for(var/obj/item/I in affected_mob.held_items)
+			affected_mob.unEquip(I)
 		var/mob/living/new_mob = new new_form(affected_mob.loc)
 		if(istype(new_mob))
-			new_mob.a_intent = "harm"
+			new_mob.a_intent = INTENT_HARM
 			if(affected_mob.mind)
 				affected_mob.mind.transfer_to(new_mob)
 			else
@@ -101,10 +95,10 @@
 	switch(stage)
 		if(2)
 			if(prob(2))
-				affected_mob << "<span class='notice'>Your [pick("back", "arm", "leg", "elbow", "head")] itches.</span>"
+				to_chat(affected_mob, "<span class='notice'>Your [pick("back", "arm", "leg", "elbow", "head")] itches.</span>")
 		if(3)
 			if(prob(4))
-				affected_mob << "<span class='danger'>You feel a stabbing pain in your head.</span>"
+				to_chat(affected_mob, "<span class='danger'>You feel a stabbing pain in your head.</span>")
 				affected_mob.confused += 10
 		if(4)
 			if(prob(3))
@@ -140,7 +134,7 @@
 			if (prob(8))
 				affected_mob.say(pick("Beep, boop", "beep, beep!", "Boop...bop"))
 			if (prob(4))
-				affected_mob << "<span class='danger'>You feel a stabbing pain in your head.</span>"
+				to_chat(affected_mob, "<span class='danger'>You feel a stabbing pain in your head.</span>")
 				affected_mob.Paralyse(2)
 		if(4)
 			if (prob(20))
@@ -169,7 +163,7 @@
 	switch(stage)
 		if(3)
 			if (prob(4))
-				affected_mob << "<span class='danger'>You feel a stabbing pain in your head.</span>"
+				to_chat(affected_mob, "<span class='danger'>You feel a stabbing pain in your head.</span>")
 				affected_mob.Paralyse(2)
 		if(4)
 			if (prob(20))
@@ -186,8 +180,8 @@
 	severity = BIOHAZARD
 	visibility_flags = 0
 	stage1	= list("You don't feel very well.")
-	stage2	= list("You are turning a little green.")
-	stage3	= list("<span class='danger'>Your limbs are getting oozy.</span>", "<span class='danger'>Your skin begins to peel away.</span>")
+	stage2	= list("Your skin feels a little slimy.")
+	stage3	= list("<span class='danger'>Your appendages are melting away.</span>", "<span class='danger'>Your limbs begin to lose their shape.</span>")
 	stage4	= list("<span class='danger'>You are turning into a slime.</span>")
 	stage5	= list("<span class='danger'>You have become a slime.</span>")
 	new_form = /mob/living/simple_animal/slime
@@ -227,3 +221,19 @@
 		if(4)
 			if (prob(20))
 				affected_mob.say(pick("Bark!", "AUUUUUU"))
+
+/datum/disease/transformation/morph
+	name = "Gluttony's Blessing"
+	cure_text = "nothing"
+	cures = list("adminordrazine")
+	agent = "Gluttony's Blessing"
+	desc = "A 'gift' from somewhere terrible."
+	stage_prob = 20
+	severity = BIOHAZARD
+	visibility_flags = 0
+	stage1	= list("Your stomach rumbles.")
+	stage2	= list("Your skin feels saggy.")
+	stage3	= list("<span class='danger'>Your appendages are melting away.</span>", "<span class='danger'>Your limbs begin to lose their shape.</span>")
+	stage4	= list("<span class='danger'>You're ravenous.</span>")
+	stage5	= list("<span class='danger'>You have become a morph.</span>")
+	new_form = /mob/living/simple_animal/hostile/morph

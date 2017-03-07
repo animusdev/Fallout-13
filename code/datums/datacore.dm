@@ -1,4 +1,4 @@
-//Cleaned up version of 31.12.15 Happy New Year!
+
 /datum/datacore
 	var/medical[] = list()
 	var/medicalPrintCount = 0
@@ -65,13 +65,9 @@
 			crimes |= crime
 			return
 
-/datum/datacore/proc/manifest(nosleep = 0)
-	spawn()
-		if(!nosleep)
-			sleep(40)
-		for(var/mob/living/carbon/human/H in player_list)
-			manifest_inject(H)
-		return
+/datum/datacore/proc/manifest()
+	for(var/mob/living/carbon/human/H in player_list)
+		manifest_inject(H)
 
 /datum/datacore/proc/manifest_modify(name, assignment)
 	var/datum/data/record/foundrecord = find_record("name", name, data_core.general)
@@ -262,13 +258,11 @@ var/record_id_num = 1001
 		L.fields["species"]		= H.dna.species.type
 		L.fields["features"]	= H.dna.features
 		L.fields["image"]		= image
+		L.fields["reference"]	= H
 		locked += L
 	return
 
 /datum/datacore/proc/get_id_photo(mob/living/carbon/human/H)
 	var/datum/job/J = SSjob.GetJob(H.mind.assigned_role)
 	var/datum/preferences/P = H.client.prefs
-	if (J==null) //scavenger
-		return get_flat_human_icon(null,null,P)
-	else
-		return get_flat_human_icon(null,J.outfit,P)
+	return get_flat_human_icon(null,J.outfit,P)

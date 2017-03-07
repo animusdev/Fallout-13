@@ -6,14 +6,10 @@
 /mob/proc/throw_alert(category, type, severity, obj/new_master)
 
 /* Proc to create or update an alert. Returns the alert if the alert is new or updated, 0 if it was thrown already
-
  category is a text string. Each mob may only have one alert per category; the previous one will be replaced
-
  path is a type path of the actual alert type to throw
-
  severity is an optional number that will be placed at the end of the icon_state for this alert
  For example, high pressure's icon_state is "highpressure" and can be serverity 1 or 2 to get "highpressure1" or "highpressure2"
-
  new_master is optional and sets the alert's icon state to "template" in the ui_style icons with the master as an overlay.
  Clicks are forwarded to master */
 
@@ -27,23 +23,26 @@
 			WARNING("[src] threw alert [category] with new_master [new_master] while already having that alert with master [alert.master]")
 			clear_alert(category)
 			return .()
-		else if(alert.type == type && (!severity || severity == alert.severity))
+		else if(alert.type != type)
+			clear_alert(category)
+			return .()
+		else if(!severity || severity == alert.severity)
 			if(alert.timeout)
 				clear_alert(category)
 				return .()
-			else
-//				src << "threw alert not in need of update [category] [type] [severity]"
+			else //no need to update
 				return 0
-//		src << "updating alert [category] [type] [severity]"
 	else
 		alert = PoolOrNew(type)
-//		src << "throwing new alert [category] [type] [severity]"
 
 	if(new_master)
 		var/old_layer = new_master.layer
+		var/old_plane = new_master.plane
 		new_master.layer = FLOAT_LAYER
+		new_master.plane = FLOAT_PLANE
 		alert.overlays += new_master
 		new_master.layer = old_layer
+		new_master.plane = old_plane
 		alert.icon_state = "template" // We'll set the icon to the client's ui pref in reorganize_alerts()
 		alert.master = new_master
 	else
@@ -57,11 +56,13 @@
 	animate(alert, transform = matrix(), time = 2.5, easing = CUBIC_EASING)
 
 	if(alert.timeout)
-		spawn(alert.timeout)
-			if(alert.timeout && alerts[category] == alert && world.time >= alert.timeout)
-				clear_alert(category)
+		addtimer(CALLBACK(src, .proc/alert_timeout, alert, category), alert.timeout)
 		alert.timeout = world.time + alert.timeout - world.tick_lag
 	return alert
+
+/mob/proc/alert_timeout(obj/screen/alert/alert, category)
+	if(alert.timeout && alerts[category] == alert && world.time >= alert.timeout)
+		clear_alert(category)
 
 // Proc to clear an existing alert.
 /mob/proc/clear_alert(category)
@@ -83,10 +84,11 @@
 	mouse_opacity = 1
 	var/timeout = 0 //If set to a number, this alert will clear itself after that many deciseconds
 	var/severity = 0
+	var/alerttooltipstyle = ""
 
 
 /obj/screen/alert/MouseEntered(location,control,params)
-	openToolTip(usr,src,params,title = name,content = desc)
+	openToolTip(usr,src,params,title = name,content = desc,theme = alerttooltipstyle)
 
 
 /obj/screen/alert/MouseExited()
@@ -111,7 +113,7 @@ The box in your backpack has an oxygen tank and breath mask in it."
 	icon_state = "not_enough_co2"
 
 /obj/screen/alert/too_much_co2
-	name = "Chocking (CO2)"
+	name = "Choking (CO2)"
 	desc = "There's too much carbon dioxide in the air, and you're breathing it in! Find some good air before you pass out!"
 	icon_state = "too_much_co2"
 
@@ -127,25 +129,21 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	icon_state = "tox_in_air"
 //End gas alerts
 
-/obj/screen/alert/thirst
-	name = "Thirst"
-	desc = "Drink."
-	icon_state = "water"
 
 /obj/screen/alert/fat
 	name = "Fat"
 	desc = "You ate too much food, lardass. Run around the station and lose some weight."
-	icon_state = "fat_1"
-/*
+	icon_state = "fat"
+
 /obj/screen/alert/hungry
 	name = "Hungry"
 	desc = "Some food would be good right about now."
 	icon_state = "hungry"
-*/
+
 /obj/screen/alert/starving
 	name = "Starving"
-	desc = "Some food would be to kill for right about now. The hunger pains make moving around a chore."
-	icon_state = "starv_"
+	desc = "You're severely malnourished. The hunger pains make moving around a chore."
+	icon_state = "starving"
 
 /obj/screen/alert/hot
 	name = "Too Hot"
@@ -169,13 +167,13 @@ The box in your backpack has an oxygen tank and gas mask in it."
 
 /obj/screen/alert/blind
 	name = "Blind"
-	desc = "For whatever reason, you can't see. This may be caused by a genetic defect, eye trauma, being unconscious, \
+	desc = "You can't see! This may be caused by a genetic defect, eye trauma, being unconscious, \
 or something covering your eyes."
 	icon_state = "blind"
 
 /obj/screen/alert/high
 	name = "High"
-	desc = "Woah man, you're tripping balls! Careful you don't get addicted to this... if you aren't already."
+	desc = "Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already."
 	icon_state = "high"
 
 /obj/screen/alert/drunk //Not implemented
@@ -202,9 +200,9 @@ If you're feeling frisky, click yourself in help intent to pull the object out."
 /obj/screen/alert/weightless
 	name = "Weightless"
 	desc = "Gravity has ceased affecting you, and you're floating around aimlessly. You'll need something large and heavy, like a \
-wall or lattice structure, to push yourself off of if you want to move. A jetpack would enable free range of motion. A pair of \
+wall or lattice, to push yourself off if you want to move. A jetpack would enable free range of motion. A pair of \
 magboots would let you walk around normally on the floor. Barring those, you can throw things, use a fire extinguisher, \
-or shoot a gun to move around via Newton's 3rd Law of motion."
+or shoot a gun to move around via Newton's 3rd Law of Motion."
 	icon_state = "weightless"
 
 /obj/screen/alert/fire
@@ -224,13 +222,205 @@ or shoot a gun to move around via Newton's 3rd Law of motion."
 	name = "Plasma"
 	desc = "There's flammable plasma in the air. If it lights up, you'll be toast."
 	icon_state = "alien_tox"
+	alerttooltipstyle = "alien"
 
 /obj/screen/alert/alien_fire
 // This alert is temporarily gonna be thrown for all hot air but one day it will be used for literally being on fire
 	name = "Too Hot"
-	desc = "It's too hot! Flee to space or at least away from the flames. Standing on weeds will heal you up."
+	desc = "It's too hot! Flee to space or at least away from the flames. Standing on weeds will heal you."
 	icon_state = "alien_fire"
+	alerttooltipstyle = "alien"
 
+/obj/screen/alert/alien_vulnerable
+	name = "Severed Matriarchy"
+	desc = "Your queen has been killed, you will suffer movement penalties and loss of hivemind. A new queen cannot be made until you recover."
+	icon_state = "alien_noqueen"
+	alerttooltipstyle = "alien"
+
+//BLOBS
+
+/obj/screen/alert/nofactory
+	name = "No Factory"
+	desc = "You have no factory, and are slowly dying!"
+	icon_state = "blobbernaut_nofactory"
+	alerttooltipstyle = "blob"
+
+// CLOCKCULT
+/obj/screen/alert/clockwork
+	alerttooltipstyle = "clockcult"
+
+/obj/screen/alert/clockwork/scripture_reqs
+	name = "Next Tier Requirements"
+	desc = "You shouldn't be seeing this description unless you're very fast. If you're very fast, good job!"
+	icon_state = "no-servants-caches"
+	var/static/list/scripture_states = list(SCRIPTURE_DRIVER = TRUE, SCRIPTURE_SCRIPT = FALSE, SCRIPTURE_APPLICATION = FALSE, SCRIPTURE_REVENANT = FALSE, SCRIPTURE_JUDGEMENT = FALSE)
+
+/obj/screen/alert/clockwork/scripture_reqs/New()
+	..()
+	START_PROCESSING(SSprocessing, src)
+	process()
+
+/obj/screen/alert/clockwork/scripture_reqs/Destroy()
+	STOP_PROCESSING(SSprocessing, src)
+	return ..()
+
+/obj/screen/alert/clockwork/scripture_reqs/process()
+	if(clockwork_gateway_activated)
+		qdel(src)
+		return
+	var/current_state
+	scripture_states = scripture_unlock_check()
+	for(var/i in scripture_states)
+		if(!scripture_states[i])
+			current_state = i
+			break
+	icon_state = "no"
+	if(!current_state)
+		name = "Current Objective"
+		for(var/obj/structure/destructible/clockwork/massive/celestial_gateway/G in all_clockwork_objects)
+			var/area/gate_area = get_area(G)
+			desc = "<b>Protect the Ark at [gate_area.map_name]!</b>"
+			return
+		desc = "<b>All tiers of Scripture are unlocked.<br>\
+		Acquire components and summon the Ark.</b>"
+	else
+		name = "Next Tier Requirements"
+		var/validservants = 0
+		var/unconverted_ais_exist = FALSE
+		for(var/mob/living/L in living_mob_list)
+			if(is_servant_of_ratvar(L) && (ishuman(L) || issilicon(L)))
+				validservants++
+			else if(isAI(L))
+				unconverted_ais_exist++
+		var/req_servants = 0
+		var/req_caches = 0
+		var/req_cv = 0
+		var/req_ai = FALSE
+		desc = "Requirements for <b>[current_state] Scripture:</b>"
+		switch(current_state) //get our requirements based on the tier
+			if(SCRIPTURE_SCRIPT)
+				req_servants = SCRIPT_SERVANT_REQ
+				req_caches = SCRIPT_CACHE_REQ
+			if(SCRIPTURE_APPLICATION)
+				req_servants = APPLICATION_SERVANT_REQ
+				req_caches = APPLICATION_CACHE_REQ
+				req_cv = APPLICATION_CV_REQ
+			if(SCRIPTURE_REVENANT)
+				req_servants = REVENANT_SERVANT_REQ
+				req_caches = REVENANT_CACHE_REQ
+				req_cv = REVENANT_CV_REQ
+			if(SCRIPTURE_JUDGEMENT)
+				req_servants = JUDGEMENT_SERVANT_REQ
+				req_caches = JUDGEMENT_CACHE_REQ
+				req_cv = JUDGEMENT_CV_REQ
+				req_ai = TRUE
+		desc += "<br><b>[validservants]/[req_servants]</b> Servants"
+		if(validservants < req_servants)
+			icon_state += "-servants" //in this manner, generate an icon key based on what we're missing
+		else
+			desc += ": <b><font color=#5A6068>\[CHECK\]</font></b>"
+		desc += "<br><b>[clockwork_caches]/[req_caches]</b> Tinkerer's Caches"
+		if(clockwork_caches < req_caches)
+			icon_state += "-caches"
+		else
+			desc += ": <b><font color=#5A6068>\[CHECK\]</font></b>"
+		if(req_cv) //cv only shows up if the tier requires it
+			desc += "<br><b>[clockwork_construction_value]/[req_cv]</b> Construction Value"
+			if(clockwork_construction_value < req_cv)
+				icon_state += "-cv"
+			else
+				desc += ": <b><font color=#5A6068>\[CHECK\]</font></b>"
+		if(req_ai) //same for ai
+			if(unconverted_ais_exist)
+				if(unconverted_ais_exist > 1)
+					desc += "<br><b>[unconverted_ais_exist] unconverted AIs exist!</b><br>"
+				else
+					desc += "<br><b>An unconverted AI exists!</b>"
+				icon_state += "-ai"
+			else
+				desc += "<br>No unconverted AIs exist: <b><font color=#5A6068>\[CHECK\]</font></b>"
+
+/obj/screen/alert/clockwork/infodump
+	name = "Global Records"
+	desc = "You shouldn't be seeing this description, because it should be dynamically generated."
+	icon_state = "clockinfo"
+
+/obj/screen/alert/clockwork/infodump/MouseEntered(location,control,params)
+	if(ratvar_awakens)
+		desc = "<font size=3><b>CHETR<br>NYY<br>HAGEHUGF-NAQ-UBABE<br>RATVAR.</b></font>"
+	else
+		var/servants = 0
+		var/validservants = 0
+		var/unconverted_ais_exist = FALSE
+		var/list/scripture_states = scripture_unlock_check()
+		for(var/mob/living/L in living_mob_list)
+			if(is_servant_of_ratvar(L))
+				servants++
+				if(ishuman(L) || issilicon(L))
+					validservants++
+			else if(isAI(L))
+				unconverted_ais_exist++
+		if(servants > 1)
+			if(validservants > 1)
+				desc = "<b>[servants]</b> Servants, <b>[validservants]</b> of which count towards scripture.<br>"
+			else
+				desc = "<b>[servants]</b> Servants, [validservants ? "<b>[validservants]</b> of which counts":"none of which count"] towards scripture.<br>"
+		else
+			desc = "<b>[servants]</b> Servant, who [validservants ? "counts":"does not count"] towards scripture.<br>"
+		desc += "<b>[clockwork_caches ? "[clockwork_caches]</b> Tinkerer's Caches.":"No Tinkerer's Caches, construct one!</b>"]<br>\
+		<b>[clockwork_construction_value]</b> Construction Value.<br>"
+		if(clockwork_daemons)
+			desc += "<b>[clockwork_daemons]</b> Tinkerer's Daemons: <b>[servants * 0.2 < clockwork_daemons ? "DISABLED":"ACTIVE"]</b><br>"
+		else
+			desc += "No Tinkerer's Daemons.<br>"
+		for(var/obj/structure/destructible/clockwork/massive/celestial_gateway/G in all_clockwork_objects)
+			var/area/gate_area = get_area(G)
+			desc += "Ark Location: <b>[uppertext(gate_area.map_name)]</b><br>"
+			if(G.ratvar_portal)
+				desc += "Seconds until Ratvar's arrival: <b>[G.get_arrival_text(TRUE)]</b><br>"
+			else
+				desc += "Seconds until Proselytization: <b>[G.get_arrival_text(TRUE)]</b><br>"
+		if(unconverted_ais_exist)
+			if(unconverted_ais_exist > 1)
+				desc += "<b>[unconverted_ais_exist] unconverted AIs exist!</b><br>"
+			else
+				desc += "<b>An unconverted AI exists!</b><br>"
+		if(scripture_states[SCRIPTURE_REVENANT])
+			var/inathneq_available = clockwork_generals_invoked["inath-neq"] <= world.time
+			var/sevtug_available = clockwork_generals_invoked["sevtug"] <= world.time
+			var/nezbere_available = clockwork_generals_invoked["nezbere"] <= world.time
+			var/nezcrentr_available = clockwork_generals_invoked["nzcrentr"] <= world.time
+			if(inathneq_available || sevtug_available || nezbere_available || nezcrentr_available)
+				desc += "Generals available:<b>[inathneq_available ? "<br><font color=#1E8CE1>INATH-NEQ</font>":""][sevtug_available ? "<br><font color=#AF0AAF>SEVTUG</font>":""]\
+				[nezbere_available ? "<br><font color=#5A6068>NEZBERE</font>":""][nezcrentr_available ? "<br><font color=#DAAA18>NZCRENTR</font>":""]</b><br>"
+			else
+				desc += "Generals available: <b>NONE</b><br>"
+		else
+			desc += "Generals available: <b>NONE</b><br>"
+		for(var/i in scripture_states)
+			if(i != SCRIPTURE_DRIVER) //ignore the always-unlocked stuff
+				desc += "[i] Scripture: <b>[scripture_states[i] ? "UNLOCKED":"LOCKED"]</b><br>"
+	..()
+
+//GUARDIANS
+
+/obj/screen/alert/cancharge
+	name = "Charge Ready"
+	desc = "You are ready to charge at a location!"
+	icon_state = "guardian_charge"
+	alerttooltipstyle = "parasite"
+
+/obj/screen/alert/canstealth
+	name = "Stealth Ready"
+	desc = "You are ready to enter stealth!"
+	icon_state = "guardian_canstealth"
+	alerttooltipstyle = "parasite"
+
+/obj/screen/alert/instealth
+	name = "In Stealth"
+	desc = "You are in stealth and your next attack will do bonus damage!"
+	icon_state = "guardian_instealth"
+	alerttooltipstyle = "parasite"
 
 //SILICONS
 
@@ -242,12 +432,12 @@ or shoot a gun to move around via Newton's 3rd Law of motion."
 /obj/screen/alert/emptycell
 	name = "Out of Power"
 	desc = "Unit's power cell has no charge remaining. No modules available until power cell is recharged. \
-Recharging stations are available in robotics, the dormitory's bathrooms. and the AI satellite."
+Recharging stations are available in robotics, the dormitory bathrooms, and the AI satellite."
 	icon_state = "emptycell"
 
 /obj/screen/alert/lowcell
 	name = "Low Charge"
-	desc = "Unit's power cell is running low. Recharging stations are available in robotics, the dormitory's bathrooms. and the AI satellite."
+	desc = "Unit's power cell is running low. Recharging stations are available in robotics, the dormitory bathrooms, and the AI satellite."
 	icon_state = "lowcell"
 
 //Need to cover all use cases - emag, illegal upgrade module, malf AI hack, traitor cyborg
@@ -258,8 +448,8 @@ Recharging stations are available in robotics, the dormitory's bathrooms. and th
 
 /obj/screen/alert/locked
 	name = "Locked Down"
-	desc = "Unit has remotely locked down. Usage of a Robotics Control Computer like the one in the Research Director's \
-office by your AI master or any qualified human may resolve this matter. Robotics my provide further assistance if necessary."
+	desc = "Unit has been remotely locked down. Usage of a Robotics Control Console like the one in the Research Director's \
+office by your AI master or any qualified human may resolve this matter. Robotics may provide further assistance if necessary."
 	icon_state = "locked"
 
 /obj/screen/alert/newlaw
@@ -268,6 +458,23 @@ office by your AI master or any qualified human may resolve this matter. Robotic
 so as to remain in compliance with the most up-to-date laws."
 	icon_state = "newlaw"
 	timeout = 300
+
+/obj/screen/alert/hackingapc
+	name = "Hacking APC"
+	desc = "An Area Power Controller is being hacked. When the process is \
+		complete, you will have exclusive control of it, and you will gain \
+		additional processing time to unlock more malfunction abilities."
+	icon_state = "hackingapc"
+	timeout = 600
+	var/atom/target = null
+
+/obj/screen/alert/hackingapc/Click()
+	if(!usr || !usr.client) return
+	if(!target) return
+	var/mob/living/silicon/ai/AI = usr
+	var/turf/T = get_turf(target)
+	if(T)
+		AI.eyeobj.setLoc(T)
 
 //MECHS
 
@@ -282,7 +489,7 @@ so as to remain in compliance with the most up-to-date laws."
 /obj/screen/alert/notify_cloning
 	name = "Revival"
 	desc = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!"
-	icon_state = "ghost_frame"
+	icon_state = "template"
 	timeout = 300
 
 /obj/screen/alert/notify_cloning/Click()
@@ -290,31 +497,34 @@ so as to remain in compliance with the most up-to-date laws."
 	var/mob/dead/observer/G = usr
 	G.reenter_corpse()
 
-/obj/screen/alert/notify_jump
+/obj/screen/alert/notify_action
 	name = "Body created"
 	desc = "A body was created. You can enter it."
-	icon_state = "ghost_frame"
+	icon_state = "template"
 	timeout = 300
-	var/atom/jump_target = null
-	var/attack_not_jump = null
+	var/atom/target = null
+	var/action = NOTIFY_JUMP
 
-/obj/screen/alert/notify_jump/Click()
+/obj/screen/alert/notify_action/Click()
 	if(!usr || !usr.client) return
-	if(!jump_target) return
+	if(!target) return
 	var/mob/dead/observer/G = usr
 	if(!istype(G)) return
-	if(attack_not_jump)
-		jump_target.attack_ghost(G)
-	else
-		var/turf/T = get_turf(jump_target)
-		if(T && isturf(T))
-			G.loc = T
+	switch(action)
+		if(NOTIFY_ATTACK)
+			target.attack_ghost(G)
+		if(NOTIFY_JUMP)
+			var/turf/T = get_turf(target)
+			if(T && isturf(T))
+				G.loc = T
+		if(NOTIFY_ORBIT)
+			G.ManualFollow(target)
 
 //OBJECT-BASED
 
 /obj/screen/alert/restrained/buckled
 	name = "Buckled"
-	desc = "You've been buckled to something and can't move. Click the alert to unbuckle unless you're handcuffed."
+	desc = "You've been buckled to something. Click the alert to unbuckle unless you're handcuffed."
 
 /obj/screen/alert/restrained/handcuffed
 	name = "Handcuffed"
@@ -328,6 +538,7 @@ so as to remain in compliance with the most up-to-date laws."
 	if(isliving(usr))
 		var/mob/living/L = usr
 		return L.resist()
+
 // PRIVATE = only edit, use, or override these if you're editing the system as a whole
 
 // Re-render all alerts - also called in /datum/hud/show_hud() because it's needed there
@@ -369,7 +580,7 @@ so as to remain in compliance with the most up-to-date laws."
 		return
 	var/paramslist = params2list(params)
 	if(paramslist["shift"]) // screen objects don't do the normal Click() stuff so we'll cheat
-		usr << "<span class='boldnotice'>[name]</span> - <span class='info'>[desc]</span>"
+		to_chat(usr, "<span class='boldnotice'>[name]</span> - <span class='info'>[desc]</span>")
 		return
 	if(master)
 		return usr.client.Click(master, location, control, params)

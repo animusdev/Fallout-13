@@ -12,13 +12,12 @@
 	name = "first-aid kit"
 	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon_state = "firstaid_1"
-	item_state = "firstaid"
 	throw_speed = 3
 	throw_range = 7
 	var/empty = 0
 
 /obj/item/weapon/storage/firstaid/regular
-	icon_state = "firstaid_1"
+	icon_state = "firstaid"
 	desc = "A first aid kit with the ability to heal common types of injuries."
 
 /obj/item/weapon/storage/firstaid/regular/New()
@@ -38,15 +37,14 @@
 	name = "burn treatment kit"
 	desc = "A specialized medical kit for when the toxins lab <i>-spontaneously-</i> burns down."
 	icon_state = "burn_1"
-	item_state = "firstaid-burn"
+	item_state = "firstaid-ointment"
 
 /obj/item/weapon/storage/firstaid/fire/New()
 	..()
 	if(empty) return
 	icon_state = pick("burn_1","burn_2","burn_3","burn_4")
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
+	for(var/i in 1 to 3)
+		new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
 	new /obj/item/weapon/reagent_containers/pill/oxandrolone(src)
 	new /obj/item/weapon/reagent_containers/pill/oxandrolone(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
@@ -63,12 +61,10 @@
 	..()
 	if(empty) return
 	icon_state = pick("toxin_1","toxin_2","toxin_3","toxin_4")
-	new /obj/item/weapon/reagent_containers/syringe/charcoal(src)
-	new /obj/item/weapon/reagent_containers/syringe/charcoal(src)
-	new /obj/item/weapon/reagent_containers/syringe/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
+	for(var/i in 1 to 3)
+		new /obj/item/weapon/reagent_containers/syringe/charcoal(src)
+	for(var/i in 1 to 3)
+		new /obj/item/weapon/reagent_containers/pill/charcoal(src)
 	new /obj/item/device/healthanalyzer(src)
 	return
 
@@ -76,16 +72,14 @@
 	name = "oxygen deprivation treatment kit"
 	desc = "A box full of oxygen goodies."
 	icon_state = "oxygen_1"
-	item_state = "firstaid-oxygen"
+	item_state = "firstaid-o2"
 
 /obj/item/weapon/storage/firstaid/o2/New()
 	..()
 	if(empty) return
 	icon_state = pick("oxygen_1","oxygen_2","oxygen_3","oxygen_4")
-	new /obj/item/weapon/reagent_containers/pill/salbutamol(src)
-	new /obj/item/weapon/reagent_containers/pill/salbutamol(src)
-	new /obj/item/weapon/reagent_containers/pill/salbutamol(src)
-	new /obj/item/weapon/reagent_containers/pill/salbutamol(src)
+	for(var/i in 1 to 4)
+		new /obj/item/weapon/reagent_containers/pill/salbutamol(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
 	new /obj/item/device/healthanalyzer(src)
@@ -94,17 +88,15 @@
 /obj/item/weapon/storage/firstaid/brute
 	name = "brute trauma treatment kit"
 	desc = "A first aid kit for when you get toolboxed."
-	icon_state = "brute_1"
+	icon_state = "brute"
 	item_state = "firstaid-brute"
 
 /obj/item/weapon/storage/firstaid/brute/New()
 	..()
 	if(empty) return
 	icon_state = pick("brute_1","brute_2","brute_3","brute_4")
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
+	for(var/i in 1 to 4)
+		new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/device/healthanalyzer(src)
@@ -113,8 +105,8 @@
 /obj/item/weapon/storage/firstaid/tactical
 	name = "combat medical kit"
 	desc = "I hope you've got insurance."
-	icon_state = "bezerk_1"
-	max_w_class = 3
+	icon_state = "bezerk"
+	max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/storage/firstaid/tactical/New()
 	..()
@@ -139,7 +131,7 @@
 	icon_state = "pill_canister"
 	icon = 'icons/obj/chemical.dmi'
 	item_state = "contsolid"
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	can_hold = list(/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/dice)
 	allow_quick_gather = 1
 	use_to_pickup = 1
@@ -150,14 +142,11 @@
 		var/mob/M = usr
 		if(!istype(over_object, /obj/screen) || !Adjacent(M))
 			return ..()
-		if((!( M.restrained() ) && !( M.stat ) /*&& M.pocket == src*/))
-			switch(over_object.name)
-				if("r_hand")
-					M.unEquip(src)
-					M.put_in_r_hand(src)
-				if("l_hand")
-					M.unEquip(src)
-					M.put_in_l_hand(src)
+		if(!M.restrained() && !M.stat && istype(over_object, /obj/screen/inventory/hand))
+			var/obj/screen/inventory/hand/H = over_object
+			if(!M.unEquip(src))
+				return
+			M.put_in_hand(src,H.held_index)
 			src.add_fingerprint(usr)
 			return
 		if(over_object == usr && in_range(src, usr) || usr.contents.Find(src))
@@ -173,14 +162,8 @@
 
 /obj/item/weapon/storage/box/silver_sulf/New()
 	..()
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-
+	for(var/i in 1 to 7)
+		new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
 
 /obj/item/weapon/storage/pill_bottle/charcoal
 	name = "bottle of charcoal pills"
@@ -188,13 +171,8 @@
 
 /obj/item/weapon/storage/pill_bottle/charcoal/New()
 	..()
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
-	new /obj/item/weapon/reagent_containers/pill/charcoal(src)
+	for(var/i in 1 to 7)
+		new /obj/item/weapon/reagent_containers/pill/charcoal(src)
 
 /obj/item/weapon/storage/pill_bottle/epinephrine
 	name = "bottle of epinephrine pills"
@@ -202,13 +180,8 @@
 
 /obj/item/weapon/storage/pill_bottle/epinephrine/New()
 	..()
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
-	new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
+	for(var/i in 1 to 7)
+		new /obj/item/weapon/reagent_containers/pill/epinephrine(src)
 
 /obj/item/weapon/storage/pill_bottle/mutadone
 	name = "bottle of mutadone pills"
@@ -216,13 +189,8 @@
 
 /obj/item/weapon/storage/pill_bottle/mutadone/New()
 	..()
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
+	for(var/i in 1 to 7)
+		new /obj/item/weapon/reagent_containers/pill/mutadone(src)
 
 /obj/item/weapon/storage/pill_bottle/mannitol
 	name = "bottle of mannitol pills"
@@ -230,13 +198,8 @@
 
 /obj/item/weapon/storage/pill_bottle/mannitol/New()
 	..()
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
-	new /obj/item/weapon/reagent_containers/pill/mannitol(src)
+	for(var/i in 1 to 7)
+		new /obj/item/weapon/reagent_containers/pill/mannitol(src)
 
 /obj/item/weapon/storage/pill_bottle/stimulant
 	name = "bottle of stimulant pills"
@@ -244,8 +207,15 @@
 
 /obj/item/weapon/storage/pill_bottle/stimulant/New()
 	..()
-	new /obj/item/weapon/reagent_containers/pill/stimulant(src)
-	new /obj/item/weapon/reagent_containers/pill/stimulant(src)
-	new /obj/item/weapon/reagent_containers/pill/stimulant(src)
-	new /obj/item/weapon/reagent_containers/pill/stimulant(src)
-	new /obj/item/weapon/reagent_containers/pill/stimulant(src)
+	for(var/i in 1 to 5)
+		new /obj/item/weapon/reagent_containers/pill/stimulant(src)
+
+/obj/item/weapon/storage/pill_bottle/mining
+	name = "box of patches"
+	desc = "Contains patches used to treat brute and burn damage."
+
+/obj/item/weapon/storage/pill_bottle/mining/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
+	for(var/i in 1 to 3)
+		new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)

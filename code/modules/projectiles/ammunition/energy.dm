@@ -6,29 +6,15 @@
 	var/e_cost = 100 //The amount of energy a cell needs to expend to create this shot.
 	var/select_name = "energy"
 	fire_sound = 'sound/weapons/Laser.ogg'
+	firing_effect_type = /obj/effect/overlay/temp/dir_setting/firing_effect/energy
 
 /obj/item/ammo_casing/energy/laser
-	projectile_type = /obj/item/projectile/beam
+	projectile_type = /obj/item/projectile/beam/laser
 	select_name = "kill"
 
 /obj/item/ammo_casing/energy/lasergun
-	projectile_type = /obj/item/projectile/beam
+	projectile_type = /obj/item/projectile/beam/laser
 	e_cost = 83
-	select_name = "kill"
-
-/obj/item/ammo_casing/energy/plasmagun
-	projectile_type = /obj/item/projectile/beam/plasma_beam
-	e_cost = 83
-	select_name = "kill"
-
-/obj/item/ammo_casing/energy/turbo_plasmagun
-	projectile_type = /obj/item/projectile/beam/turbo_plasma_beam
-	e_cost = 50
-	select_name = "kill"
-
-/obj/item/ammo_casing/energy/plasmapistol
-	projectile_type = /obj/item/projectile/beam/plasma_pistol_beam
-	e_cost = 100
 	select_name = "kill"
 
 /obj/item/ammo_casing/energy/laser/hos
@@ -44,8 +30,13 @@
 	variance = 25
 	select_name = "scatter"
 
+/obj/item/ammo_casing/energy/laser/scatter/disabler
+	projectile_type = /obj/item/projectile/beam/disabler
+	pellets = 3
+	variance = 15
+
 /obj/item/ammo_casing/energy/laser/heavy
-	projectile_type = /obj/item/projectile/beam/heavylaser
+	projectile_type = /obj/item/projectile/beam/laser/heavylaser
 	select_name = "anti-vehicle"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
@@ -121,18 +112,6 @@
 	projectile_type = /obj/item/projectile/meteor
 	select_name = "goddamn meteor"
 
-/obj/item/ammo_casing/energy/kinetic
-	projectile_type = /obj/item/projectile/kinetic
-	select_name = "kinetic"
-	e_cost = 500
-	fire_sound = 'sound/weapons/Kenetic_accel.ogg' // fine spelling there chap
-
-/obj/item/ammo_casing/energy/kinetic/super
-	projectile_type = /obj/item/projectile/kinetic/super
-
-/obj/item/ammo_casing/energy/kinetic/hyper
-	projectile_type = /obj/item/projectile/kinetic/hyper
-
 /obj/item/ammo_casing/energy/disabler
 	projectile_type = /obj/item/projectile/beam/disabler
 	select_name  = "disable"
@@ -168,11 +147,14 @@
 	e_cost = 500
 	fire_sound = 'sound/weapons/Genhit.ogg'
 
+/obj/item/ammo_casing/energy/bolt/halloween
+	projectile_type = /obj/item/projectile/energy/bolt/halloween
+
 /obj/item/ammo_casing/energy/bolt/large
 	projectile_type = /obj/item/projectile/energy/bolt/large
 	select_name = "heavy bolt"
 
-obj/item/ammo_casing/energy/net
+/obj/item/ammo_casing/energy/net
 	projectile_type = /obj/item/projectile/energy/net
 	select_name = "netting"
 	pellets = 6
@@ -181,3 +163,68 @@ obj/item/ammo_casing/energy/net
 /obj/item/ammo_casing/energy/trap
 	projectile_type = /obj/item/projectile/energy/trap
 	select_name = "snare"
+
+/obj/item/ammo_casing/energy/instakill
+	projectile_type = /obj/item/projectile/beam/instakill
+	e_cost = 0
+	select_name = "DESTROY"
+
+/obj/item/ammo_casing/energy/instakill/blue
+	projectile_type = /obj/item/projectile/beam/instakill/blue
+
+/obj/item/ammo_casing/energy/instakill/red
+	projectile_type = /obj/item/projectile/beam/instakill/red
+
+/obj/item/ammo_casing/energy/tesla_revolver
+	fire_sound = 'sound/magic/lightningbolt.ogg'
+	e_cost = 200
+	select_name = "stun"
+	projectile_type = /obj/item/projectile/energy/tesla_revolver
+
+/obj/item/ammo_casing/energy/gravityrepulse
+	projectile_type = /obj/item/projectile/gravityrepulse
+	e_cost = 0
+	fire_sound = "sound/weapons/wave.ogg"
+	select_name = "repulse"
+	delay = 50
+	var/obj/item/weapon/gun/energy/gravity_gun/gun = null
+
+/obj/item/ammo_casing/energy/gravityrepulse/New(var/obj/item/weapon/gun/energy/gravity_gun/G)
+	gun = G
+
+/obj/item/ammo_casing/energy/gravityattract
+	projectile_type = /obj/item/projectile/gravityattract
+	e_cost = 0
+	fire_sound = "sound/weapons/wave.ogg"
+	select_name = "attract"
+	delay = 50
+	var/obj/item/weapon/gun/energy/gravity_gun/gun = null
+
+
+/obj/item/ammo_casing/energy/gravityattract/New(var/obj/item/weapon/gun/energy/gravity_gun/G)
+	gun = G
+
+/obj/item/ammo_casing/energy/gravitychaos
+	projectile_type = /obj/item/projectile/gravitychaos
+	e_cost = 0
+	fire_sound = "sound/weapons/wave.ogg"
+	select_name = "chaos"
+	delay = 50
+	var/obj/item/weapon/gun/energy/gravity_gun/gun = null
+
+/obj/item/ammo_casing/energy/gravitychaos/New(var/obj/item/weapon/gun/energy/gravity_gun/G)
+	gun = G
+
+/obj/item/ammo_casing/energy/plasma
+	projectile_type = /obj/item/projectile/plasma
+	select_name = "plasma burst"
+	fire_sound = 'sound/weapons/pulse.ogg'
+
+/obj/item/ammo_casing/energy/plasma/adv
+	projectile_type = /obj/item/projectile/plasma/adv
+
+
+
+
+
+///////////////////////fallout////////////////

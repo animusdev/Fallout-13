@@ -1,7 +1,7 @@
 
 /obj/item/clothing/suit/space/space_ninja/proc/ninja_sword_recall()
 	set name = "Recall Energy Katana (Variable Cost)"
-	set desc = "Teleports the Energy Katana linked to this suit to it's wearer, cost based on distance."
+	set desc = "Teleports the Energy Katana linked to this suit to its wearer, cost based on distance."
 	set category = "Ninja Ability"
 	set popup_menu = 0
 
@@ -11,7 +11,7 @@
 	var/inview = 1
 
 	if(!energyKatana)
-		H << "<span class='warning'>Could not locate Energy Katana!</span>"
+		to_chat(H, "<span class='warning'>Could not locate Energy Katana!</span>")
 		return
 
 	if(energyKatana in H)
@@ -31,9 +31,6 @@
 			//Somebody swollowed my sword, probably the clown doing a circus act.
 			if(energyKatana in C.stomach_contents)
 				C.stomach_contents -= energyKatana
-
-			if(energyKatana in C.internal_organs)
-				C.internal_organs -= energyKatana
 
 		energyKatana.loc = get_turf(energyKatana)
 

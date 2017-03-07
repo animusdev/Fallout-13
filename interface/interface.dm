@@ -1,19 +1,6 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
-
-/client/verb/discord()
-	set name = "Discord"
-	set desc = "Visit the discord."
-	set hidden = 1
-	if(config.discordurl)
-		if(alert("This will open the discord in your browser. Are you sure?",,"Yes","No")=="No")
-			return
-		src << link(config.discordurl)
-	else
-		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
-	return
-
 /client/verb/wiki()
-	set name = "Wiki"
+	set name = "wiki"
 	set desc = "Visit the wiki."
 	set hidden = 1
 	if(config.wikiurl)
@@ -21,56 +8,55 @@
 			return
 		src << link(config.wikiurl)
 	else
-		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
+		to_chat(src, "<span class='danger'>The wiki URL is not set in the server configuration.</span>")
 	return
 
-/client/verb/vk()
-	set name = "VK"
-	set desc = "Visit the VK."
+/client/verb/forum()
+	set name = "forum"
+	set desc = "Visit the forum."
 	set hidden = 1
 	if(config.forumurl)
 		if(alert("This will open the forum in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link(config.forumurl)
 	else
-		src << "<span class='danger'>The forum URL is not set in the server configuration.</span>"
+		to_chat(src, "<span class='danger'>The forum URL is not set in the server configuration.</span>")
 	return
 
 /client/verb/rules()
-	set name = "Rules"
+	set name = "rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	getFiles(
-		'html/ru_rules.html',
-		'html/eng_rules.html',
-		'html/ru.gif',
-		'html/en.gif'
-	)
-	src << browse('html/rules.html', "size=320x640;window=rules")
-	return
-/*
-/client/verb/github()
-	set name = "Bug Tracker"
-	set desc = "Tell us about bugs"
-	set hidden = 1
-	if(config.githuburl)
-		if(alert("This will open the Github repository in your browser. Are you sure?",,"Yes","No")=="No")
+	if(config.rulesurl)
+		if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
 			return
-		src << link(config.githuburl)
+		src << link(config.rulesurl)
 	else
-		src << "<span class='danger'>The Github URL is not set in the server configuration.</span>"
+		to_chat(src, "<span class='danger'>The rules URL is not set in the server configuration.</span>")
 	return
-*/
+
+/client/verb/github()
+	set name = "discord"
+	set desc = "Join to discord"
+	set hidden = 1
+	if(config.discord)
+		if(alert("This will open discord invite in your browser. Are you sure?",,"Yes","No")=="No")
+			return
+		src << link(config.discord)
+	else
+		to_chat(src, "<span class='danger'>Discord invite URL is not set in the server configuration.</span>")
+	return
+
 /client/verb/reportissue()
-	set name = "Report issue"
+	set name = "report-issue"
 	set desc = "Report an issue"
 	set hidden = 1
-	if(config.githuburl)
-		if(alert("This will open the BitBucket issue reporter in your browser. Are you sure?",,"Yes","No")=="No")
+	if(config.bitbucket)
+		if(alert("This will open BitBucket in your browser. Are you sure?",,"Yes","No")=="No")
 			return
-		src << link("[config.githuburl]")
+		src << link(config.bitbucket)
 	else
-		src << "<span class='danger'>The BitBucket URL is not set in the server configuration.</span>"
+		to_chat(src, "<span class='danger'>BitBucket URL is not set in the server configuration.</span>")
 	return
 
 /client/verb/hotkeys_help()
@@ -82,6 +68,7 @@ Admin:
 \tF5 = admin chat (asay)
 \tF6 = player-panel
 \tF7 = admin-pm
+\tCtrl+F7 = Stealth-Mode
 \tF8 = Invisimin
 \tF9 = aghost
 \tF11 = buildmode
@@ -90,10 +77,38 @@ Admin:
 	mob.hotkey_help()
 
 	if(holder)
-		src << adminhotkeys
+		to_chat(src, adminhotkeys)
+
+/client/verb/changelog()
+	set name = "Changelog"
+	set category = "OOC"
+	getFiles(
+		'html/88x31.png',
+		'html/bug-minus.png',
+		'html/cross-circle.png',
+		'html/hard-hat-exclamation.png',
+		'html/image-minus.png',
+		'html/image-plus.png',
+		'html/music-minus.png',
+		'html/music-plus.png',
+		'html/tick-circle.png',
+		'html/wrench-screwdriver.png',
+		'html/spell-check.png',
+		'html/burn-exclamation.png',
+		'html/chevron.png',
+		'html/chevron-expand.png',
+		'html/changelog.css',
+		'html/changelog.html'
+		)
+	src << browse('html/changelog.html', "window=changes;size=675x650")
+	if(prefs.lastchangelog != changelog_hash)
+		prefs.lastchangelog = changelog_hash
+		prefs.save_preferences()
+		winset(src, "infowindow.changelog", "font-style=;")
 
 
 /mob/proc/hotkey_help()
+	//h = talk-wheel has a nonsense tag in it because \th is an escape sequence in BYOND.
 	var/hotkey_mode = {"<font color='purple'>
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
@@ -106,6 +121,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tr = throw
 \tm = me
 \tt = say
+\t<B></B>h = talk-wheel
 \to = OOC
 \tb = resist
 \tx = swap-hand
@@ -116,14 +132,11 @@ Hotkey-Mode: (hotkey-mode must be on)
 \t2 = disarm-intent
 \t3 = grab-intent
 \t4 = harm-intent
+\tNumpad = Body target selection (Press 8 repeatedly for Head->Eyes->Mouth)
 </font>"}
 
 	var/other = {"<font color='purple'>
 Any-Mode: (hotkey doesn't need to be on)
-\tF1 = admin help (ahelp)
-\tF2 = OOC
-\tF3 = say
-\tF4 = emote (me)
 \tCtrl+a = left
 \tCtrl+s = down
 \tCtrl+d = right
@@ -132,7 +145,8 @@ Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+e = equip
 \tCtrl+r = throw
 \tCtrl+b = resist
-\tCtrl+O = OOC
+\tCtrl+h = talk-wheel
+\tCtrl+o = OOC
 \tCtrl+x = swap-hand
 \tCtrl+z = activate held object (or Ctrl+y)
 \tCtrl+f = cycle-intents-left
@@ -147,12 +161,14 @@ Any-Mode: (hotkey doesn't need to be on)
 \tPGUP = swap-hand
 \tPGDN = activate held object
 \tEND = throw
+\tCtrl+Numpad = Body target selection (Press 8 repeatedly for Head->Eyes->Mouth)
 </font>"}
 
-	src << hotkey_mode
-	src << other
+	to_chat(src, hotkey_mode)
+	to_chat(src, other)
 
 /mob/living/silicon/robot/hotkey_help()
+	//h = talk-wheel has a nonsense tag in it because \th is an escape sequence in BYOND.
 	var/hotkey_mode = {"<font color='purple'>
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
@@ -161,7 +177,9 @@ Hotkey-Mode: (hotkey-mode must be on)
 \td = right
 \tw = up
 \tq = unequip active module
+\tm = me
 \tt = say
+\t<B></B>h = talk-wheel
 \to = OOC
 \tx = cycle active modules
 \tb = resist
@@ -176,6 +194,10 @@ Hotkey-Mode: (hotkey-mode must be on)
 
 	var/other = {"<font color='purple'>
 Any-Mode: (hotkey doesn't need to be on)
+\tF1 = admin help (ahelp)
+\tF2 = OOC
+\tF3 = say
+\tF4 = emote (me)
 \tCtrl+a = left
 \tCtrl+s = down
 \tCtrl+d = right
@@ -183,6 +205,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+q = unequip active module
 \tCtrl+x = cycle active modules
 \tCtrl+b = resist
+\tCtrl+h = talk-wheel
 \tCtrl+o = OOC
 \tCtrl+z = activate held object (or Ctrl+y)
 \tCtrl+f = cycle-intents-left
@@ -197,8 +220,8 @@ Any-Mode: (hotkey doesn't need to be on)
 \tPGDN = activate held object
 </font>"}
 
-	src << hotkey_mode
-	src << other
+	to_chat(src, hotkey_mode)
+	to_chat(src, other)
 
 // Needed to circumvent a bug where .winset does not work when used on the window.on-size event in skins.
 // Used by /datum/html_interface/nanotrasen (code/modules/html_interface/nanotrasen/nanotrasen.dm)

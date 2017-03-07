@@ -52,11 +52,15 @@
 	if(world.time <= next_click)
 		return
 	next_click = world.time + 1
-	if(client.buildmode)
-		build_click(src, client.buildmode, params, A)
-		return
+
+	if(client.click_intercept)
+		if(call(client.click_intercept, "InterceptClickOn")(src, params, A))
+			return
 
 	var/list/modifiers = params2list(params)
+	if(modifiers["shift"] && modifiers["middle"])
+		ShiftMiddleClickOn(A)
+		return
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
 		return
@@ -73,7 +77,7 @@
 		CtrlClickOn(A)
 		return
 
-	if(stat || paralysis || stunned || weakened)
+	if(incapacitated(ignore_restraints = 1))
 		return
 
 	face_atom(A)
@@ -94,19 +98,16 @@
 		throw_item(A)
 		return
 
-	var/obj/item/W = get_active_hand()
+	var/obj/item/W = get_active_held_item()
 
 
 	if(W == A)
 		W.attack_self(src)
-		if(hand)
-			update_inv_l_hand(0)
-		else
-			update_inv_r_hand(0)
+		update_inv_hands()
 		return
 
 	// operate three levels deep here (item in backpack in src; item in box in backpack in src, not any deeper)
-	if(!isturf(A) && A == loc || (A in contents) || (A.loc in contents) || (A.loc && (A.loc.loc in contents)))
+	if(A.ClickAccessible(src, depth=INVENTORY_DEPTH))
 		// No adjacency needed
 		if(W)
 			var/resolved = A.attackby(W,src)
@@ -218,17 +219,23 @@
 	Ctrl click
 	For most objects, pull
 */
+
 /mob/proc/CtrlClickOn(atom/A)
 	A.CtrlClick(src)
 	return
-/atom/proc/CtrlClick(mob/user)
-	return
 
-/atom/movable/CtrlClick(mob/living/user)
+/atom/proc/CtrlClick(mob/user)
 	var/mob/living/ML = user
 	if(istype(ML))
 		ML.pulled(src)
 
+/mob/living/carbon/human/CtrlClick(mob/user)
+	if(ishuman(user) && Adjacent(user))
+		var/mob/living/carbon/human/H = user
+		H.dna.species.grab(H, src, H.martial_art)
+		H.next_click = world.time + CLICK_CD_MELEE
+	else 
+		..()
 /*
 	Alt click
 	Unused except for AI
@@ -265,8 +272,27 @@
 	A.CtrlShiftClick(src)
 	return
 
+/mob/proc/ShiftMiddleClickOn(atom/A)
+	src.pointed(A)
+	return
+
 /atom/proc/CtrlShiftClick(mob/user)
 	return
+
+/*
+	Helper to check can the mob click/access an item.
+	Used by mob inventory and storage items.
+*/
+/atom/proc/ClickAccessible(mob/user, depth=1)
+	if(src == user.loc || (src in user.contents))
+		return TRUE
+
+	if(loc && depth > 1)
+		return loc.ClickAccessible(user, depth-1)
+
+/turf/ClickAccessible(mob/user, depth=1)
+	return
+
 
 /*
 	Misc helpers
@@ -295,38 +321,45 @@
 	LE.xo = U.x - T.x
 	LE.fire()
 
-/mob/living/carbon/human/LaserEyes()
-	if(nutrition>0)
-		..()
-		nutrition = max(nutrition - rand(1,5),0)
-	else
-		src << "<span class='danger'>You're out of energy!  You need food!</span>"
-
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
 /mob/proc/face_atom(atom/A)
-	if( buckled || stat != CONSCIOUS || !A || !x || !y || !A.x || !A.y ) return
+	if( buckled || stat != CONSCIOUS || !A || !x || !y || !A.x || !A.y )
+		return
 	var/dx = A.x - x
 	var/dy = A.y - y
 	if(!dx && !dy) // Wall items are graphically shifted but on the floor
-		if(A.pixel_y > 16)		dir = NORTH
-		else if(A.pixel_y < -16)dir = SOUTH
-		else if(A.pixel_x > 16)	dir = EAST
-		else if(A.pixel_x < -16)dir = WEST
+		if(A.pixel_y > 16)
+			setDir(NORTH)
+		else if(A.pixel_y < -16)
+			setDir(SOUTH)
+		else if(A.pixel_x > 16)
+			setDir(EAST)
+		else if(A.pixel_x < -16)
+			setDir(WEST)
 		return
 
 	if(abs(dx) < abs(dy))
-		if(dy > 0)	dir = NORTH
-		else		dir = SOUTH
+		if(dy > 0)
+			setDir(NORTH)
+		else
+			setDir(SOUTH)
 	else
-		if(dx > 0)	dir = EAST
-		else		dir = WEST
+		if(dx > 0)
+			setDir(EAST)
+		else
+			setDir(WEST)
+	update_vision_cone()
 
 /obj/screen/click_catcher
-	icon = 'icons/mob/screen_full.dmi'
-	icon_state = "passage0"
-	layer = 0
+	icon = 'icons/mob/screen_gen.dmi'
+	icon_state = "click_catcher"
+	plane = CLICKCATCHER_PLANE
 	mouse_opacity = 2
-	screen_loc = "CENTER-7,CENTER-7"
+	screen_loc = "CENTER"
+
+/obj/screen/click_catcher/New()
+	..()
+	transform = matrix(200, 0, 0, 0, 200, 0)
 
 /obj/screen/click_catcher/Click(location, control, params)
 	var/list/modifiers = params2list(params)
@@ -334,6 +367,7 @@
 		var/mob/living/carbon/C = usr
 		C.swap_hand()
 	else
-		var/turf/T = screen_loc2turf(modifiers["screen-loc"], get_turf(usr))
-		T.Click(location, control, params)
-	return 1
+		var/turf/T = params2turf(modifiers["screen-loc"], get_turf(usr))
+		if(T)
+			T.Click(location, control, params)
+	. = 1

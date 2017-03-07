@@ -2,11 +2,13 @@
 	set category = "Admin"
 	set name = "Permissions Panel"
 	set desc = "Edit admin permissions"
-	if(!check_rights(R_PERMISSIONS))	return
+	if(!check_rights(R_PERMISSIONS))
+		return
 	usr.client.holder.edit_admin_permissions()
 
 /datum/admins/proc/edit_admin_permissions()
-	if(!check_rights(R_PERMISSIONS))	return
+	if(!check_rights(R_PERMISSIONS))
+		return
 
 	var/output = {"<!DOCTYPE html>
 <html>
@@ -27,7 +29,8 @@
 
 	for(var/adm_ckey in admin_datums)
 		var/datum/admins/D = admin_datums[adm_ckey]
-		if(!D)	continue
+		if(!D)
+			continue
 
 		var/rights = rights2text(D.rank.rights," ")
 		if(!rights)	rights = "*none*"
@@ -48,7 +51,8 @@
 	usr << browse(output,"window=editrights;size=900x650")
 
 /datum/admins/proc/log_admin_rank_modification(adm_ckey, new_rank)
-	if(config.admin_legacy_system)	return
+	if(config.admin_legacy_system)
+		return
 
 	if(!usr.client)
 		return
@@ -59,7 +63,7 @@
 	establish_db_connection()
 
 	if(!dbcon.IsConnected())
-		usr << "<span class='danger'>Failed to establish database connection.</span>"
+		to_chat(usr, "<span class='danger'>Failed to establish database connection.</span>")
 		return
 
 	if(!adm_ckey || !new_rank)
@@ -87,24 +91,27 @@
 		insert_query.Execute()
 		var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO `[format_table_name("admin_log")]` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added new admin [adm_ckey] to rank [new_rank]');")
 		log_query.Execute()
-		usr << "<span class='adminnotice'>New admin added.</span>"
+		to_chat(usr, "<span class='adminnotice'>New admin added.</span>")
 	else
 		if(!isnull(admin_id) && isnum(admin_id))
 			var/DBQuery/insert_query = dbcon.NewQuery("UPDATE `[format_table_name("admin")]` SET rank = '[new_rank]' WHERE id = [admin_id]")
 			insert_query.Execute()
 			var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO `[format_table_name("admin_log")]` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Edited the rank of [adm_ckey] to [new_rank]');")
 			log_query.Execute()
-			usr << "<span class='adminnnotice'>Admin rank changed.</span>"
+			to_chat(usr, "<span class='adminnnotice'>Admin rank changed.</span>")
 
 
 /datum/admins/proc/log_admin_permission_modification(adm_ckey, new_permission)
-	if(config.admin_legacy_system)	return
-	if(!usr.client)					return
-	if(check_rights(R_PERMISSIONS))	return
+	if(config.admin_legacy_system)
+		return
+	if(!usr.client)
+		return
+	if(check_rights(R_PERMISSIONS))
+		return
 
 	establish_db_connection()
 	if(!dbcon.IsConnected())
-		usr << "<span class='danger'>Failed to establish database connection.</span>"
+		to_chat(usr, "<span class='danger'>Failed to establish database connection.</span>")
 		return
 
 	if(!adm_ckey || !istext(adm_ckey) || !isnum(new_permission))
@@ -117,7 +124,8 @@
 	while(select_query.NextRow())
 		admin_id = text2num(select_query.item[1])
 
-	if(!admin_id)	return
+	if(!admin_id)
+		return
 
 	var/DBQuery/insert_query = dbcon.NewQuery("UPDATE `[format_table_name("admin")]` SET flags = [new_permission] WHERE id = [admin_id]")
 	insert_query.Execute()

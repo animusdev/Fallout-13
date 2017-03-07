@@ -10,6 +10,7 @@
 	use_power = 1
 	idle_power_usage = 2
 	active_power_usage = 4
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/idSelf
 
 /obj/machinery/doorButtons/attackby(obj/O, mob/user)
@@ -27,7 +28,7 @@
 		req_access = list()
 		req_one_access = list()
 		playsound(src.loc, "sparks", 100, 1)
-		user << "<span class='warning'>You short out the access controller.</span>"
+		to_chat(user, "<span class='warning'>You short out the access controller.</span>")
 
 /obj/machinery/doorButtons/proc/removeMe()
 
@@ -57,7 +58,7 @@
 	if(busy)
 		return
 	if(!allowed(user))
-		user << "<span class='warning'>Access denied.</span>"
+		to_chat(user, "<span class='warning'>Access denied.</span>")
 		return
 	if(controller && !controller.busy && door)
 		if(controller.stat & NOPOWER)
@@ -126,7 +127,7 @@
 	if(busy)
 		return
 	if(!allowed(usr))
-		usr << "<span class='warning'>Access denied.</span>"
+		to_chat(usr, "<span class='warning'>Access denied.</span>")
 		return
 	switch(href_list["command"])
 		if("close_exterior")
@@ -161,7 +162,7 @@
 	A.unbolt()
 	spawn()
 		if(A && A.close())
-			if(stat & NOPOWER || lostPower || !A || A.gc_destroyed)
+			if(stat & NOPOWER || lostPower || !A || qdeleted(A))
 				goIdle(1)
 				return
 			A.bolt()
@@ -207,7 +208,7 @@
 	A.unbolt()
 	spawn()
 		if(A && A.open())
-			if(stat | (NOPOWER) && !lostPower && A && !A.gc_destroyed)
+			if(stat | (NOPOWER) && !lostPower && A && !qdeleted(A))
 				A.bolt()
 		goIdle(1)
 

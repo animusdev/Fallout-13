@@ -18,7 +18,6 @@
 	idle_power_usage = 50
 	machinetype = 2
 	//heatgen = 20
-	circuitboard = "/obj/item/weapon/circuitboard/telecomms/bus"
 	netspeed = 40
 	var/change_frequency = 0
 
@@ -52,14 +51,17 @@
 
 /obj/machinery/telecomms/bus/New()
 	..()
-	component_parts = list()
-	component_parts += new /obj/item/weapon/circuitboard/telecomms/bus(null)
-	component_parts += new /obj/item/weapon/stock_parts/subspace/filter(null)
-	component_parts += new /obj/item/weapon/stock_parts/manipulator(null)
-	component_parts += new /obj/item/weapon/stock_parts/manipulator(null)
-	component_parts += new /obj/item/stack/cable_coil(null, 1)
-	RefreshParts()
+	var/obj/item/weapon/circuitboard/machine/B = new /obj/item/weapon/circuitboard/machine/telecomms/bus(null)
+	B.apply_default_parts(src)
 
+/obj/item/weapon/circuitboard/machine/telecomms/bus
+	name = "Bus Mainframe (Machine Board)"
+	build_path = /obj/machinery/telecomms/bus
+	origin_tech = "programming=2;engineering=2"
+	req_components = list(
+							/obj/item/weapon/stock_parts/manipulator = 2,
+							/obj/item/stack/cable_coil = 1,
+							/obj/item/weapon/stock_parts/subspace/filter = 1)
 
 
 
@@ -70,19 +72,19 @@
 /obj/machinery/telecomms/bus/preset_one
 	id = "Bus 1"
 	network = "tcommsat"
-	freq_listening = list(SCI_FREQ, MED_FREQ, VLT_FREQ, ENCL_FREQ)
+	freq_listening = list(SCI_FREQ, MED_FREQ)
 	autolinkers = list("processor1", "science", "medical")
 
 /obj/machinery/telecomms/bus/preset_two
 	id = "Bus 2"
 	network = "tcommsat"
-	freq_listening = list(SUPP_FREQ,SERV_FREQ, DEN_FREQ, LEG_FREQ)
+	freq_listening = list(SUPP_FREQ,SERV_FREQ)
 	autolinkers = list("processor2", "supply", "service")
 
 /obj/machinery/telecomms/bus/preset_three
 	id = "Bus 3"
 	network = "tcommsat"
-	freq_listening = list(SEC_FREQ, COMM_FREQ, NCR_FREQ)
+	freq_listening = list(SEC_FREQ, COMM_FREQ)
 	autolinkers = list("processor3", "security", "command")
 
 /obj/machinery/telecomms/bus/preset_four
@@ -96,3 +98,7 @@
 		freq_listening |= i
 	..()
 
+/obj/machinery/telecomms/bus/preset_one/birdstation
+	name = "Bus"
+	autolinkers = list("processor1", "common")
+	freq_listening = list()

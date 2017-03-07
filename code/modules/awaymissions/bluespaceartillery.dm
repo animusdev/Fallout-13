@@ -1,8 +1,10 @@
 
 #define ARTILLERY_RELOAD_TIME 60
+#define EXPLOSION_SIZE 3
 
 /obj/machinery/artillerycontrol
 	var/reload = ARTILLERY_RELOAD_TIME
+	var/explosionsize = EXPLOSION_SIZE
 	name = "bluespace artillery control"
 	icon_state = "control_boxp1"
 	icon = 'icons/obj/machines/particle_accelerator.dmi'
@@ -10,8 +12,8 @@
 	anchored = 1
 
 /obj/machinery/artillerycontrol/process()
-	if(src.reload<ARTILLERY_RELOAD_TIME)
-		src.reload++
+	if(reload < ARTILLERY_RELOAD_TIME)
+		reload++
 
 /obj/structure/artilleryplaceholder
 	name = "artillery"
@@ -37,18 +39,20 @@
 	if(..())
 		return
 	var/A
-	A = input("Area to jump bombard", "Open Fire", A) in teleportlocs
+	A = input("Area to bombard", "Open Fire", A) in teleportlocs
 	var/area/thearea = teleportlocs[A]
-	if (usr.stat || usr.restrained()) return
-	if(src.reload < ARTILLERY_RELOAD_TIME) return
-	if ((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
+	if(usr.stat || usr.restrained())
+		return
+	if(src.reload < ARTILLERY_RELOAD_TIME)
+		return
+	if(usr.contents.Find(src) || (in_range(src, usr) && isturf(loc)) || issilicon(usr))
 		priority_announce("Bluespace artillery fire detected. Brace for impact.")
 		message_admins("[key_name_admin(usr)] has launched an artillery strike.")
 		var/list/L = list()
 		for(var/turf/T in get_area_turfs(thearea.type))
 			L+=T
 		var/loc = pick(L)
-		explosion(loc,2,5,11)
+		explosion(loc,explosionsize,explosionsize*2,explosionsize*4)
 		reload = 0
 
 /*/mob/proc/openfire()

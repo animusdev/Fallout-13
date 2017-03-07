@@ -1,4 +1,4 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
+
 
 /*
 	SwapMaps library by Lummox JR
@@ -117,7 +117,7 @@
 		Builds a filled rectangle of item from one corner turf to the
 		 other, on multiple z-levels if necessary. The corners may be
 		 specified in any order.
-		item is a type path like /turf/wall or /obj/barrel{full=1}.
+		item is a type path like /turf/closed/wall or /obj/barrel{full=1}.
 	swapmap.BuildRectangle(turf/corner1,turf/corner2,item)
 		Builds an unfilled rectangle of item from one corner turf to
 		 the other, on multiple z-levels if necessary.
@@ -220,11 +220,11 @@ swapmap
 		areas-=defarea
 		InitializeSwapMaps()
 		locked=1
-		S["id"] << id
-		S["z"] << z2-z1+1
-		S["y"] << y2-y1+1
-		S["x"] << x2-x1+1
-		S["areas"] << areas
+		to_chat(S["id"], id)
+		to_chat(S["z"], z2-z1+1)
+		to_chat(S["y"], y2-y1+1)
+		to_chat(S["x"], x2-x1+1)
+		to_chat(S["areas"], areas)
 		for(n in 1 to areas.len) areas[areas[n]]=n
 		var/oldcd=S.cd
 		for(z in z1 to z2)
@@ -234,8 +234,8 @@ swapmap
 				for(x in x1 to x2)
 					S.cd="[x-x1+1]"
 					var/turf/T=locate(x,y,z)
-					S["type"] << T.type
-					if(T.loc!=defarea) S["AREA"] << areas[T.loc]
+					to_chat(S["type"], T.type)
+					if(T.loc!=defarea) to_chat(S["AREA"], areas[T.loc])
 					T.Write(S)
 					S.cd=".."
 				S.cd=".."
@@ -383,7 +383,7 @@ swapmap
 	proc/Save()
 		if(id==src) return 0
 		var/savefile/S=mode?(new):new("map_[id].sav")
-		S << src
+		to_chat(S, src)
 		while(locked) sleep(1)
 		if(mode)
 			fdel("map_[id].txt")
@@ -420,7 +420,7 @@ swapmap
 		Build procs: Take 2 turfs as corners, plus an item type.
 		An item may be like:
 
-		/turf/wall
+		/turf/closed/wall
 		/obj/fence{icon_state="iron"}
 	 */
 	proc/BuildFilledRectangle(turf/T1,turf/T2,item)
@@ -456,23 +456,23 @@ atom
 	Write(savefile/S)
 		for(var/V in vars-"x"-"y"-"z"-"contents"-"icon"-"overlays"-"underlays")
 			if(issaved(vars[V]))
-				if(vars[V]!=initial(vars[V])) S[V]<<vars[V]
+				if(vars[V]!=initial(vars[V])) to_chat(S[V], vars[V])
 				else S.dir.Remove(V)
 		if(icon!=initial(icon))
 			if(swapmaps_iconcache && swapmaps_iconcache[icon])
-				S["icon"]<<swapmaps_iconcache[icon]
-			else S["icon"]<<icon
+				to_chat(S["icon"], swapmaps_iconcache[icon])
+			else to_chat(S["icon"], icon)
 		// do not save mobs with keys; do save other mobs
 		var/mob/M
 		for(M in src) if(M.key) break
-		if(overlays.len) S["overlays"]<<overlays
-		if(underlays.len) S["underlays"]<<underlays
+		if(overlays.len) to_chat(S["overlays"], overlays)
+		if(underlays.len) to_chat(S["underlays"], underlays)
 		if(contents.len && !isarea(src))
 			var/list/l=contents
 			if(M)
 				l=l.Copy()
 				for(M in src) if(M.key) l-=M
-			if(l.len) S["contents"]<<l
+			if(l.len) to_chat(S["contents"], l)
 			if(l!=contents) qdel(l)
 	Read(savefile/S)
 		var/list/l
@@ -509,7 +509,7 @@ var/swapmaps_initialized
 var/swapmaps_loaded
 var/swapmaps_byname
 
-proc/InitializeSwapMaps()
+/proc/InitializeSwapMaps()
 	if(swapmaps_initialized) return
 	swapmaps_initialized=1
 	swapmaps_compiled_maxx=world.maxx
@@ -523,16 +523,16 @@ proc/InitializeSwapMaps()
 			// so you can look up an icon file by name or vice-versa
 			swapmaps_iconcache[swapmaps_iconcache[V]]=V
 
-proc/SwapMaps_AddIconToCache(name,icon)
+/proc/SwapMaps_AddIconToCache(name,icon)
 	if(!swapmaps_iconcache) swapmaps_iconcache=list()
 	swapmaps_iconcache[name]=icon
 	swapmaps_iconcache[icon]=name
 
-proc/SwapMaps_Find(id)
+/proc/SwapMaps_Find(id)
 	InitializeSwapMaps()
 	return swapmaps_byname[id]
 
-proc/SwapMaps_Load(id)
+/proc/SwapMaps_Load(id)
 	InitializeSwapMaps()
 	var/swapmap/M=swapmaps_byname[id]
 	if(!M)
@@ -553,29 +553,29 @@ proc/SwapMaps_Load(id)
 		M.mode=text
 	return M
 
-proc/SwapMaps_Save(id)
+/proc/SwapMaps_Save(id)
 	InitializeSwapMaps()
 	var/swapmap/M=swapmaps_byname[id]
 	if(M) M.Save()
 	return M
 
-proc/SwapMaps_Save_All()
+/proc/SwapMaps_Save_All()
 	InitializeSwapMaps()
 	for(var/swapmap/M in swapmaps_loaded)
 		if(M) M.Save()
 
-proc/SwapMaps_Unload(id)
+/proc/SwapMaps_Unload(id)
 	InitializeSwapMaps()
 	var/swapmap/M=swapmaps_byname[id]
 	if(!M) return	// return silently from an error
 	M.Unload()
 	return 1
 
-proc/SwapMaps_DeleteFile(id)
+/proc/SwapMaps_DeleteFile(id)
 	fdel("map_[id].sav")
 	fdel("map_[id].txt")
 
-proc/SwapMaps_CreateFromTemplate(template_id)
+/proc/SwapMaps_CreateFromTemplate(template_id)
 	var/swapmap/M=new
 	var/savefile/S
 	var/text=0
@@ -602,7 +602,7 @@ proc/SwapMaps_CreateFromTemplate(template_id)
 	while(M.locked) sleep(1)
 	return M
 
-proc/SwapMaps_LoadChunk(chunk_id,turf/locorner)
+/proc/SwapMaps_LoadChunk(chunk_id,turf/locorner)
 	var/swapmap/M=new
 	var/savefile/S
 	var/text=0
@@ -629,7 +629,7 @@ proc/SwapMaps_LoadChunk(chunk_id,turf/locorner)
 	qdel(M)
 	return 1
 
-proc/SwapMaps_SaveChunk(chunk_id,turf/corner1,turf/corner2)
+/proc/SwapMaps_SaveChunk(chunk_id,turf/corner1,turf/corner2)
 	if(!corner1 || !corner2)
 		world.log << "SwapMaps error in SwapMaps_SaveChunk():"
 		if(!corner1) world.log << "  corner1 turf is null"
@@ -650,7 +650,7 @@ proc/SwapMaps_SaveChunk(chunk_id,turf/corner1,turf/corner2)
 	qdel(M)
 	return 1
 
-proc/SwapMaps_GetSize(id)
+/proc/SwapMaps_GetSize(id)
 	var/savefile/S
 	var/text=0
 	if(swapmaps_mode==SWAPMAPS_TEXT && fexists("map_[id].txt"))

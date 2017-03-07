@@ -193,8 +193,9 @@ About Recipes:
 		name & id
 			Should be pretty obvious.
 
-		result
-			This var contains the id of the resulting reagent.
+		results
+			This var contains a list of the id(s) of the resulting reagents and their result amounts.
+			I recommend you set this to the total volume of all required reagent.
 
 		required_reagents
 			This is a list of ids of the required reagents.
@@ -207,10 +208,6 @@ About Recipes:
 			Functionally similar to required_reagents, it is a list of reagents that are required
 			for the reaction. However, unlike required_reagents, catalysts are NOT consumed.
 			They mearly have to be present in the container.
-
-		result_amount
-			This is the amount of the resulting reagent this recipe will produce.
-			I recommend you set this to the total volume of all required reagent.
 
 		required_container
 			The container the recipe has to take place in in order to happen. Leave this blank/null
@@ -229,9 +226,9 @@ About the Tools:
 	By default, all atom have a reagents var - but its empty. if you want to use an object for the chem.
 	system you'll need to add something like this in its new proc:
 
-		var/datum/reagents/R = new/datum/reagents(100) <<<<< create a new datum , 100 is the maximum_volume of the new holder datum.
-		reagents = R <<<<< assign the new datum to the objects reagents var
-		R.my_atom = src <<<<< set the holders my_atom to src so that we know where we are.
+		to_chat(var/datum/reagents/R = new/datum/reagents(100), <<< create a new datum , 100 is the maximum_volume of the new holder datum.)
+		to_chat(reagents = R, <<< assign the new datum to the objects reagents var)
+		to_chat(R.my_atom = src, <<< set the holders my_atom to src so that we know where we are.)
 
 		This can also be done by calling a convenience proc:
 		atom/proc/create_reagents(var/max_volume)
@@ -244,7 +241,7 @@ About the Tools:
 			'pouring' our reagents into something else.
 
 		atom/proc/is_open_container()
-			Checks atom/var/flags & OPENCONTAINER.
+			Checks obj/var/container_type & OPENCONTAINER.
 			If this returns 1 , you can use syringes, beakers etc
 			to manipulate the contents of this object.
 			If it's 0, you'll need to write your own custom reagent

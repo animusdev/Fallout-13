@@ -3,7 +3,7 @@
 	flags = CONDUCT
 	origin_tech = "materials=1;engineering=1"
 	item_state = "syringe_kit"
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	var/result_path
 	var/inverse = 0
 	// For inverse dir frames like light fixtures.
@@ -16,14 +16,14 @@
 		return
 	var/turf/loc = get_turf(usr)
 	var/area/A = loc.loc
-	if(!istype(loc, /turf/simulated/floor))
-		usr << "<span class='warning'>You cannot place [src] on this spot!</span>"
+	if(!isfloorturf(loc))
+		to_chat(usr, "<span class='warning'>You cannot place [src] on this spot!</span>")
 		return
 	if(A.requires_power == 0 || istype(A, /area/space))
-		usr << "<span class='warning'>You cannot place [src] in this area!</span>"
+		to_chat(usr, "<span class='warning'>You cannot place [src] in this area!</span>")
 		return
 	if(gotwallitem(loc, ndir, inverse*2))
-		usr << "<span class='warning'>There's already an item on this wall!</span>"
+		to_chat(usr, "<span class='warning'>There's already an item on this wall!</span>")
 		return
 
 	return 1
@@ -39,25 +39,26 @@
 			ndir = turn(ndir, 180)
 
 		var/obj/O = new result_path(get_turf(usr), ndir, 1)
-		transfer_fingerprints_to(O)
+		after_attach(O)
 
 	qdel(src)
 
+/obj/item/wallframe/proc/after_attach(var/obj/O)
+	transfer_fingerprints_to(O)
 
 /obj/item/wallframe/attackby(obj/item/weapon/W, mob/user, params)
 	..()
 	if(istype(W, /obj/item/weapon/screwdriver))
 		// For camera-building borgs
 		var/turf/T = get_step(get_turf(user), user.dir)
-		if(istype(T, /turf/simulated/wall))
+		if(iswallturf(T))
 			T.attackby(src, user, params)
-
 
 	var/metal_amt = round(materials[MAT_METAL]/MINERAL_MATERIAL_AMOUNT)
 	var/glass_amt = round(materials[MAT_GLASS]/MINERAL_MATERIAL_AMOUNT)
 
 	if(istype(W, /obj/item/weapon/wrench) && (metal_amt || glass_amt))
-		user << "<span class='notice'>You dismantle [src].</span>"
+		to_chat(user, "<span class='notice'>You dismantle [src].</span>")
 		if(metal_amt)
 			new /obj/item/stack/sheet/metal(get_turf(src), metal_amt)
 		if(glass_amt)
@@ -82,16 +83,16 @@
 	var/turf/loc = get_turf(usr)
 	var/area/A = loc.loc
 	if (A.get_apc())
-		usr << "<span class='warning'>This area already has APC!</span>"
+		to_chat(usr, "<span class='warning'>This area already has APC!</span>")
 		return //only one APC per area
 	for(var/obj/machinery/power/terminal/T in loc)
 		if (T.master)
-			usr << "<span class='warning'>There is another network terminal here!</span>"
+			to_chat(usr, "<span class='warning'>There is another network terminal here!</span>")
 			return
 		else
 			var/obj/item/stack/cable_coil/C = new /obj/item/stack/cable_coil(loc)
 			C.amount = 10
-			usr << "<span class='notice'>You cut the cables and disassemble the unused power terminal.</span>"
+			to_chat(usr, "<span class='notice'>You cut the cables and disassemble the unused power terminal.</span>")
 			qdel(T)
 	return 1
 
@@ -102,6 +103,6 @@
 	icon_state = "door_electronics"
 	item_state = "electronic"
 	flags = CONDUCT
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	origin_tech = "engineering=2;programming=1"
 	materials = list(MAT_METAL=50, MAT_GLASS=50)

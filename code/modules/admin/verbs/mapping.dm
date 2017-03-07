@@ -20,6 +20,37 @@
 //- Check if the area has too much empty space. If so, make it smaller and replace the rest with maintenance tunnels.
 var/intercom_range_display_status = 0
 
+var/list/admin_verbs_debug_mapping = list(
+	/client/proc/do_not_use_these, 			//-errorage
+	/client/proc/camera_view, 				//-errorage
+	/client/proc/sec_camera_report, 		//-errorage
+	/client/proc/intercom_view, 			//-errorage
+	/client/proc/air_status, //Air things
+	/client/proc/Cell, //More air things
+	/client/proc/atmosscan, //check plumbing
+	/client/proc/powerdebug, //check power
+	/client/proc/count_objects_on_z_level,
+	/client/proc/count_objects_all,
+	/client/proc/cmd_assume_direct_control,	//-errorage
+	/client/proc/startSinglo,
+	/client/proc/set_server_fps,	//allows you to set the ticklag.
+	/client/proc/cmd_admin_grantfullaccess,
+	/client/proc/cmd_admin_areatest,
+	/client/proc/cmd_admin_rejuvenate,
+	/datum/admins/proc/show_traitor_panel,
+	/client/proc/disable_communication,
+	/client/proc/print_pointers,
+	/client/proc/cmd_show_at_list,
+	/client/proc/cmd_show_at_list,
+	/client/proc/manipulate_organs
+)
+
+/obj/effect/debugging/mapfix_marker
+	name = "map fix marker"
+	icon = 'icons/mob/screen_gen.dmi'
+	icon_state = "mapfixmarker"
+	desc = "I am a mappers mistake."
+
 /obj/effect/debugging/marker
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "yellow"
@@ -132,50 +163,19 @@ var/intercom_range_display_status = 0
 
 /client/proc/enable_debug_verbs()
 	set category = "Debug"
-	set name = "Debug verbs"
+	set name = "Debug verbs - Enable"
+	if(!check_rights(R_DEBUG))
+		return
+	verbs -= /client/proc/enable_debug_verbs
+	verbs.Add(/client/proc/disable_debug_verbs, admin_verbs_debug_mapping)
+	feedback_add_details("admin_verb","mDVE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-	if(!check_rights(R_DEBUG)) return
-
-	src.verbs += /client/proc/do_not_use_these 			//-errorage
-	src.verbs += /client/proc/camera_view 				//-errorage
-	src.verbs += /client/proc/sec_camera_report 		//-errorage
-	src.verbs += /client/proc/intercom_view 			//-errorage
-	src.verbs += /client/proc/air_status //Air things
-	src.verbs += /client/proc/Cell //More air things
-	src.verbs += /client/proc/atmosscan //check plumbing
-	src.verbs += /client/proc/powerdebug //check power
-	src.verbs += /client/proc/count_objects_on_z_level
-	src.verbs += /client/proc/count_objects_all
-	src.verbs += /client/proc/cmd_assume_direct_control	//-errorage
-	src.verbs += /client/proc/startSinglo
-	src.verbs += /client/proc/set_server_fps	//allows you to set the ticklag.
-	src.verbs += /client/proc/cmd_admin_grantfullaccess
-	src.verbs += /client/proc/cmd_admin_areatest
-	src.verbs += /client/proc/cmd_admin_rejuvenate
-	src.verbs += /datum/admins/proc/show_traitor_panel
-	src.verbs += /client/proc/disable_communication
-	src.verbs += /client/proc/print_pointers
-	src.verbs += /client/proc/count_movable_instances
-	src.verbs += /client/proc/cmd_show_at_list
-	src.verbs += /client/proc/cmd_show_at_list
-	src.verbs += /client/proc/manipulate_organs
-
-	feedback_add_details("admin_verb","mDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
-/client/proc/count_movable_instances()
+/client/proc/disable_debug_verbs()
 	set category = "Debug"
-	set name = "Count Movable Instances"
-
-	var/count = 0;
-
-	// Apparently there's a BYOND limit on the number of instances for non-turfs.
-
-	for(var/thing in world)
-		if(isturf(thing))
-			continue
-		count++;
-	usr << "There are [count]/[MAX_FLAG] instances of non-turfs in the world."
-
+	set name = "Debug verbs - Disable"
+	verbs.Remove(/client/proc/disable_debug_verbs, admin_verbs_debug_mapping)
+	verbs += /client/proc/enable_debug_verbs
+	feedback_add_details("admin_verb", "mDVD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/count_objects_on_z_level()
 	set category = "Mapping"
@@ -215,9 +215,9 @@ var/intercom_range_display_status = 0
 			if(i*10+j <= atom_list.len)
 				temp_atom = atom_list[i*10+j]
 				line += " no.[i+10+j]@\[[temp_atom.x], [temp_atom.y], [temp_atom.z]\]; "
-		world << line*/
+		to_chat(world, line)*/
 
-	world << "There are [count] objects of type [type_path] on z-level [num_level]"
+	to_chat(world, "There are [count] objects of type [type_path] on z-level [num_level]")
 	feedback_add_details("admin_verb","mOBJZ") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/count_objects_all()
@@ -242,9 +242,9 @@ var/intercom_range_display_status = 0
 			if(i*10+j <= atom_list.len)
 				temp_atom = atom_list[i*10+j]
 				line += " no.[i+10+j]@\[[temp_atom.x], [temp_atom.y], [temp_atom.z]\]; "
-		world << line*/
+		to_chat(world, line)*/
 
-	world << "There are [count] objects of type [type_path] in the game world"
+	to_chat(world, "There are [count] objects of type [type_path] in the game world")
 	feedback_add_details("admin_verb","mOBJ") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 

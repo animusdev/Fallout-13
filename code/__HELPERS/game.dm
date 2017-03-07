@@ -1,16 +1,21 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
+//supposedly the fastest way to do this according to https://gist.github.com/Giacom/be635398926bb463b42a
+#define RANGE_TURFS(RADIUS, CENTER) \
+  block( \
+    locate(max(CENTER.x-(RADIUS),1),          max(CENTER.y-(RADIUS),1),          CENTER.z), \
+    locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
+  )
 
-/proc/get_area(O)
-	var/atom/location = O
-	var/i
-	for(i=1, i<=20, i++)
-		if(isarea(location))
-			return location
-		else if (istype(location))
-			location = location.loc
-		else
-			return null
-	return 0
+#define Z_TURFS(ZLEVEL) block(locate(1,1,ZLEVEL), locate(world.maxx, world.maxy, ZLEVEL))
+
+/proc/get_area(atom/A)
+	if (!istype(A))
+		return
+	for(A, A && !isarea(A), A=A.loc); //semicolon is for the empty statement
+	return A
+
+/proc/get_area_name(atom/X)
+	var/area/Y = get_area(X)
+	return Y.name
 
 /proc/get_area_master(O)
 	var/area/A = get_area(O)
@@ -18,11 +23,25 @@
 		A = A.master
 	return A
 
-/proc/get_area_name(N) //get area by its name
+/proc/get_area_by_name(N) //get area by its name
 	for(var/area/A in world)
 		if(A.name == N)
 			return A
 	return 0
+
+/proc/get_areas_in_range(dist=0, atom/center=usr)
+	if(!dist)
+		var/turf/T = get_turf(center)
+		return T ? list(T.loc) : list()
+	if(!center)
+		return list()
+
+	var/list/turfs = RANGE_TURFS(dist, center)
+	var/list/areas = list()
+	for(var/V in turfs)
+		var/turf/T = V
+		areas |= T.loc
+	return areas
 
 // Like view but bypasses luminosity check
 
@@ -292,7 +311,8 @@
 	return candidates
 
 /proc/ScreenText(obj/O, maptext="", screen_loc="CENTER-7,CENTER-7", maptext_height=480, maptext_width=480)
-	if(!isobj(O))	O = new /obj/screen/text()
+	if(!isobj(O))
+		O = new /obj/screen/text()
 	O.maptext = maptext
 	O.maptext_height = maptext_height
 	O.maptext_width = maptext_width
@@ -300,8 +320,10 @@
 	return O
 
 /proc/Show2Group4Delay(obj/O, list/group, delay=0)
-	if(!isobj(O))	return
-	if(!group)	group = clients
+	if(!isobj(O))
+		return
+	if(!group)
+		group = clients
 	for(var/client/C in group)
 		C.screen += O
 	if(delay)
@@ -316,13 +338,27 @@
 		for(var/client/C in show_to)
 			C.images -= I
 
-/proc/get_active_player_count()
+/proc/flick_overlay_view(image/I, atom/target, duration) //wrapper for the above, flicks to everyone who can see the target atom
+	var/list/viewing = list()
+	for(var/m in viewers(target))
+		var/mob/M = m
+		if(M.client)
+			viewing += M.client
+	flick_overlay(I, viewing, duration)
+
+/proc/get_active_player_count(var/alive_check = 0, var/afk_check = 0, var/human_check = 0)
 	// Get active players who are playing in the round
 	var/active_players = 0
 	for(var/i = 1; i <= player_list.len; i++)
 		var/mob/M = player_list[i]
 		if(M && M.client)
-			if(istype(M, /mob/new_player)) // exclude people in the lobby
+			if(alive_check && M.stat)
+				continue
+			else if(afk_check && M.client.is_afk())
+				continue
+			else if(human_check && !ishuman(M))
+				continue
+			else if(isnewplayer(M)) // exclude people in the lobby
 				continue
 			else if(isobserver(M)) // Ghosts are fine if they were playing once (didn't start as observers)
 				var/mob/dead/observer/O = M
@@ -369,17 +405,17 @@
 
 	return new /datum/projectile_data(src_x, src_y, time, distance, power_x, power_y, dest_x, dest_y)
 
-/proc/pollCandidates(var/Question, var/jobbanType, var/datum/game_mode/gametypeCheck, var/be_special_flag = 0, var/poll_time = 300)
+/proc/pollCandidates(var/Question, var/jobbanType, var/datum/game_mode/gametypeCheck, var/be_special_flag = 0, var/poll_time = 300, var/ignore_category = null)
 	var/list/mob/dead/observer/candidates = list()
 	var/time_passed = world.time
 	if (!Question)
 		Question = "Would you like to be a special role?"
 
 	for(var/mob/dead/observer/G in player_list)
-		if(!G.key || !G.client)
+		if(!G.key || !G.client || (ignore_category && poll_ignore[ignore_category] && G.ckey in poll_ignore[ignore_category]))
 			continue
 		if(be_special_flag)
-			if(!(G.client.prefs.be_special & be_special_flag))
+			if(!(G.client.prefs) || !(be_special_flag in G.client.prefs.be_special))
 				continue
 		if (gametypeCheck)
 			if(!gametypeCheck.age_check(G.client))
@@ -388,31 +424,53 @@
 			if(jobban_isbanned(G, jobbanType) || jobban_isbanned(G, "Syndicate"))
 				continue
 		spawn(0)
-			G << 'sound/misc/notice2.ogg' //Alerting them to their consideration
-			switch(alert(G,Question,"Please answer in [poll_time/10] seconds!","Yes","No"))
-				if("Yes")
-					G << "<span class='notice'>Choice registered: Yes.</span>"
-					if((world.time-time_passed)>poll_time)//If more than 30 game seconds passed.
-						G << "<span class='danger'>Sorry, you were too late for the consideration!</span>"
-						G << 'sound/machines/buzz-sigh.ogg'
-						return
-					candidates += G
-				if("No")
-					G << "<span class='danger'>Choice registered: No.</span>"
-					return
-				else
-					return
+			to_chat(G, 'sound/misc/notice2.ogg')//Alerting them to their consideration
+
+			switch(ignore_category ? askuser(G,Question,"Please answer in [poll_time/10] seconds!","Yes","No","Never for this round", StealFocus=0, Timeout=poll_time) : askuser(G,Question,"Please answer in [poll_time/10] seconds!","Yes","No", StealFocus=0, Timeout=poll_time))
+				if(1)
+					to_chat(G, "<span class='notice'>Choice registered: Yes.</span>")
+					if((world.time-time_passed)>poll_time)
+						to_chat(G, "<span class='danger'>Sorry, you were too late for the consideration!</span>")
+						to_chat(G, 'sound/machines/buzz-sigh.ogg')
+					else
+						candidates += G
+				if(2)
+					to_chat(G, "<span class='danger'>Choice registered: No.</span>")
+				if(3)
+					var/list/L = poll_ignore[ignore_category]
+					if(!L)
+						poll_ignore[ignore_category] = list()
+					poll_ignore[ignore_category] += G.ckey
+					to_chat(G, "<span class='danger'>Choice registered: Never for this round.</span>")
 	sleep(poll_time)
 
-	//Check all our candidates, to make sure they didn't log off during the 30 second wait period.
+	//Check all our candidates, to make sure they didn't log off during the wait period.
 	for(var/mob/dead/observer/G in candidates)
 		if(!G.key || !G.client)
 			candidates.Remove(G)
 
 	return candidates
 
+/proc/pollCandidatesForMob(Question, jobbanType, datum/game_mode/gametypeCheck, be_special_flag = 0, poll_time = 300, mob/M, ignore_category = null)
+	var/list/L = pollCandidates(Question, jobbanType, gametypeCheck, be_special_flag, poll_time, ignore_category)
+	if(!M || qdeleted(M) || !M.loc)
+		return list()
+	return L
+
+/proc/pollCandidatesForMobs(Question, jobbanType, datum/game_mode/gametypeCheck, be_special_flag = 0, poll_time = 300, list/mobs, ignore_category = null)
+	var/list/L = pollCandidates(Question, jobbanType, gametypeCheck, be_special_flag, poll_time, ignore_category)
+	var/i=1
+	for(var/v in mobs)
+		var/atom/A = v
+		if(!A || qdeleted(A) || !A.loc)
+			mobs.Cut(i,i+1)
+		else
+			++i
+	return L
+
 /proc/makeBody(mob/dead/observer/G_found) // Uses stripped down and bastardized code from respawn character
-	if(!G_found || !G_found.key)	return
+	if(!G_found || !G_found.key)
+		return
 
 	//First we spawn a dude.
 	var/mob/living/carbon/human/new_character = new(pick(latejoin))//The mob being spawned.
@@ -423,9 +481,21 @@
 
 	return new_character
 
-//supposedly the fastest way to do this according to https://gist.github.com/Giacom/be635398926bb463b42a
-#define RANGE_TURFS(RADIUS, CENTER) \
-  block( \
-    locate(max(CENTER.x-(RADIUS),1),          max(CENTER.y-(RADIUS),1),          CENTER.z), \
-    locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
-  )
+/proc/send_to_playing_players(thing) // sends a whatever to all playing players; use instead of world, where needed
+	for(var/M in player_list)
+		if(M && !isnewplayer(M))
+			to_chat(M, thing)
+
+/proc/window_flash(var/client_or_usr)
+	if (!client_or_usr)
+		return
+	winset(client_or_usr, "mainwindow", "flash=5")
+
+/proc/GetRedPart(hexa)
+	return hex2num(copytext(hexa, 2, 4))
+
+/proc/GetGreenPart(hexa)
+	return hex2num(copytext(hexa, 4, 6))
+
+/proc/GetBluePart(hexa)
+	return hex2num(copytext(hexa, 6, 8))

@@ -1,17 +1,19 @@
 /datum/round_event_control/wizard/imposter //Mirror Mania
 	name = "Imposter Wizard"
 	weight = 1
-	typepath = /datum/round_event/wizard/imposter/
+	typepath = /datum/round_event/wizard/imposter
 	max_occurrences = 1
 	earliest_start = 0
 
 /datum/round_event/wizard/imposter/start()
 
 	for(var/datum/mind/M in ticker.mode.wizards)
-		if(!ishuman(M.current))	continue
+		if(!ishuman(M.current))
+			continue
 		var/mob/living/carbon/human/W = M.current
 		var/list/candidates = get_candidates(ROLE_WIZARD)
-		if(!candidates)	return //Sad Trombone
+		if(!candidates)
+			return //Sad Trombone
 		var/client/C = pick(candidates)
 
 		PoolOrNew(/obj/effect/particle_effect/smoke, W.loc)
@@ -22,12 +24,18 @@
 		I.name = I.dna.real_name
 		I.updateappearance(mutcolor_update=1)
 		I.domutcheck()
-		if(W.ears)		I.equip_to_slot_or_del(new W.ears.type, slot_ears)
-		if(W.w_uniform)	I.equip_to_slot_or_del(new W.w_uniform.type	, slot_w_uniform)
-		if(W.shoes)		I.equip_to_slot_or_del(new W.shoes.type, slot_shoes)
-		if(W.wear_suit)	I.equip_to_slot_or_del(new W.wear_suit.type, slot_wear_suit)
-		if(W.head)		I.equip_to_slot_or_del(new W.head.type, slot_head)
-		if(W.back)		I.equip_to_slot_or_del(new W.back.type, slot_back)
+		if(W.ears)
+			I.equip_to_slot_or_del(new W.ears.type, slot_ears)
+		if(W.w_uniform)
+			I.equip_to_slot_or_del(new W.w_uniform.type	, slot_w_uniform)
+		if(W.shoes)
+			I.equip_to_slot_or_del(new W.shoes.type, slot_shoes)
+		if(W.wear_suit)
+			I.equip_to_slot_or_del(new W.wear_suit.type, slot_wear_suit)
+		if(W.head)
+			I.equip_to_slot_or_del(new W.head.type, slot_head)
+		if(W.back)
+			I.equip_to_slot_or_del(new W.back.type, slot_back)
 		I.key = C.key
 
 		//Operation: Fuck off and scare people
@@ -46,5 +54,5 @@
 		ticker.mode.update_wiz_icons_added(I.mind)
 
 		I.attack_log += "\[[time_stamp()]\] <font color='red'>Is an imposter!</font>"
-		I << "<B>You are an imposter! Trick and confuse the crew to misdirect malice from your handsome original!</B>"
-		I << sound('sound/effects/magic.ogg')
+		to_chat(I, "<B>You are an imposter! Trick and confuse the crew to misdirect malice from your handsome original!</B>")
+		to_chat(I, sound('sound/effects/magic.ogg'))

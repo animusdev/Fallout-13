@@ -54,7 +54,7 @@
 
 		// Human check
 		var/human = 0
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			human = 1
 
 		var/name = M.name
@@ -85,23 +85,19 @@
 	ai_actual_track(target)
 
 /mob/living/silicon/ai/proc/ai_actual_track(mob/living/target)
-	if(!istype(target))	return
+	if(!istype(target))
+		return
 	var/mob/living/silicon/ai/U = usr
 
 	U.cameraFollow = target
 	U.tracking = 1
 
-	U << "<span class='notice'>Attempting to track [target.get_visible_name()]...</span>"
-	sleep(min(30, get_dist(target, U.eyeobj) / 4))
-	spawn(15) //give the AI a grace period to stop moving.
-		U.tracking = 0
-
 	if(!target || !target.can_track(usr))
-		U << "<span class='warning'>Target is not near any active cameras.</span>"
+		to_chat(U, "<span class='warning'>Target is not near any active cameras.</span>")
 		U.cameraFollow = null
 		return
 
-	U << "<span class='notice'>Now tracking [target.get_visible_name()] on camera.</span>"
+	to_chat(U, "<span class='notice'>Now tracking [target.get_visible_name()] on camera.</span>")
 
 	var/cameraticks = 0
 	spawn(0)
@@ -112,11 +108,11 @@
 			if(!target.can_track(usr))
 				U.tracking = 1
 				if(!cameraticks)
-					U << "<span class='warning'>Target is not near any active cameras. Attempting to reacquire...</span>"
+					to_chat(U, "<span class='warning'>Target is not near any active cameras. Attempting to reacquire...</span>")
 				cameraticks++
 				if(cameraticks > 9)
 					U.cameraFollow = null
-					U << "<span class='warning'>Unable to reacquire, cancelling track...</span>"
+					to_chat(U, "<span class='warning'>Unable to reacquire, cancelling track...</span>")
 					tracking = 0
 					return
 				else
@@ -140,7 +136,7 @@
 /proc/near_camera(mob/living/M)
 	if (!isturf(M.loc))
 		return 0
-	if(isrobot(M))
+	if(iscyborg(M))
 		var/mob/living/silicon/robot/R = M
 		if(!(R.camera && R.camera.can_use()) && !cameranet.checkCameraVis(M))
 			return 0

@@ -4,11 +4,10 @@
 	icon_state = "bio"
 	desc = "A hood that protects the head and face from biological comtaminants."
 	permeability_coefficient = 0.01
-	flags = BLOCKHAIR|THICKMATERIAL
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
-	unacidable = 1
-	burn_state = FIRE_PROOF
+	flags = THICKMATERIAL
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20, fire = 30, acid = 100)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	resistance_flags = ACID_PROOF
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 /obj/item/clothing/suit/bio_suit
@@ -16,19 +15,18 @@
 	desc = "A suit that protects against biological contamination."
 	icon_state = "bio"
 	item_state = "bio_suit"
-	w_class = 4//bulky item
+	w_class = WEIGHT_CLASS_BULKY
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = 1
 	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/reagent_containers/hypospray)
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20, fire = 30, acid = 100)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	strip_delay = 70
 	put_on_delay = 70
-	unacidable = 1
-	burn_state = FIRE_PROOF
+	resistance_flags = ACID_PROOF
 
 //Standard biosuit, orange stripe
 /obj/item/clothing/head/bio_hood/general
@@ -48,11 +46,11 @@
 
 //Security biosuit, grey with red stripe across the chest
 /obj/item/clothing/head/bio_hood/security
-	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 100, rad = 20)
+	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 100, rad = 20, fire = 30, acid = 100)
 	icon_state = "bio_security"
 
 /obj/item/clothing/suit/bio_suit/security
-	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 100, rad = 20)
+	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 100, rad = 20, fire = 30, acid = 100)
 	icon_state = "bio_security"
 
 
@@ -79,26 +77,6 @@
 /obj/item/clothing/head/bio_hood/cmo
 	icon_state = "bio_cmo"
 
-
-//Hazmat biosuit
-/obj/item/clothing/suit/bio_suit/fluff/hazmat
-	name = "hazmat suit"
-	desc = "It's a Level A , hazmat protective suit.<br>You can see some numbers on the size label: 35 56."
-	icon_state = "hazmat"
-	item_state = "hazmat_suit"
-
-/obj/item/clothing/head/bio_hood/fluff/hazmat
-	name = "hazmat hood"
-	desc = "My star, my perfect silence."
-	icon_state = "hazmat"
-	item_state = "hazmat_helmet"
-
-//Strange helmet
-/obj/item/clothing/head/bio_hood/fluff/strange
-	desc = "That's a very strange metal helmet...<br>I want to believe."
-	icon_state = "strange"
-	item_state = "helmet"
-	armor = list(melee = 40, bullet = 20, laser = 30, energy = 30, bomb = 30, bio = 100, rad = 50)
 
 //Plague Dr mask can be found in clothing/masks/gasmask.dm
 /obj/item/clothing/suit/bio_suit/plaguedoctorsuit

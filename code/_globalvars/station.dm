@@ -8,5 +8,3 @@ var/CHARGELEVEL = 0.001 // Cap for how fast cells charge, as a percentage-per-ti
 var/list/powernets = list()
 
 var/map_name = "Unknown"	//The name of the map that is loaded. Assigned in world/New()
-
-var/global_station_name //Display full random name of the game world for current round.

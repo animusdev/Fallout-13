@@ -1,0 +1,251 @@
+"aa" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalleftborderleft0"; icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
+"ab" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom0"; icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
+"ac" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2left"; icon_state = "horizontaltopborderbottom2left"},/area/f13/wasteland)
+"ad" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2"; icon_state = "horizontaltopborderbottom2"},/area/f13/wasteland)
+"ae" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerinner"; icon_state = "innermaincornerinner"},/area/f13/wasteland)
+"af" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerouter (NORTH)"; icon_state = "innermaincornerouter"; dir = 1},/area/f13/wasteland)
+"ag" = (/obj/structure/flora/grass/wasteland,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"ah" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerouter"; icon_state = "innermaincornerouter"},/area/f13/wasteland)
+"ai" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerinner (NORTH)"; icon_state = "innermaincornerinner"; dir = 1},/area/f13/wasteland)
+"aj" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2right"; icon_state = "horizontaltopborderbottom2right"},/area/f13/wasteland)
+"ak" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
+"al" = (/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"am" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontalcorroded"; icon_state = "dottedhorizontalcorroded"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"an" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2left"; icon_state = "horizontalinnermain2left"},/area/f13/wasteland)
+"ao" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain3"; icon_state = "horizontalinnermain3"},/area/f13/wasteland)
+"ap" = (/turf/open/indestructible/ground/road{tag = "icon-verticalinnermainbottom"; icon_state = "verticalinnermainbottom"},/area/f13/wasteland)
+"aq" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontalcorroded"; icon_state = "dottedhorizontalcorroded"},/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2"; icon_state = "horizontalinnermain2"},/area/f13/wasteland)
+"ar" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontalcorroded"; icon_state = "dottedhorizontalcorroded"},/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2right"; icon_state = "horizontalinnermain2right"},/area/f13/wasteland)
+"as" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontal"; icon_state = "dottedhorizontal"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"at" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontaldegraded"; icon_state = "dottedhorizontaldegraded"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"au" = (/obj/effect/decal/marking{tag = "icon-dottedverticalcorroded"; icon_state = "dottedverticalcorroded"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"av" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2"; icon_state = "horizontalinnermain2"},/area/f13/wasteland)
+"aw" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermainright"; icon_state = "horizontalinnermainright"},/area/f13/wasteland)
+"ax" = (/turf/open/indestructible/ground/road{tag = "icon-verticalinnermaintop"; icon_state = "verticalinnermaintop"},/area/f13/wasteland)
+"ay" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2right"; icon_state = "horizontalinnermain2right"},/area/f13/wasteland)
+"az" = (/turf/open/indestructible/ground/road{tag = "icon-hole"; icon_state = "hole"},/area/f13/wasteland)
+"aA" = (/obj/effect/decal/marking{tag = "icon-dottedverticaldegraded"; icon_state = "dottedverticaldegraded"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"aB" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerborder (NORTH)"; icon_state = "outerborder"; dir = 1},/area/f13/wasteland)
+"aC" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom0"; icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
+"aD" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottomright"; icon_state = "horizontalbottomborderbottomright"},/area/f13/wasteland)
+"aE" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottomleft"; icon_state = "horizontalbottomborderbottomleft"},/area/f13/wasteland)
+"aF" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerborder (EAST)"; icon_state = "outerborder"; dir = 4},/area/f13/wasteland)
+"aG" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner"; icon_state = "outerbordercorner"},/area/f13/wasteland)
+"aH" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop0"; icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
+"aI" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaloutermainright"; icon_state = "horizontaloutermainright"},/area/f13/wasteland)
+"aJ" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerouter"; icon_state = "outermaincornerouter"},/area/f13/wasteland)
+"aK" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerinner (NORTH)"; icon_state = "outermaincornerinner"; dir = 1},/area/f13/wasteland)
+"aL" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (WEST)"; icon_state = "outerbordercorner"; dir = 8},/area/f13/wasteland)
+"aM" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalleftborderleft0"; icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
+"aN" = (/turf/closed/wall/f13/store,/area/f13/wasteland)
+"aO" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
+"aP" = (/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"aQ" = (/obj/structure/simple_door/room,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"aR" = (/obj/structure/fence,/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"aS" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"aT" = (/obj/structure/fence{tag = "icon-metal_fence2"; icon_state = "metal_fence2"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"aU" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"aV" = (/obj/structure/fireaxecabinet,/turf/closed/wall/f13/store,/area/f13/wasteland)
+"aW" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom0"; icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
+"aX" = (/obj/machinery/vending,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"aY" = (/obj/structure/table,/obj/item/clothing/head/soft/red,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"aZ" = (/obj/structure/table,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"ba" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bb" = (/obj/structure/fence,/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner"; icon_state = "outerbordercorner"},/area/f13/wasteland)
+"bc" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop0"; icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
+"bd" = (/obj/structure/fence{tag = "icon-metal_fence2"; icon_state = "metal_fence2"},/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (WEST)"; icon_state = "outerbordercorner"; dir = 8},/area/f13/wasteland)
+"be" = (/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"bf" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalleftborderleft0"; icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
+"bg" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"bh" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
+"bi" = (/obj/structure/simple_door/room,/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bj" = (/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"bk" = (/obj/structure/extinguisher_cabinet,/turf/closed/wall/f13/store,/area/f13/wasteland)
+"bl" = (/obj/structure/simple_door/room,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"bm" = (/obj/structure/toilet{tag = "icon-toilet00 (EAST)"; icon_state = "toilet00"; dir = 4},/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"bn" = (/obj/machinery/camera,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"bo" = (/obj/structure/kitchenspike,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"bp" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"bq" = (/obj/structure/bed,/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"br" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bs" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (NORTH)"; icon_state = "outerbordercorner"; dir = 1},/area/f13/wasteland)
+"bt" = (/obj/structure/sink/kitchen,/turf/closed/wall/f13/store,/area/f13/wasteland)
+"bu" = (/obj/structure/simple_door,/turf/open/floor/f13,/area/f13/wasteland)
+"bv" = (/obj/structure/toilet{tag = "icon-toilet00 (EAST)"; icon_state = "toilet00"; dir = 4},/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bw" = (/obj/structure/toilet{tag = "icon-toilet00 (WEST)"; icon_state = "toilet00"; dir = 8},/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bx" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright1"; icon_state = "verticalrightborderright1"},/area/f13/wasteland)
+"by" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaloutermain1"; icon_state = "horizontaloutermain1"},/area/f13/wasteland)
+"bz" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaloutermain2right"; icon_state = "horizontaloutermain2right"},/area/f13/wasteland)
+"bA" = (/obj/structure/simple_door/room,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/wasteland)
+"bB" = (/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/wasteland)
+"bC" = (/obj/structure/closet/secure_closet/freezer/kitchen,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/wasteland)
+"bD" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright2"; icon_state = "verticalrightborderright2"},/area/f13/wasteland)
+"bE" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaloutermain2"; icon_state = "horizontaloutermain2"},/area/f13/wasteland)
+"bF" = (/obj/structure/fence,/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalleftborderleft0"; icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
+"bG" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"bH" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
+"bI" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bJ" = (/obj/structure/fence,/obj/structure/fence{tag = "icon-metal_fence2"; icon_state = "metal_fence2"},/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bK" = (/obj/structure/table,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/wasteland)
+"bL" = (/obj/structure/table,/obj/item/weapon/kitchen/knife,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/wasteland)
+"bM" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (EAST)"; icon_state = "outerbordercorner"; dir = 4},/area/f13/wasteland)
+"bN" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom0"; icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
+"bO" = (/turf/closed/wall/f13/supermart,/area/f13/wasteland)
+"bP" = (/obj/structure/noticeboard,/turf/closed/wall/f13/supermart,/area/f13/wasteland)
+"bQ" = (/obj/structure/extinguisher_cabinet,/turf/closed/wall/f13/supermart,/area/f13/wasteland)
+"bR" = (/obj/structure/simple_door/metal/store{tag = "icon-brokenstore"; icon_state = "brokenstore"},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"bS" = (/obj/structure/table,/obj/machinery/door/window,/turf/open/floor/f13,/area/f13/wasteland)
+"bT" = (/obj/machinery/camera,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"bU" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"bV" = (/obj/structure/simple_door/metal/store{tag = "icon-brokenstorechain"; icon_state = "brokenstorechain"},/turf/open/floor/f13,/area/f13/wasteland)
+"bW" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/wasteland)
+"bX" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bY" = (/obj/structure/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bZ" = (/obj/structure/chair{tag = "icon-chair (EAST)"; icon_state = "chair"; dir = 4},/turf/open/floor/f13/wood,/area/f13/wasteland)
+"ca" = (/turf/open/floor/f13/wood,/area/f13/wasteland)
+"cb" = (/turf/open/floor/f13/wood{tag = "icon-housebase"; icon_state = "housebase"},/area/f13/wasteland)
+"cc" = (/obj/structure/filingcabinet/chestdrawer/wheeled,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"cd" = (/obj/structure/table,/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"ce" = (/obj/effect/decal/marking{tag = "icon-dottedvertical"; icon_state = "dottedvertical"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"cf" = (/obj/structure/table/wood,/turf/open/floor/f13/wood{tag = "icon-housebase"; icon_state = "housebase"},/area/f13/wasteland)
+"cg" = (/obj/machinery/camera{tag = "icon-camera (NORTHEAST)"; icon_state = "camera"; dir = 5},/turf/open/floor/f13/wood,/area/f13/wasteland)
+"ch" = (/obj/structure/simple_door/room,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"ci" = (/obj/machinery/camera{tag = "icon-camera (NORTH)"; icon_state = "camera"; dir = 1},/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/wasteland)
+"cj" = (/obj/structure/chair{tag = "icon-chair (NORTH)"; icon_state = "chair"; dir = 1},/turf/open/floor/f13/wood,/area/f13/wasteland)
+"ck" = (/obj/machinery/camera{tag = "icon-camera (NORTHEAST)"; icon_state = "camera"; dir = 5},/turf/open/floor/f13/wood{tag = "icon-housebase"; icon_state = "housebase"},/area/f13/wasteland)
+"cl" = (/obj/structure/window/fulltile/house{tag = "icon-housewindow"; icon_state = "housewindow"; dir = 2},/turf/open/floor/f13/wood{tag = "icon-housebase"; icon_state = "housebase"},/area/f13/wasteland)
+"cm" = (/obj/structure/simple_door/metal/store{tag = "icon-brokenstore"; icon_state = "brokenstore"},/turf/open/floor/f13/wood{tag = "icon-housebase"; icon_state = "housebase"},/area/f13/wasteland)
+"cn" = (/obj/structure/simple_door/metal/store{tag = "icon-brokenstorechain"; icon_state = "brokenstorechain"},/turf/open/floor/f13/wood{tag = "icon-housebase"; icon_state = "housebase"},/area/f13/wasteland)
+"co" = (/obj/machinery/camera,/turf/open/indestructible/ground/sidewalk{tag = "icon-outerborder (EAST)"; icon_state = "outerborder"; dir = 4},/area/f13/wasteland)
+"cp" = (/turf/open/floor/f13{tag = "icon-stagestairs"; icon_state = "stagestairs"},/area/f13/wasteland)
+"cq" = (/obj/structure/closet,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"cr" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerborder (WEST)"; icon_state = "outerborder"; dir = 8},/area/f13/wasteland)
+"cs" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerborder"; icon_state = "outerborder"},/area/f13/wasteland)
+"ct" = (/obj/structure/window/fulltile/house{tag = "icon-housewindow"; icon_state = "housewindow"; dir = 2},/turf/open/floor/f13/wood,/area/f13/wasteland)
+"cu" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom2left"; icon_state = "horizontalbottomborderbottom2left"},/area/f13/wasteland)
+"cv" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom2"; icon_state = "horizontalbottomborderbottom2"},/area/f13/wasteland)
+"cw" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom2right"; icon_state = "horizontalbottomborderbottom2right"},/area/f13/wasteland)
+"cx" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom3"; icon_state = "horizontalbottomborderbottom3"},/area/f13/wasteland)
+"cy" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"cz" = (/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner"; icon_state = "outerbordercorner"},/area/f13/wasteland)
+"cA" = (/obj/structure/fence{tag = "icon-metal_fence2"; icon_state = "metal_fence2"},/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop0"; icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
+"cB" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop0"; icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
+"cC" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom0"; icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
+"cD" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2left (WEST)"; icon_state = "horizontalinnermain2left"; dir = 8},/area/f13/wasteland)
+"cE" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2 (WEST)"; icon_state = "horizontaltopborderbottom2"; dir = 8},/area/f13/wasteland)
+"cF" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom3"; icon_state = "horizontaltopborderbottom3"},/area/f13/wasteland)
+"cG" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2right (WEST)"; icon_state = "horizontaltopborderbottom2right"; dir = 8},/area/f13/wasteland)
+"cH" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom0"; icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
+"cI" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2left (WEST)"; icon_state = "horizontaltopborderbottom2left"; dir = 8},/area/f13/wasteland)
+"cJ" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
+"cK" = (/obj/structure/chair/bench,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"cL" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2left (WEST)"; icon_state = "horizontalinnermain2left"; dir = 8},/area/f13/wasteland)
+"cM" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2"; icon_state = "horizontalbottombordertop2"},/area/f13/wasteland)
+"cN" = (/turf/open/indestructible/ground/road{tag = "icon-verticalinnermainbottom (WEST)"; icon_state = "verticalinnermainbottom"; dir = 8},/area/f13/wasteland)
+"cO" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerinner (WEST)"; icon_state = "innermaincornerinner"; dir = 8},/area/f13/wasteland)
+"cP" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2"; icon_state = "horizontalinnermain2"},/area/f13/wasteland)
+"cQ" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2 (WEST)"; icon_state = "horizontalinnermain2"; dir = 8},/area/f13/wasteland)
+"cR" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2right (WEST)"; icon_state = "horizontalinnermain2right"; dir = 8},/area/f13/wasteland)
+"cS" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"cT" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2"; icon_state = "horizontalbottombordertop2"},/area/f13/wasteland)
+"cU" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerouter (WEST)"; icon_state = "innermaincornerouter"; dir = 8},/area/f13/wasteland)
+"cV" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertopleft (WEST)"; icon_state = "horizontalbottombordertopleft"; dir = 8},/area/f13/wasteland)
+"cW" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermainleft"; icon_state = "horizontalinnermainleft"},/area/f13/wasteland)
+"cX" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2 (WEST)"; icon_state = "horizontalinnermain2"; dir = 8},/area/f13/wasteland)
+"cY" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerinner (EAST)"; icon_state = "innermaincornerinner"; dir = 4},/area/f13/wasteland)
+"cZ" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerouter (EAST)"; icon_state = "innermaincornerouter"; dir = 4},/area/f13/wasteland)
+"da" = (/turf/open/indestructible/ground/road{tag = "icon-verticalinnermaintop (WEST)"; icon_state = "verticalinnermaintop"; dir = 8},/area/f13/wasteland)
+"db" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (NORTH)"; icon_state = "outerbordercorner"; dir = 1},/area/f13/wasteland)
+"dc" = (/obj/effect/decal/marking,/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"dd" = (/obj/structure/table,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"de" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (EAST)"; icon_state = "outerbordercorner"; dir = 4},/area/f13/wasteland)
+"df" = (/obj/machinery/door/poddoor/shutters,/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2 (WEST)"; icon_state = "horizontalinnermain2"; dir = 8},/area/f13/wasteland)
+"dg" = (/obj/machinery/door/poddoor/shutters,/turf/open/indestructible/ground/road{tag = "icon-horizontalinnermain2right (WEST)"; icon_state = "horizontalinnermain2right"; dir = 8},/area/f13/wasteland)
+"dh" = (/obj/structure/simple_door/room,/turf/open/floor/f13,/area/f13/wasteland)
+"di" = (/obj/structure/mirror,/turf/closed/wall/f13/store,/area/f13/wasteland)
+"dj" = (/obj/structure/sink{tag = "icon-sink (NORTH)"; icon_state = "sink"; dir = 1},/turf/closed/wall/f13/store,/area/f13/wasteland)
+"dk" = (/obj/structure/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dl" = (/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-outerturn (NORTH)"; icon_state = "outerturn"; dir = 1},/area/f13/wasteland)
+"dm" = (/obj/structure/window/reinforced{tag = "icon-twindowold (WEST)"; icon_state = "twindowold"; dir = 8},/obj/structure/table,/obj/item/weapon/paper_bin,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dn" = (/obj/structure/filingcabinet/security,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"do" = (/obj/structure/safe,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dp" = (/obj/structure/window/reinforced{tag = "icon-twindowold (WEST)"; icon_state = "twindowold"; dir = 8},/obj/structure/table,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dq" = (/obj/structure/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/obj/machinery/button{pixel_y = -25},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dr" = (/obj/structure/toilet{tag = "icon-toilet00 (WEST)"; icon_state = "toilet00"; dir = 8},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"ds" = (/obj/structure/fence,/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
+"dt" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerinner"; icon_state = "outermaincornerinner"},/area/f13/wasteland)
+"du" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerouter (NORTH)"; icon_state = "outermaincornerouter"; dir = 1},/area/f13/wasteland)
+"dv" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerouter (EAST)"; icon_state = "outermaincornerouter"; dir = 4},/area/f13/wasteland)
+"dw" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerinner (WEST)"; icon_state = "outermaincornerinner"; dir = 8},/area/f13/wasteland)
+"dx" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom1"; icon_state = "horizontalbottomborderbottom1"},/area/f13/wasteland)
+"dy" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerturn"; icon_state = "outerturn"},/area/f13/wasteland)
+"dz" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerturn (WEST)"; icon_state = "outerturn"; dir = 8},/area/f13/wasteland)
+"dA" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop2left"; icon_state = "horizontaltopbordertop2left"},/area/f13/wasteland)
+"dB" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertopright"; icon_state = "horizontaltopbordertopright"},/area/f13/wasteland)
+"dC" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertopleft"; icon_state = "horizontaltopbordertopleft"},/area/f13/wasteland)
+"dD" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop3"; icon_state = "horizontaltopbordertop3"},/area/f13/wasteland)
+"dE" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop2right"; icon_state = "horizontaltopbordertop2right"},/area/f13/wasteland)
+"dF" = (/turf/open/indestructible/ground/road{tag = "icon-innercornerpieceright"; icon_state = "innercornerpieceright"},/area/f13/wasteland)
+"dG" = (/turf/open/indestructible/ground/road{tag = "icon-innercornerpieceleft"; icon_state = "innercornerpieceleft"},/area/f13/wasteland)
+"dH" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottomright"; icon_state = "horizontaltopborderbottomright"},/area/f13/wasteland)
+"dI" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottomleft"; icon_state = "horizontaltopborderbottomleft"},/area/f13/wasteland)
+"dJ" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontalcorroded"; icon_state = "dottedhorizontalcorroded"},/obj/effect/decal/marking{tag = "icon-dottedhorizontaldegraded"; icon_state = "dottedhorizontaldegraded"},/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"dK" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2left"; icon_state = "horizontalbottombordertop2left"},/area/f13/wasteland)
+"dL" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop3"; icon_state = "horizontalbottombordertop3"},/area/f13/wasteland)
+"dM" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertopleft"; icon_state = "horizontalbottombordertopleft"},/area/f13/wasteland)
+"dN" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontaldegraded"; icon_state = "dottedhorizontaldegraded"},/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2"; icon_state = "horizontalbottombordertop2"},/area/f13/wasteland)
+"dO" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontaldegraded"; icon_state = "dottedhorizontaldegraded"},/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2right"; icon_state = "horizontalbottombordertop2right"},/area/f13/wasteland)
+"dP" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2right"; icon_state = "horizontalbottombordertop2right"},/area/f13/wasteland)
+
+(1,1,1) = {"
+aaabababababababababababababababacadadadaeafagagahaiajababababababababababababababababababababababak
+aaalalamamamamamamamamamamamanaoaeapapapafagagahaiaqaramamamamasasasasasatatatatatatatatatatatalalak
+aaalaualalalalalalalalalanavaoavawagagahaxaxaxaiaoayalalalalalazalalalalalalalalalalalalalalalaAalak
+aaalaualaBaCaCaCaCaCaCaCaCaCaCaCaDagaEaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaFalaAalak
+aaalaualakaGaHaHaHaHaHaHaHaHaHaHaIaJaKaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaLaaalaAalak
+aaalaualakaMaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaOaaalaualak
+aaalaualakaMaNaPaPaPaPaQaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaQaPaPaPaPaNaOaaalaualak
+aaalaualakaMaNaPaPaPaPaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaPaPaPaPaNaOaaalaualak
+aaalaualakaMaNaPaPaPaPaNaRaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaSaTaNaPaPaPaPaNaOaaalaualak
+aaalaualakaMaNaPaPaPaPaNaUaNaNaVaNaNaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaNaNaNaNaUaNaPaPaPaPaNaOaaalaAalak
+aaalaualakaMaNaQaNaNaNaNaUaNaXaYaZaNbabbbcbcbcbcbcbcbcbcbcbcbcbdbaaNbabaaNaUaNaNaNaNaQaNaOaaalaAazak
+aaalaualakaMaNaPaNaRaSaSaTaNbebebeaNbabfbgbgbgbgbgbgbgbgbgbgbgbhbabibabaaNbjaSaSaTaNaPaNaOaaalaAalak
+aaalaualakaMaNaPaNaUaNaNaNbkbebebeblbabfbgagbgagagagagagagbgbgbhbaaNaNaNaNaNaNaNaUaNaPaNaOaaalaAalak
+aaalaualakaMaNaPaNaUaNbmblbnbebebeaNbabfbgbgagagagagagagagbgbgbhbaaNaPboaPboaPaNaUaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNaUaNaNaNbpbeaNaNaNbabfbgbgagagagagbgbgbgbgbgbhbaaNaPaPaPaPaPaNaUaNaPaNaOaaazaAalak
+aaalaAalakaMaNaPaNaUaNbqbrbebebrbqaNbabfbgbgagagagbgbgaBaWaWaWbsbaaNaNaNaNbtbuaNaUaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNaUaNbvbabebebabwaNbabfbgagagbgagagbgbxbybybzbrbabAbBbCbCbBbBaNaUaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNaUaNaNaNbebeaNaNaNbabfbgbgagagbgbgbgbDbEbEbzbrbaaNbBbBbBbBbBaNaUaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNaUaNbqbrbebebrbaaNbabFaSaSbGaSaSbgaSbHbIbIbIbJbaaNbKbLbLbKbBaNaUaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNaUaNbvbabebebabwaNbabMaWaWbNaWaWaWaWbsbababababaaNbBbBbBbBbBaNaUaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNaUaNaNaNbebebkaNbObObObPbObQbObRbRbObQbObObObObObkaNaNbSaNaNaNaUaNaPaNaOaaalaualak
+aaalaAalakaMaNaPaNaUaNbqbrbebebebebOaPaPaPaPaPbTaPaPaPaPaPaPaPaPbObabababababaaNaUaNaPaNaOaaalaualak
+aaalaAalakaMaNaPaNaUaNbvbabebebebebUaPaPaPaPaPaPaPaPaPaPaPaPaPaPbUbabababababaaNaUaNaPaNaOaaalauazak
+aaalaAalakaMaNaPaNaUaNaNaNbebeaNaNbObObObObObObQbVbWbObObObObObObObabababababaaNaUaNaPaNaOaaalaualak
+aaalaAalakaMaNaPaNaUaNbqbrbebebrbqbObXbYbZbXbOcacacbcbbOcacacbccbObabacdbabacdaNaUaNaPaNaOaaalaualak
+aaalcealakaMaNaPaNaUaNbvbabebebabwbObXcacabXbOcacacacbbOcacfbXcabObabacdbabacdaNaUaNaPaNaOaaalaualak
+aaalcealakaMaNaPaNaUaNaNaNbebeaNaNbOcgcacbcachcacacacachcabXbYcbbObabacdbabacdaNaUaNaPaNaOaaalaAalak
+aaalcealakaMaNaPaNaUaNbqbrbebebrbqbObXcbcacfbOcbcacacabOcabXcfcbbObabacdbabacdaNaUaNaPaNaOaaalaAalak
+aaalcealakaMaNaPaNaUaNbvbabecibabwbOcfcjbZbXbOckcbcacabOcgcbcbcbbObabacdbabacdaNaUaNaPaNaOaaazcealak
+aaalcealakaMaNaPaNbObObObObObObObObObOclclbObObOcmcnbObObOclclbObObObObObObObObObOaNaPaNaOaaalcealak
+aaalcealakaMaNaPaNcacacacabOagagbgagagagbgaUaBcocpcpaBaFaUbgbgagagagagagbOcqcqcqcqaNaPaNaOaaalcealak
+aaalaAalakaMaNaPaNcacacacabOaSaSaSaSaSaSaSaTcrcsbabacrcsbjaSaSaSaSaSaSaSbOaPaPaPaPaNaPaNaOaaalcealak
+aaalaAalakaMaNaPaNcacacacactaBaWaWaWaWaWcucvcvcwbabaaWaWaWcucvcvcxcwaWaFbOcycyaPcyaNaPaNaOaaalcealak
+aaalaAalakaMaNaPaNcacacacactakczbcbcbcbcbccAbcbcaHaHbcbccBbcbcbcbcbcbdaabOcacacacaaNaPaNaOaaalcealak
+aaalaAalakaMaNaPaNcacacacabOakbfcCcDcEcEcFcEcEcGcCcHcIcEcFcEajcHcCcCcJaabOcacKcKcKaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNcacacacachakbfcLcMaecNcNcOazcPavcPaecNcNcNcOcQcRalcJaachcacacacaaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNcScScScSbOakbfcTaeafahcUcVavaecNcNafagagbgcWcXcXcRcJaabOcacKcKcKaNaPaNaOaaalaAalak
+aaalaAalakaMaNaPaNbObObObObOakbfcTcYcUcZafcZcNafbgahdadadacUcWcXcRalcJaabObObObObOaNaPaNaOaaalaAalak
+aaalaAalakaMaNaQaNaNaNaNcvcwdbbfcLcMcYcUagagagagahaicXcXcXcYaicQcRalcJbMaWaWaNaNaNaNaQaNaOaaalaAazak
+aaalaAalakaMaNaPaPaPaPaNbzbababfalcDcTcYdadadadaaicXcRdcalalaldcalalcJbababaaNaPaPaPaPaNaOaaalaAalak
+aaalaualakaMaNddaPaPaPaQbababadeaWcucvcvcvcwaNdfdfdfdgaNaNaNaNcvcxcwbsbababadhaPaNdidjaNaOaaalaAalak
+aaalaualakaMaNdddkaPaPaNaNaNaNaNaNaNaNaNaNaNaNcRalaldldmdndoaNbkaNaNaNaNaNaNaNaPaQaPaPaNaOaaalaAalak
+aaalaualakaMaNddddddaPaNaNaNaNaNaNaNaNaNaNaNaNalalalcJdpdqaPaQaPaPaPaPaPaPaPaQaPaNaPdraNaOaaalaualak
+aaalaualakaMaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNalalaldsaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaOaaalaualak
+aaalaualakbMaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWcoalalalbxcvdtdubgbgdvdwcvcvcvcwdxaWaWaWaWaWdbaaalaualak
+aaalaualcraHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHdyalalaldzdAdBbgagagbgdCdDdEaHaHaHaHaHaHaHaHaHcsalaualak
+aaalaualababababababababababababababababababdFalalaldGcIdHbgagagbgdIcEcEajabababababababababazaualak
+aaalalamamamamatdJamamamamamamamatatatatatatamamamamdKdLcYcUbgagagdMdLdNdNdOatatamamamamamamamalalak
+aaalalalalalalalalalalalalalalalalalalalalalalalaldKcTcTcTcYcUbgagcZcOdLcTcTdPalazalalalalalalalazak
+bMaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaDbgagbgaEaWaWaWaWaWaWaWaWaWaWaWaWaWaWdb
+"}

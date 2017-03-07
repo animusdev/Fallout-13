@@ -1,0 +1,185 @@
+"aa" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"ab" = (/turf/closed/wall/f13/wood/house,/area/f13/legion)
+"ac" = (/turf/open/floor/f13/wood,/area/f13/legion)
+"ad" = (/obj/structure/closet/crate,/turf/open/floor/f13/wood,/area/f13/legion)
+"ae" = (/obj/structure/bed,/obj/item/weapon/bedsheet/syndie,/turf/open/floor/f13/wood,/area/f13/legion)
+"af" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/legion)
+"ag" = (/obj/structure/window/fulltile/house{icon_state = "housewindowvertical"},/turf/open/floor/f13/wood,/area/f13/legion)
+"ah" = (/obj/structure/table/wood,/obj/item/weapon/pen/pencil,/turf/open/floor/f13/wood,/area/f13/legion)
+"ai" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor1-old"; icon_state = "floor1-old"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"aj" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/rifle,/obj/item/ammo_box/m308,/turf/open/floor/f13/wood,/area/f13/legion)
+"ak" = (/obj/structure/simple_door/room,/turf/open/floor/f13/wood,/area/f13/legion)
+"al" = (/obj/structure/barricade/wooden{step_x = 0},/turf/closed/wall/f13/wood,/area/f13/legion)
+"am" = (/obj/structure/mirror{dir = 8},/turf/closed/wall/f13/wood/house,/area/f13/legion)
+"an" = (/turf/closed/wall/f13/wood,/area/f13/legion)
+"ao" = (/obj/structure/simple_door/glass,/turf/open/floor/f13/wood,/area/f13/legion)
+"ap" = (/turf/open/indestructible/ground/desert,/area/f13/legion)
+"aq" = (/obj/structure/curtain,/turf/open/floor/f13/wood,/area/f13/legion)
+"ar" = (/obj/structure/sink{tag = "icon-sink (NORTH)"; icon_state = "sink"; dir = 1; step_y = 16},/turf/open/floor/f13/wood,/area/f13/legion)
+"as" = (/obj/structure/toilet,/turf/open/floor/f13/wood,/area/f13/legion)
+"at" = (/turf/closed/wall/f13/wood/interior,/area/f13/legion)
+"au" = (/obj/structure/barricade/wooden,/turf/open/indestructible/ground/desert,/area/f13/legion)
+"av" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13/wood,/area/f13/legion)
+"aw" = (/obj/structure/mirror,/turf/closed/wall/f13/wood/house,/area/f13/legion)
+"ax" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/legion)
+"ay" = (/obj/structure/window/fulltile/house,/obj/structure/barricade/wooden,/turf/open/floor/f13/wood,/area/f13/legion)
+"az" = (/obj/structure/closet/crate/bin,/turf/open/indestructible/ground/desert,/area/f13/legion)
+"aA" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor1-old"; icon_state = "floor1-old"},/turf/open/indestructible/ground/desert,/area/f13/legion)
+"aB" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor2-old"; icon_state = "floor2-old"},/turf/open/indestructible/ground/desert,/area/f13/legion)
+"aC" = (/turf/open/ruins{dir = 2; icon_state = "rubblecorner"; tag = "icon-rubblecorner (WEST)"},/area/f13/legion)
+"aD" = (/turf/closed/wall/f13/supermart,/area/f13/legion)
+"aE" = (/turf/open/ruins{tag = "icon-rubble (EAST)"; icon_state = "rubble"; dir = 4},/area/f13/legion)
+"aF" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-bone setter"; icon_state = "bone setter"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aG" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-bone-gel"; icon_state = "bone-gel"},/obj/structure/table/optable{tag = "icon-bone-gel"; icon_state = "bone-gel"},/obj/structure/table/optable{tag = "icon-drill"; icon_state = "drill"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aH" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-esaw_0"; icon_state = "esaw_0"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aI" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-cautery"; icon_state = "cautery"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aJ" = (/turf/open/ruins{tag = "icon-rubblecorner"; icon_state = "rubblecorner"},/area/f13/legion)
+"aK" = (/turf/open/ruins{tag = "icon-rubble (SOUTHEAST)"; icon_state = "rubble"; dir = 6},/area/f13/legion)
+"aL" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-hemostat"; icon_state = "hemostat"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aM" = (/obj/structure/table/optable,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-gibbl1"; icon_state = "gibbl1"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aN" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-scalpel"; icon_state = "scalpel"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aO" = (/turf/open/indestructible/ground/sidewalk{dir = 2; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"aP" = (/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
+"aQ" = (/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/legion)
+"aR" = (/obj/structure/kitchenspike,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor5-old"; icon_state = "floor5-old"},/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/legion)
+"aS" = (/obj/structure/campfire,/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/legion)
+"aT" = (/obj/structure/kitchenspike,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor2-old"; icon_state = "floor2-old"},/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/legion)
+"aU" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavementcorner"},/area/f13/legion)
+"aV" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{icon_state = "dirtcorner"},/area/f13/legion)
+"aW" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{icon_state = "dirt"},/area/f13/legion)
+"aX" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{dir = 8; icon_state = "dirtcorner"},/area/f13/legion)
+"aY" = (/obj/structure/window/fulltile/ruins{tag = "icon-ruinswindowbrokenvertical (NORTHEAST)"; icon_state = "ruinswindowbrokenvertical"},/turf/open/floor/f13/wood,/area/f13/legion)
+"aZ" = (/obj/structure/bed/roller,/turf/open/floor/f13/wood,/area/f13/legion)
+"ba" = (/obj/effect/decal/cleanable/blood/tracks,/turf/open/floor/f13/wood,/area/f13/legion)
+"bb" = (/obj/structure/table,/obj/structure/table/optable{tag = "icon-surgical_drapes"; icon_state = "surgical_drapes"},/turf/open/floor/f13/wood,/area/f13/legion)
+"bc" = (/turf/open/indestructible/ground/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/wasteland)
+"bd" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"be" = (/turf/open/indestructible/ground/sidewalk,/area/f13/legion)
+"bf" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/legion)
+"bg" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{dir = 4; icon_state = "dirt"},/area/f13/legion)
+"bh" = (/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"bi" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{dir = 8; icon_state = "dirt"},/area/f13/legion)
+"bj" = (/obj/structure/sink{tag = "icon-sink (EAST)"; icon_state = "sink"; dir = 4; step_x = -19; step_y = 0},/turf/closed/wall/f13/supermart,/area/f13/legion)
+"bk" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"bl" = (/turf/open/indestructible/ground/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
+"bm" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor4-old"; icon_state = "floor4-old"},/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"bn" = (/obj/structure/chair/wood{tag = "icon-wooden_chair (WEST)"; icon_state = "wooden_chair"; dir = 8},/turf/open/floor/f13/wood,/area/f13/legion)
+"bo" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/legion)
+"bp" = (/obj/structure/simple_door/interior,/turf/open/floor/f13/wood,/area/f13/legion)
+"bq" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/wasteland)
+"br" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/legion)
+"bs" = (/obj/structure/kitchenspike,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor1-old"; icon_state = "floor1-old"},/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/legion)
+"bt" = (/obj/structure/campfire,/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/legion)
+"bu" = (/obj/structure/kitchenspike,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor5-old"; icon_state = "floor5-old"},/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/legion)
+"bv" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavementcorner"},/area/f13/legion)
+"bw" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-gib5-old"; icon_state = "gib5-old"},/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"bx" = (/obj/structure/chair/comfy{tag = "icon-comfychair (WEST)"; icon_state = "comfychair"; dir = 8},/turf/open/floor/f13/wood,/area/f13/legion)
+"by" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-gib3"; icon_state = "gib3"},/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"bz" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowvertical"; tag = "icon-ruinswindowbrokenvertical (NORTHEAST)"},/turf/open/floor/f13/wood,/area/f13/legion)
+"bA" = (/obj/structure/bed/roller,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor2-old"; icon_state = "floor2-old"},/turf/open/floor/f13/wood,/area/f13/legion)
+"bB" = (/obj/effect/decal/cleanable/blood,/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"bC" = (/obj/structure/simple_door/brokenglass,/turf/open/floor/f13/wood,/area/f13/legion)
+"bD" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{dir = 4; icon_state = "dirtcorner"},/area/f13/legion)
+"bE" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirt"},/area/f13/legion)
+"bF" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-gib3-old"; icon_state = "gib3-old"},/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirt"},/area/f13/legion)
+"bG" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirtcorner"},/area/f13/legion)
+"bH" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-splatter3"; icon_state = "splatter3"},/turf/open/indestructible/ground/desert,/area/f13/legion)
+"bI" = (/turf/open/ruins{dir = 4; icon_state = "rubblecorner"; tag = "icon-rubblecorner (WEST)"},/area/f13/legion)
+"bJ" = (/turf/open/ruins{tag = "icon-rubble (NORTHEAST)"; icon_state = "rubble"; dir = 5},/area/f13/legion)
+"bK" = (/obj/structure/bed/roller,/obj/effect/decal/cleanable/blood/tracks{tag = "icon-gib3"; icon_state = "gib3"},/turf/open/floor/f13/wood,/area/f13/legion)
+"bL" = (/obj/structure/window/fulltile/ruins,/turf/open/floor/f13/wood,/area/f13/legion)
+"bM" = (/turf/open/ruins{tag = "icon-rubblecorner (EAST)"; icon_state = "rubblecorner"; dir = 4},/area/f13/legion)
+"bN" = (/turf/open/ruins{tag = "icon-rubble (NORTHWEST)"; icon_state = "rubble"; dir = 9},/area/f13/legion)
+"bO" = (/turf/open/ruins{tag = "icon-rubble (NORTH)"; icon_state = "rubble"; dir = 1},/area/f13/legion)
+"bP" = (/turf/open/ruins{dir = 1; icon_state = "rubblecorner"; tag = "icon-rubblecorner (WEST)"},/area/f13/legion)
+"bQ" = (/turf/open/ruins{tag = "icon-rubblecorner (NORTH)"; icon_state = "rubblecorner"; dir = 1},/area/f13/legion)
+"bR" = (/turf/open/ruins{tag = "icon-rubblecorner (WEST)"; icon_state = "rubblecorner"; dir = 8},/area/f13/legion)
+"bS" = (/turf/open/ruins{dir = 8; icon_state = "rubblecorner"; tag = "icon-rubblecorner"},/area/f13/legion)
+"bT" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/legion)
+"bU" = (/turf/open/ruins{tag = "icon-rubble (SOUTHWEST)"; icon_state = "rubble"; dir = 10},/area/f13/legion)
+"bV" = (/turf/open/indestructible/ground/dirt{icon_state = "dirtcorner"},/area/f13/legion)
+"bW" = (/turf/open/indestructible/ground/dirt{icon_state = "dirt"},/area/f13/legion)
+"bX" = (/turf/open/indestructible/ground/dirt{dir = 8; icon_state = "dirtcorner"},/area/f13/legion)
+"bY" = (/turf/closed/wall/f13/store,/area/f13/legion)
+"bZ" = (/obj/structure/noticeboard/hos,/turf/closed/wall/f13/store,/area/f13/legion)
+"ca" = (/turf/open/indestructible/ground/dirt{dir = 4; icon_state = "dirt"},/area/f13/legion)
+"cb" = (/turf/open/indestructible/ground/dirt{dir = 8; icon_state = "dirt"},/area/f13/legion)
+"cc" = (/obj/structure/rack,/turf/open/floor/f13/wood,/area/f13/legion)
+"cd" = (/obj/structure/bed,/obj/item/weapon/bedsheet/blue,/turf/open/floor/f13/wood,/area/f13/legion)
+"ce" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/black,/turf/open/floor/f13/wood,/area/f13/legion)
+"cf" = (/obj/structure/dresser,/turf/open/floor/f13/wood,/area/f13/legion)
+"cg" = (/obj/structure/filingcabinet/security,/turf/open/floor/f13/wood,/area/f13/legion)
+"ch" = (/obj/structure/bookcase/random,/turf/open/floor/f13/wood,/area/f13/legion)
+"ci" = (/obj/structure/punching_bag,/turf/open/floor/f13/wood,/area/f13/legion)
+"cj" = (/turf/open/ruins{tag = "icon-rubble (WEST)"; icon_state = "rubble"; dir = 8},/area/f13/legion)
+"ck" = (/obj/structure/table/wood/fancy,/obj/item/voodoo,/turf/open/floor/f13/wood,/area/f13/legion)
+"cl" = (/obj/structure/table/wood/fancy,/turf/open/floor/f13/wood,/area/f13/legion)
+"cm" = (/obj/structure/table/wood/fancy,/obj/item/weapon/pen/pencil,/turf/open/floor/f13/wood,/area/f13/legion)
+"cn" = (/obj/structure/guncase/shotgun,/turf/open/floor/f13/wood,/area/f13/legion)
+"co" = (/obj/structure/light_construct,/turf/open/floor/f13/wood,/area/f13/legion)
+"cp" = (/obj/structure/closet,/turf/open/floor/f13/wood,/area/f13/legion)
+"cq" = (/obj/structure/light_construct,/turf/open/indestructible/ground/desert,/area/f13/legion)
+"cr" = (/obj/structure/light_construct,/turf/open/ruins{tag = "icon-rubble (SOUTHEAST)"; icon_state = "rubble"; dir = 6},/area/f13/legion)
+"cs" = (/obj/structure/barricade/wooden{step_x = 0},/obj/structure/barricade/wooden{step_x = 0},/turf/closed/wall/f13/wood,/area/f13/legion)
+"ct" = (/obj/structure/window/fulltile/ruins{tag = "icon-ruinswindowbroken (NORTHEAST)"; icon_state = "ruinswindowbroken"},/turf/open/floor/f13/wood,/area/f13/legion)
+"cu" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13/wood,/area/f13/legion)
+"cv" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor2-old"; icon_state = "floor2-old"},/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"cw" = (/obj/structure/simple_door/dirtyglass,/turf/open/floor/f13/wood,/area/f13/legion)
+"cx" = (/obj/structure/table/wood/poker,/turf/open/floor/f13/wood,/area/f13/legion)
+"cy" = (/obj/structure/table/wood/poker,/obj/item/weapon/pen/pencil,/turf/open/floor/f13/wood,/area/f13/legion)
+"cz" = (/obj/structure/chair/comfy/black{dir = 1},/turf/open/floor/f13/wood,/area/f13/legion)
+"cA" = (/obj/effect/decal/cleanable/blood/tracks{tag = "icon-floor5-old"; icon_state = "floor5-old"},/turf/open/indestructible/ground/dirt,/area/f13/legion)
+"cB" = (/obj/structure/barricade/wooden,/turf/closed/wall/f13/wood,/area/f13/legion)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababaaaaaaaaaaaaaaaaabababababababababababaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaababababababababacacacacacabaaaaaaaaaaaaaaaaabadaeadaeadaeadaeadabaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaabaeadaeadaeadabacacafacacabaaaaaaaaaaaaaaaaagacacacacacacacacacabababababababaa
+aaaaaaaaaaaaaaaaaaaaabacacacacacacabacacahacacabaaaaaiaaaaaaaaaaabacacacacacacacacacabajajajajajabaa
+aaaaaaaaaaaaaaaaaaaaabaeadaeadacacakacacafacacabalalalalababamababanaoanananananaoanabacacacacajabaa
+aaaaaaaaaaaaaaaaaaaaabacacacacacacabacacafacacabapapapapabaqarasatacacacacacacacacacakacacacacajabaa
+aaaaaaaaaaaaaaaaaaalabaeadaeadaeacabacacacacacanauauauauanacacacakacacacacacacacacacabacacacacajabaa
+aaaaaaaaaaaaaaaaaaalababavabananabawabacacacacagapapapapananababababavababaxabavabananananabayababaa
+aaaaaaaaaaaaaaaaaaalapapapapapanaqasatacacacacanapapapapapapapapapapapapazapapapapapauapauapapaAalaa
+aaaaaaaaaaaaaaaaaaalapapapapapabacacakacacacacabapapapapapapapapapapapapapapapapapapauapauapapapalaa
+aaaaaaaaaaaaaaaaaaalapapapapapababananabaxabavabapapapapapapapapapapapapapapapapapapauaBauapapapalaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapazapapapapapapapapapapapapapapapapapapapapaCaDaDaDaDaDaDaDaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapaEanasanaFaGaHaIaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapapaJaKanacanacacacaLaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapaDaDananakanacaMacaNaDaa
+aaaaaOaPaPaPaPaPaPaQaQaRaSaTaQaQaQaQaQaUapapapaVaWaWaWaWaWaXapapapapapapapapaYacaZacacanacbaacbbaDaa
+aaaObcbdbdbdbdbdbdbebebebebebebebebebebfapapapbgbhbhbhbhbhbianananapapapapapanacacacacanacbaacacbjaa
+aabkblbdbdbdbdbdbdbebebebebebebebebebebfapapapbgbmbhbhbhbhbibnacanapapapapapboacacacacananbpananaDaa
+aaaabkbqbqbqbqbqbqbrbrbsbtbubrbrbrbrbrbvapapapbgbwbhbhbhbhbibxacboapapapapazanacacacacacacbaacacaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapbgbwbhbhbhbybibnacanapapapapapbzacbAacaZacaZacacacaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapbgbhbhbhbhbBbianananapapapapapaDaDaDaDananananbCanaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapbDbEbEbFbEbEbGapapapapapapapapapaCaKanacacacacacacaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapaaapapapbHapapapapapapapapapapapapbIbJanacbKacaZacaZaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapaEanananbLaDaDaDaDaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapbMbJbNbObPapapapalaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapbMbQapapapapapalaa
+aaaaaaaaaaaaaaaaaaalapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapapalaa
+aaaaaaaaaaaaaaaaaaalapapapapapapaCbRapapapapapapapapapapapapapapapapaCbSapapbTbTbTbTapbTbTbTbTapalaa
+aaaaaaaaaaaaaaaaaaalapapapapapapaKbUbRapapapapapapapapapapapapapapapaKbUapapbTbVbWbWbWbWbWbXbTapalaa
+aaaaaaaaaaaaaaaaaabYbYbLbYbYbYbLananbUbRapapapapapapbYbYbYbLbYbYbZbLananbUbRbTcabhbhbhbhbhcbbTapalaa
+aaaaaaaaaaaaaaaaaabYccaccdbYccaccdanbNbPapapapapapapbYcecfaccgcgchaccianbNbQbTcabhbhbhbhbhcbbTapalaa
+aaaaaaaaaaaaaaaaaabYacacacbYacacacancjapapapapapapazbYacacacacacacacacbYapapbTcabhbhbhbhbhcbbTapalaa
+aaaaaaaaaaaaaaaaaabYacacacbYacacacbYbQapapapapapapaJbYacacckclcmclaccnbYapapbTcabhbhbhbhbhcbbTapalaa
+aaaaaaaaaaaaaaaaaabYcoaccpbYcpaccobYcqapapapapapapcrancoacacacacacaccobYapapababababbhababababalcsaa
+aaaaaaaaaaaaaaaaaabYbYakbYbYbYakbYbYbYctbYcucubYbLananbYakbYbYbYbYakbYbYapapanbhcvbhbhbhbhbhabaaaaaa
+aaaaaaaaaaaaaaaaaabYacacacacacacacbYacacacacacacacacbYacacacacacacacacbYapapanbhbhbhbhbhbhbhabaaaaaa
+aaaaaaaaaaaaaaaaaabYacacacacacacacaoacacacacacacacaccwacacacacacacacacbYapapanbhbhbhbhbhbhbhabaaaaaa
+aaaaaaaaaaaaaaaaaabYacaccxcycxacacbYacacacahafacacacbYacacafafahafacacbYapapabbhbhbhbhbhbmbhabaaaaaa
+aaaaaaaaaaaaaaaaaabYcoacacacacaccoancoacacacczacaccobYcoacacacacacaccobYapapabcAbhbhbhbhbhbhabaaaaaa
+aaaaaaaaaaaaaaaaaabYbYbYbYbYbYbYbYananbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYcBcBabababababababababaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

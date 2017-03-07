@@ -5,8 +5,8 @@
 	item_state = "labcoat"
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|ARMS
-	allowed = list(/obj/item/device/analyzer,/obj/item/stack/medical,/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,/obj/item/device/healthanalyzer,/obj/item/device/flashlight/pen,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper,/obj/item/weapon/melee/classic_baton/telescopic, /obj/item/weapon/soap)
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
+	allowed = list(/obj/item/device/analyzer,/obj/item/stack/medical,/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,/obj/item/device/healthanalyzer,/obj/item/device/flashlight/pen,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper,/obj/item/weapon/melee/classic_baton/telescopic,/obj/item/weapon/soap,/obj/item/device/sensor_device,/obj/item/weapon/tank/internals/emergency_oxygen)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0, fire = 50, acid = 50)
 	togglename = "buttons"
 
 /obj/item/clothing/suit/toggle/labcoat/cmo
@@ -14,7 +14,6 @@
 	desc = "Bluer than the standard model."
 	icon_state = "labcoat_cmo"
 	item_state = "labcoat_cmo"
-	unacidable = 1
 
 /obj/item/clothing/suit/toggle/labcoat/emt
 	name = "EMT's jacket"
@@ -23,7 +22,7 @@
 	item_state = "labcoat_cmo"
 
 /obj/item/clothing/suit/toggle/labcoat/mad
-	name = "\improper Mad's labcoat"
+	name = "\improper The Mad's labcoat"
 	desc = "It makes you look capable of konking someone on the noggin and shooting them into space."
 	icon_state = "labgreen"
 	item_state = "labgreen"
@@ -47,15 +46,3 @@
 	name = "scientist labcoat"
 	desc = "A suit that protects against minor chemical spills. Has a purple stripe on the shoulder."
 	icon_state = "labcoat_tox"
-
-/obj/item/clothing/suit/toggle/labcoat/fluff/emergency
-	name = "first responder jacket"
-	desc = "A high-visibility jacket worn by medical first responders."
-	icon_state = "fr_jacket"
-	item_state = "fr_jacket"
-
-/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
-	name = "wanderer jacket"
-	desc = "A zipped-up hoodie made of tanned leather"
-	icon_state = "wanderer"
-	item_state = "owl"

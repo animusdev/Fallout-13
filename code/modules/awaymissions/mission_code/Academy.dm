@@ -1,32 +1,3 @@
-//Academy Areas
-
-/area/awaymission/academy
-	name = "\improper Academy Asteroids"
-	icon_state = "away"
-
-/area/awaymission/academy/headmaster
-	name = "\improper Academy Fore Block"
-	icon_state = "away1"
-
-/area/awaymission/academy/classrooms
-	name = "\improper Academy Classroom Block"
-	icon_state = "away2"
-
-/area/awaymission/academy/academyaft
-	name = "\improper Academy Ship Aft Block"
-	icon_state = "away3"
-
-/area/awaymission/academy/academygate
-	name = "\improper Academy Gateway"
-	icon_state = "away4"
-
-/area/awaymission/academy/academycellar
-	name = "\improper Academy Cellar"
-	icon_state = "away4"
-
-/area/awaymission/academy/academyengine
-	name = "\improper Academy Engine"
-	icon_state = "away4"
 
 //Academy Items
 
@@ -57,16 +28,21 @@
 	icon = 'icons/obj/cult.dmi'
 	icon_state = "forge"
 	anchored = 1
-	var/health = 200
+	obj_integrity = 200
+	max_integrity = 200
 	var/mob/living/current_wizard = null
 	var/next_check = 0
 	var/cooldown = 600
 	var/faction = "wizard"
-	var/broken = 0
 	var/braindead_check = 0
 
 /obj/structure/academy_wizard_spawner/New()
-	SSobj.processing |= src
+	START_PROCESSING(SSobj, src)
+
+/obj/structure/academy_wizard_spawner/Destroy()
+	if(!broken)
+		STOP_PROCESSING(SSobj, src)
+	return ..()
 
 /obj/structure/academy_wizard_spawner/process()
 	if(next_check < world.time)
@@ -91,7 +67,7 @@
 	if(!current_wizard)
 		return
 	spawn(0)
-		var/list/mob/dead/observer/candidates = pollCandidates("Do you want to play as Wizard Academy Defender?", "wizard")
+		var/list/mob/dead/observer/candidates = pollCandidatesForMob("Do you want to play as Wizard Academy Defender?", "wizard", null, ROLE_WIZARD, current_wizard)
 		var/mob/dead/observer/chosen = null
 
 		if(candidates.len)
@@ -102,7 +78,7 @@
 
 /obj/structure/academy_wizard_spawner/proc/summon_wizard()
 	var/turf/T = src.loc
-	
+
 	var/mob/living/carbon/human/wizbody = new(T)
 	wizbody.equipOutfit(/datum/outfit/wizard/academy)
 	var/obj/item/weapon/implant/exile/Implant = new/obj/item/weapon/implant/exile(wizbody)
@@ -110,7 +86,7 @@
 	wizbody.faction |= "wizard"
 	wizbody.real_name = "Academy Teacher"
 	wizbody.name = "Academy Teacher"
-	
+
 	var/datum/mind/wizmind = new /datum/mind()
 	wizmind.name = "Wizard Defender"
 	wizmind.special_role = "Academy Defender"
@@ -118,37 +94,21 @@
 	wizmind.objectives += O
 	wizmind.transfer_to(wizbody)
 	ticker.mode.wizards |= wizmind
-	
+
 	wizmind.AddSpell(new /obj/effect/proc_holder/spell/targeted/ethereal_jaunt)
 	wizmind.AddSpell(new /obj/effect/proc_holder/spell/targeted/projectile/magic_missile)
-	wizmind.AddSpell(new /obj/effect/proc_holder/spell/dumbfire/fireball)
+	wizmind.AddSpell(new /obj/effect/proc_holder/spell/fireball)
 
 	current_wizard = wizbody
-	
+
 	give_control()
 
-/obj/structure/academy_wizard_spawner/proc/update_status()
-	if(health<0)
+/obj/structure/academy_wizard_spawner/deconstruct(disassembled = TRUE)
+	if(!broken)
+		broken = 1
 		visible_message("<span class='warning'>[src] breaks down!</span>")
 		icon_state = "forge_off"
-		SSobj.processing.Remove(src)
-		broken = 1
-
-/obj/structure/academy_wizard_spawner/attackby(obj/item/weapon/W, mob/living/user, params)
-	add_fingerprint(user)
-	user.changeNext_move(CLICK_CD_MELEE)
-	if(!broken)
-		health -= W.force
-		update_status()
-	..()
-
-/obj/structure/academy_wizard_spawner/bullet_act(obj/item/projectile/Proj)
-	if(!broken)
-		if((Proj.damage_type == BRUTE || Proj.damage_type == BURN))
-			health -= Proj.damage
-			update_status()
-	..()
-	return
+		STOP_PROCESSING(SSobj, src)
 
 /datum/outfit/wizard/academy
 	name = "Academy Wizard"
@@ -159,32 +119,37 @@
 	backpack_contents = list(/obj/item/weapon/storage/box/survival = 1)
 
 /obj/item/weapon/dice/d20/fate
-	name = "Dice of Fate"
+	name = "Die of Fate"
 	desc = "A die with twenty sides. You can feel unearthly energies radiating from it. Using this might be VERY risky."
 	icon_state = "d20"
 	sides = 20
+	can_be_rigged = FALSE
+	var/reusable = 1
 	var/used = 0
-	var/rigged = -1
+
+/obj/item/weapon/dice/d20/fate/one_use
+	reusable = 0
 
 /obj/item/weapon/dice/d20/fate/diceroll(mob/user)
 	..()
 	if(!used)
 		if(!ishuman(user) || !user.mind || (user.mind in ticker.mode.wizards))
-			user << "<span class='warning'>You feel the magic of the dice is restricted to ordinary humans!</span>"
+			to_chat(user, "<span class='warning'>You feel the magic of the dice is restricted to ordinary humans!</span>")
 			return
-		if(rigged > 0)
+		if(rigged)
 			effect(user,rigged)
 		else
 			effect(user,result)
 
 /obj/item/weapon/dice/d20/fate/equipped(mob/user, slot)
 	if(!ishuman(user) || !user.mind || (user.mind in ticker.mode.wizards))
-		user << "<span class='warning'>You feel the magic of the dice is restricted to ordinary humans! You should leave it alone.</span>"
+		to_chat(user, "<span class='warning'>You feel the magic of the dice is restricted to ordinary humans! You should leave it alone.</span>")
 		user.drop_item()
 
 
 /obj/item/weapon/dice/d20/fate/proc/effect(var/mob/living/carbon/human/user,roll)
-	used = 1
+	if(!reusable)
+		used = 1
 	visible_message("<span class='userdanger'>The die flare briefly.</span>")
 	switch(roll)
 		if(1)
@@ -234,7 +199,7 @@
 			C.name = "Cookie of Fate"
 		if(12)
 			//Healing
-			user.revive()
+			user.revive(full_heal = 1, admin_revive = 1)
 		if(13)
 			//Mad Dosh
 			var/turf/Start = get_turf(src)
@@ -243,12 +208,12 @@
 				if(rand(0,1))
 					new /obj/item/stack/spacecash/c1000(T)
 				else
-					var/obj/item/weapon/moneybag/M = new(T)
+					var/obj/item/weapon/storage/bag/money/M = new(T)
 					for(var/i in 1 to rand(5,50))
 						new /obj/item/weapon/coin/gold(M)
 		if(14)
 			//Free Gun
-			new /obj/item/weapon/gun/projectile/revolver/mateba(get_turf(src))
+			new /obj/item/weapon/gun/ballistic/revolver/mateba(get_turf(src))
 		if(15)
 			//Random One-use spellbook
 			new /obj/item/weapon/spellbook/oneuse/random(get_turf(src))
@@ -261,7 +226,7 @@
 			servant_mind.objectives += O
 			servant_mind.transfer_to(H)
 
-			var/list/mob/dead/observer/candidates = pollCandidates("Do you want to play as [user.real_name] Servant?", "wizard")
+			var/list/mob/dead/observer/candidates = pollCandidatesForMob("Do you want to play as [user.real_name] Servant?", "wizard", mob = H)
 			var/mob/dead/observer/chosen = null
 
 			if(candidates.len)
@@ -281,7 +246,7 @@
 			new /obj/item/weapon/card/id/captains_spare(get_turf(src))
 		if(19)
 			//Instrinct Resistance
-			user << "<span class='notice'>You feel robust.</span>"
+			to_chat(user, "<span class='notice'>You feel robust.</span>")
 			var/datum/species/S = user.dna.species
 			S.brutemod *= 0.5
 			S.burnmod *= 0.5

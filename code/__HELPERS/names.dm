@@ -4,6 +4,8 @@
 	else
 		return "[pick(lizard_names_female)]-[pick(lizard_names_female)]"
 
+/proc/plasmaman_name()
+	return "[pick(plasmaman_names)] \Roman[rand(1,99)]"
 
 var/church_name = null
 /proc/church_name()
@@ -51,7 +53,7 @@ var/religion_name = null
 	return capitalize(name)
 
 /proc/station_name()
-	if (station_name)
+	if(station_name)
 		return station_name
 
 	if(config && config.station_name)
@@ -59,12 +61,11 @@ var/religion_name = null
 	else
 		station_name = new_station_name()
 
-	if (config && config.server_name)
-		world.name = "[config.server_name]"
+	if(config && config.server_name)
+		world.name = "[config.server_name][config.server_name==station_name ? "" : ": [station_name]"]"
 	else
 		world.name = station_name
 
-	global_station_name = station_name
 	return station_name
 
 /proc/new_station_name()
@@ -74,7 +75,7 @@ var/religion_name = null
 
 	//Rare: Pre-Prefix
 	if (prob(10))
-		name = pick("Traders of", "Merchants of", "Brotherhood of", "Mutants of", "Ghouls of", "Followers of", "Soldiers of", "Raiders of", "Slavers of", "Slaves of", "Outcasts of", "Guild of", "Squad of", "State of", "Scientists of", "Gun Runners of", "Union of", "Alliance of", "Government of", "Tribe of", "Rangers of", "Remnants of", "Gang of", "Experiment of", "Ultra Quest of", "Secret Knowledge of", "Top Secret of", "Crazed", "Crazy", "Insane", "Mad", "Psychotic", "Wild")
+		name = pick("Traders of", "Merchants of", "Brotherhood of", "Mutants of", "Ghouls of", "Followers of", "Soldiers of", "Raiders of", "Slavers of", "Slaves of", "Outcasts of", "Guild of", "Squad of", "State of", "Scientists of", "Gun Runners of", "Union of", "Alliance of", "Government of", "Tribe of", "Rangers of", "Remnants of", "Gang of", "Experiment of", "Ultra Quest of", "Secret Knowledge of", "Top Secret of", "Crazy Chronicle of", "Insane Story of", "Mad Tale of", "Psychotic Diary of", "Wild Ballad of")
 		new_station_name = name + " "
 		name = ""
 
@@ -86,12 +87,12 @@ var/religion_name = null
 		name = holiday.getStationPrefix()
 		//get normal name
 	if(!name)
-		name = pick("", "Enclave", "Steel", "Ghoul", "Crimson", "Regulator", "Super Mutant", "The Apocalypse", "Ranger", "Psychic", "Underground", "Conspiracy", "Rogue", "New California Republic", "Vault Tec", "Nuka Cola", "Sunset Sarsaparilla", "The Vault Dweller", "The Chosen One", "The Lone Wanderer", "The Courier", "The Sole Survivor", "North", "West", "East", "South", "Overseer", "Elder", "President", "Caesar's", "Imperial", "Unidentified", "Deathclaw", "Control", "Brahmin", "Glowing One", "Gecko", "Mole rat", "Tunnel Snake", "Skeleton", "Death", "Rad scorpion", "Fat Man", "Gentleman", "Capitalist", "Communist", "Radroach", "Robot", "Eyebot", "Sentry bot", "Protectron", "Robobrain", "Mister Handy", "Mister Gutsy", "PDQ-88b Securitron", "Liberty Prime", "Dwarf", "G.E.C.K.", "Terminal", "RobCo", "REPCONN", "Vertibird", "Supply", "Military", "Mirelurk", "GNR", "Science", "Tribesmen", "Minutemen")
+		name = pick("", "Enclave", "Steel", "Ghoul", "Crimson", "Regulator", "Super Mutant", "The Apocalypse", "Ranger", "Psychic", "Underground", "Conspiracy", "Rogue", "New California Republic", "Vault-Tec", "Nuka Cola", "Sunset Sarsaparilla", "The Vault Dweller", "The Chosen One", "The Lone Wanderer", "The Courier", "The Sole Survivor", "North", "West", "East", "South", "Overseer", "Elder", "President", "Caesar's", "Imperial", "Unidentified", "Deathclaw", "Control", "Brahmin", "Glowing One", "Gecko", "Mole rat", "Tunnel Snake", "Skeleton", "Deathclaw", "Rad scorpion", "Fat Man", "Gentleman", "Capitalist", "Communist", "Radroach", "Robot", "Eyebot", "Sentry bot", "Protectron", "Robobrain", "Mister Handy", "Mister Gutsy", "PDQ-88b Securitron", "Liberty Prime", "Dwarf", "G.E.C.K.", "Terminal", "RobCo", "REPCONN", "Vertibird", "Supply", "Military", "Mirelurk", "GNR", "Science", "Tribesmen", "Minutemen")
 	if(name)
 		new_station_name += name + " "
 
 	// Suffix
-	name = pick("Vault", "Hideout", "Army", "Building", "Museum", "Caravan", "Lab", "Hazard","Junkyard", "Bunker", "Shack", "Cemetery", "Cave", "Hut", "Cavern", "Department", "Trade Post", "Fort", "Village", "Town", "City", "Radio", "Wasteland", "Complex", "Base", "Facility", "Depot", "Outpost", "Legion", "Necropolis", "Observatory", "Array", "Relay", "Manhole", "Shelter", "Valley", "Hangar", "Prison", "Center", "Port", "Waystation", "Factory", "Hotel", "Stopover", "Hub", "HQ", "Office", "Casino", "Fortification", "Colony", "Camping", "Camp", "Sewer")
+	name = pick("Vault", "Hideout", "Army", "Building", "Museum", "Caravan", "Lab", "Hazard", "Junkyard", "Bunker", "Shack", "Hut", "Cemetery", "Cave", "Cavern", "Department", "Trade Post", "Fort", "Village", "Town", "City", "Radio", "Wasteland", "Complex", "Base", "Facility", "Depot", "Outpost", "Legion", "Necropolis", "Observatory", "Array", "Relay", "Manhole", "Shelter", "Valley", "Hangar", "Prison", "Center", "Port", "Waystation", "Factory", "Hotel", "Stopover", "Hub", "HQ", "Office", "Casino", "Fortification", "Colony", "Camping", "Camp", "Sewer")
 	new_station_name += name + " "
 
 	// ID Number
@@ -171,7 +172,7 @@ var/syndicate_code_response//Code response for traitors.
 
 	var/safety[] = list(1,2,3)//Tells the proc which options to remove later on.
 	var/nouns[] = list("love","hate","anger","peace","pride","sympathy","bravery","loyalty","honesty","integrity","compassion","charity","success","courage","deceit","skill","beauty","brilliance","pain","misery","beliefs","dreams","justice","truth","faith","liberty","knowledge","thought","information","culture","trust","dedication","progress","education","hospitality","leisure","trouble","friendships", "relaxation")
-	var/drinks[] = list("vodka and tonic","gin fizz","bahama mama","manhattan","black Russian","whiskey soda","long island tea","margarita","Irish coffee"," manly dwarf","Irish cream","doctor's delight","Beepksy Smash","tequila sunrise","brave bull","gargle blaster","bloody mary","whiskey cola","white Russian","vodka martini","martini","Cuba libre","kahlua","vodka","wine","moonshine")
+	var/drinks[] = list("vodka and tonic","gin fizz","bahama mama","manhattan","black Russian","whiskey soda","long island iced tea","margarita","Irish coffee"," manly dwarf","Irish cream","doctor's delight","Beepksy Smash","tequila sunrise","brave bull","gargle blaster","bloody mary","whiskey cola","white Russian","vodka martini","martini","Cuba libre","kahlua","vodka","wine","moonshine")
 	var/locations[] = teleportlocs.len ? teleportlocs : drinks//if null, defaults to drinks instead.
 
 	var/names[] = list()

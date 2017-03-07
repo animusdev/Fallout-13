@@ -1,0 +1,138 @@
+//Fallout 13 various suits directory
+
+/obj/item/clothing/suit/f13
+	icon = 'icons/fallout/clothing/suits.dmi'
+
+/obj/item/clothing/suit/f13/robe_liz
+	name = "tan robe"
+	desc = "Only a reptilian would find this robe nice and comfortable."
+	icon_state = "robe_liz"
+	item_state = "brownjsuit"
+
+/obj/item/clothing/suit/f13/mantle_liz
+	name = "hide mantle"
+	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
+	icon_state = "mantle_liz"
+	item_state = "det_suit"
+
+/obj/item/clothing/suit/f13/vest
+	name = "tan vest"
+	desc = "It's a vest made of tanned leather."
+	icon_state = "tanleather"
+	item_state = "det_suit"
+	body_parts_covered = CHEST
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+
+/obj/item/clothing/suit/f13/puffer
+	name = "puffer vest"
+	desc = "It's a worn thick vest with a brown rubbery, water-resistant shell."
+	icon_state = "puffervest"
+	item_state = "det_suit"
+	body_parts_covered = CHEST
+	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+
+/obj/item/clothing/suit/f13/battlecruiser //Do we have Star Craft here as well?!
+	name = "captain's coat"
+	desc = "Battlecruiser operational!"
+	icon_state = "battlecruiser"
+	item_state = "hostrench"
+	body_parts_covered = CHEST|ARMS
+	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/f13/cowboybvest //Originally cowboy stuff by Nienhaus
+	name = "brown vest"
+	desc = "A brown vest, typically worn by wannabe cowboys and prospectors. It has a few pockets for tiny items."
+	icon_state = "cowboybvest"
+	item_state = "lb_suit"
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
+
+/obj/item/clothing/suit/f13/cowboygvest
+	name = "grey vest"
+	desc = "A grey vest, typically worn by wannabe cowboys and prospectors. It has a few pockets for tiny items."
+	icon_state = "cowboygvest"
+	item_state = "gy_suit"
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
+
+/obj/item/clothing/suit/f13/mfp //Mad Max 1979 babe!
+	name = "mfp jacket"
+	desc = "A Main Force Patrol leather jacket.<br>Offbeat."
+	icon_state = "mfp"
+	item_state = "hostrench"
+	body_parts_covered = CHEST|ARMS
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 20, acid = 0)
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/f13/veteran
+	name = "merc veteran coat"
+	desc = "A blue leather coat along with a few war medals.<br>That type of outfit is common for professional mercenaries and bounty hunters."
+	icon_state = "veteran"
+	item_state = "suit-command"
+	body_parts_covered = CHEST|GROIN
+	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/f13/duster
+	name = "duster"
+	desc = "A long brown leather overcoat.<br>Powerful accessory of fearsome bounty hunter."
+	icon_state = "duster"
+	item_state = "det_suit"
+	body_parts_covered = CHEST|LEGS|FEET|ARMS
+	armor = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
+
+/obj/item/clothing/suit/f13/sheriff
+	name = "sheriff duster"
+	desc = "A long brown leather overcoat.<br>Powerful accessory of a respectful sherif, bringer of justice."
+	icon_state = "sheriff"
+	item_state = "det_suit"
+	body_parts_covered = CHEST|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 0)
+
+/obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
+	name = "tan trenchcoat"
+	desc = "A resistant, tan trenchcoat, typically worn by pre-War generals."
+	icon_state = "autumn"
+	item_state = "autumn"
+	body_parts_covered = CHEST|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 999, fire = 0, acid = 0) //Reference to colonel not dying from radiation where anyone else dies.
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor)
+
+/obj/item/clothing/suit/f13/hubologist
+	name = "Hubologist's robe"
+	desc = "A black robe worn by zealots of Habology.<br>Be aware - the spirits of the dead are all around us!"
+	icon_state = "hubologist"
+	item_state = "wcoat"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
+
+/obj/item/clothing/suit/f13/scribe
+	name = "Brotherhood Scribe's robe"
+	desc = "A blue cloth robe worn by the Brotherhood of Steel Scribes."
+	icon_state = "scribe"
+	item_state = "suit-command"
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
+
+/obj/item/clothing/suit/f13/elder //Robes are made of finest cloth, so you won't be able to put sharp objects but pens in.
+	name = "Brotherhood Elder's robe"
+	desc = "A blue cloth robe with some scarlet red parts, traditionally worn by the Brotherhood of Steel Elder."
+	icon_state = "elder"
+	item_state = "suit-command"
+	body_parts_covered = CHEST|ARMS
+	armor = list(melee = 20, bullet = 10, laser = 10,energy = 10, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
+
+//Special Biosuit
+
+/obj/item/clothing/suit/bio_suit/f13/hazmat
+	name = "hazmat suit"
+	desc = "Yellow Level A , hazmat protective suit.<br>You can see some numbers on the size label: 35 56."
+	icon = 'icons/fallout/clothing/suits.dmi'
+	icon_state = "hazmat"
+	item_state = "hazmat_suit"
+
+/obj/item/clothing/head/bio_hood/f13/hazmat
+	name = "hazmat hood"
+	desc = "My star, my perfect silence."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	icon_state = "hazmat"
+	item_state = "hazmat_helmet"

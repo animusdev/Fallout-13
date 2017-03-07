@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/carp
-	name = "Cazador"
-	desc = "Big flying thing."
+	name = "space carp"
+	desc = "A ferocious, fang-bearing creature that resembles a fish."
 	icon_state = "carp"
 	icon_living = "carp"
 	icon_dead = "carp_dead"
@@ -14,13 +14,14 @@
 	emote_taunt = list("gnashes")
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 60
-	health = 60
+	maxHealth = 25
+	health = 25
 
-	harm_intent_damage = 10
-	melee_damage_lower = 20
-	melee_damage_upper = 20
-	attacktext = "stings"
+	harm_intent_damage = 8
+	obj_damage = 50
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	speak_emote = list("gnashes")
 
@@ -30,7 +31,8 @@
 	maxbodytemp = 1500
 
 	faction = list("carp")
-	flying = 1
+	movement_type = FLYING
+	pressure_resistance = 200
 	gold_core_spawnable = 1
 
 /mob/living/simple_animal/hostile/carp/Process_Spacemove(movement_dir = 0)
@@ -47,15 +49,10 @@
 	icon_living = "holocarp"
 	maxbodytemp = INFINITY
 	gold_core_spawnable = 0
-
-/mob/living/simple_animal/hostile/carp/holocarp/death()
-	..(1)
-	ghostize()
-	qdel(src)
-	return
+	del_on_death = 1
 
 /mob/living/simple_animal/hostile/carp/megacarp
-	icon = 'icons/mob/alienqueen.dmi'
+	icon = 'icons/mob/broadMobs.dmi'
 	name = "Mega Space Carp"
 	desc = "A ferocious, fang bearing creature that resembles a shark. This one seems especially ticked off."
 	icon_state = "megacarp"
@@ -67,5 +64,16 @@
 	pixel_x = -16
 	mob_size = MOB_SIZE_LARGE
 
+	obj_damage = 80
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+
+
+/mob/living/simple_animal/hostile/carp/cayenne
+	name = "Cayenne"
+	desc = "A failed Syndicate experiment in weaponized space carp technology, it now serves as a lovable mascot."
+	gender = FEMALE
+	speak_emote = list("squeaks")
+	gold_core_spawnable = 0
+	faction = list("syndicate")
+	AIStatus = AI_OFF

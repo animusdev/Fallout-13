@@ -27,7 +27,7 @@
 	if(!query_text || length(query_text) < 1)
 		return
 
-	//world << query_text
+//	to_chat(world, query_text)
 
 	var/list/query_list = SDQL2_tokenize(query_text)
 
@@ -75,6 +75,7 @@
 			if(char == "/" || char == "*")
 				for(var/from in from_objs)
 					objs += SDQL_get_all(type, from)
+					CHECK_TICK
 
 			else if(char == "'" || char == "\"")
 				objs += locate(copytext(type, 2, length(type)))
@@ -85,6 +86,7 @@
 			for(var/datum/d in objs_temp)
 				if(SDQL_expression(d, query_tree["where"]))
 					objs += d
+				CHECK_TICK
 
 		switch(query_tree[1])
 			if("call")
@@ -93,14 +95,13 @@
 
 				for(var/datum/d in objs)
 					for(var/v in call_list)
-						// To stop any procs which sleep from executing slowly.
-						if(d)
-							if(hascall(d, v))
-								spawn() call(d, v)(arglist(args_list)) // Spawn in case the function sleeps.
+						SDQL_callproc(d, v, args_list)
+						CHECK_TICK
 
 			if("delete")
 				for(var/datum/d in objs)
-					del d
+					qdel(d)
+					CHECK_TICK
 
 			if("select")
 				var/text = ""
@@ -133,7 +134,7 @@
 								vals += v
 								vals[v] = SDQL_expression(d, set_list[v])
 
-						if(istype(d, /turf))
+						if(isturf(d))
 							for(var/v in vals)
 								if(v == "x" || v == "y" || v == "z")
 									continue
@@ -143,10 +144,15 @@
 						else
 							for(var/v in vals)
 								d.vars[v] = vals[v]
+						CHECK_TICK
 
 
 
 
+/proc/SDQL_callproc(thing, procname, args_list)
+	set waitfor = 0
+	if(hascall(thing, procname))
+		call(thing, procname)(arglist(args_list))
 
 /proc/SDQL_parse(list/query_list)
 	var/datum/SDQL_parser/parser = new()
@@ -172,7 +178,7 @@
 				querys[querys_pos] = parsed_tree
 				querys_pos++
 			else //There was an error so don't run anything, and tell the user which query has errored.
-				usr << "<span class='danger'>Parsing error on [querys_pos]\th query. Nothing was executed.</span>"
+				to_chat(usr, "<span class='danger'>Parsing error on [querys_pos]\th query. Nothing was executed.</span>")
 				return list()
 			query_tree = list()
 			do_parse = 0
@@ -193,22 +199,22 @@
 
 	for(var/item in query_tree)
 		if(istype(item, /list))
-			usr << "[spaces]("
+			to_chat(usr, "[spaces](")
 			SDQL_testout(item, indent + 1)
-			usr << "[spaces])"
+			to_chat(usr, "[spaces])")
 
 		else
-			usr << "[spaces][item]"
+			to_chat(usr, "[spaces][item]")
 
 		if(!isnum(item) && query_tree[item])
 
 			if(istype(query_tree[item], /list))
-				usr << "[spaces]    ("
+				to_chat(usr, "[spaces]    (")
 				SDQL_testout(query_tree[item], indent + 2)
-				usr << "[spaces]    )"
+				to_chat(usr, "[spaces]    )")
 
 			else
-				usr << "[spaces]    [query_tree[item]]"
+				to_chat(usr, "[spaces]    [query_tree[item]]")
 
 
 
@@ -240,36 +246,48 @@
 		return out
 
 	type = text2path(type)
-
+	var/typecache = typecacheof(type)
+	
 	if(ispath(type, /mob))
 		for(var/mob/d in location)
-			if(istype(d, type))
+			if(typecache[d.type])
 				out += d
+			CHECK_TICK
 
 	else if(ispath(type, /turf))
 		for(var/turf/d in location)
-			if(istype(d, type))
+			if(typecache[d.type])
 				out += d
+			CHECK_TICK
 
 	else if(ispath(type, /obj))
 		for(var/obj/d in location)
-			if(istype(d, type))
+			if(typecache[d.type])
 				out += d
+			CHECK_TICK
 
 	else if(ispath(type, /area))
 		for(var/area/d in location)
-			if(istype(d, type))
+			if(typecache[d.type])
 				out += d
+			CHECK_TICK
 
 	else if(ispath(type, /atom))
 		for(var/atom/d in location)
-			if(istype(d, type))
+			if(typecache[d.type])
 				out += d
-
-	else
-		for(var/datum/d in location)
-			if(istype(d, type))
-				out += d
+			CHECK_TICK
+	else if(ispath(type, /datum))
+		if(location == world) //snowflake for byond shortcut
+			for(var/datum/d) //stupid byond trick to have it not return atoms to make this less laggy
+				if(typecache[d.type])
+					out += d
+				CHECK_TICK
+		else
+			for(var/datum/d in location)
+				if(typecache[d.type])
+					out += d
+				CHECK_TICK
 
 	return out
 
@@ -292,19 +310,19 @@
 		if(op != "")
 			switch(op)
 				if("+")
-					result += val
+					result = (result + val)
 				if("-")
-					result -= val
+					result = (result - val)
 				if("*")
-					result *= val
+					result = (result * val)
 				if("/")
-					result /= val
+					result = (result / val)
 				if("&")
-					result &= val
+					result = (result & val)
 				if("|")
-					result |= val
+					result = (result | val)
 				if("^")
-					result ^= val
+					result = (result ^ val)
 				if("=", "==")
 					result = (result == val)
 				if("!=", "<>")
@@ -322,7 +340,7 @@
 				if("or", "||")
 					result = (result || val)
 				else
-					usr << "<span class='danger'>SDQL2: Unknown op [op]</span>"
+					to_chat(usr, "<span class='danger'>SDQL2: Unknown op [op]</span>")
 					result = null
 		else
 			result = val
@@ -427,7 +445,7 @@
 
 		else if(char == "'")
 			if(word != "")
-				usr << "\red SDQL2: You have an error in your SDQL syntax, unexpected ' in query: \"<font color=gray>[query_text]</font>\" following \"<font color=gray>[word]</font>\". Please check your syntax, and try again."
+				to_chat(usr, "\red SDQL2: You have an error in your SDQL syntax, unexpected ' in query: \"<font color=gray>[query_text]</font>\" following \"<font color=gray>[word]</font>\". Please check your syntax, and try again.")
 				return null
 
 			word = "'"
@@ -447,7 +465,7 @@
 					word += char
 
 			if(i > len)
-				usr << "\red SDQL2: You have an error in your SDQL syntax, unmatched ' in query: \"<font color=gray>[query_text]</font>\". Please check your syntax, and try again."
+				to_chat(usr, "\red SDQL2: You have an error in your SDQL syntax, unmatched ' in query: \"<font color=gray>[query_text]</font>\". Please check your syntax, and try again.")
 				return null
 
 			query_list += "[word]'"
@@ -455,7 +473,7 @@
 
 		else if(char == "\"")
 			if(word != "")
-				usr << "\red SDQL2: You have an error in your SDQL syntax, unexpected \" in query: \"<font color=gray>[query_text]</font>\" following \"<font color=gray>[word]</font>\". Please check your syntax, and try again."
+				to_chat(usr, "\red SDQL2: You have an error in your SDQL syntax, unexpected \" in query: \"<font color=gray>[query_text]</font>\" following \"<font color=gray>[word]</font>\". Please check your syntax, and try again.")
 				return null
 
 			word = "\""
@@ -475,7 +493,7 @@
 					word += char
 
 			if(i > len)
-				usr << "\red SDQL2: You have an error in your SDQL syntax, unmatched \" in query: \"<font color=gray>[query_text]</font>\". Please check your syntax, and try again."
+				to_chat(usr, "\red SDQL2: You have an error in your SDQL syntax, unmatched \" in query: \"<font color=gray>[query_text]</font>\". Please check your syntax, and try again.")
 				return null
 
 			query_list += "[word]\""

@@ -5,19 +5,21 @@
 	icon_state = "pdapainter"
 	density = 1
 	anchored = 1
-	var/obj/item/clothing/gloves/pda/storedpda = null
+	var/obj/item/device/pda/storedpda = null
 	var/list/colorlist = list()
+	obj_integrity = 200
+	max_integrity = 200
 
 
 /obj/machinery/pdapainter/update_icon()
-	overlays.Cut()
+	cut_overlays()
 
 	if(stat & BROKEN)
 		icon_state = "[initial(icon_state)]-broken"
 		return
 
 	if(storedpda)
-		overlays += "[initial(icon_state)]-closed"
+		add_overlay("[initial(icon_state)]-closed")
 
 	if(powered())
 		icon_state = initial(icon_state)
@@ -28,29 +30,48 @@
 
 /obj/machinery/pdapainter/New()
 	..()
-	var/blocked = list(/obj/item/clothing/gloves/pda/ai/pai, /obj/item/clothing/gloves/pda/ai, /obj/item/clothing/gloves/pda/heads,
-						/obj/item/clothing/gloves/pda/clear, /obj/item/clothing/gloves/pda/syndicate)
+	var/blocked = list(/obj/item/device/pda/ai/pai, /obj/item/device/pda/ai, /obj/item/device/pda/heads,
+						/obj/item/device/pda/clear, /obj/item/device/pda/syndicate)
 
-	for(var/P in typesof(/obj/item/clothing/gloves/pda)-blocked)
-		var/obj/item/clothing/gloves/pda/D = new P
+	for(var/P in typesof(/obj/item/device/pda)-blocked)
+		var/obj/item/device/pda/D = new P
 
 		//D.name = "PDA Style [colorlist.len+1]" //Gotta set the name, otherwise it all comes up as "PDA"
 		D.name = D.icon_state //PDAs don't have unique names, but using the sprite names works.
 
 		src.colorlist += D
 
+/obj/machinery/pdapainter/Destroy()
+	if(storedpda)
+		qdel(storedpda)
+		storedpda = null
+	return ..()
+
+/obj/machinery/pdapainter/on_deconstruction()
+	if(storedpda)
+		storedpda.forceMove(loc)
+		storedpda = null
+
+/obj/machinery/pdapainter/contents_explosion(severity, target)
+	if(storedpda)
+		storedpda.ex_act(severity, target)
+
+/obj/machinery/pdapainter/handle_atom_del(atom/A)
+	if(A == storedpda)
+		storedpda = null
+		update_icon()
 
 /obj/machinery/pdapainter/attackby(obj/item/O, mob/user, params)
 	if(default_unfasten_wrench(user, O))
 		power_change()
 		return
 
-	if(istype(O, /obj/item/clothing/gloves/pda))
+	else if(istype(O, /obj/item/device/pda))
 		if(storedpda)
-			user << "<span class='warning'>There is already a PDA inside!</span>"
+			to_chat(user, "<span class='warning'>There is already a PDA inside!</span>")
 			return
 		else
-			var/obj/item/clothing/gloves/pda/P = user.get_active_hand()
+			var/obj/item/device/pda/P = user.get_active_held_item()
 			if(istype(P))
 				if(!user.drop_item())
 					return
@@ -59,27 +80,52 @@
 				P.add_fingerprint(user)
 				update_icon()
 
+	else if(istype(O, /obj/item/weapon/weldingtool) && user.a_intent != INTENT_HARM)
+		var/obj/item/weapon/weldingtool/WT = O
+		if(stat & BROKEN)
+			if(WT.remove_fuel(0,user))
+				user.visible_message("[user] is repairing [src].", \
+								"<span class='notice'>You begin repairing [src]...</span>", \
+								"<span class='italics'>You hear welding.</span>")
+				playsound(loc, WT.usesound, 40, 1)
+				if(do_after(user,40*WT.toolspeed, 1, target = src))
+					if(!WT.isOn() || !(stat & BROKEN))
+						return
+					to_chat(user, "<span class='notice'>You repair [src].</span>")
+					playsound(loc, 'sound/items/Welder2.ogg', 50, 1)
+					stat &= ~BROKEN
+					obj_integrity = max_integrity
+					update_icon()
+		else
+			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
+	else
+		return ..()
+
+/obj/machinery/pdapainter/deconstruct(disassembled = TRUE)
+	if(!(flags & NODECONSTRUCT))
+		if(!(stat & BROKEN))
+			stat |= BROKEN
+			update_icon()
 
 /obj/machinery/pdapainter/attack_hand(mob/user)
-	..()
+	if(!..())
+		add_fingerprint(user)
 
-	src.add_fingerprint(user)
+		if(storedpda)
+			var/obj/item/device/pda/P
+			P = input(user, "Select your color!", "PDA Painting") as null|anything in colorlist
+			if(!P)
+				return
+			if(!in_range(src, user))
+				return
+			if(!storedpda)//is the pda still there?
+				return
+			storedpda.icon_state = P.icon_state
+			storedpda.desc = P.desc
+			ejectpda()
 
-	if(storedpda)
-		var/obj/item/clothing/gloves/pda/P
-		P = input(user, "Select your color!", "PDA Painting") as null|anything in colorlist
-		if(!P)
-			return
-		if(!in_range(src, user))
-			return
-		if(!storedpda)//is the pda still there?
-			return
-		storedpda.icon_state = P.icon_state
-		storedpda.desc = P.desc
-		ejectpda()
-
-	else
-		user << "<span class='notice'>The [src] is empty.</span>"
+		else
+			to_chat(user, "<span class='notice'>\The [src] is empty.</span>")
 
 
 /obj/machinery/pdapainter/verb/ejectpda()
@@ -95,7 +141,7 @@
 		storedpda = null
 		update_icon()
 	else
-		usr << "<span class='notice'>The [src] is empty.</span>"
+		to_chat(usr, "<span class='notice'>The [src] is empty.</span>")
 
 
 /obj/machinery/pdapainter/power_change()

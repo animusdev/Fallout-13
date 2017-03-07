@@ -1,4 +1,4 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
+
 
 /*
 CONTAINS:
@@ -32,7 +32,7 @@ RPD
 /datum/pipe_info/New(pid,direction,dt)
 	src.id=pid
 	src.icon_state=pipeID2State["[pid]"]
-	src.dir=direction
+	src.dir = direction
 	src.dirtype=dt
 
 /datum/pipe_info/proc/Render(dispenser,label)
@@ -70,7 +70,7 @@ var/global/list/disposalpipeID2State=list(
 /datum/pipe_info/disposal/New(var/pid,var/dt)
 	src.id=pid
 	src.icon_state=disposalpipeID2State[pid+1]
-	src.dir=2
+	src.dir = SOUTH
 	src.dirtype=dt
 	if(pid<DISP_END_BIN || pid>DISP_END_CHUTE)
 		icon_state = "con[icon_state]"
@@ -123,27 +123,25 @@ var/global/list/RPD_recipes=list(
 /obj/item/weapon/pipe_dispenser
 	name = "Rapid Piping Device (RPD)"
 	desc = "A device used to rapidly pipe things."
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/tools.dmi'
 	icon_state = "rpd"
-	opacity = 0
-	density = 0
-	anchored = 0
 	flags = CONDUCT
 	force = 10
 	throwforce = 10
 	throw_speed = 1
 	throw_range = 5
-	w_class = 3
+	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(MAT_METAL=75000, MAT_GLASS=37500)
 	origin_tech = "engineering=4;materials=2"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 50)
+	resistance_flags = FIRE_PROOF
 	var/datum/effect_system/spark_spread/spark_system
 	var/working = 0
-	var/p_type = 0
-	var/p_conntype = 0
+	var/p_type = PIPE_SIMPLE
+	var/p_conntype = PIPE_BENDABLE
 	var/p_dir = 1
 	var/p_flipped = 0
 	var/p_class = ATMOS_MODE
-	var/p_disposal = 0
 	var/list/paint_colors = list(
 		"grey"		= rgb(255,255,255),
 		"red"		= rgb(255,0,0),
@@ -171,7 +169,7 @@ var/global/list/RPD_recipes=list(
 	show_menu(user)
 
 /obj/item/weapon/pipe_dispenser/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] points the end of the RPD down \his throat and presses a button! It looks like \he's trying to commit suicide...</span>")
+	user.visible_message("<span class='suicide'>[user] points the end of the RPD down [user.p_their()] throat and presses a button! It looks like [user.p_theyre()] trying to commit suicide...</span>")
 	playsound(get_turf(user), 'sound/machines/click.ogg', 50, 1)
 	playsound(get_turf(user), 'sound/items/Deconstruct.ogg', 50, 1)
 	return(BRUTELOSS)
@@ -183,7 +181,8 @@ var/global/list/RPD_recipes=list(
 	return "<a href=\"?src=\ref[src];setdir=[_dir];flipped=[flipped]\" title=\"[title]\"[selected]\"><img src=\"[pic]\" /></a>"
 
 /obj/item/weapon/pipe_dispenser/proc/show_menu(mob/user)
-	if(!user || !src)	return 0
+	if(!user || !src)
+		return 0
 	var/dat = {"<h2>Type</h2>
 <b>Utilities:</b>
 <ul>"}
@@ -524,10 +523,10 @@ var/global/list/RPD_recipes=list(
 		return 0
 
 	if(!user.IsAdvancedToolUser())
-		user << "<span class='warning'>You don't have the dexterity to do this!</span>"
+		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return 0
 
-	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
+	if(istype(A,/area/shuttle)||istype(A,/turf/open/space/transit))
 		return 0
 
 	//So that changing the menu settings doesn't affect the pipes already being built.
@@ -539,13 +538,12 @@ var/global/list/RPD_recipes=list(
 		if(PAINT_MODE) // Paint pipes
 			if(!istype(A,/obj/machinery/atmospherics/pipe))
 				// Avoid spewing errors about invalid mode -2 when clicking on stuff that aren't pipes.
-				user << "<span class='warning'>\The [src]'s error light flickers!  Perhaps you need to only use it on pipes and pipe meters?</span>"
+				to_chat(user, "<span class='warning'>\The [src]'s error light flickers!  Perhaps you need to only use it on pipes and pipe meters?</span>")
 				return 0
 			var/obj/machinery/atmospherics/pipe/P = A
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
-			P.color = paint_colors[paint_color]
+			P.add_atom_colour(paint_colors[paint_color], FIXED_COLOUR_PRIORITY)
 			P.pipe_color = paint_colors[paint_color]
-			P.stored.color = paint_colors[paint_color]
 			user.visible_message("<span class='notice'>[user] paints \the [P] [paint_color].</span>","<span class='notice'>You paint \the [P] [paint_color].</span>")
 			//P.update_icon()
 			P.update_node_icon()
@@ -553,7 +551,7 @@ var/global/list/RPD_recipes=list(
 		if(EATING_MODE) // Eating pipes
 			// Must click on an actual pipe or meter.
 			if(istype(A,/obj/item/pipe) || istype(A,/obj/item/pipe_meter) || istype(A,/obj/structure/disposalconstruct))
-				user << "<span class='notice'>You start destroying pipe...</span>"
+				to_chat(user, "<span class='notice'>You start destroying pipe...</span>")
 				playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
 				if(do_after(user, 2, target = A))
 					activate()
@@ -562,13 +560,13 @@ var/global/list/RPD_recipes=list(
 				return 0
 
 			// Avoid spewing errors about invalid mode -1 when clicking on stuff that aren't pipes.
-			user << "<span class='warning'>The [src]'s error light flickers!  Perhaps you need to only use it on pipes and pipe meters?</span>"
+			to_chat(user, "<span class='warning'>The [src]'s error light flickers!  Perhaps you need to only use it on pipes and pipe meters?</span>")
 			return 0
 		if(ATMOS_MODE)
-			if(!(istype(A, /turf)))
-				user << "<span class='warning'>The [src]'s error light flickers!</span>"
+			if(!isturf(A))
+				to_chat(user, "<span class='warning'>The [src]'s error light flickers!</span>")
 				return 0
-			user << "<span class='notice'>You start building pipes...</span>"
+			to_chat(user, "<span class='notice'>You start building pipes...</span>")
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
 			if(do_after(user, 2, target = A))
 				activate()
@@ -580,10 +578,10 @@ var/global/list/RPD_recipes=list(
 			return 0
 
 		if(METER_MODE)
-			if(!(istype(A, /turf)))
-				user << "<span class='warning'>The [src]'s error light flickers!</span>"
+			if(!isturf(A))
+				to_chat(user, "<span class='warning'>The [src]'s error light flickers!</span>")
 				return 0
-			user << "<span class='notice'>You start building meter...</span>"
+			to_chat(user, "<span class='notice'>You start building a meter...</span>")
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
 			if(do_after(user, 2, target = A))
 				activate()
@@ -592,23 +590,23 @@ var/global/list/RPD_recipes=list(
 			return 0
 
 		if(DISPOSALS_MODE)
-			if(!(istype(A, /turf)))
-				user << "<span class='warning'>The [src]'s error light flickers!</span>"
+			if(!isturf(A) || is_anchored_dense_turf(A))
+				to_chat(user, "<span class='warning'>The [src]'s error light flickers!</span>")
 				return 0
-			user << "<span class='notice'>You start building pipes...</span>"
+			to_chat(user, "<span class='notice'>You start building pipes...</span>")
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
 			if(do_after(user, 20, target = A))
 				var/obj/structure/disposalconstruct/C = new (A, queued_p_type ,queued_p_dir)
 
 				if(!C.can_place())
-					user << "<span class='warning'>There's not enough room to build that here!</span>"
+					to_chat(user, "<span class='warning'>There's not enough room to build that here!</span>")
 					qdel(C)
 					return 0
 
 				activate()
 
 				C.add_fingerprint(usr)
-				C.update()
+				C.update_icon()
 				return 1
 			return 0
 		else

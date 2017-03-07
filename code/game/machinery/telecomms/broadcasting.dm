@@ -70,7 +70,8 @@
 	var/atom/movable/virtualspeaker/virt = PoolOrNew(/atom/movable/virtualspeaker,null)
 	virt.name = name
 	virt.job = job
-	virt.languages = AM.languages
+	virt.languages_spoken = AM.languages_spoken
+	virt.languages_understood = AM.languages_understood
 	virt.source = AM
 	virt.radio = radio
 	virt.verb_say = verb_say
@@ -135,9 +136,9 @@
 		if(isobserver(M) && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTRADIO))
 			receive |= M
 
-	var/rendered = virt.compose_message(virt, virt.languages, message, freq, spans) //Always call this on the virtualspeaker to advoid issues.
+	var/rendered = virt.compose_message(virt, virt.languages_spoken, message, freq, spans) //Always call this on the virtualspeaker to advoid issues.
 	for(var/atom/movable/hearer in receive)
-		hearer.Hear(rendered, virt, AM.languages, message, freq, spans)
+		hearer.Hear(rendered, virt, AM.languages_spoken, message, freq, spans)
 
 	if(length(receive))
 		// --- This following recording is intended for research and feedback in the use of department radio channels ---
@@ -258,7 +259,7 @@
 
 		// --- Can understand the speech ---
 
-		if (R.languages & M.languages)
+		if (R.languages_understood & M.languages_spoken)
 
 			heard_normal += R
 
@@ -298,16 +299,6 @@
 				freq_text = "Supply"
 			if(AIPRIV_FREQ)
 				freq_text = "AI Private"
-			if(VLT_FREQ)
-				freq_text = "Vault"
-			if(NCR_FREQ)
-				freq_text = "NCR"
-			if(LEG_FREQ)
-				freq_text = "Legion"
-			if(DEN_FREQ)
-				freq_text = "Den"
-			if(ENCL_FREQ)
-				freq_text = "Enclave"
 		//There's probably a way to use the list var of channels in code\game\communications.dm to make the dept channels non-hardcoded, but I wasn't in an experimentive mood. --NEO
 
 
@@ -325,7 +316,7 @@
 		// Create a radio headset for the sole purpose of using its icon
 		var/obj/item/device/radio/headset/radio = new
 
-		var/part_b = "</span><b> \icon[radio]\[[freq_text]\][part_b_extra]</b> <span class='message'>"
+		var/part_b = "</span><b> [bicon(radio)]\[[freq_text]\][part_b_extra]</b> <span class='message'>"
 		var/part_c = "</span></span>"
 
 		if (display_freq==SYND_FREQ)
@@ -348,17 +339,6 @@
 			part_a = "<span class='centcomradio'><span class='name'>"
 		else if (display_freq==AIPRIV_FREQ)
 			part_a = "<span class='aiprivradio'><span class='name'>"
-
-		else if (display_freq==VLT_FREQ)
-			part_a = "<span class='vltradio'><span class='name'>"
-		else if (display_freq==NCR_FREQ)
-			part_a = "<span class='ncrradio'><span class='name'>"
-		else if (display_freq==LEG_FREQ)
-			part_a = "<span class='legradio'><span class='name'>"
-		else if (display_freq==DEN_FREQ)
-			part_a = "<span class='denradio'><span class='name'>"
-		else if (display_freq==ENCL_FREQ)
-			part_a = "<span class='enclradio'><span class='name'>"
 
 		// --- This following recording is intended for research and feedback in the use of department radio channels ---
 

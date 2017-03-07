@@ -12,7 +12,7 @@
 
 /obj/item/clothing/under/pants/mustangjeans
 	name = "Must Hang jeans"
-	desc = "Finest stylish jeans you have ever seen."
+	desc = "Made in the finest space jeans factory this side of Alpha Centauri."
 	icon_state = "jeansmustang"
 	item_color = "jeansmustang"
 
@@ -72,20 +72,6 @@
 
 /obj/item/clothing/under/pants/camo
 	name = "camo pants"
-	desc = "A pair of woodland camouflage pants."
+	desc = "A pair of woodland camouflage pants. Probably not the best choice for a space station."
 	icon_state = "camopants"
 	item_color = "camopants"
-
-//Fallout 13
-
-/obj/item/clothing/under/pants/f13/cloth
-	name = "cloth pants"
-	desc = "A pair of worn dusty cloth pants made of various textile pieces.<br>Commonly found all over the wasteland."
-	icon_state = "cloth"
-	item_color = "cloth"
-
-/obj/item/clothing/under/pants/f13/caravan //Caravanner - someone who travels with caravan. Caravaneer - caravan leader.
-	name = "caravanner pants"
-	desc = "A pair of wide dusty cargo pants.<br>Commonly worn by caravanners or caravan robbers."
-	icon_state = "caravan"
-	item_color = "caravan"

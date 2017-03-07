@@ -12,8 +12,14 @@ var/datum/atom_hud/huds = list( \
 	ANTAG_HUD_OPS = new/datum/atom_hud/antag(), \
 	ANTAG_HUD_WIZ = new/datum/atom_hud/antag(), \
 	ANTAG_HUD_SHADOW = new/datum/atom_hud/antag(), \
-	ANTAG_HUD_HOG_BLUE = new/datum/atom_hud/antag(),\
-	ANTAG_HUD_HOG_RED = new/datum/atom_hud/antag(),\
+	ANTAG_HUD_TRAITOR = new/datum/atom_hud/antag/hidden(),\
+	ANTAG_HUD_NINJA = new/datum/atom_hud/antag/hidden(),\
+	ANTAG_HUD_CHANGELING = new/datum/atom_hud/antag/hidden(),\
+	ANTAG_HUD_ABDUCTOR = new/datum/atom_hud/antag/hidden(),\
+	ANTAG_HUD_DEVIL = new/datum/atom_hud/antag(),\
+	ANTAG_HUD_SINTOUCHED = new/datum/atom_hud/antag/hidden(),\
+	ANTAG_HUD_SOULLESS = new/datum/atom_hud/antag/hidden(),\
+	ANTAG_HUD_CLOCKWORK = new/datum/atom_hud/antag(),\
 	)
 
 /datum/atom_hud
@@ -78,8 +84,8 @@ var/datum/atom_hud/huds = list( \
 /mob/new_player/reload_huds()
 	return
 
-/*/mob/proc/add_click_catcher()
+/mob/proc/add_click_catcher()
 	client.screen += client.void
 
 /mob/new_player/add_click_catcher()
-	return*/
+	return

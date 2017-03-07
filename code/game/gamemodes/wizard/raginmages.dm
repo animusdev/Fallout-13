@@ -3,6 +3,10 @@
 	config_tag = "raginmages"
 	required_players = 20
 	use_huds = 1
+	announce_span = "userdanger"
+	announce_text = "There are many, many wizards attacking the station!\n\
+	<span class='danger'>Wizards</span>: Accomplish your objectives and cause utter catastrophe!\n\
+	<span class='notice'>Crew</span>: Try not to die..."
 	var/max_mages = 0
 	var/making_mage = 0
 	var/mages_made = 1
@@ -11,10 +15,6 @@
 	var/time_check = 1500
 	var/spawn_delay_min = 500
 	var/spawn_delay_max = 700
-
-/datum/game_mode/wizard/announce()
-	world << "<B>The current game mode is - Ragin' Mages!</B>"
-	world << "<B>The <span class='warning'>Space Wizard Federation</span> is pissed, help defeat all the space wizards!</B>"
 
 /datum/game_mode/wizard/raginmages/post_setup()
 	..()
@@ -32,13 +32,13 @@
 		max_mages = INFINITY
 /datum/game_mode/wizard/raginmages/greet_wizard(datum/mind/wizard, you_are=1)
 	if (you_are)
-		wizard.current << "<B>You are the Space Wizard!</B>"
-	wizard.current << "<B>The Space Wizards Federation has given you the following tasks:</B>"
+		to_chat(wizard.current, "<B>You are the Space Wizard!</B>")
+	to_chat(wizard.current, "<B>The Space Wizards Federation has given you the following tasks:</B>")
 
 	var/obj_count = 1
-	wizard.current << "<b>Objective Alpha</b>: Make sure the station pays for its actions against our diplomats"
+	to_chat(wizard.current, "<b>Objective Alpha</b>: Make sure the station pays for its actions against our diplomats")
 	for(var/datum/objective/objective in wizard.objectives)
-		wizard.current << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
+		to_chat(wizard.current, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
 		obj_count++
 	return
 
@@ -47,29 +47,29 @@
 	for(var/datum/mind/wizard in wizards)
 		if(!istype(wizard.current,/mob/living/carbon))
 			continue
-		if(istype(wizard.current,/mob/living/carbon/brain))
+		if(istype(wizard.current,/mob/living/brain))
 			continue
 		if(wizard.current.stat==DEAD)
 			continue
 		if(wizard.current.stat==UNCONSCIOUS)
 			if(wizard.current.health < 0)
-				wizard.current << "<font size='4'>The Space Wizard Federation is upset with your performance and have terminated your employment.</font>"
-				wizard.current.stat = 2
+				to_chat(wizard.current, "<font size='4'>The Space Wizard Federation is upset with your performance and have terminated your employment.</font>")
+				wizard.current.death()
 			continue
 		wizards_alive++
-	if(!time_checked) 
+	if(!time_checked)
 		time_checked = world.time
 	if(bullshit_mode)
 		if(world.time > time_checked + time_check)
 			max_mages = INFINITY
 			time_checked = world.time
-			make_more_mages()	
+			make_more_mages()
 			return ..()
 	if (wizards_alive)
 		if(world.time > time_checked + time_check && (mages_made < max_mages))
 			time_checked = world.time
 			make_more_mages()
-		
+
 	else
 		if(mages_made >= max_mages)
 			finished = 1
@@ -133,11 +133,12 @@
 /datum/game_mode/wizard/raginmages/declare_completion()
 	if(finished)
 		feedback_set_details("round_end_result","loss - wizard killed")
-		world << "<FONT size=3><B>The crew has managed to hold off the wizard attack! The Space Wizards Federation has been taught a lesson they will not soon forget!</B></FONT>"
+		to_chat(world, "<FONT size=3><B>The crew has managed to hold off the wizard attack! The Space Wizards Federation has been taught a lesson they will not soon forget!</B></FONT>")
 	..(1)
 
 /datum/game_mode/wizard/raginmages/proc/makeBody(mob/dead/observer/G_found) // Uses stripped down and bastardized code from respawn character
-	if(!G_found || !G_found.key)	return
+	if(!G_found || !G_found.key)
+		return
 
 	//First we spawn a dude.
 	var/mob/living/carbon/human/new_character = new(pick(latejoin))//The mob being spawned.
@@ -157,3 +158,5 @@
 	time_check = 250
 	spawn_delay_min = 50
 	spawn_delay_max = 150
+	announce_text = "<span class='userdanger'>CRAAAWLING IIIN MY SKIIIN\n\
+	THESE WOOOUNDS THEY WIIIL NOT HEEEAL</span>"

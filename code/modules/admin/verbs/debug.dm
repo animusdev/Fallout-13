@@ -1,7 +1,8 @@
 /client/proc/Debug2()
 	set category = "Debug"
 	set name = "Debug-Game"
-	if(!check_rights(R_DEBUG))	return
+	if(!check_rights(R_DEBUG))
+		return
 
 	if(Debug2)
 		Debug2 = 0
@@ -28,72 +29,62 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 /client/proc/callproc()
 	set category = "Debug"
 	set name = "Advanced ProcCall"
+	set waitfor = 0
 
 	if(!check_rights(R_DEBUG)) return
 
-	spawn(0)
-		var/target = null
-		var/targetselected = 0
-		var/returnval = null
-		var/class = null
+	var/datum/target = null
+	var/targetselected = 0
+	var/returnval = null
 
-		switch(alert("Proc owned by something?",,"Yes","No"))
-			if("Yes")
-				targetselected = 1
-				if(src.holder && src.holder.marked_datum)
-					class = input("Proc owned by...","Owner",null) as null|anything in list("Obj","Mob","Area or Turf","Client","Marked datum ([holder.marked_datum.type])")
-					if(class == "Marked datum ([holder.marked_datum.type])")
-						class = "Marked datum"
-				else
-					class = input("Proc owned by...","Owner",null) as null|anything in list("Obj","Mob","Area or Turf","Client")
-				switch(class)
-					if("Obj")
-						target = input("Enter target:","Target",usr) as obj in world
-					if("Mob")
-						target = input("Enter target:","Target",usr) as mob in world
-					if("Area or Turf")
-						target = input("Enter target:","Target",usr.loc) as area|turf in world
-					if("Client")
-						var/list/keys = list()
-						for(var/client/C)
-							keys += C
-						target = input("Please, select a player!", "Selection", null, null) as null|anything in keys
-					if("Marked datum")
-						target = holder.marked_datum
-					else
-						return
-			if("No")
-				target = null
-				targetselected = 0
-
-		var/procname = input("Proc path, eg: /proc/fake_blood","Path:", null) as text|null
-		if(!procname)	return
-		if(targetselected && !hascall(target,procname))
-			usr << "<font color='red'>Error: callproc(): target has no such call [procname].</font>"
-			return
-		var/list/lst = get_callproc_args()
-		if(!lst)
-			return
-
-		if(targetselected)
-			if(!target)
-				usr << "<font color='red'>Error: callproc(): owner of proc no longer exists.</font>"
+	switch(alert("Proc owned by something?",,"Yes","No"))
+		if("Yes")
+			targetselected = 1
+			var/list/value = vv_get_value(default_class = VV_ATOM_REFERENCE, classes = list(VV_ATOM_REFERENCE, VV_DATUM_REFERENCE, VV_MOB_REFERENCE, VV_CLIENT))
+			if (!value["class"] || !value["value"])
 				return
-			log_admin("[key_name(src)] called [target]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
-			message_admins("[key_name(src)] called [target]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
-			returnval = call(target,procname)(arglist(lst)) // Pass the lst as an argument list to the proc
-		else
-			//this currently has no hascall protection. wasn't able to get it working.
-			log_admin("[key_name(src)] called [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
-			message_admins("[key_name(src)] called [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
-			returnval = call(procname)(arglist(lst)) // Pass the lst as an argument list to the proc
+			target = value["value"]
+		if("No")
+			target = null
+			targetselected = 0
 
-		usr << "<font color='blue'>[procname] returned: [returnval ? returnval : "null"]</font>"
-		feedback_add_details("admin_verb","APC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	var/procname = input("Proc path, eg: /proc/fake_blood","Path:", null) as text|null
+	if(!procname)
+		return
 
-/client/proc/callproc_datum(A as null|area|mob|obj|turf)
+	if(targetselected && !hascall(target,procname))
+		to_chat(usr, "<font color='red'>Error: callproc(): type [target.type] has no proc named [procname].</font>")
+		return
+	else
+		var/procpath = text2path(procname)
+		if (!procpath)
+			to_chat(usr, "<font color='red'>Error: callproc(): proc [procname] does not exist. (Did you forget the /proc/ part?)</font>")
+			return
+	var/list/lst = get_callproc_args()
+	if(!lst)
+		return
+
+	if(targetselected)
+		if(!target)
+			to_chat(usr, "<font color='red'>Error: callproc(): owner of proc no longer exists.</font>")
+			return
+		log_admin("[key_name(src)] called [target]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
+		message_admins("[key_name(src)] called [target]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
+		returnval = call(target,procname)(arglist(lst)) // Pass the lst as an argument list to the proc
+	else
+		//this currently has no hascall protection. wasn't able to get it working.
+		log_admin("[key_name(src)] called [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
+		message_admins("[key_name(src)] called [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
+		returnval = call(procname)(arglist(lst)) // Pass the lst as an argument list to the proc
+	. = get_callproc_returnval(returnval, procname)
+	if(.)
+		to_chat(usr, .)
+	feedback_add_details("admin_verb","APC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/callproc_datum(datum/A as null|area|mob|obj|turf)
 	set category = "Debug"
 	set name = "Atom ProcCall"
+	set waitfor = 0
 
 	if(!check_rights(R_DEBUG))
 		return
@@ -102,78 +93,64 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	if(!procname)
 		return
 	if(!hascall(A,procname))
-		usr << "<span class='warning'>Error: callproc_datum(): target has no such call [procname].</span>"
+		to_chat(usr, "<font color='red'>Error: callproc_datum(): type [A.type] has no proc named [procname].</font>")
 		return
 	var/list/lst = get_callproc_args()
 	if(!lst)
 		return
 
 	if(!A || !IsValidSrc(A))
-		usr << "<span class='warning'>Error: callproc_datum(): owner of proc no longer exists.</span>"
+		to_chat(usr, "<span class='warning'>Error: callproc_datum(): owner of proc no longer exists.</span>")
 		return
 	log_admin("[key_name(src)] called [A]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
 	message_admins("[key_name(src)] called [A]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
-	spawn()
-		var/returnval = call(A,procname)(arglist(lst)) // Pass the lst as an argument list to the proc
-		usr << "<span class='notice'>[procname] returned: [returnval ? returnval : "null"]</span>"
-
 	feedback_add_details("admin_verb","DPC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+	var/returnval = call(A,procname)(arglist(lst)) // Pass the lst as an argument list to the proc
+	. = get_callproc_returnval(returnval,procname)
+	if(.)
+		to_chat(usr, .)
+
+
 
 /client/proc/get_callproc_args()
 	var/argnum = input("Number of arguments","Number:",0) as num|null
-	if(!argnum && (argnum!=0))	return
+	if(isnull(argnum))
+		return
 
 	var/list/lst = list()
-	//TODO: make a list to store whether each argument was initialised as null.
-	//Reason: So we can abort the proccall if say, one of our arguments was a mob which no longer exists
-	//this will protect us from a fair few errors ~Carn
 
 	while(argnum--)
-		var/class = null
-		// Make a list with each index containing one variable, to be given to the proc
-		if(src.holder && src.holder.marked_datum)
-			class = input("What kind of variable?","Variable Type") in list("text","num","type","reference","mob reference","icon","file","client","mob's area","Marked datum ([holder.marked_datum.type])","CANCEL")
-			if(holder.marked_datum && class == "Marked datum ([holder.marked_datum.type])")
-				class = "Marked datum"
-		else
-			class = input("What kind of variable?","Variable Type") in list("text","num","type","reference","mob reference","icon","file","client","mob's area","CANCEL")
-		switch(class)
-			if("CANCEL")
-				return null
+		var/value = vv_get_value(restricted_classes = list(VV_RESTORE_DEFAULT))
+		if (!value["class"])
+			return
+		lst += value["value"]
 
-			if("text")
-				lst += input("Enter new text:","Text",null) as text
-
-			if("num")
-				lst += input("Enter new number:","Num",0) as num
-
-			if("type")
-				lst += input("Enter type:","Type") in typesof(/obj,/mob,/area,/turf)
-
-			if("reference")
-				lst += input("Select reference:","Reference",src) as mob|obj|turf|area in world
-
-			if("mob reference")
-				lst += input("Select reference:","Reference",usr) as mob in world
-
-			if("file")
-				lst += input("Pick file:","File") as file
-
-			if("icon")
-				lst += input("Pick icon:","Icon") as icon
-
-			if("client")
-				var/list/keys = list()
-				for(var/mob/M in world)
-					keys += M.client
-				lst += input("Please, select a player!", "Selection", null, null) as null|anything in keys
-
-			if("mob's area")
-				var/mob/temp = input("Select mob", "Selection", usr) as mob in world
-				lst += temp.loc
-			if("Marked datum")
-				lst += holder.marked_datum
 	return lst
+
+
+/client/proc/get_callproc_returnval(returnval,procname)
+	. = ""
+	if(islist(returnval))
+		var/list/returnedlist = returnval
+		. = "<font color='blue'>"
+		if(returnedlist.len)
+			var/assoc_check = returnedlist[1]
+			if(istext(assoc_check) && (returnedlist[assoc_check] != null))
+				. += "[procname] returned an associative list:"
+				for(var/key in returnedlist)
+					. += "\n[key] = [returnedlist[key]]"
+
+			else
+				. += "[procname] returned a list:"
+				for(var/elem in returnedlist)
+					. += "\n[elem]"
+		else
+			. = "[procname] returned an empty list"
+		. += "</font>"
+
+	else
+		. = "<font color='blue'>[procname] returned: [!isnull(returnval) ? returnval : "null"]</font>"
 
 
 /client/proc/Cell()
@@ -183,18 +160,18 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		return
 	var/turf/T = mob.loc
 
-	if (!( istype(T, /turf) ))
+	if(!isturf(T))
 		return
 
 	var/datum/gas_mixture/env = T.return_air()
+	var/list/env_gases = env.gases
 
 	var/t = ""
-	t+= "Nitrogen : [env.nitrogen]\n"
-	t+= "Oxygen : [env.oxygen]\n"
-	t+= "Plasma : [env.toxins]\n"
-	t+= "CO2: [env.carbon_dioxide]\n"
+	for(var/id in env_gases)
+		if(id in hardcoded_gases || env_gases[id][MOLES])
+			t+= "[env_gases[id][GAS_META][META_GAS_NAME]] : [env_gases[id][MOLES]]\n"
 
-	usr.show_message(t, 1)
+	to_chat(usr, t)
 	feedback_add_details("admin_verb","ASL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_robotize(mob/M in mob_list)
@@ -204,10 +181,10 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		log_admin("[key_name(src)] has robotized [M.key].")
 		var/mob/living/carbon/human/H = M
-		spawn(10)
+		spawn(0)
 			H.Robotize()
 
 	else
@@ -220,11 +197,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		log_admin("[key_name(src)] has blobized [M.key].")
 		var/mob/living/carbon/human/H = M
-		spawn(10)
-			H.Blobize()
+		spawn(0)
+			var/mob/camera/blob/B = H.become_overmind(FALSE)
+			B.place_blob_core(B.base_point_rate, -1) //place them wherever they are
 
 	else
 		alert("Invalid mob")
@@ -242,12 +220,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		alert("That mob doesn't seem to exist, close the panel and try again.")
 		return
 
-	if(istype(M, /mob/new_player))
+	if(isnewplayer(M))
 		alert("The mob must not be a new_player.")
 		return
 
 	log_admin("[key_name(src)] has animalized [M.key].")
-	spawn(10)
+	spawn(0)
 		M.Animalize()
 
 
@@ -263,7 +241,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	var/mob/choice = input("Choose a player to play the pAI", "Spawn pAI") in available
 	if(!choice)
 		return 0
-	if(!istype(choice, /mob/dead/observer))
+	if(!isobserver(choice))
 		var/confirm = input("[choice.key] isn't ghosting right now. Are you sure you want to yank him out of them out of their body and place them in this pAI?", "Spawn pAI Confirmation", "No") in list("Yes", "No")
 		if(confirm != "Yes")
 			return 0
@@ -287,7 +265,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		return
 	if(ishuman(M))
 		log_admin("[key_name(src)] has alienized [M.key].")
-		spawn(10)
+		spawn(0)
 			M:Alienize()
 			feedback_add_details("admin_verb","MKAL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		log_admin("[key_name(usr)] made [key_name(M)] into an alien.")
@@ -304,7 +282,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		return
 	if(ishuman(M))
 		log_admin("[key_name(src)] has slimeized [M.key].")
-		spawn(10)
+		spawn(0)
 			M:slimeize()
 			feedback_add_details("admin_verb","MKMET") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		log_admin("[key_name(usr)] made [key_name(M)] into a slime.")
@@ -320,26 +298,51 @@ var/list/TYPES_SHORTCUTS = list(
 	/obj/item/weapon/reagent_containers/food/drinks = "DRINK", //longest paths comes first
 	/obj/item/weapon/reagent_containers/food = "FOOD",
 	/obj/item/weapon/reagent_containers = "REAGENT_CONTAINERS",
-	/obj/machinery/atmospherics = "ATMOS",
+	/obj/item/weapon = "WEAPON",
+	/obj/machinery/atmospherics = "ATMOS_MECH",
 	/obj/machinery/portable_atmospherics = "PORT_ATMOS",
 	/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/missile_rack = "MECHA_MISSILE_RACK",
 	/obj/item/mecha_parts/mecha_equipment = "MECHA_EQUIP",
-	/obj/item/organ/internal = "ORGAN_INT",
+	/obj/item/organ = "ORGAN",
+	/obj/item = "ITEM",
+	/obj/machinery = "MACHINERY",
+	/obj/effect = "EFFECT",
+	/obj = "O",
+	/datum = "D",
+	/turf/open = "OPEN",
+	/turf/closed = "CLOSED",
+	/turf = "T",
+	/mob/living/carbon = "CARBON",
+	/mob/living/simple_animal = "SIMPLE",
+	/mob/living = "LIVING",
+	/mob = "M"
 )
 
-var/global/list/g_fancy_list_of_types = null
-/proc/get_fancy_list_of_types()
-	if (isnull(g_fancy_list_of_types)) //init
-		var/list/temp = sortList(subtypesof(/atom) - typesof(/area) - /atom/movable)
-		g_fancy_list_of_types = new(temp.len)
-		for(var/type in temp)
-			var/typename = "[type]"
-			for (var/tn in TYPES_SHORTCUTS)
-				if (copytext(typename,1, length("[tn]/")+1)=="[tn]/" /*findtextEx(typename,"[tn]/",1,2)*/ )
-					typename = TYPES_SHORTCUTS[tn]+copytext(typename,length("[tn]/"))
-					break
-			g_fancy_list_of_types[typename] = type
-	return g_fancy_list_of_types
+/proc/make_types_fancy(var/list/types)
+	if (ispath(types))
+		types = list(types)
+	. = list()
+	for(var/type in types)
+		var/typename = "[type]"
+		for (var/tn in TYPES_SHORTCUTS)
+			if (copytext(typename,1, length("[tn]/")+1)=="[tn]/" /*findtextEx(typename,"[tn]/",1,2)*/ )
+				typename = TYPES_SHORTCUTS[tn]+copytext(typename,length("[tn]/"))
+				break
+		.[typename] = type
+
+/proc/get_fancy_list_of_atom_types()
+	var/static/list/pre_generated_list
+	if (!pre_generated_list) //init
+		pre_generated_list = make_types_fancy(typesof(/atom))
+	return pre_generated_list
+
+
+/proc/get_fancy_list_of_datum_types()
+	var/static/list/pre_generated_list
+	if (!pre_generated_list) //init
+		pre_generated_list = make_types_fancy(sortList(typesof(/datum) - typesof(/atom)))
+	return pre_generated_list
+
 
 /proc/filter_fancy_list(list/L, filter as text)
 	var/list/matches = new
@@ -354,7 +357,7 @@ var/global/list/g_fancy_list_of_types = null
 	set category = "Debug"
 	set name = "Del-All"
 
-	var/list/matches = get_fancy_list_of_types()
+	var/list/matches = get_fancy_list_of_atom_types()
 	if (!isnull(object) && object!="")
 		matches = filter_fancy_list(matches, object)
 
@@ -368,6 +371,7 @@ var/global/list/g_fancy_list_of_types = null
 			if(istype(O, hsbitem))
 				counter++
 				qdel(O)
+			CHECK_TICK
 		log_admin("[key_name(src)] has deleted all ([counter]) instances of [hsbitem].")
 		message_admins("[key_name_admin(src)] has deleted all ([counter]) instances of [hsbitem].", 0)
 		feedback_add_details("admin_verb","DELA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -388,7 +392,7 @@ var/global/list/g_fancy_list_of_types = null
 	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
-	if (istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/worn = H.wear_id
 		var/obj/item/weapon/card/id/id = null
@@ -405,7 +409,7 @@ var/global/list/g_fancy_list_of_types = null
 			id.update_label()
 
 			if(worn)
-				if(istype(worn,/obj/item/clothing/gloves/pda))
+				if(istype(worn,/obj/item/device/pda))
 					worn:id = id
 					id.loc = worn
 				else if(istype(worn,/obj/item/weapon/storage/wallet))
@@ -462,8 +466,8 @@ var/global/list/g_fancy_list_of_types = null
 		if(!(A.type in areas_with_APC))
 			areas_with_APC.Add(A.type)
 
-	for(var/obj/machinery/alarm/alarm in machines)
-		var/area/A = get_area(alarm)
+	for(var/obj/machinery/airalarm/AA in machines)
+		var/area/A = get_area(AA)
 		if(!(A.type in areas_with_air_alarm))
 			areas_with_air_alarm.Add(A.type)
 
@@ -500,33 +504,33 @@ var/global/list/g_fancy_list_of_types = null
 	var/list/areas_without_intercom = areas_all - areas_with_intercom
 	var/list/areas_without_camera = areas_all - areas_with_camera
 
-	world << "<b>AREAS WITHOUT AN APC:</b>"
+	to_chat(world, "<b>AREAS WITHOUT AN APC:</b>")
 	for(var/areatype in areas_without_APC)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
-	world << "<b>AREAS WITHOUT AN AIR ALARM:</b>"
+	to_chat(world, "<b>AREAS WITHOUT AN AIR ALARM:</b>")
 	for(var/areatype in areas_without_air_alarm)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
-	world << "<b>AREAS WITHOUT A REQUEST CONSOLE:</b>"
+	to_chat(world, "<b>AREAS WITHOUT A REQUEST CONSOLE:</b>")
 	for(var/areatype in areas_without_RC)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
-	world << "<b>AREAS WITHOUT ANY LIGHTS:</b>"
+	to_chat(world, "<b>AREAS WITHOUT ANY LIGHTS:</b>")
 	for(var/areatype in areas_without_light)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
-	world << "<b>AREAS WITHOUT A LIGHT SWITCH:</b>"
+	to_chat(world, "<b>AREAS WITHOUT A LIGHT SWITCH:</b>")
 	for(var/areatype in areas_without_LS)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
-	world << "<b>AREAS WITHOUT ANY INTERCOMS:</b>"
+	to_chat(world, "<b>AREAS WITHOUT ANY INTERCOMS:</b>")
 	for(var/areatype in areas_without_intercom)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
-	world << "<b>AREAS WITHOUT ANY CAMERAS:</b>"
+	to_chat(world, "<b>AREAS WITHOUT ANY CAMERAS:</b>")
 	for(var/areatype in areas_without_camera)
-		world << "* [areatype]"
+		to_chat(world, "* [areatype]")
 
 /client/proc/cmd_admin_dress(mob/living/carbon/human/M in mob_list)
 	set category = "Fun"
@@ -534,7 +538,6 @@ var/global/list/g_fancy_list_of_types = null
 	if(!ishuman(M))
 		alert("Invalid mob")
 		return
-	//log_admin("[key_name(src)] has alienized [M.key].")
 
 
 	var/list/outfits = list("Naked","Custom","As Job...")
@@ -548,12 +551,20 @@ var/global/list/g_fancy_list_of_types = null
 	if (isnull(dresscode))
 		return
 
-	var/datum/job/jobdatum
+	if (outfits[dresscode])
+		dresscode = outfits[dresscode]
+
 	if (dresscode == "As Job...")
-		var/jobname = input("Select job", "Robust quick dress shop") as null|anything in get_all_jobs()
-		if(isnull(jobname))
+		var/list/job_paths = subtypesof(/datum/outfit/job)
+		var/list/job_outfits = list()
+		for(var/path in job_paths)
+			var/datum/outfit/O = path
+			job_outfits[initial(O.name)] = path
+
+		dresscode = input("Select job equipment", "Robust quick dress shop") as null|anything in job_outfits
+		dresscode = job_outfits[dresscode]
+		if(isnull(dresscode))
 			return
-		jobdatum = SSjob.GetJob(jobname)
 
 
 	var/datum/outfit/custom = null
@@ -567,9 +578,7 @@ var/global/list/g_fancy_list_of_types = null
 			return
 
 	feedback_add_details("admin_verb","SEQ") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	for (var/obj/item/I in M)
-		if (istype(I, /obj/item/weapon/implant))
-			continue
+	for (var/obj/item/I in M.get_equipped_items())
 		qdel(I)
 	switch(dresscode)
 		if ("Naked")
@@ -577,21 +586,14 @@ var/global/list/g_fancy_list_of_types = null
 		if ("Custom")
 			//use custom one
 			M.equipOutfit(custom)
-		if ("As Job...")
-			if(jobdatum)
-				dresscode = jobdatum.title
-				M.job = jobdatum.title
-				jobdatum.equip(M)
-
 		else
-			M.equipOutfit(outfits[dresscode])
+			M.equipOutfit(dresscode)
 
 
 	M.regenerate_icons()
 
 	log_admin("[key_name(usr)] changed the equipment of [key_name(M)] to [dresscode].")
-	message_admins("<span class='adminnotice'>[key_name_admin(usr)] changed the equipment of [key_name_admin(M)] to [dresscode]..</span>")
-	return
+	message_admins("<span class='adminnotice'>[key_name_admin(usr)] changed the equipment of [key_name_admin(M)] to [dresscode].</span>")
 
 /client/proc/startSinglo()
 
@@ -606,9 +608,16 @@ var/global/list/g_fancy_list_of_types = null
 		if(E.anchored)
 			E.active = 1
 
-	//for(var/obj/machinery/field/generator/F in machines)
-	//	if(F.anchored)
-	//		F.Varedit_start = 1
+	for(var/obj/machinery/field/generator/F in machines)
+		if(F.active == 0)
+			F.active = 1
+			F.state = 2
+			F.power = 250
+			F.anchored = 1
+			F.warming_up = 3
+			F.start_fields()
+			F.update_icon()
+
 	spawn(30)
 		for(var/obj/machinery/the_singularitygen/G in machines)
 			if(G.anchored)
@@ -629,11 +638,12 @@ var/global/list/g_fancy_list_of_types = null
 
 	for(var/obj/machinery/power/rad_collector/Rad in machines)
 		if(Rad.anchored)
-			if(!Rad.P)
+			if(!Rad.loaded_tank)
 				var/obj/item/weapon/tank/internals/plasma/Plasma = new/obj/item/weapon/tank/internals/plasma(Rad)
-				Plasma.air_contents.toxins = 70
+				Plasma.air_contents.assert_gas("plasma")
+				Plasma.air_contents.gases["plasma"][MOLES] = 70
 				Rad.drainratio = 0
-				Rad.P = Plasma
+				Rad.loaded_tank = Plasma
 				Plasma.loc = Rad
 
 			if(!Rad.active)
@@ -650,19 +660,19 @@ var/global/list/g_fancy_list_of_types = null
 
 	switch(input("Which list?") in list("Players","Admins","Mobs","Living Mobs","Dead Mobs","Clients","Joined Clients"))
 		if("Players")
-			usr << list2text(player_list,",")
+			to_chat(usr, jointext(player_list,","))
 		if("Admins")
-			usr << list2text(admins,",")
+			to_chat(usr, jointext(admins,","))
 		if("Mobs")
-			usr << list2text(mob_list,",")
+			to_chat(usr, jointext(mob_list,","))
 		if("Living Mobs")
-			usr << list2text(living_mob_list,",")
+			to_chat(usr, jointext(living_mob_list,","))
 		if("Dead Mobs")
-			usr << list2text(dead_mob_list,",")
+			to_chat(usr, jointext(dead_mob_list,","))
 		if("Clients")
-			usr << list2text(clients,",")
+			to_chat(usr, jointext(clients,","))
 		if("Joined Clients")
-			usr << list2text(joined_player_list,",")
+			to_chat(usr, jointext(joined_player_list,","))
 
 /client/proc/cmd_display_del_log()
 	set category = "Debug"
@@ -685,93 +695,64 @@ var/global/list/g_fancy_list_of_types = null
 	set name = "Debug HUDs"
 	set desc = "Debug the data or antag HUDs"
 
-	if(!holder)	return
+	if(!holder)
+		return
 	debug_variables(huds[i])
 
-/*/client/proc/library_debug_cat() //Easy to use library debug tool. Doesn't work yet. Shame.
+/client/proc/jump_to_ruin()
 	set category = "Debug"
-	set name = "Library: Catalog"
-	if(!check_rights(R_PERMISSIONS))	return
-
-	establish_old_db_connection()
-	if(!dbcon_old.IsConnected())
-		usr << "<b>Database connection failure imminent.</b><br>Operation aborted."
+	set name = "Jump to Ruin"
+	set desc = "Displays a list of all placed ruins to teleport to."
+	if(!holder)
 		return
+	var/list/names = list()
+	for(var/i in ruin_landmarks)
+		var/obj/effect/landmark/ruin/ruin_landmark = i
+		var/datum/map_template/ruin/template = ruin_landmark.ruin_template
 
-	var/catalog = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n"
-	catalog += "<table><tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>ID</td></tr>"
+		var/count = 1
+		var/name = template.name
+		var/original_name = name
 
-	var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library")
-	query.Execute()
+		while(name in names)
+			count++
+			name = "[original_name] ([count])"
 
-	while(query.NextRow())
-		var/id = query.item[1]
-		var/author = query.item[2]
-		var/title = query.item[3]
-		var/category = query.item[4]
-		catalog += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>[id]</td></tr>"
-	catalog += "</table>"
+		names[name] = ruin_landmark
 
-	usr << browse(catalog, "window=admlibrarycatalog")
-	onclose(usr, "library")
+	var/ruinname = input("Select ruin", "Jump to Ruin") as null|anything in names
 
-/client/proc/library_debug_remove()
+
+	var/obj/effect/landmark/ruin/landmark = names[ruinname]
+
+	if(istype(landmark))
+		var/datum/map_template/ruin/template = landmark.ruin_template
+		usr.forceMove(get_turf(landmark))
+		to_chat(usr, "<span class='name'>[template.name]</span>")
+		to_chat(usr, "<span class='italics'>[template.description]</span>")
+
+/client/proc/clear_dynamic_transit()
 	set category = "Debug"
-	set name = "Library: Remove by id"
-	if(!check_rights(R_PERMISSIONS))	return
-
-	establish_old_db_connection()
-	if(!dbcon_old.IsConnected())
-		usr << "Database connection failed."
+	set name = "Clear Dynamic Transit"
+	set desc = "Deallocates all transit space, restoring it to round start \
+		conditions."
+	if(!holder)
 		return
+	SSshuttle.clear_transit = TRUE
+	message_admins("<span class='adminnotice'>[key_name_admin(src)] cleared dynamic transit space.</span>")
+	feedback_add_details("admin_verb","CDT") // If...
+	log_admin("[key_name(src)] cleared dynamic transit space.")
 
-	var/id = input("Book ID:") as num
 
-	var/DBQuery/query = dbcon_old.NewQuery("SELECT author, title FROM library WHERE id='[id]'")
-	if(!query.Execute())
-		usr << query.ErrorMsg()
-
-	var/author
-	var/title
-	while(query.NextRow())
-		author = query.item[1]
-		title = query.item[2]
-		break
-
-	var/input = alert(src, "You want to remove [title], authored [author]", "Confirm", "Confirm", "Cancel")
-	if(input != "Confirm")
-		return
-
-	query = dbcon_old.NewQuery("DELETE FROM library WHERE id='[id]'")
-	if(!query.Execute())
-		usr << query.ErrorMsg()
-
-/client/proc/library_debug_read()
+/client/proc/toggle_medal_disable()
 	set category = "Debug"
-	set name = "Library: Read by id"
-	if(!check_rights(R_PERMISSIONS))	return
-
-	establish_old_db_connection()
-	if(!dbcon_old.IsConnected())
-		usr << "Database connection failed."
+	set name = "Toggle Medal Disable"
+	set desc = "Toggles the safety lock on trying to contact the medal hub."
+	if(!holder)
 		return
 
-	var/id = input("Book ID:") as num
+	global.medals_enabled = !global.medals_enabled
 
-	var/DBQuery/query = dbcon_old.NewQuery("SELECT * FROM library WHERE id='[id]'")
-	query.Execute()
-
-	//library computer code
-	var/author
-	var/title
-	var/content
-	while(query.NextRow())
-		author = query.item[2]
-		title = query.item[3]
-		content = query.item[4]
-		break
-
-	var/book = "<HEAD><TITLE>[title], [author]</TITLE></HEAD><BODY>\n"
-	book += content
-
-	usr << browse(content, "window=content") */
+	message_admins("<span class='adminnotice'>[key_name_admin(src)] [global.medals_enabled ? "disabled" : "enabled"] the medal hub lockout.</span>")
+	feedback_add_details("admin_verb","TMH") // If...
+	log_admin("[key_name(src)] [global.medals_enabled ? "disabled" : "enabled"] the medal hub lockout.")

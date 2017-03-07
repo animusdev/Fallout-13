@@ -3,9 +3,8 @@
 	name = "shutters"
 	desc = "Heavy duty metal shutters that opens mechanically."
 	icon = 'icons/obj/doors/shutters.dmi'
-	layer = 3.1
-	var/shuttersopen = 'sound/f13machines/doorshutter_open.ogg'
-	var/shuttersclose = 'sound/f13machines/doorshutter_close.ogg'
+	layer = CLOSED_DOOR_LAYER
+	damage_deflection = 20
 
 /obj/machinery/door/poddoor/shutters/preopen
 	icon_state = "open"
@@ -17,16 +16,14 @@
 
 /obj/machinery/door/poddoor/shutters/New()
 	..()
-	layer = 3.1	//to handle /obj/machinery/door/New() resetting the layer.
+	layer = CLOSED_DOOR_LAYER	//to handle /obj/machinery/door/New() resetting the layer.
 
 
 /obj/machinery/door/poddoor/shutters/open(ignorepower = 0)
 	..()
-	playsound(src.loc, shuttersopen, 50, 0)
-	layer = 3.1
+	layer = CLOSED_DOOR_LAYER
 
 
 /obj/machinery/door/poddoor/shutters/close(ignorepower = 0)
 	..()
-	playsound(src.loc, shuttersclose, 50, 0)
-	layer = 3.1
+	layer = CLOSED_DOOR_LAYER

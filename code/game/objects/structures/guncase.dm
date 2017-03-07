@@ -7,7 +7,7 @@
 	anchored = 0
 	density = 1
 	opacity = 0
-	var/case_type = "shotgun"//null
+	var/case_type = null
 	var/gun_category = /obj/item/weapon/gun
 	var/open = 1
 	var/capacity = 4
@@ -26,31 +26,34 @@
 	update_icon()
 
 /obj/structure/guncase/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	for(var/i = contents.len, i >= 1, i--)
-		overlays += image(icon = src.icon, icon_state = "[case_type]", pixel_x = 4 * (i -1) )
+		add_overlay(image(icon = src.icon, icon_state = "[case_type]", pixel_x = 4 * (i -1) ))
 	if(open)
-		overlays += "[icon_state]_open"
+		add_overlay("[icon_state]_open")
 	else
-		overlays += "[icon_state]_door"
+		add_overlay("[icon_state]_door")
 
 /obj/structure/guncase/attackby(obj/item/I, mob/user, params)
-	if(isrobot(user) || isalien(user))
+	if(iscyborg(user) || isalien(user))
 		return
 	if(istype(I, gun_category))
 		if(contents.len < capacity && open)
 			if(!user.drop_item())
 				return
 			contents += I
-			user << "<span class='notice'>You place [I] in [src].</span>"
+			to_chat(user, "<span class='notice'>You place [I] in [src].</span>")
 			update_icon()
 			return
 
-	open = !open
-	update_icon()
+	else if(user.a_intent != INTENT_HARM)
+		open = !open
+		update_icon()
+	else
+		return ..()
 
 /obj/structure/guncase/attack_hand(mob/user)
-	if(isrobot(usr) || isalien(usr))
+	if(iscyborg(user) || isalien(user))
 		return
 	if(contents.len && open)
 		ShowWindow(user)
@@ -59,7 +62,6 @@
 		update_icon()
 
 /obj/structure/guncase/proc/ShowWindow(mob/user)
-	user.set_machine(src)
 	var/dat = {"<div class='block'>
 				<h3>Stored Guns</h3>
 				<table align='center'>"}
@@ -74,26 +76,33 @@
 
 /obj/structure/guncase/Topic(href, href_list)
 	if(href_list["retrieve"])
-		var/obj/item/O = locate(href_list["retrieve"])
+		var/obj/item/O = locate(href_list["retrieve"]) in contents
+		if(!O || !istype(O))
+			return
 		if(!usr.canUseTopic(src))
 			return
 		if(ishuman(usr))
-			if(!usr.get_active_hand())
-				usr.put_in_hands(O)
-			else
-				O.loc = get_turf(src)
+			if(!usr.put_in_hands(O))
+				O.forceMove(get_turf(src))
 			update_icon()
-			updateUsrDialog()
+
+/obj/structure/guncase/handle_atom_del(atom/A)
+	update_icon()
+
+/obj/structure/guncase/contents_explosion(severity, target)
+	for(var/atom/A in contents)
+		A.ex_act(severity++, target)
+		CHECK_TICK
 
 /obj/structure/guncase/shotgun
 	name = "shotgun locker"
 	desc = "A locker that holds shotguns."
-//	case_type = "shotgun"
-	gun_category = /obj/item/weapon/gun/projectile/shotgun
+	case_type = "shotgun"
+	gun_category = /obj/item/weapon/gun/ballistic/shotgun
 
 /obj/structure/guncase/ecase
 	name = "energy gun locker"
 	desc = "A locker that holds energy guns."
 	icon_state = "ecase"
 	case_type = "egun"
-	gun_category = /obj/item/weapon/gun/energy/gun
+	gun_category = /obj/item/weapon/gun/energy/e_gun

@@ -3,7 +3,7 @@
 /datum/round_event_control/wizard/robelesscasting //EI NUDTH!
 	name = "Robeless Casting"
 	weight = 2
-	typepath = /datum/round_event/wizard/robelesscasting/
+	typepath = /datum/round_event/wizard/robelesscasting
 	max_occurrences = 1
 	earliest_start = 0
 
@@ -17,14 +17,14 @@
 					S.clothes_req = 0
 					spell_improved = 1
 			if(spell_improved)
-				L << "<span class='notice'>You suddenly feel like you never needed those garish robes in the first place...</span>"
+				to_chat(L, "<span class='notice'>You suddenly feel like you never needed those garish robes in the first place...</span>")
 
 //--//
 
 /datum/round_event_control/wizard/improvedcasting //blink x5 disintergrate x5 here I come!
 	name = "Improved Casting"
 	weight = 3
-	typepath = /datum/round_event/wizard/improvedcasting/
+	typepath = /datum/round_event/wizard/improvedcasting
 	max_occurrences = 4 //because that'd be max level spells
 	earliest_start = 0
 
@@ -42,10 +42,15 @@
 				if(S.charge_max < S.charge_counter)
 					S.charge_counter = S.charge_max
 				switch(S.spell_level)
-					if(1)	S.name = "Efficient [S.name]"
-					if(2)	S.name = "Quickened [S.name]"
-					if(3)	S.name = "Free [S.name]"
-					if(4)	S.name = "Instant [S.name]"
-					if(5)	S.name = "Ludicrous [S.name]"
+					if(1)
+						S.name = "Efficient [S.name]"
+					if(2)
+						S.name = "Quickened [S.name]"
+					if(3)
+						S.name = "Free [S.name]"
+					if(4)
+						S.name = "Instant [S.name]"
+					if(5)
+						S.name = "Ludicrous [S.name]"
 
-			L << "<span class='notice'>You suddenly feel more competent with your casting!</span>"
+			to_chat(L, "<span class='notice'>You suddenly feel more competent with your casting!</span>")

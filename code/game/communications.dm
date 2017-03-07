@@ -40,7 +40,7 @@
 
   obj/proc/receive_signal(datum/signal/signal, var/receive_method as num, var/receive_param)
     Handler from received signals. By default does nothing. Define your own for your object.
-    Avoid of sending signals directly from this proc, use spawn(-1). Do not use sleep() here please.
+    Avoid of sending signals directly from this proc, use spawn(0). Do not use sleep() here please.
       parameters:
         signal - see description below. Extract all needed data from the signal before doing sleep(), spawn() or return!
         receive_method - may be TRANSMISSION_WIRE or TRANSMISSION_RADIO.
@@ -102,12 +102,6 @@ Radio:
 1349 - Miners
 1347 - Cargo techs
 1447 - AI Private
-Fallout Frequencies
-1301 - Vault
-1303 - Legion
-1305 - NCR
-1307 - Den
-1309 - Enclave
 
 Devices:
 1451 - tracking implant
@@ -130,7 +124,7 @@ On the map:
 */
 
 var/list/radiochannels = list(
-	"Wasteland" = 1459,
+	"Common" = 1459,
 	"Science" = 1351,
 	"Command" = 1353,
 	"Medical" = 1355,
@@ -140,16 +134,11 @@ var/list/radiochannels = list(
 	"Syndicate" = 1213,
 	"Supply" = 1347,
 	"Service" = 1349,
-	"AI Private" = 1447,
-	"Vault" = 1301,
-	"Legion" = 1303,
-	"NCR" = 1305,
-	"Den" = 1307,
-	"Enclave" = 1309
+	"AI Private" = 1447
 )
 
 var/list/radiochannelsreverse = list(
-	"1459" = "Wasteland",
+	"1459" = "Common",
 	"1351" = "Science",
 	"1353" = "Command",
 	"1355" = "Medical",
@@ -159,12 +148,7 @@ var/list/radiochannelsreverse = list(
 	"1213" = "Syndicate",
 	"1347" = "Supply",
 	"1349" = "Service",
-	"1447" = "AI Private",
-	"1301" = "Vault",
-	"1303" = "Legion",
-	"1305" = "NCR",
-	"1307" = "Den",
-	"1309" = "Enclave"
+	"1447" = "AI Private"
 )
 
 //depenging helpers
@@ -178,12 +162,6 @@ var/const/ENG_FREQ = 1357 //engineering, coloured orange in chat window
 var/const/SEC_FREQ = 1359 //security, coloured red in chat window
 var/const/CENTCOM_FREQ = 1337 //centcom frequency, coloured grey in chat window
 var/const/AIPRIV_FREQ = 1447 //AI private, colored magenta in chat window
-
-var/const/VLT_FREQ = 1301
-var/const/LEG_FREQ = 1303
-var/const/NCR_FREQ = 1305
-var/const/DEN_FREQ = 1307
-var/const/ENCL_FREQ = 1309
 
 #define TRANSMISSION_WIRE	0
 #define TRANSMISSION_RADIO	1
@@ -267,12 +245,12 @@ var/list/pointers = list()
 	if(!holder)
 		return
 
-	src << "There are [pointers.len] pointers:"
+	to_chat(src, "There are [pointers.len] pointers:")
 	for(var/p in pointers)
-		src << p
+		to_chat(src, p)
 		var/datum/signal/S = locate(p)
 		if(istype(S))
-			src << S.debug_print()
+			to_chat(src, S.debug_print())
 
 /obj/proc/receive_signal(datum/signal/signal, receive_method, receive_param)
 	return
@@ -321,4 +299,4 @@ var/list/pointers = list()
 	for(var/d in data)
 		var/val = data[d]
 		if(istext(val))
-			data[d] = html_encode(val)
+			data[d] = html_encode_ru(val)

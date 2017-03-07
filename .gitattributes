@@ -1,22 +1,12 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# dmm map merger hook
+# needs additional setup, see tools/mapmerge/install.txt
+*.dmm merge=merge-dmm
 
-# Custom for Visual Studio
-*.cs     diff=csharp
-*.sln    merge=union
-*.csproj merge=union
-*.vbproj merge=union
-*.fsproj merge=union
-*.dbproj merge=union
+# dmi icon merger hook
+# needs additional setup, see tools/dmitool/merging.txt
+*.dmi merge=merge-dmi
 
-# Standard to msysgit
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
-*.dot  diff=astextplain
-*.DOT  diff=astextplain
-*.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+# force changelog merging to use union
+html/changelog.html merge=union
+
+

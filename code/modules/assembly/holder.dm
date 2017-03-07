@@ -5,7 +5,7 @@
 	item_state = "assembly"
 	flags = CONDUCT
 	throwforce = 5
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 2
 	throw_range = 7
 
@@ -36,11 +36,11 @@
 		a_right = A
 
 /obj/item/device/assembly_holder/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(a_left)
-		overlays += "[a_left.icon_state]_left"
+		add_overlay("[a_left.icon_state]_left")
 		for(var/O in a_left.attached_overlays)
-			overlays += "[O]_l"
+			add_overlay("[O]_l")
 
 	if(a_right)
 		var/list/images = list()
@@ -50,17 +50,10 @@
 		var/matrix = matrix(-1, 0, 0, 0, 1, 0)
 		for(var/image/I in images)
 			I.transform = matrix
-			overlays += I
+			add_overlay(I)
 
 	if(master)
 		master.update_icon()
-
-/obj/item/device/assembly_holder/HasProximity(atom/movable/AM as mob|obj)
-	if(a_left)
-		a_left.HasProximity(AM)
-	if(a_right)
-		a_right.HasProximity(AM)
-
 
 /obj/item/device/assembly_holder/Crossed(atom/movable/AM as mob|obj)
 	if(a_left)
@@ -106,12 +99,14 @@
 /obj/item/device/assembly_holder/attack_self(mob/user)
 	src.add_fingerprint(user)
 	if(!a_left || !a_right)
-		user << "<span class='danger'>Assembly part missing!</span>"
+		to_chat(user, "<span class='danger'>Assembly part missing!</span>")
 		return
 	if(istype(a_left,a_right.type))//If they are the same type it causes issues due to window code
 		switch(alert("Which side would you like to use?",,"Left","Right"))
-			if("Left")	a_left.attack_self(user)
-			if("Right")	a_right.attack_self(user)
+			if("Left")
+				a_left.attack_self(user)
+			if("Right")
+				a_right.attack_self(user)
 		return
 	else
 		a_left.attack_self(user)

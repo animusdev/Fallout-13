@@ -105,7 +105,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	var/redactedText = "\[REDACTED\]"
 
 /datum/newscaster/feed_network/New()
-	CreateFeedChannel("Wasteland Chronicle", "New California Republic", 1)
+	CreateFeedChannel("Station Announcements", "SS13", 1)
 	wanted_issue = new /datum/newscaster/wanted_message
 
 /datum/newscaster/feed_network/proc/CreateFeedChannel(channel_name, author, locked, adminChannel = 0)
@@ -169,14 +169,16 @@ var/list/obj/machinery/newscaster/allCasters = list()
 
 /obj/machinery/newscaster
 	name = "newscaster"
-	desc = "A standard Vault-tec-licensed newsfeed handler for use in the Vaults. All the news you absolutely have no use for, in one place!"
+	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. All the news you absolutely have no use for, in one place!"
 	icon = 'icons/obj/terminals.dmi'
 	icon_state = "newscaster_normal"
 	verb_say = "beeps"
 	verb_ask = "beeps"
 	verb_exclaim = "beeps"
-	var/isbroken = 0
-	var/ispowered = 1
+	armor = list(melee = 50, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 30)
+	obj_integrity = 200
+	max_integrity = 200
+	integrity_failure = 50
 	var/screen = 0
 	var/paper_remaining = 15
 	var/securityCaster = 0
@@ -188,10 +190,9 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	var/obj/item/weapon/photo/photo = null
 	var/channel_name = ""
 	var/c_locked=0
-	var/hitstaken = 0
 	var/datum/newscaster/feed_channel/viewing_channel = null
 	var/allow_comments = 1
-	luminosity = 0
+	light_range = 0
 	anchored = 1
 
 /obj/machinery/newscaster/security_unit
@@ -201,7 +202,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 /obj/machinery/newscaster/New(loc, ndir, building)
 	..()
 	if(building)
-		dir = ndir
+		setDir(ndir)
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)
 		pixel_y = (dir & 3)? (dir ==1 ? -32 : 32) : 0
 
@@ -217,64 +218,57 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	return ..()
 
 /obj/machinery/newscaster/update_icon()
-	if(!ispowered || isbroken)
+	cut_overlays()
+	if(stat & (NOPOWER|BROKEN))
 		icon_state = "newscaster_off"
-		if(isbroken)
-			overlays.Cut()
-			overlays += image(icon, "crack3")
-		return
-	overlays.Cut()
-	if(news_network.wanted_issue.active)
-		icon_state = "newscaster_wanted"
-		return
-	if(alert)
-		overlays += "newscaster_alert"
-	if(hitstaken > 0)
-		overlays += image(icon, "crack[hitstaken]")
-	icon_state = "newscaster_normal"
+	else
+		if(news_network.wanted_issue.active)
+			icon_state = "newscaster_wanted"
+		else
+			icon_state = "newscaster_normal"
+			if(alert)
+				add_overlay("newscaster_alert")
+	var/hp_percent = obj_integrity * 100 /max_integrity
+	switch(hp_percent)
+		if(75 to 100)
+			return
+		if(50 to 75)
+			add_overlay("crack1")
+		if(25 to 50)
+			add_overlay("crack2")
+		else
+			add_overlay("crack3")
+
 
 /obj/machinery/newscaster/power_change()
-	if(isbroken)
+	if(stat & BROKEN)
 		return
 	if(powered())
-		ispowered = 1
 		stat &= ~NOPOWER
 		update_icon()
 	else
 		spawn(rand(0, 15))
-			ispowered = 0
 			stat |= NOPOWER
 			update_icon()
 
-/obj/machinery/newscaster/ex_act(severity, target)
-	switch(severity)
-		if(1)
-			qdel(src)
-		if(2)
-			isbroken=1
-			if(prob(50))
-				qdel(src)
-			else
-				update_icon()
-		else
-			if(prob(50))
-				isbroken=1
-			update_icon()
+/obj/machinery/newscaster/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
+	. = ..()
+	update_icon()
 
 /obj/machinery/newscaster/attack_ai(mob/user)
 	return attack_hand(user)
 
 /obj/machinery/newscaster/attack_hand(mob/user)
-	if(!ispowered || isbroken)
+	if(stat & (NOPOWER|BROKEN))
 		return
-	if(istype(user, /mob/living/carbon/human) || istype(user,/mob/living/silicon) )
+	if(ishuman(user) || issilicon(user))
 		var/mob/living/human_or_robot_user = user
 		var/dat
 		scan_user(human_or_robot_user)
 		switch(screen)
 			if(0)
 				dat += "Welcome to Newscasting Unit #[unit_no].<BR> Interface & News networks Operational."
-				dat += "<BR><FONT SIZE=1>Property of Nanotransen Inc</FONT>"
+				dat += "<BR><FONT SIZE=1>Property of Nanotrasen Inc</FONT>"
 				if(news_network.wanted_issue.active)
 					dat+= "<HR><A href='?src=\ref[src];view_wanted=1'>Read Wanted Issue</A>"
 				dat+= "<HR><BR><A href='?src=\ref[src];create_channel=1'>Create Feed Channel</A>"
@@ -290,7 +284,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 					dat+="<HR><B>Feed Security functions:</B><BR>"
 					dat+="<BR><A href='?src=\ref[src];menu_wanted=1'>[(wanted_already) ? ("Manage") : ("Publish")] \"Wanted\" Issue</A>"
 					dat+="<BR><A href='?src=\ref[src];menu_censor_story=1'>Censor Feed Stories</A>"
-					dat+="<BR><A href='?src=\ref[src];menu_censor_channel=1'>Mark Feed Channel with Vault-tec D-Notice</A>"
+					dat+="<BR><A href='?src=\ref[src];menu_censor_channel=1'>Mark Feed Channel with Nanotrasen D-Notice</A>"
 				dat+="<BR><HR>The newscaster recognises you as: <FONT COLOR='green'>[scanned_user]</FONT>"
 			if(1)
 				dat+= "Station Feed Channels<HR>"
@@ -327,11 +321,11 @@ var/list/obj/machinery/newscaster/allCasters = list()
 			if(6)
 				dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed story to Network.</B></FONT><HR><BR>"
 				if(channel_name=="")
-					dat+="<FONT COLOR='maroon'>•Invalid receiving channel name.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Invalid receiving channel name.</FONT><BR>"
 				if(scanned_user=="Unknown")
-					dat+="<FONT COLOR='maroon'>•Channel author unverified.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Channel author unverified.</FONT><BR>"
 				if(msg == "" || msg == "\[REDACTED\]")
-					dat+="<FONT COLOR='maroon'>•Invalid message body.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Invalid message body.</FONT><BR>"
 				dat+="<BR><A href='?src=\ref[src];setScreen=[3]'>Return</A><BR>"
 			if(7)
 				dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed Channel to Network.</B></FONT><HR><BR>"
@@ -342,18 +336,18 @@ var/list/obj/machinery/newscaster/allCasters = list()
 					else
 						existing_authors += FC.author
 				if(scanned_user in existing_authors)
-					dat+="<FONT COLOR='maroon'>•There already exists a Feed channel under your name.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>There is already a Feed channel under your name.</FONT><BR>"
 				if(channel_name=="" || channel_name == "\[REDACTED\]")
-					dat+="<FONT COLOR='maroon'>•Invalid channel name.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Invalid channel name.</FONT><BR>"
 				var/check = 0
 				for(var/datum/newscaster/feed_channel/FC in news_network.network_channels)
 					if(FC.channel_name == channel_name)
 						check = 1
 						break
 				if(check)
-					dat+="<FONT COLOR='maroon'>•Channel name already in use.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Channel name already in use.</FONT><BR>"
 				if(scanned_user=="Unknown")
-					dat+="<FONT COLOR='maroon'>•Channel author unverified.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Channel author unverified.</FONT><BR>"
 				dat+="<BR><A href='?src=\ref[src];setScreen=[2]'>Return</A><BR>"
 			if(8)
 				var/total_num=length(news_network.network_channels)
@@ -371,7 +365,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 			if(9)
 				dat+="<B>[viewing_channel.channel_name]: </B><FONT SIZE=1>\[created by: <FONT COLOR='maroon'>[viewing_channel.returnAuthor(-1)]</FONT>\]</FONT><HR>"
 				if(viewing_channel.censored)
-					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the station, and marked with a Vault-tec D-Notice.<BR>"
+					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the station, and marked with a Nanotrasen D-Notice.<BR>"
 					dat+="No further feed story additions are allowed while the D-Notice is in effect.</FONT><BR><BR>"
 				else
 					if( isemptylist(viewing_channel.messages) )
@@ -398,7 +392,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 				dat+="<BR><HR><A href='?src=\ref[src];refresh=1'>Refresh</A>"
 				dat+="<BR><A href='?src=\ref[src];setScreen=[1]'>Back</A>"
 			if(10)
-				dat+="<B>Vault-tec Feed Censorship Tool</B><BR>"
+				dat+="<B>Nanotrasen Feed Censorship Tool</B><BR>"
 				dat+="<FONT SIZE=1>NOTE: Due to the nature of news Feeds, total deletion of a Feed Story is not possible.<BR>"
 				dat+="Keep in mind that users attempting to view a censored feed will instead see the \[REDACTED\] tag above it.</FONT>"
 				dat+="<HR>Select Feed channel to get Stories from:<BR>"
@@ -409,7 +403,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 						dat+="<A href='?src=\ref[src];pick_censor_channel=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : ()]<BR>"
 				dat+="<BR><A href='?src=\ref[src];setScreen=[0]'>Cancel</A>"
 			if(11)
-				dat+="<B>Vault-tec D-Notice Handler</B><HR>"
+				dat+="<B>Nanotrasen D-Notice Handler</B><HR>"
 				dat+="<FONT SIZE=1>A D-Notice is to be bestowed upon the channel if the handling Authority deems it as harmful for the station's"
 				dat+="morale, integrity or disciplinary behaviour. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed"
 				dat+="stories it might contain at the time. You can lift a D-Notice if you have the required access at any time.</FONT><HR>"
@@ -436,7 +430,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 				dat+="<B>[viewing_channel.channel_name]: </B><FONT SIZE=1>\[ created by: <FONT COLOR='maroon'>[viewing_channel.returnAuthor(-1)]</FONT> \]</FONT><BR>"
 				dat+="Channel messages listed below. If you deem them dangerous to the station, you can <A href='?src=\ref[src];toggle_d_notice=\ref[viewing_channel]'>Bestow a D-Notice upon the channel</A>.<HR>"
 				if(viewing_channel.censored)
-					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the station, and marked with a Vault-tec D-Notice.<BR>"
+					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the station, and marked with a Nanotrasen D-Notice.<BR>"
 					dat+="No further feed story additions are allowed while the D-Notice is in effect.</FONT><BR><BR>"
 				else
 					if(isemptylist(viewing_channel.messages))
@@ -472,11 +466,11 @@ var/list/obj/machinery/newscaster/allCasters = list()
 			if(16)
 				dat+="<B><FONT COLOR='maroon'>ERROR: Wanted Issue rejected by Network.</B></FONT><HR><BR>"
 				if(channel_name=="" || channel_name == "\[REDACTED\]")
-					dat+="<FONT COLOR='maroon'>•Invalid name for person wanted.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Invalid name for person wanted.</FONT><BR>"
 				if(scanned_user=="Unknown")
-					dat+="<FONT COLOR='maroon'>•Issue author unverified.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Issue author unverified.</FONT><BR>"
 				if(msg == "" || msg == "\[REDACTED\]")
-					dat+="<FONT COLOR='maroon'>•Invalid description.</FONT><BR>"
+					dat+="<FONT COLOR='maroon'>Invalid description.</FONT><BR>"
 				dat+="<BR><A href='?src=\ref[src];setScreen=[0]'>Return</A><BR>"
 			if(17)
 				dat+="<B>Wanted Issue successfully deleted from Circulation</B><BR>"
@@ -512,7 +506,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 /obj/machinery/newscaster/Topic(href, href_list)
 	if(..())
 		return
-	if ((usr.contents.Find(src) || ((get_dist(src, usr) <= 1) && istype(loc, /turf))) || (istype(usr, /mob/living/silicon)))
+	if ((usr.contents.Find(src) || ((get_dist(src, usr) <= 1) && isturf(loc))) || issilicon(usr))
 		usr.set_machine(src)
 		scan_user(usr)
 		if(href_list["set_channel_name"])
@@ -604,7 +598,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 			channel_name = trim(stripped_input(usr, "Provide the name of the Wanted person", "Network Security Handler"))
 			updateUsrDialog()
 		else if(href_list["set_wanted_desc"])
-			msg = trim(stripped_input(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler"))
+			msg = trim(stripped_input(usr, "Provide a description of the Wanted person and any other details you deem important", "Network Security Handler"))
 			updateUsrDialog()
 		else if(href_list["submit_wanted"])
 			var/input_param = text2num(href_list["submit_wanted"])
@@ -619,14 +613,14 @@ var/list/obj/machinery/newscaster/allCasters = list()
 						screen = 15
 					else
 						if(news_network.wanted_issue.isAdminMsg)
-							alert("The wanted issue has been distributed by a Vault-tec higherup. You cannot edit it.","Ok")
+							alert("The wanted issue has been distributed by a Nanotrasen higherup. You cannot edit it.","Ok")
 							return
 						news_network.submitWanted(channel_name, msg, scanned_user, photo)
 						screen = 19
 			updateUsrDialog()
 		else if(href_list["cancel_wanted"])
 			if(news_network.wanted_issue.isAdminMsg)
-				alert("The wanted issue has been distributed by a Vault-tec higherup. You cannot take it down.","Ok")
+				alert("The wanted issue has been distributed by a Nanotrasen higherup. You cannot take it down.","Ok")
 				return
 			var/choice = alert("Please confirm Wanted Issue removal","Network Security Handler","Confirm","Cancel")
 			if(choice=="Confirm")
@@ -639,21 +633,21 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		else if(href_list["censor_channel_author"])
 			var/datum/newscaster/feed_channel/FC = locate(href_list["censor_channel_author"])
 			if(FC.is_admin_channel)
-				alert("This channel was created by a Vault-tec Officer. You cannot censor it.","Ok")
+				alert("This channel was created by a Nanotrasen Officer. You cannot censor it.","Ok")
 				return
 			FC.toggleCensorAuthor()
 			updateUsrDialog()
 		else if(href_list["censor_channel_story_author"])
 			var/datum/newscaster/feed_message/MSG = locate(href_list["censor_channel_story_author"])
 			if(MSG.is_admin_message)
-				alert("This message was created by a Vault-tec Officer. You cannot censor its author.","Ok")
+				alert("This message was created by a Nanotrasen Officer. You cannot censor its author.","Ok")
 				return
 			MSG.toggleCensorAuthor()
 			updateUsrDialog()
 		else if(href_list["censor_channel_story_body"])
 			var/datum/newscaster/feed_message/MSG = locate(href_list["censor_channel_story_body"])
 			if(MSG.is_admin_message)
-				alert("This channel was created by a Vault-tec Officer. You cannot censor it.","Ok")
+				alert("This channel was created by a Nanotrasen Officer. You cannot censor it.","Ok")
 				return
 			MSG.toggleCensorBody()
 			updateUsrDialog()
@@ -665,7 +659,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		else if(href_list["toggle_d_notice"])
 			var/datum/newscaster/feed_channel/FC = locate(href_list["toggle_d_notice"])
 			if(FC.is_admin_channel)
-				alert("This channel was created by a Vault-tec Officer. You cannot place a D-Notice upon it.","Ok")
+				alert("This channel was created by a Nanotrasen Officer. You cannot place a D-Notice upon it.","Ok")
 				return
 			FC.toggleCensorDclass()
 			updateUsrDialog()
@@ -721,42 +715,70 @@ var/list/obj/machinery/newscaster/allCasters = list()
 
 /obj/machinery/newscaster/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/weapon/wrench))
-		user << "<span class='notice'>You start [anchored ? "un" : ""]securing [name]...</span>"
-		playsound(loc, 'sound/items/Ratchet.ogg', 50, 1)
-		if(do_after(user, 60/I.toolspeed, target = src))
-			user << "<span class='notice'>You [anchored ? "un" : ""]secure [name].</span>"
-			new /obj/item/wallframe/newscaster(loc)
+		to_chat(user, "<span class='notice'>You start [anchored ? "un" : ""]securing [name]...</span>")
+		playsound(loc, I.usesound, 50, 1)
+		if(do_after(user, 60*I.toolspeed, target = src))
 			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
-			qdel(src)
-		return
-	if(isbroken)
-		playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 100, 1)
-		audible_message("<span class='danger'>[user.name] further abuses the shattered [name].</span>", null, 5 )
-	else
-		if(istype(I, /obj/item/weapon))
-			user.do_attack_animation(src)
-			var/obj/item/weapon/W = I
-			if(W.damtype == STAMINA)
-				return
-			if(W.force <15)
-				audible_message("<span class='danger'>[user.name] hits the [name] with the [W.name] with no visible effect.</span>", null , 5 )
-				playsound(loc, 'sound/effects/Glasshit.ogg', 100, 1)
+			if(stat & BROKEN)
+				to_chat(user, "<span class='warning'>The broken remains of [src] fall on the ground.</span>")
+				new /obj/item/stack/sheet/metal(loc, 5)
+				new /obj/item/weapon/shard(loc)
+				new /obj/item/weapon/shard(loc)
 			else
-				hitstaken++
-				if(hitstaken==3)
-					audible_message("<span class='danger'>[user.name] smashes the [name]!</span>", null, 5 )
-					isbroken=1
-					playsound(loc, 'sound/effects/Glassbr3.ogg', 100, 1)
-				else
-					audible_message("<span class='danger'>[user.name] forcefully slams the [name] with the [I.name]!</span>", null, 5 )
-					playsound(loc, 'sound/effects/Glasshit.ogg', 100, 1)
+				to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]secure [name].</span>")
+				new /obj/item/wallframe/newscaster(loc)
+			qdel(src)
+	else if(istype(I, /obj/item/weapon/weldingtool) && user.a_intent != INTENT_HARM)
+		var/obj/item/weapon/weldingtool/WT = I
+		if(stat & BROKEN)
+			if(WT.remove_fuel(0,user))
+				user.visible_message("[user] is repairing [src].", \
+								"<span class='notice'>You begin repairing [src]...</span>", \
+								"<span class='italics'>You hear welding.</span>")
+				playsound(loc, WT.usesound, 40, 1)
+				if(do_after(user,40*WT.toolspeed, 1, target = src))
+					if(!WT.isOn() || !(stat & BROKEN))
+						return
+					to_chat(user, "<span class='notice'>You repair [src].</span>")
+					playsound(loc, 'sound/items/Welder2.ogg', 50, 1)
+					obj_integrity = max_integrity
+					stat &= ~BROKEN
+					update_icon()
 		else
-			user << "<span class='warning'>This does nothing!</span>"
-	update_icon()
+			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
+	else
+		return ..()
+
+/obj/machinery/newscaster/play_attack_sound(damage, damage_type = BRUTE, damage_flag = 0)
+	switch(damage_type)
+		if(BRUTE)
+			if(stat & BROKEN)
+				playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 100, 1)
+			else
+				playsound(loc, 'sound/effects/Glasshit.ogg', 90, 1)
+		if(BURN)
+			playsound(src.loc, 'sound/items/Welder.ogg', 100, 1)
+
+
+/obj/machinery/newscaster/deconstruct(disassembled = TRUE)
+	if(!(flags & NODECONSTRUCT))
+		new /obj/item/stack/sheet/metal(loc, 2)
+		new /obj/item/weapon/shard(loc)
+		new /obj/item/weapon/shard(loc)
+	qdel(src)
+
+/obj/machinery/newscaster/obj_break()
+	if(!(stat & BROKEN) && !(flags & NODECONSTRUCT))
+		stat |= BROKEN
+		playsound(loc, 'sound/effects/Glassbr3.ogg', 100, 1)
+		update_icon()
+
 
 /obj/machinery/newscaster/attack_paw(mob/user)
-	user << "<span class='warning'>The newscaster controls are far too complicated for your tiny brain!</span>"
-	return
+	if(user.a_intent != INTENT_HARM)
+		to_chat(user, "<span class='warning'>The newscaster controls are far too complicated for your tiny brain!</span>")
+	else
+		take_damage(5, BRUTE, "melee")
 
 /obj/machinery/newscaster/proc/AttachPhoto(mob/user)
 	if(photo)
@@ -767,29 +789,29 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		else
 			qdel(photo)
 		photo = null
-	if(istype(user.get_active_hand(), /obj/item/weapon/photo))
-		photo = user.get_active_hand()
+	if(istype(user.get_active_held_item(), /obj/item/weapon/photo))
+		photo = user.get_active_held_item()
 		if(!user.drop_item())
 			return
 		photo.loc = src
-	if(istype(user,/mob/living/silicon))
+	if(issilicon(user))
 		var/list/nametemp = list()
 		var/find
 		var/datum/picture/selection
 		var/obj/item/device/camera/siliconcam/targetcam = null
-		if(istype(user,/mob/living/silicon/ai))
+		if(isAI(user))
 			var/mob/living/silicon/ai/R = user
 			targetcam = R.aicamera
-		else if(istype(user,/mob/living/silicon/robot))
+		else if(iscyborg(user))
 			var/mob/living/silicon/robot/R = user
 			if(R.connected_ai)
 				targetcam = R.connected_ai.aicamera
 			else
 				targetcam = R.aicamera
 		else
-			user << "<span class='warning'>You cannot interface with silicon photo uploading!</span>"
+			to_chat(user, "<span class='warning'>You cannot interface with silicon photo uploading!</span>")
 		if(targetcam.aipictures.len == 0)
-			usr << "<span class='boldannounce'>No images saved</span>"
+			to_chat(usr, "<span class='boldannounce'>No images saved</span>")
 			return
 		for(var/datum/picture/t in targetcam.aipictures)
 			nametemp += t.fields["name"]
@@ -808,8 +830,8 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		if(human_user.wear_id)
-			if(istype(human_user.wear_id, /obj/item/clothing/gloves/pda))
-				var/obj/item/clothing/gloves/pda/P = human_user.wear_id
+			if(istype(human_user.wear_id, /obj/item/device/pda))
+				var/obj/item/device/pda/P = human_user.wear_id
 				if(P.id)
 					scanned_user = "[P.id.registered_name] ([P.id.assignment])"
 				else
@@ -821,7 +843,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 				scanned_user ="Unknown"
 		else
 			scanned_user ="Unknown"
-	else if(istype(user,/mob/living/silicon))
+	else if(issilicon(user))
 		var/mob/living/silicon/ai_user = user
 		scanned_user = "[ai_user.name] ([ai_user.job])"
 	else
@@ -859,10 +881,10 @@ var/list/obj/machinery/newscaster/allCasters = list()
 
 /obj/item/weapon/newspaper
 	name = "newspaper"
-	desc = "An issue of The Griffon, the newspaper circulating aboard Vault-tec Space Stations."
+	desc = "An issue of The Griffon, the newspaper circulating aboard Nanotrasen Space Stations."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "newspaper"
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("bapped")
 	var/screen = 0
 	var/pages = 0
@@ -877,7 +899,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	var/creationTime
 
 /obj/item/weapon/newspaper/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is focusing intently on [src]! It looks like they're trying to commit sudoku... until their eyes light up with realization!</span>")
+	user.visible_message("<span class='suicide'>[user] is focusing intently on [src]! It looks like [user.p_theyre()] trying to commit sudoku... until [user.p_their()] eyes light up with realization!</span>")
 	user.say(";JOURNALISM IS MY CALLING! EVERYBODY APPRECIATES UNBIASED REPORTI-GLORF")
 	var/mob/living/carbon/human/H = user
 	var/obj/W = new /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey(H.loc)
@@ -895,7 +917,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		switch(screen)
 			if(0) //Cover
 				dat+="<DIV ALIGN='center'><B><FONT SIZE=6>The Griffon</FONT></B></div>"
-				dat+="<DIV ALIGN='center'><FONT SIZE=2>Vault-tec-standard newspaper, for use on Vault-tec© Space Facilities</FONT></div><HR>"
+				dat+="<DIV ALIGN='center'><FONT SIZE=2>Nanotrasen-standard newspaper, for use on Nanotrasen? Space Facilities</FONT></div><HR>"
 				if(isemptylist(news_content))
 					if(wantedAuthor)
 						dat+="Contents:<BR><ul><B><FONT COLOR='red'>**</FONT>Important Security Announcement<FONT COLOR='red'>**</FONT></B> <FONT SIZE=2>\[page [pages+2]\]</FONT><BR></ul>"
@@ -958,7 +980,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 					else
 						dat+="None"
 				else
-					dat+="<I>Apart from some uninteresting Classified ads, there's nothing on this page...</I>"
+					dat+="<I>Apart from some uninteresting classified ads, there's nothing on this page...</I>"
 				if(scribble_page==curr_page)
 					dat+="<BR><I>There is a small scribble near the end of this page... It reads: \"[scribble]\"</I>"
 				dat+= "<HR><DIV STYLE='float:left;'><A href='?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
@@ -966,7 +988,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		human_user << browse(dat, "window=newspaper_main;size=300x400")
 		onclose(human_user, "newspaper_main")
 	else
-		user << "The paper is full of intelligible symbols!"
+		to_chat(user, "The paper is full of unintelligible symbols!")
 
 /obj/item/weapon/newspaper/proc/notContent(list/L)
 	if(!L.len)
@@ -985,7 +1007,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 /obj/item/weapon/newspaper/Topic(href, href_list)
 	var/mob/living/U = usr
 	..()
-	if ((src in U.contents) || ( istype(loc, /turf) && in_range(src, U) ))
+	if((src in U.contents) || (isturf(loc) && in_range(src, U)))
 		U.set_machine(src)
 		if(href_list["next_page"])
 			if(curr_page == pages+1)
@@ -1013,7 +1035,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 /obj/item/weapon/newspaper/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/pen))
 		if(scribble_page == curr_page)
-			user << "<span class='notice'>There's already a scribble in this page... You wouldn't want to make things too cluttered, would you?</span>"
+			to_chat(user, "<span class='notice'>There's already a scribble in this page... You wouldn't want to make things too cluttered, would you?</span>")
 		else
 			var/s = stripped_input(user, "Write something", "Newspaper")
 			if (!s)
@@ -1023,3 +1045,5 @@ var/list/obj/machinery/newscaster/allCasters = list()
 			scribble_page = curr_page
 			scribble = s
 			attack_self(user)
+	else
+		return ..()

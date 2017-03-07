@@ -2,18 +2,11 @@
 	name = "booze storage"
 	req_access = list(access_bar)
 	icon_state = "cabinet"
-	burn_state = FLAMMABLE
-	burntime = 20
+	resistance_flags = FLAMMABLE
+	obj_integrity = 70
+	max_integrity = 70
 
 /obj/structure/closet/secure_closet/bar/New()
 	..()
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
-	new /obj/item/weapon/reagent_containers/food/drinks/bottle/beer( src )
+	for(var/i in 1 to 10)
+		new /obj/item/weapon/reagent_containers/food/drinks/beer( src )

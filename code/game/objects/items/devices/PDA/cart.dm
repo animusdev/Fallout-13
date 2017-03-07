@@ -4,7 +4,7 @@
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "cart"
 	item_state = "electronic"
-	w_class = 1
+	w_class = WEIGHT_CLASS_TINY
 
 	var/obj/item/radio/integrated/radio = null
 	var/access_security = 0
@@ -23,6 +23,7 @@
 	var/access_status_display = 0
 	var/access_quartermaster = 0
 	var/access_hydroponics = 0
+	var/access_dronephone = 0
 	var/bot_access_flags = 0 //Bit flags. Selection: SEC_BOT|MULE_BOT|FLOOR_BOT|CLEAN_BOT|MED_BOT
 	var/spam_enabled = 0 //Enables "Send to All" Option
 
@@ -45,12 +46,14 @@
 	name = "\improper Power-ON cartridge"
 	icon_state = "cart-e"
 	access_engine = 1
+	access_dronephone = 1
 	bot_access_flags = FLOOR_BOT
 
 /obj/item/weapon/cartridge/atmos
 	name = "\improper BreatheDeep cartridge"
 	icon_state = "cart-a"
 	access_atmos = 1
+	access_dronephone = 1
 	bot_access_flags = FLOOR_BOT
 
 /obj/item/weapon/cartridge/medical
@@ -84,6 +87,7 @@
 	desc = "The ultimate in clean-room design."
 	icon_state = "cart-j"
 	access_janitor = 1
+	access_dronephone = 1
 	bot_access_flags = CLEAN_BOT
 
 /obj/item/weapon/cartridge/lawyer
@@ -120,6 +124,7 @@
 	name = "\improper B.O.O.P. Remote Control cartridge"
 	desc = "Packed with heavy duty triple-bot interlink!"
 	bot_access_flags = FLOOR_BOT|CLEAN_BOT|MED_BOT
+	access_dronephone = 1
 
 /obj/item/weapon/cartridge/signal
 	name = "generic signaler cartridge"
@@ -161,6 +166,7 @@
 	access_security = 1
 	access_newscaster = 1
 	access_quartermaster = 1
+	access_dronephone = 1
 
 /obj/item/weapon/cartridge/hos
 	name = "\improper R.O.B.U.S.T. DELUXE cartridge"
@@ -178,6 +184,7 @@
 	access_status_display = 1
 	access_engine = 1
 	access_atmos = 1
+	access_dronephone = 1
 	bot_access_flags = FLOOR_BOT
 
 /obj/item/weapon/cartridge/cmo
@@ -196,6 +203,7 @@
 	access_status_display = 1
 	access_reagent_scanner = 1
 	access_atmos = 1
+	access_dronephone = 1
 	bot_access_flags = FLOOR_BOT|CLEAN_BOT|MED_BOT
 
 /obj/item/weapon/cartridge/rd/New()
@@ -216,6 +224,7 @@
 	access_newscaster = 1
 	access_quartermaster = 1
 	access_janitor = 1
+	access_dronephone = 1
 	bot_access_flags = SEC_BOT|MULE_BOT|FLOOR_BOT|CLEAN_BOT|MED_BOT
 	spam_enabled = 1
 
@@ -231,7 +240,7 @@
 	var/shock_charges = 4
 
 /obj/item/weapon/cartridge/proc/unlock()
-	if (!istype(loc, /obj/item/clothing/gloves/pda))
+	if (!istype(loc, /obj/item/device/pda))
 		return
 
 	generate_menu()
@@ -239,13 +248,14 @@
 	return
 
 /obj/item/weapon/cartridge/proc/print_to_host(text)
-	if (!istype(loc, /obj/item/clothing/gloves/pda))
+	if (!istype(loc, /obj/item/device/pda))
 		return
-	loc:cart = text
+	var/obj/item/device/pda/P = loc
+	P.cart = text
 
 	for (var/mob/M in viewers(1, loc.loc))
 		if (M.client && M.machine == loc)
-			loc:attack_self(M)
+			P.attack_self(M)
 
 	return
 
@@ -273,6 +283,7 @@
 /obj/item/weapon/cartridge/proc/generate_menu(mob/user)
 	switch(mode)
 		if(40) //signaller
+			var/obj/item/radio/integrated/signal/S = radio
 			menu = "<h4><img src=pda_signaler.png> Remote Signaling System</h4>"
 
 			menu += {"
@@ -280,14 +291,14 @@
 Frequency:
 <a href='byond://?src=\ref[src];choice=Signal Frequency;sfreq=-10'>-</a>
 <a href='byond://?src=\ref[src];choice=Signal Frequency;sfreq=-2'>-</a>
-[format_frequency(radio:frequency)]
+[format_frequency(S.frequency)]
 <a href='byond://?src=\ref[src];choice=Signal Frequency;sfreq=2'>+</a>
 <a href='byond://?src=\ref[src];choice=Signal Frequency;sfreq=10'>+</a><br>
 <br>
 Code:
 <a href='byond://?src=\ref[src];choice=Signal Code;scode=-5'>-</a>
 <a href='byond://?src=\ref[src];choice=Signal Code;scode=-1'>-</a>
-[radio:code]
+[S.code]
 <a href='byond://?src=\ref[src];choice=Signal Code;scode=1'>+</a>
 <a href='byond://?src=\ref[src];choice=Signal Code;scode=5'>+</a><br>"}
 		if (41) //crew manifest
@@ -345,12 +356,12 @@ Code:
 				menu += "<span class='danger'>No connection<BR></span>"
 			else
 				var/list/L = list()
-				for(var/obj/machinery/power/terminal/term in powmonitor.powernet.nodes)
+				for(var/obj/machinery/power/terminal/term in powmonitor.attached.powernet.nodes)
 					if(istype(term.master, /obj/machinery/power/apc))
 						var/obj/machinery/power/apc/A = term.master
 						L += A
 
-				menu += "<PRE>Total power: [powmonitor.powernet.avail] W<BR>Total load:  [num2text(powmonitor.powernet.viewload,10)] W<BR>"
+				menu += "<PRE>Total power: [powmonitor.attached.powernet.viewavail] W<BR>Total load:  [num2text(powmonitor.attached.powernet.viewload,10)] W<BR>"
 
 				menu += "<FONT SIZE=-1>"
 
@@ -477,7 +488,7 @@ Code:
 
 			menu += "<br>"
 
-		/*if (47) //quartermaster order records
+		if (47) //quartermaster order records
 			menu = "<h4><img src=pda_crate.png> Supply Record Interlink</h4>"
 
 			menu += "<BR><B>Supply shuttle</B><BR>"
@@ -499,15 +510,15 @@ Code:
 			menu += "<BR>Current approved orders: <BR><ol>"
 			for(var/S in SSshuttle.shoppinglist)
 				var/datum/supply_order/SO = S
-				menu += "<li>#[SO.ordernum] - [SO.object.name] approved by [SO.orderedby] [SO.comment ? "([SO.comment])":""]</li>"
+				menu += "<li>#[SO.id] - [SO.pack.name] approved by [SO.orderer] [SO.reason ? "([SO.reason])":""]</li>"
 			menu += "</ol>"
 
 			menu += "Current requests: <BR><ol>"
 			for(var/S in SSshuttle.requestlist)
 				var/datum/supply_order/SO = S
-				menu += "<li>#[SO.ordernum] - [SO.object.name] requested by [SO.orderedby]</li>"
+				menu += "<li>#[SO.id] - [SO.pack.name] requested by [SO.orderer]</li>"
 			menu += "</ol><font size=\"-3\">Upgrade NOW to Space Parts & Space Vendors PLUS for full remote order control and inventory management."
-		*/
+
 		if (49) //janitorial locator
 			menu = "<h4><img src=pda_bucket.png> Persistent Custodial Object Locator</h4>"
 
@@ -604,14 +615,14 @@ Code:
 		usr << browse(null, "window=pda")
 		return
 
-	var/obj/item/clothing/gloves/pda/pda = loc
+	var/obj/item/device/pda/pda = loc
 
 	switch(href_list["choice"])
 		if("Medical Records")
 			active1 = find_record("id", href_list["target"], data_core.general)
 			if(active1)
 				active2 = find_record("id", href_list["target"], data_core.medical)
-			loc:mode = 441
+			pda.mode = 441
 			mode = 441
 			if(!active2)
 				active1 = null
@@ -620,25 +631,28 @@ Code:
 			active1 = find_record("id", href_list["target"], data_core.general)
 			if(active1)
 				active3 = find_record("id", href_list["target"], data_core.security)
-			loc:mode = 451
+			pda.mode = 451
 			mode = 451
 			if(!active3)
 				active1 = null
 
 		if("Send Signal")
 			spawn( 0 )
-				radio:send_signal("ACTIVATE")
+				var/obj/item/radio/integrated/signal/S = radio
+				S.send_signal("ACTIVATE")
 				return
 
 		if("Signal Frequency")
-			var/new_frequency = sanitize_frequency(radio:frequency + text2num(href_list["sfreq"]))
-			radio:set_frequency(new_frequency)
+			var/obj/item/radio/integrated/signal/S = radio
+			var/new_frequency = sanitize_frequency(S.frequency + text2num(href_list["sfreq"]))
+			S.set_frequency(new_frequency)
 
 		if("Signal Code")
-			radio:code += text2num(href_list["scode"])
-			radio:code = round(radio:code)
-			radio:code = min(100, radio:code)
-			radio:code = max(1, radio:code)
+			var/obj/item/radio/integrated/signal/S = radio
+			S.code += text2num(href_list["scode"])
+			S.code = round(S.code)
+			S.code = min(100, S.code)
+			S.code = max(1, S.code)
 
 		if("Status")
 			switch(href_list["statdisp"])
@@ -657,7 +671,7 @@ Code:
 		if("Power Select")
 			var/pnum = text2num(href_list["target"])
 			powmonitor = powermonitors[pnum]
-			loc:mode = 433
+			pda.mode = 433
 			mode = 433
 
 		if("Supply Orders")
@@ -699,7 +713,7 @@ Code:
 			if("summon") //Args are in the correct order, they are stated here just as an easy reminder.
 				active_bot.bot_control(command= "summon", user_turf= get_turf(usr), user_access= pda.GetAccess())
 			else //Forward all other bot commands to the bot itself!
-				active_bot.bot_control(command= href_list["op"])
+				active_bot.bot_control(command= href_list["op"], user= usr)
 
 	if(href_list["mule"]) //MULEbots are special snowflakes, and need different args due to how they work.
 
@@ -723,6 +737,14 @@ Code:
 		menu += "Model: [active_bot.model]<BR>"
 		menu += "Location: [get_area(active_bot)]<BR>"
 		menu += "Mode: [active_bot.get_mode()]"
+		if(active_bot.allow_pai)
+			menu += "<BR>pAI: "
+			if(active_bot.paicard && active_bot.paicard.pai)
+				menu += "[active_bot.paicard.pai.name]"
+				if(active_bot.bot_core.allowed(usr))
+					menu += " (<A href='byond://?src=\ref[src];op=ejectpai'><i>eject</i></A>)"
+			else
+				menu += "<i>none</i>"
 
 		//MULEs!
 		if(active_bot.bot_type == MULE_BOT)

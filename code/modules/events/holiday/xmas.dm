@@ -25,8 +25,9 @@
 
 /datum/round_event/presents/start()
 	for(var/obj/structure/flora/tree/pine/xmas in world)
-		if(xmas.z != 1)	continue
-		for(var/turf/simulated/floor/T in orange(1,xmas))
+		if(xmas.z != 1)
+			continue
+		for(var/turf/open/floor/T in orange(1,xmas))
 			for(var/i=1,i<=rand(1,5),i++)
 				new /obj/item/weapon/a_gift(T)
 	for(var/mob/living/simple_animal/pet/dog/corgi/Ian/Ian in mob_list)
@@ -46,7 +47,7 @@
 	var/cracked = 0
 
 /obj/item/weapon/toy/xmas_cracker/attack(mob/target, mob/user)
-	if( !cracked && istype(target,/mob/living/carbon/human) && (target.stat == CONSCIOUS) && !target.get_active_hand() )
+	if( !cracked && ishuman(target) && (target.stat == CONSCIOUS) && !target.get_active_held_item() )
 		target.visible_message("[user] and [target] pop \an [src]! *pop*", "<span class='notice'>You pull \an [src] with [target]! *pop*</span>", "<span class='italics'>You hear a pop.</span>")
 		var/obj/item/weapon/paper/Joke = new /obj/item/weapon/paper(user.loc)
 		Joke.name = "[pick("awful","terrible","unfunny")] joke"
@@ -77,7 +78,15 @@
 	icon_state = "xmashat"
 	desc = "A crappy paper hat that you are REQUIRED to wear."
 	flags_inv = 0
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+
+/obj/effect/landmark/xmastree
+	name = "christmas tree spawner"
+	var/tree = /obj/structure/flora/tree/pine/xmas
+
+/obj/effect/landmark/xmastree/rdrod
+	name = "festivus pole spawner"
+	tree = /obj/structure/festivus
 
 /datum/round_event_control/santa
 	name = "Santa is coming to town! (Christmas)"
@@ -148,4 +157,4 @@
 				telespell.clothes_req = 0 //santa robes aren't actually magical.
 				santa.mind.AddSpell(telespell) //does the station have chimneys? WHO KNOWS!
 
-				santa << "<span class='boldannounce'>You are Santa! Your objective is to bring joy to the people on this station. You can conjure more presents using a spell, and there are several presents in your bag.</span>"
+				to_chat(santa, "<span class='boldannounce'>You are Santa! Your objective is to bring joy to the people on this station. You can conjure more presents using a spell, and there are several presents in your bag.</span>")

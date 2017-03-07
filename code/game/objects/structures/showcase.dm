@@ -1,3 +1,6 @@
+#define SHOWCASE_CONSTRUCTED 1
+#define SHOWCASE_SCREWDRIVERED 2
+
 /*Completely generic structures for use by mappers to create fake objects, i.e. display rooms*/
 /obj/structure/showcase
 	name = "showcase"
@@ -6,6 +9,7 @@
 	desc = "A stand with the empty body of a cyborg bolted to it."
 	density = 1
 	anchored = 1
+	var/deconstruction_state = SHOWCASE_CONSTRUCTED
 
 /obj/structure/showcase/fakeid
 	name = "\improper Centcom identification console"
@@ -14,8 +18,8 @@
 	icon_state = "computer"
 
 /obj/structure/showcase/fakeid/New()
-	overlays += "id"
-	overlays += "id_key"
+	add_overlay("id")
+	add_overlay("id_key")
 
 /obj/structure/showcase/fakesec
 	name = "\improper Centcom security records"
@@ -24,63 +28,49 @@
 	icon_state = "computer"
 
 /obj/structure/showcase/fakesec/New()
-	overlays += "security"
-	overlays += "security_key"
+	add_overlay("security")
+	add_overlay("security_key")
 
+/obj/structure/showcase/horrific_experiment
+	name = "horrific experiment"
+	desc = "Some sort of pod filled with blood and viscera. You swear you can see it moving..."
+	icon = 'icons/obj/cloning.dmi'
+	icon_state = "pod_g"
 
+//Deconstructing
+//Showcases can be any sprite, so it makes sense that they can't be constructed.
+//However if a player wants to move an existing showcase or remove one, this is for that.
 
-/obj/structure/showcase/sign
-	icon = 'icons/obj/billboard.dmi'
-	bound_x = 64
-	density = 1
+/obj/structure/showcase/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/weapon/screwdriver) && !anchored)
+		if(deconstruction_state == SHOWCASE_SCREWDRIVERED)
+			to_chat(user, "<span class='notice'>You screw the screws back into the showcase.</span>")
+			playsound(loc, W.usesound, 100, 1)
+			deconstruction_state = SHOWCASE_CONSTRUCTED
+		else if (deconstruction_state == SHOWCASE_CONSTRUCTED)
+			to_chat(user, "<span class='notice'>You unscrew the screws.</span>")
+			playsound(loc, W.usesound, 100, 1)
+			deconstruction_state = SHOWCASE_SCREWDRIVERED
 
-/obj/structure/showcase/sign/klamat
-	name = "Klamat"
-	desc = "A sign showing the name of the town to Klamat."
-	icon_state = "klamat"
+	if(istype(W, /obj/item/weapon/crowbar) && deconstruction_state == SHOWCASE_SCREWDRIVERED)
+		if(do_after(user, 20*W.toolspeed, target = src))
+			playsound(loc, W.usesound, 100, 1)
+			to_chat(user, "<span class='notice'>You start to crowbar the showcase apart...</span>")
+			new /obj/item/stack/sheet/metal (get_turf(src), 4)
+			qdel(src)
 
-/obj/structure/showcase/sign/den
-	name = "Den"
-	desc = "A sign showing the name of the Den settlement."
-	icon_state = "den"
+	if(deconstruction_state == SHOWCASE_CONSTRUCTED && default_unfasten_wrench(user, W))
+		return
 
-/obj/structure/showcase/sign/random
-	var/types = 4
+//Feedback is given in examine because showcases can basically have any sprite assigned to them
 
-/obj/structure/showcase/sign/random/New()
+/obj/structure/showcase/examine(mob/user)
 	..()
-	types = pick(1,4)
 
-/obj/structure/showcase/sign/random/nukacola
-	name = "\improper Nuka-Cola billboard"
-	desc = "A billboard for the famous pre-war soft beverage."
-	icon_state = "cola1"
-
-/obj/structure/showcase/sign/random/nukacola/New()
-	..()
-	icon_state = "cola[types]"
-	switch(types)
-		if(1)
-			desc = "A billboard for the famous pre-war soft beverage."
-		if(2 to 3)
-			desc = "A billboard for the famous pre-war soft beverage, worn with age."
-		if(4)
-			name = "defaced Nuka-Cola billboard"
-			desc = "A billboard for the famous pre-war soft beverage, defaced by an opposer of the NCR."
-
-/obj/structure/showcase/sign/random/ritas
-	name = "\improper Rita's Cafe billboard"
-	desc = "A billboard advertising a pre-war cafe."
-	icon_state = "ritas1"
-
-/obj/structure/showcase/sign/random/ritas/New()
-	..()
-	icon_state = "ritas[types]"
-	switch(types)
-		if(1)
-			desc = "A billboard advertising a pre-war cafe."
-		if(2 to 3)
-			desc = "A billboard advertising a pre-war cafe, worn with age."
-		if(4)
-			name = "defaced Rita's Cafe billboard"
-			desc = "A billboard advertising a pre-war cafe, defaced by a supporter of Ceasar's Legion."
+	switch(deconstruction_state)
+		if(SHOWCASE_CONSTRUCTED)
+			to_chat(user, "The showcase is fully constructed.")
+		if(SHOWCASE_SCREWDRIVERED)
+			to_chat(user, "The showcase has its screws loosened.")
+		else
+			to_chat(user, "If you see this, something is wrong.")

@@ -9,7 +9,7 @@
 	var/on = 1
 	var/area/area = null
 	var/otherarea = null
-	//	luminosity = 1
+	//	light_range = 1
 
 /obj/machinery/light_switch/New()
 	..()
@@ -38,7 +38,7 @@
 
 /obj/machinery/light_switch/examine(mob/user)
 	..()
-	user << "It is [on? "on" : "off"]."
+	to_chat(user, "It is [on? "on" : "off"].")
 
 
 /obj/machinery/light_switch/attack_paw(mob/user)
@@ -69,8 +69,6 @@
 		updateicon()
 
 /obj/machinery/light_switch/emp_act(severity)
-	if(stat & (BROKEN|NOPOWER))
-		..(severity)
-		return
-	power_change()
-	..(severity)
+	if(!(stat & (BROKEN|NOPOWER)))
+		power_change()
+	..()

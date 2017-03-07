@@ -66,7 +66,9 @@
 		go_up(user,is_ghost)
 	else if(down)
 		go_down(user,is_ghost)
-		
+	else
+		to_chat(user, "<span class='warning'>[src] doesn't seem to lead anywhere!</span>")
+
 	if(!is_ghost)
 		add_fingerprint(user)
 
@@ -92,6 +94,8 @@
 /obj/structure/ladder/proc/can_use(mob/user)
 	return 1
 
-/obj/structure/ladder/unbreakable/Destroy()
-	return QDEL_HINT_LETMELIVE
-
+/obj/structure/ladder/unbreakable/Destroy(force)
+	if(force)
+		. = ..()
+	else
+		return QDEL_HINT_LETMELIVE

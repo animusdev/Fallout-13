@@ -1,9 +1,6 @@
-/obj/item/weapon/
+/obj/item/weapon
 	name = "weapon"
 	icon = 'icons/obj/weapons.dmi'
-
-/obj/item/attack_hulk(mob/user)
-	src.attack_hand(user)
 
 /obj/item/weapon/New()
 	..()

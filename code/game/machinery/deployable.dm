@@ -13,74 +13,37 @@
 	desc = "Looks like this would make good cover."
 	anchored = 1
 	density = 1
-	var/health = 100
-	var/maxhealth = 100
+	obj_integrity = 100
+	max_integrity = 100
 	var/proj_pass_rate = 50 //How many projectiles will pass the cover. Lower means stronger cover
-	var/ranged_damage_modifier = 1 //Multiply for ranged damage
 	var/material = METAL
-	var/debris_type
 
+/obj/structure/barricade/deconstruct(disassembled = TRUE)
+	if(!(flags & NODECONSTRUCT))
+		make_debris()
+	qdel(src)
 
-/obj/structure/barricade/proc/take_damage(damage, leave_debris=1, message)
-	health -= damage
-	if(health <= 0)
-		if(message)
-			visible_message(message)
-		else
-			visible_message("<span class='warning'>\The [src] is smashed apart!</span>")
-		if(leave_debris && debris_type)
-			new debris_type(get_turf(src), 3)
-		qdel(src)
-
-
-/obj/structure/barricade/attack_animal(mob/living/simple_animal/M)
-	M.changeNext_move(CLICK_CD_MELEE)
-	M.do_attack_animation(src)
-	if(M.melee_damage_upper == 0 || (M.melee_damage_type != BRUTE && M.melee_damage_type != BURN))
-		return
-	visible_message("<span class='danger'>[M] [M.attacktext] [src]!</span>")
-	add_logs(M, src, "attacked")
-	take_damage(M.melee_damage_upper)
+/obj/structure/barricade/proc/make_debris()
+	return
 
 /obj/structure/barricade/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/weapon/weldingtool) && user.a_intent == "help" && material == METAL)
+	if(istype(I, /obj/item/weapon/weldingtool) && user.a_intent != INTENT_HARM && material == METAL)
 		var/obj/item/weapon/weldingtool/WT = I
-		if(health < maxhealth)
+		if(obj_integrity < max_integrity)
 			if(WT.remove_fuel(0,user))
-				user << "<span class='notice'>You begin repairing [src]...</span>"
-				playsound(loc, 'sound/items/Welder.ogg', 40, 1)
-				if(do_after(user, 40/I.toolspeed, target = src))
-					health = Clamp(health + 20, 0, maxhealth)
-					return
-
+				to_chat(user, "<span class='notice'>You begin repairing [src]...</span>")
+				playsound(loc, WT.usesound, 40, 1)
+				if(do_after(user, 40*I.toolspeed, target = src))
+					obj_integrity = Clamp(obj_integrity + 20, 0, max_integrity)
 	else
-		user.changeNext_move(CLICK_CD_MELEE)
-		visible_message("<span class='warning'>[user] hits [src] with [I]!</span>", "<span class='warning'>You hit [src] with [I]!</span>")
-		take_damage(I.force)
-		user.do_attack_animation(src)
-
-/obj/structure/barricade/bullet_act(var/obj/item/projectile/P)
-	if(P)
-		..()
-		take_damage(P.damage*ranged_damage_modifier)
-		visible_message("<span class='warning'>\The [src] is hit by [P]!</span>")
-
-/obj/structure/barricade/ex_act(severity, target)
-	switch(severity)
-		if(1)
-			visible_message("<span class='warning'>\The [src] is blown apart!</span>")
-			qdel(src)
-		if(2)
-			take_damage(25, message = "<span class='warning'>\The [src] is blown apart!</span>")
-
-/obj/structure/barricade/blob_act()
-	take_damage(25, leave_debris = 0, message = "<span class='warning'>The blob eats through \the [src]!</span>")
-
+		return ..()
 
 /obj/structure/barricade/CanPass(atom/movable/mover, turf/target, height=0)//So bullets will fly over and stuff.
 	if(height==0)
 		return 1
-	if(istype(mover, /obj/item/projectile))
+	if(locate(/obj/structure/barricade) in get_turf(mover))
+		return 1
+	else if(istype(mover, /obj/item/projectile))
 		if(!anchored)
 			return 1
 		var/obj/item/projectile/proj = mover
@@ -90,9 +53,7 @@
 			return 1
 		return 0
 	else
-		return 0
-
-
+		return !density
 
 
 
@@ -105,52 +66,24 @@
 	icon_state = "woodenbarricade"
 	material = WOOD
 
+/obj/structure/barricade/wooden/make_debris()
+	new /obj/item/stack/sheet/mineral/wood(get_turf(src), 3)
 
-/obj/structure/barricade/wooden/planks
-	icon_state = "board"
-	health = 90
-	maxhealth = 90
-	layer = 5
-	var/planks = 3
-	var/maxplanks = 3
 
-/obj/structure/barricade/wooden/planks/New()
-	..()
-	checkplanks()
-	maxhealth = maxplanks*30
+/obj/structure/barricade/sandbags
+	name = "sandbags"
+	desc = "Bags of sand. Self explanatory."
+	icon = 'icons/obj/smooth_structures/sandbags.dmi'
+	icon_state = "sandbags"
+	obj_integrity = 280
+	max_integrity = 280
+	proj_pass_rate = 20
+	pass_flags = LETPASSTHROW
+	material = SAND
+	climbable = TRUE
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(/obj/structure/barricade/sandbags, /turf/closed/wall, /turf/closed/wall/r_wall, /obj/structure/falsewall, /obj/structure/falsewall/reinforced, /turf/closed/wall/rust, /turf/closed/wall/r_wall/rust, /obj/structure/barricade/security)
 
-/obj/structure/barricade/wooden/planks/examine()
-	..()
-	usr << "<span class='notice'>There are [planks] boards left.</span>"
-
-/obj/structure/barricade/wooden/planks/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/weapon/crowbar))
-		visible_message("<span class='danger'>[user] begins pry off a board...</span>")
-		if(do_after(user, 25, target = src))
-			visible_message("<span class='danger'>[user] pries off a board!</span>")
-			planks --
-			checkplanks()
-			if(prob(50))
-				new /obj/item/stack/sheet/mineral/wood(user.loc)
-			return
-	..() //Adding more planks is an afterattack on the sheet type
-
-/obj/structure/barricade/wooden/planks/take_damage()
-	..()
-	if(health <= (planks-1)*30)
-		planks --
-		checkplanks()
-	return
-
-/obj/structure/barricade/wooden/planks/proc/checkplanks()
-	health = planks*30 //Each board adds 30 health
-	icon_state = "board-[planks]"
-	if(health <= 0)
-		qdel(src)
-
-/obj/structure/barricade/wooden/planks/pregame/New() //Place these in the map maker to have a bit of randomization with boarded up windows/doors
-	planks = rand(1,maxplanks)
-	..()
 
 /obj/structure/barricade/security
 	name = "security barrier"
@@ -159,19 +92,21 @@
 	icon_state = "barrier0"
 	density = 0
 	anchored = 0
-	health = 180
-	maxhealth = 180
+	obj_integrity = 180
+	max_integrity = 180
 	proj_pass_rate = 20
-	ranged_damage_modifier = 0.5
+	armor = list(melee = 10, bullet = 50, laser = 50, energy = 50, bomb = 10, bio = 100, rad = 100, fire = 10, acid = 0)
 
 
 /obj/structure/barricade/security/New()
 	..()
-	spawn(40)
-		icon_state = "barrier1"
-		density = 1
-		anchored = 1
-		visible_message("<span class='warning'>[src] deploys!</span>")
+	addtimer(CALLBACK(src, .proc/deploy), 40)
+
+/obj/structure/barricade/security/proc/deploy()
+	icon_state = "barrier1"
+	density = 1
+	anchored = 1
+	visible_message("<span class='warning'>[src] deploys!</span>")
 
 
 /obj/item/weapon/grenade/barrier
@@ -180,10 +115,12 @@
 	icon = 'icons/obj/grenade.dmi'
 	icon_state = "flashbang"
 	item_state = "flashbang"
-	action_button_name = "Toggle Barrier Spread"
+	actions_types = list(/datum/action/item_action/toggle_barrier_spread)
 	var/mode = SINGLE
 
-/obj/item/weapon/grenade/barrier/AltClick(mob/user)
+/obj/item/weapon/grenade/barrier/AltClick(mob/living/user)
+	if(!istype(user) || user.incapacitated())
+		return
 	toggle_mode(user)
 
 /obj/item/weapon/grenade/barrier/proc/toggle_mode(mob/user)
@@ -195,7 +132,7 @@
 		if(HORIZONTAL)
 			mode = SINGLE
 
-	user << "[src] is now in [mode] mode."
+	to_chat(user, "[src] is now in [mode] mode.")
 
 /obj/item/weapon/grenade/barrier/prime()
 	new /obj/structure/barricade/security(get_turf(src.loc))
@@ -218,8 +155,8 @@
 				new /obj/structure/barricade/security(target_turf2)
 	qdel(src)
 
-/obj/item/weapon/grenade/barrier/ui_action_click()
-	toggle_mode(usr)
+/obj/item/weapon/grenade/barrier/ui_action_click(mob/user)
+	toggle_mode(user)
 
 
 #undef SINGLE

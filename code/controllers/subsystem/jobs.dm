@@ -2,10 +2,12 @@ var/datum/subsystem/job/SSjob
 
 /datum/subsystem/job
 	name = "Jobs"
-	priority = 5
+	init_order = 5
+	flags = SS_NO_FIRE
 
 	var/list/occupations = list()		//List of all jobs
-	var/list/desert_occupations = list() //List of all desert 'jobs'
+	var/list/name_occupations = list()	//Dict of all jobs, keys are titles
+	var/list/type_occupations = list()	//Dict of all jobs, keys are types
 	var/list/unassigned = list()		//Players who need jobs
 	var/list/job_debug = list()			//Debug info
 	var/initial_players_to_assign = 0 	//used for checking against population caps
@@ -14,91 +16,79 @@ var/datum/subsystem/job/SSjob
 	NEW_SS_GLOBAL(SSjob)
 
 
-/datum/subsystem/job/Initialize(timeofday, zlevel)
-	if (zlevel)
-		return ..()
+/datum/subsystem/job/Initialize(timeofday)
 	SetupFaction()
 	SetupStatus()
-	SetupOccupations()
+	if(!occupations.len)
+		SetupOccupations()
 	if(config.load_jobs_from_txt)
 		LoadJobs()
 	..()
+
+
+/datum/subsystem/job/proc/SetupOccupations()
+	occupations = list()
+	var/list/all_jobs = subtypesof(/datum/job)
+	if(!all_jobs.len)
+		to_chat(world, "<span class='boldannounce'>Error setting up jobs, no job datums found</span>")
+		return 0
+
+	for(var/J in all_jobs)
+		var/datum/job/job = new J()
+		if(!job)
+			continue
+#if defined(MAP_FACTIONS_LIST)
+		if(!(job.faction in MAP_FACTIONS_LIST))
+			continue
+#endif
+		if(!job.config_check())
+			continue
+		occupations += job
+		name_occupations[job.title] = job
+		type_occupations[J] = job
+
+	return 1
+
+
+/datum/subsystem/job/proc/Debug(text)
+	if(!Debug2)
+		return 0
+	job_debug.Add(text)
+	return 1
 
 /datum/subsystem/job/proc/SetupFaction()
 	var/list/factions = subtypesof(/datum/f13_faction)
 	for(var/F in factions)
 		var/datum/f13_faction/faction = new F()
 		human_factions[faction.name] = faction
+
 /datum/subsystem/job/proc/SetupStatus()
 	var/list/status = subtypesof(/datum/status)
 	for(var/S in status)
 		var/datum/status/stat = new S()
 		human_status[stat.name] = stat
 
-
-/datum/subsystem/job/proc/SetupDesertOccupations()
-	desert_occupations = list()
-	var/list/all_jobs = subtypesof(/datum/job)
-	for (var/J in all_jobs)
-		var/datum/job/job = new J()
-		if(!job)
-			continue
-		var/datum/f13_faction/faction = get_faction_datum(job.faction)
-		if(faction == null || !faction.late_join)
-			continue
-		desert_occupations += job
-
-
-/datum/subsystem/job/proc/SetupOccupations()
-	SetupDesertOccupations()
-	occupations = list()
-	var/list/all_jobs = subtypesof(/datum/job)
-	if(!all_jobs.len)
-		world << "<span class='boldannounce'>Error setting up jobs, no job datums found</span>"
-		return 0
-
-	for(var/J in all_jobs)
-		var/datum/job/job = new J()
-		if(!job)	continue
-		var/datum/f13_faction/F = get_faction_datum(job.faction)
-		if(F == null || !F.first_spawn)
-			continue
-		if(!job.config_check()) continue
-		occupations += job
-
-	return 1
-
-
-/datum/subsystem/job/proc/Debug(text)
-	if(!Debug2)	return 0
-	job_debug.Add(text)
-	return 1
-
-
 /datum/subsystem/job/proc/GetJob(rank)
-	if(!rank)	return null
-	for(var/datum/job/J in occupations)
-		if(!J)	continue
-		if(J.title == rank)	return J
-	return null
+	if(!occupations.len)
+		SetupOccupations()
+	return name_occupations[rank]
 
-/datum/subsystem/job/proc/GetDesertJob(rank)
-	if(!rank)
-		return null
-	for(var/datum/job/J in desert_occupations)
-		if(!J)
-			continue
-		if(J.title == rank)
-			return J
-	return null
+/datum/subsystem/job/proc/GetJobType(jobtype)
+	if(!occupations.len)
+		SetupOccupations()
+	return type_occupations[jobtype]
+
 
 /datum/subsystem/job/proc/AssignRole(mob/new_player/player, rank, latejoin=0)
 	Debug("Running AR, Player: [player], Rank: [rank], LJ: [latejoin]")
 	if(player && player.mind && rank)
 		var/datum/job/job = GetJob(rank)
-		if(!job)	return 0
-		if(jobban_isbanned(player, rank))	return 0
-		if(!job.player_old_enough(player.client)) return 0
+		if(!job)
+			return 0
+		if(jobban_isbanned(player, rank))
+			return 0
+		if(!job.player_old_enough(player.client))
+			return 0
 		var/position_limit = job.total_positions
 		if(!latejoin)
 			position_limit = job.spawn_positions
@@ -130,6 +120,9 @@ var/datum/subsystem/job/SSjob
 		if(config.enforce_human_authority && !player.client.prefs.pref_species.qualifies_for_rank(job.title, player.client.prefs.features))
 			Debug("FOC non-human failed, Player: [player]")
 			continue
+		if(!job.is_quality_human(player))
+			Debug("FOC job quality check failed, Player: [player]")
+			continue
 		if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
 			Debug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
@@ -144,7 +137,7 @@ var/datum/subsystem/job/SSjob
 		if(istype(job, GetJob("Assistant"))) // We don't want to give him assistant, that's boring!
 			continue
 
-		if(job in command_positions) //If you want a command position, select it!
+		if(job.title in command_positions) //If you want a command position, select it!
 			continue
 
 		if(jobban_isbanned(player, job.title))
@@ -187,10 +180,13 @@ var/datum/subsystem/job/SSjob
 	for(var/level = 1 to 3)
 		for(var/command_position in command_positions)
 			var/datum/job/job = GetJob(command_position)
-			if(!job)	continue
-			if((job.current_positions >= job.total_positions) && job.total_positions != -1)	continue
+			if(!job)
+				continue
+			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+				continue
 			var/list/candidates = FindOccupationCandidates(job, level)
-			if(!candidates.len)	continue
+			if(!candidates.len)
+				continue
 			var/mob/new_player/candidate = pick(candidates)
 			if(AssignRole(candidate, command_position))
 				return 1
@@ -202,10 +198,13 @@ var/datum/subsystem/job/SSjob
 /datum/subsystem/job/proc/CheckHeadPositions(level)
 	for(var/command_position in command_positions)
 		var/datum/job/job = GetJob(command_position)
-		if(!job)	continue
-		if((job.current_positions >= job.total_positions) && job.total_positions != -1)	continue
+		if(!job)
+			continue
+		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+			continue
 		var/list/candidates = FindOccupationCandidates(job, level)
-		if(!candidates.len)	continue
+		if(!candidates.len)
+			continue
 		var/mob/new_player/candidate = pick(candidates)
 		AssignRole(candidate, command_position)
 	return
@@ -214,14 +213,8 @@ var/datum/subsystem/job/SSjob
 /datum/subsystem/job/proc/FillAIPosition()
 	var/ai_selected = 0
 	var/datum/job/job = GetJob("AI")
-	if(!job)	return 0
-	if(ticker.mode.name == "AI malfunction")	// malf. AIs are pre-selected before jobs
-		for (var/datum/mind/mAI in ticker.mode.malf_ai)
-			AssignRole(mAI.current, "AI")
-			ai_selected++
-		if(ai_selected)	return 1
+	if(!job)
 		return 0
-
 	for(var/i = job.total_positions, i > 0, i--)
 		for(var/level = 1 to 3)
 			var/list/candidates = list()
@@ -231,7 +224,8 @@ var/datum/subsystem/job/SSjob
 				if(AssignRole(candidate, "AI"))
 					ai_selected++
 					break
-	if(ai_selected)	return 1
+	if(ai_selected)
+		return 1
 	return 0
 
 
@@ -257,7 +251,8 @@ var/datum/subsystem/job/SSjob
 	initial_players_to_assign = unassigned.len
 
 	Debug("DO, Len: [unassigned.len]")
-	if(unassigned.len == 0)	return 0
+	if(unassigned.len == 0)
+		return 0
 
 	//Scale number of open security officer slots to population
 	setup_officer_positions()
@@ -357,7 +352,7 @@ var/datum/subsystem/job/SSjob
 	for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
-		else if(player.client.prefs.userandomjob)
+		else if(player.client.prefs.joblessrole == BERANDOMJOB)
 			GiveRandomJob(player)
 
 	Debug("DO, Standard Check end")
@@ -368,17 +363,20 @@ var/datum/subsystem/job/SSjob
 	for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
-		Debug("AC2 Assistant located, Player: [player]")
-		AssignRole(player, "Assistant")
+		if(player.client.prefs.joblessrole == BEASSISTANT)
+			Debug("AC2 Assistant located, Player: [player]")
+			AssignRole(player, "Assistant")
+		else // For those who don't want to play if their preference were filled, back you go.
+			RejectPlayer(player)
+
+	for(var/mob/new_player/player in unassigned) //Players that wanted to back out but couldn't because they're antags (can you feel the edge case?)
+		GiveRandomJob(player)
+
 	return 1
 
 //Gives the player the stuff he should have with his rank
 /datum/subsystem/job/proc/EquipRank(mob/living/H, rank, joined_late=0)
-	var/datum/job/job
-	if (joined_late==0)
-		job = GetJob(rank)
-	else
-		job = GetDesertJob(rank)
+	var/datum/job/job = GetJob(rank)
 
 	H.job = rank
 
@@ -408,7 +406,7 @@ var/datum/subsystem/job/SSjob
 					if(clear)
 						S = T
 						continue
-		if(istype(S, /obj/effect/landmark) && istype(S.loc, /turf))
+		if(istype(S, /obj/effect/landmark) && isturf(S.loc))
 			H.loc = S.loc
 
 	if(H.mind)
@@ -418,22 +416,19 @@ var/datum/subsystem/job/SSjob
 		var/new_mob = job.equip(H)
 		if(ismob(new_mob))
 			H = new_mob
-		job.apply_fingerprints(H)
 
-	H << "<b>You are the [rank].</b>"
-	if (!joined_late)
-		H << "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>"
-		H << "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>"
-		if(job.req_admin_notify)
-			H << "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>"
-		if(config.minimal_access_threshold)
-			H << "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>"
-	else
-		H << "<b>As the [rank], your main and only goal is to survive in the wasteland.</b>"
-	H.set_status(job.status)
-	H.set_faction(job.faction)
-	H.update_hud() 	// Tmp fix for Github issue 1006. TODO: make all procs in update_icons.dm do client.screen |= equipment no matter what.
-	return 1
+	to_chat(H, "<b>You are the [rank].</b>")
+	to_chat(H, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
+	to_chat(H, "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>")
+	if(job.req_admin_notify)
+		to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
+	if(config.minimal_access_threshold)
+		to_chat(H, "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>")
+
+	if(job && H)
+		job.after_spawn(H)
+
+	return H
 
 
 /datum/subsystem/job/proc/setup_officer_positions()
@@ -455,7 +450,7 @@ var/datum/subsystem/job/SSjob
 	for(var/i=equip_needed-5, i>0, i--)
 		if(secequipment.len)
 			var/spawnloc = secequipment[1]
-			new /obj/structure/closet/secure_closet/security(spawnloc)
+			new /obj/structure/closet/secure_closet/security/sec(spawnloc)
 			secequipment -= spawnloc
 		else //We ran out of spare locker spawns!
 			break
@@ -464,10 +459,10 @@ var/datum/subsystem/job/SSjob
 /datum/subsystem/job/proc/LoadJobs()
 	var/jobstext = return_file_text("config/jobs.txt")
 	for(var/datum/job/J in occupations)
-		var/regex = "[J.title]=(-1|\\d+),(-1|\\d+)"
-		var/datum/regex/results = regex_find(jobstext, regex)
-		J.total_positions = text2num(results.str(2))
-		J.spawn_positions = text2num(results.str(3))
+		var/regex/jobs = new("[J.title]=(-1|\\d+),(-1|\\d+)")
+		jobs.Find(jobstext)
+		J.total_positions = text2num(jobs.group[1])
+		J.spawn_positions = text2num(jobs.group[2])
 
 /datum/subsystem/job/proc/HandleFeedbackGathering()
 	for(var/datum/job/job in occupations)
@@ -509,7 +504,21 @@ var/datum/subsystem/job/SSjob
 /datum/subsystem/job/proc/RejectPlayer(mob/new_player/player)
 	if(player.mind && player.mind.special_role)
 		return
-	Debug("Popcap overflow Check observer located, Player: [player]")
-	player << "<b>You have failed to qualify for any job you desired.</b>"
+	if(PopcapReached())
+		Debug("Popcap overflow Check observer located, Player: [player]")
+	to_chat(player, "<b>You have failed to qualify for any job you desired.</b>")
 	unassigned -= player
 	player.ready = 0
+
+
+/datum/subsystem/job/Recover()
+	var/oldjobs = SSjob.occupations
+	spawn(20)
+		for (var/datum/job/J in oldjobs)
+			spawn(-1)
+				var/datum/job/newjob = GetJob(J.title)
+				if (!istype(newjob))
+					return
+				newjob.total_positions = J.total_positions
+				newjob.spawn_positions = J.spawn_positions
+				newjob.current_positions = J.current_positions

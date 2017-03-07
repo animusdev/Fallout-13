@@ -3,38 +3,26 @@
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon_state = "laser"
 	item_state = "laser"
-	w_class = 3
+	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(MAT_METAL=2000)
-	origin_tech = "combat=3;magnets=2"
+	origin_tech = "combat=4;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
 	ammo_x_offset = 1
 	shaded_charge = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
 
 /obj/item/weapon/gun/energy/laser/practice
-	name = "laser gun"//practice laser gun
-	desc = "The fact is that you've got <b>REPLICA</b> written down the side of your gun..."//desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
+	name = "practice laser gun"
+	desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
+	origin_tech = "combat=2;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/practice)
 	clumsy_check = 0
 	needs_permit = 0
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-
-/obj/item/weapon/gun/energy/laser/plasma_rifle
-	name ="plasma rifle"
-	item_state = "plasma"
-	icon_state = "plasma"
-	desc = "Winchester P94 - energy weapon, firing heated plasma clots. Due to the high accuracy and range is a good tool to eliminate the enemy."
-	origin_tech = "combat=3;magnets=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmagun)
-	ammo_x_offset = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
 
 /obj/item/weapon/gun/energy/laser/retro
 	name ="retro laser gun"
 	icon_state = "retro"
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
 
 /obj/item/weapon/gun/energy/laser/captain
 	name = "antique laser gun"
@@ -45,7 +33,7 @@
 	origin_tech = null
 	ammo_x_offset = 3
 	selfcharge = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/weapon/gun/energy/laser/captain/scattershot
 	name = "scatter shot laser rifle"
@@ -53,16 +41,13 @@
 	item_state = "laser"
 	desc = "An industrial-grade heavy-duty laser rifle with a modified laser lense to scatter its shot into multiple smaller lasers. The inner-core can self-charge for theorically infinite use."
 	origin_tech = "combat=5;materials=4;powerstorage=4"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/laser/scatter)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/laser)
 
 /obj/item/weapon/gun/energy/laser/cyborg
 	can_charge = 0
 	desc = "An energy-based laser gun that draws power from the cyborg's internal energy cell directly. So this is what freedom looks like?"
-
-/obj/item/weapon/gun/energy/laser/cyborg/newshot()
-	..()
-	robocharge()
+	origin_tech = null
+	use_cyborg_cell = 1
 
 /obj/item/weapon/gun/energy/laser/cyborg/emp_act()
 	return
@@ -70,34 +55,59 @@
 /obj/item/weapon/gun/energy/laser/scatter
 	name = "scatter laser gun"
 	desc = "A laser gun equipped with a refraction kit that spreads bolts."
-	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/laser/scatter)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/laser)
+
+/obj/item/weapon/gun/energy/laser/scatter/shotty
+	name = "energy shotgun"
+	icon = 'icons/obj/guns/projectile.dmi'
+	icon_state = "cshotgun"
+	item_state = "shotgun"
+	desc = "A combat shotgun gutted and refitted with an internal laser system. Can switch between taser and scattered disabler shots."
+	shaded_charge = 0
+	pin = /obj/item/device/firing_pin/implant/mindshield
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/disabler, /obj/item/ammo_casing/energy/electrode)
+
+///Laser Cannon
 
 /obj/item/weapon/gun/energy/lasercannon
-	name = "laser cannon"
-	desc = "With the L.A.S.E.R. cannon, the lasing medium is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
+	name = "accelerator laser cannon"
+	desc = "An advanced laser cannon that does more damage the farther away the target is."
 	icon_state = "lasercannon"
 	item_state = "laser"
-	w_class = 4
+	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	flags =  CONDUCT
 	slot_flags = SLOT_BACK
-	origin_tech = "combat=4;materials=3;powerstorage=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
+	origin_tech = "combat=4;magnets=4;powerstorage=3"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/accelerator)
 	pin = null
 	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+
+/obj/item/ammo_casing/energy/laser/accelerator
+	projectile_type = /obj/item/projectile/beam/laser/accelerator
+	select_name = "accelerator"
+	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+
+/obj/item/projectile/beam/laser/accelerator
+	name = "accelerator laser"
+	icon_state = "scatterlaser"
+	range = 255
+	damage = 6
+
+/obj/item/projectile/beam/laser/accelerator/Range()
+	..()
+	damage += 7
+	transform *= 1 + ((damage/7) * 0.2)//20% larger per tile
 
 /obj/item/weapon/gun/energy/xray
 	name = "xray laser gun"
 	desc = "A high-power laser gun capable of expelling concentrated xray blasts that pass through multiple soft targets and heavier materials"
 	icon_state = "xray"
-	item_state = "laser"
-	origin_tech = "combat=5;materials=3;magnets=2;syndicate=2"
+	item_state = null
+	origin_tech = "combat=6;materials=4;magnets=4;syndicate=1"
 	ammo_type = list(/obj/item/ammo_casing/energy/xray)
 	pin = null
 	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
 
 ////////Laser Tag////////////////////
 
@@ -106,7 +116,7 @@
 	icon_state = "bluetag"
 	desc = "A retro laser gun modified to fire harmless blue beams of light. Sound effects included!"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/bluetag)
-	origin_tech = "combat=1;magnets=2"
+	origin_tech = "combat=2;magnets=2"
 	clumsy_check = 0
 	needs_permit = 0
 	pin = /obj/item/device/firing_pin/tag/blue
@@ -118,7 +128,7 @@
 	icon_state = "redtag"
 	desc = "A retro laser gun modified to fire harmless beams red of light. Sound effects included!"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/redtag)
-	origin_tech = "combat=1;magnets=2"
+	origin_tech = "combat=2;magnets=2"
 	clumsy_check = 0
 	needs_permit = 0
 	pin = /obj/item/device/firing_pin/tag/red
@@ -128,49 +138,5 @@
 
 
 
+//////////////////////fallout/////////////
 
-/obj/item/weapon/gun/energy/laser/wattz1000
-	name = "Laser pistol"
-	desc = "A Wattz 1000 Laser Pistol. Civilian model, so the wattage is lower than military or police versions"
-	icon_state = "wattz1000"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-	origin_tech = "combat=2;magnets=2"
-
-
-
-/obj/item/weapon/gun/energy/laser/glock86
-	name ="Glock86"
-	item_state = "glock86"
-	icon_state = "glock86"
-	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
-	origin_tech = "combat=2;magnets=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmapistol)
-	ammo_x_offset = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-
-
-
-/obj/item/weapon/gun/energy/wattz2000
-	name = "wattz2000"
-	desc = "A Wattz 2000 Laser Rifle"
-	icon_state = "wattz2000"
-	item_state = "wattz2000"
-	w_class = 4
-	force = 10
-	flags =  CONDUCT
-	origin_tech = "combat=4;materials=3;powerstorage=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
-	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-
-
-/obj/item/weapon/gun/energy/laser/turbo_plasma_rifle
-	name ="turbo plasma rifle"
-	item_state = "Turbo_plasma_rifle"
-	icon_state = "Turbo_plasma_rifle"
-	desc = "A modified winchester P94 plasma rifle. The plasma bolt chamber has been hotwired to accelerate the bolt formation process."
-	origin_tech = "combat=6;magnets=6"
-	ammo_type = list(/obj/item/ammo_casing/energy/turbo_plasmagun)
-	ammo_x_offset = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser

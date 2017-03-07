@@ -1,0 +1,105 @@
+"aa" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"ab" = (/turf/open/floor/f13/wood,/area/f13/wasteland)
+"ac" = (/turf/closed/wall/f13/wood/house/broken,/area/f13/wasteland)
+"ad" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"ae" = (/turf/open/indestructible/ground/sidewalk{dir = 2; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"af" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/wasteland)
+"ag" = (/turf/open/indestructible/ground/sidewalk{dir = 2; icon_state = "outerpavement"},/area/f13/wasteland)
+"ah" = (/turf/open/indestructible/ground/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/wasteland)
+"ai" = (/turf/closed/wall/f13/wood/house,/area/f13/wasteland)
+"aj" = (/turf/open/indestructible/ground/sidewalk{dir = 10; icon_state = "outerpavement"},/area/f13/wasteland)
+"ak" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
+"al" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; name = "kebab outpost wall"},/area/f13/secret)
+"am" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowleft"; name = "kebab outpost wall"},/area/f13/secret)
+"an" = (/obj/structure/window/fulltile/store{icon_state = "storewindowleft"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"ao" = (/obj/structure/window/fulltile/store,/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"ap" = (/obj/structure/window/fulltile/store{icon_state = "storewindowright"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aq" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowright"; name = "kebab outpost wall"},/area/f13/secret)
+"ar" = (/turf/closed/wall/f13/wood/house,/area/f13/building)
+"as" = (/obj/structure/simple_door/brokenglass,/turf/open/floor/f13/wood,/area/f13/building)
+"at" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowtop"; name = "kebab outpost wall"},/area/f13/secret)
+"au" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"av" = (/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aw" = (/turf/open/floor/f13{icon_state = "bluedirtychess2"},/area/f13/secret)
+"ax" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
+"ay" = (/turf/open/floor/f13/wood,/area/f13/building)
+"az" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/building)
+"aA" = (/obj/structure/window/fulltile/store{icon_state = "storewindowtop"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aB" = (/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aC" = (/obj/structure/table/wood/bar,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aD" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bluedirtychess2"},/area/f13/secret)
+"aE" = (/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
+"aF" = (/obj/structure/window/fulltile/store{icon_state = "storewindowvertical"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aG" = (/obj/structure/table/wood/bar,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aH" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
+"aI" = (/obj/structure/window/fulltile/store{icon_state = "storewindowbottom"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aJ" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowbottom"; name = "kebab outpost wall"},/area/f13/secret)
+"aK" = (/obj/machinery/light{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aL" = (/obj/machinery/light{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aM" = (/obj/structure/simple_door/glass,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aN" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aO" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13/wood,/area/f13/building)
+"aP" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/building)
+"aQ" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aR" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"aS" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/wasteland)
+"aT" = (/turf/open/indestructible/ground/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
+"aU" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"aV" = (/turf/open/indestructible/ground/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/wasteland)
+"aW" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"aX" = (/obj/machinery/light{dir = 8},/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aY" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aZ" = (/obj/machinery/light{dir = 4},/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"ba" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bb" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/secret)
+"bc" = (/obj/machinery/vending/nukacolavend,/turf/open/floor/f13/wood,/area/f13/secret)
+"bd" = (/obj/effect/decal/sign{desc = "Remove kebab."; icon_state = "vault_kebab"; name = "kebab sign"; pixel_x = -10; pixel_y = 28},/turf/open/floor/f13/wood,/area/f13/secret)
+"be" = (/turf/open/floor/f13/wood,/area/f13/secret)
+"bf" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/secret)
+"bg" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/secret)
+"bh" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13/wood,/area/f13/secret)
+"bi" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/secret)
+"bj" = (/obj/machinery/light{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bk" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bl" = (/obj/structure/simple_door/brokenglass,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bm" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowvertical"; name = "kebab outpost wall"},/area/f13/secret)
+"bn" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bo" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/secret)
+"bp" = (/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
+"bq" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
+"br" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
+"bs" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bt" = (/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/secret)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaababaaacadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaeacaaababababacafaaaaaaaeagagagagagagagagagagagagagad
+aaaeagahaiabababababaiajagadaaakalamanaoaoaoapaqalalalalalaf
+aaakarararararasarararararafaaakatauavavavavavaualawaxawalaf
+aaakarayazayayayayayayazarafaaakaAavavaBavaCaBaBaDawawaEalaf
+aaakarayayayayayayayayayarafaaakaFavaGaGaGaGavaBalaHawawalaf
+aaakarayayayayayayayazayarafaaakaIavavaBavavavavalalalalalaf
+aaakarazazayayayayayazayarafaaakaJaKavavaBaBavaLalavavaBalaf
+aaakarayayayayayayayayayarafaaakalavaBavavavaBavaMaBavaNalaf
+aaakararaOararaPararaOararafaaakalavavaBavavavavalavaQaQalaf
+aaaRaSaSaSaSaTaUaVaSaSaSaSaWaaakalaXaYaBaBavavaZalavaBbaalaf
+aaaaaaaaaaaaakaUafaaaaaaaaaaaaakalavavavaBavavavalaBaYaBalaf
+aaagagagagagahaUajagagagadaaaaakalalalalalbbalalalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaafaaaaakaUaUalbcbdbebebfbebebebealaf
+aaaaaaaaaaaaaaaaaaaaaaaaajagagahaUaUalbebebebebebgbgbebealaf
+aaaaaaaaaaaaaaaaaaaaaaaaaUaUaUaUaUaUbhbebebebebebgbebebebhaf
+aaaaaaaaaaaaaaaaaaaaaaaaaVaSaSaTaUaUalbebebebebebgbgbebealaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaUaUalbebebebebibebebebealaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalalalalalbbalalalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakataBaBavaBaBaBavalaBaYavalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaAavavaBavaBavbjalavavbaalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaFaBaBavavavavaBalaBavaBalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaFaBavbkbkaBavavblavavaNalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakbmaBavbnbnavavaBalaBaBavalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaFaBavavavavaBaLalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaFaBaBavaBavavavalbobpbqalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaIbnbnbnavaBavaBbrbpbpaEalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaJaBavbsavbsaBavalbpbtbpalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalalalalalalalalalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRaSaSaSaSaSaSaSaSaSaSaSaSaSaW
+"}
