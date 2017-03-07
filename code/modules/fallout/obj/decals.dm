@@ -7,9 +7,9 @@
 	icon_state = "goo1"
 	anchored = 1
 	level = 2.1
-	light_color = LIGHT_COLOR_SLIME_LAMP
-	light_power = 1
-	light_range = 2
+	light_color = LIGHT_COLOR_GREEN
+	light_power = 0.5
+	light_range = 3
 
 /obj/effect/decal/goo/New()
 	..()
