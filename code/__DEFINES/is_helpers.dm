@@ -114,6 +114,8 @@
 //Objects
 #define isobj(A) istype(A, /obj) //override the byond proc because it returns true on children of /atom/movable that aren't objs
 
+#define isitem(A) istype(A, /obj/item)
+
 #define islimb(A) (istype(A, /obj/item/bodypart))
 
 #define is_cleanable(A) (istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/rune)) //if something is cleanable

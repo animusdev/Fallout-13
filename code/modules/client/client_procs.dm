@@ -495,9 +495,9 @@ var/next_external_rsc = 0
 /client/Stat()
 	. = ..()
 	if (holder)
-		sleep(1)
-	else
 		sleep(5)
+	else
+		sleep(10)
 		stoplag()
 
 //send resources to the client. It's here in its own proc so we can move it around easiliy if need be

@@ -28,41 +28,35 @@
 		return 0
 	if(see_invisible < the_target.invisibility)//Target's invisible to us, forget it
 		return 0
-	if(search_objects < 2)
-		if(isliving(the_target))
-			var/mob/living/L = the_target
-			if(robust_searching)
-				if(L.stat > stat_attack || L.stat != stat_attack && stat_exclusive == 1)
-					return 0
-			else
-				if(L.stat)
-					return 0
-			if("everyone" in allowed_targets && !(the_target == master || friends.Find(the_target)))
+	if(isliving(the_target))
+		var/mob/living/L = the_target
+		if(robust_searching)
+			if(L.stat > stat_attack || L.stat != stat_attack && stat_exclusive == 1)
+				return 0
+		else
+			if(L.stat)
+				return 0
+		if(allowed_targets.Find("everyone") && !(the_target == master || friends.Find(the_target)))
+			return 1
+		if(allowed_targets.Find(the_target) || is_enemy(the_target))
+			return 1
+		return 0
+
+	if(istype(the_target, /obj/mecha))
+		var/obj/mecha/M = the_target
+		if(M.occupant)//Just so we don't attack empty mechs
+			if(CanAttack(M.occupant))
 				return 1
-			if(the_target in allowed_targets || is_enemy(the_target))
-				return 1
+
+	if(istype(the_target, /obj/machinery/porta_turret))
+		var/obj/machinery/porta_turret/P = the_target
+		if(P.faction in faction)
 			return 0
-
-		if(istype(the_target, /obj/mecha))
-			var/obj/mecha/M = the_target
-			if(M.occupant)//Just so we don't attack empty mechs
-				if(CanAttack(M.occupant))
-					return 1
-
-		if(istype(the_target, /obj/machinery/porta_turret))
-			var/obj/machinery/porta_turret/P = the_target
-			if(P.faction in faction)
-				return 0
-			if(P.has_cover &&!P.raised) //Don't attack invincible turrets
-				return 0
-			if(P.stat & BROKEN) //Or turrets that are already broken
-				return 0
-			return 1
-
-
-	if(isobj(the_target))
-		if(attack_all_objects || is_type_in_typecache(the_target, wanted_objects))
-			return 1
+		if(P.has_cover &&!P.raised) //Don't attack invincible turrets
+			return 0
+		if(P.stat & BROKEN) //Or turrets that are already broken
+			return 0
+		return 1
 	return 0
 
 /mob/living/simple_animal/hostile/commanded/Life()
@@ -129,9 +123,9 @@
 		if(search_enemy && ismob(target) && !(target in allowed_targets))
 			allowed_targets += target
 			return
-		if(stance == COMMANDED_FOLLOW || (stance == COMMANDED_PULL && (isobj(target) || ismob(target))))
-			follow_target = target
-			return
+//		if(stance == COMMANDED_FOLLOW || (stance == COMMANDED_PULL && (isobj(target) || ismob(target))))
+//			follow_target = target
+//			return
 	return
 
 /mob/living/simple_animal/hostile/commanded/proc/follow_target()
@@ -141,15 +135,27 @@
 	if(!follow_target)
 		return
 	var/range = 2
-	if(search_objects || stance == COMMANDED_PULL)
+	if(isobj(follow_target) || isturf(follow_target) || stance == COMMANDED_PULL)
 		range = 0
 		if(follow_target.density)
 			range = 1
-	if(follow_target in ListTargets())
+	if((isturf(follow_target) && (follow_target in range(vision_range,src))) || (isitem(follow_target) && (follow_target in oview(vision_range, src))) || (follow_target in ListTargets()))
 		walk_to(src,follow_target,range,move_to_delay)
-	if(stance == COMMANDED_PULL && follow_target.pulledby != src && follow_target.Adjacent(src) && (isobj(follow_target) || isliving(follow_target)))
+	if(stance == COMMANDED_PULL && follow_target.pulledby != src && follow_target.Adjacent(src))
 		start_pulling(follow_target)
-	face_atom(follow_target)
+	if(src.x == follow_target.x && src.y == follow_target.y)
+		setDir(pick(NORTH, SOUTH, EAST, WEST))
+	else
+		face_atom(follow_target)
+
+/mob/living/simple_animal/hostile/commanded/start_pulling(atom/movable/AM, supress_message = 0)
+	if(isitem(AM))
+		var/obj/item/I = AM
+		if(I.w_class > 3)
+			return
+	if(!isitem(AM) && !ismob(AM))
+		return
+	. = ..()
 
 /mob/living/simple_animal/hostile/commanded/proc/commanded_stop() //basically a proc that runs whenever we are asked to stay put. Probably going to remain unused.
 	return
@@ -226,10 +232,6 @@
 		stance = COMMANDED_PULL
 		accepted()
 		search_enemy = 0
-		if(!isliving(follow_target))
-			search_objects = 1
-		else
-			search_objects = 0
 		return 1
 	unacsessable()
 
@@ -267,7 +269,6 @@
 	allowed_targets = list()
 	walk_to(src,0)
 	search_enemy = 1
-	search_objects = 0
 	stance = COMMANDED_DEFEND
 	if(parse_phrase(text,"me"))
 		follow_target = speaker
@@ -281,8 +282,6 @@
 			return 0
 		else if(targets.len)
 			follow_target = targets[1]
-	if(!isliving(follow_target))
-		search_objects = 1
 	accepted()
 	return 1
 
@@ -291,7 +290,6 @@
 	follow_target = null
 	walk_to(src,0)
 	search_enemy = 1
-	search_objects = 0
 	stance = COMMANDED_ATTACK
 	if(istype(pointed_target,/mob/living))
 		allowed_targets += pointed_target
@@ -316,7 +314,6 @@
 	stance = COMMANDED_STOP
 	stop_automated_movement = 1
 	search_enemy = 0
-	search_objects = 0
 	walk_to(src,0)
 	accepted()
 	return 1
@@ -329,41 +326,33 @@
 	follow_target = null
 	stop_automated_movement = 0
 	search_enemy = 1
-	search_objects = 0
 	accepted()
 	return 1
 
 /mob/living/simple_animal/hostile/commanded/proc/follow_command(var/mob/speaker,var/text)
 	//we can assume 'stop following' is handled by stop_command
-	search_objects = 0
+	target = null
+	allowed_targets = list()
+	walk_to(src,0)
+	search_enemy = 0
 	if(parse_phrase(text,"me"))
 		stance = COMMANDED_FOLLOW
 		follow_target = speaker //this wont bite me in the ass later.
 		accepted()
-		search_enemy = 0
-		if(!isliving(follow_target))
-			search_objects = 1
 		return 1
 	if(pointed_target)
 		follow_target = pointed_target
 		pointed_target = null
 		stance = COMMANDED_FOLLOW
 		accepted()
-		search_enemy = 0
-		if(!isliving(follow_target))
-			search_objects = 1
 		return 1
 	var/list/targets = get_targets_by_name(text)
 	if(targets.len > 1 || !targets.len) //CONFUSED. WHO DO I FOLLOW?
 		unacsessable()
 		return 0
-	allowed_targets = list()
 	stance = COMMANDED_FOLLOW //GOT SOMEBODY. BETTER FOLLOW EM.
 	follow_target = targets[1] //YEAH GOOD IDEA
-	search_enemy = 0
 	accepted()
-	if(!isliving(follow_target))
-		search_objects = 1
 	return 1
 
 /mob/living/simple_animal/hostile/commanded/proc/is_enemy(var/mob/M)
