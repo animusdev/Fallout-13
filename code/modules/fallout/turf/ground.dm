@@ -49,7 +49,7 @@
 	name = "desert"
 	icon_state = "wasteland1"
 	step_sounds = list("human" = "dirtfootsteps")
-	slowdown = 1
+	slowdown = 0.1
 
 /turf/open/indestructible/ground/desert/New()
 	icon_state = "wasteland[rand(1,31)]"
@@ -71,7 +71,7 @@
 	name = "dirt"
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
-	slowdown = 2
+	slowdown = 0.2
 
 /turf/open/indestructible/ground/road
 	name = "\proper road"
