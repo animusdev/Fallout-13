@@ -91,6 +91,8 @@
 		playsound(loc, 'sound/items/Screwdriver.ogg', 25, -3)
 		qdel(src)
 		return
+	if(user.a_intent == INTENT_HARM)
+		return ..()
 	attack_hand(user)
 
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
