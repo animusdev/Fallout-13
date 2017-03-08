@@ -18,7 +18,7 @@ var/datum/subsystem/mobs/SSmob
 
 
 /datum/subsystem/mobs/stat_entry()
-	..("P:[mob_list.len]")
+	..("W:[wait]P:[mob_list.len]")
 
 
 /datum/subsystem/mobs/fire(resumed = 0)
