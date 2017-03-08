@@ -5,6 +5,10 @@ var/datum/subsystem/mobs/SSmob
 	init_order = 4
 	display_order = 4
 	priority = 100
+	wait = 2
+	var/wait_part = 2
+	var/wait_full = 20
+	var/increment
 	flags = SS_KEEP_TIMING|SS_NO_INIT
 
 	var/list/currentrun = list()
@@ -19,18 +23,22 @@ var/datum/subsystem/mobs/SSmob
 
 /datum/subsystem/mobs/fire(resumed = 0)
 	var/seconds = wait * 0.1
-	if (!resumed)
+	if (!resumed && !src.currentrun.len)
 		src.currentrun = mob_list.Copy()
-
+		increment = round(src.currentrun.len * (wait_part/wait_full))
 	//cache for sanic speed (lists are references anyways)
+	var/started = world.time
 	var/list/currentrun = src.currentrun
-
-	while(currentrun.len)
+	CYCLE
+	for(var/i = 0, i < increment, i++)
 		var/mob/M = currentrun[currentrun.len]
 		currentrun.len--
 		if(M)
 			M.Life(seconds)
 		else
-			mob_list.Remove(M)
+			mob_list -= M
 		if (MC_TICK_CHECK)
 			return
+	if(currentrun.len && currentrun.len < increment)
+		goto CYCLE
+	wait = wait_part - (started - world.time)
