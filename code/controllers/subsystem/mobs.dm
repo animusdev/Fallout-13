@@ -22,7 +22,7 @@ var/datum/subsystem/mobs/SSmob
 
 
 /datum/subsystem/mobs/fire(resumed = 0)
-	var/seconds = wait * 0.1
+	var/seconds = wait_full * 0.1
 	if (!resumed && !src.currentrun.len)
 		src.currentrun = mob_list.Copy()
 		increment = round(src.currentrun.len * (wait_part/wait_full))
@@ -31,6 +31,8 @@ var/datum/subsystem/mobs/SSmob
 	var/list/currentrun = src.currentrun
 	CYCLE
 	for(var/i = 0, i < increment, i++)
+		if(!currentrun.len)
+			break
 		var/mob/M = currentrun[currentrun.len]
 		currentrun.len--
 		if(M)
