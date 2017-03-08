@@ -5,7 +5,6 @@ var/datum/subsystem/ambient/SSradiation
 	init_order = 20
 	priority = 20
 	wait = 5
-	var/wait_part = 5
 	var/wait_full = 50
 	var/increment
 
@@ -21,7 +20,7 @@ var/datum/subsystem/ambient/SSradiation
 /datum/subsystem/radiation/fire(resumed = 0)
 	if (!resumed && !src.currentrun.len)
 		src.currentrun = processing.Copy()
-		increment = round(src.currentrun.len * (wait_part/wait_full))
+		increment = round(src.currentrun.len * (wait/wait_full))
 	//cache for sanic speed (lists are references anyways)
 	var/started = world.time
 	var/list/currentrun = src.currentrun
@@ -37,7 +36,7 @@ var/datum/subsystem/ambient/SSradiation
 			return
 	if(currentrun.len && currentrun.len < increment)
 		goto CYCLE
-	wait = wait_part - (started - world.time)
+	next_fire -= started - world.time
 
 /datum/subsystem/radiation/Recover()
 	if (istype(SSradiation.processing))
