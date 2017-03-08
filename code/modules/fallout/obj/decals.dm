@@ -10,17 +10,15 @@
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 0.5
 	light_range = 3
-	var/cooldown
+	rad_heavy_range = 1
+	rad_light_range = 4
+	rad_severity = 10
 
 /obj/effect/decal/goo/New()
 	..()
 	icon_state = "goo[rand(1,13)]"
 	START_PROCESSING(SSobj, src)
-
-/obj/effect/decal/goo/process()
-	if(cooldown < world.time - 60)
-		cooldown = world.time
-		radiation_pulse(get_turf(src), 1, 4, 10, 1)
+	SSradiation.processing += src
 
 /obj/effect/decal/decoration //Generic decoration. See decals.dmi - there are more things to choose the proper icon_state in map editor.
 	name = "rag"

@@ -11,16 +11,14 @@
 	name = "waste barrel"
 	desc = "strange barrel."
 	icon_state = "dangerous"
-	var/cooldown
+	rad_heavy_range = 1
+	rad_light_range = 4
+	rad_severity = 10
 
 /obj/structure/barrel/dangerous/New()
 	..()
 	START_PROCESSING(SSobj, src)
-
-/obj/structure/barrel/dangerous/process()
-	if(cooldown < world.time - 60)
-		cooldown = world.time
-		radiation_pulse(get_turf(src), 1, 4, 10, 1)
+	SSradiation.processing += src
 
 /obj/structure/barrel/old
 	name = "old barrel"

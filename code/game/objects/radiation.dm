@@ -34,7 +34,7 @@
 		var/blocked = getarmor(null, "rad")
 
 		if(!silent)
-			to_chat(src, "Your skin feels warm.")
+			to_chat(src, "<span class='warning'>Your skin feels warm.</span>")
 
 		apply_effect(amount, IRRADIATE, blocked)
 		for(var/obj/I in src) //Radiation is also applied to items held by the mob
