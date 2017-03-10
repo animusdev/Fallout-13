@@ -397,7 +397,7 @@
 		var/turf/T = get_step(src,cdir)
 		for(var/a_type in canSmoothWith)
 			var/A = locate(a_type) in T
-			if(A || istype(T,a_type))
+			if(A || T.type == a_type)
 				junction |= cdir
 				break
 

@@ -102,19 +102,19 @@
 "bX" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sink{dir = 4; pixel_x = 14},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
 "bY" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
 "bZ" = (/obj/structure/table/wood/fancy,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
-"ca" = (/obj/structure/bookcase,/turf/open/floor/f13/wood,/area/f13/chapel)
-"cb" = (/obj/structure/chair/wood/modern,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"cc" = (/obj/structure/chair/wood/fancy,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"cd" = (/obj/machinery/light{dir = 1},/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"ce" = (/turf/open/floor/holofloor/carpet,/area/f13/chapel)
+"ca" = (/obj/structure/bookcase,/turf/open/floor/carpet,/area/f13/chapel)
+"cb" = (/obj/structure/chair/wood/modern,/turf/open/floor/carpet,/area/f13/chapel)
+"cc" = (/obj/structure/chair/wood/fancy,/turf/open/floor/carpet,/area/f13/chapel)
+"cd" = (/obj/machinery/light{dir = 1},/turf/open/floor/carpet,/area/f13/chapel)
+"ce" = (/turf/open/floor/carpet,/area/f13/chapel)
 "cf" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/chapel)
 "cg" = (/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirtcorner"},/area/f13/wasteland)
 "ch" = (/obj/structure/table/wood,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
 "ci" = (/obj/structure/campfire,/turf/open/indestructible/ground/desert,/area/f13/ruins)
 "cj" = (/obj/structure/barrel/two,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"ck" = (/obj/structure/table/wood/fancy,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"cl" = (/obj/structure/table/wood/fancy,/obj/item/weapon/storage/book/bible,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"cm" = (/obj/structure/table/wood/bar,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
+"ck" = (/obj/structure/table/wood/fancy,/turf/open/floor/carpet,/area/f13/chapel)
+"cl" = (/obj/structure/table/wood/fancy,/obj/item/weapon/storage/book/bible,/turf/open/floor/carpet,/area/f13/chapel)
+"cm" = (/obj/structure/table/wood/bar,/turf/open/floor/carpet,/area/f13/chapel)
 "cn" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/ruins)
 "co" = (/obj/structure/barrel/old,/turf/open/indestructible/ground/desert,/area/f13/forest)
 "cp" = (/obj/structure/chair/bench,/turf/open/floor/f13/wood,/area/f13/chapel)
@@ -468,7 +468,7 @@ aaabababaJabababababababababababababaJabababaaacacacacafafaQafafaRafafafafafacac
 aaabababaJababababababaVaVabababababaJabababaaacafafafafaWaXaYafamaZamaobaafacacacacacacaaadbbauauauavadadadadadadadadadatauauaubcadaaaeaeaeaeaeaeaeakaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaabababaJabababababababaVaVababababaJabababaaacafbdbeafbfbgaXafbhamaoaoaoaBacacacacacacaaadatauauaubiaiaiaiaiaiaiaiajadatauauauavadaaaeaeawaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbjbjbjbjbjbjadadaa
 aaabababaJabababababababababababababaJabababaaacafafafafafafafafafbkafafafafafafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbjblbmbnbobjadadaa
-aaabababaJabababababababababababababababababaaacafbpbqamamamamamamamaobrbrambsafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeawaeaeaeaeaeawaeaeaeaeaeawaeaeaaadadbjbtbubobobvadadaa
+aaabababaJabababababababababababababaJabababaaacafbpbqamamamamamamamaobrbrambsafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeawaeaeaeaeaeawaeaeaeaeaeawaeaeaaadadbjbtbubobobvadadaa
 aaabababaJababababbwabababbwababababaJabababaaacafamaoaoaoamaoaoamaoaoaDamaKbxafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbjbobobobobjadadaa
 aaabababaJabababbybybzbybybybyabababaJabababaaacafaDamamamaoamamamaoambAamambBafacacacacaaadbCaTaTaTaTaTaTaTaUauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbjbjbjbjbjbjadadaa
 aaabababaJababbwbybDbEbEbFbGbybwababaJabababaaacafamaMaoafafafafafafbHafbIafafafacacacacaaadahaiaiaiaiaiaiaibJauauaubcadatauauauavadaaaeaeaeaeaeaeaeaeaeaPaeaebKaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa

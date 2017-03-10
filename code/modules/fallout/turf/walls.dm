@@ -22,6 +22,7 @@
 	grider = 0
 	plating_type = /turf/open/ruins
 	sheet_type = null
+	canSmoothWith = list(/turf/closed/wall/f13/ruins, /turf/closed/wall)
 
 
 /turf/closed/wall/f13/wood
@@ -37,6 +38,7 @@
 	sheet_type = /obj/item/stack/sheet/mineral/wood
 	sheet_amount = 2
 	grider = 0
+	canSmoothWith = list(/turf/closed/wall/f13/wood, /turf/closed/wall)
 
 /turf/closed/wall/f13/wood/house
 	name = "house wall"
@@ -46,6 +48,8 @@
 	icontype = "house"
 	hardness = 40
 	var/broken = 0
+	canSmoothWith = list(/turf/closed/wall/f13/wood/house, /turf/closed/wall/f13/wood/house/broken, /turf/closed/wall)
+
 /turf/closed/wall/f13/wood/house/broken
 	broken = 1
 	damage = 21
@@ -77,6 +81,7 @@
 	icontype = "interior"
 	hardness = 30
 	smooth = SMOOTH_OLD
+	canSmoothWith = list(/turf/closed/wall/f13/wood/interior, /turf/closed/wall)
 
 /turf/closed/wall/f13/store
 	name = "store wall"
@@ -89,6 +94,7 @@
 	disasemblable = 0
 	grider = 0
 	sheet_type = null
+	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall)
 
 /turf/closed/wall/f13/supermart
 	name = "supermart wall"
@@ -102,6 +108,7 @@
 	disasemblable = 0
 	grider = 0
 	sheet_type = null
+	canSmoothWith = list(/turf/closed/wall/f13/supermart, /turf/closed/wall)
 
 /turf/closed/wall/f13/tunnel
 	name = "utility tunnel wall"
@@ -114,6 +121,7 @@
 	disasemblable = 0
 	grider = 0
 	sheet_type = null
+	canSmoothWith = list(/turf/closed/wall/f13/tunnel, /turf/closed/wall)
 
 /turf/closed/wall/f13/vault
 	name = "vault wall"
@@ -124,8 +132,9 @@
 	hardness = 150
 	explosion_block = 5
 	smooth = SMOOTH_OLD
+	canSmoothWith = list(/turf/closed/wall/f13/vault, /turf/closed/wall/r_wall/f13/vault, /turf/closed/wall)
 
-/turf/closed/wall/r_wall/f13/
+/turf/closed/wall/r_wall/f13
 	name = "glitch"
 	desc = "<font color='#157206'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
 	icon = 'icons/fallout/turfs/walls.dmi'
@@ -140,10 +149,11 @@
 	hardness = 200
 	explosion_block = 5
 	smooth = SMOOTH_OLD
+	canSmoothWith = list(/turf/closed/wall/f13/vault, /turf/closed/wall/r_wall/f13/vault, /turf/closed/wall)
 
 //Fallout 13 indestructible walls
 
-/turf/closed/indestructible/f13/
+/turf/closed/indestructible/f13
 	name = "glitch"
 	desc = "<font color='#157206'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
 	icon = 'icons/fallout/turfs/walls.dmi'
