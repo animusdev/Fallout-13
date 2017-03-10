@@ -49,6 +49,8 @@
 	name = "desert"
 	icon_state = "wasteland1"
 	step_sounds = list("human" = "dirtfootsteps")
+	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
+	/obj/item/seeds/feracactus, /obj/item/seeds/potato, /obj/item/seeds/pumpkin)
 	slowdown = 0.1
 
 /turf/open/indestructible/ground/desert/New()
@@ -71,6 +73,8 @@
 	name = "dirt"
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
+	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
+	/obj/item/seeds/feracactus, /obj/item/seeds/potato, /obj/item/seeds/pumpkin)
 	slowdown = 0.2
 
 /turf/open/indestructible/ground/road
@@ -89,6 +93,7 @@
 	name = "mountain"
 	icon_state = "rockfloor"
 	icon = 'icons/fallout/turfs/mining.dmi'
+	allowed_plants = list(/obj/item/seeds/fungus)
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/tunnel

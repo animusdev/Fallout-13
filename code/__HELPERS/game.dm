@@ -468,6 +468,15 @@
 			++i
 	return L
 
+proc/has_density(var/atom)
+	var/turf/T = get_turf(atom)
+	if(T.density)
+		return 1
+	for(var/atom/A in T)
+		if(A.density)
+			return 1
+	return 0
+
 /proc/makeBody(mob/dead/observer/G_found) // Uses stripped down and bastardized code from respawn character
 	if(!G_found || !G_found.key)
 		return

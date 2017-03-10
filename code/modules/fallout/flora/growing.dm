@@ -15,7 +15,7 @@
 	reagents_add = list("nutriment" = 0.1, "salglu_solution" = 0.05)
 
 
-obj/item/seeds/xander
+/obj/item/seeds/xander
 	name = "pack of xander seeds"
 	desc = "These seeds grow into xander root."
 	icon = 'icons/fallout/objects/seeds.dmi'
