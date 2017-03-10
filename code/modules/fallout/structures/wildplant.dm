@@ -1,7 +1,7 @@
 /turf/open
 	var/list/allowed_plants
 
-/obj/structure/wild_plant
+/obj/structure/flora/wild_plant
 	name = "wild plant"
 	density = 0
 	anchored = 1
@@ -15,7 +15,7 @@
 	var/lastproduce
 
 
-/obj/structure/wild_plant/New(var/turf/turf,var/seed)
+/obj/structure/flora/wild_plant/New(var/turf/turf,var/seed)
 	if(!seed)
 		return
 	..(turf)
@@ -28,14 +28,14 @@
 	icon = myseed.growing_icon
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/wild_plant/attackby(obj/item/O, mob/user, params)
+/obj/structure/flora/wild_plant/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/weapon/shovel))
 		user << "<span class='notice'>You clear up [src]!</span>"
 		qdel(src)
 		return
 	attack_hand(user)
 
-/obj/structure/wild_plant/attack_hand(mob/user)
+/obj/structure/flora/wild_plant/attack_hand(mob/user)
 	if(!iscarbon(user))
 		return
 	if(harvest)
@@ -50,7 +50,7 @@
 	else
 		examine(user)
 
-/obj/structure/wild_plant/examine(user)
+/obj/structure/flora/wild_plant/examine(user)
 	if(myseed)
 		to_chat(user, "<span class='info'>It has <span class='name'>[myseed.plantname]</span> planted.</span>")
 		if (dead)
@@ -60,7 +60,7 @@
 		else if (health <= (myseed.endurance / 2))
 			to_chat(user, "<span class='warning'>It looks unhealthy.</span>")
 
-/obj/structure/wild_plant/proc/plantdies()
+/obj/structure/flora/wild_plant/proc/plantdies()
 	health = 0
 	harvest = 0
 	if(!dead)
@@ -69,7 +69,7 @@
 		spawn(3000)
 			qdel(src)
 
-/obj/structure/wild_plant/process()
+/obj/structure/flora/wild_plant/process()
 
 	if(!myseed)
 		qdel(src)
@@ -101,7 +101,7 @@
 		update_icon()
 	return
 
-/obj/structure/wild_plant/update_icon()
+/obj/structure/flora/wild_plant/update_icon()
 	if(dead)
 		icon_state = icon_state = myseed.icon_dead
 	else if(harvest)
