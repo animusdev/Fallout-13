@@ -151,7 +151,7 @@
 		product_name = t_prod.name
 	if(getYield() >= 1)
 		feedback_add_details("food_harvested","[product_name]|[getYield()]")
-	if(parent)
+	if(istype(parent))
 		parent.update_tray()
 
 	return result
