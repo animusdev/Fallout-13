@@ -27,7 +27,7 @@ var/list/preferences_datums = list()
 										//autocorrected this round, not that you'd need to check that.
 
 
-	var/UI_style = "Midnight"
+	var/UI_style = "Fallout"
 	var/hotkeys = FALSE
 	var/tgui_fancy = TRUE
 	var/tgui_lock = TRUE
@@ -1145,7 +1145,7 @@ var/list/preferences_datums = list()
 						if (world.byond_version >= 511 && user.client && user.client.byond_version >= 511)
 							user.client.vars["fps"] = clientfps
 				if("ui")
-					var/pickedui = input(user, "Choose your UI style.", "Character Preference")  as null|anything in list("Midnight", "Plasmafire", "Retro", "Slimecore", "Operative", "Clockwork")
+					var/pickedui = input(user, "Choose your UI style.", "Character Preference")  as null|anything in list("Fallout", "Midnight", "Plasmafire", "Retro", "Slimecore", "Operative", "Clockwork")
 					if(pickedui)
 						UI_style = pickedui
 

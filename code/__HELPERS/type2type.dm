@@ -217,6 +217,8 @@
 
 /proc/ui_style2icon(ui_style)
 	switch(ui_style)
+		if("Fallout")
+			return 'icons/fallout/misc/screen_fallout.dmi'
 		if("Retro")
 			return 'icons/mob/screen_retro.dmi'
 		if("Plasmafire")

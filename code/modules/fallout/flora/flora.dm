@@ -49,3 +49,5 @@
 	icon = 'icons/fallout/flora/trees.dmi'
 	icon_state = "cactus"
 	density = 1
+	pixel_x = -16
+	layer = FLY_LAYER
