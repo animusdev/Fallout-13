@@ -22,9 +22,9 @@
 	..()
 	var/color = SSsunlight.current_color
 	var/full = GetRedPart(color) + GetGreenPart(color) + GetBluePart(color)
-	if(full < 200 && !on)
+	if(full < 400 && !on)
 		seton(1)
-	else if(full >= 200 && on)
+	else if(full >= 400 && on)
 		seton(0)
 /////////CLOSE YOUR EYES NOW!
 /obj/machinery/light/street/attackby()

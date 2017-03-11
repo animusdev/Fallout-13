@@ -20,5 +20,5 @@
 
 /datum/time_of_day/night
 	name = "Night"
-	color = "#00081a"
+	color = "#0f1f55"
 	duration = 9000
