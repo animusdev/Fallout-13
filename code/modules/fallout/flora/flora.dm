@@ -44,7 +44,8 @@
 		icon_state = "tree_stump"
 
 /obj/structure/flora/cactus
-	name = "bush"
+	name = "cactus"
+	desc = "brave green cactus."
 	icon = 'icons/fallout/flora/trees.dmi'
 	icon_state = "cactus"
 	density = 1
