@@ -132,6 +132,17 @@
 	begin_day = 17
 	begin_month = MARCH
 
+/datum/holiday/license
+	name = "Much Licensed Day"
+	begin_day = 9
+	begin_month = MARCH
+
+/datum/holiday/license/greet()
+	return "The day to go in court. <br> <a href=\"https://www.reddit.com/r/SS13/comments/5yhzbb/spessmen_the_wasteland_is_calling\">Comment them all!</a>"
+
+/datum/holiday/license/getStationPrefix()
+	return "Licensed"
+
 /datum/holiday/no_this_is_patrick/getStationPrefix()
 	return pick("Blarney","Green","Leprechaun","Booze")
 
