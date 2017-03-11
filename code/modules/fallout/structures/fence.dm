@@ -30,7 +30,7 @@
 	density = 1
 	smooth = SMOOTH_OLD
 	layer = ABOVE_ALL_MOB_LAYER
-	canSmoothWith = list(/turf/closed/wall, /obj/structure/fence)
+	canSmoothWith = list(/turf/closed/wall, /turf/closed/wall/f13/ruins, /turf/closed/wall/f13/store, /turf/closed/wall/f13/supermart, /turf/closed/wall/f13/wood, /obj/structure/fence)
 
 /obj/structure/fence/update_icon()
 	queue_smooth(src)
@@ -53,7 +53,7 @@
 /obj/structure/fence/CanPass(atom/movable/mover, turf/target, height=0)
 	if (!density)
 		return 1
-	if (junction != 12 && junction != 10 && junction != 6 && junction != 14)
+	if (junction != 12 && junction != 10 && junction != 6 && junction != 14 && junction != 8 && junction != 4)
 		return 0
 	if(istype(mover) && mover.checkpass(PASSGRILLE))
 		return 1
@@ -65,7 +65,7 @@
 /obj/structure/fence/CheckExit(atom/movable/O as mob|obj, target)
 	if (!density)
 		return 1
-	if (junction != 12 && junction != 10 && junction != 6 && junction != 14)
+	if (junction != 12 && junction != 10 && junction != 6 && junction != 14 && junction != 8 && junction != 4)
 		return 0
 	if(istype(O) && O.checkpass(PASSGRILLE))
 		return 1
