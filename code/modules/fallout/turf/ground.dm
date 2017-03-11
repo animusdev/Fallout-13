@@ -59,13 +59,15 @@
 	..()
 
 /turf/open/indestructible/ground/desert/proc/plant_grass()
+	if(locate(/obj/structure/flora) in src)
+		return
 	if(prob(5))
 		grass = new(src)
 	else
 		var/chance = 0
 		for(var/turf/open/indestructible/ground/desert/T in RANGE_TURFS(1,src))
 			if(T.grass)
-				chance += 5
+				chance += 7.5
 		if(prob(chance))
 			grass = new(src)
 

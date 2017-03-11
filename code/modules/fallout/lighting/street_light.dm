@@ -6,20 +6,26 @@
 	fitting = "lamp post"
 	brightness = 6
 	active_power_usage = 100
-	density = 0
+	density = 1
+	appearance_flags = 0
 	layer = 8
-	pixel_x = -20
+	pixel_x = 8
 	desc = "Obviously it's a raised source of light on the edge of a road or walkway.<br>Have you now satisfied your curiosity?"
 	light_type = null
 	light_color = LIGHT_COLOR_YELLOW
 
+/obj/machinery/light/street/New()
+	if(dir == 1)
+		pixel_x = -40
+
 /obj/machinery/light/street/process()
 	..()
-//	if(sun_triger)
-//		if(SSsun.global_sun_light < 5 && !on)
-//			seton(1)
-//		if(SSsun.global_sun_light >= 5 && on)
-//			seton(0)
+	var/color = SSsunlight.current_color
+	var/full = GetRedPart(color) + GetGreenPart(color) + GetBluePart(color)
+	if(full < 200 && !on)
+		seton(1)
+	else if(full >= 200 && on)
+		seton(0)
 /////////CLOSE YOUR EYES NOW!
 /obj/machinery/light/street/attackby()
 	return 0
