@@ -3,7 +3,7 @@ For the main html chat area
 *********************************/
 
 /var/list/chatResources = list(
-	"code/modules/html_interface/jquery.min.js",
+	"code/modules/html_interface/js/jquery.min.js",
 	"goon/browserassets/js/json2.min.js",
 	"goon/browserassets/js/browserOutput.js",
 	"goon/browserassets/css/fonts/fontawesome-webfont.eot",
@@ -54,18 +54,9 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 	set waitfor = FALSE
 	if(!owner)
 		return
-
-	// world.log << "chatOutput: load()"
-
-	for(var/attempts in 1 to 5)
-		for(var/asset in global.chatResources) // No asset cache, just get this fucking shit SENT.
-			owner << browse_rsc(file(asset))
-
-		world.log << "Sending main chat window to client [owner.ckey]"
-		owner << browse(file("goon/browserassets/html/browserOutput.html"), "window=browseroutput")
-		sleep(20)
-		if(!owner || loaded)
-			break
+	var/datum/asset/simple/cache = get_asset_datum(/datum/asset/simple/goonchat)
+	send_asset_list(owner, cache.assets)
+	owner << browse(file("goon/browserassets/html/browserOutput.html"), "window=browseroutput")
 
 	// world.log << "chatOutput: load() completed"
 
