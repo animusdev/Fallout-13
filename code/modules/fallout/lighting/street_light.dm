@@ -17,14 +17,14 @@
 /obj/machinery/light/street/New()
 	if(dir == 1)
 		pixel_x = -40
+	..()
 
 /obj/machinery/light/street/process()
-	..()
 	var/color = SSsunlight.current_color
 	var/full = GetRedPart(color) + GetGreenPart(color) + GetBluePart(color)
-	if(full < 400 && !on)
+	if(full < 300 && !on)
 		seton(1)
-	else if(full >= 400 && on)
+	else if(full >= 300 && on)
 		seton(0)
 /////////CLOSE YOUR EYES NOW!
 /obj/machinery/light/street/attackby()
