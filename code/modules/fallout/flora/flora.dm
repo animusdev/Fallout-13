@@ -9,6 +9,7 @@
 
 /obj/structure/flora/tree/wasteland
 	name = "dead tree"
+	desc = "It's the most dull thing you have ever seen in your life."
 	icon = 'icons/fallout/flora/trees.dmi'
 	icon_state = "deadtree_1"
 	log_amount = 3
@@ -27,6 +28,7 @@
 
 /obj/structure/flora/tree/tall
 	name = "dead tree"
+	desc = "A rather tall tree that has been dead for a long time.<br>Interestingly it is still standing after all the time."
 	icon = 'icons/fallout/flora/talltrees.dmi'
 	icon_state = "tree_1"
 	log_amount = 7
@@ -45,7 +47,7 @@
 
 /obj/structure/flora/cactus
 	name = "cactus"
-	desc = "brave green cactus."
+	desc = "A brave green cactus."
 	icon = 'icons/fallout/flora/trees.dmi'
 	icon_state = "cactus"
 	density = 1

@@ -33,7 +33,7 @@
 
 /obj/item/seeds/fungus
 	name = "pack of fungus seeds"
-	desc = "These seeds grow into fungus mushrooms."
+	desc = "These seeds grow into fungus."
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "seed-fungus"
 	species = "fungus"
@@ -63,18 +63,18 @@
 	icon_dead = "mutfruit-dead"
 	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1)
 
-/obj/item/seeds/feracactus
-	name = "pack of feracactus seeds"
-	desc = "These seeds grow into feracactus."
+/obj/item/seeds/ferocactus
+	name = "pack of ferocactus seeds"
+	desc = "These seeds grow into ferocactus."
 	icon = 'icons/fallout/objects/seeds.dmi'
-	icon_state = "seed-feracactus"
-	species = "feracactus"
-	plantname = "Feracactus"
-	product = /obj/item/weapon/reagent_containers/food/snacks/grown/feracactus
+	icon_state = "seed-ferocactus"
+	species = "ferocactus"
+	plantname = "Ferocactus"
+	product = /obj/item/weapon/reagent_containers/food/snacks/grown/ferocactus
 	lifespan = 50
 	endurance = 20
 	yield = 6
 	growing_icon = 'icons/fallout/flora/growing.dmi'
-	icon_grow = "feracactus-grow"
-	icon_dead = "feracactus-dead"
+	icon_grow = "ferocactus-grow"
+	icon_dead = "ferocactus-dead"
 	reagents_add = list("calomel" = 0.04, "nutriment" = 0.1)
