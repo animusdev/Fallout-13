@@ -28,8 +28,8 @@
 	melee_damage_upper = 5
 	attacktext = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
-	aggro_vision_range = 15
-	idle_vision_range = 2
+	aggro_vision_range = 10
+	idle_vision_range = 5
 
 	minbodytemp = 0
 	maxbodytemp = 1500

@@ -25,7 +25,7 @@
 	icon = 'icons/fallout/mobs/animal.dmi'
 	melee_damage_lower = 5
 	melee_damage_upper = 10
-	aggro_vision_range = 20 //I SEE EVERYTHING
-	idle_vision_range = 20
+	aggro_vision_range = 12 //I SEE EVERYTHING
+	idle_vision_range = 10
 	attacktext = "bites"
 	move_to_delay = 2.2

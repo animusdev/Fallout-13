@@ -40,7 +40,7 @@
 	status_flags = CANPUSH
 	vision_range = 12
 	aggro_vision_range = 15
-	idle_vision_range = 5
+	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/laser.ogg'

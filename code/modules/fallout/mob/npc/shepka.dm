@@ -19,7 +19,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 50
 	aggro_vision_range = 20 //I SEE EVERYTHING
-	idle_vision_range = 20
+	idle_vision_range = 10
 	attacktext = "suck soul"
 	move_to_delay = 1
 
