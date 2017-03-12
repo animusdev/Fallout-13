@@ -2,11 +2,6 @@
 Legion
 */
 
-/datum/job/legion/is_quality_human(mob/new_player/M)
-	if(M.client.prefs.gender == FEMALE)
-		return 0
-	return ..()
-
 //recruit
 /datum/job/legion/recruit
 	title = "Legion Recruit"
@@ -20,6 +15,7 @@ Legion
 	supervisors = "the centurion"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
+	disallowed_gender = FEMALE
 
 	outfit = /datum/outfit/job/legrecruit
 
@@ -66,6 +62,7 @@ Legion
 	supervisors = "the centurion"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
+	disallowed_gender = FEMALE
 
 	outfit = /datum/outfit/job/legdecan
 
@@ -113,6 +110,7 @@ Legion
 	supervisors = "the legate"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
+	disallowed_gender = FEMALE
 
 	outfit = /datum/outfit/job/legvex
 
@@ -159,6 +157,7 @@ Legion
 	supervisors = "the legat"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
+	disallowed_gender = FEMALE
 
 	outfit = /datum/outfit/job/legcenturion
 
@@ -205,6 +204,7 @@ Legion
 	supervisors = "the Caesar"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
+	disallowed_gender = FEMALE
 
 	whitelist_on = 1
 

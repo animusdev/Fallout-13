@@ -120,39 +120,19 @@
 
 	var/jobtype = null
 
-	uniform = /obj/item/clothing/under/color/grey
-	id = /obj/item/weapon/card/id
-	ears = /obj/item/device/radio/headset
-	belt = /obj/item/device/pda
-	back = /obj/item/weapon/storage/backpack
+	uniform = /obj/item/clothing/under/f13/lumberjack
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
 	var/list/implants = null
 
-	var/backpack = /obj/item/weapon/storage/backpack
-	var/satchel  = /obj/item/weapon/storage/backpack/satchel
-	var/dufflebag = /obj/item/weapon/storage/backpack/dufflebag
-	var/box = /obj/item/weapon/storage/box/survival
+	var/backpack = null
+	var/satchel  = null
+	var/dufflebag = null
+	var/box = null
 
 	var/pda_slot = slot_belt
 
 /datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	switch(H.backbag)
-		if(GBACKPACK)
-			back = /obj/item/weapon/storage/backpack //Grey backpack
-		if(GSATCHEL)
-			back = /obj/item/weapon/storage/backpack/satchel //Grey satchel
-		if(GDUFFLEBAG)
-			back = /obj/item/weapon/storage/backpack/dufflebag //Grey Dufflebag
-		if(LSATCHEL)
-			back = /obj/item/weapon/storage/backpack/satchel/leather //Leather Satchel
-		if(DSATCHEL)
-			back = satchel //Department satchel
-		if(DDUFFLEBAG)
-			back = dufflebag //Department dufflebag
-		else
-			back = backpack //Department backpack
-
 	if(box)
 		backpack_contents.Insert(1, box) // Box always takes a first slot in backpack
 		backpack_contents[box] = 1
