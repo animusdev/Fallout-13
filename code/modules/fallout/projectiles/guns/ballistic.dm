@@ -71,6 +71,7 @@
 	can_suppress = 0
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM
+	slot_flags = SLOT_BACK
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	name = "10-mm submachine gun"

@@ -211,7 +211,7 @@
 	item_state = "ncr_armor9"
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 50, fire = 10, acid = 10) //Better radiation protection, thank the facewrap bro!
 
-/obj/item/clothing/suit/armor/power_armor/ncr
+/obj/item/clothing/suit/armor/f13/power_armor/ncr
 	name = "NCR power armor"
 	desc = "A set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
 	icon_state = "t45bpowerarmor"
@@ -226,7 +226,7 @@
 	strip_delay = 200
 	resistance_flags = UNACIDABLE
 
-/obj/item/clothing/suit/armor/power_armor/t45d
+/obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
@@ -241,7 +241,7 @@
 	strip_delay = 200
 	resistance_flags = UNACIDABLE
 
-/obj/item/clothing/suit/armor/power_armor/advanced
+/obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor Mk I"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advanced"
@@ -258,7 +258,7 @@
 	strip_delay = 200
 	resistance_flags = UNACIDABLE
 
-/obj/item/clothing/suit/armor/power_armor/superadvanced
+/obj/item/clothing/suit/armor/f13/power_armor/superadvanced
 	name = "advanced power armor Mk II"
 	desc = "An improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "superadvanced"
@@ -275,7 +275,7 @@
 	strip_delay = 200
 	resistance_flags = UNACIDABLE
 
-/obj/item/clothing/suit/armor/power_armor/shocktrooper
+/obj/item/clothing/suit/armor/f13/power_armor/shocktrooper
 	name = "shocktrooper power armor"
 	desc = "A 'black devil' power armor, is a high-end model of power armor used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the MK I and II."
 	icon_state = "shocktrooper"
@@ -292,7 +292,7 @@
 	strip_delay = 200
 	resistance_flags = UNACIDABLE
 
-/obj/item/clothing/suit/armor/power_armor/badmin
+/obj/item/clothing/suit/armor/f13/power_armor/badmin
 	name = "advanced power armor Mk III"
 	desc = "A group of Enclave mad scientists lead by Administrator Badmin, have spent a decade working on the super weapon you see in front of you."
 	icon_state = "badmin"

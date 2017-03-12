@@ -397,7 +397,7 @@
 "hG" = (/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
 "hH" = (/obj/structure/decoration/vent/rusty{icon_state = "ventrustyalt"; pixel_x = -32; pixel_y = -1},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelwastelandfullvar"},/area/f13/sewer)
 "hI" = (/turf/open/floor/f13{icon_state = "warndarkcorners"},/area/f13/tunnel)
-"hJ" = (/mob/living/simple_animal/hostile/ghoul/smeagol,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"hJ" = (/mob/living/simple_animal/hostile/commanded/smeagol,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
 "hK" = (/obj/item/weapon/wrench/brass,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
 "hL" = (/obj/machinery/light/small/red{dir = 8},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
 "hM" = (/obj/structure/table,/obj/item/weapon/storage/firstaid,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)

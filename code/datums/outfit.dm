@@ -20,6 +20,7 @@
 	var/l_hand = null
 	var/internals_slot = null //ID of slot containing a gas tank
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
+	var/list/belt_contents = list()
 
 /datum/outfit/proc/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	//to be overriden for customization depending on client prefs,species etc
@@ -75,6 +76,10 @@
 			var/number = backpack_contents[path]
 			for(var/i=0,i<number,i++)
 				H.equip_to_slot_or_del(new path(H),slot_in_backpack)
+		for(var/path in belt_contents)
+			var/number = belt_contents[path]
+			for(var/i=0,i<number,i++)
+				H.belt:handle_item_insertion(new path(H), 1, H)
 
 	if(!H.head && istype(H.wear_suit, /obj/item/clothing/suit/space/hardsuit))
 		var/obj/item/clothing/suit/space/hardsuit/HS = H.wear_suit
