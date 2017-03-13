@@ -319,6 +319,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["job_engsec_high"]	>> job_engsec_high
 	S["job_engsec_med"]		>> job_engsec_med
 	S["job_engsec_low"]		>> job_engsec_low
+	S["job_wasteland_high"]	>> job_wasteland_high
+	S["job_wasteland_med"]	>> job_wasteland_med
+	S["job_wasteland_low"]	>> job_wasteland_low
+
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -372,6 +376,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	job_engsec_high = sanitize_integer(job_engsec_high, 0, 65535, initial(job_engsec_high))
 	job_engsec_med = sanitize_integer(job_engsec_med, 0, 65535, initial(job_engsec_med))
 	job_engsec_low = sanitize_integer(job_engsec_low, 0, 65535, initial(job_engsec_low))
+	job_wasteland_high = sanitize_integer(job_wasteland_high, 0, 65535, initial(job_wasteland_high))
+	job_wasteland_med = sanitize_integer(job_wasteland_med, 0, 65535, initial(job_wasteland_med))
+	job_wasteland_low = sanitize_integer(job_wasteland_low, 0, 65535, initial(job_wasteland_low))
 
 	return 1
 
@@ -432,6 +439,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	to_chat(S["job_engsec_high"], job_engsec_high)
 	to_chat(S["job_engsec_med"], job_engsec_med)
 	to_chat(S["job_engsec_low"], job_engsec_low)
+	to_chat(S["job_wasteland_high"], job_wasteland_high)
+	to_chat(S["job_wasteland_med"], job_wasteland_med)
+	to_chat(S["job_wasteland_low"], job_wasteland_low)
 
 	return 1
 
