@@ -1242,6 +1242,7 @@
 #include "code\modules\fallout\jobs\job\wastelander.dm"
 #include "code\modules\fallout\jobs\med\chems.dm"
 #include "code\modules\fallout\jobs\status\status.dm"
+#include "code\modules\fallout\lighting\bar.dm"
 #include "code\modules\fallout\lighting\street_light.dm"
 #include "code\modules\fallout\machinery\vending.dm"
 #include "code\modules\fallout\misc\radiation.dm"
