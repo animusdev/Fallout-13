@@ -40,7 +40,7 @@
 
 	// Determine what job is marked as 'High' priority, and dress them up as such.
 	var/datum/job/previewJob
-	var/highRankFlag = job_civilian_high | job_medsci_high | job_engsec_high
+	var/highRankFlag = job_civilian_high | job_medsci_high | job_engsec_high | job_wasteland_high
 
 	if(job_civilian_low & ASSISTANT)
 		previewJob = SSjob.GetJob("Assistant")
@@ -52,6 +52,8 @@
 			highDeptFlag = MEDSCI
 		else if(job_engsec_high)
 			highDeptFlag = ENGSEC
+		else if(job_wasteland_high)
+			highDeptFlag = WASTELAND
 
 		for(var/datum/job/job in SSjob.occupations)
 			if(job.flag == highRankFlag && job.department_flag == highDeptFlag)
@@ -66,7 +68,7 @@
 	preview_icon.Scale(48+32, 16+32)
 	CHECK_TICK
 	mannequin.setDir(NORTH)
-	
+
 	var/icon/stamp = getFlatIcon(mannequin)
 	CHECK_TICK
 	preview_icon.Blend(stamp, ICON_OVERLAY, 25, 17)
