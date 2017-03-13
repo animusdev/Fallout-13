@@ -1284,6 +1284,7 @@
 #include "code\modules\fallout\structures\fence.dm"
 #include "code\modules\fallout\structures\simple_door.dm"
 #include "code\modules\fallout\structures\table_smooth.dm"
+#include "code\modules\fallout\structures\vault_door.dm"
 #include "code\modules\fallout\structures\wildplant.dm"
 #include "code\modules\fallout\structures\window.dm"
 #include "code\modules\fallout\structures\trash\barrel.dm"
