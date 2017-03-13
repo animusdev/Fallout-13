@@ -1,6 +1,6 @@
 /obj/structure/tires
 	name = "tire"
-	desc = "Part of car."
+	desc = "A ring-shaped vehicle component that covers the wheel's rim to protect it and enable better vehicle performance."
 	obj_integrity = 50
 	max_integrity = 50
 	icon_state = "one_t"
@@ -9,7 +9,7 @@
 
 /obj/structure/tires/half
 	name = "half tire"
-	desc = "Part of part of car."
+	desc = "A part of a part of a car." //The description is totally intentional.
 	obj_integrity = 10
 	max_integrity = 10
 	icon_state = "half_t"
@@ -18,8 +18,8 @@
 	anchored = 1
 
 /obj/structure/tires/two
-	name = "tires"
-	desc = "Two part of car."
+	name = "couple of tires"
+	desc = "A ring-shaped vehicle components that cover the wheel's rim to protect it and enable better vehicle performance."
 	obj_integrity = 50
 	max_integrity = 50
 	icon_state = "two_t"
@@ -28,8 +28,8 @@
 	anchored = 1
 
 /obj/structure/tires/five
-	name = "tires"
-	desc = "Five part of car."
+	name = "pile of tires"
+	desc = "Five tires stacked over each other in an orderly fashion.<br>Is the car shop nearby or something?"
 	obj_integrity = 50
 	max_integrity = 50
 	icon_state = "five_t"
