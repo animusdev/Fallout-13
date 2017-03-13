@@ -15,7 +15,7 @@
 	icon = 'icons/fallout/turfs/walls/ruins.dmi'
 	icon_state = "ruins0"
 	icontype = "ruins"
-	hardness = 50
+	hardness = 40
 	explosion_block = 2
 	smooth = SMOOTH_OLD
 	disasemblable = 0
@@ -31,7 +31,7 @@
 	icon = 'icons/fallout/turfs/walls/wood.dmi'
 	icon_state = "wood0"
 	icontype = "wood"
-	hardness = 40
+	hardness = 30
 	smooth = SMOOTH_OLD
 	disasemblable = 0
 	plating_type = /turf/open/floor/plating/wooden
@@ -46,7 +46,7 @@
 	icon = 'icons/fallout/turfs/walls/house.dmi'
 	icon_state = "house0"
 	icontype = "house"
-	hardness = 40
+	hardness = 20
 	var/broken = 0
 	canSmoothWith = list(/turf/closed/wall/f13/wood/house, /turf/closed/wall/f13/wood/house/broken, /turf/closed/wall)
 
@@ -79,7 +79,7 @@
 	icon = 'icons/fallout/turfs/walls/interior.dmi'
 	icon_state = "interior0"
 	icontype = "interior"
-	hardness = 30
+	hardness = 10
 	smooth = SMOOTH_OLD
 	canSmoothWith = list(/turf/closed/wall/f13/wood/interior, /turf/closed/wall)
 
@@ -89,7 +89,7 @@
 	icon = 'icons/fallout/turfs/walls/store.dmi'
 	icon_state = "store0"
 	icontype = "store"
-	hardness = 60
+	hardness = 50
 	smooth = SMOOTH_OLD
 	disasemblable = 0
 	grider = 0
@@ -102,7 +102,7 @@
 	icon = 'icons/fallout/turfs/walls/superstore.dmi'
 	icon_state = "supermart0"
 	icontype = "supermart"
-	hardness = 80
+	hardness = 60
 	explosion_block = 2
 	smooth = SMOOTH_OLD
 	disasemblable = 0
@@ -116,7 +116,7 @@
 	icon = 'icons/fallout/turfs/walls/tunnel.dmi'
 	icon_state = "tunnel0"
 	icontype = "tunnel"
-	hardness = 100
+	hardness = 70
 	smooth = SMOOTH_OLD
 	disasemblable = 0
 	grider = 0
@@ -129,7 +129,7 @@
 	icon = 'icons/fallout/turfs/walls/vault.dmi'
 	icon_state = "vault0"
 	icontype = "vault"
-	hardness = 150
+	hardness = 100
 	explosion_block = 5
 	smooth = SMOOTH_OLD
 	canSmoothWith = list(/turf/closed/wall/f13/vault, /turf/closed/wall/r_wall/f13/vault, /turf/closed/wall)

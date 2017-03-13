@@ -35,7 +35,7 @@
 
 /mob/living/simple_animal/hostile/rad_scorpion/black
 	name = "Giant rad scorpion"
-	desc = "It's a giant rad scorpion with a black shell, the look of it makes you shudder in fear.<br>This one has giant clams."
+	desc = "It's a giant rad scorpion with a black shell, the look of it makes you shudder in fear.<br>This one has giant pincers."
 	icon_state = "radscorpion_black"
 	icon_living = "radscorpion_black"
 	icon_dead = "radscorpion_black_d"

@@ -22,7 +22,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/
 	name = "metal flask"
-	desc = "A metallic liqud container. Never leave home without one."
+	desc = "A metallic liquid container. Never leave home without one."
 	icon_state = "flask"
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	materials = list(MAT_METAL=500)
@@ -31,7 +31,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/survival
 	name = "metal flask"
-	desc = "A metallic liqud container. Essential for survival out in the wastes."
+	desc = "A metallic liquid container. Essential for survival out in the wastes."
 	list_reagents = list("water" = 30, "silver_sulfadiazine" = 20, "charcoal" = 10)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vault13
