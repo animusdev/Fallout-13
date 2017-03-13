@@ -26,7 +26,7 @@
 	lifespan = 25
 	endurance = 10
 	yield = 6
-	growing_icon = 'icons/fallout/flora/flora.dmi.dmi'
+	growing_icon = 'icons/fallout/flora/flora.dmi'
 	icon_grow = "xander-grow"
 	icon_dead = "xander-dead"
 	reagents_add = list("vitamin" = 0.1, "nutriment" = 0.1)
