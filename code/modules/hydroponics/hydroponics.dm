@@ -296,7 +296,7 @@
 		else
 			I = image(icon = myseed.growing_icon, icon_state = myseed.icon_harvest)
 	else
-		var/t_growthstate = min(round((age / myseed.maturation) * myseed.growthstages), myseed.growthstages)
+		var/t_growthstate = min(max(round((age / myseed.maturation) * myseed.growthstages), 1), myseed.growthstages)
 		I = image(icon = myseed.growing_icon, icon_state = "[myseed.icon_grow][t_growthstate]")
 	I.layer = OBJ_LAYER + 0.01
 	add_overlay(I)
@@ -702,6 +702,23 @@
 		visible_message("<span class='boldnotice'>[src] begins to glow with a beautiful light!</span>")
 		self_sustaining = TRUE
 		update_icon()
+
+	else if(!myseed && istype(O, /obj/item/weapon/reagent_containers/food/snacks/grown))
+		var/obj/item/weapon/reagent_containers/food/snacks/grown/G = O
+		if(G.seed)
+			if(istype(G.seed, /obj/item/seeds/kudzu))
+				investigate_log("had Kudzu planted in it by [user.ckey]([user]) at ([x],[y],[z])","kudzu")
+			user.unEquip(G)
+			to_chat(user, "<span class='notice'>You plant [G].</span>")
+			dead = 0
+			myseed = new G.seed()
+			age = 1
+			plant_health = myseed.endurance
+			lastcycle = world.time
+			myseed.forceMove(src)
+			qdel(G)
+			update_icon()
+
 
 	else if(istype(O, /obj/item/weapon/reagent_containers) )  // Syringe stuff (and other reagent containers now too)
 		var/obj/item/weapon/reagent_containers/reagent_source = O

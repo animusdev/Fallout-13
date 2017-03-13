@@ -27,6 +27,7 @@
 	name = myseed.plantname
 	icon = myseed.growing_icon
 	START_PROCESSING(SSobj, src)
+	update_icon()
 
 /obj/structure/flora/wild_plant/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/weapon/shovel))
@@ -110,5 +111,5 @@
 		else
 			icon_state = myseed.icon_harvest
 	else
-		var/t_growthstate = min(round((age / myseed.maturation) * myseed.growthstages), myseed.growthstages)
+		var/t_growthstate = min(max(round((age / myseed.maturation) * myseed.growthstages), 1), myseed.growthstages)
 		icon_state = "[myseed.icon_grow][t_growthstate]"
