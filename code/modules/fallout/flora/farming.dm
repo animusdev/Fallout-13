@@ -4,7 +4,7 @@
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "seed-broc"
 	species = "broc"
-	plantname = "Broc Plants"
+	plantname = "Broc Flower"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/broc
 	lifespan = 25
 	endurance = 10
@@ -21,7 +21,7 @@
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "seed-xander"
 	species = "xander"
-	plantname = "Xander Plants"
+	plantname = "Xander Root"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/xander
 	lifespan = 25
 	endurance = 10
