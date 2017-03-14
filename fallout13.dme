@@ -1307,6 +1307,7 @@
 #include "code\modules\fallout\turf\plating.dm"
 #include "code\modules\fallout\turf\wall_damage.dm"
 #include "code\modules\fallout\turf\walls.dm"
+#include "code\modules\fallout\vehicles\bus.dm"
 #include "code\modules\fallout\vehicles\motorcycle.dm"
 #include "code\modules\fallout\vehicles\vehicle_fuel.dm"
 #include "code\modules\flufftext\Dreaming.dm"
