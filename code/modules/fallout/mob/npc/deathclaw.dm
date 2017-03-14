@@ -11,7 +11,7 @@
 	response_help = "touches"
 	response_disarm = "tries to push aside"
 	response_harm = "hits"
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5, /obj/item/stack/sheet/animalhide/deathclaw=3)
 	maxHealth = 500
 	health = 500
 

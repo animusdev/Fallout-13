@@ -21,7 +21,8 @@ var/global/list/datum/stack_recipe/human_recipes = list( \
 	name = "skin"
 	desc = "A piece of skin."
 	singular_name = "skin piece"
-	icon_state = "sheet-hide"
+	icon_state = "sheet-skin"
+	icon = 'icons/fallout/objects/items.dmi'
 
 /obj/item/stack/sheet/animalhide/corgi
 	name = "corgi hide"

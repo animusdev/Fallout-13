@@ -206,10 +206,6 @@
 /obj/item/weapon/gun/proc/process_fire(atom/target as mob|obj|turf, mob/living/user as mob|obj, message = 1, params, zone_override, bonus_spread = 0)
 	add_fingerprint(user)
 
-	if(ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom))
-		target = user.mouse_on_atom
-		params = user.mouse_on_params
-
 	if(semicd)
 		return
 
@@ -227,7 +223,7 @@
 			if(!issilicon(user))
 				if( i>1 && !(user.is_holding(src))) //for burst firing
 					break
-			if(ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom))
+			if(i > 1 && (ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom)))
 				target = user.mouse_on_atom
 				params = user.mouse_on_params
 			if(chambered && chambered.BB)
