@@ -63,6 +63,8 @@
 	if(engine)
 		if(!Process_Spacemove(direction) || !isturf(ridden.loc))
 			return
+		if(user.pulling)
+			user.stop_pulling()
 		step(ridden, direction)
 
 		handle_vehicle_layer()
