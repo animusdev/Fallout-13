@@ -10,5 +10,14 @@
 	name = "molerat skin"
 	desc = "This is molerat hide."
 	singular_name = "molerat skin piece"
-	icon_state = "sheet-hairlesshide"
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "sheet-molerat"
+	origin_tech = null
+
+/obj/item/stack/sheet/animalhide/deathclaw
+	name = "deathclaw skin"
+	desc = "This is deathclaw hide."
+	singular_name = "deathclaw skin piece"
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "sheet-deathclaw"
 	origin_tech = null
