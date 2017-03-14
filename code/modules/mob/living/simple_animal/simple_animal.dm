@@ -284,6 +284,8 @@
 
 	. = speed
 
+	. += get_pulling_delay()
+
 	. += config.animal_delay
 
 /mob/living/simple_animal/Stat()
