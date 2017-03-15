@@ -158,6 +158,22 @@
 	item_color = "rag"
 	can_adjust = 0
 
+/obj/item/clothing/under/f13/tribal
+	name = "tribal outfit"
+	desc = "A male outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
+	icon_state = "tribal_m"
+	item_state = "lgloves"
+	item_color = "tribal_m"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/female/tribal
+	name = "tribal outfit"
+	desc = "A female outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
+	icon_state = "tribal_f"
+	item_state = "lgloves"
+	item_color = "tribal_f"
+	can_adjust = 0
+
 /obj/item/clothing/under/f13/settler
 	name = "settler outfit"
 	desc = "A more or less a crudely made tan robe with a makeshift belt made from cloth.<br>Paired with worn grey pants."
@@ -168,7 +184,7 @@
 
 /obj/item/clothing/under/f13/brahmin //Male version
 	name = "brahmin-skin outfit"
-	desc = "A basic outfit consisting of a white shirt and patched trousers with Y-shaped suspenders."
+	desc = "A basic male outfit consisting of a white shirt and patched trousers with Y-shaped suspenders."
 	icon_state = "brahmin_m"
 	item_state = "brownjsuit"
 	item_color = "brahmin_m"
@@ -176,7 +192,7 @@
 
 /obj/item/clothing/under/f13/female/brahmin //Female version
 	name = "brahmin-skin outfit"
-	desc = "A basic outfit consisting of a rolled-up long-sleeve shirt and patched trousers with Y-shaped suspenders.<br>Fitted for female wastelanders."
+	desc = "A basic female outfit consisting of a rolled-up long-sleeve shirt and patched trousers with Y-shaped suspenders.<br>Fitted for female wastelanders."
 	icon_state = "brahmin_f"
 	item_state = "brownjsuit"
 	item_color = "brahmin_f"
@@ -185,7 +201,7 @@
 
 /obj/item/clothing/under/f13/doctor //Male version
 	name = "doctor fatigues"
-	desc = "A white t-shirt, a small brown satchel bag and brown trousers with pouches attached to the belt."
+	desc = "A white t-shirt, a small brown satchel bag and brown trousers with pouches attached to the belt.<br>Fitted for male wastelanders."
 	icon_state = "doctor_m"
 	item_state = "brownjsuit"
 	item_color = "doctor_m"
@@ -204,7 +220,7 @@
 
 /obj/item/clothing/under/f13/mercadv //Male version
 	name = "merc adventurer outfit"
-	desc = "A large leather jacket with torn-off sleeves, paired with a red sweater, a necklace with three teeth of unknown origin strung on, and a pair of brown leather pants.<br>There is also a rough leather bandolier for additional storage capacity."
+	desc = "A large leather jacket with torn-off sleeves, paired with a red sweater, a necklace with three teeth of unknown origin strung on, and a pair of brown leather pants.<br>There is also a rough leather bandolier for additional storage capacity.<br>Fitted for male wastelanders."
 	icon_state = "merca_m"
 	item_state = "bl_suit"
 	item_color = "merca_m"
@@ -225,7 +241,7 @@
 
 /obj/item/clothing/under/f13/merccharm //Male version
 	name = "merc charmer outfit"
-	desc = "A blue and gray outfit resembling a three piece suit, heavily stitched and reinforced with a small metal cup on the groin area."
+	desc = "A blue and gray outfit resembling a three piece suit, heavily stitched and reinforced with a small metal cup on the groin area.<br>Fitted for male wastelanders."
 	icon_state = "mercc_m"
 	item_state = "bl_suit"
 	item_color = "mercc_m"
@@ -235,7 +251,7 @@
 
 /obj/item/clothing/under/f13/female/merccharm //Female version
 	name = "merc charmer outfit"
-	desc = "A ripped and torn blue female business suit, it still gives ladies a rather sexy look."
+	desc = "A ripped and torn blue female business suit, it still gives ladies a rather sexy look.<br>Fitted for female wastelanders."
 	icon_state = "mercc_f"
 	item_state = "bl_suit"
 	item_color = "mercc_f"

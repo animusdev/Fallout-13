@@ -15,6 +15,15 @@
 	icon_state = "caravan"
 	item_color = "caravan"
 
+/obj/item/clothing/under/pants/f13/khan
+	name = "Great Khan pants"
+	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by Great Khans raiders."
+	icon_state = "khan"
+	item_color = "khan"
+	flags = THICKMATERIAL
+	body_parts_covered = LEGS
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0)
+
 /obj/item/clothing/under/pants/f13/doom
 	name = "green pants"
 	desc = "An odd green pants made of synthetic material."
