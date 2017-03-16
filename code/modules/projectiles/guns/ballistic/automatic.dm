@@ -44,7 +44,7 @@
 				to_chat(user, "<span class='notice'>You insert the magazine into \the [src].</span>")
 			user.remove_from_mob(AM)
 			magazine = AM
-			magazine.loc = src
+			magazine.forceMove(src)
 			chamber_round()
 			A.update_icon()
 			update_icon()
@@ -330,7 +330,7 @@
 	else if(cover_open && magazine)
 		//drop the mag
 		magazine.update_icon()
-		magazine.loc = get_turf(src.loc)
+		magazine.forceMove(get_turf(src.loc))
 		user.put_in_hands(magazine)
 		magazine = null
 		update_icon()

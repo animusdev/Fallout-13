@@ -42,7 +42,7 @@
 /mob/living/simple_animal/hostile/mimic/crate/initialize()
 	..()
 	for(var/obj/item/I in loc)
-		I.loc = src
+		I.forceMove(src)
 
 /mob/living/simple_animal/hostile/mimic/crate/DestroySurroundings()
 	..()
@@ -83,7 +83,7 @@
 	var/obj/structure/closet/crate/C = new(get_turf(src))
 	// Put loot in crate
 	for(var/obj/O in src)
-		O.loc = C
+		O.forceMove(C)
 	..()
 
 /mob/living/simple_animal/hostile/mimic/crate/AttackingTarget()
@@ -122,7 +122,7 @@ var/global/list/protected_objects = list(/obj/structure/table, /obj/structure/ca
 
 /mob/living/simple_animal/hostile/mimic/copy/death()
 	for(var/atom/movable/M in src)
-		M.loc = get_turf(src)
+		M.forceMove(get_turf(src))
 	..()
 
 /mob/living/simple_animal/hostile/mimic/copy/ListTargets()
@@ -142,7 +142,7 @@ var/global/list/protected_objects = list(/obj/structure/table, /obj/structure/ca
 
 /mob/living/simple_animal/hostile/mimic/copy/proc/CopyObject(obj/O, mob/living/user, destroy_original = 0)
 	if(destroy_original || CheckObject(O))
-		O.loc = src
+		O.forceMove(src)
 		name = O.name
 		desc = O.desc
 		icon = O.icon
@@ -263,15 +263,15 @@ var/global/list/protected_objects = list(/obj/structure/table, /obj/structure/ca
 				..()
 			else
 				visible_message("<span class='danger'>The <b>[src]</b> clears a jam!</span>")
-			Pewgun.chambered.loc = loc //rip revolver immersions, blame shotgun snowflake procs
+			Pewgun.chambered.forceMove(loc )//rip revolver immersions, blame shotgun snowflake procs
 			Pewgun.chambered = null
 			if(Pewgun.magazine && Pewgun.magazine.stored_ammo.len)
 				Pewgun.chambered = Pewgun.magazine.get_round(0)
-				Pewgun.chambered.loc = Pewgun
+				Pewgun.chambered.forceMove(Pewgun)
 			Pewgun.update_icon()
 		else if(Pewgun.magazine && Pewgun.magazine.stored_ammo.len) //only true for pumpguns i think
 			Pewgun.chambered = Pewgun.magazine.get_round(0)
-			Pewgun.chambered.loc = Pewgun
+			Pewgun.chambered.forceMove(Pewgun)
 			visible_message("<span class='danger'>The <b>[src]</b> cocks itself!</span>")
 	else
 		ranged = 0 //BANZAIIII

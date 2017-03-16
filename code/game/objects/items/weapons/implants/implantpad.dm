@@ -37,7 +37,7 @@
 		if(!case)
 			if(!user.unEquip(C))
 				return
-			C.loc = src
+			C.forceMove(src)
 			case = C
 		update_icon()
 	else

@@ -101,7 +101,7 @@ var/list/image/ghost_images_simple = list() //this is a list of all ghost images
 
 	if(!T)
 		T = pick(latejoin)			//Safety in case we cannot find the body's position
-	loc = T
+	forceMove(T)
 
 	if(!name)							//To prevent nameless ghosts
 		name = random_unique_name(gender)
@@ -275,12 +275,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(updatedir)
 		setDir(direct )//only update dir if we actually need it, so overlays won't spin on base sprites that don't have directions of their own
 	if(NewLoc)
-		loc = NewLoc
+		forceMove(NewLoc)
 		for(var/obj/effect/step_trigger/S in NewLoc)
 			S.Crossed(src)
 //		update_parallax_contents()
 		return
-	loc = get_turf(src) //Get out of closets and such as a ghost
+	forceMove(get_turf(src) )//Get out of closets and such as a ghost
 	if((direct & NORTH) && y < world.maxy)
 		y++
 	else if((direct & SOUTH) && y > 1)
@@ -367,7 +367,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!L || !L.len)
 		to_chat(usr, "No area available.")
 
-	usr.loc = pick(L)
+	usr.forceMove(pick(L))
 //	update_parallax_contents()
 
 /mob/dead/observer/verb/follow()
@@ -441,7 +441,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			var/turf/T = get_turf(M) //Turf of the destination mob
 
 			if(T && isturf(T))	//Make sure the turf exists, then move the source to that destination.
-				A.loc = T
+				A.forceMove(T)
 //				A.update_parallax_contents()
 			else
 				to_chat(A, "This mob is not located in the game world.")

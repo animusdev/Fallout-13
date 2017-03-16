@@ -168,7 +168,7 @@ var/const/MAX_ACTIVE_TIME = 400
 									"<span class='userdanger'>[src] smashes against [H]'s [H.head]!</span>")
 				Die()
 				return FALSE
-		src.loc = target
+		src.forceMove(target)
 		target.equip_to_slot_if_possible(src, slot_wear_mask, 0, 1, 1)
 	// early returns and validity checks done: attach.
 	attached++
@@ -178,7 +178,7 @@ var/const/MAX_ACTIVE_TIME = 400
 
 	if (iscorgi(M))
 		var/mob/living/simple_animal/pet/dog/corgi/C = M
-		loc = C
+		forceMove(C)
 		C.facehugger = src
 		C.regenerate_icons()
 
@@ -216,7 +216,7 @@ var/const/MAX_ACTIVE_TIME = 400
 
 		if(iscorgi(target))
 			var/mob/living/simple_animal/pet/dog/corgi/C = target
-			src.loc = get_turf(C)
+			src.forceMove(get_turf(C))
 			C.facehugger = null
 	else
 		target.visible_message("<span class='danger'>[src] violates [target]'s face!</span>", \

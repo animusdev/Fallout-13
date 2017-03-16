@@ -39,7 +39,7 @@
 /obj/item/nuke_core_container/proc/load(obj/item/nuke_core/ncore, mob/user)
 	if(core || !istype(ncore))
 		return 0
-	ncore.loc = src
+	ncore.forceMove(src)
 	core = ncore
 	icon_state = "core_container_loaded"
 	to_chat(user, "<span class='warning'>Container is sealing...</span>")

@@ -54,7 +54,7 @@
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
 					M.show_message("<span class='notice'>[usr] puts [W] in the hole.</span>", 1)
 		pitcontents += W
-		W.loc = mypit
+		W.forceMove(mypit)
 		storedindex = storedindex+1
 
 /turf/ground/desert/attack_hand(mob/living/carbon/human/M)
@@ -65,7 +65,7 @@
 		else
 			var/obj/item/I = pitcontents[storedindex]
 			storedindex = storedindex - 1
-			I.loc = M.loc
+			I.forceMove(M.loc)
 			pitcontents-=I
 
 /turf/ground/desert/proc/finishBury(mob/user)
@@ -76,11 +76,11 @@
 	mypit.invisibility = 101
 
 /turf/ground/desert/proc/finishBody()
-	gravebody.loc = mypit
+	gravebody.forceMove(mypit)
 	unburylevel = 0
 
 /turf/ground/desert/proc/finishCoffin()
-	gravecoffin.loc = mypit
+	gravecoffin.forceMove(mypit)
 
 /turf/ground/desert/attackby(obj/item/W, mob/user, params)
 	if(..())
@@ -149,7 +149,7 @@
 	if(dug)
 		return
 	for (var/obj/item/I in pitcontents)
-		I.loc = user.loc
+		I.forceMove(user.loc)
 	if (mypit==null)
 		mypit = new/obj/dugpit/ground(src)
 	mypit.invisibility = 0
@@ -162,11 +162,11 @@
 	if (gravebody!=null)
 		if (user!=null)
 			to_chat(user, "<span class='danger'>You have found a body in the pit!</span>")
-		gravebody.loc = mypit.loc
+		gravebody.forceMove(mypit.loc)
 	if (gravecoffin!=null)
 		if (user!=null)
 			to_chat(user, "<span class='notice'>You have uncovered a coffin from the grave.</span>")
-		gravecoffin.loc = mypit.loc
+		gravecoffin.forceMove(mypit.loc)
 	gravebody = null
 	gravecoffin = null
 	return

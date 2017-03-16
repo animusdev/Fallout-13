@@ -89,13 +89,13 @@ var/global/mulebot_count = 0
 		if(!user.drop_item())
 			return
 		var/obj/item/weapon/stock_parts/cell/C = I
-		C.loc = src
+		C.forceMove(src)
 		cell = C
 		visible_message("[user] inserts a cell into [src].",
 						"<span class='notice'>You insert the new cell into [src].</span>")
 	else if(istype(I, /obj/item/weapon/crowbar) && open && cell)
 		cell.add_fingerprint(usr)
-		cell.loc = loc
+		cell.forceMove(loc)
 		cell = null
 		visible_message("[user] crowbars out the power cell from [src].",
 						"<span class='notice'>You pry the powercell out of [src].</span>")
@@ -365,7 +365,7 @@ var/global/mulebot_count = 0
 		if(!load_mob(AM))
 			return
 	else
-		AM.loc = src
+		AM.forceMove(src)
 
 	load = AM
 	mode = BOT_IDLE
@@ -405,7 +405,7 @@ var/global/mulebot_count = 0
 	unbuckle_all_mobs()
 
 	if(load)
-		load.loc = loc
+		load.forceMove(loc)
 		load.pixel_y = initial(load.pixel_y)
 		load.layer = initial(load.layer)
 		load.plane = initial(load.plane)
@@ -717,7 +717,7 @@ var/global/mulebot_count = 0
 	new /obj/item/stack/rods(Tsec)
 	new /obj/item/stack/cable_coil/cut(Tsec)
 	if(cell)
-		cell.loc = Tsec
+		cell.forceMove(Tsec)
 		cell.update_icon()
 		cell = null
 

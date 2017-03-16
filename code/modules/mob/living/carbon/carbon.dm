@@ -40,7 +40,7 @@
 
 				if(prob(src.getBruteLoss() - 50))
 					for(var/atom/movable/A in stomach_contents)
-						A.loc = loc
+						A.forceMove(loc)
 						stomach_contents.Remove(A)
 					src.gib()
 
@@ -226,7 +226,8 @@
 
 
 /mob/living/carbon/fall(forced)
-    loc.handle_fall(src, forced)//it's loc so it doesn't call the mob's handle_fall which does nothing
+	if(loc)
+		loc.handle_fall(src, forced)//it's loc so it doesn't call the mob's handle_fall which does nothing
 
 /mob/living/carbon/is_muzzled()
 	return(istype(src.wear_mask, /obj/item/clothing/mask/muzzle))
@@ -322,7 +323,7 @@
 		if (client)
 			client.screen -= W
 		if (W)
-			W.loc = loc
+			W.forceMove(loc)
 			W.dropped(src)
 			if (W)
 				W.layer = initial(W.layer)
@@ -334,7 +335,7 @@
 		if (client)
 			client.screen -= W
 		if (W)
-			W.loc = loc
+			W.forceMove(loc)
 			W.dropped(src)
 			if (W)
 				W.layer = initial(W.layer)
@@ -360,7 +361,7 @@
 
 	else
 		if(I == handcuffed)
-			handcuffed.loc = loc
+			handcuffed.forceMove(loc)
 			handcuffed.dropped(src)
 			handcuffed = null
 			if(buckled && buckled.buckle_requires_restraints)
@@ -368,7 +369,7 @@
 			update_handcuffed()
 			return
 		if(I == legcuffed)
-			legcuffed.loc = loc
+			legcuffed.forceMove(loc)
 			legcuffed.dropped()
 			legcuffed = null
 			update_inv_legcuffed()
@@ -711,7 +712,7 @@
 		if(prob(50))
 			organs_amt++
 			O.Remove(src)
-			O.loc = get_turf(src)
+			O.forceMove(get_turf(src))
 	if(organs_amt)
 		to_chat(user, "<span class='notice'>You retrieve some of [src]\'s internal organs!</span>")
 

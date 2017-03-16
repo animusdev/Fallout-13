@@ -31,7 +31,7 @@
 	anchored = 1
 	for(var/obj/item/I in loc)
 		if(istype(I, /obj/item/weapon/book))
-			I.loc = src
+			I.forceMove(src)
 	update_icon()
 
 
@@ -68,7 +68,7 @@
 			if(is_type_in_list(I, allowed_books))
 				if(!user.drop_item())
 					return
-				I.loc = src
+				I.forceMove(src)
 				update_icon()
 			else if(istype(I, /obj/item/weapon/storage/bag/books))
 				var/obj/item/weapon/storage/bag/books/B = I
@@ -106,7 +106,7 @@
 				if(!user.get_active_held_item())
 					user.put_in_hands(choice)
 			else
-				choice.loc = get_turf(src)
+				choice.forceMove(get_turf(src))
 			update_icon()
 
 
@@ -271,7 +271,7 @@
 				user.put_in_hands(B)
 				return
 			else
-				B.loc = src.loc
+				B.forceMove(src.loc)
 				qdel(src)
 				return
 		return

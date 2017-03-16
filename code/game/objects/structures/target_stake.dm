@@ -18,7 +18,7 @@
 /obj/structure/target_stake/Move()
 	..()
 	if(pinned_target)
-		pinned_target.loc = loc
+		pinned_target.forceMove(loc)
 
 /obj/structure/target_stake/attackby(obj/item/target/T, mob/user)
 	if(pinned_target)
@@ -28,7 +28,7 @@
 		T.pinnedLoc = src
 		T.density = 1
 		T.layer = OBJ_LAYER + 0.01
-		T.loc = loc
+		T.forceMove(loc)
 		to_chat(user, "<span class='notice'>You slide the target into the stake.</span>")
 
 /obj/structure/target_stake/attack_hand(mob/user)
@@ -37,7 +37,7 @@
 
 /obj/structure/target_stake/proc/removeTarget(mob/user)
 	pinned_target.layer = OBJ_LAYER
-	pinned_target.loc = user.loc
+	pinned_target.forceMove(user.loc)
 	pinned_target.nullPinnedLoc()
 	nullPinnedTarget()
 	if(ishuman(user))
@@ -45,7 +45,7 @@
 			user.put_in_hands(pinned_target)
 			to_chat(user, "<span class='notice'>You take the target out of the stake.</span>")
 	else
-		pinned_target.loc = get_turf(user)
+		pinned_target.forceMove(get_turf(user))
 		to_chat(user, "<span class='notice'>You take the target out of the stake.</span>")
 
 /obj/structure/target_stake/bullet_act(obj/item/projectile/P)

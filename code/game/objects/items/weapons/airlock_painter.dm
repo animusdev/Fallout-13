@@ -111,7 +111,7 @@
 			return
 		if(!user.unEquip(W))
 			return
-		W.loc = src
+		W.forceMove(src)
 		to_chat(user, "<span class='notice'>You install [W] into [src].</span>")
 		ink = W
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
@@ -121,7 +121,7 @@
 /obj/item/weapon/airlock_painter/attack_self(mob/user)
 	if(ink)
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-		ink.loc = user.loc
+		ink.forceMove(user.loc)
 		user.put_in_hands(ink)
 		to_chat(user, "<span class='notice'>You remove [ink] from [src].</span>")
 		ink = null

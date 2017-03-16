@@ -44,5 +44,5 @@
 /obj/structure/sign/poster/wanted/roll_and_drop(turf/location)
 	var/obj/item/weapon/poster/legit/wanted/P = new(src, null, wanted_name, desc)
 	P.resulting_poster = src
-	P.loc = location
-	loc = P
+	P.forceMove(location)
+	forceMove(P)

@@ -27,7 +27,7 @@
 				to_chat(U, "<span class='notice'>Higher maximum capacity detected.\nUpgrading...</span>")
 				if (n_gloves && n_gloves.candrain && do_after(U,s_delay, target = src))
 					U.drop_item()
-					CELL.loc = src
+					CELL.forceMove(src)
 					CELL.charge = min(CELL.charge+cell.charge, CELL.maxcharge)
 					var/obj/item/weapon/stock_parts/cell/old_cell = cell
 					old_cell.charge = 0
@@ -65,7 +65,7 @@
 				else
 					to_chat(U, "<span class='userdanger'>ERROR</span>: Procedure interrupted. Process terminated.")
 			else
-				I.loc = src
+				I.forceMove(src)
 				t_disk = I
 				to_chat(U, "<span class='notice'>You slot \the [I] into \the [src].</span>")
 			return

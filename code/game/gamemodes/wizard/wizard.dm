@@ -29,7 +29,7 @@
 		to_chat(wizard.current, "<span class='boldannounce'>A starting location for you could not be found, please report this bug!</span>")
 		return 0
 	for(var/datum/mind/wiz in wizards)
-		wiz.current.loc = pick(wizardstart)
+		wiz.current.forceMove(pick(wizardstart))
 
 	return 1
 

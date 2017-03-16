@@ -106,4 +106,4 @@
 		if(!M)
 			M = new /obj/item/weapon/storage/bag/money(src)
 			unload_mineral(M)
-		O.loc = M
+		O.forceMove(M)

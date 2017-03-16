@@ -29,7 +29,7 @@
 		if(!scan)
 			if(!user.drop_item())
 				return
-			O.loc = src
+			O.forceMove(src)
 			scan = O
 			to_chat(user, "<span class='notice'>You insert [O].</span>")
 		else
@@ -296,14 +296,14 @@ What a mess.*/
 					if(ishuman(usr) && !usr.get_active_held_item())
 						usr.put_in_hands(scan)
 					else
-						scan.loc = get_turf(src)
+						scan.forceMove(get_turf(src))
 					scan = null
 				else
 					var/obj/item/I = usr.get_active_held_item()
 					if(istype(I, /obj/item/weapon/card/id))
 						if(!usr.drop_item())
 							return
-						I.loc = src
+						I.forceMove(src)
 						scan = I
 
 			if("Log Out")

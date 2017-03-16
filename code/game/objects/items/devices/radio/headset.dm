@@ -223,7 +223,7 @@
 			if(keyslot)
 				var/turf/T = get_turf(user)
 				if(T)
-					keyslot.loc = T
+					keyslot.forceMove(T)
 					keyslot = null
 
 
@@ -231,7 +231,7 @@
 			if(keyslot2)
 				var/turf/T = get_turf(user)
 				if(T)
-					keyslot2.loc = T
+					keyslot2.forceMove(T)
 					keyslot2 = null
 
 			recalculateChannels()
@@ -248,13 +248,13 @@
 		if(!keyslot)
 			if(!user.unEquip(W))
 				return
-			W.loc = src
+			W.forceMove(src)
 			keyslot = W
 
 		else
 			if(!user.unEquip(W))
 				return
-			W.loc = src
+			W.forceMove(src)
 			keyslot2 = W
 
 

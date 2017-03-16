@@ -118,7 +118,7 @@
 	if(href_list["choice"])
 		if(istype(inserted_id))
 			if(href_list["choice"] == "eject")
-				inserted_id.loc = loc
+				inserted_id.forceMove(loc)
 				inserted_id.verb_pickup()
 				inserted_id = null
 		else if(href_list["choice"] == "insert")
@@ -126,7 +126,7 @@
 			if(istype(I))
 				if(!usr.drop_item())
 					return
-				I.loc = src
+				I.forceMove(src)
 				inserted_id = I
 			else to_chat(usr, "<span class='danger'>No valid ID.</span>")
 	if(href_list["purchase"])
@@ -154,7 +154,7 @@
 		if(istype(C) && !istype(inserted_id))
 			if(!usr.drop_item())
 				return
-			C.loc = src
+			C.forceMove(src)
 			inserted_id = C
 			interact(user)
 		return

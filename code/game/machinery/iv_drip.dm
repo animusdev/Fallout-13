@@ -86,7 +86,7 @@
 		if(!user.drop_item())
 			return
 
-		W.loc = src
+		W.forceMove(src)
 		beaker = W
 		to_chat(user, "<span class='notice'>You attach \the [W] to \the [src].</span>")
 		update_icon()
@@ -165,7 +165,7 @@
 		return
 
 	if(beaker)
-		beaker.loc = get_turf(src)
+		beaker.forceMove(get_turf(src))
 		beaker = null
 		update_icon()
 

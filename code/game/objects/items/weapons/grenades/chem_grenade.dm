@@ -76,7 +76,7 @@
 				if(!user.unEquip(I))
 					return
 				to_chat(user, "<span class='notice'>You add [I] to the [initial(name)] assembly.</span>")
-				I.loc = src
+				I.forceMove(src)
 				beakers += I
 			else
 				to_chat(user, "<span class='warning'>[I] is empty!</span>")
@@ -91,7 +91,7 @@
 
 		nadeassembly = A
 		A.master = src
-		A.loc = src
+		A.forceMove(src)
 		assemblyattacher = user.ckey
 
 		stage_change(WIRED)
@@ -114,12 +114,12 @@
 	else if(stage == WIRED && istype(I, /obj/item/weapon/wrench))
 		if(beakers.len)
 			for(var/obj/O in beakers)
-				O.loc = get_turf(src)
+				O.forceMove(get_turf(src))
 			beakers = list()
 			to_chat(user, "<span class='notice'>You open the [initial(name)] assembly and remove the payload.</span>")
 			return // First use of the wrench remove beakers, then use the wrench to remove the activation mechanism.
 		if(nadeassembly)
-			nadeassembly.loc = get_turf(src)
+			nadeassembly.forceMove(get_turf(src))
 			nadeassembly.master = null
 			nadeassembly = null
 		else // If "nadeassembly = null && stage == WIRED", then it most have been cable_coil that was used.
@@ -171,7 +171,7 @@
 		playsound(loc, 'sound/items/Screwdriver2.ogg', 50, 1)
 		if(beakers.len)
 			for(var/obj/O in beakers)
-				O.loc = get_turf(src)
+				O.forceMove(get_turf(src))
 			beakers = list()
 		stage_change(EMPTY)
 		return
@@ -234,7 +234,7 @@
 		if(!user.unEquip(I))
 			return
 		to_chat(user, "<span class='notice'>You add [I] to the [initial(name)] assembly.</span>")
-		I.loc = src
+		I.forceMove(src)
 		beakers += I
 	else
 		return ..()

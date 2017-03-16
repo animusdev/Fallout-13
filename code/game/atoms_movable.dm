@@ -25,8 +25,6 @@
 	appearance_flags = TILE_BOUND
 	var/datum/forced_movement/force_moving = null	//handled soley by forced_movement.dm
 
-
-
 /atom/movable/Move(atom/newloc, direct = 0)
 	if(!loc || !newloc) return 0
 	var/atom/oldloc = loc
@@ -103,7 +101,7 @@
 		loc.handle_atom_del(src)
 	for(var/atom/movable/AM in contents)
 		qdel(AM)
-	loc = null
+	forceMove(null)
 	invisibility = INVISIBILITY_ABSTRACT
 	if(pulledby)
 		pulledby.stop_pulling()
@@ -126,13 +124,13 @@
 
 
 /atom/movable/proc/forceMove(atom/destination)
+	if(pulledby)
+		pulledby.stop_pulling()
+	var/atom/oldloc = loc
+	var/same_loc = oldloc == destination
+	if(oldloc && !same_loc)
+		oldloc.Exited(src, destination)
 	if(destination)
-		if(pulledby)
-			pulledby.stop_pulling()
-		var/atom/oldloc = loc
-		var/same_loc = oldloc == destination.loc
-		if(oldloc && !same_loc)
-			oldloc.Exited(src, destination)
 		loc = destination
 		if(!same_loc)
 			destination.Entered(src, oldloc)
@@ -146,6 +144,7 @@
 			AM.Crossed(src)
 		Moved(oldloc, 0)
 		return 1
+	loc = null
 	return 0
 
 /mob/living/forceMove(atom/destination)
@@ -290,7 +289,7 @@
 	for(var/m in buckled_mobs)
 		var/mob/living/buckled_mob = m
 		if(!buckled_mob.Move(newloc, direct))
-			loc = buckled_mob.loc
+			forceMove(buckled_mob.loc)
 			last_move = buckled_mob.last_move
 			inertia_dir = last_move
 			buckled_mob.inertia_dir = last_move

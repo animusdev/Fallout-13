@@ -78,7 +78,7 @@
 	var/needs_update = 0
 
 	if(myseed.loc != src)
-		myseed.loc = src
+		myseed.forceMove(src)
 
 	if(world.time > (lastcycle + cycledelay))
 		lastcycle = world.time

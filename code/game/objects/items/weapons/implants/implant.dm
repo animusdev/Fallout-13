@@ -57,7 +57,7 @@
 				else
 					return 0
 
-	src.loc = target
+	src.forceMove(target)
 	imp_in = target
 	target.implants += src
 	if(activated)
@@ -74,7 +74,7 @@
 	return 1
 
 /obj/item/weapon/implant/proc/removed(mob/living/source, silent = 0, special = 0)
-	src.loc = null
+	src.forceMove(null)
 	imp_in = null
 	source.implants -= src
 	for(var/X in actions)

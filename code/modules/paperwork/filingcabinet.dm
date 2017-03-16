@@ -34,7 +34,7 @@
 /obj/structure/filingcabinet/initialize()
 	for(var/obj/item/I in loc)
 		if(istype(I, /obj/item/weapon/paper) || istype(I, /obj/item/weapon/folder) || istype(I, /obj/item/weapon/photo))
-			I.loc = src
+			I.forceMove(src)
 
 /obj/structure/filingcabinet/deconstruct(disassembled = TRUE)
 	if(!(flags & NODECONSTRUCT))
@@ -48,7 +48,7 @@
 		if(!user.drop_item())
 			return
 		to_chat(user, "<span class='notice'>You put [P] in [src].</span>")
-		P.loc = src
+		P.forceMove(src)
 		icon_state = "[initial(icon_state)]-open"
 		sleep(5)
 		icon_state = initial(icon_state)
@@ -89,7 +89,7 @@
 	if(contents.len)
 		if(prob(40 + contents.len * 5))
 			var/obj/item/I = pick(contents)
-			I.loc = loc
+			I.forceMove(loc)
 			if(prob(25))
 				step_rand(I)
 			to_chat(user, "<span class='notice'>You pull \a [I] out of [src] at random.</span>")

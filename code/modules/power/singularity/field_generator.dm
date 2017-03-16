@@ -287,7 +287,7 @@ field_generator power level display
 		if(!locate(/obj/machinery/field/containment) in T)
 			var/obj/machinery/field/containment/CF = new/obj/machinery/field/containment()
 			CF.set_master(src,G)
-			CF.loc = T
+			CF.forceMove(T)
 			CF.setDir(field_dir)
 			fields += CF
 			G.fields += CF

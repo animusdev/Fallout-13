@@ -107,7 +107,7 @@
 		agent = agents[team_number]
 		H = agent.current
 		L = agent_landmarks[team_number]
-		H.loc = L.loc
+		H.forceMove(L.loc)
 		H.set_species(/datum/species/abductor)
 		S = H.dna.species
 		S.agent = 1
@@ -120,7 +120,7 @@
 		scientist = scientists[team_number]
 		H = scientist.current
 		L = scientist_landmarks[team_number]
-		H.loc = L.loc
+		H.forceMove(L.loc)
 		H.set_species(/datum/species/abductor)
 		S = H.dna.species
 		S.scientist = 1
@@ -154,7 +154,7 @@
 	agent = agents[team_number]
 	H = agent.current
 	L = agent_landmarks[team_number]
-	H.loc = L.loc
+	H.forceMove(L.loc)
 	H.set_species(/datum/species/abductor)
 	S = H.dna.species
 	S.agent = 1
@@ -168,7 +168,7 @@
 	scientist = scientists[team_number]
 	H = scientist.current
 	L = scientist_landmarks[team_number]
-	H.loc = L.loc
+	H.forceMove(L.loc)
 	H.set_species(/datum/species/abductor)
 	S = H.dna.species
 	S.scientist = 1

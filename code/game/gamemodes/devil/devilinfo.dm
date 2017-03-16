@@ -210,7 +210,7 @@ var/global/list/lawlorify = list (
 /datum/devilinfo/proc/regress_blood_lizard()
 	var/mob/living/carbon/true_devil/D = owner.current
 	to_chat(D, "<span class='warning'>Your powers weaken, have more contracts be signed to regain power.")
-	D.oldform.loc = D.loc
+	D.oldform.forceMove(D.loc)
 	owner.transfer_to(D.oldform)
 	give_lizard_spells()
 	qdel(D)
@@ -241,7 +241,7 @@ var/global/list/lawlorify = list (
 	sleep(50)
 	var/mob/living/carbon/true_devil/A = new /mob/living/carbon/true_devil(owner.current.loc)
 	A.faction |= "hell"
-	owner.current.loc = A
+	owner.current.forceMove(A)
 	A.oldform = owner.current
 	owner.transfer_to(A)
 	A.set_name()

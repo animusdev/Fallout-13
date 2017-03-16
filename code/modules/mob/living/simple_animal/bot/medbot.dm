@@ -185,7 +185,7 @@
 		use_beaker = !use_beaker
 
 	else if(href_list["eject"] && (!isnull(reagent_glass)))
-		reagent_glass.loc = get_turf(src)
+		reagent_glass.forceMove(get_turf(src))
 		reagent_glass = null
 
 	else if(href_list["togglevoice"])
@@ -217,7 +217,7 @@
 		if(!user.drop_item())
 			return
 
-		W.loc = src
+		W.forceMove(src)
 		reagent_glass = W
 		to_chat(user, "<span class='notice'>You insert [W].</span>")
 		show_controls(user)
@@ -521,7 +521,7 @@
 	new /obj/item/device/healthanalyzer(Tsec)
 
 	if(reagent_glass)
-		reagent_glass.loc = Tsec
+		reagent_glass.forceMove(Tsec)
 		reagent_glass = null
 
 	if(prob(50))

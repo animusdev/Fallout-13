@@ -25,7 +25,7 @@
 		if(iscarbon(user))
 			var/mob/living/carbon/C = user
 			C.vomit(0)
-		egg.loc = get_turf(user)
+		egg.forceMove(get_turf(user))
 
 	user.reagents.add_reagent("mutadone", 10)
 	user.reagents.add_reagent("pen_acid", 20)

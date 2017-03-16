@@ -37,7 +37,7 @@
 /obj/machinery/computer/telescience/Destroy()
 	eject()
 	if(inserted_gps)
-		inserted_gps.loc = loc
+		inserted_gps.forceMove(loc)
 		inserted_gps = null
 	return ..()
 
@@ -62,14 +62,14 @@
 		if(!user.drop_item())
 			return
 		crystals += W
-		W.loc = null
+		W.forceMove(null)
 		user.visible_message("[user] inserts [W] into \the [src]'s crystal slot.", "<span class='notice'>You insert [W] into \the [src]'s crystal slot.</span>")
 		updateDialog()
 	else if(istype(W, /obj/item/device/gps))
 		if(!inserted_gps)
 			inserted_gps = W
 			user.unEquip(W)
-			W.loc = src
+			W.forceMove(src)
 			user.visible_message("[user] inserts [W] into \the [src]'s GPS device slot.", "<span class='notice'>You insert [W] into \the [src]'s GPS device slot.</span>")
 	else if(istype(W, /obj/item/device/multitool))
 		var/obj/item/device/multitool/M = W
@@ -296,7 +296,7 @@
 
 /obj/machinery/computer/telescience/proc/eject()
 	for(var/obj/item/I in crystals)
-		I.loc = src.loc
+		I.forceMove(src.loc)
 		crystals -= I
 	power = 0
 
@@ -337,7 +337,7 @@
 
 	if(href_list["ejectGPS"])
 		if(inserted_gps)
-			inserted_gps.loc = loc
+			inserted_gps.forceMove(loc)
 			inserted_gps = null
 
 	if(href_list["setMemory"])

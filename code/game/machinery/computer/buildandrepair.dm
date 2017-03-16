@@ -48,7 +48,7 @@
 				icon_state = "1"
 				circuit = P
 				circuit.add_fingerprint(user)
-				P.loc = null
+				P.forceMove(null)
 				return
 
 			else if(istype(P, /obj/item/weapon/circuitboard) && !circuit)
@@ -65,7 +65,7 @@
 				to_chat(user, "<span class='notice'>You remove the circuit board.</span>")
 				state = 1
 				icon_state = "0"
-				circuit.loc = src.loc
+				circuit.forceMove(src.loc)
 				circuit.add_fingerprint(user)
 				circuit = null
 				return

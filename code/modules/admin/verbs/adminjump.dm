@@ -34,7 +34,7 @@
 
 	log_admin("[key_name(usr)] jumped to [T.x],[T.y],[T.z] in [T.loc]")
 	message_admins("[key_name_admin(usr)] jumped to [T.x],[T.y],[T.z] in [T.loc]")
-	usr.loc = T
+	usr.forceMove(T)
 	feedback_add_details("admin_verb","JT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
@@ -132,7 +132,7 @@
 	message_admins("[key_name_admin(usr)] teleported [key_name(M)]")
 	if(M)
 		M.forceMove(get_turf(usr))
-		usr.loc = M.loc
+		usr.forceMove(M.loc)
 		feedback_add_details("admin_verb","GK") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/sendmob(mob/M in sortmobs())

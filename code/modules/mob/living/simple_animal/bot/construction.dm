@@ -428,7 +428,7 @@
 		build_step++
 		to_chat(user, "<span class='notice'>You complete the Securitron! Beep boop.</span>")
 		var/mob/living/simple_animal/bot/secbot/S = new /mob/living/simple_animal/bot/secbot
-		S.loc = get_turf(src)
+		S.forceMove(get_turf(src))
 		S.name = created_name
 		qdel(I)
 		qdel(src)

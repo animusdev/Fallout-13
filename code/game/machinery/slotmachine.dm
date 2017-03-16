@@ -84,7 +84,7 @@
 		if(prob(2))
 			if(!user.drop_item())
 				return
-			C.loc = loc
+			C.forceMove(loc)
 			C.throw_at(user, 3, 10)
 			if(prob(10))
 				balance = max(balance - SPIN_PRICE, 0)

@@ -29,7 +29,7 @@
 
 	if(make_from)
 		setDir(make_from.dir)
-		make_from.loc = 0
+		make_from.forceMove(0)
 		stored = make_from
 	else
 		stored = new /obj/structure/disposalconstruct(0,DISP_END_BIN,dir)
@@ -335,7 +335,7 @@
 		if(istype(I, /obj/item/projectile))
 			return
 		if(prob(75))
-			I.loc = src
+			I.forceMove(src)
 			visible_message("<span class='notice'>\the [I] lands in \the [src].</span>")
 			update_icon()
 		else
@@ -467,7 +467,7 @@
 
 	if(isobj(AM))
 		var/obj/O = AM
-		O.loc = src
+		O.forceMove(src)
 	else if(istype(AM, /mob))
 		var/mob/M = AM
 		if(prob(2)) // to prevent mobs being stuck in infinite loops

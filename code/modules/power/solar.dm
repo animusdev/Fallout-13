@@ -50,7 +50,7 @@
 		S = new /obj/item/solar_assembly(src)
 		S.glass_type = /obj/item/stack/sheet/glass
 		S.anchored = 1
-	S.loc = src
+	S.forceMove(src)
 	if(S.glass_type == /obj/item/stack/sheet/rglass) //if the panel is in reinforced glass
 		max_integrity *= 2 								 //this need to be placed here, because panels already on the map don't have an assembly linked to
 		obj_integrity = max_integrity
@@ -424,7 +424,7 @@
 				new /obj/item/weapon/shard( src.loc )
 				var/obj/item/weapon/circuitboard/computer/solar_control/M = new /obj/item/weapon/circuitboard/computer/solar_control( A )
 				for (var/obj/C in src)
-					C.loc = src.loc
+					C.forceMove(src.loc)
 				A.circuit = M
 				A.state = 3
 				A.icon_state = "3"
@@ -435,7 +435,7 @@
 				var/obj/structure/frame/computer/A = new /obj/structure/frame/computer( src.loc )
 				var/obj/item/weapon/circuitboard/computer/solar_control/M = new /obj/item/weapon/circuitboard/computer/solar_control( A )
 				for (var/obj/C in src)
-					C.loc = src.loc
+					C.forceMove(src.loc)
 				A.circuit = M
 				A.state = 4
 				A.icon_state = "4"

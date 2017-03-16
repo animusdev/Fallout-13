@@ -67,7 +67,7 @@
 				tempL.Remove(attempt)
 
 		if(!success)
-			target.loc = pick(L)
+			target.forceMove(pick(L))
 			playsound(get_turf(user), sound2, 50,1)
 
 	return

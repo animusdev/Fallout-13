@@ -254,7 +254,7 @@
 		var/obj/item/weapon/twohanded/ctf/flag = I
 		if(flag.team != src.team)
 			user.unEquip(flag)
-			flag.loc = get_turf(flag.reset)
+			flag.forceMove(get_turf(flag.reset))
 			points++
 			for(var/mob/M in player_list)
 				var/area/mob_area = get_area(M)

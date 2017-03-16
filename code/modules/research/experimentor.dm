@@ -132,7 +132,7 @@
 		if(!user.drop_item())
 			return
 		loaded_item = O
-		O.loc = src
+		O.forceMove(src)
 		to_chat(user, "<span class='notice'>You add the [O.name] to the machine.</span>")
 		flick("h_lathe_load", src)
 
@@ -200,7 +200,7 @@
 		var/turf/dropturf = get_turf(pick(view(1,src)))
 		if(!dropturf) //Failsafe to prevent the object being lost in the void forever.
 			dropturf = get_turf(src)
-		loaded_item.loc = dropturf
+		loaded_item.forceMove(dropturf)
 		if(delete)
 			qdel(loaded_item)
 		loaded_item = null
@@ -475,7 +475,7 @@
 			throwSmoke(src.loc)
 			if(trackedIan)
 				throwSmoke(trackedIan.loc)
-				trackedIan.loc = src.loc
+				trackedIan.forceMove(src.loc)
 				investigate_log("Experimentor has stolen Ian!", "experimentor") //...if anyone ever fixes it...
 			else
 				new /mob/living/simple_animal/pet/dog/corgi(src.loc)
@@ -492,7 +492,7 @@
 			throwSmoke(src.loc)
 			if(trackedRuntime)
 				throwSmoke(trackedRuntime.loc)
-				trackedRuntime.loc = src.loc
+				trackedRuntime.forceMove(src.loc)
 				investigate_log("Experimentor has stolen Runtime!", "experimentor")
 			else
 				new /mob/living/simple_animal/pet/cat(src.loc)

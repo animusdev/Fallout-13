@@ -49,7 +49,7 @@
 			if(!user.unEquip(O))
 				to_chat(user, "<span class='warning'>\the [O] is stuck to your hand, you cannot put it in \the [src]!</span>")
 				return 0
-			O.loc = src
+			O.forceMove(src)
 			beaker = O
 			src.verbs += /obj/machinery/juicer/verb/detach
 			update_icon()
@@ -61,7 +61,7 @@
 	if(!user.unEquip(O))
 		to_chat(user, "<span class='warning'>\the [O] is stuck to your hand, you cannot put it in \the [src]!</span>")
 		return 0
-	O.loc = src
+	O.forceMove(src)
 	src.updateUsrDialog()
 	return 0
 
@@ -137,7 +137,7 @@
 	if (!beaker)
 		return
 	src.verbs -= /obj/machinery/juicer/verb/detach
-	beaker.loc = src.loc
+	beaker.forceMove(src.loc)
 	beaker = null
 	update_icon()
 

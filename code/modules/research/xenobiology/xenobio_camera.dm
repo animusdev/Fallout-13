@@ -31,7 +31,7 @@
 
 /obj/machinery/computer/camera_advanced/xenobio/CreateEye()
 	eyeobj = new /mob/camera/aiEye/remote/xenobio()
-	eyeobj.loc = get_turf(src)
+	eyeobj.forceMove(get_turf(src))
 	eyeobj.origin = src
 	eyeobj.visible_icon = 1
 	eyeobj.icon = 'icons/obj/abductor.dmi'
@@ -119,7 +119,7 @@
 
 	if(cameranet.checkTurfVis(remote_eye.loc))
 		for(var/mob/living/simple_animal/slime/S in X.stored_slimes)
-			S.loc = remote_eye.loc
+			S.forceMove(remote_eye.loc)
 			S.visible_message("[S] warps in!")
 			X.stored_slimes -= S
 	else
@@ -144,7 +144,7 @@
 				if(S.buckled)
 					S.Feedstop(silent=1)
 				S.visible_message("[S] vanishes in a flash of light!")
-				S.loc = X
+				S.forceMove(X)
 				X.stored_slimes += S
 	else
 		to_chat(owner, "<span class='notice'>Target is not near a camera. Cannot proceed.</span>")

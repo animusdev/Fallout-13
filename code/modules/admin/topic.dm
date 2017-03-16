@@ -1301,7 +1301,7 @@
 		if(alert(usr, "Send [key_name(M)] to Prison?", "Message", "Yes", "No") != "Yes")
 			return
 
-		M.loc = pick(prisonwarp)
+		M.forceMove(pick(prisonwarp))
 		to_chat(M, "<span class='adminnotice'>You have been sent to Prison!</span>")
 
 		log_admin("[key_name(usr)] has sent [key_name(M)] to Prison!")
@@ -1349,14 +1349,14 @@
 		for(var/obj/item/I in M)
 			M.unEquip(I)
 			if(I)
-				I.loc = M.loc
+				I.forceMove(M.loc)
 				I.layer = initial(I.layer)
 				I.plane = initial(I.plane)
 				I.dropped(M)
 
 		M.Paralyse(5)
 		sleep(5)
-		M.loc = pick(tdome1)
+		M.forceMove(pick(tdome1))
 		spawn(50)
 			to_chat(M, "<span class='adminnotice'>You have been sent to the Thunderdome.</span>")
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Team 1)")
@@ -1380,14 +1380,14 @@
 		for(var/obj/item/I in M)
 			M.unEquip(I)
 			if(I)
-				I.loc = M.loc
+				I.forceMove(M.loc)
 				I.layer = initial(I.layer)
 				I.plane = initial(I.plane)
 				I.dropped(M)
 
 		M.Paralyse(5)
 		sleep(5)
-		M.loc = pick(tdome2)
+		M.forceMove(pick(tdome2))
 		spawn(50)
 			to_chat(M, "<span class='adminnotice'>You have been sent to the Thunderdome.</span>")
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Team 2)")
@@ -1410,7 +1410,7 @@
 
 		M.Paralyse(5)
 		sleep(5)
-		M.loc = pick(tdomeadmin)
+		M.forceMove(pick(tdomeadmin))
 		spawn(50)
 			to_chat(M, "<span class='adminnotice'>You have been sent to the Thunderdome.</span>")
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Admin.)")
@@ -1434,7 +1434,7 @@
 		for(var/obj/item/I in M)
 			M.unEquip(I)
 			if(I)
-				I.loc = M.loc
+				I.forceMove(M.loc)
 				I.layer = initial(I.layer)
 				I.plane = initial(I.plane)
 				I.dropped(M)
@@ -1445,7 +1445,7 @@
 			observer.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(observer), slot_shoes)
 		M.Paralyse(5)
 		sleep(5)
-		M.loc = pick(tdomeobserve)
+		M.forceMove(pick(tdomeobserve))
 		spawn(50)
 			to_chat(M, "<span class='adminnotice'>You have been sent to the Thunderdome.</span>")
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Observer.)")

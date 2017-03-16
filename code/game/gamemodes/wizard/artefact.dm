@@ -479,7 +479,7 @@ var/global/list/multiverse = list()
 	if(!link)
 		if(I.loc == user && istype(I) && I.w_class <= WEIGHT_CLASS_SMALL)
 			user.drop_item()
-			I.loc = src
+			I.forceMove(src)
 			link = I
 			to_chat(user, "You attach [I] to the doll.")
 			update_targets()

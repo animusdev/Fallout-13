@@ -252,7 +252,7 @@ Pipelines + Other Objects -> Pipe network
 				var/list/pipenetdiff = returnPipenets() ^ target_move.returnPipenets()
 				if(pipenetdiff.len)
 					user.update_pipe_vision(target_move)
-				user.loc = target_move
+				user.forceMove(target_move)
 				user.client.eye = target_move  //Byond only updates the eye every tick, This smooths out the movement
 				if(world.time - user.last_played_vent > VENT_SOUND_DELAY)
 					user.last_played_vent = world.time

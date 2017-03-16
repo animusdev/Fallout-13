@@ -411,10 +411,10 @@ var/list/TYPES_SHORTCUTS = list(
 			if(worn)
 				if(istype(worn,/obj/item/device/pda))
 					worn:id = id
-					id.loc = worn
+					id.forceMove(worn)
 				else if(istype(worn,/obj/item/weapon/storage/wallet))
 					worn:front_id = id
-					id.loc = worn
+					id.forceMove(worn)
 					worn.update_icon()
 			else
 				H.equip_to_slot(id,slot_wear_id)
@@ -644,7 +644,7 @@ var/list/TYPES_SHORTCUTS = list(
 				Plasma.air_contents.gases["plasma"][MOLES] = 70
 				Rad.drainratio = 0
 				Rad.loaded_tank = Plasma
-				Plasma.loc = Rad
+				Plasma.forceMove(Rad)
 
 			if(!Rad.active)
 				Rad.toggle_power()

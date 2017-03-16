@@ -16,7 +16,7 @@
 		return 0
 
 	user.drop_item()
-	tool.loc = target
+	tool.forceMove(target)
 
 	var/datum/action/item_action/hands_free/activate_pill/P = new
 	P.button.name = "Activate [tool.name]"

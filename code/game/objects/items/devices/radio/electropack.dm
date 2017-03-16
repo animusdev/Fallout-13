@@ -47,12 +47,12 @@
 		if(!user.unEquip(W))
 			to_chat(user, "<span class='warning'>[W] is stuck to your hand, you cannot attach it to [src]!</span>")
 			return
-		W.loc = A
+		W.forceMove(A)
 		W.master = A
 		A.part1 = W
 
 		user.unEquip(src)
-		loc = A
+		forceMove(A)
 		master = A
 		A.part2 = src
 

@@ -103,7 +103,7 @@
 			phase_underlay = null
 		if(camera)
 			camera.remove_target_ui()
-			camera.loc = user
+			camera.forceMove(user)
 		teleport_now.UpdateButtonIcon()
 
 /obj/item/clothing/suit/space/chronos/proc/chronowalk(atom/location)
@@ -284,21 +284,21 @@
 	if(holder)
 		if(user == holder)
 			if(loc == user)
-				loc = get_turf(user)
+				forceMove(get_turf(user))
 			if(user.client && user.client.eye != src)
-				src.loc = get_turf(user)
+				src.forceMove(get_turf(user))
 				user.reset_perspective(src)
 				user.set_machine(src)
 			var/atom/step = get_step(src, direction)
 			if(step)
 				if((step.x <= TRANSITIONEDGE) || (step.x >= (world.maxx - TRANSITIONEDGE - 1)) || (step.y <= TRANSITIONEDGE) || (step.y >= (world.maxy - TRANSITIONEDGE - 1)))
 					if(!src.Move(step))
-						src.loc = step
+						src.forceMove(step)
 				else
-					src.loc = step
+					src.forceMove(step)
 				if((x == holder.x) && (y == holder.y) && (z == holder.z))
 					remove_target_ui()
-					loc = user
+					forceMove(user)
 				else if(!target_ui)
 					create_target_ui()
 				phase_time = world.time + phase_time_length

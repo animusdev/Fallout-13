@@ -243,7 +243,7 @@
 			for(var/i in debris)
 				var/obj/item/I = i
 
-				I.loc = T
+				I.forceMove(T)
 				transfer_fingerprints_to(I)
 	qdel(src)
 	update_nearby_icons()

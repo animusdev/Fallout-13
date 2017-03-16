@@ -155,7 +155,7 @@
 		if(T.active_hotspot == src)
 			T.active_hotspot = null
 	DestroyTurf()
-	loc = null
+	forceMove(null)
 	..()
 	return QDEL_HINT_PUTINPOOL
 

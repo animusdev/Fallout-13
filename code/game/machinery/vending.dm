@@ -123,7 +123,7 @@
 
 /obj/machinery/vending/snack/Destroy()
 	for(var/obj/item/weapon/reagent_containers/food/snacks/S in contents)
-		S.loc = get_turf(src)
+		S.forceMove(get_turf(src))
 	qdel(wires)
 	wires = null
 	return ..()
@@ -229,7 +229,7 @@
 			if(!iscompartmentfull(user))
 				if(!user.drop_item())
 					return
-				W.loc = src
+				W.forceMove(src)
 				food_load(W)
 				to_chat(user, "<span class='notice'>You insert [W] into [src]'s chef compartment.</span>")
 		else
@@ -310,7 +310,7 @@
 	else if(istype(W, /obj/item/weapon/coin) && premium.len > 0)
 		if(!user.drop_item())
 			return
-		W.loc = src
+		W.forceMove(src)
 		coin = W
 		to_chat(user, "<span class='notice'>You insert [W] into [src].</span>")
 		return
@@ -441,7 +441,7 @@
 			to_chat(usr, "<span class='notice'>There is no coin in this machine.</span>")
 			return
 
-		coin.loc = loc
+		coin.forceMove(loc)
 		if(!usr.get_active_held_item())
 			usr.put_in_hands(coin)
 		to_chat(usr, "<span class='notice'>You remove [coin] from [src].</span>")
@@ -460,7 +460,7 @@
 		dish_quants[N] = max(dish_quants[N] - 1, 0)
 		for(var/obj/O in contents)
 			if(O.name == N)
-				O.loc = src.loc
+				O.forceMove(src.loc)
 				break
 		vend_ready = 1
 		updateUsrDialog()

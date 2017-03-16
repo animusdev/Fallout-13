@@ -23,7 +23,7 @@
 	if(!proximity) return
 	if(istype(O,/obj/structure/sink))
 		user.drop_item()
-		loc = get_turf(O)
+		forceMove(get_turf(O))
 		return Swell()
 	..()
 

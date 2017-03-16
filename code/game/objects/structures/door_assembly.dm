@@ -588,7 +588,7 @@
 			if(!user.drop_item())
 				return
 
-			W.loc = src
+			W.forceMove(src)
 			to_chat(user, "<span class='notice'>You install the airlock electronics.</span>")
 			src.state = 2
 			src.name = "near finished airlock assembly"
@@ -612,7 +612,7 @@
 			else
 				ae = electronics
 				electronics = null
-				ae.loc = src.loc
+				ae.forceMove(src.loc)
 	else if(istype(W, /obj/item/stack/sheet) && !mineral)
 		var/obj/item/stack/sheet/G = W
 		if(G)
@@ -680,7 +680,7 @@
 					door.req_access = src.electronics.accesses
 				if(created_name)
 					door.name = created_name
-				src.electronics.loc = door
+				src.electronics.forceMove(door)
 				qdel(src)
 	else
 		return ..()

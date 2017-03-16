@@ -53,7 +53,7 @@
 			if(!user.drop_item())
 				return
 
-			W.loc = src
+			W.forceMove(src)
 			charging = W
 			user.visible_message("[user] inserts a cell into the charger.", "<span class='notice'>You insert a cell into the charger.</span>")
 			chargelevel = -1

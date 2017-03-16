@@ -7,7 +7,7 @@
 
 /obj/effect/overlay/temp/point/New(atom/target, set_invis = 0)
 	..()
-	loc = get_turf(target)
+	forceMove(get_turf(target))
 	pixel_x = target.pixel_x
 	pixel_y = target.pixel_y
 	invisibility = set_invis

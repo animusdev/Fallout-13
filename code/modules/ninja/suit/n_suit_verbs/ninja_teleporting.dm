@@ -36,7 +36,7 @@ Contents:
 			PoolOrNew(/obj/effect/overlay/temp/dir_setting/ninja/phase/out, list(get_turf(H), H.dir))
 
 			handle_teleport_grab(destination, H)
-			H.loc = destination
+			H.forceMove(destination)
 
 			spark_system.start()
 			playsound(H.loc, 'sound/effects/phasein.ogg', 25, 1)

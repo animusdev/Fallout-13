@@ -472,7 +472,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 	if(istype(O, /obj/item/weapon/book))
 		if(!user.drop_item())
 			return
-		O.loc = src
+		O.forceMove(src)
 	else
 		return ..()
 
@@ -507,7 +507,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 		cache = null
 	if(href_list["eject"])
 		for(var/obj/item/weapon/book/B in contents)
-			B.loc = src.loc
+			B.forceMove(src.loc)
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
 	return
@@ -540,7 +540,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 		return
 	if(!user.drop_item())
 		return
-	P.loc = src
+	P.forceMove(src)
 	user.visible_message("[user] loads some paper into [src].", "You load some paper into [src].")
 	audible_message("[src] begins to hum as it warms up its printing drums.")
 	busy = 1
@@ -555,4 +555,4 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 			B.icon_state = "book[rand(1,7)]"
 			qdel(P)
 		else
-			P.loc = loc
+			P.forceMove(loc)

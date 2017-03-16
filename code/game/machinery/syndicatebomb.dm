@@ -142,7 +142,7 @@
 		if(open_panel && wires.is_all_cut())
 			if(payload)
 				to_chat(user, "<span class='notice'>You carefully pry out [payload].</span>")
-				payload.loc = user.loc
+				payload.forceMove(user.loc)
 				payload = null
 			else
 				to_chat(user, "<span class='warning'>There isn't anything in here to remove!</span>")
@@ -156,7 +156,7 @@
 				return
 			payload = I
 			to_chat(user, "<span class='notice'>You place [payload] into [src].</span>")
-			payload.loc = src
+			payload.forceMove(src)
 		else
 			to_chat(user, "<span class='warning'>[payload] is already loaded into [src]! You'll have to remove it first.</span>")
 	else if(istype(I, /obj/item/weapon/weldingtool))
@@ -454,7 +454,7 @@
 	if(istype(I, /obj/item/weapon/crowbar) && beakers.len > 0)
 		playsound(loc, I.usesound, 50, 1)
 		for (var/obj/item/B in beakers)
-			B.loc = get_turf(src)
+			B.forceMove(get_turf(src))
 			beakers -= B
 		return
 	else if(istype(I, /obj/item/weapon/reagent_containers/glass/beaker) || istype(I, /obj/item/weapon/reagent_containers/glass/bottle))
@@ -463,7 +463,7 @@
 				return
 			beakers += I
 			to_chat(user, "<span class='notice'>You load [src] with [I].</span>")
-			I.loc = src
+			I.forceMove(src)
 		else
 			to_chat(user, "<span class='warning'>The [I] wont fit! The [src] can only hold up to [max_beakers] containers.</span>")
 			return
@@ -486,9 +486,9 @@
 			for(var/obj/item/slime_extract/S in LG.beakers) // And slime cores.
 				if(beakers.len < max_beakers)
 					beakers += S
-					S.loc = src
+					S.forceMove(src)
 				else
-					S.loc = get_turf(src)
+					S.forceMove(get_turf(src))
 
 		if(istype(G, /obj/item/weapon/grenade/chem_grenade/cryo))
 			spread_range -= 1 // Reduced range, but increased density.
@@ -503,9 +503,9 @@
 		for(var/obj/item/weapon/reagent_containers/glass/B in G)
 			if(beakers.len < max_beakers)
 				beakers += B
-				B.loc = src
+				B.forceMove(src)
 			else
-				B.loc = get_turf(src)
+				B.forceMove(get_turf(src))
 
 		qdel(G)
 

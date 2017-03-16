@@ -35,7 +35,7 @@
 	target.stop_pulling()
 	if(target.has_buckled_mobs())
 		target.unbuckle_all_mobs(force=1)
-	target.loc = holder
+	target.forceMove(holder)
 	target.reset_perspective(holder)
 	target.notransform=0 //mob is safely inside holder now, no need for protection.
 	jaunt_steam(mobloc)
@@ -90,7 +90,7 @@
 	var/turf/newLoc = get_step(src,direction)
 	setDir(direction)
 	if(!(newLoc.flags & NOJAUNT))
-		loc = newLoc
+		forceMove(newLoc)
 	else
 		to_chat(user, "<span class='warning'>Some strange aura is blocking the way!</span>")
 	src.canmove = 0

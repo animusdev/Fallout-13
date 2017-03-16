@@ -196,7 +196,7 @@
 		if(!user.drop_item())
 			return
 		beaker = I
-		I.loc = src
+		I.forceMove(src)
 		user.visible_message("[user] places [I] in [src].", \
 							"<span class='notice'>You place [I] in [src].</span>")
 		return

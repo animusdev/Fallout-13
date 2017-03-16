@@ -64,7 +64,7 @@
 
 	if(!user.drop_item())
 		return
-	I.loc = src
+	I.forceMove(src)
 	to_chat(user, "<span class='notice'>You put [I] in [src].</span>")
 	update_icon()
 

@@ -162,7 +162,7 @@ list(name = "- Carbon Dioxide", desc = " This informational poster teaches the v
 				to_chat(user, "<span class='notice'>The wall is far too cluttered to place a poster!</span>")
 				return
 
-			resulting_poster.loc = W //Looks like it's uncluttered enough. Place the poster
+			resulting_poster.forceMove(W )//Looks like it's uncluttered enough. Place the poster
 			W.contents += resulting_poster
 
 			qdel(src)*/
@@ -234,7 +234,7 @@ list(name = "- Carbon Dioxide", desc = " This informational poster teaches the v
 		P = new /obj/item/weapon/poster/legit(src, serial_number)
 	P.resulting_poster = src
 	P.forceMove(location)
-	loc = P
+	forceMove(P)
 
 //seperated to reduce code duplication. Moved here for ease of reference and to unclutter r_wall/attackby()
 /turf/closed/wall/proc/place_poster(obj/item/weapon/poster/P, mob/user)
@@ -259,7 +259,7 @@ list(name = "- Carbon Dioxide", desc = " This informational poster teaches the v
 
 	var/temp_loc = get_turf(user)
 	flick("poster_being_set",D)
-	D.loc = src
+	D.forceMove(src)
 	D.official = P.official
 	qdel(P)	//delete it now to cut down on sanity checks afterwards. Agouri's code supports rerolling it anyway
 	playsound(D.loc, 'sound/items/poster_being_created.ogg', 100, 1)

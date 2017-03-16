@@ -92,13 +92,13 @@
 				if(istype(I))
 					if(!usr.drop_item())
 						return
-					I.loc = src
+					I.forceMove(src)
 					inserted_id = I
 				else to_chat(usr, "<span class='danger'>No valid ID.</span>")
 			else if(inserted_id)
 				switch(href_list["id"])
 					if("eject")
-						inserted_id.loc = get_turf(src)
+						inserted_id.forceMove(get_turf(src))
 						inserted_id.verb_pickup()
 						inserted_id = null
 					if("reset")

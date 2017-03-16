@@ -87,11 +87,11 @@
 /obj/machinery/chem_master/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_screwdriver(user, "mixer0_nopower", "mixer0", I))
 		if(beaker)
-			beaker.loc = src.loc
+			beaker.forceMove(src.loc)
 			beaker = null
 			reagents.clear_reagents()
 		if(bottle)
-			bottle.loc = src.loc
+			bottle.forceMove(src.loc)
 			bottle = null
 		return
 
@@ -115,7 +115,7 @@
 			return
 
 		beaker = I
-		beaker.loc = src
+		beaker.forceMove(src)
 		to_chat(user, "<span class='notice'>You add the beaker to the machine.</span>")
 		src.updateUsrDialog()
 		icon_state = "mixer1"
@@ -128,7 +128,7 @@
 			return
 
 		bottle = I
-		bottle.loc = src
+		bottle.forceMove(src)
 		to_chat(user, "<span class='notice'>You add the pill bottle into the dispenser slot.</span>")
 		src.updateUsrDialog()
 	else
@@ -180,7 +180,7 @@
 	switch(action)
 		if("eject")
 			if(beaker)
-				beaker.loc = src.loc
+				beaker.forceMove(src.loc)
 				beaker = null
 				reagents.clear_reagents()
 				icon_state = "mixer0"
@@ -188,7 +188,7 @@
 
 		if("ejectp")
 			if(bottle)
-				bottle.loc = src.loc
+				bottle.forceMove(src.loc)
 				bottle = null
 				. = TRUE
 

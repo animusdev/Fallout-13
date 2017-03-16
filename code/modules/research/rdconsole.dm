@@ -131,7 +131,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			return
 		if(!user.drop_item())
 			return
-		D.loc = src
+		D.forceMove(src)
 		to_chat(user, "<span class='notice'>You add the disk to the machine!</span>")
 	else if(!(linked_destroy && linked_destroy.busy) && !(linked_lathe && linked_lathe.busy) && !(linked_imprinter && linked_imprinter.busy))
 		. = ..()
@@ -206,7 +206,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 	else if(href_list["eject_tech"]) //Eject the technology disk.
 		if(t_disk)
-			t_disk.loc = src.loc
+			t_disk.forceMove(src.loc)
 			t_disk = null
 		screen = 1.0
 
@@ -247,7 +247,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 	else if(href_list["eject_design"]) //Eject the design disk.
 		if(d_disk)
-			d_disk.loc = src.loc
+			d_disk.forceMove(src.loc)
 			d_disk = null
 		screen = 1.0
 
@@ -451,7 +451,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 							new_item.investigate_log("built by [key]","singulo")
 						if(!istype(new_item, /obj/item/stack/sheet)) // To avoid materials dupe glitches
 							new_item.materials = efficient_mats.Copy()
-						new_item.loc = linked_lathe.loc
+						new_item.forceMove(linked_lathe.loc)
 						if(!already_logged)
 							feedback_add_details("item_printed","[new_item.type]|[amount]")
 							already_logged = 1
@@ -518,7 +518,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if(linked_imprinter)
 				if(g2g)
 					var/obj/item/new_item = new P(src)
-					new_item.loc = linked_imprinter.loc
+					new_item.forceMove(linked_imprinter.loc)
 					new_item.materials = efficient_mats.Copy()
 					feedback_add_details("circuit_printed","[new_item.type]")
 				screen = old_screen

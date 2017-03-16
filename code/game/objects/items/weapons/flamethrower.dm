@@ -74,13 +74,13 @@
 	if(istype(W, /obj/item/weapon/wrench) && !status)//Taking this apart
 		var/turf/T = get_turf(src)
 		if(weldtool)
-			weldtool.loc = T
+			weldtool.forceMove(T)
 			weldtool = null
 		if(igniter)
-			igniter.loc = T
+			igniter.forceMove(T)
 			igniter = null
 		if(ptank)
-			ptank.loc = T
+			ptank.forceMove(T)
 			ptank = null
 		new /obj/item/stack/rods(T)
 		qdel(src)
@@ -100,7 +100,7 @@
 			return
 		if(!user.unEquip(W))
 			return
-		I.loc = src
+		I.forceMove(src)
 		igniter = I
 		update_icon()
 		return
@@ -112,7 +112,7 @@
 		if(!user.unEquip(W))
 			return
 		ptank = W
-		W.loc = src
+		W.forceMove(src)
 		update_icon()
 		return
 

@@ -43,7 +43,7 @@
 		if (!src.diskette)
 			if(!user.drop_item())
 				return
-			I.loc = src
+			I.forceMove(src)
 			src.diskette = I
 			to_chat(user, "<span class='notice'>You insert [I].</span>")
 			src.updateUsrDialog()
@@ -453,7 +453,7 @@
 					diskette.fields = buffer_slot.Copy()
 		if("ejectdisk")
 			if(diskette)
-				diskette.loc = get_turf(src)
+				diskette.forceMove(get_turf(src))
 				diskette = null
 		if("setdelayed")
 			if(num)

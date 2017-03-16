@@ -77,7 +77,7 @@
 		if (!src.diskette)
 			if(!user.drop_item())
 				return
-			W.loc = src
+			W.forceMove(src)
 			src.diskette = W
 			to_chat(user, "<span class='notice'>You insert [W].</span>")
 			playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
@@ -312,7 +312,7 @@
 
 			if("eject")
 				if(src.diskette)
-					src.diskette.loc = src.loc
+					src.diskette.forceMove(src.loc)
 					src.diskette = null
 					playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 			if("save")

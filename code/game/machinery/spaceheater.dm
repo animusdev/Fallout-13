@@ -155,7 +155,7 @@
 					if(!user.drop_item())
 						return
 					cell = C
-					C.loc = src
+					C.forceMove(src)
 					C.add_fingerprint(usr)
 
 					user.visible_message("\The [user] inserts a power cell into \the [src].", "<span class='notice'>You insert the power cell into \the [src].</span>")
@@ -241,7 +241,7 @@
 					settableTemperatureMedian + settableTemperatureRange)
 		if("eject")
 			if(panel_open && cell)
-				cell.loc = get_turf(src)
+				cell.forceMove(get_turf(src))
 				cell = null
 				. = TRUE
 

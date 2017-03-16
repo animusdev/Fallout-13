@@ -138,7 +138,7 @@ var/global/posibrain_notif_cooldown = 0
 	picked_fluff_name = pick(fluff_names)
 	brainmob.name = "[picked_fluff_name]-[rand(100, 999)]"
 	brainmob.real_name = brainmob.name
-	brainmob.loc = src
+	brainmob.forceMove(src)
 	brainmob.container = src
 	if(autoping)
 		ping_ghosts("created", TRUE)

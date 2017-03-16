@@ -134,7 +134,7 @@
 		return
 	if(firer)
 		if(A == firer || (A == firer.loc && istype(A, /obj/mecha))) //cannot shoot yourself or your mech
-			loc = A.loc
+			forceMove(A.loc)
 			return 0
 
 	var/distance = get_dist(get_turf(A), starting) // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
@@ -151,7 +151,7 @@
 	prehit(A)
 	var/permutation = A.bullet_act(src, def_zone) // searches for return value, could be deleted after run so check A isn't null
 	if(permutation == -1 || forcedodge)// the bullet passes through a dense object!
-		loc = target_turf
+		forceMove(target_turf)
 		if(A)
 			permutated.Add(A)
 		return 0
@@ -258,7 +258,7 @@
 
 /obj/item/projectile/proc/preparePixelProjectile(atom/target, var/turf/targloc, mob/living/user, params, spread)
 	var/turf/curloc = get_turf(user)
-	src.loc = get_turf(user)
+	src.forceMove(get_turf(user))
 	src.starting = get_turf(user)
 	src.current = curloc
 	src.yo = targloc.y - curloc.y

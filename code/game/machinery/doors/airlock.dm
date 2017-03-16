@@ -1228,7 +1228,7 @@ var/list/airlock_overlays = list()
 		panel_open = 1
 		update_icon(AIRLOCK_OPENING)
 		visible_message("<span class='warning'>[src]'s panel is blown off in a spray of deadly shrapnel!</span>")
-		charge.loc = get_turf(src)
+		charge.forceMove(get_turf(src))
 		charge.ex_act(1)
 		detonated = 1
 		charge = null
@@ -1506,5 +1506,5 @@ var/list/airlock_overlays = list()
 			else
 				ae = electronics
 				electronics = null
-				ae.loc = src.loc
+				ae.forceMove(src.loc)
 	qdel(src)

@@ -67,7 +67,7 @@ var/list/total_extraction_beacons = list()
 			uses_left--
 			if(uses_left <= 0)
 				user.drop_item(src)
-				loc = A
+				forceMove(A)
 			var/image/balloon
 			var/image/balloon2
 			var/image/balloon3
@@ -80,7 +80,7 @@ var/list/total_extraction_beacons = list()
 				A.density = 0
 			var/obj/effect/extraction_holder/holder_obj = new(A.loc)
 			holder_obj.appearance = A.appearance
-			A.loc = holder_obj
+			A.forceMove(holder_obj)
 			balloon2 = image('icons/obj/fulton_balloon.dmi',"fulton_expand")
 			balloon2.pixel_y = 10
 			balloon2.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
@@ -113,7 +113,7 @@ var/list/total_extraction_beacons = list()
 			var/list/flooring_near_beacon = list()
 			for(var/turf/open/floor in orange(1, beacon))
 				flooring_near_beacon += floor
-			holder_obj.loc = pick(flooring_near_beacon)
+			holder_obj.forceMove(pick(flooring_near_beacon))
 			animate(holder_obj, pixel_z = 10, time = 50)
 			sleep(50)
 			animate(holder_obj, pixel_z = 15, time = 10)
@@ -131,7 +131,7 @@ var/list/total_extraction_beacons = list()
 			A.density = initial(A.density)
 			animate(holder_obj, pixel_z = 0, time = 5)
 			sleep(5)
-			A.loc = holder_obj.loc
+			A.forceMove(holder_obj.loc)
 			qdel(holder_obj)
 			if(uses_left <= 0)
 				qdel(src)

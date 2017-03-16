@@ -407,7 +407,7 @@ var/datum/subsystem/job/SSjob
 						S = T
 						continue
 		if(istype(S, /obj/effect/landmark) && isturf(S.loc))
-			H.loc = S.loc
+			H.forceMove(S.loc)
 
 	if(H.mind)
 		H.mind.assigned_role = rank

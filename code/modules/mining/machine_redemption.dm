@@ -61,7 +61,7 @@
 			stack_list[processed_sheet] = s
 		var/obj/item/stack/sheet/storage = stack_list[processed_sheet]
 		storage.amount += sheet_per_ore //Stack the sheets
-		O.loc = null //Let the old sheet...
+		O.forceMove(null )//Let the old sheet...
 		qdel(O) //... garbage collect
 
 /obj/machinery/mineral/ore_redemption/process()
@@ -199,7 +199,7 @@
 	if(href_list["choice"])
 		if(istype(inserted_id))
 			if(href_list["choice"] == "eject")
-				inserted_id.loc = loc
+				inserted_id.forceMove(loc)
 				inserted_id.verb_pickup()
 				inserted_id = null
 			if(href_list["choice"] == "claim")
@@ -213,7 +213,7 @@
 			if(istype(I))
 				if(!usr.drop_item())
 					return
-				I.loc = src
+				I.forceMove(src)
 				inserted_id = I
 			else to_chat(usr, "<span class='warning'>No valid ID.</span>")
 	if(href_list["release"])
@@ -266,7 +266,7 @@
 		while(s.amount > s.max_amount)
 			new s.type(loc,s.max_amount)
 			s.use(s.max_amount)
-		s.loc = loc
+		s.forceMove(loc)
 		s.layer = initial(s.layer)
 		s.plane = initial(s.plane)
 

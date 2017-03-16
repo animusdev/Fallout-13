@@ -130,13 +130,13 @@ var/const/SAFETY_COOLDOWN = 100
 			items_recycled++
 		else
 			playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
-			AM.loc = src.loc
+			AM.forceMove(src.loc)
 
 	if(items_recycled && sound)
 		playsound(src.loc, item_recycle_sound, 50, 1)
 
 /obj/machinery/recycler/proc/recycle_item(obj/item/I)
-	I.loc = src.loc
+	I.forceMove(src.loc)
 
 	var/material_amount = materials.get_item_material_amount(I)
 	if(!material_amount)
@@ -151,7 +151,7 @@ var/const/SAFETY_COOLDOWN = 100
 	playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
 	safety_mode = TRUE
 	update_icon()
-	L.loc = src.loc
+	L.forceMove(src.loc)
 	addtimer(CALLBACK(src, .proc/reboot), SAFETY_COOLDOWN)
 
 /obj/machinery/recycler/proc/reboot()
@@ -161,7 +161,7 @@ var/const/SAFETY_COOLDOWN = 100
 
 /obj/machinery/recycler/proc/crush_living(mob/living/L)
 
-	L.loc = src.loc
+	L.forceMove(src.loc)
 
 	if(issilicon(L))
 		playsound(src.loc, 'sound/items/Welder.ogg', 50, 1)

@@ -237,7 +237,7 @@
 		STOP_PROCESSING(SSobj, src)
 		for(var/mob/M in contents)
 			src.visible_message("<span class='warning'>[src] hatches!</span>")
-			M.loc = src.loc
+			M.forceMove(src.loc)
 		qdel(src)
 
 /obj/item/organ/gland/plasma

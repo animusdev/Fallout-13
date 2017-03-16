@@ -119,7 +119,7 @@
 		switch(remove_from)
 			if("head")
 				if(inventory_head)
-					inventory_head.loc = src.loc
+					inventory_head.forceMove(src.loc)
 					inventory_head = null
 					update_corgi_fluff()
 					regenerate_icons()
@@ -128,7 +128,7 @@
 					return
 			if("back")
 				if(inventory_back)
-					inventory_back.loc = src.loc
+					inventory_back.forceMove(src.loc)
 					inventory_back = null
 					update_corgi_fluff()
 					regenerate_icons()
@@ -175,7 +175,7 @@
 
 					if(!allowed)
 						to_chat(usr, "<span class='warning'>You set [item_to_add] on [src]'s back, but it falls off!</span>")
-						item_to_add.loc = loc
+						item_to_add.forceMove(loc)
 						if(prob(25))
 							step_rand(item_to_add)
 						for(var/i in list(1,2,4,8,4,8,4,dir))
@@ -184,7 +184,7 @@
 						return
 
 					usr.drop_item()
-					item_to_add.loc = src
+					item_to_add.forceMove(src)
 					src.inventory_back = item_to_add
 					update_corgi_fluff()
 					regenerate_icons()
@@ -229,13 +229,13 @@
 			user.visible_message("[user] puts [item_to_add] on [real_name]'s head.  [src] looks at [user] and barks once.",
 				"<span class='notice'>You put [item_to_add] on [real_name]'s head.  [src] gives you a peculiar look, then wags [p_their()] tail once and barks.</span>",
 				"<span class='italics'>You hear a friendly-sounding bark.</span>")
-		item_to_add.loc = src
+		item_to_add.forceMove(src)
 		src.inventory_head = item_to_add
 		update_corgi_fluff()
 		regenerate_icons()
 	else
 		to_chat(user, "<span class='warning'>You set [item_to_add] on [src]'s head, but it falls off!</span>")
-		item_to_add.loc = loc
+		item_to_add.forceMove(loc)
 		if(prob(25))
 			step_rand(item_to_add)
 		for(var/i in list(1,2,4,8,4,8,4,dir))

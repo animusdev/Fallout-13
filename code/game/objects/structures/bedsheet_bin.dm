@@ -242,7 +242,7 @@ LINEN BINS
 	if(istype(I, /obj/item/weapon/bedsheet))
 		if(!user.drop_item())
 			return
-		I.loc = src
+		I.forceMove(src)
 		sheets.Add(I)
 		amount++
 		to_chat(user, "<span class='notice'>You put [I] in [src].</span>")
@@ -251,7 +251,7 @@ LINEN BINS
 		if(!user.drop_item())
 			to_chat(user, "<span class='warning'>\The [I] is stuck to your hand, you cannot hide it among the sheets!</span>")
 			return
-		I.loc = src
+		I.forceMove(src)
 		hidden = I
 		to_chat(user, "<span class='notice'>You hide [I] among the sheets.</span>")
 
@@ -275,13 +275,13 @@ LINEN BINS
 		else
 			B = new /obj/item/weapon/bedsheet(loc)
 
-		B.loc = user.loc
+		B.forceMove(user.loc)
 		user.put_in_hands(B)
 		to_chat(user, "<span class='notice'>You take [B] out of [src].</span>")
 		update_icon()
 
 		if(hidden)
-			hidden.loc = user.loc
+			hidden.forceMove(user.loc)
 			to_chat(user, "<span class='notice'>[hidden] falls out of [B]!</span>")
 			hidden = null
 
@@ -299,12 +299,12 @@ LINEN BINS
 		else
 			B = new /obj/item/weapon/bedsheet(loc)
 
-		B.loc = loc
+		B.forceMove(loc)
 		to_chat(user, "<span class='notice'>You telekinetically remove [B] from [src].</span>")
 		update_icon()
 
 		if(hidden)
-			hidden.loc = loc
+			hidden.forceMove(loc)
 			hidden = null
 
 

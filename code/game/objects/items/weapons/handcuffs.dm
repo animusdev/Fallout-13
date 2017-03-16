@@ -69,7 +69,7 @@
 	else if(dispense)
 		cuffs = new type()
 
-	cuffs.loc = target
+	cuffs.forceMove(target)
 	target.handcuffed = cuffs
 
 	target.update_handcuffed()
@@ -278,7 +278,7 @@
 					def_zone = pick("l_leg", "r_leg")
 					if(!C.legcuffed && C.get_num_legs() >= 2) //beartrap can't cuff your leg if there's already a beartrap or legcuffs, or you don't have two legs.
 						C.legcuffed = src
-						src.loc = C
+						src.forceMove(C)
 						C.update_inv_legcuffed()
 						feedback_add_details("handcuffs","B") //Yes, I know they're legcuffs. Don't change this, no need for an extra variable. The "B" is used to tell them apart.
 			else if(isanimal(L))
@@ -341,7 +341,7 @@
 	if(!C.legcuffed && C.get_num_legs() >= 2)
 		visible_message("<span class='danger'>\The [src] ensnares [C]!</span>")
 		C.legcuffed = src
-		src.loc = C
+		src.forceMove(C)
 		C.update_inv_legcuffed()
 		feedback_add_details("handcuffs","B")
 		to_chat(C, "<span class='userdanger'>\The [src] ensnares you!</span>")

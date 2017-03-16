@@ -56,7 +56,7 @@
 		var/move_dir = get_dir(loc, AM.loc)
 		var/mob/living/carbon/human/H = AM
 		if((transform_standing || H.lying) && move_dir == EAST)// || move_dir == WEST)
-			AM.loc = src.loc
+			AM.forceMove(src.loc)
 			do_transform(AM)
 
 /obj/machinery/transformer/CanPass(atom/movable/mover, turf/target, height=0)

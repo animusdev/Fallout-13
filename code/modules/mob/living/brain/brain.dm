@@ -16,7 +16,7 @@
 	stored_dna.initialize_dna(random_blood_type())
 	if(isturf(loc)) //not spawned in an MMI or brain organ (most likely adminspawned)
 		var/obj/item/organ/brain/OB = new(loc) //we create a new brain organ for it.
-		src.loc = OB
+		src.forceMove(OB)
 		OB.brainmob = src
 
 
