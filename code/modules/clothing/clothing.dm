@@ -11,6 +11,7 @@
 	var/visor_flags = 0			//flags that are added/removed when an item is adjusted up/down
 	var/visor_flags_inv = 0		//same as visor_flags, but for flags_inv
 	var/visor_flags_cover = 0	//same as above, but for flags_cover
+	var/glass_colour_type = null //colors your vision when worn
 //what to toggle when toggled with weldingvisortoggle()
 	var/visor_vars_to_toggle = VISOR_FLASHPROTECT | VISOR_TINT | VISOR_VISIONFLAGS | VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
@@ -25,6 +26,11 @@
 	var/can_flashlight = 0
 	var/gang //Is this a gang outfit?
 	var/scan_reagents = 0 //Can the wearer see reagents while it's equipped?
+	var/vision_flags = 0
+	var/darkness_view = 2//Base human is 2
+	var/invis_view = SEE_INVISIBLE_LIVING
+	var/invis_override = 0
+
 
 	//Var modification - PLEASE be careful with this I know who you are and where you live
 	var/list/user_vars_to_edit = list() //VARNAME = VARVALUE eg: "name" = "butts"
@@ -186,10 +192,6 @@ var/list/damaged_clothes_icons = list()
 	w_class = WEIGHT_CLASS_SMALL
 	flags_cover = GLASSESCOVERSEYES
 	slot_flags = SLOT_EYES
-	var/vision_flags = 0
-	var/darkness_view = 2//Base human is 2
-	var/invis_view = SEE_INVISIBLE_LIVING
-	var/invis_override = 0 //Override to allow glasses to set higher than normal see_invis
 	var/emagged = 0
 	var/list/icon/current = list() //the current hud icons
 	var/vision_correction = 0 //does wearing these glasses correct some of our vision defects?
@@ -249,6 +251,14 @@ BLIND     // can't see anything
 	var/blockTracking = 0 //For AI tracking
 	var/can_toggle = null
 
+/obj/item/clothing/head/visor_toggling()
+	..()
+	if(visor_vars_to_toggle & VISOR_VISIONFLAGS)
+		vision_flags ^= initial(vision_flags)
+	if(visor_vars_to_toggle & VISOR_DARKNESSVIEW)
+		darkness_view ^= initial(darkness_view)
+	if(visor_vars_to_toggle & VISOR_INVISVIEW)
+		invis_view ^= initial(invis_view)
 
 /obj/item/clothing/head/worn_overlays(isinhands = FALSE)
 	. = list()
@@ -264,6 +274,23 @@ BLIND     // can't see anything
 		var/mob/M = loc
 		M.update_inv_head()
 
+
+/obj/item/clothing/head/proc/change_helm_color(mob/living/carbon/human/H, datum/client_colour/glass_colour/new_color_type)
+	var/old_colour_type = glass_colour_type
+	if(!new_color_type || ispath(new_color_type)) //the new glass colour type must be null or a path.
+		glass_colour_type = new_color_type
+		if(H && H.head == src)
+			if(old_colour_type)
+				H.remove_client_colour(old_colour_type)
+			if(glass_colour_type)
+				H.update_helm_color(src, 1)
+
+
+/mob/living/carbon/proc/update_helm_color(obj/item/clothing/head/G, head_equipped)
+	if(client && head_equipped)
+		add_client_colour(G.glass_colour_type)
+	else
+		remove_client_colour(G.glass_colour_type)
 
 //Neck
 /obj/item/clothing/neck

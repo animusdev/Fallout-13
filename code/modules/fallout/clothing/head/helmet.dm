@@ -82,8 +82,27 @@
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
 	self_weight = 0.45
-	//darkness_view = 8
-	//invis_view = SEE_INVISIBLE_MINIMUM
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = null
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW
+	can_toggle = 1
+	var/enabled = 1
+
+/obj/item/clothing/head/helmet/f13/ranger/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	if(up)
+		glass_colour_type = /datum/client_colour/glass_colour/red
+	else
+		glass_colour_type = null
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
 
 /obj/item/clothing/head/helmet/f13/ranger/old
 	name = "old ranger helmet"

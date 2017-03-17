@@ -129,6 +129,8 @@
 		var/obj/item/clothing/C = I
 		if(C.tint || initial(C.tint))
 			update_tint()
+		if(C.glass_colour_type)
+			update_helm_color(C, ((head == C && C.up) ? 1:0))
 		update_sight()
 	if(I.flags_inv & HIDEMASK || forced)
 		update_inv_wear_mask()
