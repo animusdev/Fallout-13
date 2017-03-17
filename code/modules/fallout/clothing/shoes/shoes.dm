@@ -2,6 +2,7 @@
 
 /obj/item/clothing/shoes/f13
 	icon = 'icons/fallout/clothing/shoes.dmi'
+	self_weight = 0.1
 
 /obj/item/clothing/shoes/f13/rag
 	name = "footcloths"
@@ -34,6 +35,7 @@
 	item_state = "diesel"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
+	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/f13/legionleather
@@ -50,6 +52,7 @@
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
 	item_color = "cult"
+	self_weight = 1
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
 /obj/item/clothing/shoes/f13/legionlegate
@@ -58,6 +61,7 @@
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
 	item_color = "cult"
+	self_weight = 0.8
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 
 //Fluff
@@ -80,6 +84,7 @@
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
 	flags = NOSLIP
+	self_weight = 2
 
 /obj/item/clothing/shoes/f13/doom
 	name = "mars boots"
@@ -92,6 +97,7 @@
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
 	flags = NOSLIP
+	self_weight = 2
 
 /obj/item/clothing/shoes/f13/miner
 	name = "mining boots"
@@ -101,3 +107,4 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	self_weight = 1

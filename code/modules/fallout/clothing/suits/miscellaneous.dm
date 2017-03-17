@@ -2,6 +2,7 @@
 
 /obj/item/clothing/suit/f13
 	icon = 'icons/fallout/clothing/suits.dmi'
+	self_weight = 3
 
 /obj/item/clothing/suit/f13/robe_liz
 	name = "tan robe"
@@ -37,6 +38,7 @@
 	icon_state = "battlecruiser"
 	item_state = "hostrench"
 	body_parts_covered = CHEST|ARMS
+	self_weight = 15
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
@@ -60,6 +62,7 @@
 	icon_state = "mfp"
 	item_state = "hostrench"
 	body_parts_covered = CHEST|ARMS
+	self_weight = 2
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 20, acid = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
@@ -74,6 +77,7 @@
 	icon_state = "veteran"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|GROIN
+	self_weight = 7
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
@@ -90,6 +94,7 @@
 	desc = "A long brown leather overcoat.<br>Powerful accessory of a respectful sherif, bringer of justice."
 	icon_state = "sheriff"
 	item_state = "det_suit"
+	self_weight = 8
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
 	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 0)
 
@@ -98,6 +103,7 @@
 	desc = "A resistant, tan trenchcoat, typically worn by pre-War generals."
 	icon_state = "autumn"
 	item_state = "autumn"
+	self_weight = 10
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 999, fire = 0, acid = 0) //Reference to colonel not dying from radiation where anyone else dies.
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor)
@@ -123,6 +129,7 @@
 	icon_state = "elder"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|ARMS
+	self_weight = 5
 	armor = list(melee = 20, bullet = 10, laser = 10,energy = 10, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
@@ -134,6 +141,7 @@
 	icon = 'icons/fallout/clothing/suits.dmi'
 	icon_state = "hazmat"
 	item_state = "hazmat_suit"
+	self_weight = 15
 
 /obj/item/clothing/head/bio_hood/f13/hazmat
 	name = "hazmat hood"
@@ -141,3 +149,4 @@
 	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "hazmat"
 	item_state = "hazmat_helmet"
+	self_weight = 15

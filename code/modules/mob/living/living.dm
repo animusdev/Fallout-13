@@ -730,6 +730,7 @@
 				var/datum/game_mode/blob/B = ticker.mode
 				if(B.message_sent)
 					stat(null, "Blobs to Blob Win: [blobs_legit.len]/[B.blobwincount]")
+		stat(null, "Weight: [weight2feeling(contents_weight)]")
 
 /mob/living/cancel_camera()
 	..()

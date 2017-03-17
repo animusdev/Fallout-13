@@ -20,6 +20,7 @@
 	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0, fire = 70, acid = 50)
 	strip_delay = 70
 	resistance_flags = 0
+	self_weight = 0.2
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
@@ -27,12 +28,14 @@
 	desc = "High speed, no drag combat boots."
 	permeability_coefficient = 0.01
 	flags = NOSLIP
+	self_weight = 0.8
 	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30, fire = 90, acid = 50)
 
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."
 	name = "sandals"
 	icon_state = "wizard"
+	self_weight = 0.1
 	strip_delay = 50
 	put_on_delay = 50
 
@@ -57,6 +60,7 @@
 	strip_delay = 50
 	put_on_delay = 50
 	resistance_flags = 0
+	self_weight = 0.3
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 40, acid = 75)
 
 /obj/item/clothing/shoes/galoshes/dry
@@ -96,6 +100,7 @@
 	strip_delay = 50
 	put_on_delay = 50
 	resistance_flags = 0
+	self_weight = 0.4
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/jackboots/fast
@@ -119,6 +124,7 @@
 	item_state = "jackboots"
 	strip_delay = 40
 	put_on_delay = 40
+	self_weight = 0.4
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/workboots/mining

@@ -12,6 +12,7 @@
 	move_to_delay = 2
 
 	density = 1
+	self_weight = 40
 
 	response_help  = "pets"
 	response_disarm = "bops"

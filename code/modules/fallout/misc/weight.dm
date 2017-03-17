@@ -34,3 +34,10 @@
 /atom/movable/Exited(atom/movable/A, atom/newloc)
 	. = ..()
 	update_weight( -(A.self_weight + A.contents_weight))
+
+/mob/living/carbon/Move(n, direct)
+	. = ..()
+	if(!.)
+		return .
+	if(contents_weight > 60 && prob(5))
+		Weaken(1)

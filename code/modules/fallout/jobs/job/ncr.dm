@@ -56,18 +56,14 @@
 	name = "NCR Ranger"
 	gloves = /obj/item/clothing/gloves/combat
 	uniform = /obj/item/clothing/under/f13/ncr
-	shoes = /obj/item/clothing/shoes/combat/swat
+	shoes = /obj/item/clothing/shoes/combat
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/ranger
 	belt = /obj/item/weapon/storage/belt/military/assault
 	suit_store = /obj/item/weapon/gun/ballistic/automatic/smg10mm
-	l_pocket = /obj/item/device/radio
-	r_pocket = /obj/item/clothing/glasses/night
 	belt_contents = list(/obj/item/ammo_box/magazine/m10mm_auto = 2, \
 		/obj/item/weapon/restraints/handcuffs=2, \
-		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 3, \
-		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
-	mask = /obj/item/clothing/mask/gas/sechailer
+		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 3)
 
 /datum/job/elite_trooper
 	title = "NCR Elite Trooper"

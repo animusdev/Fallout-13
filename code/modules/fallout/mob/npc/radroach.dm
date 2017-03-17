@@ -17,6 +17,7 @@
 	health = 15
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
+	self_weight = 15
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/roach_charge1.ogg','sound/f13npc/roach_charge2.ogg','sound/f13npc/roach_charge3.ogg')

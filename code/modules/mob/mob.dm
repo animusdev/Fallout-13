@@ -358,24 +358,7 @@ var/next_mob_id = 0
 /mob/proc/get_pulling_delay()
 	if(!pulling)
 		return 0
-	. = 0
-	if(isitem(pulling))
-		var/obj/item/I = pulling
-		switch(I.w_class)
-			if(1)
-				. += 0.1
-			if(2)
-				. += 0.3
-			if(3)
-				. += 0.7
-			if(4)
-				. += 1.2
-			if(5)
-				. += 1.6
-			if(6)
-				. += 2.5
-	if(!.)
-		. += 1
+	. = (pulling.self_weight + pulling.contents_weight)/10
 
 /mob/proc/update_pull_hud_icon()
 	if(hud_used)

@@ -25,6 +25,7 @@
 	var/subspace_transmission = 0
 	var/syndie = 0//Holder to see if it's a syndicate encrpyed radio
 	var/centcom = 0//Bleh, more dirty booleans
+	self_weight = 0.3
 	var/freqlock = 0 //Frequency lock to stop the user from untuning specialist radios.
 	var/emped = 0	//Highjacked to track the number of consecutive EMPs on the radio, allowing consecutive EMP's to stack properly.
 //			"Example" = FREQ_LISTENING|FREQ_BROADCASTING

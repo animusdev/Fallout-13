@@ -8,6 +8,8 @@
 	. += speed
 	. += config.robot_delay
 	. += get_pulling_delay()
+	if(contents_weight)
+		. += contents_weight/25
 
 /mob/living/silicon/robot/mob_negates_gravity()
 	return magpulse

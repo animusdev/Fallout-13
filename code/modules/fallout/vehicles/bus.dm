@@ -16,36 +16,31 @@
 
 /obj/structure/closet/bus/New()
 	..()
-	var/obj/structure/S = new (locate(x-3,y,z))
+	var/atom/movable/S = new (locate(x-3,y,z))
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
-	S.resistance_flags |= INDESTRUCTIBLE
 	S = new (locate(x-2,y,z))
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
-	S.resistance_flags |= INDESTRUCTIBLE
 	S = new (locate(x-1,y,z))
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
-	S.resistance_flags |= INDESTRUCTIBLE
 	S = new (locate(x+1,y,z))
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
-	S.resistance_flags |= INDESTRUCTIBLE
 	S = new (locate(x+2,y,z))
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
-	S.resistance_flags |= INDESTRUCTIBLE
 
 /obj/structure/closet/bus/can_close(mob/living/user)
 	if(broken)

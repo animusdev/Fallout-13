@@ -286,6 +286,9 @@
 
 	. += get_pulling_delay()
 
+	if(contents_weight)
+		. += contents_weight/25
+
 	. += config.animal_delay
 
 /mob/living/simple_animal/Stat()

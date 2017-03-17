@@ -30,6 +30,7 @@
 	origin_tech = "combat=4;magnets=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma)
 	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
 	fire_sound = 'sound/f13weapons/plasmarifle.ogg'
 	burst_size = 2
 	shaded_charge = 1
@@ -42,6 +43,7 @@
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
 	origin_tech = "combat=2;magnets=3"
 	weapon_weight = WEAPON_LIGHT
+	w_class = WEIGHT_CLASS_NORMAL
 	burst_size = 1
 	zoomable = TRUE
 	zoom_amt = 3
@@ -53,6 +55,7 @@
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
 	origin_tech = "combat=2;magnets=3"
 	weapon_weight = WEAPON_LIGHT
+	w_class = WEIGHT_CLASS_NORMAL
 	burst_size = 1
 
 /obj/item/weapon/gun/energy/plasma/tri
@@ -60,6 +63,7 @@
 	icon_state = "multiplas"
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/tri)
+	w_class = WEIGHT_CLASS_BULKY
 	burst_size = 1
 	w_class = 3
 
@@ -71,6 +75,7 @@
 	origin_tech = "combat=6;magnets=6"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/turbo)
 	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_HUGE
 	burst_size = 1
 	fire_delay = 10
 	w_class = 4
@@ -87,6 +92,7 @@
 	burst_size = 5 //Fuck yeah
 	w_class = 3
 	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/energy/laser/pistol
 	name ="Laser Pistol"
@@ -99,6 +105,7 @@
 	fire_delay = 2
 	w_class = 2
 	weapon_weight = WEAPON_LIGHT
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/energy/laser/rifle
 	name ="Laser Rifle AER9"
@@ -110,6 +117,7 @@
 	burst_size = 2
 	w_class = 3
 	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/energy/laser/rifle/aer13
 	name ="Laser Rifle AER13"

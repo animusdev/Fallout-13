@@ -257,6 +257,7 @@
 	icon_state = "militarybelt"
 	item_state = "military"
 	max_w_class = WEIGHT_CLASS_SMALL
+	self_weight = 0.6
 
 /obj/item/weapon/storage/belt/military/abductor
 	name = "agent belt"
@@ -288,6 +289,7 @@
 	icon_state = "assaultbelt"
 	item_state = "security"
 	storage_slots = 6
+	self_weight = 0.3
 
 /obj/item/weapon/storage/belt/grenade
 	name = "grenadier belt"

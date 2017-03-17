@@ -2,6 +2,7 @@
 
 /obj/item/clothing/head/soft/f13
 	icon = 'icons/fallout/clothing/hats.dmi'
+	self_weight = 0.2
 
 /obj/item/clothing/head/soft/f13/enclave
 	name = "Enclave officer hat"

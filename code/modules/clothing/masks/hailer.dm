@@ -13,6 +13,7 @@
 	visor_flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
 	visor_flags_cover = MASKCOVERSMOUTH
+	self_weight = 0.3
 	var/aggressiveness = 2
 	var/cooldown_special
 	var/recent_uses = 0

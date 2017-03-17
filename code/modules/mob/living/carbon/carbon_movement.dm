@@ -12,6 +12,8 @@
 		. += grab_state * 3 //can't go fast while grabbing something.
 
 	. += get_pulling_delay()
+	if(contents_weight)
+		. += contents_weight/25
 
 	if(!get_leg_ignore()) //ignore the fact we lack legs
 		var/leg_amount = get_num_legs()

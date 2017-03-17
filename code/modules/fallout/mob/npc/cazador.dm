@@ -20,6 +20,7 @@
 	idle_vision_range = 5
 	movement_type = FLYING
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
+	self_weight = 45
 
 	sound_speak = list('sound/f13npc/cazadore_charge1.ogg','sound/f13npc/cazadore_charge2.ogg','sound/f13npc/cazadore_charge3.ogg')
 	sound_speak_chance = 5

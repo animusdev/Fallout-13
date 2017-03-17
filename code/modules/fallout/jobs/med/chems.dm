@@ -2,11 +2,13 @@
 	name = "brute patch"
 	desc = "Helps with brute injuries."
 	list_reagents = list("styptic_powder" = 60)
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/silver_sulf
 	name = "burn patch"
 	desc = "Helps with burn injuries."
 	list_reagents = list("silver_sulfadiazine" = 60)
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/stimpak
 	name = "Stimpak"
@@ -15,6 +17,7 @@
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "15"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/supstimpak
 	name = "SuperStimpak"
@@ -23,6 +26,7 @@
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "superstim_15"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/healpowder
 	name = "Healing powder"
@@ -31,6 +35,7 @@
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "bandaid"
 	icon_state = "heal_powder"
+	self_weight = 0.05
 
 /obj/item/weapon/reagent_containers/pill/patch/radaway
 	name = "RadAway"
@@ -39,6 +44,7 @@
 	icon = 'icons/fallout/objects/medicine/bloodpack.dmi'
 	item_state = "syringe_15"
 	icon_state = "radaway"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/jet
 	name = "Jet"
@@ -47,6 +53,7 @@
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "jet"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/psycho
 	name = "Psycho"
@@ -55,6 +62,7 @@
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "psycho"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/medx
 	name = "Med-X"
@@ -63,6 +71,7 @@
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "medx"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/radx
 	name = "Rad-X"
@@ -71,6 +80,7 @@
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "radx"
 	item_state = "radx"
+	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/turbo
 	name = "Turbo"
@@ -79,3 +89,4 @@
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "turbo"
 	item_state = "turbo"
+	self_weight = 0.1

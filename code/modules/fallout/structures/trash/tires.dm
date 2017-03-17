@@ -5,6 +5,7 @@
 	max_integrity = 50
 	icon_state = "one_t"
 	density = 1
+	self_weight = 5
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 
 /obj/structure/tires/half

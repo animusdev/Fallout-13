@@ -11,6 +11,7 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	self_weight = 1.5
 
 /obj/item/clothing/head/helmet/f13/broken
 	name = "broken power helmet"
@@ -20,6 +21,7 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
@@ -29,6 +31,7 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	self_weight = 1.5
 
 /obj/item/clothing/head/helmet/f13/eyebot
 	name = "eyebot helmet"
@@ -41,6 +44,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
+	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
@@ -52,6 +56,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"
@@ -63,6 +68,7 @@
 	put_on_delay = 10
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
+	self_weight = 0.2
 
 /obj/item/clothing/head/helmet/f13/ranger
 	name = "ranger helmet"
@@ -75,6 +81,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
+	self_weight = 0.45
 	//darkness_view = 8
 	//invis_view = SEE_INVISIBLE_MINIMUM
 
@@ -84,6 +91,7 @@
 	icon_state = "oldranger"
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, acid = 10)
+	self_weight = 0.45
 
 /obj/item/clothing/head/helmet/f13/legrecruit
 	name = "Legion recruit helmet"
@@ -94,6 +102,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 30
+	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/legvexil
 	name = "Legion vexillarius hat"
@@ -104,6 +113,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
+	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/legdecan
 	name = "Legion decanus helmet"
@@ -114,6 +124,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 40
+	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles.
 	name = "Legion decanus helmet"
@@ -132,6 +143,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
+	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/leglegate
 	name = "Legion legate helmet"
@@ -144,6 +156,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
+	self_weight = 0.6
 
 /obj/item/clothing/head/f13/strange
 	name = "strange helmet"
@@ -156,6 +169,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
+	self_weight = 3
 
 /obj/item/clothing/head/helmet/f13/doom
 	name = "marine helmet"
@@ -167,6 +181,7 @@
 	put_on_delay = 30
 	strip_delay = 10
 	resistance_flags = UNACIDABLE
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/magneto
 	name = "magneto's helmet"
@@ -178,6 +193,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = UNACIDABLE
+	self_weight = 0.5
 
 //Power armor helmets
 
@@ -196,6 +212,7 @@
 	put_on_delay = 50
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced
 	name = "advanced Mk II power helmet"
@@ -212,6 +229,7 @@
 	put_on_delay = 50
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced Mk I power helmet"
@@ -228,6 +246,7 @@
 	put_on_delay = 50
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "NCR power helmet"
@@ -240,6 +259,7 @@
 	put_on_delay = 50
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
@@ -255,6 +275,7 @@
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 
@@ -292,6 +313,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
 	dog_fashion = null
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/knight/blue
 	icon_state = "knight_blue"
@@ -321,3 +343,4 @@
 	desc = "It's a fancy dark metal helmet with orange spray painted flames."
 	icon_state = "rider"
 	item_state = "rider"
+	self_weight = 1

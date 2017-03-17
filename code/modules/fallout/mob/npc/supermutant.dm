@@ -23,6 +23,7 @@
 	mob_size = MOB_SIZE_LARGE
 	attacktext = "hits"
 	attack_sound = "punch"
+	self_weight = 250
 
 /mob/living/simple_animal/hostile/supermutant/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'

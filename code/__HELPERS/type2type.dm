@@ -549,3 +549,16 @@ for(var/t in test_times)
 	if(!istype(the_matrix) || the_matrix.len != 20)
 		return "#ffffffff"
 	return rgb(the_matrix[1]*255, the_matrix[6]*255, the_matrix[11]*255, the_matrix[16]*255)
+
+/proc/weight2feeling(var/weight)
+	switch(weight)
+		if(0 to 5)
+			return "Lightly"
+		if(5 to 25)
+			return "Middling"
+		if(25 to 45)
+			return "Heavily"
+		if(45 to 60)
+			return "Limit"
+		if(60 to INFINITY)
+			return "Unbearably"

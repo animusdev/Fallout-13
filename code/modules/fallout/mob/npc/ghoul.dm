@@ -15,6 +15,7 @@
 	move_to_delay = 2
 	maxHealth = 50
 	health = 50
+	self_weight = 45
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/ghoul_charge1.ogg','sound/f13npc/ghoul_charge2.ogg','sound/f13npc/ghoul_charge3.ogg')

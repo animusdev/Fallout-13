@@ -2,6 +2,7 @@
 
 /obj/item/clothing/glasses/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
+	self_weight = 0.1
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/glasses/f13/biker
@@ -14,6 +15,7 @@
 
 /obj/item/clothing/glasses/sunglasses/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
+	self_weight = 0.1
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/glasses/sunglasses/f13/legion
@@ -28,6 +30,7 @@
 
 /obj/item/clothing/glasses/thermal/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
+	self_weight = 0.15
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/glasses/thermal/f13/doctorwho
@@ -47,6 +50,7 @@
 
 /obj/item/clothing/glasses/science/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
+	self_weight = 0.1
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/glasses/science/f13/steampunk
@@ -61,6 +65,7 @@
 
 /obj/item/clothing/glasses/hud/health/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
+	self_weight = 0.1
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/glasses/hud/health/f13/eye
