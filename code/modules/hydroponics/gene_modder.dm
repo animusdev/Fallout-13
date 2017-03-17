@@ -86,7 +86,7 @@
 			if(!user.drop_item())
 				return
 			disk = I
-			disk.loc = src
+			disk.forceMove(src)
 			to_chat(user, "<span class='notice'>You add [I] to the machine.</span>")
 			interact(user)
 	else
@@ -228,7 +228,7 @@
 
 	if(href_list["eject_seed"] && !operation)
 		if (seed)
-			seed.loc = src.loc
+			seed.forceMove(src.loc)
 			seed.verb_pickup()
 			seed = null
 			update_genes()
@@ -243,7 +243,7 @@
 		update_icon()
 	else if(href_list["eject_disk"] && !operation)
 		if (disk)
-			disk.loc = src.loc
+			disk.forceMove(src.loc)
 			disk.verb_pickup()
 			disk = null
 			update_genes()
@@ -253,7 +253,7 @@
 				if(!usr.drop_item())
 					return
 				disk = I
-				disk.loc = src
+				disk.forceMove(src)
 				to_chat(usr, "<span class='notice'>You add [I] to the machine.</span>")
 	else if(href_list["op"] == "insert" && disk && disk.gene && seed)
 		if(!operation) // Wait for confirmation
@@ -322,7 +322,7 @@
 /obj/machinery/plantgenes/proc/insert_seed(obj/item/seeds/S)
 	if(!istype(S) || seed)
 		return
-	S.loc = src
+	S.forceMove(src)
 	seed = S
 	update_genes()
 	update_icon()

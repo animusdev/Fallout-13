@@ -482,7 +482,7 @@
 				user.visible_message("[user] installs scanner module to the [holder].", "<span class='notice'>You install scanner module to the [holder].</span>")
 				var/obj/item/I = used_atom
 				user.unEquip(I)
-				I.loc = holder
+				I.forceMove(holder)
 				holder.icon_state = "gygax11"
 			else
 				user.visible_message("[user] unfastens the weapon control module.", "<span class='notice'>You unfasten the weapon control module.</span>")
@@ -494,14 +494,14 @@
 			else
 				user.visible_message("[user] removes the advanced scanner module from the [holder].", "<span class='notice'>You remove the scanner module from the [holder].</span>")
 				var/obj/item/I = locate(/obj/item/weapon/stock_parts/scanning_module) in holder
-				I.loc = get_turf(holder)
+				I.forceMove(get_turf(holder))
 				holder.icon_state = "gygax10"
 		if(8)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs capacitor to the [holder].", "<span class='notice'>You install capacitor to the [holder].</span>")
 				var/obj/item/I = used_atom
 				user.unEquip(I)
-				I.loc = holder
+				I.forceMove(holder)
 				holder.icon_state = "gygax13"
 			else
 				user.visible_message("[user] unfastens the  scanner module.", "<span class='notice'>You unfasten the scanner module.</span>")
@@ -513,7 +513,7 @@
 			else
 				user.visible_message("[user] removes the  capacitor from the [holder].", "<span class='notice'>You remove the capacitor from the [holder].</span>")
 				var/obj/item/I = locate(/obj/item/weapon/stock_parts/capacitor) in holder
-				I.loc = get_turf(holder)
+				I.forceMove(get_turf(holder))
 				holder.icon_state = "gygax12"
 		if(6)
 			if(diff==FORWARD)
@@ -1069,7 +1069,7 @@
 				user.visible_message("[user] installs scanner module to the [holder].", "<span class='notice'>You install phasic scanner module to the [holder].</span>")
 				var/obj/item/I = used_atom
 				user.unEquip(I)
-				I.loc = holder
+				I.forceMove(holder)
 				holder.icon_state = "durand11"
 			else
 				user.visible_message("[user] unfastens the weapon control module.", "<span class='notice'>You unfasten the weapon control module.</span>")
@@ -1081,14 +1081,14 @@
 			else
 				user.visible_message("[user] removes the scanner module from the [holder].", "<span class='notice'>You remove the scanner module from the [holder].</span>")
 				var/obj/item/I = locate(/obj/item/weapon/stock_parts/scanning_module) in holder
-				I.loc = get_turf(holder)
+				I.forceMove(get_turf(holder))
 				holder.icon_state = "durand10"
 		if(8)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs capacitor to the [holder].", "<span class='notice'>You install capacitor to the [holder].</span>")
 				var/obj/item/I = used_atom
 				user.unEquip(I)
-				I.loc = holder
+				I.forceMove(holder)
 				holder.icon_state = "durand13"
 			else
 				user.visible_message("[user] unfastens the scanner module.", "<span class='notice'>You unfasten the scanner module.</span>")
@@ -1100,7 +1100,7 @@
 			else
 				user.visible_message("[user] removes the super capacitor from the [holder].", "<span class='notice'>You remove the capacitor from the [holder].</span>")
 				var/obj/item/I = locate(/obj/item/weapon/stock_parts/capacitor) in holder
-				I.loc = get_turf(holder)
+				I.forceMove(get_turf(holder))
 				holder.icon_state = "durand12"
 		if(6)
 			if(diff==FORWARD)
@@ -1376,7 +1376,7 @@
 				user.visible_message("[user] installs phasic scanner module to the [holder].", "<span class='notice'>You install scanner module to the [holder].</span>")
 				var/obj/item/I = used_atom
 				user.unEquip(I)
-				I.loc = holder
+				I.forceMove(holder)
 				holder.icon_state = "phazon11"
 			else
 				user.visible_message("[user] unfastens the weapon control module.", "<span class='notice'>You unfasten the weapon control module.</span>")
@@ -1388,14 +1388,14 @@
 			else
 				user.visible_message("[user] removes the phasic scanner module from the [holder].", "<span class='notice'>You remove the scanner module from the [holder].</span>")
 				var/obj/item/I = locate(/obj/item/weapon/stock_parts/scanning_module) in holder
-				I.loc = get_turf(holder)
+				I.forceMove(get_turf(holder))
 				holder.icon_state = "phazon10"
 		if(12)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs super capacitor to the [holder].", "<span class='notice'>You install capacitor to the [holder].</span>")
 				var/obj/item/I = used_atom
 				user.unEquip(I)
-				I.loc = holder
+				I.forceMove(holder)
 				holder.icon_state = "phazon13"
 			else
 				user.visible_message("[user] unfastens the phasic scanner module.", "<span class='notice'>You unfasten the scanner module.</span>")
@@ -1407,7 +1407,7 @@
 			else
 				user.visible_message("[user] removes the super capacitor from the [holder].", "<span class='notice'>You remove the capacitor from the [holder].</span>")
 				var/obj/item/I = locate(/obj/item/weapon/stock_parts/capacitor) in holder
-				I.loc = get_turf(holder)
+				I.forceMove(get_turf(holder))
 				holder.icon_state = "phazon12"
 		if(10)
 			if(diff==FORWARD)

@@ -1347,12 +1347,12 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 	if(!center)
 		return
 
-	dview_mob.loc = center
+	dview_mob.forceMove(center)
 
 	dview_mob.see_invisible = invis_flags
 
 	. = view(range, dview_mob)
-	dview_mob.loc = null
+	dview_mob.forceMove(null)
 
 /mob/dview
 	invisibility = 101
@@ -1372,7 +1372,7 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 
 
 #define FOR_DVIEW(type, range, center, invis_flags) \
-	dview_mob.loc = center;           \
+	dview_mob.forceMove(center);           \
 	dview_mob.see_invisible = invis_flags; \
 for(type in view(range, dview_mob))
 

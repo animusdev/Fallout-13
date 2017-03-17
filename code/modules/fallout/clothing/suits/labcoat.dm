@@ -2,6 +2,7 @@
 
 /obj/item/clothing/suit/toggle/labcoat/f13
 	icon = 'icons/fallout/clothing/suits.dmi'
+	self_weight = 2
 
 /obj/item/clothing/suit/toggle/labcoat/f13/emergency
 	name = "first responder jacket"

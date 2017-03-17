@@ -50,7 +50,7 @@
 	feedback_add_details("slime_cores_used","[type]")
 	for(var/i = 1, i <= 3, i++)
 		var /obj/item/weapon/reagent_containers/food/snacks/monkeycube/M = new /obj/item/weapon/reagent_containers/food/snacks/monkeycube
-		M.loc = get_turf(holder.my_atom)
+		M.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Green
@@ -200,7 +200,7 @@
 		var/chosen = pick(borks)
 		var/obj/B = new chosen
 		if(B)
-			B.loc = get_turf(holder.my_atom)
+			B.forceMove(get_turf(holder.my_atom))
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(B, pick(NORTH,SOUTH,EAST,WEST))
@@ -229,7 +229,7 @@
 		var/chosen = pick(borks)
 		var/obj/B = new chosen
 		if(B)
-			B.loc = get_turf(holder.my_atom)
+			B.forceMove(get_turf(holder.my_atom))
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(B, pick(NORTH,SOUTH,EAST,WEST))
@@ -260,7 +260,7 @@
 /datum/chemical_reaction/slime/slimestabilizer/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/stabilizer/P = new /obj/item/slimepotion/stabilizer
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 
@@ -312,7 +312,7 @@
 /datum/chemical_reaction/slime/slimefireproof/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/fireproof/P = new /obj/item/slimepotion/fireproof
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Orange
@@ -388,7 +388,7 @@
 /datum/chemical_reaction/slime/slimecell/on_reaction(datum/reagents/holder, created_volume)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/weapon/stock_parts/cell/high/slime/P = new /obj/item/weapon/stock_parts/cell/high/slime
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 /datum/chemical_reaction/slime/slimeglow
@@ -403,7 +403,7 @@
 	var/turf/T = get_turf(holder.my_atom)
 	T.visible_message("<span class='danger'>The slime begins to emit a soft light. Squeezing it will cause it to grow brightly.</span>")
 	var/obj/item/device/flashlight/slime/F = new /obj/item/device/flashlight/slime
-	F.loc = get_turf(holder.my_atom)
+	F.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Purple
@@ -418,7 +418,7 @@
 /datum/chemical_reaction/slime/slimepsteroid/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/steroid/P = new /obj/item/slimepotion/steroid
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 /datum/chemical_reaction/slime/slimejam
@@ -460,7 +460,7 @@
 /datum/chemical_reaction/slime/slimemutator/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/mutator/P = new /obj/item/slimepotion/mutator
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 /datum/chemical_reaction/slime/slimebloodlust
@@ -488,7 +488,7 @@
 /datum/chemical_reaction/slime/slimespeed/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/speed/P = new /obj/item/slimepotion/speed
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 
@@ -503,7 +503,7 @@
 /datum/chemical_reaction/slime/docility/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/docility/P = new /obj/item/slimepotion/docility
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 /datum/chemical_reaction/slime/gender
@@ -516,7 +516,7 @@
 /datum/chemical_reaction/slime/gender/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/genderchange/G = new /obj/item/slimepotion/genderchange
-	G.loc = get_turf(holder.my_atom)
+	G.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Black
@@ -584,7 +584,7 @@
 /datum/chemical_reaction/slime/slimepotion2/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/sentience/P = new /obj/item/slimepotion/sentience
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Adamantine
@@ -598,7 +598,7 @@
 /datum/chemical_reaction/slime/slimegolem/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/effect/golemrune/Z = new /obj/effect/golemrune
-	Z.loc = get_turf(holder.my_atom)
+	Z.forceMove(get_turf(holder.my_atom))
 	notify_ghosts("Golem rune created in [get_area(Z)].", 'sound/effects/ghost2.ogg', source = Z)
 	..()
 
@@ -612,7 +612,7 @@
 /datum/chemical_reaction/slime/slimegolem2/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/golem_shell/artificial/Z = new /obj/item/golem_shell/artificial
-	Z.loc = get_turf(holder.my_atom)
+	Z.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Bluespace
@@ -627,7 +627,7 @@
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/stack/tile/bluespace/P = new /obj/item/stack/tile/bluespace
 	P.amount = 25
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 
@@ -656,7 +656,7 @@
 /datum/chemical_reaction/slime/slimepsteroid2/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/enhancer/P = new /obj/item/slimepotion/enhancer
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 
@@ -670,7 +670,7 @@
 /datum/chemical_reaction/slime/slime_territory/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/areaeditor/blueprints/slime/P = new /obj/item/areaeditor/blueprints/slime
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Sepia
@@ -685,7 +685,7 @@
 	feedback_add_details("slime_cores_used","[type]")
 	var/mob/mob = get_mob_by_key(holder.my_atom.fingerprintslast)
 	var/obj/effect/timestop/T = new /obj/effect/timestop
-	T.loc = get_turf(holder.my_atom)
+	T.forceMove(get_turf(holder.my_atom))
 	T.immune += mob
 	T.timestop()
 	..()
@@ -701,9 +701,9 @@
 /datum/chemical_reaction/slime/slimecamera/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/device/camera/P = new /obj/item/device/camera
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	var/obj/item/device/camera_film/Z = new /obj/item/device/camera_film
-	Z.loc = get_turf(holder.my_atom)
+	Z.forceMove(get_turf(holder.my_atom))
 	..()
 
 /datum/chemical_reaction/slime/slimefloor
@@ -717,7 +717,7 @@
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/stack/tile/sepia/P = new /obj/item/stack/tile/sepia
 	P.amount = 25
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 
 
@@ -737,7 +737,7 @@
 	var/chosen = pick(paints)
 	var/obj/P = new chosen
 	if(P)
-		P.loc = get_turf(holder.my_atom)
+		P.forceMove(get_turf(holder.my_atom))
 	..()
 
 
@@ -754,7 +754,7 @@
 	var/chosen = pick(crayons)
 	var/obj/P = new chosen
 	if(P)
-		P.loc = get_turf(holder.my_atom)
+		P.forceMove(get_turf(holder.my_atom))
 	..()
 
 //Rainbow :o)
@@ -784,6 +784,6 @@
 /datum/chemical_reaction/slime/slime_transfer/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/transference/P = new /obj/item/slimepotion/transference
-	P.loc = get_turf(holder.my_atom)
+	P.forceMove(get_turf(holder.my_atom))
 	..()
 

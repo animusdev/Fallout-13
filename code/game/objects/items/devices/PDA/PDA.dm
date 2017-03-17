@@ -520,7 +520,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 					if("2")		// Eject pAI device
 						var/turf/T = get_turf(src.loc)
 						if(T)
-							pai.loc = T
+							pai.forceMove(T)
 
 //LINK FUNCTIONS===================================
 
@@ -557,7 +557,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			M.put_in_hands(id)
 			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
 		else
-			id.loc = get_turf(src)
+			id.forceMove(get_turf(src))
 		id = null
 		update_icon()
 
@@ -756,7 +756,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if(!user.unEquip(C))
 			return
 		cartridge = C
-		cartridge.loc = src
+		cartridge.forceMove(src)
 		to_chat(user, "<span class='notice'>You insert [cartridge] into [src].</span>")
 		if(cartridge.radio)
 			cartridge.radio.hostpda = src
@@ -784,7 +784,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	else if(istype(C, /obj/item/device/paicard) && !src.pai)
 		if(!user.unEquip(C))
 			return
-		C.loc = src
+		C.forceMove(src)
 		pai = C
 		to_chat(user, "<span class='notice'>You slot \the [C] into [src].</span>")
 		update_icon()

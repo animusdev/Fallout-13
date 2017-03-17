@@ -2,6 +2,7 @@
 
 /obj/item/clothing/suit/armor/f13
 	icon = 'icons/fallout/clothing/suits.dmi'
+	self_weight = 7.5
 
 /obj/item/clothing/suit/armor/f13/jensen
 	name = "armored trenchcoat"
@@ -25,6 +26,7 @@
 	resistance_flags = UNACIDABLE
 	put_on_delay = 30
 	strip_delay = 10
+	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/kit
 	name = "armor kit"
@@ -35,6 +37,7 @@
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	put_on_delay = 30
 	strip_delay = 30
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"
@@ -46,6 +49,7 @@
 	slowdown = 1
 	put_on_delay = 30
 	strip_delay = 10
+	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/supafly
 	name = "supa-fly raider armor"
@@ -79,6 +83,7 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40
+	self_weight = 4
 
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"
@@ -91,6 +96,7 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
+	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/legrecruit
 	name = "Legion recruit armor"
@@ -141,6 +147,7 @@
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
 	put_on_delay = 60
 	strip_delay = 60
+	self_weight = 12
 
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "ranger trenchcoat"
@@ -151,12 +158,14 @@
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
 	put_on_delay = 40
 	strip_delay = 40
+	self_weight = 1.5
 
 /obj/item/clothing/suit/armor/f13/rangercombat/old
 	name = "worn ranger combat armor"
 	desc = "A one of a kind NCR Veteran Ranger armor, that has been in countless battles, and a lot of blood was shed around it."
 	icon_state = "oldranger"
 	item_state = "oldranger"
+	self_weight = 1.5
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 20, acid = 20)
 
 /obj/item/clothing/suit/armor/f13/ncr
@@ -168,6 +177,7 @@
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 10, fire = 10, acid = 10)
 	put_on_delay = 50
 	strip_delay = 50
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/ncr/soldier
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR soldiers in combat environments.<br>This one had breastplate emblazoned with the emblem of the NCR, that has slightly faded overtime."
@@ -209,105 +219,62 @@
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
 	icon_state = "ncr_armor9"
 	item_state = "ncr_armor9"
+	self_weight = 7.5
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 50, fire = 10, acid = 10) //Better radiation protection, thank the facewrap bro!
+
+/obj/item/clothing/suit/armor/f13/power_armor
+	w_class = WEIGHT_CLASS_HUGE
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	flags = STOPSPRESSUREDMAGE
+	flags_inv = HIDEJUMPSUIT
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	put_on_delay = 100
+	strip_delay = 200
+	resistance_flags = UNACIDABLE
+	self_weight = 35
 
 /obj/item/clothing/suit/armor/f13/power_armor/ncr
 	name = "NCR power armor"
 	desc = "A set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 80, rad = 40)
-	slowdown = 2
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	put_on_delay = 100
-	strip_delay = 200
-	resistance_flags = UNACIDABLE
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 100, rad = 60)
-	slowdown = 1
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	put_on_delay = 100
-	strip_delay = 200
-	resistance_flags = UNACIDABLE
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor Mk I"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advanced"
 	item_state = "advanced"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	slowdown = 1
 	armor = list(melee = 70, bullet = 50, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
-	put_on_delay = 100
-	strip_delay = 200
-	resistance_flags = UNACIDABLE
 
 /obj/item/clothing/suit/armor/f13/power_armor/superadvanced
 	name = "advanced power armor Mk II"
 	desc = "An improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	slowdown = 1
 	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
-	put_on_delay = 100
-	strip_delay = 200
-	resistance_flags = UNACIDABLE
 
 /obj/item/clothing/suit/armor/f13/power_armor/shocktrooper
 	name = "shocktrooper power armor"
 	desc = "A 'black devil' power armor, is a high-end model of power armor used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the MK I and II."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	slowdown = 1
 	armor = list(melee = 90, bullet = 70, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 90)
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
-	put_on_delay = 100
-	strip_delay = 200
-	resistance_flags = UNACIDABLE
 
 /obj/item/clothing/suit/armor/f13/power_armor/badmin
 	name = "advanced power armor Mk III"
 	desc = "A group of Enclave mad scientists lead by Administrator Badmin, have spent a decade working on the super weapon you see in front of you."
 	icon_state = "badmin"
 	item_state = "badmin"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	slowdown = 1
+	self_weight = 1
 	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100, fire = 50) //Burn baby, burn!
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
-	put_on_delay = 100
-	strip_delay = 200
-	resistance_flags = UNACIDABLE
 
 //Knights of the Apocalypse
 
@@ -316,6 +283,7 @@
 	desc = "A classic suit of plate armour, highly effective at stopping melee attacks."
 	icon_state = "knight_green"
 	item_state = "knight_green"
+	self_weight = 50
 
 /obj/item/clothing/suit/armor/riot/knight/yellow
 	icon_state = "knight_yellow"

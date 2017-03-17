@@ -238,17 +238,17 @@
 		updateUsrDialog()
 
 /obj/machinery/photocopier/proc/do_insertion(obj/item/O, mob/user)
-	O.loc = src
+	O.forceMove(src)
 	to_chat(user, "<span class ='notice'>You insert [O] into [src].</span>")
 	flick("photocopier1", src)
 	updateUsrDialog()
 
 /obj/machinery/photocopier/proc/remove_photocopy(obj/item/O, mob/user)
 	if(!issilicon(user)) //surprised this check didn't exist before, putting stuff in AI's hand is bad
-		O.loc = user.loc
+		O.forceMove(user.loc)
 		user.put_in_hands(O)
 	else
-		O.loc = src.loc
+		O.forceMove(src.loc)
 	to_chat(user, "<span class='notice'>You take [O] out of [src].</span>")
 
 /obj/machinery/photocopier/attackby(obj/item/O, mob/user, params)
@@ -334,16 +334,16 @@
 		else
 			user.visible_message("<span class='warning'>[user] puts [target] onto the photocopier!</span>", "<span class='notice'>You put [target] onto the photocopier.</span>")
 
-		target.loc = get_turf(src)
+		target.forceMove(get_turf(src))
 		ass = target
 
 		if(photocopy)
-			photocopy.loc = src.loc
+			photocopy.forceMove(src.loc)
 			visible_message("<span class='warning'>[photocopy] is shoved out of the way by [ass]!</span>")
 			photocopy = null
 
 		else if(copy)
-			copy.loc = src.loc
+			copy.forceMove(src.loc)
 			visible_message("<span class='warning'>[copy] is shoved out of the way by [ass]!</span>")
 			copy = null
 	updateUsrDialog()

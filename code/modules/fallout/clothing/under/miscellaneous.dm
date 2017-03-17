@@ -2,6 +2,7 @@
 
 /obj/item/clothing/under/f13
 	icon = 'icons/fallout/clothing/uniforms.dmi'
+	self_weight = 1
 
 /obj/item/clothing/under/f13/navy
 	name = "navy jumpsuit"
@@ -225,6 +226,7 @@
 	item_state = "bl_suit"
 	item_color = "merca_m"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	self_weight = 3
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -235,6 +237,7 @@
 	item_state = "bl_suit"
 	item_color = "merca_f"
 	fitted = FEMALE_UNIFORM_TOP
+	self_weight = 3
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
@@ -246,6 +249,7 @@
 	item_state = "bl_suit"
 	item_color = "mercc_m"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	self_weight = 3
 	armor = list(melee = 10, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -256,6 +260,7 @@
 	item_state = "bl_suit"
 	item_color = "mercc_f"
 	fitted = FEMALE_UNIFORM_TOP
+	self_weight = 3
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
@@ -319,6 +324,7 @@
 	item_state = "bl_suit"
 	item_color = "combat"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	self_weight = 3
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -329,6 +335,7 @@
 	item_state = "bl_suit"
 	item_color = "enclaveo"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	self_weight = 2
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 10, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -338,6 +345,7 @@
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
 	item_color = "overcoat"
+	self_weight = 2
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/ncr/torn
@@ -347,6 +355,7 @@
 	icon_state = "tornovercoat"
 	item_color = "tornovercoat"
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/recon
 	name = "recon armor"
@@ -360,6 +369,7 @@
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	can_adjust = 0
+	self_weight = 5
 
 //Fluff
 
@@ -501,6 +511,7 @@
 
 /obj/item/clothing/under/female
 	icon = 'icons/fallout/clothing/uniforms.dmi'
+	self_weight = 1.5
 
 /obj/item/clothing/under/female/nursesuit
 	desc = "A jumpsuit commonly worn by nursing staff in the medical department."

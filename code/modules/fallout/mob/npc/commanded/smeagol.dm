@@ -24,6 +24,7 @@
 	response_harm   = "kicks"
 	faction = list("ghoul")
 	butcher_results = list(/obj/effect/gibspawner/xeno = 1)
+	self_weight = 45
 	var/obj/item/ring/precious
 
 /mob/living/simple_animal/hostile/commanded/smeagol/Life()

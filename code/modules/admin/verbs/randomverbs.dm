@@ -373,13 +373,13 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			SSjob.EquipRank(new_character, new_character.mind.assigned_role, 1)
 			ticker.mode.equip_traitor(new_character)
 		if("Wizard")
-			new_character.loc = pick(wizardstart)
+			new_character.forceMove(pick(wizardstart))
 			//ticker.mode.learn_basic_spells(new_character)
 			ticker.mode.equip_wizard(new_character)
 		if("Syndicate")
 			var/obj/effect/landmark/synd_spawn = locate("landmark*Syndicate-Spawn")
 			if(synd_spawn)
-				new_character.loc = get_turf(synd_spawn)
+				new_character.forceMove(get_turf(synd_spawn))
 			call(/datum/game_mode/proc/equip_syndicate)(new_character)
 		if("Space Ninja")
 			var/list/ninja_spawn = list()
@@ -391,7 +391,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			new_character.update_internals_hud_icon(1)
 			if(ninja_spawn.len)
 				var/obj/effect/landmark/ninja_spawn_here = pick(ninja_spawn)
-				new_character.loc = ninja_spawn_here.loc
+				new_character.forceMove(ninja_spawn_here.loc)
 
 		else//They may also be a cyborg or AI.
 			switch(new_character.mind.assigned_role)

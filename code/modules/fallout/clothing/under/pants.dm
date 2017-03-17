@@ -2,6 +2,7 @@
 
 /obj/item/clothing/under/pants/f13
 	icon = 'icons/fallout/clothing/uniforms.dmi'
+	self_weight = 0.3
 
 /obj/item/clothing/under/pants/f13/cloth
 	name = "cloth pants"
@@ -32,4 +33,5 @@
 	flags = THICKMATERIAL
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
+	self_weight = 3
 	armor = list(melee = 60, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100)

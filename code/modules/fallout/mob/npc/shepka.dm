@@ -12,6 +12,7 @@
 	butcher_results = list(/mob/living/simple_animal/hostile/megafauna/colossus = 1)
 	maxHealth = 5000
 	health = 5000
+	self_weight = 5
 
 	environment_smash = 0
 	faction = list("hostile", "evil")

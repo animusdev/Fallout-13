@@ -505,7 +505,7 @@
 	check_poddoors()
 	S1.last_dock_time = world.time
 
-	loc = S1.loc
+	forceMove(S1.loc)
 	setDir(S1.dir)
 
 /obj/docking_port/mobile/proc/findRoundstartDock()

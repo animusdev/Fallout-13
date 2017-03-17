@@ -26,7 +26,7 @@
 		if(istype(target, /obj/item/weapon/gun))
 			var/obj/item/weapon/gun/G = target
 			if(G.pin && (force_replace || G.pin.pin_removeable))
-				G.pin.loc = get_turf(G)
+				G.pin.forceMove(get_turf(G))
 				G.pin.gun_remove(user)
 				to_chat(user, "<span class ='notice'>You remove [G]'s old pin.</span>")
 
@@ -45,7 +45,7 @@
 
 /obj/item/device/firing_pin/proc/gun_insert(mob/living/user, obj/item/weapon/gun/G)
 	gun = G
-	loc = gun
+	forceMove(gun)
 	gun.pin = src
 	return
 

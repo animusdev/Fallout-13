@@ -22,7 +22,7 @@
 	var/new_location = get_turf(loc)
 	var/obj/item/weapon/broken_bottle/B = new /obj/item/weapon/broken_bottle(new_location)
 	if(ranged)
-		B.loc = new_location
+		B.forceMove(new_location)
 	else
 		user.drop_item()
 		user.put_in_active_hand(B)

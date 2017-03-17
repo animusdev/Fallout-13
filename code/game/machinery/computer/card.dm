@@ -50,20 +50,20 @@ var/time_last_changed_position = 0
 			if(!scan)
 				if(!usr.drop_item())
 					return
-				idcard.loc = src
+				idcard.forceMove(src)
 				scan = idcard
 				playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 			else if(!modify)
 				if(!usr.drop_item())
 					return
-				idcard.loc = src
+				idcard.forceMove(src)
 				modify = idcard
 				playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 		else
 			if(!modify)
 				if(!usr.drop_item())
 					return
-				idcard.loc = src
+				idcard.forceMove(src)
 				modify = idcard
 				playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 	else
@@ -333,7 +333,7 @@ var/time_last_changed_position = 0
 			if (modify)
 				data_core.manifest_modify(modify.registered_name, modify.assignment)
 				modify.update_label()
-				modify.loc = loc
+				modify.forceMove(loc)
 				modify.verb_pickup()
 				playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 				modify = null
@@ -345,13 +345,13 @@ var/time_last_changed_position = 0
 					if(!usr.drop_item())
 						return
 					playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
-					I.loc = src
+					I.forceMove(src)
 					modify = I
 			authenticated = 0
 
 		if ("scan")
 			if (scan)
-				scan.loc = src.loc
+				scan.forceMove(src.loc)
 				scan.verb_pickup()
 				playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 				scan = null
@@ -361,7 +361,7 @@ var/time_last_changed_position = 0
 					if(!usr.drop_item())
 						return
 					playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
-					I.loc = src
+					I.forceMove(src)
 					scan = I
 			authenticated = 0
 		if ("auth")

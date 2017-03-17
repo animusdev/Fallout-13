@@ -13,7 +13,7 @@
 /obj/item/device/autoimplanter/New()
 	..()
 	if(storedorgan)
-		storedorgan.loc = src
+		storedorgan.forceMove(src)
 
 /obj/item/device/autoimplanter/attack_self(mob/user)//when the object it used...
 	if(!uses)
@@ -41,7 +41,7 @@
 			return
 		if(!user.drop_item())
 			return
-		I.loc = src
+		I.forceMove(src)
 		storedorgan = I
 		to_chat(user, "<span class='notice'>You insert the [I] into [src].</span>")
 	else if(istype(I, /obj/item/weapon/screwdriver))

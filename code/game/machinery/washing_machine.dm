@@ -215,7 +215,7 @@
 
 		if(istype(W,/obj/item/toy/crayon) || istype(W,/obj/item/weapon/stamp))
 			color_source = W
-		W.loc = src
+		W.forceMove(src)
 		update_icon()
 
 	else

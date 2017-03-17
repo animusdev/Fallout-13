@@ -45,7 +45,7 @@
 
 	user.unEquip(src) //icon update
 	add_logs(user, M, "fed", reagentlist(src))
-	loc = M //Put the pill inside the mob. This fixes the issue where the pill appears to drop to the ground after someone eats it.
+	forceMove(M )//Put the pill inside the mob. This fixes the issue where the pill appears to drop to the ground after someone eats it.
 
 	if(reagents.total_volume)
 		reagents.reaction(M, apply_type)

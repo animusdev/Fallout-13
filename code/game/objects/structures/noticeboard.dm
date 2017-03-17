@@ -13,7 +13,7 @@
 	for(var/obj/item/I in loc)
 		if(notices > 4) break
 		if(istype(I, /obj/item/weapon/paper))
-			I.loc = src
+			I.forceMove(src)
 			notices++
 	icon_state = "nboard0[notices]"
 
@@ -26,7 +26,7 @@
 		if(notices < 5)
 			if(!user.unEquip(O))
 				return
-			O.loc = src
+			O.forceMove(src)
 			notices++
 			icon_state = "nboard0[notices]"
 			to_chat(user, "<span class='notice'>You pin the [O] to the noticeboard.</span>")
@@ -54,7 +54,7 @@
 			return
 		var/obj/item/I = locate(href_list["remove"]) in contents
 		if(istype(I) && I.loc == src)
-			I.loc = usr.loc
+			I.forceMove(usr.loc)
 			usr.put_in_hands(I)
 			notices--
 			icon_state = "nboard0[notices]"

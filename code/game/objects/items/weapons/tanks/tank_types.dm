@@ -98,7 +98,7 @@
 		src.master = F
 		F.ptank = src
 		user.unEquip(src)
-		src.loc = F
+		src.forceMove(F)
 		F.update_icon()
 	else
 		return ..()

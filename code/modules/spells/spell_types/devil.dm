@@ -146,7 +146,7 @@
 		pulledby.stop_pulling()
 	if(pulling)
 		stop_pulling()
-	src.loc = holder
+	src.forceMove(holder)
 	src.holder = holder
 	src.notransform = 0
 	fakefireextinguish()
@@ -156,7 +156,7 @@
 		to_chat(src, "<span class='warning'>You're too busy to jaunt in.</span>")
 		return 0
 	fakefire()
-	src.loc = get_turf(src)
+	src.forceMove(get_turf(src))
 	src.client.eye = src
 	src.visible_message("<span class='warning'><B>[src] appears in a firey blaze!</B>")
 	playsound(get_turf(src), 'sound/magic/exit_blood.ogg', 100, 1, -1)

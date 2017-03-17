@@ -151,7 +151,7 @@
 					var/obj/item/bodypart/L = pick(bodyparts)
 					L.embedded_objects |= I
 					I.add_mob_blood(src)//it embedded itself in you, of course it's bloody!
-					I.loc = src
+					I.forceMove(src)
 					L.receive_damage(I.w_class*I.embedded_impact_pain_multiplier)
 					visible_message("<span class='danger'>\the [I.name] embeds itself in [src]'s [L.name]!</span>","<span class='userdanger'>\the [I.name] embeds itself in your [L.name]!</span>")
 					hitpush = 0

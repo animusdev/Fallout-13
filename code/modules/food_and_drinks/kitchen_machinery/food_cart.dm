@@ -82,7 +82,7 @@
 			var/obj/item/weapon/reagent_containers/food/snacks/S = O
 			if(!user.drop_item())
 				return
-			S.loc = src
+			S.forceMove(src)
 			if(stored_food[sanitize(S.name)])
 				stored_food[sanitize(S.name)]++
 			else
@@ -124,7 +124,7 @@
 		else
 			for(var/obj/O in contents)
 				if(sanitize(O.name) == href_list["dispense"])
-					O.loc = src.loc
+					O.forceMove(src.loc)
 					break
 
 	if(href_list["portion"])

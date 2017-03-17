@@ -9,7 +9,7 @@
 	item_state = "holodisk"
 	throwforce = 0
 	hitsound = null
-	w_class = 1.0
+	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 3
 	throw_range = 7
 	attack_verb = list("Played holodisk")

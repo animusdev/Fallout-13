@@ -19,9 +19,9 @@
 	mob_list += src
 
 	if(length(newplayer_start))
-		loc = pick(newplayer_start)
+		forceMove(pick(newplayer_start))
 	else
-		loc = locate(1,1,1)
+		forceMove(locate(1,1,1))
 
 /mob/new_player/proc/new_player_panel()
 
@@ -124,7 +124,7 @@
 			var/obj/O = locate("landmark*Observer-Start")
 			to_chat(src, "<span class='notice'>Now teleporting.</span>")
 			if (O)
-				observer.loc = O.loc
+				observer.forceMove(O.loc)
 			else
 				to_chat(src, "<span class='notice'>Teleporting failed. You should be able to use ghost verbs to teleport somewhere useful</span>")
 			observer.key = key
@@ -323,7 +323,7 @@
 					D = T
 					continue
 
-	character.loc = D
+	character.forceMove(D)
 	ticker.minds += character.mind
 
 	var/mob/living/carbon/human/humanc

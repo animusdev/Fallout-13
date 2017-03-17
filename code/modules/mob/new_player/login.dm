@@ -29,7 +29,7 @@
 			watch_locations += landmark.loc
 
 	if(watch_locations.len>0)
-		loc = pick(watch_locations)
+		forceMove(pick(watch_locations))
 */
 	new_player_panel()
 

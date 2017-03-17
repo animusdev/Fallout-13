@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses
 	name = "glasses"
 	materials = list(MAT_GLASS = 250)
-	var/glass_colour_type = null //colors your vision when worn
+	self_weight = 0.1
 
 /obj/item/clothing/glasses/visor_toggling()
 	..()

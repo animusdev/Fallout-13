@@ -143,7 +143,7 @@
 
 	else if(user.a_intent != INTENT_HARM)
 		if(user.drop_item())
-			I.loc = src.loc
+			I.forceMove(src.loc)
 	else
 		return ..()
 

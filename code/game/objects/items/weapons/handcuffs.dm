@@ -21,6 +21,7 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 50)
 	var/cuffsound = 'sound/weapons/handcuffs.ogg'
 	var/trashtype = null //for disposable cuffs
+	self_weight = 0.3
 
 /obj/item/weapon/restraints/handcuffs/attack(mob/living/carbon/C, mob/living/carbon/human/user)
 	if(!istype(C))
@@ -29,13 +30,13 @@
 		to_chat(user, "<span class='warning'>Uh... how do those things work?!</span>")
 		apply_cuffs(user,user)
 		return
-		
+
 	// chance of monkey retaliation
 	if(istype(C, /mob/living/carbon/monkey) && prob(MONKEY_CUFF_RETALIATION_PROB))
 		var/mob/living/carbon/monkey/M
 		M = C
 		M.retaliate(user)
-		
+
 	if(!C.handcuffed)
 		if(C.get_num_arms() >= 2 || C.get_arm_ignore())
 			C.visible_message("<span class='danger'>[user] is trying to put [src.name] on [C]!</span>", \
@@ -69,7 +70,7 @@
 	else if(dispense)
 		cuffs = new type()
 
-	cuffs.loc = target
+	cuffs.forceMove(target)
 	target.handcuffed = cuffs
 
 	target.update_handcuffed()
@@ -278,7 +279,7 @@
 					def_zone = pick("l_leg", "r_leg")
 					if(!C.legcuffed && C.get_num_legs() >= 2) //beartrap can't cuff your leg if there's already a beartrap or legcuffs, or you don't have two legs.
 						C.legcuffed = src
-						src.loc = C
+						src.forceMove(C)
 						C.update_inv_legcuffed()
 						feedback_add_details("handcuffs","B") //Yes, I know they're legcuffs. Don't change this, no need for an extra variable. The "B" is used to tell them apart.
 			else if(isanimal(L))
@@ -341,7 +342,7 @@
 	if(!C.legcuffed && C.get_num_legs() >= 2)
 		visible_message("<span class='danger'>\The [src] ensnares [C]!</span>")
 		C.legcuffed = src
-		src.loc = C
+		src.forceMove(C)
 		C.update_inv_legcuffed()
 		feedback_add_details("handcuffs","B")
 		to_chat(C, "<span class='userdanger'>\The [src] ensnares you!</span>")

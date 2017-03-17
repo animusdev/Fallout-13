@@ -234,7 +234,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	if(masters[user])
 		step_to(masters[user], user.eyeobj)
 		var/obj/effect/overlay/holo_pad_hologram/H = masters[user]
-		H.loc = get_turf(user.eyeobj)
+		H.forceMove(get_turf(user.eyeobj))
 	return TRUE
 
 /obj/effect/overlay/holo_pad_hologram/Process_Spacemove(movement_dir = 0)

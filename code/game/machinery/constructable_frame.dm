@@ -135,7 +135,7 @@
 				playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
 				to_chat(user, "<span class='notice'>You add the circuit board to the frame.</span>")
 				circuit = B
-				B.loc = src
+				B.forceMove(src)
 				icon_state = "box_2"
 				state = 3
 				components = list()
@@ -160,7 +160,7 @@
 			if(istype(P, /obj/item/weapon/crowbar))
 				playsound(src.loc, P.usesound, 50, 1)
 				state = 2
-				circuit.loc = src.loc
+				circuit.forceMove(src.loc)
 				components.Remove(circuit)
 				circuit = null
 				if(components.len == 0)
@@ -168,7 +168,7 @@
 				else
 					to_chat(user, "<span class='notice'>You remove the circuit board and other components.</span>")
 					for(var/atom/movable/A in components)
-						A.loc = src.loc
+						A.forceMove(src.loc)
 				desc = initial(desc)
 				req_components = null
 				components = null
@@ -189,9 +189,9 @@
 						qdel(O)
 					new_machine.component_parts = list()
 					for(var/obj/O in src)
-						O.loc = null
+						O.forceMove(null)
 						new_machine.component_parts += O
-					circuit.loc = null
+					circuit.forceMove(null)
 					new_machine.RefreshParts()
 					qdel(src)
 				return
@@ -283,7 +283,7 @@ micro-manipulator, console screen, beaker, Microlaser, matter bin, power cells.
 		return
 
 	M.component_parts = list(src) // List of components always contains a board
-	loc = null
+	forceMove(null)
 
 	for(var/comp_path in req_components)
 		var/comp_amt = req_components[comp_path]

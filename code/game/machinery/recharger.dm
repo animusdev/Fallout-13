@@ -58,7 +58,7 @@
 
 			if(!user.drop_item())
 				return 1
-			G.loc = src
+			G.forceMove(src)
 			charging = G
 			use_power = 2
 			update_icon()
@@ -85,7 +85,7 @@
 	add_fingerprint(user)
 	if(charging)
 		charging.update_icon()
-		charging.loc = loc
+		charging.forceMove(loc)
 		user.put_in_hands(charging)
 		charging = null
 		use_power = 1
@@ -97,7 +97,7 @@
 /obj/machinery/recharger/attack_tk(mob/user)
 	if(charging)
 		charging.update_icon()
-		charging.loc = loc
+		charging.forceMove(loc)
 		charging = null
 		use_power = 1
 		update_icon()

@@ -101,7 +101,7 @@
 		if(!isturf(eye_user.loc))
 			return
 		T = get_turf(T)
-		loc = T
+		forceMove(T)
 		cameranet.visibility(src)
 		if(visible_icon)
 			if(eye_user.client)

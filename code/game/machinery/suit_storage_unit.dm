@@ -304,7 +304,7 @@
 				return
 			storage = I
 
-		I.loc = src
+		I.forceMove(src)
 		visible_message("<span class='notice'>[user] inserts [I] into [src]</span>", "<span class='notice'>You load [I] into [src].</span>")
 		update_icon()
 		return
@@ -376,16 +376,16 @@
 				return
 			switch(params["item"])
 				if("helmet")
-					helmet.loc = loc
+					helmet.forceMove(loc)
 					helmet = null
 				if("suit")
-					suit.loc = loc
+					suit.forceMove(loc)
 					suit = null
 				if("mask")
-					mask.loc = loc
+					mask.forceMove(loc)
 					mask = null
 				if("storage")
-					storage.loc = loc
+					storage.forceMove(loc)
 					storage = null
 			. = TRUE
 	update_icon()

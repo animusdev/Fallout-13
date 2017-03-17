@@ -153,7 +153,7 @@
 		var/obj/item/weapon/storage/S = O.loc
 		S.remove_from_storage(O,src)
 
-	O.loc = src
+	O.forceMove(src)
 
 /obj/machinery/smartfridge/attack_paw(mob/user)
 	return src.attack_hand(user)
@@ -223,7 +223,7 @@
 		if(i <= 0)
 			break
 		if(O.name == N)
-			O.loc = src.loc
+			O.forceMove(src.loc)
 			i--
 
 
@@ -327,7 +327,7 @@
 		if(S.dried_type == S.type)//if the dried type is the same as the object's type, don't bother creating a whole new item...
 			S.add_atom_colour("#ad7257", FIXED_COLOUR_PRIORITY)
 			S.dry = TRUE
-			S.loc = get_turf(src)
+			S.forceMove(get_turf(src))
 		else
 			var/dried = S.dried_type
 			new dried(src.loc)

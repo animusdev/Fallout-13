@@ -75,7 +75,7 @@
 	for(var/datum/mind/synd_mind in syndicates)
 		if(spawnpos > synd_spawn.len)
 			spawnpos = 2
-		synd_mind.current.loc = synd_spawn[spawnpos]
+		synd_mind.current.forceMove(synd_spawn[spawnpos])
 
 		forge_syndicate_objectives(synd_mind)
 		greet_syndicate(synd_mind)
@@ -129,7 +129,7 @@
 		P.info = "The nuclear authorization code is: <b>[nuke_code]</b>"
 		P.name = "nuclear bomb code"
 		var/mob/living/carbon/human/H = synd_mind.current
-		P.loc = H.loc
+		P.forceMove(H.loc)
 		H.put_in_hands_or_del(P)
 		H.update_icons()
 	else

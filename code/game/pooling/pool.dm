@@ -78,12 +78,12 @@ var/global/list/GlobalPool = list()
 
 		if(islist(second_arg))
 			if(AM)
-				AM.loc = second_arg[1] //we need to do loc setting explicetly before even calling New() to replicate new()'s behavior
+				AM.forceMove(second_arg[1] )//we need to do loc setting explicetly before even calling New() to replicate new()'s behavior
 			pooled.New(arglist(second_arg))
 
 		else
 			if(AM)
-				AM.loc = second_arg
+				AM.forceMove(second_arg)
 			pooled.New(second_arg)
 
 		return pooled
@@ -138,7 +138,7 @@ var/list/pooledvariables = list()
 
 /atom/movable/ResetVars()
 	..()
-	loc = null
+	forceMove(null)
 	contents = initial(contents) //something is really wrong if this object still has stuff in it by this point
 
 /image/ResetVars()

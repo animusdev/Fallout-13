@@ -411,7 +411,7 @@
 		return
 	if(explosive && wielded)
 		user.say("[war_cry]")
-		explosive.loc = AM
+		explosive.forceMove(AM)
 		explosive.prime()
 		qdel(src)
 
@@ -436,7 +436,7 @@
 /obj/item/weapon/twohanded/spear/CheckParts(list/parts_list)
 	..()
 	if(explosive)
-		explosive.loc = get_turf(src.loc)
+		explosive.forceMove(get_turf(src.loc))
 		explosive = null
 	var/obj/item/weapon/grenade/G = locate() in contents
 	if(G)

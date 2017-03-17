@@ -1,7 +1,7 @@
 /atom/movable/proc/onShuttleMove(turf/T1, rotation)
 	if(rotation)
 		shuttleRotate(rotation)
-	loc = T1
+	forceMove(T1)
 //	if (length(client_mobs_in_contents))
 //		update_parallax_contents()
 	return 1

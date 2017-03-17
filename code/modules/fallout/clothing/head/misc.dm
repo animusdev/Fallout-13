@@ -2,6 +2,7 @@
 
 /obj/item/clothing/head/f13
 	icon = 'icons/fallout/clothing/hats.dmi'
+	self_weight = 0.8
 
 /obj/item/clothing/head/f13/police
 	name = "pre-War police hat"
@@ -83,6 +84,7 @@
 	name = "detective's fedora"
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
+	self_weight = 1
 	item_state = "fedora"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
 
@@ -97,12 +99,14 @@
 	desc = "The Yamato is loaded. And so am I."
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
+	self_weight = 3
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0,fire = 0, acid = 0)
 
 //Fluff welding masks
 
 /obj/item/clothing/head/welding/f13
 	icon = 'icons/fallout/clothing/hats.dmi'
+	self_weight = 2
 
 /obj/item/clothing/head/welding/f13/fire
 	name = "cremator welding helmet"

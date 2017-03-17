@@ -34,7 +34,7 @@
 	if(!mytape && istype(I, /obj/item/device/tape))
 		if(!user.unEquip(I))
 			return
-		I.loc = src
+		I.forceMove(src)
 		mytape = I
 		to_chat(user, "<span class='notice'>You insert [I] into [src].</span>")
 		update_icon()

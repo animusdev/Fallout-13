@@ -148,7 +148,7 @@
 				toggle_lock(user)
 	else if(open && !showpiece)
 		if(user.drop_item())
-			W.loc = src
+			W.forceMove(src)
 			showpiece = W
 			to_chat(user, "<span class='notice'>You put [W] on display</span>")
 			update_icon()
@@ -214,7 +214,7 @@
 		to_chat(user, "<span class='notice'>You start installing the electronics into [src]...</span>")
 		playsound(src.loc, I.usesound, 50, 1)
 		if(user.unEquip(I) && do_after(user, 30, target = src))
-			I.loc = src
+			I.forceMove(src)
 			electronics = I
 			to_chat(user, "<span class='notice'>You install the airlock electronics.</span>")
 
@@ -228,7 +228,7 @@
 			G.use(10)
 			var/obj/structure/displaycase/display = new(src.loc)
 			if(electronics)
-				electronics.loc = display
+				electronics.forceMove(display)
 				display.electronics = electronics
 				if(electronics.one_access)
 					display.req_one_access = electronics.accesses

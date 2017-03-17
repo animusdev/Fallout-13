@@ -63,7 +63,7 @@
 		if(!user.drop_item())
 			return
 		beaker = I
-		I.loc = src
+		I.forceMove(src)
 		to_chat(user, "<span class='notice'>You add the beaker to the machine.</span>")
 		icon_state = "mixer1b"
 		return
@@ -124,7 +124,7 @@
 
 /obj/machinery/chem_heater/proc/eject_beaker()
 	if(beaker)
-		beaker.loc = get_turf(src)
+		beaker.forceMove(get_turf(src))
 		beaker.reagents.handle_reactions()
 		beaker = null
 		icon_state = "mixer0b"

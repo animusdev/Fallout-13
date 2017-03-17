@@ -111,7 +111,7 @@
 		if(user.grab_state < GRAB_AGGRESSIVE)
 			to_chat(user, "<span class='warning'>You need a better grip to do that!</span>")
 			return
-		L.loc = src.loc
+		L.forceMove(src.loc)
 		L.Weaken(5)
 		visible_message("<span class='danger'>[user] dunks [L] into \the [src]!</span>")
 		user.stop_pulling()
@@ -124,7 +124,7 @@
 		if(istype(I, /obj/item/projectile))
 			return
 		if(prob(50))
-			I.loc = src.loc
+			I.forceMove(src.loc)
 			visible_message("<span class='warning'> Swish! \the [I] lands in \the [src].</span>")
 		else
 			visible_message("<span class='danger'> \the [I] bounces off of \the [src]'s rim!</span>")
@@ -212,7 +212,7 @@
 
 /obj/machinery/conveyor/holodeck/attackby(obj/item/I, mob/user, params)
 	if(user.drop_item())
-		I.loc = src.loc
+		I.forceMove(src.loc)
 	else
 		return ..()
 

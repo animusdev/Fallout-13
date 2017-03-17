@@ -147,9 +147,9 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 
 	var/turf/T = src.loc
 
-	src.loc = null
+	src.forceMove(null)
 
-	src.loc = T
+	src.forceMove(T)
 
 /obj/item/examine(mob/user) //This might be spammy. Remove?
 	..()

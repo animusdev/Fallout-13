@@ -16,7 +16,7 @@
 /obj/item/weapon/paper_bin/initialize()
 	var/obj/item/weapon/pen/P = locate(/obj/item/weapon/pen) in src.loc
 	if(P && !bin_pen)
-		P.loc = src
+		P.forceMove(src)
 		bin_pen = P
 		update_icon()
 		var/static/warned = FALSE
@@ -70,7 +70,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(bin_pen)
 		var/obj/item/weapon/pen/P = bin_pen
-		P.loc = user.loc
+		P.forceMove(user.loc)
 		user.put_in_hands(P)
 		to_chat(user, "<span class='notice'>You take [P] out of \the [src].</span>")
 		bin_pen = null
@@ -91,7 +91,7 @@
 					P.rigged = 1
 					P.updateinfolinks()
 
-		P.loc = user.loc
+		P.forceMove(user.loc)
 		user.put_in_hands(P)
 		to_chat(user, "<span class='notice'>You take [P] out of \the [src].</span>")
 	else
@@ -105,7 +105,7 @@
 		var/obj/item/weapon/paper/P = I
 		if(!user.unEquip(P))
 			return
-		P.loc = src
+		P.forceMove(src)
 		to_chat(user, "<span class='notice'>You put [P] in [src].</span>")
 		papers.Add(P)
 		total_paper++
@@ -114,7 +114,7 @@
 		var/obj/item/weapon/pen/P = I
 		if(!user.unEquip(P))
 			return
-		P.loc = src
+		P.forceMove(src)
 		to_chat(user, "<span class='notice'>You put [P] in [src].</span>")
 		bin_pen = P
 		update_icon()

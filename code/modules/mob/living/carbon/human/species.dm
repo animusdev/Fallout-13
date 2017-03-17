@@ -810,6 +810,15 @@
 		else
 			H.see_invisible = min(G.invis_view, H.see_invisible)
 
+	if(H.head)
+		var/obj/item/clothing/head/G = H.head
+		H.sight |= G.vision_flags
+		H.see_in_dark = max(G.darkness_view, H.see_in_dark)
+		if(G.invis_override)
+			H.see_invisible = G.invis_override
+		else
+			H.see_invisible = min(G.invis_view, H.see_invisible)
+
 	for(var/X in H.dna.mutations)
 		var/datum/mutation/M = X
 		if(M.name == XRAY)

@@ -67,7 +67,7 @@
 		"<span class='notice'>[src] dispenses a [prize]!</span>",
 		"<span class='notice'>You hear a chime and a clunk.</span>")
 
-	prize.loc = src.loc
+	prize.forceMove(src.loc)
 #undef PULSE_MEDAL
 /obj/machinery/computer/arcade/emp_act(severity)
 	..(severity)

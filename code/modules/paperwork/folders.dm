@@ -34,7 +34,7 @@
 	if(istype(W, /obj/item/weapon/paper) || istype(W, /obj/item/weapon/photo) || istype(W, /obj/item/documents))
 		if(!user.unEquip(W))
 			return
-		W.loc = src
+		W.forceMove(src)
 		to_chat(user, "<span class='notice'>You put [W] into [src].</span>")
 		update_icon()
 	else if(istype(W, /obj/item/weapon/pen))
@@ -63,7 +63,7 @@
 		if(href_list["remove"])
 			var/obj/item/I = locate(href_list["remove"])
 			if(istype(I) && I.loc == src)
-				I.loc = usr.loc
+				I.forceMove(usr.loc)
 				usr.put_in_hands(I)
 
 		if(href_list["read"])

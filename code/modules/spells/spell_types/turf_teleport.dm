@@ -42,5 +42,5 @@
 				target.buckled.unbuckle_mob(target,force=1)
 			if(target.has_buckled_mobs())
 				target.unbuckle_all_mobs(force=1)
-			target.loc = picked
+			target.forceMove(picked)
 			playsound(get_turf(user), sound2, 50,1)

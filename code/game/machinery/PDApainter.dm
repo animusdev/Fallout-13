@@ -76,7 +76,7 @@
 				if(!user.drop_item())
 					return
 				storedpda = P
-				P.loc = src
+				P.forceMove(src)
 				P.add_fingerprint(user)
 				update_icon()
 
@@ -137,7 +137,7 @@
 		return
 
 	if(storedpda)
-		storedpda.loc = get_turf(src.loc)
+		storedpda.forceMove(get_turf(src.loc))
 		storedpda = null
 		update_icon()
 	else

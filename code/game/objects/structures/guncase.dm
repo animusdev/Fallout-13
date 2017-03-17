@@ -20,7 +20,7 @@
 	..()
 	for(var/obj/item/I in loc.contents)
 		if(istype(I, gun_category))
-			I.loc = src
+			I.forceMove(src)
 		if(contents.len >= capacity)
 			break
 	update_icon()

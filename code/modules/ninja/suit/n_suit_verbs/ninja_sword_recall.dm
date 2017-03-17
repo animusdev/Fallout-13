@@ -32,7 +32,7 @@
 			if(energyKatana in C.stomach_contents)
 				C.stomach_contents -= energyKatana
 
-		energyKatana.loc = get_turf(energyKatana)
+		energyKatana.forceMove(get_turf(energyKatana))
 
 		if(inview) //If we can see the katana, throw it towards ourselves, damaging people as we go.
 			energyKatana.spark_system.start()

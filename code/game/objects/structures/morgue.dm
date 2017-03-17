@@ -272,7 +272,7 @@ var/global/list/crematoriums = new/list()
 			return
 	if(!ismob(user) || user.lying || user.incapacitated())
 		return
-	O.loc = src.loc
+	O.forceMove(src.loc)
 	if (user != O)
 		visible_message("<span class='warning'>[user] stuffs [O] into [src].</span>")
 	return

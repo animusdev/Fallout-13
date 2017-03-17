@@ -69,7 +69,7 @@
 		if(!l_arm && !r_arm && !l_leg && !r_leg && !chest && !head)
 			if (M.use(1))
 				var/obj/item/weapon/ed209_assembly/B = new /obj/item/weapon/ed209_assembly
-				B.loc = get_turf(src)
+				B.forceMove(get_turf(src))
 				to_chat(user, "<span class='notice'>You arm the robot frame.</span>")
 				if (user.get_inactive_held_item()==src)
 					user.unEquip(src)
@@ -150,7 +150,7 @@
 		if(HD.flash2 && HD.flash1)
 			if(!user.unEquip(HD))
 				return
-			HD.loc = src
+			HD.forceMove(src)
 			HD.icon_state = initial(HD.icon_state)//in case it is a dismembered robotic limb
 			HD.cut_overlays()
 			src.head = HD
@@ -233,9 +233,9 @@
 			O.job = "Cyborg"
 
 			O.cell = chest.cell
-			chest.cell.loc = O
+			chest.cell.forceMove(O)
 			chest.cell = null
-			W.loc = O//Should fix cybros run time erroring when blown up. It got deleted before, along with the frame.
+			W.forceMove(O)//Should fix cybros run time erroring when blown up. It got deleted before, along with the frame.
 			if(O.mmi) //we delete the mmi created by robot/New()
 				qdel(O.mmi)
 			O.mmi = W //and give the real mmi to the borg.
@@ -243,7 +243,7 @@
 
 			feedback_inc("cyborg_birth",1)
 
-			src.loc = O
+			src.forceMove(O)
 			O.robot_suit = src
 
 			if(!locomotion)

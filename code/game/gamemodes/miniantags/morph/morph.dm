@@ -78,7 +78,7 @@
 /mob/living/simple_animal/hostile/morph/proc/eat(atom/movable/A)
 	if(A && A.loc != src)
 		visible_message("<span class='warning'>[src] swallows [A] whole!</span>")
-		A.loc = src
+		A.forceMove(src)
 		return 1
 	return 0
 
@@ -149,7 +149,7 @@
 
 /mob/living/simple_animal/hostile/morph/proc/barf_contents()
 	for(var/atom/movable/AM in src)
-		AM.loc = loc
+		AM.forceMove(loc)
 		if(prob(90))
 			step(AM, pick(alldirs))
 

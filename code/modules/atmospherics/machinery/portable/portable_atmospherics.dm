@@ -84,7 +84,7 @@
 			var/obj/item/weapon/tank/T = W
 			if(holding || !user.drop_item())
 				return
-			T.loc = src
+			T.forceMove(src)
 			holding = T
 			update_icon()
 	else if(istype(W, /obj/item/weapon/wrench))

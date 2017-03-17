@@ -85,7 +85,7 @@
 		if(!user.unEquip(src))
 			return
 		src.target = AM
-		loc = null
+		forceMove(null)
 
 		var/message = "[ADMIN_LOOKUPFLW(user)] planted [name] on [target.name] at [ADMIN_COORDJMP(target)] with [timer] second fuse"
 		bombers += message

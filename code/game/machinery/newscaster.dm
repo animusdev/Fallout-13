@@ -783,7 +783,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 /obj/machinery/newscaster/proc/AttachPhoto(mob/user)
 	if(photo)
 		if(!photo.sillynewscastervar)
-			photo.loc = loc
+			photo.forceMove(loc)
 			if(!issilicon(user))
 				user.put_in_inactive_hand(photo)
 		else
@@ -793,7 +793,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		photo = user.get_active_held_item()
 		if(!user.drop_item())
 			return
-		photo.loc = src
+		photo.forceMove(src)
 	if(issilicon(user))
 		var/list/nametemp = list()
 		var/find
@@ -861,7 +861,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		NEWSPAPER.wantedBody = news_network.wanted_issue.body
 		if(news_network.wanted_issue.img)
 			NEWSPAPER.wantedPhoto = news_network.wanted_issue.img
-	NEWSPAPER.loc = get_turf(src)
+	NEWSPAPER.forceMove(get_turf(src))
 	NEWSPAPER.creationTime = news_network.lastAction
 	paper_remaining--
 

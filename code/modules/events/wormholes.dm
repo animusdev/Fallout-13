@@ -36,12 +36,12 @@
 		for(var/obj/effect/portal/wormhole/O in wormholes)
 			var/turf/T = pick(pick_turfs)
 			if(T)
-				O.loc = T
+				O.forceMove(T)
 
 /datum/round_event/wormholes/end()
 	portals.Remove(wormholes)
 	for(var/obj/effect/portal/wormhole/O in wormholes)
-		O.loc = null
+		O.forceMove(null)
 	wormholes.Cut()
 
 

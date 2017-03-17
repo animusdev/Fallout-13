@@ -20,7 +20,7 @@
 		if(!isturf(ai.loc))
 			return
 		T = get_turf(T)
-		loc = T
+		forceMove(T)
 		cameranet.visibility(src)
 		if(ai.client)
 			ai.client.eye = src

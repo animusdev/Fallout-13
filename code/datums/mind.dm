@@ -985,7 +985,7 @@
 					log_admin("[key_name(usr)] has wizard'ed [current].")
 					ticker.mode.update_wiz_icons_added(src)
 			if("lair")
-				current.loc = pick(wizardstart)
+				current.forceMove(pick(wizardstart))
 			if("dressup")
 				ticker.mode.equip_wizard(current)
 			if("name")
@@ -1047,7 +1047,7 @@
 					message_admins("[key_name_admin(usr)] has nuke op'ed [current].")
 					log_admin("[key_name(usr)] has nuke op'ed [current].")
 			if("lair")
-				current.loc = get_turf(locate("landmark*Syndicate-Spawn"))
+				current.forceMove(get_turf(locate("landmark*Syndicate-Spawn")))
 			if("dressup")
 				var/mob/living/carbon/human/H = current
 				qdel(H.belt)
@@ -1299,7 +1299,7 @@
 		current.faction |= "syndicate"
 
 		if(spawnloc)
-			current.loc = spawnloc
+			current.forceMove(spawnloc)
 
 		if(ishuman(current))
 			var/mob/living/carbon/human/H = current
@@ -1346,10 +1346,10 @@
 		special_role = "Wizard"
 		assigned_role = "Wizard"
 		if(!wizardstart.len)
-			current.loc = pick(latejoin)
+			current.forceMove(pick(latejoin))
 			to_chat(current, "HOT INSERTION, GO GO GO")
 		else
-			current.loc = pick(wizardstart)
+			current.forceMove(pick(wizardstart))
 
 		ticker.mode.equip_wizard(current)
 		ticker.mode.name_wizard(current)
@@ -1458,11 +1458,11 @@
 			if("Agent")
 				S.agent = 1
 				L = agent_landmarks[team]
-				H.loc = L.loc
+				H.forceMove(L.loc)
 			if("Scientist")
 				S.scientist = 1
 				L = agent_landmarks[team]
-				H.loc = L.loc
+				H.forceMove(L.loc)
 
 /datum/mind/proc/AddSpell(obj/effect/proc_holder/spell/S)
 	spell_list += S

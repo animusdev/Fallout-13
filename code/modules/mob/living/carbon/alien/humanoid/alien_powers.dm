@@ -279,7 +279,7 @@ Doesn't work on other aliens/AI.*/
 	if(user.stomach_contents.len)
 		for(var/atom/movable/A in user.stomach_contents)
 			user.stomach_contents.Remove(A)
-			A.loc = user.loc
+			A.forceMove(user.loc)
 			if(isliving(A))
 				var/mob/M = A
 				M.reset_perspective()

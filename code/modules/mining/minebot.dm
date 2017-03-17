@@ -135,11 +135,11 @@
 /mob/living/simple_animal/hostile/mining_drone/proc/CollectOre()
 	var/obj/item/weapon/ore/O
 	for(O in src.loc)
-		O.loc = src
+		O.forceMove(src)
 	for(var/dir in alldirs)
 		var/turf/T = get_step(src,dir)
 		for(O in T)
-			O.loc = src
+			O.forceMove(src)
 	return
 
 /mob/living/simple_animal/hostile/mining_drone/proc/DropOre(message = 1)
@@ -151,7 +151,7 @@
 		to_chat(src, "<span class='notice'>You dump your stored ore.</span>")
 	for(var/obj/item/weapon/ore/O in contents)
 		contents -= O
-		O.loc = src.loc
+		O.forceMove(src.loc)
 	return
 
 /mob/living/simple_animal/hostile/mining_drone/adjustHealth(amount)

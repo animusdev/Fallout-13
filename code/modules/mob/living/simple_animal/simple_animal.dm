@@ -286,6 +286,9 @@
 
 	. += get_pulling_delay()
 
+	if(contents_weight)
+		. += contents_weight/25
+
 	. += config.animal_delay
 
 /mob/living/simple_animal/Stat()
@@ -544,7 +547,7 @@
 			if(A.density)
 				if(A != src && A != M)
 					return
-		M.loc = get_turf(src)
+		M.forceMove(get_turf(src))
 		riding_datum.handle_vehicle_offsets()
 		riding_datum.ridden = src
 

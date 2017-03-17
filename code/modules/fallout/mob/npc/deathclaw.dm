@@ -14,6 +14,7 @@
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5, /obj/item/stack/sheet/animalhide/deathclaw=3)
 	maxHealth = 500
 	health = 500
+	self_weight = 300
 
 	ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
 	sound_speak_chance = 5

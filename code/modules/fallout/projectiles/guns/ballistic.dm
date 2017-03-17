@@ -11,6 +11,7 @@
 	can_suppress = 1
 	burst_size = 1
 	fire_delay = 0
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99/update_icon()
 	..()
@@ -30,6 +31,7 @@
 	casing_ejector = 0
 	zoomable = TRUE
 	zoom_amt = 4
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/automatic/rifle
 	name = "Automatic Rifle .308"
@@ -41,6 +43,7 @@
 	can_suppress = 1
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
@@ -52,6 +55,7 @@
 	can_suppress = 1
 	casing_ejector = 0
 	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "rifle-scope"
@@ -59,6 +63,7 @@
 	can_suppress = 1
 	zoomable = TRUE
 	zoom_amt = 6
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	name = "Assault Rifle 5.56mm"
@@ -72,6 +77,7 @@
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	name = "10-mm submachine gun"
@@ -85,6 +91,7 @@
 	can_suppress = 0
 	burst_size = 3
 	casing_ejector = 1
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/shotgun/pipe
 	name = "pipe gun"
@@ -96,6 +103,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/pipe
 	casing_ejector = 1
 	weapon_weight = WEAPON_LIGHT
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/shotgun/trail
 	name = "trail carbine"
@@ -107,6 +115,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/trail
 	weapon_weight = WEAPON_MEDIUM
 	casing_ejector = 1
+	w_class = WEIGHT_CLASS_HUGE
 
 /obj/item/weapon/gun/ballistic/automatic/bozar
 	name = "\improper Bozar"
@@ -114,7 +123,6 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "bozar"
 	item_state = "arg" //Looks like bozar
-	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
 	origin_tech = "combat=6;engineering=3;"
 	mag_type = /obj/item/ammo_box/magazine/m223
@@ -125,3 +133,4 @@
 	fire_delay = 1
 	zoomable = TRUE
 	zoom_amt = 7
+	w_class = WEIGHT_CLASS_HUGE

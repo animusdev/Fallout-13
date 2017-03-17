@@ -10,7 +10,7 @@
 	if(!loc)
 		if(client)
 			for(var/obj/effect/landmark/error/E in landmarks_list)
-				loc = E.loc
+				forceMove(E.loc)
 				break
 			message_admins("[key_name_admin(src)] was found to have no .loc with an attached client, if the cause is unknown it would be wise to ask how this was accomplished.")
 			log_game("[key_name(src)] was found to have no .loc with an attached client.")

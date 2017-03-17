@@ -71,7 +71,7 @@
 			if(!user.unEquip(W))
 				to_chat(user, "<span class='warning'>\The [W] is stuck to you!</span>")
 				return
-			W.loc = src
+			W.forceMove(src)
 			device = W
 			to_chat(user, "<span class='notice'>You add [W] to the button.</span>")
 
@@ -79,7 +79,7 @@
 			if(!user.unEquip(W))
 				to_chat(user, "<span class='warning'>\The [W] is stuck to you!</span>")
 				return
-			W.loc = src
+			W.forceMove(src)
 			board = W
 			if(board.one_access)
 				req_one_access = board.accesses
@@ -126,10 +126,10 @@
 	if(panel_open)
 		if(device || board)
 			if(device)
-				device.loc = get_turf(src)
+				device.forceMove(get_turf(src))
 				device = null
 			if(board)
-				board.loc = get_turf(src)
+				board.forceMove(get_turf(src))
 				req_access = list()
 				req_one_access = list()
 				board = null

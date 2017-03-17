@@ -181,7 +181,7 @@
 			return
 
 		beaker = B
-		beaker.loc = src
+		beaker.forceMove(src)
 		to_chat(user, "<span class='notice'>You add \the [B] to the machine.</span>")
 
 		if(!icon_beaker)
@@ -293,7 +293,7 @@
 
 /obj/machinery/chem_dispenser/constructable/on_deconstruction()
 	if(beaker)
-		beaker.loc = loc
+		beaker.forceMove(loc)
 		beaker = null
 
 /obj/machinery/chem_dispenser/drinks

@@ -211,17 +211,17 @@
 					return
 				playsound(loc, W.usesound, 100, 1)
 				user.visible_message("[user] installs the electronics into the airlock assembly.", "<span class='notice'>You start to install electronics into the airlock assembly...</span>")
-				W.loc = src
+				W.forceMove(src)
 
 				if(do_after(user, 40, target = src))
 					if(!src || electronics)
-						W.loc = src.loc
+						W.forceMove(src.loc)
 						return
 					to_chat(user, "<span class='notice'>You install the airlock electronics.</span>")
 					name = "near finished windoor assembly"
 					electronics = W
 				else
-					W.loc = loc
+					W.forceMove(loc)
 
 			//Screwdriver to remove airlock electronics. Step 6 undone.
 			else if(istype(W, /obj/item/weapon/screwdriver))
@@ -239,7 +239,7 @@
 					var/obj/item/weapon/electronics/airlock/ae
 					ae = electronics
 					electronics = null
-					ae.loc = loc
+					ae.forceMove(loc)
 
 			else if(istype(W, /obj/item/weapon/pen))
 				var/t = stripped_input(user, "Enter the name for the door.", name, created_name,MAX_NAME_LEN)
@@ -284,7 +284,7 @@
 							else
 								windoor.req_access = electronics.accesses
 							windoor.electronics = electronics
-							electronics.loc = windoor
+							electronics.forceMove(windoor)
 							if(created_name)
 								windoor.name = created_name
 							qdel(src)
@@ -304,7 +304,7 @@
 
 							windoor.req_access = electronics.accesses
 							windoor.electronics = electronics
-							electronics.loc = windoor
+							electronics.forceMove(windoor)
 							if(created_name)
 								windoor.name = created_name
 							qdel(src)

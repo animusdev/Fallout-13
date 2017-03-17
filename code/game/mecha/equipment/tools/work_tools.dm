@@ -39,7 +39,7 @@
 				O.anchored = 1
 				if(do_after_cooldown(target))
 					cargo_holder.cargo += O
-					O.loc = chassis
+					O.forceMove(chassis)
 					O.anchored = 0
 					occupant_message("<span class='notice'>[target] successfully loaded.</span>")
 					log_message("Loaded [O]. Cargo compartment capacity: [cargo_holder.cargo_capacity - cargo_holder.cargo.len]")
@@ -90,7 +90,7 @@
 				O.anchored = 1
 				if(do_after_cooldown(target))
 					cargo_holder.cargo += O
-					O.loc = chassis
+					O.forceMove(chassis)
 					O.anchored = 0
 					occupant_message("<span class='notice'>[target] successfully loaded.</span>")
 					log_message("Loaded [O]. Cargo compartment capacity: [cargo_holder.cargo_capacity - cargo_holder.cargo.len]")

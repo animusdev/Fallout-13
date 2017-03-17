@@ -63,7 +63,7 @@
 		else
 			if(!user.unEquip(W))
 				return
-			W.loc = src
+			W.forceMove(src)
 			src.cell = W
 			to_chat(user, "<span class='notice'>You insert the cell.</span>")
 	else if(istype(W, /obj/item/stack/cable_coil))
@@ -120,7 +120,7 @@
 		else
 			if(!user.unEquip(W))
 				return
-			F.loc = src
+			F.forceMove(src)
 			if(src.flash1)
 				src.flash2 = F
 			else

@@ -25,7 +25,7 @@
 			if(!user.unEquip(item))
 				return
 			tank_one = item
-			item.loc = src
+			item.forceMove(src)
 			to_chat(user, "<span class='notice'>You attach the tank to the transfer valve.</span>")
 			if(item.w_class > w_class)
 				w_class = item.w_class
@@ -33,7 +33,7 @@
 			if(!user.unEquip(item))
 				return
 			tank_two = item
-			item.loc = src
+			item.forceMove(src)
 			to_chat(user, "<span class='notice'>You attach the tank to the transfer valve.</span>")
 			if(item.w_class > w_class)
 				w_class = item.w_class
@@ -50,7 +50,7 @@
 			return
 		user.remove_from_mob(item)
 		attached_device = A
-		A.loc = src
+		A.forceMove(src)
 		to_chat(user, "<span class='notice'>You attach the [item] to the valve controls and secure it.</span>")
 		A.holder = src
 		A.toggle_secure()	//this calls update_icon(), which calls update_icon() on the holder (i.e. the bomb).
@@ -82,7 +82,7 @@
 		if(tank_one && href_list["tankone"])
 			split_gases()
 			valve_open = 0
-			tank_one.loc = get_turf(src)
+			tank_one.forceMove(get_turf(src))
 			tank_one = null
 			update_icon()
 			if((!tank_two || tank_two.w_class < WEIGHT_CLASS_BULKY) && (w_class > WEIGHT_CLASS_NORMAL))
@@ -90,7 +90,7 @@
 		else if(tank_two && href_list["tanktwo"])
 			split_gases()
 			valve_open = 0
-			tank_two.loc = get_turf(src)
+			tank_two.forceMove(get_turf(src))
 			tank_two = null
 			update_icon()
 			if((!tank_one || tank_one.w_class < WEIGHT_CLASS_BULKY) && (w_class > WEIGHT_CLASS_NORMAL))
@@ -99,7 +99,7 @@
 			toggle_valve()
 		else if(attached_device)
 			if(href_list["rem_device"])
-				attached_device.loc = get_turf(src)
+				attached_device.forceMove(get_turf(src))
 				attached_device:holder = null
 				attached_device = null
 				update_icon()

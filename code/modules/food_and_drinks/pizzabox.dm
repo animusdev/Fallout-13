@@ -140,7 +140,7 @@
 					return
 				boxes += add
 				newbox.boxes.Cut()
-				newbox.loc = src
+				newbox.forceMove(src)
 				to_chat(user, "<span class='notice'>You put [newbox] on top of [src]!</span>")
 				newbox.update_icon()
 				update_icon()
@@ -154,7 +154,7 @@
 			if(!user.drop_item())
 				return
 			pizza = I
-			I.loc = src
+			I.forceMove(src)
 			to_chat(user, "<span class='notice'>You put [I] in [src].</span>")
 			update_icon()
 			return
@@ -164,7 +164,7 @@
 				return
 			wires = new /datum/wires/explosive/pizza(src)
 			bomb = I
-			I.loc = src
+			I.forceMove(src)
 			to_chat(user, "<span class='notice'>You put [I] in [src]. Sneeki breeki...</span>")
 			update_icon()
 			return

@@ -126,7 +126,7 @@
 						if(!user.drop_item())
 								return 1
 						beaker =  I
-						beaker.loc = src
+						beaker.forceMove(src)
 						update_icon()
 						src.updateUsrDialog()
 				else
@@ -168,7 +168,7 @@
 						return 1
 
 		if(user.drop_item())
-				I.loc = src
+				I.forceMove(src)
 				holdingitems += I
 				src.updateUsrDialog()
 				return 0
@@ -254,7 +254,7 @@
 				return
 		if (!beaker)
 				return
-		beaker.loc = src.loc
+		beaker.forceMove(src.loc)
 		beaker = null
 		update_icon()
 		updateUsrDialog()
@@ -267,7 +267,7 @@
 				return
 
 		for(var/obj/item/O in holdingitems)
-				O.loc = src.loc
+				O.forceMove(src.loc)
 				holdingitems -= O
 		holdingitems = list()
 		updateUsrDialog()

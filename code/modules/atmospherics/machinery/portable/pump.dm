@@ -135,7 +135,7 @@
 				investigate_log("was set to [pump.target_pressure] kPa by [key_name(usr)].", "atmos")
 		if("eject")
 			if(holding)
-				holding.loc = get_turf(src)
+				holding.forceMove(get_turf(src))
 				holding = null
 				. = TRUE
 	update_icon()

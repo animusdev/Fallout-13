@@ -41,7 +41,7 @@
 	// now everything inside the disposal gets put into the holder
 	// note AM since can contain mobs or objs
 	for(var/atom/movable/AM in D)
-		AM.loc = src
+		AM.forceMove(src)
 		if(istype(AM, /obj/structure/bigDelivery) && !hasmob)
 			var/obj/structure/bigDelivery/T = AM
 			src.destinationTag = T.sortTag
@@ -56,7 +56,7 @@
 	if(!D.trunk)
 		D.expel(src)	// no trunk connected, so expel immediately
 		return
-	loc = D.trunk
+	forceMove(D.trunk)
 	active = 1
 	setDir(DOWN)
 	move()
@@ -100,7 +100,7 @@
 // used when a a holder meets a stuck holder
 /obj/structure/disposalholder/proc/merge(obj/structure/disposalholder/other)
 	for(var/atom/movable/AM in other)
-		AM.loc = src		// move everything in other holder to this one
+		AM.forceMove(src		)// move everything in other holder to this one
 		if(ismob(AM))
 			var/mob/M = AM
 			M.reset_perspective(src)	// if a client mob, update eye to follow this holder
@@ -154,7 +154,7 @@
 		base_icon_state = make_from.base_state
 		setDir(make_from.dir)
 		dpdir = make_from.dpdir
-		make_from.loc = src
+		make_from.forceMove(src)
 		stored = make_from
 	else
 		base_icon_state = icon_state
@@ -212,10 +212,10 @@
 		if(H2 && !H2.active)
 			H.merge(H2)
 
-		H.loc = P
+		H.forceMove(P)
 		return P
 	else			// if wasn't a pipe, then they're now in our turf
-		H.loc = get_turf(src)
+		H.forceMove(get_turf(src))
 		return null
 
 // update the icon_state to reflect hidden status
@@ -322,7 +322,7 @@
 		if(disassembled)
 			if(stored)
 				var/turf/T = loc
-				stored.loc = T
+				stored.forceMove(T)
 				transfer_fingerprints_to(stored)
 				stored.setDir(dir)
 				stored.density = 0
@@ -650,7 +650,7 @@
 
 	if(make_from)
 		setDir(make_from.dir)
-		make_from.loc = src
+		make_from.forceMove(src)
 		stored = make_from
 	else
 		stored = new (src, DISP_END_OUTLET,dir)
@@ -709,7 +709,7 @@
 			if(do_after(user,20*I.toolspeed, target = src))
 				if(!src || !W.isOn()) return
 				to_chat(user, "<span class='notice'>You slice the floorweld off \the [src].</span>")
-				stored.loc = loc
+				stored.forceMove(loc)
 				src.transfer_fingerprints_to(stored)
 				stored.update_icon()
 				stored.anchored = 0

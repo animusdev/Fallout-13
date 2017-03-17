@@ -28,7 +28,7 @@
 			return ..()
 		nadeassembly = A
 		A.master = src
-		A.loc = src
+		A.forceMove(src)
 		assemblyattacher = user.ckey
 		to_chat(user, "<span class='notice'>You add [A] to the [name].</span>")
 		playsound(src, 'sound/weapons/tap.ogg', 20, 1)
@@ -36,7 +36,7 @@
 		return
 	if(nadeassembly && istype(I, /obj/item/weapon/wirecutters))
 		playsound(src, I.usesound, 20, 1)
-		nadeassembly.loc = get_turf(src)
+		nadeassembly.forceMove(get_turf(src))
 		nadeassembly.master = null
 		nadeassembly = null
 		update_icon()
@@ -76,7 +76,7 @@
 		if(!user.unEquip(src))
 			return
 		src.target = AM
-		loc = null
+		forceMove(null)
 
 		message_admins("[ADMIN_LOOKUPFLW(user)] planted [name] on [target.name] at [ADMIN_COORDJMP(target)] with [det_time] second fuse",0,1)
 		log_game("[key_name(user)] planted [name] on [target.name] at [COORD(src)] with [det_time] second fuse")

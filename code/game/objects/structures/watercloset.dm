@@ -59,7 +59,7 @@
 			if(ishuman(user))
 				user.put_in_hands(I)
 			else
-				I.loc = get_turf(src)
+				I.forceMove(get_turf(src))
 			to_chat(user, "<span class='notice'>You find [I] in the cistern.</span>")
 			w_items -= I.w_class
 	else
@@ -91,7 +91,7 @@
 			if(!user.drop_item())
 				to_chat(user, "<span class='warning'>\The [I] is stuck to your hand, you cannot put it in the cistern!</span>")
 				return
-			I.loc = src
+			I.forceMove(src)
 			w_items += I.w_class
 			to_chat(user, "<span class='notice'>You carefully place [I] into the cistern.</span>")
 
@@ -483,7 +483,7 @@
 		var/obj/item/weapon/reagent_containers/food/snacks/monkeycube/M = O
 		to_chat(user, "<span class='notice'>You place [src] under a stream of water...</span>")
 		user.drop_item()
-		M.loc = get_turf(src)
+		M.forceMove(get_turf(src))
 		M.Expand()
 		return
 

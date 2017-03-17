@@ -20,7 +20,7 @@
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
 	list_reagents = list("nuka_cola" = 15, "radium" = 10)
 
-/obj/item/weapon/reagent_containers/food/drinks/flask/
+/obj/item/weapon/reagent_containers/food/drinks/flask
 	name = "metal flask"
 	desc = "A metallic liquid container. Never leave home without one."
 	icon_state = "flask"
@@ -28,11 +28,12 @@
 	materials = list(MAT_METAL=500)
 	volume = 60
 	list_reagents = list("water" = 50)
+	self_weight = 0.3
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/survival
 	name = "metal flask"
 	desc = "A metallic liquid container. Essential for survival out in the wastes."
-	list_reagents = list("water" = 30, "silver_sulfadiazine" = 20, "charcoal" = 10)
+	list_reagents = list("water" = 40, "silver_sulfadiazine" = 10)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vault13
 	name = "metal flask"

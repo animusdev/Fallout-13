@@ -92,7 +92,7 @@
 
 		if(user.unEquip(I))
 			jetpack = I
-			I.loc = src
+			I.forceMove(src)
 			to_chat(user, "<span class='notice'>You successfully install the jetpack into [src].</span>")
 
 	else if(istype(I, /obj/item/weapon/screwdriver))
@@ -104,7 +104,7 @@
 			return
 
 		jetpack.turn_off()
-		jetpack.loc = get_turf(src)
+		jetpack.forceMove(get_turf(src))
 		jetpack = null
 		to_chat(user, "<span class='notice'>You successfully remove the jetpack from [src].</span>")
 

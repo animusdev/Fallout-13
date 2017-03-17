@@ -98,7 +98,7 @@
 	if(!yes) //prevents multi bumps.
 		return
 	if(A == firer)
-		loc = A.loc
+		forceMove(A.loc)
 		return
 	A.ex_act(2)
 	playsound(src.loc, 'sound/effects/meteorimpact.ogg', 40, 1)

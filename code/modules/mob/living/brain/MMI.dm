@@ -64,7 +64,7 @@
 
 		brainmob = newbrain.brainmob
 		newbrain.brainmob = null
-		brainmob.loc = src
+		brainmob.forceMove(src)
 		brainmob.container = src
 		if(!newbrain.damaged_brain) // the brain organ hasn't been beaten to death.
 			brainmob.stat = CONSCIOUS //we manually revive the brain mob
@@ -72,7 +72,7 @@
 			living_mob_list += brainmob
 
 		brainmob.reset_perspective()
-		newbrain.loc = src //P-put your brain in it
+		newbrain.forceMove(src )//P-put your brain in it
 		brain = newbrain
 
 		name = "Man-Machine Interface: [brainmob.real_name]"
@@ -98,7 +98,7 @@
 
 /obj/item/device/mmi/proc/eject_brain(mob/user)
 	brainmob.container = null //Reset brainmob mmi var.
-	brainmob.loc = brain //Throw mob into brain.
+	brainmob.forceMove(brain )//Throw mob into brain.
 	brainmob.stat = DEAD
 	brainmob.emp_damage = 0
 	brainmob.reset_perspective() //so the brainmob follows the brain organ instead of the mmi. And to update our vision
@@ -128,7 +128,7 @@
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		var/obj/item/organ/brain/newbrain = H.getorgan(/obj/item/organ/brain)
-		newbrain.loc = src
+		newbrain.forceMove(src)
 		brain = newbrain
 	else if(!brain)
 		brain = new(src)

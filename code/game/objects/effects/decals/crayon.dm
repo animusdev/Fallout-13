@@ -8,7 +8,7 @@
 
 /obj/effect/decal/cleanable/crayon/New(location, main = "#FFFFFF", var/type = "rune1", var/e_name = "rune", var/rotation = 0, var/alt_icon = null)
 	..()
-	loc = location
+	forceMove(location)
 
 	name = e_name
 	desc = "A [name] vandalizing the station."

@@ -39,7 +39,7 @@ var/list/possible_uplinker_IDs = list("Alfa","Bravo","Charlie","Delta","Echo","F
 		if(!user.drop_item())
 			return
 		uplinkholder = I
-		I.loc = src
+		I.forceMove(src)
 		I.add_fingerprint(user)
 		update_icon()
 		updateUsrDialog()
@@ -53,7 +53,7 @@ var/list/possible_uplinker_IDs = list("Alfa","Bravo","Charlie","Delta","Echo","F
 
 /obj/machinery/computer/telecrystals/uplinker/proc/ejectuplink()
 	if(uplinkholder)
-		uplinkholder.loc = get_turf(src.loc)
+		uplinkholder.forceMove(get_turf(src.loc))
 		uplinkholder = null
 		update_icon()
 

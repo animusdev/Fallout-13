@@ -31,7 +31,7 @@
 	if(istype(W, /obj/item/weapon/paper))
 		if(!user.unEquip(W))
 			return
-		W.loc = src
+		W.forceMove(src)
 		toppaper = W
 		to_chat(user, "<span class='notice'>You clip the paper onto \the [src].</span>")
 		update_icon()
@@ -70,7 +70,7 @@
 
 		if(href_list["pen"])
 			if(haspen)
-				haspen.loc = usr.loc
+				haspen.forceMove(usr.loc)
 				usr.put_in_hands(haspen)
 				haspen = null
 
@@ -81,7 +81,7 @@
 					var/obj/item/weapon/pen/W = held
 					if(!usr.unEquip(W))
 						return
-					W.loc = src
+					W.forceMove(src)
 					haspen = W
 					to_chat(usr, "<span class='notice'>You slot [W] into [src].</span>")
 
@@ -94,7 +94,7 @@
 		if(href_list["remove"])
 			var/obj/item/P = locate(href_list["remove"])
 			if(istype(P) && P.loc == src)
-				P.loc = usr.loc
+				P.forceMove(usr.loc)
 				usr.put_in_hands(P)
 				if(P == toppaper)
 					toppaper = null

@@ -800,7 +800,7 @@
 				if(part_manip)
 					part_manip.forceMove(get_turf(src))
 					part_manip = null
-				I.loc = src
+				I.forceMove(src)
 				part_manip = I
 		if(istype(S, /obj/item/weapon/stock_parts/scanning_module))
 			usermessage("[I] has been sucessfully installed into systems.")
@@ -808,7 +808,7 @@
 				if(part_scan)
 					part_scan.forceMove(get_turf(src))
 					part_scan = null
-				I.loc = src
+				I.forceMove(src)
 				part_scan = I
 		if(istype(S, /obj/item/weapon/stock_parts/micro_laser))
 			usermessage("[I] has been sucessfully installed into systems.")
@@ -816,7 +816,7 @@
 				if(part_laser)
 					part_laser.forceMove(get_turf(src))
 					part_laser = null
-				I.loc = src
+				I.forceMove(src)
 				part_laser = I
 		if(istype(S, /obj/item/weapon/stock_parts/matter_bin))
 			usermessage("[I] has been sucessfully installed into systems.")
@@ -824,7 +824,7 @@
 				if(part_bin)
 					part_bin.forceMove(get_turf(src))
 					part_bin = null
-				I.loc = src
+				I.forceMove(src)
 				part_bin = I
 		if(istype(S, /obj/item/weapon/stock_parts/capacitor))
 			usermessage("[I] has been sucessfully installed into systems.")
@@ -832,7 +832,7 @@
 				if(part_cap)
 					part_cap.forceMove(get_turf(src))
 					part_cap = null
-				I.loc = src
+				I.forceMove(src)
 				part_cap = I
 	update_parts()
 	..()
@@ -1087,7 +1087,7 @@
 			user.unEquip(pack, 1)
 			user.update_inv_wear_suit()
 			user.visible_message("<span class='notice'>[user]'s [pack.name] detaches from their back and retracts into their [src]!</span>")
-	pack.loc = src
+	pack.forceMove(src)
 	playsound(src.loc, 'sound/mecha/mechmove03.ogg', 50, 1)
 	deployedpack = FALSE
 
@@ -1118,7 +1118,7 @@
 		user.unEquip(shoes, 1)
 		user.update_inv_wear_suit()
 		user.visible_message("<span class='notice'>[user]'s [shoes.name] retracts back into their [name]!</span>")
-	shoes.loc = src
+	shoes.forceMove(src)
 	deployedshoes = FALSE
 
 /obj/item/clothing/suit/space/hardsuit/flightsuit/proc/makepack()
@@ -1146,24 +1146,24 @@
 
 /obj/item/clothing/suit/space/hardsuit/flightsuit/proc/detach_pack()
 	pack.delink_suit()
-	pack.loc = get_turf(src)
+	pack.forceMove(get_turf(src))
 	pack = null
 	usermessage("You detach the flightpack.")
 
 /obj/item/clothing/suit/space/hardsuit/flightsuit/proc/attach_pack(obj/item/device/flightpack/F)
-	F.loc = src
+	F.forceMove(src)
 	pack = F
 	pack.relink_suit(src)
 	usermessage("You attach and fasten the flightpack.")
 
 /obj/item/clothing/suit/space/hardsuit/flightsuit/proc/detach_shoes()
 	shoes.delink_suit()
-	shoes.loc = get_turf(src)
+	shoes.forceMove(get_turf(src))
 	shoes = null
 	usermessage("You detach the flight shoes.")
 
 /obj/item/clothing/suit/space/hardsuit/flightsuit/proc/attach_shoes(obj/item/clothing/shoes/flightshoes/S)
-	S.loc = src
+	S.forceMove(src)
 	shoes = S
 	shoes.relink_suit(src)
 	usermessage("You attach and fasten a pair of flight shoes.")

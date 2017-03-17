@@ -159,7 +159,7 @@
 				to_chat(user, "<span class='warning'>\the [O] is stuck to your hand, you cannot put it in \the [src]!</span>")
 				return 0
 
-			O.loc = src
+			O.forceMove(src)
 			user.visible_message( \
 				"[user] has added \the [O] to \the [src].", \
 				"<span class='notice'>You add \the [O] to \the [src].</span>")
@@ -295,7 +295,7 @@
 
 /obj/machinery/microwave/proc/dispose()
 	for (var/obj/O in contents)
-		O.loc = src.loc
+		O.forceMove(src.loc)
 	to_chat(usr, "<span class='notice'>You dispose of the microwave contents.</span>")
 	updateUsrDialog()
 
