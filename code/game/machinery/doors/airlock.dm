@@ -1242,11 +1242,11 @@ var/list/airlock_overlays = list()
 		if(emagged)
 			return 0
 		use_power(50)
-		playsound(src.loc, doorOpen, 30, 1)
+		playsound(src.loc, 'sound/f13machines/doorairlock_open.ogg', 30, 1)
 		if(src.closeOther != null && istype(src.closeOther, /obj/machinery/door/airlock/) && !src.closeOther.density)
 			src.closeOther.close()
 	else
-		playsound(src.loc, 'sound/machines/airlockforced.ogg', 30, 1)
+		playsound(src.loc, 'sound/f13machines/doorairlock_forced_open.ogg', 30, 1)
 
 	if(autoclose && normalspeed)
 		addtimer(CALLBACK(src, .proc/autoclose), 150)
@@ -1291,9 +1291,9 @@ var/list/airlock_overlays = list()
 		if(emagged)
 			return
 		use_power(50)
-		playsound(src.loc, doorClose, 30, 1)
+		playsound(src.loc, 'sound/f13machines/doorairlock_close.ogg', 30, 1)
 	else
-		playsound(src.loc, 'sound/machines/airlockforced.ogg', 30, 1)
+		playsound(src.loc, 'sound/f13machines/doorairlock_forced_close.ogg', 30, 1)
 
 	var/obj/structure/window/killthis = (locate(/obj/structure/window) in get_turf(src))
 	if(killthis)

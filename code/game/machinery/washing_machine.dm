@@ -6,6 +6,7 @@
 	density = 1
 	anchored = 1
 	state_open = 1
+	var/sound_wash = 'sound/f13machines/washing_machine.ogg'
 	var/busy = 0
 	var/bloody_mess = 0
 	var/has_corgi = 0
@@ -36,6 +37,7 @@
 
 	busy = 1
 	update_icon()
+	playsound(src, sound_wash, 100, 1, -3)
 	sleep(200)
 	wash_cycle()
 

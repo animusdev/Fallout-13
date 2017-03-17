@@ -15,6 +15,8 @@
 	req_access = list(access_security)
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
 
+	var/turret_open = 'sound/f13machines/turret_open.ogg'
+	var/turret_close = 'sound/f13machines/turret_close.ogg'
 	var/base_icon_state = "standard"
 
 	var/emp_vunerable = 1 // Can be empd
@@ -404,6 +406,7 @@
 	invisibility = 0
 	raising = 1
 	if(cover)
+		playsound(src.loc, turret_open, 50, 0, 0)
 		flick("popup", cover)
 	sleep(10)
 	raising = 0
@@ -420,6 +423,7 @@
 	layer = OBJ_LAYER
 	raising = 1
 	if(cover)
+		playsound(src.loc, turret_close, 50, 0, 0)
 		flick("popdown", cover)
 	sleep(10)
 	raising = 0

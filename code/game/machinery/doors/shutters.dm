@@ -5,6 +5,8 @@
 	icon = 'icons/obj/doors/shutters.dmi'
 	layer = CLOSED_DOOR_LAYER
 	damage_deflection = 20
+	var/shuttersopen = 'sound/f13machines/doorshutter_open.ogg'
+	var/shuttersclose = 'sound/f13machines/doorshutter_close.ogg'
 
 /obj/machinery/door/poddoor/shutters/preopen
 	icon_state = "open"
@@ -21,9 +23,11 @@
 
 /obj/machinery/door/poddoor/shutters/open(ignorepower = 0)
 	..()
+	playsound(src.loc, shuttersopen, 50, 0)
 	layer = CLOSED_DOOR_LAYER
 
 
 /obj/machinery/door/poddoor/shutters/close(ignorepower = 0)
 	..()
+	playsound(src.loc, shuttersclose, 50, 0)
 	layer = CLOSED_DOOR_LAYER

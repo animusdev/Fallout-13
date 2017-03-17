@@ -573,7 +573,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/ballistic, /obj/item
 			//Strange audio
 //			to_chat(src, "Strange Audio")
 			switch(rand(1,18))
-				if(1) to_chat(src, 'sound/machines/airlock.ogg')
+				if(1) to_chat(src, 'sound/f13music/mysterious_stranger.ogg')
 				if(2)
 					if(prob(50))to_chat(src, 'sound/effects/Explosion1.ogg')
 					else to_chat(src, 'sound/effects/Explosion2.ogg')
@@ -606,9 +606,9 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/ballistic, /obj/item
 				if(13)
 					to_chat(src, "<span class='warning'>You feel a tiny prick!</span>")
 				if(14)
-					to_chat(src, "<h1 class='alert'>Priority Announcement</h1>")
-					to_chat(src, "<br><br><span class='alert'>The Emergency Shuttle has docked with the station. You have 3 minutes to board the Emergency Shuttle.</span><br><br>")
-					to_chat(src, sound('sound/AI/shuttledock.ogg'))
+					to_chat(src, "<h1 class='alert'>Unidentified Broadcast</h1>")
+					to_chat(src, "<br><br><span class='alert'>Follow the white rabbit.</span><br><br>")
+					to_chat(src, sound('sound/f13music/broadcast.ogg'))
 				if(15)
 					to_chat(src, 'sound/items/Welder.ogg')
 				if(16)
@@ -723,7 +723,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/ballistic, /obj/item
 						if(2,3)
 							halbody = image('icons/mob/human.dmi',target,"husk_s",TURF_LAYER)
 						if(4)
-							halbody = image('icons/mob/alien.dmi',target,"alienother",TURF_LAYER)
+							halbody = image('icons/fallout/mobs/animal.dmi',target,"grey_dead",TURF_LAYER)
 
 					if(client) client.images += halbody
 					spawn(rand(50,80)) //Only seen for a brief moment.
