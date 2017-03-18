@@ -188,6 +188,6 @@
 	seed = /obj/item/seeds/ferocactus
 	name = "barrel cactus fruit"
 	desc = "Barrel cactus fruit are found on ferocactus - a spherical cacti that can be encountered all over the wasteland.<br>They usually form in groups, with one large barrel cactus that contains the fruit surrounded by several smaller cacti."
-	icon_state = "ferocactus"
+	icon_state = "cactusfruit"
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
 	filling_color = "#FF6347"

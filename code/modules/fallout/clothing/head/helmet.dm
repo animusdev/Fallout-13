@@ -15,13 +15,23 @@
 
 /obj/item/clothing/head/helmet/f13/broken
 	name = "broken power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
-	icon_state = "brokenhelmet"
-	item_state = "brokenhelmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it has ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
+	icon_state = "broken"
+	item_state = "broken"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	self_weight = 5
+	self_weight = 3
+
+/obj/item/clothing/head/helmet/f13/tribal
+	name = "tribal power helmet"
+	desc = "This power armor helmet was salvaged by the savages from the battlefield.<br>They believe that helmet captures the spirit of the fallen warrior, so they painted some runes on, to give it a more sacred meaning."
+	icon_state = "tribal"
+	item_state = "tribal"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	self_weight = 4
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
@@ -84,19 +94,20 @@
 	self_weight = 0.45
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
-	glass_colour_type = null
+	glass_colour_type = /datum/client_colour/glass_colour/red
 	actions_types = list(/datum/action/item_action/toggle)
-	visor_vars_to_toggle = VISOR_DARKNESSVIEW
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	can_toggle = 1
 	var/enabled = 1
+
+/obj/item/clothing/head/helmet/f13/ranger/New()
+	..()
+	visor_toggling()
 
 /obj/item/clothing/head/helmet/f13/ranger/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
 	visor_toggling()
-	if(up)
-		glass_colour_type = /datum/client_colour/glass_colour/red
-	else
-		glass_colour_type = null
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		C.head_update(src, forced = 1)

@@ -552,13 +552,13 @@ for(var/t in test_times)
 
 /proc/weight2feeling(var/weight)
 	switch(weight)
-		if(0 to 5)
+		if(0 to 10)
 			return "Lightly"
-		if(5 to 25)
+		if(10 to 25)
 			return "Middling"
 		if(25 to 45)
 			return "Heavily"
-		if(45 to 60)
+		if(45 to 75)
 			return "Limit"
-		if(60 to INFINITY)
+		if(75 to INFINITY)
 			return "Unbearably"

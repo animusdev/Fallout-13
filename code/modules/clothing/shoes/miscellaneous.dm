@@ -20,7 +20,7 @@
 	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0, fire = 70, acid = 50)
 	strip_delay = 70
 	resistance_flags = 0
-	self_weight = 0.2
+	self_weight = 0.5
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads

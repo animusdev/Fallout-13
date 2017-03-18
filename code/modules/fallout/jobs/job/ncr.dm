@@ -60,10 +60,10 @@
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/ranger
 	belt = /obj/item/weapon/storage/belt/military/assault
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/smg10mm
-	belt_contents = list(/obj/item/ammo_box/magazine/m10mm_auto = 2, \
-		/obj/item/weapon/restraints/handcuffs=2, \
-		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 3)
+	suit_store = /obj/item/weapon/gun/ballistic/revolver/magnum
+	belt_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
+		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 2, \
+		/obj/item/ammo_box/m44 = 3)
 
 /datum/job/elite_trooper
 	title = "NCR Elite Trooper"

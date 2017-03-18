@@ -32,6 +32,7 @@
 	zoomable = TRUE
 	zoom_amt = 4
 	w_class = WEIGHT_CLASS_NORMAL
+	self_weight = 0.85
 
 /obj/item/weapon/gun/ballistic/automatic/rifle
 	name = "Automatic Rifle .308"

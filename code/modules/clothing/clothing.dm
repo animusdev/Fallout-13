@@ -258,7 +258,7 @@ BLIND     // can't see anything
 	if(visor_vars_to_toggle & VISOR_DARKNESSVIEW)
 		darkness_view ^= initial(darkness_view)
 	if(visor_vars_to_toggle & VISOR_INVISVIEW)
-		invis_view ^= initial(invis_view)
+		invis_view = up ? SEE_INVISIBLE_LIVING : initial(invis_view)
 
 /obj/item/clothing/head/worn_overlays(isinhands = FALSE)
 	. = list()

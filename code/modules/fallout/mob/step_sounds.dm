@@ -18,10 +18,9 @@
 		if(buckled)
 			return 1
 
-		if(ishuman(src))
-			var/mob/living/carbon/human/H = src
-			if(!H.shoes)
-				return 1
+		var/mob/living/carbon/human/H = src
+		if(istype(H) && !H.shoes)
+			return 1
 
 		if(step_sounded)
 			return 1
@@ -32,7 +31,7 @@
 
 		var/turf/T = get_turf(src)
 		if(T.step_sounds[sound_type] && !step_sounded)
-			playsound(src, T.step_sounds[sound_type], 25, 0)
+			playsound(src, T.step_sounds[sound_type], (( H && H.shoes.flags & QUIETSTEPSOUND) ? 5 : 25), 0)
 			step_sounded = TRUE
 			spawn(src.movement_delay() * 2.1)
 				step_sounded = FALSE

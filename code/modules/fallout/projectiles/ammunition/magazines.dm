@@ -45,6 +45,7 @@
 	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 7
 	multiple_sprites = 1
+	self_weight = 0.2
 
 /obj/item/ammo_box/magazine/internal/shot/m308
 	name = "rifle .308 magazine"
