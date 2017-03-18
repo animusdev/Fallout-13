@@ -25,7 +25,7 @@
 	if(istype(loc, /atom/movable))
 		var/atom/movable/L = loc
 		L.update_weight(weight)
-	contents_weight += weight
+	contents_weight = max(0, contents_weight + weight)
 
 /atom/movable/Entered(atom/movable/A, atom/oldloc)
 	. = ..()

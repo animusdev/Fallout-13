@@ -31,6 +31,8 @@
 #define DROPDEL			16384 // When dropped, it calls qdel on itself
 #define HOLOGRAM		32768	// HOlodeck shit should not be used in any fucking things
 
+#define QUIETSTEPSOUND		65536
+
 //turf-only flags
 #define NOJAUNT		1
 #define UNUSED_TRANSIT_TURF 2

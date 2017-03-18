@@ -86,6 +86,11 @@
 	flags = NOSLIP
 	self_weight = 2
 
+/obj/item/clothing/shoes/combat/light
+	name = "light combat boots"
+	self_weight = 0.1
+	flags = NOSLIP | QUIETSTEPSOUND
+
 /obj/item/clothing/shoes/f13/doom
 	name = "mars boots"
 	desc = "These boots are constructed with a titanium alloy and some runes engraved on the side.<br>To the Mars!"

@@ -84,19 +84,20 @@
 	self_weight = 0.45
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
-	glass_colour_type = null
+	glass_colour_type = /datum/client_colour/glass_colour/red
 	actions_types = list(/datum/action/item_action/toggle)
-	visor_vars_to_toggle = VISOR_DARKNESSVIEW
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	can_toggle = 1
 	var/enabled = 1
+
+/obj/item/clothing/head/helmet/f13/ranger/New()
+	..()
+	visor_toggling()
 
 /obj/item/clothing/head/helmet/f13/ranger/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
 	visor_toggling()
-	if(up)
-		glass_colour_type = /datum/client_colour/glass_colour/red
-	else
-		glass_colour_type = null
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		C.head_update(src, forced = 1)
