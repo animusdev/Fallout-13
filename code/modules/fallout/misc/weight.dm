@@ -1,10 +1,10 @@
 /atom/movable
 	var/contents_weight
-	var/self_weight
+	var/self_weight = 0
 
 /atom/movable/New()
 	..()
-	if(!self_weight && isitem(src))
+	if(self_weight == null && isitem(src))
 		var/obj/item/I = src
 		switch(I.w_class)
 			if(0)
