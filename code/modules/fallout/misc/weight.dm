@@ -21,6 +21,9 @@
 				self_weight = 14.000
 			if(6)
 				self_weight = 25.000
+	if(istype(loc, /atom/movable))
+		var/atom/movable/L = loc
+		L.update_weight(self_weight)
 /atom/movable/proc/update_weight(var/weight)
 	if(istype(loc, /atom/movable))
 		var/atom/movable/L = loc

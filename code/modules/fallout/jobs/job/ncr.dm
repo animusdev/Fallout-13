@@ -56,7 +56,7 @@
 	name = "NCR Ranger"
 	gloves = /obj/item/clothing/gloves/combat
 	uniform = /obj/item/clothing/under/f13/ncr
-	shoes = /obj/item/clothing/shoes/combat
+	shoes = /obj/item/clothing/shoes/combat/light
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/ranger
 	belt = /obj/item/weapon/storage/belt/military/assault
