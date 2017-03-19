@@ -9,7 +9,7 @@
 	throwforce = 15
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	icon = 'icons/fallout/objects/melee.dm'
+	icon = 'icons/fallout/objects/melee.dmi'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	block_chance = 20
 	sharpness = IS_SHARP
@@ -25,7 +25,7 @@
 	throw_range = 4
 	throwforce = 10
 	w_class = 1
-	icon = 'icons/fallout/objects/melee.dm'
+	icon = 'icons/fallout/objects/melee.dmi'
 
 /obj/item/weapon/golf/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
@@ -42,7 +42,7 @@
 	throw_range = 4
 	throwforce = 20
 	w_class = 1
-	icon = 'icons/fallout/objects/melee.dm'
+	icon = 'icons/fallout/objects/melee.dmi'
 
 /obj/item/weapon/pipe/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
@@ -59,7 +59,7 @@
 	throw_range = 4
 	throwforce = 10
 	w_class = 1
-	icon = 'icons/fallout/objects/melee.dm'
+	icon = 'icons/fallout/objects/melee.dmi'
 
 /obj/item/weapon/powergauntlet/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")

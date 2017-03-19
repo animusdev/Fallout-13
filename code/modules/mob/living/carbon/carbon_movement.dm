@@ -13,7 +13,7 @@
 
 	. += get_pulling_delay()
 	if(contents_weight)
-		. += contents_weight/25
+		. += contents_weight/RATIO_WEIGHT
 
 	if(!get_leg_ignore()) //ignore the fact we lack legs
 		var/leg_amount = get_num_legs()

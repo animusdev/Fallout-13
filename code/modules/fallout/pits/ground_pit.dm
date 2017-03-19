@@ -9,28 +9,37 @@
 	var/mob/living/gravebody
 	var/obj/structure/closet/coffin/gravecoffin
 	var/pitcontents = list()
-	var/obj/dugpit/ground/mypit
+	var/obj/dugpit/mypit
 	var/unburylevel = 0
 
-/obj/dugpit/ground
+
+/obj/dugpit
 	name = "pit"
 	anchored = 1
-	icon = 'icons/fallout/objects/decals.dmi'
+	icon = 'icons/obj/decals.dmi'
 	icon_state = "pit"
 	mouse_opacity = 0
+	var/turf/open/indestructible/ground/desert/parent
 
-/obj/dugpit/ground/return_air()
-	var/datum/gas_mixture/GM = new
+obj/dugpit/New(lnk)
+	..()
+	parent = lnk
 
-	GM.oxygen = 0
-	GM.carbon_dioxide = 0
-	GM.nitrogen = 0
-	GM.toxins = 0
+/obj/dugpit/proc/dugresist(usr)
+	//try to unbury self
+	var/mob/living/user = usr
+	user << "<span class='danger'>You start digging from inside, trying to unbury self!</span>"
+	if(do_after(user, (5*10), target = src))
+		if (prob(10))
+			user << "<span class='danger'>You have managed to move some of the ground!</span>"
+			parent.unburylevel++
+			if (parent.unburylevel>=NUMBURYTIMES)
+				user << "<span class='danger'>You have undug yourself!</span>"
+				parent.gets_dug(null)
+		else
+			user << "<span class='danger'>The ground is too heavy!</span>"
 
-	GM.temperature = parent.temperature
-
-	return GM
-/turf/ground/desert/proc/handle_item_insertion(obj/item/W, mob/usr)
+/turf/open/indestructible/ground/desert/proc/handle_item_insertion(obj/item/W, mob/usr)
 	if(!istype(W))
 		return
 	if (storedindex>=NUMCONTENT)
@@ -57,8 +66,9 @@
 		W.forceMove(mypit)
 		storedindex = storedindex+1
 
-/turf/ground/desert/attack_hand(mob/living/carbon/human/M)
-	if (dug)
+/turf/open/indestructible/ground/desert/attack_hand(mob/living/carbon/human/M)
+	. = ..()
+	if (!. && dug)
 		if (storedindex==0)
 			to_chat(usr, "<span class='danger'>There is nothing in the pit!</span>")
 			return
@@ -68,23 +78,24 @@
 			I.forceMove(M.loc)
 			pitcontents-=I
 
-/turf/ground/desert/proc/finishBury(mob/user)
+/turf/open/indestructible/ground/desert/proc/finishBury(mob/user)
 	to_chat(user, "<span class='notice'>You cover the hole with dirt.</span>")
 	dug = 0
 	//icon_plating = "[environment_type]"
 	icon_state = "wasteland[rand(1,31)]"
 	mypit.invisibility = 101
 
-/turf/ground/desert/proc/finishBody()
+/turf/open/indestructible/ground/desert/proc/finishBody()
 	gravebody.forceMove(mypit)
 	unburylevel = 0
 
-/turf/ground/desert/proc/finishCoffin()
+/turf/open/indestructible/ground/desert/proc/finishCoffin()
 	gravecoffin.forceMove(mypit)
 
-/turf/ground/desert/attackby(obj/item/W, mob/user, params)
-	if(..())
-		return
+/turf/open/indestructible/ground/desert/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(.)
+		return .
 
 	var/digging_speed = 0
 	if (istype(W, /obj/item/weapon/shovel))
@@ -110,19 +121,19 @@
 			if (gravebody!=null)
 				to_chat(user, "<span class='notice'>You start covering the body in the hole with dirt...</span>")
 				if (do_after(user, digging_speed*3, target=gravebody))
-					if(istype(src, /turf/ground/desert))
+					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
 						finishBody()
 			else if (gravecoffin != null)
 				to_chat(user, "<span class='notice'>You start burying the coffin...</span>")
 				if (do_after(user, digging_speed*1.5, target=gravebody))
-					if(istype(src, /turf/ground/desert))
+					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
 						finishCoffin()
 			else
 				to_chat(user, "<span class='notice'>You start covering the hole with dirt...</span>")
 				if(do_after(user, digging_speed, target = src))
-					if(istype(src, /turf/ground/desert))
+					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
 
 
@@ -130,7 +141,7 @@
 			to_chat(user, "<span class='notice'>You start digging...</span>")
 			playsound(src, 'sound/effects/shovel_dig.ogg', 50, 1) //FUCK YO RUSTLE I GOT'S THE DIGS SOUND HERE
 			if(do_after(user, digging_speed, target = src))
-				if(istype(src, /turf/ground/desert))
+				if(istype(src, /turf/open/indestructible/ground/desert))
 					to_chat(user, "<span class='notice'>You dig a hole.</span>")
 					gets_dug(user)
 					new /obj/item/weapon/ore/glass(src)
@@ -145,13 +156,13 @@
 			handle_item_insertion(W, user)
 
 
-/turf/ground/desert/proc/gets_dug(mob/user)
+/turf/open/indestructible/ground/desert/proc/gets_dug(mob/user)
 	if(dug)
 		return
 	for (var/obj/item/I in pitcontents)
 		I.forceMove(user.loc)
 	if (mypit==null)
-		mypit = new/obj/dugpit/ground(src)
+		mypit = new/obj/dugpit(src)
 	mypit.invisibility = 0
 	storedindex = 0
 	pitcontents = list()

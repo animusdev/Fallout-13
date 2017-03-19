@@ -1275,6 +1275,8 @@
 #include "code\modules\fallout\obj\holodisks.dm"
 #include "code\modules\fallout\obj\items.dm"
 #include "code\modules\fallout\obj\krotchy.dm"
+#include "code\modules\fallout\obj\weapons.dm"
+#include "code\modules\fallout\pits\ground_pit.dm"
 #include "code\modules\fallout\projectiles\projectile.dm"
 #include "code\modules\fallout\projectiles\ammunition\energy.dm"
 #include "code\modules\fallout\projectiles\ammunition\magazines.dm"

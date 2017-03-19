@@ -400,7 +400,9 @@ var/global/list/ghost_others_options = list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define SHUTTLE_HIJACK 24
 
 //WEIGHT
-#define LIGHT_WEIGHT 10
-#define MIDDLE_WEIGHT 25
-#define HEAVY_WEIGHT 45
-#define LIMIT_WEIGHT 75
+#define LIGHT_WEIGHT 25
+#define MIDDLE_WEIGHT 50
+#define HEAVY_WEIGHT 75
+#define LIMIT_WEIGHT 100
+
+#define RATIO_WEIGHT 40 // BIGGER - FASTER.

@@ -287,7 +287,7 @@
 	. += get_pulling_delay()
 
 	if(contents_weight)
-		. += contents_weight/25
+		. += contents_weight/RATIO_WEIGHT
 
 	. += config.animal_delay
 

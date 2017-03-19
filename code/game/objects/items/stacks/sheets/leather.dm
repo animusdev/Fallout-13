@@ -10,7 +10,7 @@
 	icon_state = "sheet-hide"
 
 var/global/list/datum/stack_recipe/human_recipes = list( \
-	new/datum/stack_recipe("bloated human costume", /obj/item/clothing/suit/hooded/bloated_human, 5, on_floor = 1), \
+//	new/datum/stack_recipe("bloated human costume", /obj/item/clothing/suit/hooded/bloated_human, 5, on_floor = 1),
 	)
 
 /obj/item/stack/sheet/animalhide/human/New(var/loc, var/amount=null)
@@ -31,7 +31,7 @@ var/global/list/datum/stack_recipe/human_recipes = list( \
 	icon_state = "sheet-corgi"
 
 var/global/list/datum/stack_recipe/corgi_recipes = list ( \
-	new/datum/stack_recipe("corgi costume", /obj/item/clothing/suit/hooded/ian_costume, 3, on_floor = 1), \
+//	new/datum/stack_recipe("corgi costume", /obj/item/clothing/suit/hooded/ian_costume, 3, on_floor = 1)
 	)
 
 /obj/item/stack/sheet/animalhide/corgi/New(var/loc, var/amount=null)
@@ -51,8 +51,8 @@ var/global/list/datum/stack_recipe/corgi_recipes = list ( \
 	icon_state = "sheet-monkey"
 
 var/global/list/datum/stack_recipe/monkey_recipes = list ( \
-	new/datum/stack_recipe("monkey mask", /obj/item/clothing/mask/gas/monkeymask, 1, on_floor = 1), \
-	new/datum/stack_recipe("monkey suit", /obj/item/clothing/suit/monkeysuit, 2, on_floor = 1), \
+//	new/datum/stack_recipe("monkey mask", /obj/item/clothing/mask/gas/monkeymask, 1, on_floor = 1), \
+	new/datum/stack_recipe("monkey suit", /obj/item/clothing/suit/monkeysuit, 2, on_floor = 1)
 	)
 
 /obj/item/stack/sheet/animalhide/monkey/New(var/loc, var/amount=null)
@@ -72,8 +72,8 @@ var/global/list/datum/stack_recipe/monkey_recipes = list ( \
 	icon_state = "sheet-xeno"
 
 var/global/list/datum/stack_recipe/xeno_recipes = list ( \
-	new/datum/stack_recipe("alien helmet", /obj/item/clothing/head/xenos, 1, on_floor = 1), \
-	new/datum/stack_recipe("alien suit", /obj/item/clothing/suit/xenos, 2, on_floor = 1), \
+//	new/datum/stack_recipe("alien helmet", /obj/item/clothing/head/xenos, 1, on_floor = 1), \
+//	new/datum/stack_recipe("alien suit", /obj/item/clothing/suit/xenos, 2, on_floor = 1),
 	)
 
 /obj/item/stack/sheet/animalhide/xeno/New(var/loc, var/amount=null)
@@ -136,7 +136,7 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 
 
 var/global/list/datum/stack_recipe/sinew_recipes = list ( \
-	new/datum/stack_recipe("sinew restraints", /obj/item/weapon/restraints/handcuffs/sinew, 1, on_floor = 1), \
+//	new/datum/stack_recipe("sinew restraints", /obj/item/weapon/restraints/handcuffs/sinew, 1, on_floor = 1),
 	)
 
 /obj/item/stack/sheet/sinew/New(var/loc, var/amount=null)
