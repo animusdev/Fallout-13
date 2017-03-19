@@ -406,3 +406,5 @@ var/global/list/ghost_others_options = list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define LIMIT_WEIGHT 100
 
 #define RATIO_WEIGHT 40 // BIGGER - FASTER.
+
+#define string2charlist(string) (splittext(string, regex("(.)")) - splittext(string, ""))

@@ -12,3 +12,19 @@
 /proc/format_frequency(frequency)
 	frequency = text2num(frequency)
 	return "[round(frequency / 10)].[frequency % 10]"
+
+/proc/format_encryption_key(key)
+	if(length(key) > 4)
+		key = copytext(key,1,5)
+	CHECK_SYMBOL
+	if(length(key) < 4)
+		key += "0"
+		goto CHECK_SYMBOL
+	var/list/chars = string2charlist(key)
+	key = ""
+	for(var/i = 1, i < chars.len, i++)
+		if(!numbers.Find(chars[i]))
+			key += "0"
+		else
+			key += chars[i]
+	return key

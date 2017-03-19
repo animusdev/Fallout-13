@@ -8,6 +8,7 @@
 	var/on = 1 // 0 for off
 	var/last_transmission
 	var/frequency = 1459 //common chat
+	var/key = "0000" // Encryption Key
 	var/traitor_frequency = 0 //tune to frequency to unlock traitor supplies
 	var/canhear_range = 3 // the range which mobs can hear this radio from
 	var/obj/item/device/radio/patch_link = null
@@ -140,6 +141,7 @@
 	data["subspace"] = subspace_transmission
 	data["subspaceSwitchable"] = subspace_switchable
 	data["headset"] = istype(src, /obj/item/device/radio/headset)
+	data["key"] = key
 
 	return data
 
@@ -196,6 +198,9 @@
 				else
 					recalculateChannels()
 				. = TRUE
+		if("key")
+			key = format_encryption_key(input("Enter new encryption key", "Encryption", key))
+			. = TRUE
 
 /obj/item/device/radio/talk_into(atom/movable/M, message, channel, list/spans)
 	addtimer(CALLBACK(src, .proc/talk_into_impl, M, message, channel, spans), 0)
@@ -326,7 +331,8 @@
 			"verb_say" = M.verb_say,
 			"verb_ask" = M.verb_ask,
 			"verb_exclaim" = M.verb_exclaim,
-			"verb_yell" = M.verb_yell
+			"verb_yell" = M.verb_yell,
+			"key" = key
 			)
 		signal.frequency = freqnum // Quick frequency set
 		Broadcast_Message(M, voicemask,
@@ -371,7 +377,8 @@
 			"verb_say" = M.verb_say, //the verb used when talking normally
 			"verb_ask" = M.verb_ask, //the verb used when asking
 			"verb_exclaim" = M.verb_exclaim, //the verb used when exclaiming
-			"verb_yell" = M.verb_yell //the verb used when yelling
+			"verb_yell" = M.verb_yell, //the verb used when yelling
+			"key" = key
 			)
 		signal.frequency = freq
 
@@ -421,7 +428,8 @@
 		"verb_say" = M.verb_say,
 		"verb_ask" = M.verb_ask,
 		"verb_exclaim" = M.verb_exclaim,
-		"verb_yell" = M.verb_yell
+		"verb_yell" = M.verb_yell,
+		"key" = key
 		)
 	signal.frequency = freqnum // Quick frequency set
 	for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
@@ -439,7 +447,7 @@
 		Broadcast_Message(M, voicemask,
 						  src, message, voice, jobname, real_name,
 						  filter_type, signal.data["compression"], list(position.z), freq, spans,
-						  verb_say, verb_ask, verb_exclaim, verb_yell)
+						  verb_say, verb_ask, verb_exclaim, verb_yell, key)
 
 /obj/item/device/radio/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)
 	if(radio_freq)

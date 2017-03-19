@@ -58,7 +58,7 @@
 						var/vmask, var/obj/item/device/radio/radio,
 						var/message, var/name, var/job, var/realname,
 						var/data, var/compression, var/list/level, var/freq, var/list/spans,
-						var/verb_say, var/verb_ask, var/verb_exclaim, var/verb_yell)
+						var/verb_say, var/verb_ask, var/verb_exclaim, var/verb_yell, var/key)
 
 	message = copytext(message, 1, MAX_BROADCAST_LEN)
 
@@ -66,6 +66,7 @@
 		return
 
 	var/list/radios = list()
+	var/list/unencrypted_radios = list()
 
 	var/atom/movable/virtualspeaker/virt = PoolOrNew(/atom/movable/virtualspeaker,null)
 	virt.name = name
@@ -87,7 +88,10 @@
 	if(data == 1)
 		for(var/obj/item/device/radio/intercom/R in all_radios["[freq]"])
 			if(R.receive_range(freq, level) > -1)
-				radios += R
+				if(key == "0000" || R.key == key)
+					radios += R
+				else
+					unencrypted_radios += R
 
 	// --- Broadcast only to intercoms and station-bounced radios ---
 
@@ -98,7 +102,11 @@
 				continue
 
 			if(R.receive_range(freq, level) > -1)
-				radios += R
+				if(key == "0000" || R.key == key)
+					radios += R
+				else
+					unencrypted_radios += R
+
 
 	// --- This space left blank for Syndicate data ---
 
@@ -111,26 +119,41 @@
 				continue
 
 			if(R.receive_range(freq, level) > -1)
-				radios += R
+				if(key == "0000" || R.key == key)
+					radios += R
+				else
+					unencrypted_radios += R
+
 
 	// --- Broadcast to ALL radio devices ---
 
 	else
 		for(var/obj/item/device/radio/R in all_radios["[freq]"])
 			if(R.receive_range(freq, level) > -1)
-				radios += R
+				if(key == "0000" || R.key == key)
+					radios += R
+				else
+					unencrypted_radios += R
 
 		var/freqtext = num2text(freq)
 		for(var/obj/item/device/radio/R in all_radios["[SYND_FREQ]"]) //syndicate radios use magic that allows them to hear everything. this was already the case, now it just doesn't need the allinone anymore. solves annoying bugs that aren't worth solving.
 			if(R.receive_range(SYND_FREQ, list(R.z)) > -1 && freqtext in radiochannelsreverse)
-				radios |= R
+				if(key == "0000" || R.key == key)
+					radios |= R
+				else
+					unencrypted_radios |= R
 
 	// Get a list of mobs who can hear from the radios we collected.
 	var/list/receive = get_mobs_in_radio_ranges(radios) //this includes all hearers.
+	var/list/unencrypted_receive = get_mobs_in_radio_ranges(unencrypted_radios)
 
 	for(var/mob/R in receive) //Filter receiver list.
 		if (R.client && R.client.holder && !(R.client.prefs.chat_toggles & CHAT_RADIO)) //Adminning with 80 people on can be fun when you're trying to talk and all you can hear is radios.
 			receive -= R
+
+	for(var/mob/R in unencrypted_receive) //Filter receiver list.
+		if (R.client && R.client.holder && !(R.client.prefs.chat_toggles & CHAT_RADIO)) //Adminning with 80 people on can be fun when you're trying to talk and all you can hear is radios.
+			unencrypted_receive -= R
 
 	for(var/mob/M in player_list)
 		if(isobserver(M) && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTRADIO))
@@ -138,6 +161,11 @@
 
 	var/rendered = virt.compose_message(virt, virt.languages_spoken, message, freq, spans) //Always call this on the virtualspeaker to advoid issues.
 	for(var/atom/movable/hearer in receive)
+		hearer.Hear(rendered, virt, AM.languages_spoken, message, freq, spans)
+		unencrypted_receive -= hearer
+
+	rendered = virt.compose_message(virt, virt.languages_spoken, Gibberish(message), freq, spans)
+	for(var/atom/movable/hearer in unencrypted_receive)
 		hearer.Hear(rendered, virt, AM.languages_spoken, message, freq, spans)
 
 	if(length(receive))
@@ -184,7 +212,10 @@
 
 	var/display_freq = connection.frequency
 
+	var/key = data["key"]
+
 	var/list/receive = list()
+	var/list/unencrypted_receive = list()
 
 
 	// --- Broadcast only to intercom devices ---
@@ -193,7 +224,10 @@
 		for (var/obj/item/device/radio/intercom/R in connection.devices["[RADIO_CHAT]"])
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				receive |= R.send_hear(display_freq, level)
+				if(key == "0000" || R.key == key)
+					receive |= R.send_hear(display_freq)
+				else
+					unencrypted_receive |= R.send_hear(display_freq)
 
 
 	// --- Broadcast only to intercoms and station-bounced radios ---
@@ -204,7 +238,10 @@
 				continue
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				receive |= R.send_hear(display_freq)
+				if(key == "0000" || R.key == key)
+					receive |= R.send_hear(display_freq)
+				else
+					unencrypted_receive |= R.send_hear(display_freq)
 
 
 	// --- Broadcast to syndicate radio! ---
@@ -215,7 +252,10 @@
 		for (var/obj/item/device/radio/R in syndicateconnection.devices["[RADIO_CHAT]"])
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				receive |= R.send_hear(SYND_FREQ)
+				if(key == "0000" || R.key == key)
+					receive |= R.send_hear(display_freq)
+				else
+					unencrypted_receive |= R.send_hear(display_freq)
 
 	// --- Centcom radio, yo. ---
 
@@ -223,7 +263,10 @@
 
 		for(var/obj/item/device/radio/R in all_radios["[RADIO_CHAT]"])
 			if(R.centcom)
-				receive |= R.send_hear(CENTCOM_FREQ)
+				if(key == "0000" || R.key == key)
+					receive |= R.send_hear(display_freq)
+				else
+					unencrypted_receive |= R.send_hear(display_freq)
 
 	// --- Broadcast to ALL radio devices ---
 
@@ -231,8 +274,10 @@
 		for (var/obj/item/device/radio/R in connection.devices["[RADIO_CHAT]"])
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				receive |= R.send_hear(display_freq)
-
+				if(key == "0000" || R.key == key)
+					receive |= R.send_hear(display_freq)
+				else
+					unencrypted_receive |= R.send_hear(display_freq)
 
   /* ###### Organize the receivers into categories for displaying the message ###### */
 
@@ -269,6 +314,18 @@
 			// - Just display a garbled message -
 
 			heard_garbled += R
+
+	for (var/mob/R in unencrypted_receive)
+
+		if (R.client && !(R.client.prefs.chat_toggles & CHAT_RADIO))
+			continue
+
+		if(compression > 0)
+
+			heard_gibberish |= R
+			continue
+
+		heard_garbled |= R
 
 
   /* ###### Begin formatting and sending the message ###### */

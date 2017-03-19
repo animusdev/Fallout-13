@@ -47,6 +47,9 @@
       <ui-button icon='fast-forward' state='{{data.frequency == data.maxFrequency ? "disabled": null}}' action='frequency' params='{"adjust": 1}'/>
     {{/if}}
   </ui-section>
+  <ui-section label='Encryption'>
+      <ui-button icon='pencil' action='key' params='{"tune": "input"}'>{{key}}</ui-button>
+  </ui-section>
   {{#if data.subspaceSwitchable}}
     <ui-section label='Subspace Transmission'>
       <ui-button icon='{{data.subspace ? "power-off" : "close"}}' style='{{data.subspace ? "selected" : null}}'

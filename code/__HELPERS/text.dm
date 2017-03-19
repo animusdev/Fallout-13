@@ -347,6 +347,7 @@ proc/html_encode_ru(var/t)
 
 var/list/zero_character_only = list("0")
 var/list/hex_characters = list("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f")
+var/list/numbers = list("0","1","2","3","4","5","6","7","8","9")
 var/list/alphabet = list("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
 var/list/binary = list("0","1")
 /proc/random_string(length, list/characters)
@@ -504,8 +505,6 @@ var/list/binary = list("0","1")
 	t = replacetext(t, "\[/list\]", "</ul>")
 
 	return t
-
-#define string2charlist(string) (splittext(string, regex("(.)")) - splittext(string, ""))
 
 /proc/rot13(text = "")
 	var/list/textlist = string2charlist(text)

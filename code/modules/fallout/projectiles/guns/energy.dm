@@ -34,6 +34,7 @@
 	fire_sound = 'sound/f13weapons/plasmarifle.ogg'
 	burst_size = 2
 	shaded_charge = 1
+	fire_delay = 20
 
 
 /obj/item/weapon/gun/energy/plasma/glock
@@ -76,8 +77,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/turbo)
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_HUGE
-	burst_size = 1
-	fire_delay = 10
+	fire_delay = 20
 	w_class = 4
 
 ///////LASERS//////
