@@ -1,6 +1,6 @@
 /atom/movable
-	var/contents_weight
-	var/self_weight = 0
+	var/contents_weight = 0
+	var/self_weight
 
 /atom/movable/New()
 	..()
@@ -24,6 +24,7 @@
 	if(istype(loc, /atom/movable))
 		var/atom/movable/L = loc
 		L.update_weight(self_weight)
+
 /atom/movable/proc/update_weight(var/weight)
 	if(istype(loc, /atom/movable))
 		var/atom/movable/L = loc
@@ -42,5 +43,5 @@
 	. = ..()
 	if(!.)
 		return .
-	if(contents_weight > 60 && prob(5))
+	if(contents_weight > LIMIT_WEIGHT && prob(5))
 		Weaken(1)

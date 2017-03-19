@@ -398,3 +398,9 @@ var/global/list/ghost_others_options = list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define CLOCK_SILICONS 22
 #define CLOCK_PROSELYTIZATION 23
 #define SHUTTLE_HIJACK 24
+
+//WEIGHT
+#define LIGHT_WEIGHT 10
+#define MIDDLE_WEIGHT 25
+#define HEAVY_WEIGHT 45
+#define LIMIT_WEIGHT 75
