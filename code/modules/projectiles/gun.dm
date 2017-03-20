@@ -59,6 +59,9 @@
 	var/zoom_amt = 3 //Distance in TURFs to move the user's screen forward (the "zoom" effect)
 	var/datum/action/toggle_scope_zoom/azoom
 
+	//Gun safety.
+	var/safety = 0
+
 
 /obj/item/weapon/gun/New()
 	..()
@@ -88,6 +91,10 @@
 		to_chat(user, "It doesn't have a firing pin installed, and won't fire.")
 	if(unique_reskin && !current_skin)
 		to_chat(user, "<span class='notice'>Alt-click it to reskin it.</span>")
+	if(safety)
+		to_chat(user, "<span class='notice'>The safety is on.</span>")
+	else
+		to_chat(user, "<span class='notice'>The safety is off.</span>")
 
 //called after the gun has successfully fired its chambered ammo.
 /obj/item/weapon/gun/proc/process_chamber()
@@ -139,6 +146,11 @@
 		var/mob/living/L = user
 		if(!can_trigger_gun(L))
 			return
+
+	if(safety)
+		to_chat(user, "<span class='userdanger'>The safety is on!</span>")
+		shoot_with_empty_chamber(user)
+		return
 
 	if(!can_shoot()) //Just because you can pull the trigger doesn't mean it can shoot.
 		shoot_with_empty_chamber(user)
@@ -360,6 +372,11 @@
 	if(user.incapacitated())
 		to_chat(user, "<span class='warning'>You can't do that right now!</span>")
 		return
+	if(src == user.get_active_held_item())
+		safety = !safety
+		playsound(user, 'sound/weapons/selector.ogg', 100, 1)
+		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+
 	if(unique_reskin && !current_skin && loc == user)
 		reskin_gun(user)
 
