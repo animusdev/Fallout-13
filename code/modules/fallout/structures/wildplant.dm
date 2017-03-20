@@ -34,6 +34,8 @@
 		user << "<span class='notice'>You clear up [src]!</span>"
 		qdel(src)
 		return
+	if(..())
+		return 1
 	attack_hand(user)
 
 /obj/structure/flora/wild_plant/attack_hand(mob/user)

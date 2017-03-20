@@ -38,6 +38,7 @@
 	force = 5
 	throwforce = 5
 	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = FLAMMABLE
 	throw_speed = 2
 	throw_range = 3
 	origin_tech = "materials=1"
@@ -75,6 +76,13 @@
 			return
 		else
 			to_chat(usr, "<span class ='warning'>You must dry this first!</span>")
+	if(istype(W,/obj/item/stack/sheet/grass))
+		var/obj/item/stack/sheet/grass/G = W
+		if(G.use(1))
+			user.show_message("<span class='notice'>You wrap \the [W] around the log, turning it into a torch!</span>")
+			new /obj/item/device/flashlight/torch(user.loc)
+			qdel(src)
+			return
 	else
 		return ..()
 

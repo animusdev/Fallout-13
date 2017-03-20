@@ -4,6 +4,11 @@
 	max_integrity = 150
 	anchored = 1
 
+/obj/structure/flora/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
+	..()
+	if(damage_flag == "bomb" || damage_type == BURN && prob(damage_amount))
+		fire_act(damage_amount * 100, 1)
+
 //trees
 /obj/structure/flora/tree
 	name = "tree"
