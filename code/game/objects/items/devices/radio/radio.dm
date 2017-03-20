@@ -8,7 +8,7 @@
 	var/on = 1 // 0 for off
 	var/last_transmission
 	var/frequency = 1459 //common chat
-	var/key = "0000" // Encryption Key
+	var/key = 0000 // Encryption Key
 	var/traitor_frequency = 0 //tune to frequency to unlock traitor supplies
 	var/canhear_range = 3 // the range which mobs can hear this radio from
 	var/obj/item/device/radio/patch_link = null

@@ -88,7 +88,7 @@
 	if(data == 1)
 		for(var/obj/item/device/radio/intercom/R in all_radios["[freq]"])
 			if(R.receive_range(freq, level) > -1)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					radios += R
 				else
 					unencrypted_radios += R
@@ -102,7 +102,7 @@
 				continue
 
 			if(R.receive_range(freq, level) > -1)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					radios += R
 				else
 					unencrypted_radios += R
@@ -119,7 +119,7 @@
 				continue
 
 			if(R.receive_range(freq, level) > -1)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					radios += R
 				else
 					unencrypted_radios += R
@@ -130,7 +130,7 @@
 	else
 		for(var/obj/item/device/radio/R in all_radios["[freq]"])
 			if(R.receive_range(freq, level) > -1)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					radios += R
 				else
 					unencrypted_radios += R
@@ -138,7 +138,7 @@
 		var/freqtext = num2text(freq)
 		for(var/obj/item/device/radio/R in all_radios["[SYND_FREQ]"]) //syndicate radios use magic that allows them to hear everything. this was already the case, now it just doesn't need the allinone anymore. solves annoying bugs that aren't worth solving.
 			if(R.receive_range(SYND_FREQ, list(R.z)) > -1 && freqtext in radiochannelsreverse)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					radios |= R
 				else
 					unencrypted_radios |= R
@@ -224,7 +224,7 @@
 		for (var/obj/item/device/radio/intercom/R in connection.devices["[RADIO_CHAT]"])
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					receive |= R.send_hear(display_freq)
 				else
 					unencrypted_receive |= R.send_hear(display_freq)
@@ -238,7 +238,7 @@
 				continue
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					receive |= R.send_hear(display_freq)
 				else
 					unencrypted_receive |= R.send_hear(display_freq)
@@ -252,7 +252,7 @@
 		for (var/obj/item/device/radio/R in syndicateconnection.devices["[RADIO_CHAT]"])
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					receive |= R.send_hear(display_freq)
 				else
 					unencrypted_receive |= R.send_hear(display_freq)
@@ -263,7 +263,7 @@
 
 		for(var/obj/item/device/radio/R in all_radios["[RADIO_CHAT]"])
 			if(R.centcom)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					receive |= R.send_hear(display_freq)
 				else
 					unencrypted_receive |= R.send_hear(display_freq)
@@ -274,7 +274,7 @@
 		for (var/obj/item/device/radio/R in connection.devices["[RADIO_CHAT]"])
 			var/turf/position = get_turf(R)
 			if(position && position.z == level)
-				if(key == "0000" || R.key == key)
+				if(key == 0000 || R.key == key)
 					receive |= R.send_hear(display_freq)
 				else
 					unencrypted_receive |= R.send_hear(display_freq)
@@ -334,6 +334,7 @@
 	  /* --- Some miscellaneous variables to format the string output --- */
 		var/part_a = "<span class='radio'><span class='name'>" // goes in the actual output
 		var/freq_text // the name of the channel
+		var/datum/f13_faction/faction = get_faction_datum(get_faction_by_freq(display_freq)) //Faction using this freq
 
 		// --- Set the name of the channel ---
 		switch(display_freq)
@@ -356,6 +357,9 @@
 				freq_text = "Supply"
 			if(AIPRIV_FREQ)
 				freq_text = "AI Private"
+			else
+				if(faction)
+					freq_text = faction.name
 		//There's probably a way to use the list var of channels in code\game\communications.dm to make the dept channels non-hardcoded, but I wasn't in an experimentive mood. --NEO
 
 
@@ -396,6 +400,8 @@
 			part_a = "<span class='centcomradio'><span class='name'>"
 		else if (display_freq==AIPRIV_FREQ)
 			part_a = "<span class='aiprivradio'><span class='name'>"
+		else if (faction)
+			part_a = "<span class='[faction.id]'><span class='name'>"
 
 		// --- This following recording is intended for research and feedback in the use of department radio channels ---
 

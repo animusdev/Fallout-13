@@ -72,3 +72,7 @@
 
 // Flags for reagents
 #define REAGENT_NOREACT 1
+
+//FACTIONS
+#define HAVE_FREQ 1
+#define HAVE_FLAG 2

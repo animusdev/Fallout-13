@@ -2,6 +2,13 @@
 
 var/human_factions = list()
 
+proc/get_faction_by_freq(freq)
+	for(var/F in human_factions)
+		var/datum/f13_faction/datum = get_faction_datum(F)
+		if(freq == datum.freq)
+			return datum.name
+	return null
+
 proc/get_faction_datum(faction)
 	if(!human_factions[faction])
 		return null
@@ -17,24 +24,23 @@ proc/get_faction_members(var/faction)
 
 /datum/f13_faction
 	var/name = "UNKNOWN"
-
-	var/late_join = 0
-
-	var/first_spawn = 0
-
+	var/id = "none"
 	var/welcome_text = ""
-
 	var/color = "#171717"
-
 	var/list/verbs = list()
-
 	var/head_status = null
-
 	var/list/craft_recipes = list()
-
-	var/flag = null
-
+	var/flags = null
 	var/voting = 0
+
+	var/freq
+	var/encryption_key
+
+/datum/f13_faction/New()
+	..()
+	if(flags & HAVE_FREQ)
+		freq = sanitize_frequency(rand(MIN_FREQ, MAX_FREQ))
+		encryption_key = format_encryption_key(rand(0, 9999))
 
 mob/proc/begin_head_voting()
 	set name = "Leader Voting"
@@ -156,7 +162,7 @@ mob/proc/set_faction(var/faction)
 	src.social_faction = F.name
 	src.faction += F.name
 	to_chat(src, "<span class='notice'>You have joined the <span style='color: [F.color];'>[F.name]</span> faction.</span>")
-
+	src.add_memory("[F.name] is using freq ([F.freq]) with encryption key ([F.encryption_key])")
 	src.allow_recipes += F.craft_recipes
 	src.verbs += F.verbs
 
@@ -167,42 +173,47 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/vault
 	name = "Vault"
-	first_spawn = 1
 	color = "#005A20"
+	id = "vault"
 	head_status = "Overseer"
+	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 //	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
+
 /datum/f13_faction/ncr
 	name = "NCR"
-	first_spawn = 1
+	id = "ncr"
 	color = "#020080"
+	flags = HAVE_FREQ | HAVE_FLAG
 	head_status = "Squad Leader"
-	flag = "ncr"
 	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Your current objectives are:<br>\
 1. As an NCR soldier you must uphold the law around the town, exterminate any raiders you see, seek and destroy the Legion members.<br>\
 2. As an NCR soldier you must protect the innocent wastelanders from the horrors of the wasteland.<br>\
 3. Take your survival as your main goal after protecting the citizens - you are important to the NCR and we can't afford to lose you!<br>"
 //	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key)
+
 /datum/f13_faction/legion
 	name = "Legion"
-	first_spawn = 1
 	head_status = "Legat"
 	color = "#C24D44"
-	flag = "legion"
+	flags = HAVE_FREQ | HAVE_FLAG
 //	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
 						 /datum/table_recipe/legion_encryption_key)
 	welcome_text = "Your current objectives:<br>\
 	1. As a member of the Legion you must obey all orders given by anyone outranking you.<br>\
 	2. You must enslave the occupants of the wasteland, and suppress any resistance unless they can't be overpowered.<br>\
 	3. As a Legion solider you will torture and kill any NCR member you come across, fight to your death in a name of Caesar!"
+
 /datum/f13_faction/wasteland
 	name = "Wasteland"
-	late_join = 1
+	id = "none"
+
 /datum/f13_faction/den
 	name = "Den"
 	color = "#804B00"
-	first_spawn = 1
+	id = "den"
 	head_status = "Sheriff"
+	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 //	craft_recipes = list(/datum/table_recipe/den_encryption_key)

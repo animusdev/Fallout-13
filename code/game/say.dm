@@ -110,12 +110,18 @@ var/list/freqtospan = list(
 		return "makes a strange sound."
 
 /proc/get_radio_span(freq)
+	var/datum/f13_faction/faction = get_faction_datum(get_faction_by_freq(freq))
+	if(faction)
+		return faction.id
 	var/returntext = freqtospan["[freq]"]
 	if(returntext)
 		return returntext
 	return "radio"
 
 /proc/get_radio_name(freq)
+	var/datum/f13_faction/faction = get_faction_datum(get_faction_by_freq(freq))
+	if(faction)
+		return faction.name
 	var/returntext = radiochannelsreverse["[freq]"]
 	if(returntext)
 		return returntext

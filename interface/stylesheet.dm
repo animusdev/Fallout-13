@@ -37,6 +37,12 @@ em						{font-style: normal;	font-weight: bold;}
 .syndradio				{color: #6d3f40;}
 .centcomradio			{color: #686868;}
 .aiprivradio			{color: #ff00ff;}
+.ncr					{color: #020080;}
+.legion					{color: #C24D44;}
+.den					{color: #804B00;}
+.town					{color: #221800;}
+.enclave				{color: #001722;}
+.brotherhood			{color: #C0C0C0;}
 
 .yell					{					font-weight: bold;}
 
