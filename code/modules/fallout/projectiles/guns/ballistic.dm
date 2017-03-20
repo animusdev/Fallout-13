@@ -57,6 +57,7 @@
 	casing_ejector = 0
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
+	pumpsound = 'sound/weapons/boltpump.ogg'
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "rifle-scope"
@@ -117,6 +118,7 @@
 	weapon_weight = WEAPON_MEDIUM
 	casing_ejector = 1
 	w_class = WEIGHT_CLASS_HUGE
+	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
 
 /obj/item/weapon/gun/ballistic/automatic/bozar
 	name = "\improper Bozar"

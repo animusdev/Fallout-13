@@ -11,7 +11,9 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot
 	casing_ejector = 0
 	var/recentpump = 0 // to prevent spammage
+	var/pumpsound = 'sound/weapons/shotgunpump.ogg'
 	weapon_weight = WEAPON_MEDIUM
+
 
 /obj/item/weapon/gun/ballistic/shotgun/attackby(obj/item/A, mob/user, params)
 	. = ..()
@@ -50,7 +52,7 @@
 		. = 1
 
 /obj/item/weapon/gun/ballistic/shotgun/proc/pump(mob/M)
-	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	playsound(M, pumpsound, 60, 1)
 	pump_unload(M)
 	pump_reload(M)
 	update_icon()	//I.E. fix the desc
