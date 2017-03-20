@@ -29,32 +29,8 @@
 		to_chat(user, "You remove campfire ashes.")
 		qdel(src)
 		return
-	if(fired)
-		return
-	if(istype(P, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = P
-		if(WT.isOn())
-			fire(user)
-	else if(istype(P, /obj/item/device/flashlight/torch/flare))
-		var/obj/item/device/flashlight/torch/flare/F = P
-		if(F.on)
-			fire(user)
-	else if(istype(P, /obj/item/weapon/lighter))
-		var/obj/item/weapon/lighter/L = P
-		if(L.lit)
-			fire(user)
-	else if(istype(P, /obj/item/candle))
-		var/obj/item/candle/C = P
-		if(C.lit)
-			fire(user)
-	else if(istype(P, /obj/item/weapon/match))
-		var/obj/item/weapon/match/M = P
-		if(M.lit)
-			fire(user)
-	else if(istype(P, /obj/item/clothing/mask/cigarette))
-		var/obj/item/clothing/mask/cigarette/M = P
-		if(M.lit)
-			fire(user)
+	if(P.is_hot())
+		fire(user)
 	else if(istype(P, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/W = P
 		if(fuel > 400)
@@ -63,7 +39,7 @@
 		if(W.use(1))
 			user.visible_message("[user] has added fuel to [src].", "<span class='notice'>You have added fuel to [src].</span>")
 			fuel += 60
-	else if(istype(P, /obj/item/weapon/reagent_containers/food/snacks))
+	else if(fired && istype(P, /obj/item/weapon/reagent_containers/food/snacks))
 		if(!ishuman(user))
 			return
 		var/mob/living/carbon/human/H = user
@@ -82,30 +58,25 @@
 				H.put_in_active_hand(S)
 			qdel(F)
 
+/obj/structure/campfire/fire_act(exposed_temperature, exposed_volume)
+	fire()
+
+/obj/structure/campfire/Crossed(atom/movable/AM)
+	if(fired)
+		burn_process()
+
 /obj/structure/campfire/process()
-	var/turf/location = get_turf(src)
+	if(fuel <= 0)
+		extinguish()
+		return
+	burn_process()
 	fuel--
 	if(fuel > 200)
 		set_light(8)
 	else if(fuel > 100)
-		set_light(5)
+		set_light(3)
 	else
-		set_light(2)
-	if(fuel <= 0)
-		name = "burned campfire"
-		desc = "It's burned..."
-		icon_state = "campfire0"
-		fired = 0
-		burned = 1
-		set_light(0)
-		StopAmbient()
-		STOP_PROCESSING(SSobj, src)
-		update_icon()
-		return
-
-	if(location)
-		location.hotspot_expose(70000, 5)
-		return
+		set_light(1)
 
 /obj/structure/campfire/proc/fire(mob/living/user)
 
@@ -113,12 +84,27 @@
 
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
 	START_PROCESSING(SSobj, src)
-	set_light(8)
 	fired = 1
 	desc = "Fired campfire... It's hot."
 	if(user)
 		user.visible_message("[user] has fire [src].", "<span class='notice'>You have fire [src].</span>")
 	update_icon()
+	burn_process()
+
+/obj/structure/campfire/proc/burn_process()
+	var/turf/location = get_turf(src)
+	location.hotspot_expose(1000,500,1)
+	for(var/A in location)
+		if(A == src)
+			continue
+		if(isobj(A))
+			var/obj/O = A
+			O.fire_act(1000, 500)
+		else if(isliving(A))
+			var/mob/living/L = A
+			L.adjust_fire_stacks(5)
+			L.IgniteMob()
+
 /obj/structure/campfire/update_icon()
 	if(fired)
 		icon_state = "campfire21"
@@ -127,3 +113,14 @@
 		icon_state = "campfire20"
 		overlays.Cut()
 	..()
+
+/obj/structure/campfire/extinguish()
+	name = "burned campfire"
+	desc = "It's burned..."
+	icon_state = "campfire0"
+	fired = 0
+	burned = 1
+	set_light(0)
+	StopAmbient()
+	STOP_PROCESSING(SSobj, src)
+	update_icon()
