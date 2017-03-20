@@ -6,6 +6,7 @@
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	var/list/ambientsounds = list()
 	var/environment = -1
+	var/grow_chance = 100
 
 /area/f13
 	name = "error"
@@ -28,6 +29,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 19
+	grow_chance = 45
 
 /area/f13/forest
 	name = "Forest"
@@ -40,6 +42,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
+	grow_chance = 75
 
 /area/f13/ruins
 	name = "Ruins"
@@ -52,6 +55,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 5
+	grow_chance = 5
 
 /area/f13/shack
 	name = "Shack"
@@ -61,6 +65,7 @@
 	ambientsounds = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg', \
 	'sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg')
 	environment = 2
+	grow_chance = 5
 
 /area/f13/building
 	name = "Building"
@@ -70,6 +75,7 @@
 	ambientsounds = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg', \
 	'sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg')
 	environment = 2
+	grow_chance = 5
 
 /area/f13/farm
 	name = "Farm"
@@ -82,6 +88,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
+	grow_chance = 50
 
 /area/f13/tribe
 	name = "Tribe"
@@ -94,6 +101,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
+	grow_chance = 5
 
 /area/f13/village
 	name = "Village"
@@ -106,6 +114,8 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
+	grow_chance = 5
+
 
 /area/f13/outpost
 	name = "Outpost"
@@ -118,6 +128,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 16
+	grow_chance = 5
 
 /area/f13/hub
 	name = "Hub"
@@ -130,6 +141,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 16
+	grow_chance = 5
 
 /area/f13/city
 	name = "City"
@@ -142,6 +154,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 16
+	grow_chance = 5
 
 /area/f13/chapel
 	name = "Chapel"
@@ -150,6 +163,7 @@
 	ambientmusic = list('sound/f13music/fo2_chapel.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/ambience/ambicha1.ogg','sound/ambience/ambicha2.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg')
 	environment = 5
+	grow_chance = 5
 
 /area/f13/bar
 	name = "Bar"
@@ -157,6 +171,7 @@
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo2_bar.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
 	environment = 2
+	grow_chance = 5
 
 /area/f13/casino
 	name = "Casino"
@@ -166,6 +181,7 @@
 	ambientsounds = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg', \
 	'sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg')
 	environment = 6
+	grow_chance = 5
 
 /area/f13/clinic
 	name = "Clinic"
@@ -175,6 +191,7 @@
 	ambientsounds = list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen2.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg', \
 	'sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg')
 	environment = 6
+	grow_chance = 5
 
 /area/f13/office
 	name = "Office"
@@ -184,6 +201,7 @@
 	ambientsounds = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg', \
 	'sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg')
 	environment = 2
+	grow_chance = 5
 
 /area/f13/store
 	name = "Store"
@@ -193,6 +211,7 @@
 	ambientsounds = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg', \
 	'sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg')
 	environment = 4
+	grow_chance = 5
 
 /area/f13/bunker
 	name = "Bunker"
@@ -202,6 +221,7 @@
 	ambientsounds = list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen2.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg', \
 	'sound/ambience/ambigen12.ogg','sound/ambience/ambigen13.ogg')
 	environment = 11
+	grow_chance = 5
 
 /area/f13/tunnel
 	name = "Tunnel"
@@ -210,6 +230,7 @@
 	ambientmusic = list('sound/f13music/fo2_tunnels.ogg','sound/f13music/fo2_caves.ogg','sound/f13music/fo2_vats.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/ambience/ambigen9.ogg','sound/ambience/ambigen12.ogg','sound/f13effects/steam_short.ogg','sound/f13effects/steam_long.ogg')
 	environment = 21
+	grow_chance = 25
 
 /area/f13/sewer
 	name = "Sewer"
@@ -218,6 +239,7 @@
 	ambientmusic = list('sound/f13music/fo2_tunnels.ogg','sound/f13music/fo2_caves.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_vats.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/ambience/ambigen9.ogg','sound/f13effects/steam_short.ogg','sound/f13effects/steam_long.ogg')
 	environment = 21
+	grow_chance = 50
 
 /area/f13/caves
 	name = "Caves"
@@ -226,6 +248,7 @@
 	ambientmusic = list('sound/f13music/fo2_caves.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_necropolis.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/ambience/ambigen15.ogg','sound/ambience/ambigen16.ogg','sound/ambience/ambigen17.ogg')
 	environment = 8
+	grow_chance = 75
 
 /area/f13/subway
 	name = "Subway"
@@ -234,6 +257,7 @@
 	ambientmusic = list('sound/f13music/fo2_tunnels.ogg','sound/f13music/fo2_caves.ogg','sound/f13music/fo2_vats.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen2.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen12.ogg')
 	environment = 21
+	grow_chance = 25
 
 /area/f13/secret
 	name = "Secret"
@@ -243,6 +267,7 @@
 	ambientsounds = list('sound/ambience/signal.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg', \
 	'sound/ambience/ambigen12.ogg','sound/ambience/ambigen13.ogg')
 	environment = 11
+	grow_chance = 0
 
 /area/f13/radiation
 	name = "Radiation"
@@ -251,6 +276,7 @@
 	ambientmusic = list('sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_world.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg')
 	environment = 19
+	grow_chance = 5
 
 //Faction related areas
 
@@ -265,6 +291,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 6
+	grow_chance = 5
 
 /area/f13/vault
 	name = "Vault"
@@ -274,6 +301,7 @@
 	ambientsounds = list('sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg', \
 	'sound/ambience/ambigen13.ogg','sound/ambience/ambigen14.ogg','sound/f13effects/steam_short.ogg','sound/f13effects/steam_long.ogg')
 	environment = 6
+	grow_chance = 5
 
 /area/f13/brotherhood
 	name = "Brotherhood Of Steel"//Brother Hood
@@ -283,6 +311,7 @@
 	ambientsounds = list('sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg', \
 	'sound/ambience/ambigen12.ogg','sound/ambience/ambigen13.ogg')
 	environment = 6
+	grow_chance = 5
 
 /area/f13/enclave
 	name = "Enclave"
@@ -292,6 +321,7 @@
 	ambientsounds = list('sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg', \
 	'sound/ambience/ambigen13.ogg','sound/ambience/ambigen14.ogg')
 	environment = 6
+	grow_chance = 5
 
 /area/f13/ncr
 	name = "NCR"
@@ -304,6 +334,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 4
+	grow_chance = 5
 
 /area/f13/legion
 	name = "Legion"
@@ -316,6 +347,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 4
+	grow_chance = 5
 
 /area/f13/followers
 	name = "Followers of the Apocalypse"
@@ -325,3 +357,4 @@
 	ambientsounds = list('sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg', \
 	'sound/ambience/ambigen13.ogg','sound/ambience/signal.ogg')
 	environment = 5
+	grow_chance = 5
