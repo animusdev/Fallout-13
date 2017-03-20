@@ -4,8 +4,22 @@
 
 /obj/structure/flora/grass/wasteland/New()
 	..()
-
 	icon_state = "tall_grass_[rand(1, 8)]"//16)]"
+
+/obj/structure/flora/grass/wasteland/attackby(obj/item/weapon/W, mob/user, params)
+	if(W.sharpness && W.force > 0 && !(NODECONSTRUCT in flags))
+		to_chat(user, "You are begin cutting [src]...")
+		if(do_after(user, 100/W.force, target = user))
+			to_chat(user, "<span class='notice'>You've collected [src]</span>")
+			var/obj/item/stack/sheet/grass/G = user.get_inactive_held_item()
+			if(istype(G))
+				G.add(1)
+			else
+				new /obj/item/stack/sheet/grass(get_turf(src))
+			qdel(src)
+			return 1
+	else
+		. = ..()
 
 /obj/structure/flora/tree/wasteland
 	name = "dead tree"

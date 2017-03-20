@@ -2,6 +2,7 @@
 	name = "hide"
 	desc = "Something went wrong."
 	origin_tech = "biotech=3"
+	resistance_flags = FLAMMABLE
 
 /obj/item/stack/sheet/animalhide/human
 	name = "human skin"

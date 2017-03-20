@@ -1283,6 +1283,7 @@
 #include "code\modules\fallout\projectiles\guns\ballistic.dm"
 #include "code\modules\fallout\projectiles\guns\energy.dm"
 #include "code\modules\fallout\sound_system\sound_system.dm"
+#include "code\modules\fallout\stack\grass.dm"
 #include "code\modules\fallout\stack\hide.dm"
 #include "code\modules\fallout\structures\chair.dm"
 #include "code\modules\fallout\structures\fence.dm"
