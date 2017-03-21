@@ -104,7 +104,7 @@
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
-	force = 15
+	force = 17
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
 	throwforce = 20

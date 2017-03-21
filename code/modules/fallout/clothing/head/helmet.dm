@@ -31,7 +31,7 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	self_weight = 4
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
@@ -226,6 +226,30 @@
 	self_weight = 0.5
 
 //Power armor helmets
+/obj/item/clothing/head/helmet/power_armor
+	var/brightness_on = 4 //luminosity when the light is on
+	var/on = 0
+	light_color = LIGHT_COLOR_YELLOW
+	icon = 'icons/fallout/clothing/hats.dmi'
+
+/obj/item/clothing/head/helmet/power_armor/proc/toogle_light(mob/user)
+	on = !on
+	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
+	item_state = "[initial(item_state)][on ? "-light" : ""]"
+	user.update_inv_head()
+	if(on)
+		set_light(brightness_on)
+	else
+		set_light(0)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/power_armor/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
+		toogle_light(user)
+		return 1
+	return ..()
 
 /obj/item/clothing/head/helmet/power_armor/shocktrooper
 	name = "shocktrooper power helmet"
@@ -289,6 +313,7 @@
 	put_on_delay = 50
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/t45d
@@ -306,29 +331,6 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
-	var/brightness_on = 4 //luminosity when the light is on
-	var/on = 0
-
-/obj/item/clothing/head/helmet/power_armor/t45d/attack_self(mob/user)
-	if(!isturf(user.loc))
-		to_chat(user, "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>")//To prevent some lighting anomalities.
-
-		return
-	on = !on
-	icon_state = "t45dhelmet-light"
-	item_state = "t45dhelmet-light"
-	user.update_inv_head()	//so our mob-overlays update
-
-	if(on)
-		turn_on(user)
-	else
-		turn_off(user)
-
-/obj/item/clothing/head/helmet/power_armor/t45d/proc/turn_on(mob/user)
-	set_light(brightness_on)
-
-/obj/item/clothing/head/helmet/power_armor/t45d/proc/turn_off(mob/user)
-	set_light(0)
 
 //Knights of the Apocalypse
 

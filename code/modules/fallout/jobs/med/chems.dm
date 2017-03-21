@@ -31,7 +31,7 @@
 /obj/item/weapon/reagent_containers/pill/patch/healpowder
 	name = "Healing powder"
 	desc = "Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
-	list_reagents = list("styptic_powder" = 15, "silver_sulfadiazine" = 15, "space_drugs" = 5)
+	list_reagents = list("omnizine" = 20)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "bandaid"
 	icon_state = "heal_powder"
