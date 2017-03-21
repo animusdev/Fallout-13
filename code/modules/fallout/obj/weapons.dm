@@ -14,21 +14,6 @@
 	block_chance = 20
 	sharpness = IS_SHARP
 
-/obj/item/weapon/tackknife
-	name = "tactical knife"
-	desc = "You'd be killing loads of people if this was Medal of Valor: Heroes of Space."
-	icon_state = "knife"
-	item_state = "knife"
-	slot_flags = SLOT_BELT
-	force = 15
-	throwforce = 8
-	w_class = 1
-	hitsound = 'sound/weapons/bladeslice.ogg'
-	icon = 'icons/fallout/objects/melee.dmi'
-	attack_verb = list("stabbed", "chopped", "cut")
-	block_chance = 2
-	sharpness = IS_SHARP
-
 /obj/item/weapon/golf
 	name = "9 iron"
 	desc = "This old 9 iron is bent and battered after many years of exposure to the elements."
