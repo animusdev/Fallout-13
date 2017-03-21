@@ -14,11 +14,13 @@
 	..()
 	name = pick(names)
 
-/obj/item/key/buggy/New()
-	..()
+/obj/item/key/buggy
 	name = "car key"
 	desc = "A keyring with a small steel key.<br>By the look of a key cuts it's likely it belongs to an automobile."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
+
+/obj/item/key/buggy/New()
+	..()
 	icon_state = pick("key-buggy-r","key-buggy-y","key-buggy-g","key-buggy-b")
 
 /datum/riding/motorcycle/buggy

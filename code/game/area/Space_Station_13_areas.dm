@@ -851,7 +851,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 // Telecommunications Satellite
 
 /area/tcommsat
-	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/f13ambience/ambigen_10.ogg')
 
 /area/tcommsat/entrance
 	name = "Telecoms Teleporter"
@@ -864,22 +864,22 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/ai_monitored/turret_protected/tcomsat
 	name = "Telecoms Satellite"
 	icon_state = "tcomsatlob"
-	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/f13ambience/ambigen_10.ogg')
 
 /area/ai_monitored/turret_protected/tcomfoyer
 	name = "Telecoms Foyer"
 	icon_state = "tcomsatentrance"
-	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/f13ambience/ambigen_10.ogg')
 
 /area/ai_monitored/turret_protected/tcomwest
 	name = "Telecommunications Satellite West Wing"
 	icon_state = "tcomsatwest"
-	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/f13ambience/ambigen_10.ogg')
 
 /area/ai_monitored/turret_protected/tcomeast
 	name = "Telecommunications Satellite East Wing"
 	icon_state = "tcomsateast"
-	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/f13ambience/ambigen_10.ogg')
 
 /area/tcommsat/computer
 	name = "Telecoms Control Room"

@@ -1,6 +1,6 @@
 /obj/item/clothing/head/helmet/space/chronos
-	name = "Chronosuit Helmet"
-	desc = "A white helmet with an opaque blue visor."
+	name = "chronosuit helmet"
+	desc = "A blue helmet with opaque blue visors.<br>The technology is extremely far beyond the time."
 	icon_state = "chronohelmet"
 	item_state = "chronohelmet"
 	slowdown = 1
@@ -19,13 +19,14 @@
 
 
 /obj/item/clothing/suit/space/chronos
-	name = "Chronosuit"
-	desc = "An advanced spacesuit equipped with time-bluespace teleportation and anti-compression technology"
+	name = "chronosuit"
+	desc = "An advanced suit equipped with teleportation and anti-compression technology.<br>The technology is extremely far beyond the time."
 	icon_state = "chronosuit"
 	item_state = "chronosuit"
 	actions_types = list(/datum/action/item_action/toggle)
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 30, bio = 90, rad = 90, fire = 100, acid = 1000)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	var/timeshift_sound = 'sound/f13effects/timeshift.ogg'
 	var/list/chronosafe_items = list(/obj/item/weapon/chrono_eraser, /obj/item/weapon/gun/energy/chrono_gun)
 	var/list/hands_nodrop = list()
 	var/obj/item/clothing/head/helmet/space/chronos/helmet = null
@@ -110,6 +111,7 @@
 	var/mob/living/carbon/human/user = src.loc
 	if(activated && !teleporting && user && istype(user) && location && user.loc && location.loc && user.wear_suit == src && user.stat == CONSCIOUS)
 		teleporting = 1
+		playsound(src.loc, timeshift_sound, 50, 0, 0)
 		var/turf/from_turf = get_turf(user)
 		var/turf/to_turf = get_turf(location)
 		var/distance = cheap_hypotenuse(from_turf.x, from_turf.y, to_turf.x, to_turf.y)

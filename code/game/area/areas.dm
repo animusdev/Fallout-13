@@ -51,14 +51,14 @@
 	var/parallax_movedir = 0
 
 	var/global/global_uid = 0
-	var/uid //1 - 2 : outside the ruined buildings, 3 - 9 : inside the wasteland buildings, 10 - 14 : vaults and bunkers specific, 15-17 : caves
-	var/ambience = list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen2.ogg',\
-									'sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg',\
-									'sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg',\
-									'sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg',\
-									'sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg',\
-									'sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg',\
-									'sound/ambience/ambigen13.ogg','sound/ambience/ambigen14.ogg')
+	var/uid //1 - 2 : outside the ruined buildings, 3 - 9 : inside the wasteland buildings, 10 - 14 : vaults and bunkers specific, 15-19 : caves
+	var/ambience = list('sound/f13ambience/ambigen_1.ogg','sound/f13ambience/ambigen_2.ogg',\
+									'sound/f13ambience/ambigen_3.ogg','sound/f13ambience/ambigen_4.ogg',\
+									'sound/f13ambience/ambigen_5.ogg','sound/f13ambience/ambigen_6.ogg',\
+									'sound/f13ambience/ambigen_7.ogg','sound/f13ambience/ambigen_8.ogg',\
+									'sound/f13ambience/ambigen_9.ogg','sound/f13ambience/ambigen_10.ogg',\
+									'sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg',\
+									'sound/f13ambience/ambigen_13.ogg','sound/f13ambience/ambigen_14.ogg')
 	flags = CAN_BE_DIRTY
 
 
