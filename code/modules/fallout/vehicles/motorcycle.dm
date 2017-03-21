@@ -41,22 +41,27 @@
 
 //Motorcycle subtypes with different skins
 
-/obj/vehicle/fuel/motorcycle/rust
+/obj/vehicle/fuel/motorcycle/rusty
 	name = "rusty motorcycle"
-	desc = "It's a very old and weathered motorcycle, yet the engine is still alive somehow."
+	desc = "A very old and weathered motorcycle, yet the engine is still alive somehow."
 	icon_state = "bike_rust_med"
 	datum_type = /datum/riding/motorcycle/slow
 
-/obj/vehicle/fuel/motorcycle/motor_green
+/obj/vehicle/fuel/motorcycle/green
 	name = "green motorcycle"
-	desc = "It's a military motorcycle from the old days.<br>Oddly enough it's still in pristine condition. The Army always had all the top-quality stuff."
+	desc = "A military motorcycle from the old days.<br>Oddly enough it's still in pristine condition. The Army always had all the top-quality stuff."
 	icon_state = "bike_green"
-	datum_type = /datum/riding/motorcycle/fast
+
+/obj/vehicle/fuel/motorcycle/flamy
+	name = "black motorcycle"
+	desc = "A vintage motorcycle from the old days.<br>It's extremely well maintained. Despite being almost totally black each part of it is shiny.<br>Topping it all off - it has badass flames painted over the fueltank."
+	icon_state = "bike_flamy"
 
 /obj/vehicle/fuel/motorcycle/scrambler
 	name = "scrambler motorbike"
 	desc = "Scrambler is an old term for a dirt bike with powerful engine, that raced on off-road tracks with low jumps.<br>Yet when you see it, you know it's better not to mess around with its owner."
 	icon_state = "bike_scrambler"
+	datum_type = /datum/riding/motorcycle/fast
 
 //Motorcycle riding datum
 
