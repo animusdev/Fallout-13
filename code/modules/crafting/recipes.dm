@@ -8,7 +8,7 @@
 	var/parts[] = list() //type paths of items that will be placed in the result
 	var/chem_catalysts[] = list() //like tools but for reagents
 	var/category = CAT_NONE //where it shows up in the crafting UI
-
+/*
 
 /datum/crafting_recipe/pin_removal
 	name = "Pin Removal"
@@ -434,3 +434,4 @@
 	time = 10
 	reqs = list(/obj/item/stack/sheet/cardboard = 1)
 	category = CAT_MISC
+*/
