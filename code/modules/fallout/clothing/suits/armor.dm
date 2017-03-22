@@ -216,7 +216,7 @@
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
 	put_on_delay = 40
 	strip_delay = 40
-	self_weight = 3
+	self_weight = 8
 
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "NCR Veteran Ranger trenchcoat"
