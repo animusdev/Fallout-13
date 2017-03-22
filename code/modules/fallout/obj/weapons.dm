@@ -32,8 +32,8 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/pipe
-	name = "Pipe"
-	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting. Though it has a short reach, it has decent damage and a fast swing, making it a good melee weapon for players who are just starting out. "
+	name = "pipe"
+	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon_state = "pipe"
 	item_state = "pipe"
 	slot_flags = SLOT_BELT
@@ -49,7 +49,7 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/powergauntlet
-	name = "Power gauntlet"
+	name = "power gauntlet"
 	desc = "Power Knuckles 'Big ram' produced by Beau.<br>Most consider it the best weapon for close combat.<br>Small but powerful battery provides the power for device operation."
 	icon_state = "powergauntlet"
 	item_state = "powergauntlet"
