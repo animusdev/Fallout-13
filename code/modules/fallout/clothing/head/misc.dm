@@ -45,6 +45,12 @@
 	icon_state = "bandit"
 	item_state = "fedora"
 
+/obj/item/clothing/head/f13/sergeant
+	name = "ranger hat"
+	desc = "A brown broad-brimmed felt hat, with a high crown, pinched symmetrically at the four corners.<br>It has the insignia plate of the New California Republic Rangers."
+	icon_state = "sergeant"
+	item_state = "dethat"
+
 /obj/item/clothing/head/f13/gambler
 	name = "gambler hat"
 	desc = "A perfect hat for a ramblin' gamblin' man." //But I got to ramble (ramblin' man) //Oh I got to gamble (gamblin' man) //Got to got to ramble (ramblin' man) //I was born a ramblin' gamblin' man

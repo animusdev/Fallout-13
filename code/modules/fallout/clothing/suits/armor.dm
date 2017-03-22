@@ -39,6 +39,10 @@
 	strip_delay = 30
 	self_weight = 5
 
+/obj/item/clothing/suit/armor/f13/kit/punk
+	icon_state = "punkit" //Punk it
+	item_state = "punkit" //Pun kit
+
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"
 	desc = "When equipped, the owner takes significantly less damage from attacks to a chest zone.<br>It's heavy and uncomfortable though."
@@ -149,25 +153,6 @@
 	strip_delay = 60
 	self_weight = 12
 
-/obj/item/clothing/suit/armor/f13/rangercombat
-	name = "ranger trenchcoat"
-	desc = "An armored leather trenchcoat - traditional for the Desert Rangers, that is worn with pre-War riot armor."
-	icon_state = "ranger"
-	item_state = "ranger"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
-	put_on_delay = 40
-	strip_delay = 40
-	self_weight = 1.5
-
-/obj/item/clothing/suit/armor/f13/rangercombat/old
-	name = "worn ranger combat armor"
-	desc = "A one of a kind NCR Veteran Ranger armor, that has been in countless battles, and a lot of blood was shed around it."
-	icon_state = "oldranger"
-	item_state = "oldranger"
-	self_weight = 1.5
-	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 20, acid = 20)
-
 /obj/item/clothing/suit/armor/f13/ncr
 	name = "NCR trooper armor"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
@@ -219,8 +204,38 @@
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
 	icon_state = "ncr_armor9"
 	item_state = "ncr_armor9"
-	self_weight = 7.5
+	self_weight = 6
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 50, fire = 10, acid = 10) //Better radiation protection, thank the facewrap bro!
+
+/obj/item/clothing/suit/armor/f13/sergeant
+	name = "NCR Ranger patrol armor"
+	desc = "A military-grade combat armor designed to protect key sections of the human body from ballistic trauma with hard armored plates made from complex polymers and ceramics, with a flexible body suit interwoven with thermal-dissipative membranes and bulletproof material.<br>It has a matte-finish olive drab coloring by default, making it suitable for woodland and/or urban camouflage."
+	icon_state = "sergeant"
+	item_state = "sergeant"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
+	put_on_delay = 40
+	strip_delay = 40
+	self_weight = 3
+
+/obj/item/clothing/suit/armor/f13/rangercombat
+	name = "NCR Veteran Ranger trenchcoat"
+	desc = "An armored leather trenchcoat - traditional for the Desert Rangers, that is worn with pre-War riot armor."
+	icon_state = "ranger"
+	item_state = "ranger"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
+	put_on_delay = 40
+	strip_delay = 40
+	self_weight = 2
+
+/obj/item/clothing/suit/armor/f13/rangercombat/old
+	name = "worn NCR Veteran Ranger combat armor"
+	desc = "A unique armor, that has been in countless battles, and a lot of blood was shed around it."
+	icon_state = "oldranger"
+	item_state = "oldranger"
+	self_weight = 2
+	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 20, acid = 20)
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE

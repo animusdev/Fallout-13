@@ -1,6 +1,6 @@
 /obj/item/weapon/machete
-	name = "Machete"
-	desc = "The machete appears to be a makeshift weapon, and consists of a lawn mower blade strapped to a wooden handle. It is the primary melee weapon of Caesar's Legion. Aside from having a low Strength requirement, it also does bonus damage to limbs."
+	name = "\proper machete"
+	desc = "The machete appears to be a makeshift weapon, as it consists of a lawn mower blade strapped to a wooden handle.<br>It is the primary melee weapon of Caesar's Legion."
 	icon_state = "machete"
 	item_state = "machete"
 	flags = CONDUCT
@@ -16,7 +16,7 @@
 
 /obj/item/weapon/golf
 	name = "9 iron"
-	desc = "This old 9 iron is bent and battered after many years of exposure to the elements."
+	desc = "This old 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
 	icon_state = "golf"
 	item_state = "golf"
 	slot_flags = SLOT_BELT
@@ -49,8 +49,8 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/powergauntlet
-	name = "Powergauntlet"
-	desc = "Power Knuckles 'Big ram' produced by Beau. Most consider him the best weapon for close combat. The rest of it's just fear. Power is provided by small batteries"
+	name = "Power gauntlet"
+	desc = "Power Knuckles 'Big ram' produced by Beau.<br>Most consider it the best weapon for close combat.<br>Small but powerful battery provides the power for device operation."
 	icon_state = "powergauntlet"
 	item_state = "powergauntlet"
 	slot_flags = SLOT_BELT
@@ -68,7 +68,7 @@
 /obj/item/weapon/twohanded/baseball
 	icon_state = "baseball0"
 	name = "baseball bat"
-	desc = "Wooden source of pain."
+	desc = "A wooden source of joy and pain."
 	icon = 'icons/fallout/objects/melee.dmi'
 	force = 7
 	throwforce = 15
@@ -81,7 +81,7 @@
 /obj/item/weapon/twohanded/tribal_spear
 	icon_state = "tribalspear0"
 	name = "tribal spear"
-	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
+	desc = "A haphazardly-constructed, yet still deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
@@ -101,13 +101,13 @@
 
 /obj/item/weapon/spear
 	icon_state = "spear"
-	name = "spear"
-	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
+	name = "throwing spear"
+	desc = "A rather deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
-	force = 17
+	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
-	throwforce = 20
+	throwforce = 30
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3
 	armour_penetration = 10
@@ -119,8 +119,8 @@
 	max_integrity = 200
 
 /obj/item/weapon/twohanded/superhammer
-	name = "Superhammer"
-	desc = "Superkuvalda, BOS produced using the most modern weapons technology. Equipped with storage of kinetic energy to enhance impact."
+	name = "super sledge"
+	desc = "Also called 'Superkuvalda' - BoS produced these using the most modern weapons technology.<br>It's equipped with storage of kinetic energy to enhance the impact."
 	icon_state = "supersledgehammer0"
 	icon = 'icons/fallout/objects/melee.dmi'
 	flags = CONDUCT

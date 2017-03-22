@@ -324,8 +324,9 @@
 /obj/item/weapon/restraints/legcuffs/bola
 	name = "bola"
 	desc = "A restraining device designed to be thrown at the target. Upon connecting with said target, it will wrap around their legs, making it difficult for them to move quickly."
+	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "bola"
-	breakouttime = 35//easy to apply, easy to break out of
+	breakouttime = 30//easy to apply, easy to break out of
 	gender = NEUTER
 	origin_tech = "engineering=3;combat=1"
 	var/weaken = 0
@@ -348,21 +349,28 @@
 		to_chat(C, "<span class='userdanger'>\The [src] ensnares you!</span>")
 		C.Weaken(weaken)
 
-/obj/item/weapon/restraints/legcuffs/bola/tactical//traitor variant
-	name = "reinforced bola"
-	desc = "A strong bola, made with a long steel chain. It looks heavy, enough so that it could trip somebody."
+/obj/item/weapon/restraints/legcuffs/bola/raider
+	name = "raiding bola"
+	desc = "A classic bola used by raiders to weaken and capture their victims."
 	icon_state = "bola_r"
-	breakouttime = 70
-	origin_tech = "engineering=4;combat=3"
+	breakouttime = 50 //Slightly harder to break out of
+
+/obj/item/weapon/restraints/legcuffs/bola/tribal
+	name = "reinforced bola"
+	desc = "A strong bola, made by elderly tribal craftsman. It looks heavy, enough so that it could trip somebody."
+	icon_state = "bola_t"
+	breakouttime = 100 //Way harder to break out of
 	weaken = 1
 
 /obj/item/weapon/restraints/legcuffs/bola/energy //For Security
 	name = "energy bola"
 	desc = "A specialized hard-light bola designed to ensnare fleeing criminals and aid in arrests."
+	icon = 'icons/obj/items.dmi'
 	icon_state = "ebola"
 	hitsound = 'sound/weapons/taserhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	breakouttime = 60
+	origin_tech = "engineering=4;combat=3"
 
 /obj/item/weapon/restraints/legcuffs/bola/energy/throw_impact(atom/hit_atom)
 	if(iscarbon(hit_atom))

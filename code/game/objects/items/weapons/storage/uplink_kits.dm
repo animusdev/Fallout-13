@@ -317,8 +317,8 @@
 	new /obj/item/weapon/throwing_star(src)
 	new /obj/item/weapon/throwing_star(src)
 	new /obj/item/weapon/throwing_star(src)
-	new /obj/item/weapon/restraints/legcuffs/bola/tactical(src)
-	new /obj/item/weapon/restraints/legcuffs/bola/tactical(src)
+	new /obj/item/weapon/restraints/legcuffs/bola/tribal(src)
+	new /obj/item/weapon/restraints/legcuffs/bola/tribal(src)
 
 /obj/item/weapon/storage/box/syndie_kit/cutouts/New()
 	..()

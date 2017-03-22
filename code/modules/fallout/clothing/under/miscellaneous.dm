@@ -273,6 +273,14 @@
 	item_color = "mechanic"
 	can_adjust = 0
 
+/obj/item/clothing/under/f13/petrochico
+	name = "worn green jumpsuit"
+	desc = "A dark green colored jumpsuit, with white lines on its sleeves and a Petro-Chico patch sewn on the right breast."
+	icon_state = "petrochico"
+	item_state = "centcom"
+	item_color = "petrochico"
+	can_adjust = 0
+
 /obj/item/clothing/under/f13/caravaneer
 	name = "caravaneer outift"
 	desc = "A striped brown shirt, with a pair of dark blue pants on suspenders.<br>That type of outfit is commonly worn by caravaneers and travelers."
@@ -293,8 +301,16 @@
 	name = "merchant outfit "
 	desc = "An outfit commonly worn by various wastelanders - mostly wandering traders and merchants on the market.<br>So what do you say if I buy it from you with 10% discount?"
 	icon_state = "merchant"
-	item_state = "bl_suit"
+	item_state = "brownjsuit"
 	item_color = "merchant"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/worn
+	name = "worn outfit "
+	desc = "A worn khaki shirt without any buttons left, and a ragged pair of jeans.<br>It may seem a bad outfit choice at first, yet there are wastelanders out there who can't afford even that."
+	icon_state = "worn"
+	item_state = "brownjsuit"
+	item_color = "worn"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/vault
