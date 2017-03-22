@@ -46,7 +46,6 @@
 		ammo_type[i] = shot
 	shot = ammo_type[select]
 	fire_sound = shot.fire_sound
-	fire_delay = shot.delay
 
 /obj/item/weapon/gun/energy/Destroy()
 	if(power_supply)

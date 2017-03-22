@@ -3,7 +3,6 @@
 	icon_state = "laser"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	damage = 20
-	light_range = 1
 	light_color = LIGHT_COLOR_RED
 	damage_type = BURN
 	hitsound = 'sound/weapons/sear.ogg'
@@ -11,6 +10,10 @@
 	flag = "laser"
 	eyeblur = 2
 	impact_effect_type = /obj/effect/overlay/temp/impact_effect/red_laser
+
+/obj/item/projectile/beam/fire(setAngle, atom/direct_target)
+	set_light(1)
+	..()
 
 /obj/item/projectile/beam/laser
 
