@@ -94,6 +94,7 @@ var/list/lighting_update_overlays  = list() // List of lighting overlays queued 
 		resuming_stage = STAGE_OVERLAYS
 
 	while (currentrun_overlays.len)
+		currentrun_overlays.Swap(1,currentrun_overlays.len)
 		var/atom/movable/lighting_overlay/O = currentrun_overlays[currentrun_overlays.len]
 		currentrun_overlays.len--
 

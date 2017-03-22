@@ -16,6 +16,10 @@
 
 	var/needs_update = FALSE
 
+	var/animating    = FALSE
+	var/new_color    = FALSE
+	var/list/target_color[20]
+
 /atom/movable/sunlighting_overlay/New(var/atom/loc, var/no_update = FALSE)
 	. = ..()
 	verbs.Cut()
@@ -90,14 +94,13 @@
 		ca  = sundummy_lighting_corner_full
 
 	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
-
-	color  = list(
+	animate_color(color, list(
 		cr.cache, cr.cache, cr.cache, max(cr.cache, cr.cache, cr.cache),
 		cg.cache, cg.cache, cg.cache, max(cg.cache, cg.cache, cg.cache),
 		cb.cache, cb.cache, cb.cache, max(cb.cache, cb.cache, cb.cache),
 		ca.cache, ca.cache, ca.cache, max(ca.cache, ca.cache, ca.cache),
 		0, 0, 0, 0
-	)
+	), 0.5, 8)
 	if(max || T.is_openspace())
 		luminosity = 1
 	else
@@ -123,3 +126,30 @@
 /atom/movable/sunlighting_overlay/forceMove(atom/destination, var/no_tp=FALSE, var/harderforce = FALSE)
 	if(harderforce)
 		. = ..()
+
+//This proc is unsafe. start_color.len must be equal end_color.len. And both lists must be not null
+/atom/movable/sunlighting_overlay/proc/animate_color(list/current_color, list/end_color, time, increment = time)
+	target_color = end_color.Copy()
+	if(animating)
+		new_color = TRUE
+		return
+	NEW_COLOR
+	var/list/inc_color[target_color.len]
+	for(var/i = 1, i < inc_color.len, i++)
+		inc_color[i] = (current_color[i] - target_color[i]) / increment
+	var/inc_time = time / increment
+	animating = TRUE
+	new_color = FALSE
+	spawn(0)
+		for(var/inc = increment, inc > 0, inc--)
+
+			if(new_color)
+				goto NEW_COLOR
+
+			if(!src)
+				return
+			for(var/i = 1, i < inc_color.len, i++)
+				current_color[i] -= inc_color[i]
+			src.color = current_color
+			sleep(inc_time)
+		animating = FALSE

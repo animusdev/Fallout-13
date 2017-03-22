@@ -16,6 +16,10 @@
 
 	var/needs_update = FALSE
 
+	var/animating    = FALSE
+	var/new_color    = FALSE
+	var/list/target_color[20]
+
 /atom/movable/lighting_overlay/New(var/atom/loc, var/no_update = FALSE)
 	. = ..()
 	verbs.Cut()
@@ -77,21 +81,21 @@
 	var/datum/lighting_corner/ca  = T.corners[1] || dummy_lighting_corner
 
 	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
-
-	color  = list(
+	spawn(color == LIGHTING_BASE_MATRIX ? 0 : 0.5)
+#if LIGHTING_SOFT_THRESHOLD != 0
+		luminosity = max > LIGHTING_SOFT_THRESHOLD
+#else
+	// Because of floating points™?, it won't even be a flat 0.
+	// This number is mostly arbitrary.
+		luminosity = max > 1e-6
+#endif
+	animate_color(color, list(
 		cr.cache_r, cr.cache_g, cr.cache_b, 0,
 		cg.cache_r, cg.cache_g, cg.cache_b, 0,
 		cb.cache_r, cb.cache_g, cb.cache_b, 0,
 		ca.cache_r, ca.cache_g, ca.cache_b, 0,
 		0, 0, 0, 1
-	)
-#if LIGHTING_SOFT_THRESHOLD != 0
-	luminosity = max > LIGHTING_SOFT_THRESHOLD
-#else
-	// Because of floating points™?, it won't even be a flat 0.
-	// This number is mostly arbitrary.
-	luminosity = max > 1e-6
-#endif
+	), 0.5, 8)
 
 // Variety of overrides so the overlays don't get affected by weird things.
 
@@ -115,3 +119,29 @@
 /atom/movable/lighting_overlay/forceMove(atom/destination, var/no_tp=FALSE, var/harderforce = FALSE)
 	if(harderforce)
 		. = ..()
+
+/atom/movable/lighting_overlay/proc/animate_color(list/current_color, list/end_color, time, increment = time)
+	target_color = end_color.Copy()
+	if(animating)
+		new_color = TRUE
+		return
+	NEW_COLOR
+	var/list/inc_color[target_color.len]
+	for(var/i = 1, i < inc_color.len, i++)
+		inc_color[i] = (current_color[i] - target_color[i]) / increment
+	var/inc_time = time / increment
+	animating = TRUE
+	new_color = FALSE
+	spawn(0)
+		for(var/inc = increment, inc > 0, inc--)
+
+			if(new_color)
+				goto NEW_COLOR
+
+			if(!src)
+				return
+			for(var/i = 1, i < inc_color.len, i++)
+				current_color[i] -= inc_color[i]
+			src.color = current_color
+			sleep(inc_time)
+		animating = FALSE
