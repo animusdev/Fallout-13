@@ -50,7 +50,7 @@
 	icon_state = "wasteland1"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
-	/obj/item/seeds/ferocactus, /obj/item/seeds/potato, /obj/item/seeds/pumpkin)
+	/obj/item/seeds/ferocactus, /obj/item/seeds/corn)
 	slowdown = 0.1
 
 /turf/open/indestructible/ground/desert/New()
@@ -76,7 +76,7 @@
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
-	/obj/item/seeds/ferocactus, /obj/item/seeds/potato, /obj/item/seeds/pumpkin)
+	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn)
 	slowdown = 0.2
 
 /turf/open/indestructible/ground/road
@@ -93,10 +93,14 @@
 
 /turf/open/indestructible/ground/mountain
 	name = "mountain"
-	icon_state = "rockfloor"
+	icon_state = "rockfloor1"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	allowed_plants = list(/obj/item/seeds/fungus)
 	step_sounds = list("human" = "erikafootsteps")
+
+/turf/open/indestructible/ground/desert/New()
+	..()
+	icon_state = "rockfloor[rand(1,2)]"
 
 /turf/open/indestructible/ground/tunnel
 	name = "metal floor"

@@ -8,7 +8,7 @@ var/global/list/rockTurfEdgeCache
 #define WEST_EDGING		"west"
 turf/var/rockpick=null
 turf/closed/mineral/proc/randomizerock(mineraltype)
-	icon_state = pick("rock1","rock2","rock3")
+	icon_state = pick("rock1","rock2","rock3","rock4","rock5","rock6")
 	spawn(50)
 		if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
 			rockTurfEdgeCache = list()
