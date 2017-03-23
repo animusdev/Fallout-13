@@ -68,7 +68,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 	layer = TURF_LAYER + 0.1
 	temperature = TCMB
 	var/environment_type = "asteroid"
-	var/turf/open/floor/plating/turf_type = /turf/open/indestructible/ground/mountain
+	var/turf/open/turf_type = /turf/open/indestructible/ground/mountain
 	var/mineralType = null
 	var/mineraltype
 	var/mineralAmt = 3

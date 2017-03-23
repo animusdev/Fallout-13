@@ -5,20 +5,20 @@
 
 /datum/time_of_day/day
 	name = "Day"
-	color = "#FFFFFF"
+	color = "#ffffcb"
 	duration = 9000
 
 /datum/time_of_day/morning
 	name = "Morning"
-	color = "#d6dfff"
+	color = "#808599"
 	duration = 4500
 
 /datum/time_of_day/evening
 	name = "Evening"
-	color = "#ffbcaa"
+	color = "#FFA891"
 	duration = 4500
 
 /datum/time_of_day/night
 	name = "Night"
-	color = "#050d29"
+	color = "#01030C"
 	duration = 9000

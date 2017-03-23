@@ -235,9 +235,13 @@
 			if(!issilicon(user))
 				if( i>1 && !(user.is_holding(src))) //for burst firing
 					break
-			if(i > 1 && (ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom)))
+			if(i > 1 && (user.mouse_on_atom && (ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom))))
 				target = user.mouse_on_atom
 				params = user.mouse_on_params
+				if(target in user.contents)
+					break
+				if(target == user)
+					break
 			if(chambered && chambered.BB)
 				if(randomspread)
 					sprd = round((rand() - 0.5) * (randomized_gun_spread + randomized_bonus_spread))
@@ -257,7 +261,7 @@
 				break
 			process_chamber()
 			update_icon()
-			sleep(fire_delay)
+			sleep(chambered ? chambered.delay : fire_delay)
 		firing_burst = 0
 	else
 		if(chambered)

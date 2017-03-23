@@ -77,23 +77,17 @@
 	var/datum/lighting_corner/ca  = T.corners[1] || dummy_lighting_corner
 
 	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
+	var/lum = max > 1e-6
+	spawn(lum ? -1 : 2)
+		luminosity = lum
 
-	color  = list(
+	animate(src, color = list(
 		cr.cache_r, cr.cache_g, cr.cache_b, 0,
 		cg.cache_r, cg.cache_g, cg.cache_b, 0,
 		cb.cache_r, cb.cache_g, cb.cache_b, 0,
 		ca.cache_r, ca.cache_g, ca.cache_b, 0,
 		0, 0, 0, 1
-	)
-#if LIGHTING_SOFT_THRESHOLD != 0
-	luminosity = max > LIGHTING_SOFT_THRESHOLD
-#else
-	// Because of floating points™?, it won't even be a flat 0.
-	// This number is mostly arbitrary.
-	luminosity = max > 1e-6
-#endif
-
-// Variety of overrides so the overlays don't get affected by weird things.
+	), time = 2, flags = ANIMATION_LINEAR_TRANSFORM)
 
 /atom/movable/lighting_overlay/ex_act(severity)
 	return 0

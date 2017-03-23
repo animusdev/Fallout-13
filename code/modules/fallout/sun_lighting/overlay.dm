@@ -90,14 +90,14 @@
 		ca  = sundummy_lighting_corner_full
 
 	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
-
-	color  = list(
+	animate(src, color = list(
 		cr.cache, cr.cache, cr.cache, max(cr.cache, cr.cache, cr.cache),
 		cg.cache, cg.cache, cg.cache, max(cg.cache, cg.cache, cg.cache),
 		cb.cache, cb.cache, cb.cache, max(cb.cache, cb.cache, cb.cache),
 		ca.cache, ca.cache, ca.cache, max(ca.cache, ca.cache, ca.cache),
 		0, 0, 0, 0
-	)
+	), time = 2, flags = ANIMATION_LINEAR_TRANSFORM)
+
 	if(max || T.is_openspace())
 		luminosity = 1
 	else
