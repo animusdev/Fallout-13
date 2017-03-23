@@ -261,7 +261,7 @@
 				break
 			process_chamber()
 			update_icon()
-			sleep(chambered.delay)
+			sleep(chambered ? chambered.delay : fire_delay)
 		firing_burst = 0
 	else
 		if(chambered)
