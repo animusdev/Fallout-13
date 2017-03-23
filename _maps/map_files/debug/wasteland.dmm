@@ -174,127 +174,127 @@
 "dr" = (/obj/structure/flora/tree/tall,/turf/open/indestructible/ground/desert,/area/f13/ruins)
 "ds" = (/turf/open/indestructible/ground/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/village)
 "dt" = (/obj/item/key/motorcycle,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"du" = (/turf/closed/wall/f13/store{desc = "It's a wall made of solid concrete."; name = "concrete wall"},/area/f13/outpost)
-"dv" = (/obj/structure/window/fulltile/store{icon_state = "storewindowleft"},/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/outpost)
-"dw" = (/obj/structure/window/fulltile/store,/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/outpost)
-"dx" = (/obj/structure/window/fulltile/store{icon_state = "storewindowright"},/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/outpost)
-"dy" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/outpost)
+"du" = (/turf/closed/wall/f13/store{desc = "It's a wall made of solid concrete."; name = "concrete wall"},/area/f13/building)
+"dv" = (/obj/structure/window/fulltile/store{icon_state = "storewindowleft"},/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/building)
+"dw" = (/obj/structure/window/fulltile/store,/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/building)
+"dx" = (/obj/structure/window/fulltile/store{icon_state = "storewindowright"},/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/building)
+"dy" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/building)
 "dz" = (/obj/structure/campfire,/turf/open/indestructible/ground/desert,/area/f13/village)
-"dA" = (/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dB" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dC" = (/obj/structure/decoration/sign{desc = "It's a standard warning sign.<br>It says something in Russian right there..."; icon_state = "wall_danger_ru"; name = "warning sign"; pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dD" = (/obj/structure/decoration/sign{desc = "It's a standard warning sign.<br>It's better to prepare before you enter the area."; icon_state = "wall_danger"; name = "warning sign"; pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
+"dA" = (/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dB" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dC" = (/obj/structure/decoration/sign{desc = "It's a standard warning sign.<br>It says something in Russian right there..."; icon_state = "wall_danger_ru"; name = "warning sign"; pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dD" = (/obj/structure/decoration/sign{desc = "It's a standard warning sign.<br>It's better to prepare before you enter the area."; icon_state = "wall_danger"; name = "warning sign"; pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dE" = (/obj/vehicle/fuel/motorcycle,/turf/open/indestructible/ground/dirt,/area/f13/wasteland)
 "dF" = (/obj/vehicle/fuel/motorcycle/green,/turf/open/indestructible/ground/dirt,/area/f13/wasteland)
 "dG" = (/obj/vehicle/fuel/motorcycle/scrambler,/turf/open/indestructible/ground/dirt,/area/f13/wasteland)
 "dH" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"dI" = (/obj/structure/rack,/obj/item/weapon/twohanded/tribal_spear,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dJ" = (/obj/structure/rack,/obj/item/weapon/spear,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dK" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/glock,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dL" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/pistol,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dM" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/bozar,/obj/item/ammo_box/magazine/m223,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dN" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/rifle/scope,/obj/item/ammo_box/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dO" = (/obj/structure/rack,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dP" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
+"dI" = (/obj/structure/rack,/obj/item/weapon/twohanded/tribal_spear,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dJ" = (/obj/structure/rack,/obj/item/weapon/spear,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dK" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/glock,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dL" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/pistol,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dM" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/bozar,/obj/item/ammo_box/magazine/m223,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dN" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/rifle/scope,/obj/item/ammo_box/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dO" = (/obj/structure/rack,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dP" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dQ" = (/turf/closed/wall/f13/wood,/area/f13/building)
-"dR" = (/obj/structure/rack,/obj/item/weapon/twohanded/superhammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dS" = (/obj/structure/rack,/obj/item/weapon/mounted_chainsaw,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dT" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/turbo,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dU" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rcw,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dV" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/assault_rifle,/obj/item/ammo_box/magazine/m556,/obj/item/ammo_box/magazine/m556,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dW" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/rifle,/obj/item/ammo_box/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"dX" = (/obj/structure/rack,/obj/item/weapon/powergauntlet,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
+"dR" = (/obj/structure/rack,/obj/item/weapon/twohanded/superhammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dS" = (/obj/structure/rack,/obj/item/weapon/mounted_chainsaw,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dT" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/turbo,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dU" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rcw,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dV" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/assault_rifle,/obj/item/ammo_box/magazine/m556,/obj/item/ammo_box/magazine/m556,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dW" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/rifle,/obj/item/ammo_box/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dX" = (/obj/structure/rack,/obj/item/weapon/powergauntlet,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dY" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/building)
 "dZ" = (/turf/open/floor/f13/wood,/area/f13/building)
-"ea" = (/obj/structure/rack,/obj/item/weapon/twohanded/sledgehammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"eb" = (/obj/structure/rack,/obj/item/weapon/machete,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ec" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ed" = (/obj/machinery/recharger,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ee" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rifle,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ef" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/smg10mm,/obj/item/ammo_box/magazine/m10mm_auto,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"eg" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/rifle,/obj/item/ammo_box/magazine/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"eh" = (/obj/structure/rack,/obj/item/weapon/pipe,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ei" = (/obj/structure/rack,/obj/item/weapon/twohanded/baseball,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ej" = (/obj/structure/rack,/obj/item/weapon/katana,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ek" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/tri,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"el" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rifle/aer13,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"em" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/pistol/n99,/obj/item/ammo_box/magazine/m10mm_adv,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"en" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/pipe,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"eo" = (/obj/structure/rack,/obj/item/weapon/kitchen/knife/combat/survival,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ep" = (/obj/structure/rack,/obj/item/weapon/claymore,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"eq" = (/obj/structure/rack,/obj/item/weapon/golf,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"er" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/pistol,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"es" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rifle/tri,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"et" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/revolver/magnum,/obj/item/ammo_box/m44,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"eu" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/trail,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ev" = (/obj/structure/rack,/obj/item/weapon/kitchen/knife/combat,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
-"ew" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "white"},/area/f13/outpost)
+"ea" = (/obj/structure/rack,/obj/item/weapon/twohanded/sledgehammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"eb" = (/obj/structure/rack,/obj/item/weapon/machete,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ec" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ed" = (/obj/machinery/recharger,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ee" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rifle,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ef" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/smg10mm,/obj/item/ammo_box/magazine/m10mm_auto,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"eg" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/rifle,/obj/item/ammo_box/magazine/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"eh" = (/obj/structure/rack,/obj/item/weapon/pipe,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ei" = (/obj/structure/rack,/obj/item/weapon/twohanded/baseball,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ej" = (/obj/structure/rack,/obj/item/weapon/katana,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ek" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/tri,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"el" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rifle/aer13,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"em" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/pistol/n99,/obj/item/ammo_box/magazine/m10mm_adv,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"en" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/pipe,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"eo" = (/obj/structure/rack,/obj/item/weapon/kitchen/knife/combat/survival,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ep" = (/obj/structure/rack,/obj/item/weapon/claymore,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"eq" = (/obj/structure/rack,/obj/item/weapon/golf,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"er" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/pistol,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"es" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rifle/tri,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"et" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/revolver/magnum,/obj/item/ammo_box/m44,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"eu" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/trail,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ev" = (/obj/structure/rack,/obj/item/weapon/kitchen/knife/combat,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"ew" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "ex" = (/obj/machinery/light/street,/turf/open/indestructible/ground/desert,/area/f13/forest)
 "ey" = (/turf/closed/wall/r_wall/f13/vault,/area/f13/secret)
-"ez" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/secret)
-"eA" = (/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eB" = (/obj/structure/extinguisher_cabinet{pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eC" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eD" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Chapel area simulation."; icon_state = "vault_chapel"; name = "chapel area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eE" = (/turf/open/floor/f13{dir = 1; icon_state = "whitedir"},/area/f13/secret)
-"eF" = (/obj/structure/decoration/vent{pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eG" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Firing Range area simulation."; icon_state = "vault_guns"; name = "guns area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eH" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Race Track area simulation."; icon_state = "vault_track"; name = "track area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eI" = (/obj/structure/decoration/sign{pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eJ" = (/obj/effect/landmark{name = "JoinLate"},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eK" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eL" = (/turf/open/floor/f13{icon_state = "whitedir"},/area/f13/secret)
-"eM" = (/obj/structure/decoration/sign{pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eN" = (/obj/structure/decoration/sign{desc = "The door to the left, leads to the Mobs Containment area simulation."; icon_state = "vault_mobs"; name = "mobs area sign"; pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eO" = (/obj/structure/decoration/sign{desc = "The door to the left, leads to the Tunnel area simulation."; icon_state = "vault_tunnel"; name = "tunnel area sign"; pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eP" = (/obj/structure/decoration/sign{desc = "The door to the left, leads to the Old Mine area simulation."; icon_state = "vault_mine"; name = "mine area sign"; pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eQ" = (/turf/open/indestructible/ground/sidewalk,/area/f13/hub)
-"eR" = (/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"eS" = (/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"eT" = (/turf/open/indestructible/ground/desert,/area/f13/hub)
-"eU" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/hub)
-"eV" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/hub)
-"eW" = (/turf/closed/wall/f13/tunnel,/area/f13/sewer)
-"eX" = (/turf/closed/wall/f13/tunnel,/area/f13/tunnel)
-"eY" = (/turf/closed/mineral/random/low_chance,/area/f13/caves)
-"eZ" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"fa" = (/obj/structure/closet/crate/freezer,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"fb" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
-"fc" = (/obj/machinery/light/small/red{dir = 1},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"fd" = (/turf/open/indestructible/ground/tunnel,/area/f13/sewer)
-"fe" = (/obj/structure/closet/firecloset,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/tunnel)
-"ff" = (/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/tunnel)
-"fg" = (/obj/structure/rack,/turf/open/floor/f13{dir = 5; icon_state = "warndark"},/area/f13/tunnel)
-"fh" = (/obj/effect/decal/remains/human,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"fi" = (/obj/effect/decal/cleanable/cobweb,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fj" = (/obj/item/weapon/krotchy,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fk" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess"},/area/f13/sewer)
-"fl" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/tunnel)
-"fm" = (/obj/structure/table,/obj/item/weapon/screwdriver,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
-"fn" = (/obj/item/weapon/screwdriver/brass,/turf/open/indestructible/ground/tunnel,/area/f13/sewer)
-"fo" = (/obj/item/weapon/kitchen/fork,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fp" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fq" = (/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
-"fr" = (/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"fs" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
-"ft" = (/obj/machinery/light/small/red{dir = 8},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"fu" = (/obj/item/device/flashlight/torch/flare,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fv" = (/obj/item/clothing/under/f13/rag,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fw" = (/obj/effect/decal/cleanable/blood/tracks,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fx" = (/obj/effect/decal/cleanable/cobweb/cobweb2,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fy" = (/turf/closed/indestructible,/area/f13/building)
-"fz" = (/obj/machinery/light/street,/turf/open/indestructible/ground/desert,/area/f13/hub)
-"fA" = (/obj/structure/table,/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
-"fB" = (/obj/structure/closet/crate/engineering,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"fC" = (/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
-"fD" = (/obj/structure/decoration/vent/rusty{icon_state = "ventrustyalt"; pixel_y = 32},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
-"fE" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelwastelandfullvar"},/area/f13/sewer)
-"fF" = (/obj/effect/decal/goo,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fG" = (/obj/effect/decal/cleanable/blood/old,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fH" = (/obj/item/clothing/shoes/f13/rag,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"fI" = (/mob/living/simple_animal/hostile/molerat,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"fJ" = (/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"fK" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"ez" = (/turf/closed/wall/r_wall/f13/vault,/area/f13/building)
+"eA" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "whitesolid"},/area/f13/secret)
+"eB" = (/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eC" = (/obj/structure/extinguisher_cabinet{pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eD" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eE" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Chapel area simulation."; icon_state = "vault_chapel"; name = "chapel area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eF" = (/turf/open/floor/f13{dir = 1; icon_state = "whitedir"},/area/f13/secret)
+"eG" = (/obj/structure/decoration/vent{pixel_y = 32},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eH" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Firing Range area simulation."; icon_state = "vault_guns"; name = "guns area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eI" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Race Track area simulation."; icon_state = "vault_track"; name = "track area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eJ" = (/obj/structure/decoration/sign{pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eK" = (/obj/effect/landmark{name = "JoinLate"},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eL" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eM" = (/turf/open/floor/f13{icon_state = "whitedir"},/area/f13/secret)
+"eN" = (/obj/structure/decoration/sign{pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eO" = (/obj/structure/decoration/sign{desc = "The door to the left, leads to the Mobs Containment area simulation."; icon_state = "vault_mobs"; name = "mobs area sign"; pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eP" = (/obj/structure/decoration/sign{desc = "The door to the left, leads to the Tunnel area simulation."; icon_state = "vault_tunnel"; name = "tunnel area sign"; pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eQ" = (/obj/structure/decoration/sign{desc = "The door to the left, leads to the Old Mine area simulation."; icon_state = "vault_mine"; name = "mine area sign"; pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eR" = (/turf/open/indestructible/ground/sidewalk,/area/f13/hub)
+"eS" = (/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"eT" = (/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"eU" = (/turf/open/indestructible/ground/desert,/area/f13/hub)
+"eV" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/hub)
+"eW" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/hub)
+"eX" = (/turf/closed/wall/f13/tunnel,/area/f13/sewer)
+"eY" = (/turf/closed/wall/f13/tunnel,/area/f13/tunnel)
+"eZ" = (/turf/closed/mineral/random/low_chance,/area/f13/caves)
+"fa" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"fb" = (/obj/structure/closet/crate/freezer,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"fc" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
+"fd" = (/obj/machinery/light/small/red{dir = 1},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"fe" = (/turf/open/indestructible/ground/tunnel,/area/f13/sewer)
+"ff" = (/obj/structure/closet/firecloset,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/tunnel)
+"fg" = (/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/tunnel)
+"fh" = (/obj/structure/rack,/turf/open/floor/f13{dir = 5; icon_state = "warndark"},/area/f13/tunnel)
+"fi" = (/obj/effect/decal/remains/human,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"fj" = (/obj/effect/decal/cleanable/cobweb,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fk" = (/obj/item/weapon/krotchy,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fl" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess"},/area/f13/sewer)
+"fm" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/tunnel)
+"fn" = (/obj/structure/table,/obj/item/weapon/screwdriver,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
+"fo" = (/obj/item/weapon/screwdriver/brass,/turf/open/indestructible/ground/tunnel,/area/f13/sewer)
+"fp" = (/obj/item/weapon/kitchen/fork,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fq" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fr" = (/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
+"fs" = (/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"ft" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
+"fu" = (/obj/machinery/light/small/red{dir = 8},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"fv" = (/obj/item/device/flashlight/torch/flare,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fw" = (/obj/item/clothing/under/f13/rag,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fx" = (/obj/effect/decal/cleanable/blood/tracks,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fy" = (/obj/effect/decal/cleanable/cobweb/cobweb2,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fz" = (/turf/closed/indestructible,/area/f13/building)
+"fA" = (/obj/machinery/light/street,/turf/open/indestructible/ground/desert,/area/f13/hub)
+"fB" = (/obj/structure/table,/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
+"fC" = (/obj/structure/closet/crate/engineering,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"fD" = (/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
+"fE" = (/obj/structure/decoration/vent/rusty{icon_state = "ventrustyalt"; pixel_y = 32},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
+"fF" = (/turf/open/indestructible/ground/tunnel{icon_state = "tunnelwastelandfullvar"},/area/f13/sewer)
+"fG" = (/obj/effect/decal/goo,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fH" = (/obj/effect/decal/cleanable/blood/old,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fI" = (/obj/item/clothing/shoes/f13/rag,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"fJ" = (/mob/living/simple_animal/hostile/molerat,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"fK" = (/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
 "fL" = (/turf/closed/indestructible/fakeglass,/area/f13/building)
 "fM" = (/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/hub)
 "fN" = (/turf/open/indestructible/ground/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/hub)
@@ -524,58 +524,58 @@ aaababababababababababababababdndQdQdQabababaadudAeidAejdAekdAeldAemdAendAeodAdP
 aaabababababababababababababababababababababaadudAepdAeqdAerdAesdAetdAeudAevdAdPdAdPdAduaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaabababababababababababababababababababababaadudAdAewdAdAdAewdAdAdAdAdAewdAdAdAewdAdAduaaadbGaVaVaVaVaVaVaVaVaVaVaVaVaVaVaVaVaVckadaaaeawaeaeaeaeaeaeexaeaeawaeaeaeaeawaeaeaeaeaaadadadadadadadadadadaa
 aaabababababababababababababababababababababaadududududududududududAdudududududududududuaaadadadadadadadadadadadadadadadadadadadadadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaaaaaaaaaaaaaaaaaaaeyabeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeydAeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyadeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyaeeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyaa
-aaeAeAeBeAeAeAeCeAeDeAeEeAeCeAeAeAeFeAeAeAeCeAeAeAeBeAeAeAeCeAeGeAeEeAeCeAeAeAeFeAeAeAeCeAeAeAeBeAeAeAeCeAeHeAeEeAeCeAeAeAeFeAeAeAeCeAeAeBeAeAeAeAeCeAeIeAeEeAeCeAeAeAeFeAeAeAeCeAeAeAeBeAeAeAeCeAeAeAaa
-aaeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeJeJeJeJeJeJeJeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAeAaa
-aaeAeAeKeAeAeAeAeAeAeAeLeAeMeAeAeAeKeAeAeAeAeAeAeAeKeAeAeAeAeAeAeAeLeAeNeAeAeAeKeAeAeAeAeAeAeAeKeAeAeAeAeAeAeAeLeAeOeAeAeAeKeAeAeAeAeAeAeAeKeAeAeAeAeAeAeAeLeAePeAeAeAeKeAeAeAeAeAeAeAeKeAeAeAeAeAeAeAaa
-aaeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyezeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyaa
-aaaaaaaaaaaaaaaaaaaaeyadeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyeQeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyeReyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyeSeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUeQeVeTeTeTeTeTeTeTeTeTaaeWeWeWeWeWeWeWeXeXeXeReXeXeXeWeWeWeWeWeWeWaaeYeYeYeYeYeYeYeYeYeYeSeYeYeYeYeYeYeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUeQeVeTeTeTeTeTeTeTeTeTaaeWeZfaeWfbfcfdeXfeffeRfffgeXeZfhfdfbeZeZeWaaeYeYeYeYeYeYeSeYeYeSeSeYeYfifjeYeYeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUeQeVeTeTeTeTeTeTeTeTeTaaeWeZfkfdeZfkfdfleReReReRfmeXfdfkeZeZeZfneWaaeYeYeYeYeYeSeSeSeSeSeSeYeYeYeSfofpeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUeQeVeTeTeTeTeTeTeTeTeTaaeWeZeZeWfkeZfdeXfqeRfreRfseXeWeWeWfteZfbeWaaeYeYeYeYeSeSeSeSfueSeSeSeYeYeYfvfweSfxeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTfzeUeQeVeTeTeTfyfyfyfyfyeTaaeWfbeZeWeWfdeWeXfAeReRfBfCeXeZfDeZeZfEeZeWaaeYeYeYeSeSeSeYfFeSeYeSeSeSeSeYfGeSfHeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfIfJfKfLfMfMfMfNeQfOfMfMfMfLfKfJfPfyeTaaeWeZeZeZeWfkeZeXfQfReRfRfSeXeZeZeZeZfbeZeWaaeYeYeSeSeSeYeYeYeSeYeYeSeSeSeSeSeSeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfIfJfJfLeQeQeQeQfTfTfTfTfTfLfJfJfPfyeTaaeWftfUeZeWeWeWeXeXeXfVeXeXeXfdeWeWeZeZeZeWaaeYeYeSeSeYeYeYeYeYeYeYeYeYeYfWeSeYeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfIfJfJfLfXfXfXfYfTfZfXfXfXfLfJfJfPfyeTaaeWeZeZfkeWgagaeZeXgbgcgdeXeZfkeZeWfkeZeZeWaaeYeSeSeSeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYaaadadgegegegegegeadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTeTeUfTeVgfeTeTfyfyfyfyfyeTaaeWeWfdeWeWfbeZggeXfqgcfCeXfUeZeZeWeWeWeWeWaaeYeSeSeSeSeYeYeYeYeYfieSeSeYeYeYeYeYeYeYeYaaadadgeghgigjgkgeadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZeZfbeWeZfkeZeXfqgcfCeXeZeZfkeZfbgleZeWaaeYeYeSeSeSfxeYeYeYeSeSeSeSeSeYeYeYeYeYeYeYaaadadgegmgngkgkgoadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWgpeZeZfdeZeZeZeXgqgcfCeXeZfbgreZeZeZfkeWaaeYeYeYeYeSeSgseSeYeSeSeYeYeSeSeSeYeYeYeYeYaaadadgegkgkgkgkgeadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTgteTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWfbeZeZeWeZeZfbeXfqgcfCeXeWeWeWeWeWeZeZeWaaeYeYeYeYeYeSeSeSeSeSeYeYeYeYeSeSeSeYeYeYeYaaadadgegegegegegeadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeWfdeWeWgueZggeXfqgcfCeXeZfbfceZfkeZeZeWaaeYeYeYeYeYeYeYeSeSeYeYeYeYeYeSeSeSeSeSeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWfbeZeZeWgvgwgveXfqgcfCeXfkfdfbeZeZeZfkeWaaeYeYeYfieSeYeYeYeYeYeYeYeYgxgyeSeYeYeSeSeYaaadadgzgzgzgzgzgzadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWgpeZfbeWeWeWeWeXgqgcfCeXeXfleXeXeXeXeXeXaaeYeYeSeSeSeSeSeYeSeSeYeYgAeSfpeSeYeYeYgBeYaaadadgzgCgDgEgFgzadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZeZeZeWeZfceZeXfqgcgGffffgcffffffffgdeXaaeYeSeSeSeYeSeSeSeSeSeSfGeSgHeSeYeYeYeYeYeYaaadadgzgIgJgFgFgKadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTfzeUfTeVeTeTeTfyfyfyfyfyeTaaeWeWfdeWeWfbeZfEeXfqgcgcgcgcgcgcgcgcgcfCeXaaeYeSgLeSeYeYeSeSeSeYeYeSeSeYeYeYeYeYeYeYeYaaadadgzgFgFgFgFgzadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfygMfJfKfLfMfMfMfNfTfOfMfMfMfLfKfJgNfyeTaaeWfkeZeZfkeZeZfkeXgOfRfRfRfRfRfRfRgPgcfCeXaaeYeYeSeSeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYaaadadgzgzgzgzgzgzadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfygMfJfJfLeQeQeQeQfTfTfTfTfTfLfJfJgNfyeTaaeWeZeZfkeZeZfbeZeXeXeXeXeXeXeXeXeXfqgcgQeXaaeYeYeSeSeSeYeSeYeYeSeYeYeSeYeYeYeYeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfygMfJfJfLfXfXfXfYfTfZfXfXfXfLfJfJgNfyeTaaeWeWeWeWeWeWeZeZeXgRgSgTeXgRgUgReXfqgcfCeXaaeYeYeYeSeSeSeSeSeYeSeSeSeSeYeYeYeYeYeSfFeYaaadadgVgVgVgVgVgVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTeTeUfTeVgfeTeTfyfyfyfyfyeTaaeWgWgXgXgYeWeZeZeXfreReReXeRfreReXgZgcfCeXaaeYeYeYeYeYeSeSeSeSeSeSeSeSfxeYeYeYeSfveSeYaaadadgVhahbhchdgVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWhehfhfhgeWfkeZeXgRfrgReXhheRhheXfqgcfCeXaaeYeYeYeYeYeYeYeSfGeSeYeYeSeSeSeYeSgshieSeYaaadadgVhjhkhdhdhladadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWhmhfhfhneWeZhoeXeXfleXeXeXfleXeXfqgcfCeXaaeYeYeYeSfGeYeYeYeYeYeYeYeYeSeSeSeSeSeSeYeYaaadadgVhdhdhdhdgVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWhphqhfhreWeZfbeXhsgcffhtffgcgdeXfqgcfCeXaaeYeYhihueSfxeYeYeYeShveYeSeSeSeSeSeYeYeYeYaaadadgVgVgVgVgVgVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeWeWhweWeWeZeZeXfAgcgcgcgcgchxeXgZgcfCeXaaeYfGeShyhieYeYeYfihzeSeSeSeSeSeYeYeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWfbeZeZeZfkeZeZeXfAgcgcgcgcgchAeXfqgcfCeXaaeYeSeSeYeYeYhBeSeSeSeSeSfGeSeSeSeYeYeYeYeYaaadadhChChChChChCadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZeZeZeZeZeZeZeXgOfRfRgcfRfRhDeXfqgcfCeXaaeYeSeSeSeYhEeShFhGeSeSeSeSeSeSeSfxeYeYeYeYaaadadhChHhIhJhKhCadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZeZeWeWeWeWeWeXeXeXeXfleXeXeXeXfqgcgQeXaaeYeSeSeSeSeSeSeSeSeSeShLeSeShieSeSfGeYeYeYaaadadhChMhNhKhKhOadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTfzeUfTeVeTeTeTfyfyfyfyfyeTaaeWgpeZeWeZhPeZeZeXgbffffgcffffffffhQgcfCeXaaeYeYfFeSeSeSeYeYhveShieSeSeSeSeYeSeSeShReYaaadadhChKhKhKhKhCadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyhSfJfKfLfMfMfMfNfTfOfMfMfMfLfKfJhTfyeTaaeWeZfbeWeZfkeZfbeXgqgcgcgcgcgcgcgcgcgcfCeXaaeYeYeYeSeSeYeYeYeYfGhUeSeYeYeYeYeYhVeSeYeYaaadadhChChChChChCadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyhWhXfJfLeQeQeQeQfTfTfTfTfTfLfJfJhYfyeTaaeWeZeZeWhZeZeZhoeXfqgciafRfRfRfRfRfRfRfSeXaaeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyibfJfJfLfXfXfXfYfTfZfXfXfXfLfJfJhTfyeTaaeWeZeZeWeZfkiceZeXfqgcfCeXeXeXeXeXeXeXeXeXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTeTeUfTeVgfeTeTfyfyfyfyfyeTaaeWideZeWeZeZeZfUeXfqgcfCeXgcgceXfrieifigeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXaaihihihihihihihihihihihihihihih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZeZeWeWfdeWeWeXgqgcfCeXgcgcfleRfrfriieXijgcgcikgcgcgcgcgcgcikgcgcgcgcgcgceXaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZeZeZeZeZeZfkeXfqgcfCeXgcgceXfreReRfreXimgcgcgcgcgcgcgcgcgcgcgcgcgcgcgcgceXaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeZfkeZeZfkeZeZflgcgcgcingcgceXeXeXeXeXeXgcgcgceXeXeXeXeXeXeXineXeXeXeXfleXeXaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWeWhweWeWeWhweWeXfqgcfCeXgcgcikgcgcgcgcikgcgcgceXiogSipeXfreReReRiqeXfreRfreXaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTireTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWisisiseWisisiseXeXfleXeXgcgcgcgcgcgcgcgcgcgcgceXiteReRfleReRfreRiueXitfrifeXaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTeTeTeTeTeTeTeTeTaaeWiviwiveWiviwiveXixgcgceXeXeXeXeXeXeXeXeXeXeXeXeXififeReXeRfreRfreReXifiyiteXaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeUfTeVeTgteTeTeTeTeTeTeTaaeWeWeWeWeWeWeWeWeXeXgcgcgcizgciAgcizgciBgceXflfleXeXeXeXeXeXeXfleXeXeXeXeXeXeXaaihililililililiCililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTfzeUfTeVeTeTeTfyfyfyfyfyeTaaiDiEiFiGiHiIiFiJiDiKiLiLiLiLiLiLiLiLiLiLiLiKiDiEiMiFiFiMiJiDiKiNiKiDiEiFiFiJiDaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyiOfJfKfLfMfMfMfNfTfOfMfMfMfLfKfJfJfyeTaaiPiPiPiPiPiPiPiPiQiKiRiRiRiRiRiSiRiRiRiRiRiKiTiPiPiPiUiPiPiPiPiPiPiPiPiPiPiPiPaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyiOfJfJfLeQeQeQeQfTfTfTfTfTfLfJfJfJfyeTaaiViViWiViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViVaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyiOfJfJfLfXfXfXfYfTfZfXfXfXfLfJiXfJfyeTaaiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiZjajbiVjbjajbjciYiYiYiYiYiYiYiYiYaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTfyfyfyfyfyeTeTeTjdfXjegfeTeTfyfyfyfyfyeTaaiViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViVaaihilililililililililililililih
-aaadadadadadadadadadadadadadadadadadadadadadaaeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTeTaajfjgjhjhjhjhjhjijfjfjfjgjhjhjhjhjhjhjhjijfjfjfjgjhjhjhjhjhjhjhjhjhjhjhjhjhjijfaaihilililililililililililililih
+aaaaaaaaaaaaaaaaaaaaeyabeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaezdAezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyadeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyaeeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyaa
+aaeBeBeCeBeBeBeDeBeEeBeFeBeDeBeBeBeGeBeBeBeDeBeBeBeCeBeBeBeDeBeHeBeFeBeDeBeBeBeGeBeBeBeDeBeBeBeCeBeBeBeDeBeIeBeFeBeDeBeBeBeGeBeBeBeDeBeBeCeBeBeBeBeDeBeJeBeFeBeDeBeBeBeGeBeBeBeDeBeBeBeCeBeBeBeDeBeBeBaa
+aaeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeKeKeKeKeKeKeKeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBaa
+aaeBeBeLeBeBeBeBeBeBeBeMeBeNeBeBeBeLeBeBeBeBeBeBeBeLeBeBeBeBeBeBeBeMeBeOeBeBeBeLeBeBeBeBeBeBeBeLeBeBeBeBeBeBeBeMeBePeBeBeBeLeBeBeBeBeBeBeBeLeBeBeBeBeBeBeBeMeBeQeBeBeBeLeBeBeBeBeBeBeBeLeBeBeBeBeBeBeBaa
+aaeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeAeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyeyaa
+aaaaaaaaaaaaaaaaaaaaeyadeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyeReyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyeSeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeyeTeyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVeReWeUeUeUeUeUeUeUeUeUaaeXeXeXeXeXeXeXeYeYeYeSeYeYeYeXeXeXeXeXeXeXaaeZeZeZeZeZeZeZeZeZeZeTeZeZeZeZeZeZeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVeReWeUeUeUeUeUeUeUeUeUaaeXfafbeXfcfdfeeYfffgeSfgfheYfafifefcfafaeXaaeZeZeZeZeZeZeTeZeZeTeTeZeZfjfkeZeZeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVeReWeUeUeUeUeUeUeUeUeUaaeXfaflfefaflfefmeSeSeSeSfneYfeflfafafafoeXaaeZeZeZeZeZeTeTeTeTeTeTeZeZeZeTfpfqeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVeReWeUeUeUeUeUeUeUeUeUaaeXfafaeXflfafeeYfreSfseSfteYeXeXeXfufafceXaaeZeZeZeZeTeTeTeTfveTeTeTeZeZeZfwfxeTfyeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUfAeVeReWeUeUeUfzfzfzfzfzeUaaeXfcfaeXeXfeeXeYfBeSeSfCfDeYfafEfafafFfaeXaaeZeZeZeTeTeTeZfGeTeZeTeTeTeTeZfHeTfIeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfJfKfKfLfMfMfMfNeRfOfMfMfMfLfKfKfPfzeUaaeXfafafaeXflfaeYfQfReSfRfSeYfafafafafcfaeXaaeZeZeTeTeTeZeZeZeTeZeZeTeTeTeTeTeTeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfJfKfKfLeReReReRfTfTfTfTfTfLfKfKfPfzeUaaeXfufUfaeXeXeXeYeYeYfVeYeYeYfeeXeXfafafaeXaaeZeZeTeTeZeZeZeZeZeZeZeZeZeZfWeTeZeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfJfKfKfLfXfXfXfYfTfZfXfXfXfLfKfKfPfzeUaaeXfafafleXgagafaeYgbgcgdeYfaflfaeXflfafaeXaaeZeTeTeTeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZaaadadgegegegegegeadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUeUeVfTeWgfeUeUfzfzfzfzfzeUaaeXeXfeeXeXfcfaggeYfrgcfDeYfUfafaeXeXeXeXeXaaeZeTeTeTeTeZeZeZeZeZfjeTeTeZeZeZeZeZeZeZeZaaadadgeghgigjgkgeadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfafafceXfaflfaeYfrgcfDeYfafaflfafcglfaeXaaeZeZeTeTeTfyeZeZeZeTeTeTeTeTeZeZeZeZeZeZeZaaadadgegmgngkgkgoadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXgpfafafefafafaeYgqgcfDeYfafcgrfafafafleXaaeZeZeZeZeTeTgseTeZeTeTeZeZeTeTeTeZeZeZeZeZaaadadgegkgkgkgkgeadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUgteUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfcfafaeXfafafceYfrgcfDeYeXeXeXeXeXfafaeXaaeZeZeZeZeZeTeTeTeTeTeZeZeZeZeTeTeTeZeZeZeZaaadadgegegegegegeadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXeXfeeXeXgufaggeYfrgcfDeYfafcfdfaflfafaeXaaeZeZeZeZeZeZeZeTeTeZeZeZeZeZeTeTeTeTeTeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfcfafaeXgvgwgveYfrgcfDeYflfefcfafafafleXaaeZeZeZfjeTeZeZeZeZeZeZeZeZgxgyeTeZeZeTeTeZaaadadgzgzgzgzgzgzadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXgpfafceXeXeXeXeYgqgcfDeYeYfmeYeYeYeYeYeYaaeZeZeTeTeTeTeTeZeTeTeZeZgAeTfqeTeZeZeZgBeZaaadadgzgCgDgEgFgzadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfafafaeXfafdfaeYfrgcgGfgfggcfgfgfgfggdeYaaeZeTeTeTeZeTeTeTeTeTeTfHeTgHeTeZeZeZeZeZeZaaadadgzgIgJgFgFgKadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUfAeVfTeWeUeUeUfzfzfzfzfzeUaaeXeXfeeXeXfcfafFeYfrgcgcgcgcgcgcgcgcgcfDeYaaeZeTgLeTeZeZeTeTeTeZeZeTeTeZeZeZeZeZeZeZeZaaadadgzgFgFgFgFgzadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzgMfKfKfLfMfMfMfNfTfOfMfMfMfLfKfKgNfzeUaaeXflfafaflfafafleYgOfRfRfRfRfRfRfRgPgcfDeYaaeZeZeTeTeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZaaadadgzgzgzgzgzgzadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzgMfKfKfLeReReReRfTfTfTfTfTfLfKfKgNfzeUaaeXfafaflfafafcfaeYeYeYeYeYeYeYeYeYfrgcgQeYaaeZeZeTeTeTeZeTeZeZeTeZeZeTeZeZeZeZeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzgMfKfKfLfXfXfXfYfTfZfXfXfXfLfKfKgNfzeUaaeXeXeXeXeXeXfafaeYgRgSgTeYgRgUgReYfrgcfDeYaaeZeZeZeTeTeTeTeTeZeTeTeTeTeZeZeZeZeZeTfGeZaaadadgVgVgVgVgVgVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUeUeVfTeWgfeUeUfzfzfzfzfzeUaaeXgWgXgXgYeXfafaeYfseSeSeYeSfseSeYgZgcfDeYaaeZeZeZeZeZeTeTeTeTeTeTeTeTfyeZeZeZeTfweTeZaaadadgVhahbhchdgVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXhehfhfhgeXflfaeYgRfsgReYhheShheYfrgcfDeYaaeZeZeZeZeZeZeZeTfHeTeZeZeTeTeTeZeTgshieTeZaaadadgVhjhkhdhdhladadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXhmhfhfhneXfahoeYeYfmeYeYeYfmeYeYfrgcfDeYaaeZeZeZeTfHeZeZeZeZeZeZeZeZeTeTeTeTeTeTeZeZaaadadgVhdhdhdhdgVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXhphqhfhreXfafceYhsgcfghtfggcgdeYfrgcfDeYaaeZeZhihueTfyeZeZeZeThveZeTeTeTeTeTeZeZeZeZaaadadgVgVgVgVgVgVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXeXeXhweXeXfafaeYfBgcgcgcgcgchxeYgZgcfDeYaaeZfHeThyhieZeZeZfjhzeTeTeTeTeTeZeZeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfcfafafaflfafaeYfBgcgcgcgcgchAeYfrgcfDeYaaeZeTeTeZeZeZhBeTeTeTeTeTfHeTeTeTeZeZeZeZeZaaadadhChChChChChCadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfafafafafafafaeYgOfRfRgcfRfRhDeYfrgcfDeYaaeZeTeTeTeZhEeThFhGeTeTeTeTeTeTeTfyeZeZeZeZaaadadhChHhIhJhKhCadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfafaeXeXeXeXeXeYeYeYeYfmeYeYeYeYfrgcgQeYaaeZeTeTeTeTeTeTeTeTeTeThLeTeThieTeTfHeZeZeZaaadadhChMhNhKhKhOadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUfAeVfTeWeUeUeUfzfzfzfzfzeUaaeXgpfaeXfahPfafaeYgbfgfggcfgfgfgfghQgcfDeYaaeZeZfGeTeTeTeZeZhveThieTeTeTeTeZeTeTeThReZaaadadhChKhKhKhKhCadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzhSfKfKfLfMfMfMfNfTfOfMfMfMfLfKfKhTfzeUaaeXfafceXfaflfafceYgqgcgcgcgcgcgcgcgcgcfDeYaaeZeZeZeTeTeZeZeZeZfHhUeTeZeZeZeZeZhVeTeZeZaaadadhChChChChChCadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzhWhXfKfLeReReReRfTfTfTfTfTfLfKfKhYfzeUaaeXfafaeXhZfafahoeYfrgciafRfRfRfRfRfRfRfSeYaaeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzibfKfKfLfXfXfXfYfTfZfXfXfXfLfKfKhTfzeUaaeXfafaeXfaflicfaeYfrgcfDeYeYeYeYeYeYeYeYeYaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUeUeVfTeWgfeUeUfzfzfzfzfzeUaaeXidfaeXfafafafUeYfrgcfDeYgcgceYfsieifigeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYaaihihihihihihihihihihihihihihih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfafaeXeXfeeXeXeYgqgcfDeYgcgcfmeSfsfsiieYijgcgcikgcgcgcgcgcgcikgcgcgcgcgcgceYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfafafafafafafleYfrgcfDeYgcgceYfseSeSfseYimgcgcgcgcgcgcgcgcgcgcgcgcgcgcgcgceYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXfaflfafaflfafafmgcgcgcingcgceYeYeYeYeYeYgcgcgceYeYeYeYeYeYeYineYeYeYeYfmeYeYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXeXhweXeXeXhweXeYfrgcfDeYgcgcikgcgcgcgcikgcgcgceYiogSipeYfseSeSeSiqeYfseSfseYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUireUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXisisiseXisisiseYeYfmeYeYgcgcgcgcgcgcgcgcgcgcgceYiteSeSfmeSeSfseSiueYitfsifeYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUeUeUeUeUeUeUeUeUaaeXiviwiveXiviwiveYixgcgceYeYeYeYeYeYeYeYeYeYeYeYeYififeSeYeSfseSfseSeYifiyiteYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeVfTeWeUgteUeUeUeUeUeUeUaaeXeXeXeXeXeXeXeXeYeYgcgcgcizgciAgcizgciBgceYfmfmeYeYeYeYeYeYeYfmeYeYeYeYeYeYeYaaihililililililiCililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUfAeVfTeWeUeUeUfzfzfzfzfzeUaaiDiEiFiGiHiIiFiJiDiKiLiLiLiLiLiLiLiLiLiLiLiKiDiEiMiFiFiMiJiDiKiNiKiDiEiFiFiJiDaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfziOfKfKfLfMfMfMfNfTfOfMfMfMfLfKfKfKfzeUaaiPiPiPiPiPiPiPiPiQiKiRiRiRiRiRiSiRiRiRiRiRiKiTiPiPiPiUiPiPiPiPiPiPiPiPiPiPiPiPaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfziOfKfKfLeReReReRfTfTfTfTfTfLfKfKfKfzeUaaiViViWiViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViVaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfziOfKfKfLfXfXfXfYfTfZfXfXfXfLfKiXfKfzeUaaiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiYiZjajbiVjbjajbjciYiYiYiYiYiYiYiYiYaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUfzfzfzfzfzeUeUeUjdfXjegfeUeUfzfzfzfzfzeUaaiViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViViVaaihilililililililililililililih
+aaadadadadadadadadadadadadadadadadadadadadadaaeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUeUaajfjgjhjhjhjhjhjijfjfjfjgjhjhjhjhjhjhjhjijfjfjfjgjhjhjhjhjhjhjhjhjhjhjhjhjhjijfaaihilililililililililililililih
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajjihihihihihihihihihihihihihih
 "}

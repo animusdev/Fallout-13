@@ -78,7 +78,7 @@
 
 	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
 	var/lum = max > 1e-6
-	spawn(lum ? -1 : 1.5)
+	spawn(lum ? -1 : 2)
 		luminosity = lum
 
 	animate(src, color = list(
@@ -87,7 +87,7 @@
 		cb.cache_r, cb.cache_g, cb.cache_b, 0,
 		ca.cache_r, ca.cache_g, ca.cache_b, 0,
 		0, 0, 0, 1
-	), time = 2, flags = ANIMATION_RELATIVE)
+	), time = 2, flags = ANIMATION_LINEAR_TRANSFORM)
 
 /atom/movable/lighting_overlay/ex_act(severity)
 	return 0

@@ -96,7 +96,7 @@
 		cb.cache, cb.cache, cb.cache, max(cb.cache, cb.cache, cb.cache),
 		ca.cache, ca.cache, ca.cache, max(ca.cache, ca.cache, ca.cache),
 		0, 0, 0, 0
-	), time = 2, flags = ANIMATION_RELATIVE)
+	), time = 2, flags = ANIMATION_LINEAR_TRANSFORM)
 
 	if(max || T.is_openspace())
 		luminosity = 1
