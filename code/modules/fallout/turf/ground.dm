@@ -45,6 +45,8 @@
 /turf/open/indestructible/ground/can_have_cabling()
 	return 1
 
+var/global/list/desertTurfEdgeCache
+
 /turf/open/indestructible/ground/desert
 	name = "desert"
 	icon_state = "wasteland1"
@@ -57,6 +59,7 @@
 	icon_state = "wasteland[rand(1,31)]"
 	plant_grass()
 	..()
+	fullUpdateJunctionOverlays()
 
 /turf/open/indestructible/ground/desert/proc/plant_grass()
 	if(locate(/obj/structure/flora) in src)
@@ -98,7 +101,7 @@
 	allowed_plants = list(/obj/item/seeds/fungus)
 	step_sounds = list("human" = "erikafootsteps")
 
-/turf/open/indestructible/ground/desert/New()
+/turf/open/indestructible/ground/mountain/New()
 	..()
 	icon_state = "rockfloor[rand(1,2)]"
 
