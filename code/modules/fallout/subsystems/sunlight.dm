@@ -21,7 +21,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	name          = "Sun Lighting"
 	init_order    = 2
 	display_order = 6
-	wait          = 1
+	wait          = 2
 	priority      = 25
 	flags         = SS_TICKER
 

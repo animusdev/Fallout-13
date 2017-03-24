@@ -19,23 +19,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 			rockTurfEdgeCache[WEST_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_w", layer = 6)
 
 		spawn(1)
-			var/turf/T
-			if((istype(get_step(src, NORTH), /turf/open)))
-				T = get_step(src, NORTH)
-				if (T)
-					T.overlays += rockTurfEdgeCache[SOUTH_EDGING]
-			if((istype(get_step(src, SOUTH), /turf/open)))
-				T = get_step(src, SOUTH)
-				if (T)
-					T.overlays += rockTurfEdgeCache[NORTH_EDGING]
-			if((istype(get_step(src, EAST), /turf/open)))
-				T = get_step(src, EAST)
-				if (T)
-					T.overlays += rockTurfEdgeCache[WEST_EDGING]
-			if((istype(get_step(src, WEST), /turf/open)))
-				T = get_step(src, WEST)
-				if (T)
-					T.overlays += rockTurfEdgeCache[EAST_EDGING]
+			fullUpdateJunctionOverlays()
 	switch(mineraltype)
 		if("iron")
 			icon_state = pick("rock_Iron1","rock_Iron2","rock_Iron3")
@@ -127,7 +111,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 	ChangeTurf(turf_type, defer_change)
 	addtimer(CALLBACK(src, .proc/AfterChange), 1, TIMER_UNIQUE)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, 1) //beautiful destruction
-	fullUpdateMineralOverlays()
+	fullUpdateJunctionOverlays()
 	return
 
 /turf/closed/mineral/attack_animal(mob/living/simple_animal/user)
@@ -188,28 +172,6 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 		//Currently, Adamantine won't spawn as it has no uses. -Durandan
 	var/mineralChance = 13
 	var/display_icon_state = "rock"
-
-/turf/proc/updateMineralOverlays()
-	src.overlays.Cut()
-
-	if(istype(get_step(src, NORTH), /turf/closed/mineral))
-		src.overlays += rockTurfEdgeCache[NORTH_EDGING]
-	if(istype(get_step(src, SOUTH), /turf/closed/mineral))
-		src.overlays += rockTurfEdgeCache[SOUTH_EDGING]
-	if(istype(get_step(src, EAST), /turf/closed/mineral))
-		src.overlays += rockTurfEdgeCache[EAST_EDGING]
-	if(istype(get_step(src, WEST), /turf/closed/mineral))
-		src.overlays += rockTurfEdgeCache[WEST_EDGING]
-
-/turf/closed/mineral/updateMineralOverlays()
-	return
-
-/turf/closed/wall/updateMineralOverlays()
-	return
-
-/turf/proc/fullUpdateMineralOverlays()
-	for (var/turf/t in range(1,src))
-		t.updateMineralOverlays()
 
 /*/turf/closed/mineral/random/New()
 	..()
