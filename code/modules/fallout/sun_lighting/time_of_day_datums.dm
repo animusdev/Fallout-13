@@ -5,7 +5,7 @@
 
 /datum/time_of_day/day
 	name = "Day"
-	color = "#ffffcb"
+	color = "#FFFFFF"
 	duration = 9000
 
 /datum/time_of_day/morning
@@ -20,5 +20,5 @@
 
 /datum/time_of_day/night
 	name = "Night"
-	color = "#01030C"
+	color = "#050d29"
 	duration = 9000
