@@ -74,3 +74,14 @@
 			src.icon_state = initial(src.icon_state)
 			src.busy = 0
 	return
+
+//Music box is based of holodisk
+
+/obj/item/weapon/holodisk/musicbox
+	name = "music box"
+	desc = "A pre-War music box - it is all what has left from the good old days."
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "music0"
+	item_state = "music0"
+	soundFile =  'sound/f13items/music_box.ogg' //Amazing grace
+	soundLength = 310

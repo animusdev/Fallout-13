@@ -219,8 +219,8 @@
 
 /obj/item/weapon/reagent_containers/glass/bucket
 	name = "bucket"
-	desc = "It's a bucket."
-	icon = 'icons/obj/janitor.dmi'
+	desc = "An old tin bucket."
+	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "bucket"
 	item_state = "bucket"
 	materials = list(MAT_METAL=200)
