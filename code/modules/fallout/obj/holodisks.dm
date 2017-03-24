@@ -81,7 +81,7 @@
 	name = "music box"
 	desc = "A pre-War music box - it is all what has left from the good old days."
 	icon = 'icons/fallout/objects/items.dmi'
-	icon_state = "music0"
-	item_state = "music0"
+	icon_state = "music1"
+	item_state = "music1"
 	soundFile =  'sound/f13items/music_box.ogg' //Amazing grace
-	soundLength = 310
+	soundLength = 320
