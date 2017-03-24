@@ -46,7 +46,9 @@
 	for(var/i = 0, i < 5, i++)
 		new /obj/item/weapon/reagent_containers/food/condiment/soymilk(src)
 	for(var/i = 0, i < 2, i++)
-		new /obj/item/weapon/storage/fancy/egg_box(src)
+		new /obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/weapon/reagent_containers/food/drinks/bottle/sunset(src)
 
 /obj/structure/closet/secure_closet/freezer/money
 	name = "freezer"

@@ -50,30 +50,38 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13
 	name = "ERROR"
-	desc = "Badmins spawn shit"
+	desc = "Badmins spawn shit!"
 	icon = 'icons/fallout/objects/food&drinks/food.dmi'
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum
 	name = "Bubblegum"
-	desc = "Big Pops branded bubblegum."
+	desc = "A Big Pops branded bubblegum."
 	icon_state = "bubblegum"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
-	list_reagents = list("nutriment" = 2)
+	list_reagents = list("nutriment" = 2, "sugar" = 2)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum/large
+	name = "big Bubblegum"
+	desc = "A large Big Pops branded bubblegum."
+	icon_state = "bubblegum_large"
+	bonus_reagents = list("radium" = 4, "vitamin" = 2)
+	list_reagents = list("nutriment" = 4, "sugar" = 4)
 	filling_color = "#B22222"
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram
 	name = "Cram"
-	desc = "It is a blue labeled tin of processed meat, primarily used as rations for soldiers in pre-War times."
+	desc = "A blue labeled tin of processed meat, primarily used as rations for soldiers in pre-War times."
 	icon_state = "cram"
 	bonus_reagents = list("radium" = 1, "vitamin" = 5)
 	list_reagents = list("nutriment" = 20)
 	filling_color = "#B22222"
 
-/obj/item/weapon/reagent_containers/food/snacks/f13/craml
-	name = "Cram"
-	desc = "It's a large blue labeled tin of processed meat, primarily used as rations for soldiers during the Pre-War times."
+/obj/item/weapon/reagent_containers/food/snacks/f13/cram/large
+	name = "big Cram"
+	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers during the Pre-War times."
 	icon_state = "cram_large"
-	bonus_reagents = list("radium" = 1, "vitamin" = 5)
+	bonus_reagents = list("radium" = 2, "vitamin" = 10)
 	list_reagents = list("nutriment" = 40)
 	filling_color = "#B22222"
 
@@ -117,19 +125,43 @@
 	list_reagents = list("nutriment" = 50)
 	filling_color = "#B22222"
 
+/obj/item/weapon/reagent_containers/food/snacks/f13/specialapples
+	name = "Dandy Apples Special"
+	desc = "Dandy Apples Special are a product from the pre-War company Dandy Boy. On the sides of the box there is some sort of apple mascot with a bowler hat, monocle and mustache."
+	icon_state = "specialapples"
+	bonus_reagents = list("radium" = 2, "vitamin" = 2)
+	list_reagents = list("nutriment" = 10, "tricordrazine" = 10)
+	filling_color = "#B22222"
+
 /obj/item/weapon/reagent_containers/food/snacks/f13/dandyapples
-	name = "Dandy Apples"
-	desc = "Dandy Boy Apples were envisioned and produced from the pre-War company Dandy Boy, consisting of candied apples packaged in a red cardboard box."
+	name = "Dandy Boy Apples"
+	desc = "Dandy Boy Apples are a product from the pre-War company Dandy Boy, consisting of candied apples packaged in a red cardboard box."
 	icon_state = "dandyapples"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
-	list_reagents = list("nutriment" = 10)
+	list_reagents = list("nutriment" = 10, "sugar" = 10)
 	filling_color = "#B22222"
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/blamco
 	name = "BlamCo"
 	desc = "BlamCo was a pre-War company in the United States, producing packaged foods.<br>BlamCo Mac & Cheese was their major product.<br>Unlike other foods, like apples or eggs, wheat cannot be freeze-dried. How the macaroni remains edible is unclear."
 	icon_state = "blamco"
-	bonus_reagents = list("radium" = 3, "vitamin" = 2)
+	bonus_reagents = list("radium" = 2, "vitamin" = 2)
+	list_reagents = list("nutriment" = 15)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/blamco/large
+	name = "big BlamCo"
+	desc = "BlamCo was a pre-War company in the United States, producing packaged foods.<br>BlamCo Mac & Cheese was their major product.<br>Unlike other foods, like apples or eggs, wheat cannot be freeze-dried. How the macaroni remains edible is unclear."
+	icon_state = "blamco_large"
+	bonus_reagents = list("radium" = 4, "vitamin" = 4)
+	list_reagents = list("nutriment" = 30)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/mechanic
+	name = "MechaMash"
+	desc = "MechaMash is packaged in a white box with blue highlights, and a wrench logo printed on the front.<br>It appears to be a form of instant potatoes that smells like WD-40..."
+	icon_state = "mechanist"
+	bonus_reagents = list("radium" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 15)
 	filling_color = "#B22222"
 
@@ -147,6 +179,22 @@
 	icon_state = "porknbeans"
 	bonus_reagents = list("radium" = 3, "vitamin" = 2)
 	list_reagents = list("nutriment" = 35)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/mre
+	name = "MRE"
+	desc = "The Meal, Ready-to-Eat : commonly known as the MRE - is a self-contained, individual field ration in lightweight packaging.<br>It's commonly used by military groups for service members to use in combat or other field conditions where organized food facilities are not available."
+	icon_state = "mre"
+	bonus_reagents = list("silver_sulfadiazine" = 10, "vitamin" = 2)
+	list_reagents = list("nutriment" = 50)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/galette
+	name = "dehydrated pea soup"
+	desc = "A piece of military food ration.<br>A label on the front says: 'Dehydrated peas. Chew well, take with water. 60g.'"
+	icon_state = "galette"
+	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2)
+	list_reagents = list("nutriment" = 20)
 	filling_color = "#B22222"
 
 //Grownable
