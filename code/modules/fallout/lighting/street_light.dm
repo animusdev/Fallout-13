@@ -8,6 +8,7 @@
 	active_power_usage = 100
 	density = 1
 	appearance_flags = 0
+	flags = NODECONSTRUCT
 	layer = 8
 	pixel_x = 8
 	desc = "Obviously it's a raised source of light on the edge of a road or walkway.<br>Have you now satisfied your curiosity?"
