@@ -1,70 +1,70 @@
 /client/script = {"<style>
 body					{font-family: Arial, Helvetica, sans-serif;}
 
-h1, h2, h3, h4, h5, h6	{color: #cd3000;	font-family: Arial, Helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6	{color: #454943;	font-family: Arial, Helvetica, sans-serif;}
 
 em						{font-style: normal;	font-weight: bold;}
 
-.motd					{color: #b55a23;	font-family: Arial, Helvetica, sans-serif;}
+.motd					{color: #3c4438;	font-family: Arial, Helvetica, sans-serif;}
 .motd h1, .motd h2, .motd h3, .motd h4, .motd h5, .motd h6
-	{color: #cd3000;	text-decoration: underline;}
+	{color: #454943;	text-decoration: underline;}
 .motd a, .motd a:link, .motd a:visited, .motd a:active, .motd a:hover
-	{color: #cd3000;}
+	{color: #4c5b42;}
 
 .italics				{					font-style: italic;}
 
 .prefix					{					font-weight: bold;}
 
 .ooc					{					font-weight: bold;}
-.adminobserverooc		{color: #920034;	font-weight: bold;}
-.adminooc				{color: #226b4e;	font-weight: bold;}
+.adminobserverooc		{color: #0b575e;	font-weight: bold;}
+.adminooc				{color: #920034;	font-weight: bold;}
 
-.adminobserver			{color: #700038;	font-weight: bold;}
-.admin					{color: #006666;	font-weight: bold;}
+.adminobserver			{color: #19654b;	font-weight: bold;}
+.admin					{color: #00452a;	font-weight: bold;}
 
 .name					{					font-weight: bold;}
 
 .say					{}
-.deadsay				{color: #5c00e6;}
-.radio					{color: #008000;}
-.sciradio				{color: #993399;}
+.deadsay				{color: #3c1478;}
+.radio					{color: #553800;}
+.sciradio				{color: #001760;}
 .comradio				{color: #193a7a;}
-.secradio				{color: #a30000;}
-.medradio				{color: #337296;}
-.engradio				{color: #fb5613;}
-.suppradio				{color: #a8732b;}
+.secradio				{color: #425919;}
+.medradio				{color: #0d5c89;}
+.engradio				{color: #903612;}
+.suppradio				{color: #6b4819;}
 .servradio				{color: #6eaa2c;}
 .syndradio				{color: #6d3f40;}
-.centcomradio			{color: #686868;}
-.aiprivradio			{color: #ff00ff;}
-.ncr					{color: #020080;}
-.legion					{color: #C24D44;}
+.centcomradio			{color: #454545;}
+.aiprivradio			{color: #ad9658;}
+.ncr					{color: #425919;}
+.legion					{color: #6d3f40;}
 .den					{color: #804B00;}
-.town					{color: #221800;}
-.enclave				{color: #001722;}
-.brotherhood			{color: #C0C0C0;}
+.town					{color: #454545;}
+.enclave				{color: #6eaa2c;}
+.brotherhood			{color: #6b4819;}
 
 .yell					{					font-weight: bold;}
 
-.alert					{color: #ff0000;}
+.alert					{color: #7e0707;}
 h1.alert, h2.alert		{color: #000000;}
 
 .emote					{					font-style: italic;}
 .selecteddna			{color: #ffffff; 	background-color: #001B1B}
 
-.attack					{color: #ff0000;}
+.attack					{color: #7e0707;}
 .disarm					{color: #990000;}
 .passive				{color: #660000;}
 
-.userdanger				{color: #ff0000;	font-weight: bold; font-size: 3;}
-.danger					{color: #ff0000;}
-.warning				{color: #ff0000;	font-style: italic;}
-.boldwarning			{color: #ff0000;	font-style: italic;	font-weight: bold}
-.announce 				{color: #228b22;	font-weight: bold;}
-.boldannounce			{color: #ff0000;	font-weight: bold;}
-.greenannounce			{color: #00ff00;	font-weight: bold;}
+.userdanger				{color: #7e0707;	font-weight: bold; font-size: 3;}
+.danger					{color: #7e0707;}
+.warning				{color: #7e0707;	font-style: italic;}
+.boldwarning			{color: #7e0707;	font-style: italic;	font-weight: bold}
+.announce 				{color: #20c920;	font-weight: bold;}
+.boldannounce			{color: #77ca00;	font-weight: bold;}
+.greenannounce			{color: #03ff03;	font-weight: bold;}
 .rose					{color: #ff5050;}
-.info					{color: #0000CC;}
+.info					{color: #2c2c56;}
 .notice					{color: #000099;}
 .boldnotice				{color: #000099;	font-weight: bold;}
 .adminnotice			{color: #0000ff;}
