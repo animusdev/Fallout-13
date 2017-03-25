@@ -49,7 +49,7 @@
 		qdel(myseed)
 		qdel(src)
 	else
-		to_chat(user, "<span class='notice'>You touched the plant... Are you happy now?.</span>")
+		to_chat(user, "<span class='notice'>You touched the plant... Are you happy now?</span>") // Does this make you happy, Stanley?
 
 /obj/structure/flora/wild_plant/examine(user)
 	if(myseed)
