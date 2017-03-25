@@ -350,12 +350,6 @@ var/datum/subsystem/ticker/ticker
 				captainless=0
 			if(player.mind.assigned_role != player.mind.special_role)
 				SSjob.EquipRank(player, player.mind.assigned_role, 0)
-	if(captainless)
-		for(var/mob/M in player_list)
-			if(!isnewplayer(M))
-				to_chat(M, "Captainship not forced on anyone.")
-
-
 
 /datum/subsystem/ticker/proc/declare_completion()
 	var/station_evacuated = EMERGENCY_ESCAPED_OR_ENDGAMED
