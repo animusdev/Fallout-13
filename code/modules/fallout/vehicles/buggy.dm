@@ -9,6 +9,7 @@
 	fuel = 1000
 	max_fuel = 1000
 	engine_on_sound = 'sound/f13machines/buggy_start.ogg'
+	engine_loop_sound = 'sound/f13machines/buggy_loop.ogg'
 	var/list/names = list("Badger", "Bandit", "Desert Punk", "Dune Buddy", "Duster", "Rebel", "Rooster")
 /obj/vehicle/fuel/motorcycle/buggy/New()
 	..()
@@ -24,7 +25,7 @@
 	icon_state = pick("key-buggy-r","key-buggy-y","key-buggy-g","key-buggy-b")
 
 /datum/riding/motorcycle/buggy
-	vehicle_move_delay = 0.75
+	vehicle_move_delay = 0.7
 
 /datum/riding/motorcycle/buggy/handle_vehicle_offsets()
 	..()
