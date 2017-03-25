@@ -6,7 +6,7 @@
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "goo1"
 	anchored = 1
-	level = 2.1
+	layer = 2.1
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 0.5
 	light_range = 3
@@ -26,7 +26,7 @@
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "reflectorvertical" //reflectorhorizontal
 	anchored = 1
-	level = 2.1
+	layer = 2.1
 
 /obj/effect/decal/marking
 	name = "road marking"
@@ -34,7 +34,7 @@
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "singlevertical" //See decals.dmi for different icon states of road markings.
 	anchored = 1
-	level = 2.1
+	layer = 2.1
 
 /obj/effect/decal/ruins //Ruin decorations - they overlap the player most of time, thus they provide a nearly perfect hiding spot.
 	name = "\improper ruins"
@@ -42,4 +42,4 @@
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "overlap" //See decals.dmi for different icon states of ruins overlays.
 	anchored = 1
-	level = 4.2
+	layer = 4.2

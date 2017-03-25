@@ -501,7 +501,7 @@ BLIND     // can't see anything
 	slot_flags = SLOT_ICLOTHING
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	var/fitted = FEMALE_UNIFORM_FULL // For use in alternate clothing styles for women
-	var/has_sensor = 1//For the crew computer 2 = unable to change mode
+	var/has_sensor = 0//For the crew computer 2 = unable to change mode
 	var/random_sensor = 1
 	var/sensor_mode = 0	/* 1 = Report living/dead, 2 = Report detailed damages, 3 = Report location */
 	var/can_adjust = 1
@@ -615,6 +615,8 @@ BLIND     // can't see anything
 			to_chat(user, "Alt-click on [src] to wear it normally.")
 		else
 			to_chat(user, "Alt-click on [src] to wear it casually.")
+// No this shit there
+/*
 	switch(sensor_mode)
 		if(0)
 			to_chat(user, "Its sensors appear to be disabled.")
@@ -624,6 +626,7 @@ BLIND     // can't see anything
 			to_chat(user, "Its vital tracker appears to be enabled.")
 		if(3)
 			to_chat(user, "Its vital tracker and tracking beacon appear to be enabled.")
+*/
 	if(hastie)
 		to_chat(user, "\A [hastie] is attached to it.")
 
@@ -633,7 +636,7 @@ BLIND     // can't see anything
 	female_clothing_icon.Blend(female_s, ICON_MULTIPLY)
 	female_clothing_icon 			= fcopy_rsc(female_clothing_icon)
 	female_clothing_icons[index] = female_clothing_icon
-
+/*
 /obj/item/clothing/under/verb/toggle()
 	set name = "Adjust Suit Sensors"
 	set category = "Object"
@@ -674,7 +677,7 @@ BLIND     // can't see anything
 			H.update_suit_sensors()
 
 	..()
-
+*/
 /obj/item/clothing/under/AltClick(mob/user)
 	if(..())
 		return 1

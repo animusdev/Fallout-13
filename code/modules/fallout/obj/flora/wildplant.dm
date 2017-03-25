@@ -34,9 +34,7 @@
 		user << "<span class='notice'>You clear up [src]!</span>"
 		qdel(src)
 		return
-	if(..())
-		return 1
-	attack_hand(user)
+	return ..()
 
 /obj/structure/flora/wild_plant/attack_hand(mob/user)
 	if(!iscarbon(user))
@@ -51,7 +49,7 @@
 		qdel(myseed)
 		qdel(src)
 	else
-		examine(user)
+		to_chat(user, "<span class='notice'>You touched the plant... Are you happy now?</span>") // Does this make you happy, Stanley?
 
 /obj/structure/flora/wild_plant/examine(user)
 	if(myseed)

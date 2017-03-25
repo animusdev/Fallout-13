@@ -63,6 +63,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 	var/defer_change = 0
 
 /turf/closed/mineral/New()
+	..()
 	if (mineralType && mineralAmt && spread && spreadChance)
 		for(var/dir in cardinal)
 			if(prob(spreadChance))
@@ -246,6 +247,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 			M.baseturf = src.baseturf
 			src = M
 			M.levelupdate()
+			M.recalc_atom_opacity()
 
 /turf/closed/mineral/random/high_chance
 	icon_state = "rock_highchance"

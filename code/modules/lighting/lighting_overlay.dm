@@ -11,6 +11,7 @@
 	mouse_opacity    = 0
 	layer            = LIGHTING_LAYER
 	invisibility     = INVISIBILITY_LIGHTING
+	luminosity       = 1
 
 	blend_mode       = BLEND_ADD
 
@@ -76,9 +77,9 @@
 	var/datum/lighting_corner/cb  = T.corners[4] || dummy_lighting_corner
 	var/datum/lighting_corner/ca  = T.corners[1] || dummy_lighting_corner
 
-	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
-	var/lum = max > 1e-6
-	luminosity = 1
+//	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
+//	var/lum = max > 1e-6
+//	luminosity = 1
 
 	animate(src, color = list(
 		cr.cache_r, cr.cache_g, cr.cache_b, 0,
