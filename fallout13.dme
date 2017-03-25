@@ -1290,7 +1290,6 @@
 #include "code\modules\fallout\stack\hide.dm"
 #include "code\modules\fallout\structures\chair.dm"
 #include "code\modules\fallout\structures\fence.dm"
-#include "code\modules\fallout\structures\fridge.dm"
 #include "code\modules\fallout\structures\simple_door.dm"
 #include "code\modules\fallout\structures\table_smooth.dm"
 #include "code\modules\fallout\structures\vault_door.dm"

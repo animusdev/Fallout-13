@@ -51,7 +51,7 @@
 	if (!targetloc || (!lock && orbiter.loc != lastloc && orbiter.loc != targetloc))
 		orbiter.stop_orbit()
 		return
-	orbiter.forceMove(targetloc)
+	orbiter.loc = targetloc
 //	orbiter.update_parallax_contents()
 	lastloc = orbiter.loc
 
