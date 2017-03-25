@@ -25,6 +25,7 @@
 	icon_state = pick("key-buggy-r","key-buggy-y","key-buggy-g","key-buggy-b")
 
 /datum/riding/motorcycle/buggy
+	keytype = /obj/item/key/buggy
 	vehicle_move_delay = 0.7
 
 /datum/riding/motorcycle/buggy/handle_vehicle_offsets()

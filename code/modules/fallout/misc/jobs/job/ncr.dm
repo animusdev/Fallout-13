@@ -21,11 +21,11 @@
 /datum/outfit/job/squad_leader
 	name = "NCR Squad Leader"
 	id = null
-	gloves = /obj/item/clothing/gloves/combat
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat
-	suit = /obj/item/clothing/suit/armor/f13/combat
-	head = /obj/item/clothing/head/helmet/f13/combat
+	suit = /obj/item/clothing/suit/armor/f13/sergeant
+	head = /obj/item/clothing/head/f13/sergeant
 	belt = /obj/item/weapon/storage/belt/military/army
 	back = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	l_pocket = /obj/item/device/radio
@@ -54,7 +54,7 @@
 
 /datum/outfit/job/ranger
 	name = "NCR Ranger"
-	gloves = /obj/item/clothing/gloves/combat
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/light
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
@@ -86,7 +86,7 @@
 
 /datum/outfit/job/elite_trooper
 	name = "NCR Elite Trooper"
-	gloves = /obj/item/clothing/gloves/combat
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/ncr
@@ -121,7 +121,7 @@
 
 /datum/outfit/job/trooper
 	name = "NCR Trooper"
-	gloves = /obj/item/clothing/gloves/combat
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat
 	suit = /obj/item/clothing/suit/armor/f13/ncr/soldier

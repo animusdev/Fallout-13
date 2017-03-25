@@ -200,6 +200,15 @@
 	door_type = "store"
 	opaque = 0
 
+/obj/structure/simple_door/metal/barred
+	name = "barred door"
+	desc = "Bars. No matter which side we're on, aren't we always behind them?"
+	icon_state = "barred"
+	door_type = "barred"
+	open_sound = "sound/f13machines/doorchainlink_open.ogg"
+	close_sound = "sound/f13machines/doorchainlink_close.ogg"
+	opaque = 0
+
 /obj/structure/simple_door/metal/vault
 	name = "vault wall"
 	desc = "A sturdy and cold metal wall."

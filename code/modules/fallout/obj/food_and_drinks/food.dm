@@ -216,14 +216,6 @@
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
 	filling_color = "#FF6347"
 
-/obj/item/weapon/reagent_containers/food/snacks/grown/fungus
-	seed = /obj/item/seeds/fungus
-	name = "cave fungus"
-	desc = "Cave fungus is an edible mushroom which has the ability to decrease radiation levels."
-	icon_state = "fungus"
-	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
-	filling_color = "#FF6347"
-
 /obj/item/weapon/reagent_containers/food/snacks/grown/mutfruit
 	seed = /obj/item/seeds/mutfruit
 	name = "mutfruit"
@@ -237,5 +229,21 @@
 	name = "barrel cactus fruit"
 	desc = "Barrel cactus fruit are found on ferocactus - a spherical cacti that can be encountered all over the wasteland.<br>They usually form in groups, with one large barrel cactus that contains the fruit surrounded by several smaller cacti."
 	icon_state = "cactusfruit"
+	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
+	filling_color = "#FF6347"
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/fungus
+	seed = /obj/item/seeds/fungus
+	name = "shroom"
+	desc = "An edible mushroom which has the ability to decrease radiation levels."
+	icon_state = "shroom"
+	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
+	filling_color = "#FF6347"
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/glow
+	seed = /obj/item/seeds/glow
+	name = "glowing fungus"
+	desc = "A cluster of small green mushrooms that exhibit a faint luminescence.<br>The fungus usually thrives in humid and radioactive locations, either on the floors of underground caves, or around pools of irradiated water."
+	icon_state = "glow"
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
 	filling_color = "#FF6347"
