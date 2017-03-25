@@ -2,11 +2,12 @@
 	if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
 		rockTurfEdgeCache = list()
 		rockTurfEdgeCache.len = 4
-		rockTurfEdgeCache[NORTH_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_n", layer = 6)
-		rockTurfEdgeCache[SOUTH_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_s", layer = 6)
-		rockTurfEdgeCache[EAST_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_e", layer = 6)
-		rockTurfEdgeCache[WEST_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_w", layer = 6)
-	src.overlays.Cut()
+		rockTurfEdgeCache[NORTH_EDGING] = new/image('icons/fallout/turfs/mining.dmi', "rock_side_n", layer = 6)
+		rockTurfEdgeCache[SOUTH_EDGING] = new/image('icons/fallout/turfs/mining.dmi', "rock_side_s", layer = 6)
+		rockTurfEdgeCache[EAST_EDGING] = new/image('icons/fallout/turfs/mining.dmi', "rock_side_e", layer = 6)
+		rockTurfEdgeCache[WEST_EDGING] = new/image('icons/fallout/turfs/mining.dmi', "rock_side_w", layer = 6)
+	for(var/image/I in rockTurfEdgeCache)
+		src.overlays -= I
 	if(istype(get_step(src, NORTH), /turf/closed/mineral))
 		src.overlays += rockTurfEdgeCache[NORTH_EDGING]
 	if(istype(get_step(src, SOUTH), /turf/closed/mineral))
@@ -37,61 +38,61 @@
 	var/adjacencies = get_adjacencies(/turf/open/indestructible/ground/desert)
 
 	if((adjacencies & N_NORTH) && (adjacencies & N_WEST))
-		src.overlays += desertTurfEdgeCache["1-f"]
+		src.overlays |= desertTurfEdgeCache["1-f"]
 	else
 		if(adjacencies & N_NORTH)
 			if(adjacencies & N_NORTHWEST)
-				src.overlays += desertTurfEdgeCache["1-nw"]
+				src.overlays |= desertTurfEdgeCache["1-nw"]
 			else
-				src.overlays += desertTurfEdgeCache["1-n"]
+				src.overlays |= desertTurfEdgeCache["1-n"]
 		else if(adjacencies & N_WEST)
 			if(adjacencies & N_NORTHWEST)
-				src.overlays += desertTurfEdgeCache["1-wn"]
+				src.overlays |= desertTurfEdgeCache["1-wn"]
 			else
-				src.overlays += desertTurfEdgeCache["1-w"]
+				src.overlays |= desertTurfEdgeCache["1-w"]
 
 	if((adjacencies & N_NORTH) && (adjacencies & N_EAST))
-		src.overlays += desertTurfEdgeCache["2-f"]
+		src.overlays |= desertTurfEdgeCache["2-f"]
 	else
 		if(adjacencies & N_NORTH)
 			if(adjacencies & N_NORTHEAST)
-				src.overlays += desertTurfEdgeCache["2-ne"]
+				src.overlays |= desertTurfEdgeCache["2-ne"]
 			else
-				src.overlays += desertTurfEdgeCache["2-n"]
+				src.overlays |= desertTurfEdgeCache["2-n"]
 		else if(adjacencies & N_EAST)
 			if(adjacencies & N_NORTHEAST)
-				src.overlays += desertTurfEdgeCache["2-en"]
+				src.overlays |= desertTurfEdgeCache["2-en"]
 			else
-				src.overlays += desertTurfEdgeCache["2-e"]
+				src.overlays |= desertTurfEdgeCache["2-e"]
 
 	if((adjacencies & N_SOUTH) && (adjacencies & N_WEST))
-		src.overlays += desertTurfEdgeCache["3-f"]
+		src.overlays |= desertTurfEdgeCache["3-f"]
 	else
 		if(adjacencies & N_SOUTH)
 			if(adjacencies & N_SOUTHWEST)
-				src.overlays += desertTurfEdgeCache["3-sw"]
+				src.overlays |= desertTurfEdgeCache["3-sw"]
 			else
-				src.overlays += desertTurfEdgeCache["3-s"]
+				src.overlays |= desertTurfEdgeCache["3-s"]
 		else if(adjacencies & N_WEST)
 			if(adjacencies & N_SOUTHWEST)
-				src.overlays += desertTurfEdgeCache["3-ws"]
+				src.overlays |= desertTurfEdgeCache["3-ws"]
 			else
-				src.overlays += desertTurfEdgeCache["3-w"]
+				src.overlays |= desertTurfEdgeCache["3-w"]
 
 
 	if((adjacencies & N_SOUTH) && (adjacencies & N_EAST))
-		src.overlays += desertTurfEdgeCache["4-f"]
+		src.overlays |= desertTurfEdgeCache["4-f"]
 	else
 		if(adjacencies & N_SOUTH)
 			if(adjacencies & N_SOUTHEAST)
-				src.overlays += desertTurfEdgeCache["4-se"]
+				src.overlays |= desertTurfEdgeCache["4-se"]
 			else
-				src.overlays += desertTurfEdgeCache["4-s"]
+				src.overlays |= desertTurfEdgeCache["4-s"]
 		else if(adjacencies & N_EAST)
 			if(adjacencies & N_SOUTHEAST)
-				src.overlays += desertTurfEdgeCache["4-es"]
+				src.overlays |= desertTurfEdgeCache["4-es"]
 			else
-				src.overlays += desertTurfEdgeCache["4-e"]
+				src.overlays |= desertTurfEdgeCache["4-e"]
 
 /turf/closed/updateDesertOverlays()
 	return
@@ -131,7 +132,7 @@
 
 proc/generate_desert_overlays_cache()
 	desertTurfEdgeCache = list()
-	desertTurfEdgeCache.len = 16
+	desertTurfEdgeCache.len = 20
 	desertTurfEdgeCache["1-f"] = new/image('icons/fallout/turfs/ground_smooth.dmi', "1-f", layer = TURF_LAYER)
 	desertTurfEdgeCache["1-nw"] = new/image('icons/fallout/turfs/ground_smooth.dmi', "1-nw", layer = TURF_LAYER)
 	desertTurfEdgeCache["1-n"] = new/image('icons/fallout/turfs/ground_smooth.dmi', "1-n", layer = TURF_LAYER)
