@@ -29,6 +29,7 @@
 	log_amount = 3
 	obj_integrity = 100
 	max_integrity = 100
+	layer = 8
 
 /obj/structure/flora/tree/wasteland/New()
 	icon_state = "deadtree_[rand(1, 6)]"
@@ -48,6 +49,7 @@
 	log_amount = 7
 	obj_integrity = 350
 	max_integrity = 350
+	layer = 8
 
 /obj/structure/flora/tree/tall/New()
 	icon_state = "tree_[rand(1, 3)]"

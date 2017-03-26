@@ -7,7 +7,6 @@
 	name = "\proper ground"
 	icon_state = "wasteland1"
 	intact = 1
-	var/obj/structure/flora/grass/wasteland/grass = null
 
 /turf/open/indestructible/ground/New()
 	..()
@@ -15,10 +14,6 @@
 	baseturf = src.type
 	baseturf_icon = icon_state
 	baseturf_dir = dir
-
-/turf/open/indestructible/ground/Destroy()
-	if(grass)
-		qdel(grass)
 
 /turf/open/indestructible/ground/attack_paw(mob/user)
 	return src.attack_hand(user)
@@ -54,25 +49,12 @@ var/global/list/desertTurfEdgeCache
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 	/obj/item/seeds/ferocactus, /obj/item/seeds/corn,/obj/item/seeds/shroom)
 	slowdown = 0.1
+	flags = CAN_HAVE_NATURE
 
 /turf/open/indestructible/ground/desert/New()
 	icon_state = "wasteland[rand(1,31)]"
-	plant_grass()
 	..()
 	fullUpdateJunctionOverlays()
-
-/turf/open/indestructible/ground/desert/proc/plant_grass()
-	if(locate(/obj/structure/flora) in src)
-		return
-	if(prob(5))
-		grass = new(src)
-	else
-		var/chance = 0
-		for(var/turf/open/indestructible/ground/desert/T in RANGE_TURFS(1,src))
-			if(T.grass)
-				chance += 7.5
-		if(prob(chance))
-			grass = new(src)
 
 /turf/open/indestructible/ground/dirt
 	name = "dirt"
@@ -81,6 +63,7 @@ var/global/list/desertTurfEdgeCache
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn)
 	slowdown = 0.2
+	flags = CAN_HAVE_NATURE
 
 /turf/open/indestructible/ground/road
 	name = "\proper road"
