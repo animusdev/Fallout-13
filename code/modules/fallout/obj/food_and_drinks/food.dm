@@ -191,7 +191,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/galette
 	name = "dehydrated pea soup"
-	desc = "A piece of military food ration.<br>A label on the front says: 'Dehydrated peas. Chew well, take with water. 60g.'"
+	desc = "A piece of military food ration.<br>Faded label on the front says: 'Dehydrated peas. Chew well, take with water. 60g.'"
 	icon_state = "galette"
 	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2)
 	list_reagents = list("nutriment" = 20)
