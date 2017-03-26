@@ -190,7 +190,7 @@ var/datum/subsystem/ticker/ticker
 
 	Master.RoundStart()
 
-	to_chat(world, "<B><FONT color='#b55a23'>The following events shall be remembered under the code name of:<br><FONT color='#cd3000'>[station_name()]</FONT><br><FONT color='#b55a23'>Best of luck with your survival!</FONT></B>")
+	to_chat(world, "<B><FONT color='#3c4438'>The following events shall be remembered under the code name of:<br><FONT color='#454943'>[station_name()]</FONT><br><FONT color='#3c4438'>Best of luck with your survival!</FONT></B>")
 	to_chat(world, sound('sound/f13music/game_start.ogg'))
 
 	if(SSevent.holidays)
@@ -366,16 +366,16 @@ var/datum/subsystem/ticker/ticker
 					if(SSshuttle && SSshuttle.emergency)
 						shuttle_area = SSshuttle.emergency.areaInstance
 					if(!Player.onCentcom() && !Player.onSyndieBase())
-						to_chat(Player, "<font color='blue'><b>You managed to survive, but were marooned on [station_name()]...</b></FONT>")
+						to_chat(Player, "<font color='#0b575e'><b>You managed to survive, but were marooned on [station_name()]...</b></FONT>")
 					else
 						num_escapees++
-						to_chat(Player, "<font color='green'><b>You managed to survive the events on [station_name()] as [Player.real_name].</b></FONT>")
+						to_chat(Player, "<font color='#77ca00'><b>You managed to survive the events on [station_name()] as [Player.real_name].</b></FONT>")
 						if(get_area(Player) == shuttle_area)
 							num_shuttle_escapees++
 				else
-					to_chat(Player, "<font color='green'><b>You managed to survive the events on [station_name()] as [Player.real_name].</b></FONT>")
+					to_chat(Player, "<font color='#77ca00'><b>You managed to survive the events on [station_name()] as [Player.real_name].</b></FONT>")
 			else
-				to_chat(Player, "<font color='red'><b>You did not survive the events on [station_name()]...</b></FONT>")
+				to_chat(Player, "<font color='#6d3f40'><b>You did not survive the events on [station_name()]...</b></FONT>")
 
 	//Round statistics report
 	var/datum/station_state/end_state = new /datum/station_state()
