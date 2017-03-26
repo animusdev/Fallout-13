@@ -268,6 +268,7 @@
 	rate = 0.1
 	examine_line = "<span class='info'>It emits a soft glow.</span>"
 	trait_id = "glow"
+	var/color = LIGHT_COLOR_GLARE
 
 /datum/plant_gene/trait/glow/proc/get_lum(obj/item/seeds/S)
 	return round(S.potency*rate)

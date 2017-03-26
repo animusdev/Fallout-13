@@ -113,3 +113,8 @@
 	else
 		var/t_growthstate = min(max(round((age / myseed.maturation) * myseed.growthstages), 1), myseed.growthstages)
 		icon_state = "[myseed.icon_grow][t_growthstate]"
+	if(myseed && myseed.get_gene(/datum/plant_gene/trait/glow))
+		var/datum/plant_gene/trait/glow/G = myseed.get_gene(/datum/plant_gene/trait/glow)
+		set_light(G.get_lum(myseed), l_color = G.color)
+	else
+		set_light(0)
