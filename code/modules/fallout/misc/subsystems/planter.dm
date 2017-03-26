@@ -3,13 +3,13 @@ var/datum/subsystem/planter/SSplanter
 /datum/subsystem/planter
 	name = "Planter"
 	wait = 300
-	var/plants_on_start = 500
 
 /datum/subsystem/planter/New()
 	NEW_SS_GLOBAL(SSsunlight)
 
 /datum/subsystem/planter/Initialize(timeofday, zlevel)
-	for(var/i=0, i<plants_on_start, i++)
+	var/plants_count = (world.maxx * world.maxy * world.maxz) * 0.01
+	for(var/i=0, i<plants_count, i++)
 		var/obj/structure/flora/wild_plant/p = spawn_plant()
 		if(p)
 			p.age = rand(1,5)

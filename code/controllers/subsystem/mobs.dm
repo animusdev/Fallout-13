@@ -39,7 +39,8 @@ var/datum/subsystem/mobs/SSmob
 			M.Life(seconds)
 		else
 			mob_list -= M
-		if (MC_TICK_CHECK)
+		if (MC_TICK_CHECK && !(currentrun.len && currentrun.len < increment))
+			next_fire -= started - world.time
 			return
 	if(currentrun.len && currentrun.len < increment)
 		goto CYCLE
