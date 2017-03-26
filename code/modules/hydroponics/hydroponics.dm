@@ -271,7 +271,7 @@
 	if(!self_sustaining)
 		if(myseed && myseed.get_gene(/datum/plant_gene/trait/glow))
 			var/datum/plant_gene/trait/glow/G = myseed.get_gene(/datum/plant_gene/trait/glow)
-			set_light(G.get_lum(myseed))
+			set_light(G.get_lum(myseed), l_color = G.color)
 		else
 			set_light(0)
 

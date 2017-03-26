@@ -33,6 +33,6 @@
 		if(T.step_sounds[sound_type] && !step_sounded)
 			playsound(src, T.step_sounds[sound_type], (( H && H.shoes.flags & QUIETSTEPSOUND) ? 5 : 25), 0)
 			step_sounded = TRUE
-			spawn(src.movement_delay() * 2.1)
+			spawn(max(5, src.movement_delay() * 2.1))
 				step_sounded = FALSE
 		return 1

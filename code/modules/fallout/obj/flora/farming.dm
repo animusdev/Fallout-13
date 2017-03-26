@@ -121,5 +121,5 @@
 	icon_grow = "glow-grow"
 	icon_dead = "glow-dead"
 	icon_harvest = "glow-harvest"
-	genes = list(/datum/plant_gene/trait/repeated_harvest)
+	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow)
 	reagents_add = list("space_drugs" = 0.04, "mindbreaker" = 0.1, "mutagen" = 0.01, "radium" = 0.05)
