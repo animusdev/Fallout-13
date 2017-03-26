@@ -1,13 +1,13 @@
 /client/script = {"<style>
 body					{font-family: Arial, Helvetica, sans-serif;}
 
-h1, h2, h3, h4, h5, h6	{color: #454943;	font-family: Arial, Helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6	{color: #3c4438;	font-family: Arial, Helvetica, sans-serif;}
 
 em						{font-style: normal;	font-weight: bold;}
 
-.motd					{color: #3c4438;	font-family: Arial, Helvetica, sans-serif;}
+.motd					{color: #454943;	font-family: Arial, Helvetica, sans-serif;}
 .motd h1, .motd h2, .motd h3, .motd h4, .motd h5, .motd h6
-	{color: #454943;	text-decoration: underline;}
+	{color: #3c4438;	text-decoration: underline;}
 .motd a, .motd a:link, .motd a:visited, .motd a:active, .motd a:hover
 	{color: #4c5b42;}
 
@@ -17,10 +17,10 @@ em						{font-style: normal;	font-weight: bold;}
 
 .ooc					{					font-weight: bold;}
 .adminobserverooc		{color: #0b575e;	font-weight: bold;}
-.adminooc				{color: #920034;	font-weight: bold;}
+.adminooc				{color: #77ca00;	font-weight: bold;}
 
 .adminobserver			{color: #19654b;	font-weight: bold;}
-.admin					{color: #00452a;	font-weight: bold;}
+.admin					{color: #920034;	font-weight: bold;}
 
 .name					{					font-weight: bold;}
 
