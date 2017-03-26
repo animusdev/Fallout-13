@@ -232,8 +232,8 @@
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
 	filling_color = "#FF6347"
 
-/obj/item/weapon/reagent_containers/food/snacks/grown/fungus
-	seed = /obj/item/seeds/fungus
+/obj/item/weapon/reagent_containers/food/snacks/grown/shroom
+	seed = /obj/item/seeds/shroom
 	name = "shroom"
 	desc = "An edible mushroom which has the ability to decrease radiation levels."
 	icon_state = "shroom"
