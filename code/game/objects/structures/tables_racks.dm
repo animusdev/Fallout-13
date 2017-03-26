@@ -29,6 +29,7 @@
 	var/buildstackamount = 1
 	var/framestackamount = 2
 	var/deconstruction_ready = 1
+	can_crawled = 1
 	obj_integrity = 150
 	max_integrity = 150
 	integrity_failure = 30
@@ -75,7 +76,7 @@
 /obj/structure/table/CanPass(atom/movable/mover, turf/target, height=0)
 	if(height==0)
 		return 1
-	if(istype(mover) && mover.checkpass(PASSTABLE))
+	if(istype(mover) && (mover.checkpass(PASSTABLE) || (mover.checkpass(PASSCRAWL) && can_crawled)))
 		return 1
 	if(mover.throwing)
 		return 1
@@ -320,6 +321,7 @@
 	obj_integrity = 200
 	max_integrity = 200
 	integrity_failure = 50
+	can_crawled = 0
 	armor = list(melee = 10, bullet = 30, laser = 30, energy = 100, bomb = 20, bio = 0, rad = 0, fire = 80, acid = 70)
 
 /obj/structure/table/reinforced/attackby(obj/item/weapon/W, mob/user, params)
@@ -390,6 +392,7 @@
 	can_buckle = 1
 	buckle_lying = 1
 	buckle_requires_restraints = 1
+	can_crawled = 0
 	var/mob/living/carbon/human/patient = null
 	var/obj/machinery/computer/operating/computer = null
 

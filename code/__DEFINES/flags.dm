@@ -50,6 +50,7 @@
 #define PASSBLOB		8
 #define PASSMOB			16
 #define LETPASSTHROW	32
+#define PASSCRAWL	    64
 
 
 //Movement Types

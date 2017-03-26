@@ -19,6 +19,7 @@
 	obj_integrity = 100
 	max_integrity = 100
 	integrity_failure = 30
+	can_crawled = 1
 	var/buildstacktype = /obj/item/stack/sheet/metal
 	var/buildstackamount = 2
 
@@ -47,6 +48,7 @@
 	icon_state = "down"
 	anchored = 0
 	resistance_flags = 0
+	can_crawled = 0
 	var/foldabletype = /obj/item/roller
 
 /obj/structure/bed/roller/attackby(obj/item/weapon/W, mob/user, params)
