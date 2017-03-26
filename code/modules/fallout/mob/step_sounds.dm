@@ -25,6 +25,9 @@
 		if(step_sounded)
 			return 1
 
+		if(lying)
+			return 1
+
 		var/sound_type = get_step_sound()
 		if(!sound_type)
 			return 1

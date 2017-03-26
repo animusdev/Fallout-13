@@ -649,13 +649,17 @@ var/next_mob_id = 0
 			fall()
 		else if(ko || (!has_legs && !ignore_legs) || chokehold)
 			fall(forced = 1)
-	canmove = !(ko || resting || stunned || chokehold || buckled || (!has_legs && !ignore_legs && !has_arms))
+	canmove = !(ko || stunned || chokehold || buckled || (!has_legs && !ignore_legs && !has_arms))
 	density = !lying
 	if(lying)
-		if(layer == initial(layer)) //to avoid special cases like hiding larvas.
-			layer = LYING_MOB_LAYER //so mob lying always appear behind standing mobs
+		if(under_object)
+			if(layer == initial(layer) || layer == LYING_MOB_LAYER)
+				layer = CRAWLING_LAYER
+		else //to avoid special cases like hiding larvas.
+			if(layer == initial(layer) || layer == CRAWLING_LAYER)
+				layer = LYING_MOB_LAYER //so mob lying always appear behind standing mobs
 	else
-		if(layer == LYING_MOB_LAYER)
+		if(layer == LYING_MOB_LAYER || layer == CRAWLING_LAYER)
 			layer = initial(layer)
 	update_transform()
 	update_vision_cone()
@@ -665,6 +669,10 @@ var/next_mob_id = 0
 		if(L.has_status_effect(/datum/status_effect/freon))
 			canmove = 0
 	lying_prev = lying
+	if(lying)
+		pass_flags |= PASSCRAWL
+	else
+		pass_flags ^= PASSCRAWL
 	return canmove
 
 
