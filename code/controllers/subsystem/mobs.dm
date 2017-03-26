@@ -22,6 +22,8 @@ var/datum/subsystem/mobs/SSmob
 /datum/subsystem/mobs/fire(resumed = 0)
 	var/seconds = wait_full * 0.1
 	if (!resumed && !src.currentrun.len)
+		if(prob(5))
+			mob_list = shuffle(mob_list)
 		src.currentrun = mob_list.Copy()
 		increment = round(src.currentrun.len * (wait/wait_full))
 	//cache for sanic speed (lists are references anyways)
