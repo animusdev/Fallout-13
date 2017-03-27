@@ -8,11 +8,75 @@
 	time = 40
 	category = CAT_WEAPON
 
+/datum/crafting_recipe/throwing_spear
+	name = "Throwing Spear"
+	result = /obj/item/weapon/spear
+	reqs = list(/obj/item/stack/sheet/metal = 1)
+	time = 600
+	tools = list(/obj/item/weapon/weldingtool)
+	category = CAT_WEAPON
+
+//Misc
+/datum/crafting_recipe/satchel
+	name = "Satchel"
+	result = /obj/item/weapon/storage/backpack/satchel
+	time = 80
+	reqs = list(/obj/item/stack/sheet/animalhide = 2,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 1)
+	category = CAT_MISC
+
+
+//Armor
+/datum/crafting_recipe/leatherarmor
+	name = "leather armor"
+	result = /obj/item/clothing/suit/armor/f13/leatherarmor
+	reqs = list(/obj/item/stack/sheet/animalhide = 6,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/metalarmor
+	name = "metal armor"
+	result = /obj/item/clothing/suit/armor/f13/bmetalarmor
+	reqs = list(/obj/item/stack/sheet/animalhide = 3,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/crafting/duct_tape = 2,
+				/obj/item/crafting/wonderglue = 3)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	category = CAT_PRIMAL
+
 //Med
 /datum/crafting_recipe/healpowder
 	name = "Heal Powder"
 	result = /obj/item/weapon/reagent_containers/pill/patch/healpowder
 	time = 20
-	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1, /obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
+	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
 	category = CAT_MISC
 
+/datum/crafting_recipe/stimpak
+	name = "Stimpak"
+	result = /obj/item/weapon/reagent_containers/pill/patch/stimpak
+	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1,
+				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
+	time = 60
+	category = CAT_MISC
+
+/datum/crafting_recipe/superstimpak
+	name = "Super Stimpak"
+	result = /obj/item/weapon/reagent_containers/pill/patch/supstimpak
+	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak = 1,
+				/obj/item/stack/sheet/animalhide = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/crafting/wonderglue = 2,
+				/obj/item/crafting/abraxo = 1)
+	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/wirecutters)
+	time = 90
+	category = CAT_MISC

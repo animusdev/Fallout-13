@@ -29,6 +29,6 @@ proc/get_crawled_object(var/turf/T)
 	if(iscarbon(Obj) && isturf(newloc))
 		var/mob/living/carbon/C = Obj
 		if(C.under_object && !get_crawled_object(newloc))
-			C.under_object = null
-			spawn(C.movement_delay())
+			spawn(C.movement_delay()/3)
+				C.under_object = null
 				C.update_canmove()

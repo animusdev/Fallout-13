@@ -1,5 +1,6 @@
 /turf/closed
 	var/thermite = 0
+	smooth = SMOOTH_TRUE
 	layer = CLOSED_TURF_LAYER
 	opacity = 1
 	density = 1

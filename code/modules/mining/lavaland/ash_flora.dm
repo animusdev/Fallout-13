@@ -208,7 +208,7 @@
 	resistance_flags = FLAMMABLE
 	obj_integrity = 200
 	max_integrity = 200
-
+/*
 //what you can craft with these things
 /datum/crafting_recipe/mushroom_bowl
 	name = "Mushroom Bowl"
@@ -216,3 +216,4 @@
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/ash_flora/shavings = 5)
 	time = 30
 	category = CAT_PRIMAL
+*/
