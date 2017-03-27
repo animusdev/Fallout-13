@@ -58,7 +58,7 @@
 "bf" = (/obj/structure/reagent_dispensers/watertank,/turf/open/floor/plasteel/bot,/area/shuttle/escape)
 "bg" = (/turf/open/floor/plasteel/warning{dir = 8},/area/shuttle/escape)
 "bh" = (/turf/open/floor/plasteel/warning{dir = 4},/area/shuttle/escape)
-"bi" = (/obj/structure/closet/crate{name = "emergency supplies crate"},/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/toolbox/emergency,/obj/item/device/flashlight/torch/flarered{pixel_x = 3; pixel_y = 3},/obj/item/device/flashlight/torch/flarered{pixel_x = -6; pixel_y = -2},/obj/item/weapon/crowbar,/obj/item/weapon/wrench,/obj/item/device/radio,/turf/open/floor/plasteel/bot,/area/shuttle/escape)
+"bi" = (/obj/structure/closet/crate{name = "emergency supplies crate"},/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/toolbox/emergency,/obj/item/device/flashlight/torch/flare{pixel_x = 3; pixel_y = 3},/obj/item/device/flashlight/torch/flare{pixel_x = -6; pixel_y = -2},/obj/item/weapon/crowbar,/obj/item/weapon/wrench,/obj/item/device/radio,/turf/open/floor/plasteel/bot,/area/shuttle/escape)
 "bj" = (/obj/machinery/vending/wallmed{name = "Emergency NanoMed"; pixel_x = 0; pixel_y = 0; req_access_txt = "0"; use_power = 0},/turf/closed/wall/shuttle/smooth/nodiagonal,/area/shuttle/escape)
 "bk" = (/obj/machinery/door/airlock/shuttle{name = "Emergency Shuttle Cargo"},/turf/open/floor/plasteel/warning/side,/area/shuttle/escape)
 "bl" = (/obj/structure/rack,/obj/item/clothing/suit/fire/firefighter,/obj/item/weapon/tank/internals/oxygen/red,/obj/item/clothing/mask/gas,/obj/item/clothing/head/hardhat/red,/turf/open/floor/plasteel/bot,/area/shuttle/escape)
