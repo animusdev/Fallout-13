@@ -281,16 +281,20 @@
 /mob/proc/get_contents()
 
 /mob/living/proc/lay_down()
-	set name = "Lie Down"
+	set name = "Lay"
 	set category = "IC"
+
+	if(stat)
+		return
 
 	if(!under_object)
 		resting = !resting
 		to_chat(src, "<span class='notice'>You are now [resting ? "lying" : "getting up"].</span>")
 		update_canmove()
 	else
-		playsound(loc, 'sound/f13weapons/pan.ogg', 50, 1)
+		playsound(loc, pick('sound/f13weapons/pan.ogg', 'sound/items/trayhit2.ogg', 'sound/items/trayhit1.ogg'), 50, 1)
 		Stun(1)
+		apply_damage(5, BRUTE, get_bodypart("head"))
 		to_chat(src, "<span class='danger'>Ouch!</span>")
 
 //Recursive function to find everything a mob is holding.

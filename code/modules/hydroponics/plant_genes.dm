@@ -265,7 +265,7 @@
 	// Makes plant glow. Makes plant in tray glow too.
 	// Adds potency*rate luminosity to products.
 	name = "Bioluminescence"
-	rate = 0.1
+	rate = 0.2
 	examine_line = "<span class='info'>It emits a soft glow.</span>"
 	trait_id = "glow"
 	var/color = LIGHT_COLOR_GLARE
@@ -282,7 +282,7 @@
 
 /datum/plant_gene/trait/glow/berry
 	name = "Strong Bioluminescence"
-	rate = 0.2
+	rate = 0.3
 
 
 /datum/plant_gene/trait/teleport
