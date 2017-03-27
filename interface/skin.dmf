@@ -886,7 +886,7 @@ window "mainwindow"
 		size = 634x417
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = none
+		background-color = #3c4438
 		saved-params = "splitter"
 		left = "mapwindow"
 		right = "infowindow"
@@ -897,8 +897,8 @@ window "mainwindow"
 		size = 595x20
 		anchor1 = 0,100
 		anchor2 = 100,100
-		font-size = 10
-		background-color = #d3b5b5
+		font-family = "Verdana"
+		background-color = #c0c0c0
 		is-default = true
 		saved-params = "command"
 	elem "say"
@@ -940,6 +940,7 @@ window "mapwindow"
 		anchor1 = none
 		anchor2 = none
 		background-color = none
+		border = line
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
 	elem "map"
@@ -948,10 +949,10 @@ window "mapwindow"
 		size = 638x455
 		anchor1 = 0,0
 		anchor2 = 100,100
-		font-family = "Arial"
-		font-size = 7
+		font-family = "Verdana"
 		text-color = #3c4438
 		is-default = true
+		border = sunken
 		saved-params = "icon-size"
 
 window "infowindow"
