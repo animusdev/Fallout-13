@@ -295,7 +295,7 @@
 		playsound(loc, pick('sound/f13weapons/pan.ogg', 'sound/items/trayhit2.ogg', 'sound/items/trayhit1.ogg'), 50, 1)
 		Stun(1)
 		apply_damage(5, BRUTE, get_bodypart("head"))
-		to_chat(src, "<span class='danger'>In the blink of an eye, you banged [under_object] with your head!<br>Ouch!</span>")
+		to_chat(src, "<span class='danger'>As you try to get up, you bang [under_object] with your head!<br>Ouch!</span>")
 
 //Recursive function to find everything a mob is holding.
 /mob/living/get_contents(obj/item/weapon/storage/Storage = null)
