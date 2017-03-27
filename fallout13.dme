@@ -1226,8 +1226,6 @@
 #include "code\modules\fallout\misc\economy\writing.dm"
 #include "code\modules\fallout\misc\jobs\jobs.dm"
 #include "code\modules\fallout\misc\jobs\whitelist.dm"
-#include "code\modules\fallout\misc\jobs\donate\faction.dm"
-#include "code\modules\fallout\misc\jobs\donate\status.dm"
 #include "code\modules\fallout\misc\jobs\faction\faction.dm"
 #include "code\modules\fallout\misc\jobs\job\city.dm"
 #include "code\modules\fallout\misc\jobs\job\job.dm"

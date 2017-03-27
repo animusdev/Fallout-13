@@ -162,7 +162,8 @@ mob/proc/set_faction(var/faction)
 	src.social_faction = F.name
 	src.faction += F.name
 	to_chat(src, "<span class='notice'>You have joined the <span style='color: [F.color];'>[F.name]</span> faction.</span>")
-	src.add_memory("[F.name] is using freq ([F.freq]) with encryption key ([F.encryption_key])")
+	if(F.flags & HAVE_FREQ)
+		src.add_memory("[F.name] is using freq ([F.freq]) with encryption key ([F.encryption_key])")
 	src.allow_recipes += F.craft_recipes
 	src.verbs += F.verbs
 
