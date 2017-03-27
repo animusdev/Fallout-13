@@ -1223,7 +1223,6 @@
 #include "code\modules\fallout\misc\radiation.dm"
 #include "code\modules\fallout\misc\weight.dm"
 #include "code\modules\fallout\misc\economy\economy.dm"
-#include "code\modules\fallout\misc\economy\trading.dm"
 #include "code\modules\fallout\misc\economy\writing.dm"
 #include "code\modules\fallout\misc\jobs\jobs.dm"
 #include "code\modules\fallout\misc\jobs\whitelist.dm"
