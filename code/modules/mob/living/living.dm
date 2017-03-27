@@ -281,7 +281,7 @@
 /mob/proc/get_contents()
 
 /mob/living/proc/lay_down()
-	set name = "Lay"
+	set name = "Crawl"
 	set category = "IC"
 
 	if(stat)
