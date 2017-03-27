@@ -19888,7 +19888,7 @@
 /turf/open/floor/plasteel,
 /area/bridge)
 "aSF" = (
-/mob/living/carbon/monkey/punpun,
+/mob/living/carbon/monkey/special,
 /turf/open/floor/plasteel/bar,
 /area/crew_quarters/bar)
 "aSG" = (

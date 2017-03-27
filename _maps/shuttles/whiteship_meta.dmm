@@ -283,11 +283,11 @@
 	},
 /obj/item/weapon/storage/toolbox/emergency,
 /obj/item/weapon/storage/toolbox/emergency,
-/obj/item/device/flashlight/torch/flarered{
+/obj/item/device/flashlight/torch/flare{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/flashlight/torch/flarered{
+/obj/item/device/flashlight/torch/flare{
 	pixel_x = -6;
 	pixel_y = -2
 	},

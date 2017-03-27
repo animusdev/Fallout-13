@@ -53,7 +53,7 @@
 "ba" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
 "bb" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/secret)
 "bc" = (/obj/machinery/vending/nukacolavend,/turf/open/floor/f13/wood,/area/f13/secret)
-"bd" = (/obj/effect/decal/sign{desc = "Remove kebab."; icon_state = "vault_kebab"; name = "kebab sign"; pixel_x = -10; pixel_y = 28},/turf/open/floor/f13/wood,/area/f13/secret)
+"bd" = (/obj/structure/decoration/sign{desc = "Remove kebab."; icon_state = "vault_kebab"; name = "kebab sign"; pixel_x = -10; pixel_y = 28},/turf/open/floor/f13/wood,/area/f13/secret)
 "be" = (/turf/open/floor/f13/wood,/area/f13/secret)
 "bf" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/secret)
 "bg" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/secret)

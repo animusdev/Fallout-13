@@ -1,35 +1,35 @@
 "aa" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "ab" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"ac" = (/obj/structure/closet/coffin,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"ad" = (/turf/closed/wall/f13/wood,/area/f13/hub)
-"ae" = (/obj/machinery/hydroponics/soil,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"af" = (/obj/structure/window/fulltile/wood,/turf/open/floor/f13/wood,/area/f13/hub)
-"ag" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/hub)
-"ah" = (/turf/open/floor/f13/wood,/area/f13/hub)
-"ai" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/hub)
-"aj" = (/obj/item/weapon/cultivator,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"ak" = (/obj/structure/bed/dogbed,/turf/open/floor/f13/wood,/area/f13/hub)
-"al" = (/obj/structure/closet/cabinet,/turf/open/floor/f13/wood,/area/f13/hub)
-"am" = (/obj/structure/bed,/obj/item/weapon/bedsheet/brown,/turf/open/floor/f13/wood,/area/f13/hub)
-"an" = (/turf/closed/wall/f13/wood,/area/f13/wasteland)
-"ao" = (/obj/structure/chair/wood,/turf/open/floor/f13/wood,/area/f13/hub)
-"ap" = (/turf/closed/wall/f13/wood,/area/f13/chapel)
-"aq" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
-"ar" = (/obj/structure/table/wood/settler,/turf/open/floor/f13/wood,/area/f13/hub)
-"as" = (/obj/structure/chair/wood{dir = 4},/turf/open/floor/f13/wood,/area/f13/hub)
-"at" = (/obj/structure/table/wood/settler,/obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans,/turf/open/floor/f13/wood,/area/f13/hub)
-"au" = (/obj/structure/closet/wardrobe/chaplain_black,/turf/open/floor/f13/wood,/area/f13/chapel)
-"av" = (/turf/open/floor/f13/wood,/area/f13/chapel)
-"aw" = (/obj/structure/table/wood,/obj/item/weapon/shovel,/turf/open/floor/f13/wood,/area/f13/chapel)
-"ax" = (/obj/structure/table/wood,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
-"ay" = (/obj/structure/chair/wood/worn{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
-"az" = (/obj/structure/closet,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aA" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aB" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
-"aC" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
-"aD" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/wasteland)
-"aE" = (/obj/structure/window/fulltile/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aF" = (/obj/effect/decal/sign{desc = "It's a portrait of a person you don't know anything about."; icon_state = "painting_president"; name = "portrait"},/turf/closed/wall/f13/wood,/area/f13/chapel)
+"ac" = (/obj/structure/fence/door,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"ad" = (/obj/structure/closet/coffin,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"ae" = (/turf/closed/wall/f13/wood,/area/f13/hub)
+"af" = (/obj/machinery/hydroponics/soil,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"ag" = (/obj/structure/window/fulltile/wood,/turf/open/floor/f13/wood,/area/f13/hub)
+"ah" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/hub)
+"ai" = (/turf/open/floor/f13/wood,/area/f13/hub)
+"aj" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/hub)
+"ak" = (/obj/item/weapon/cultivator,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"al" = (/obj/structure/bed/dogbed,/turf/open/floor/f13/wood,/area/f13/hub)
+"am" = (/obj/structure/closet/cabinet,/turf/open/floor/f13/wood,/area/f13/hub)
+"an" = (/obj/structure/bed,/obj/item/weapon/bedsheet/brown,/turf/open/floor/f13/wood,/area/f13/hub)
+"ao" = (/turf/closed/wall/f13/wood,/area/f13/wasteland)
+"ap" = (/obj/structure/chair/wood,/turf/open/floor/f13/wood,/area/f13/hub)
+"aq" = (/turf/closed/wall/f13/wood,/area/f13/chapel)
+"ar" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
+"as" = (/obj/structure/table/wood/settler,/turf/open/floor/f13/wood,/area/f13/hub)
+"at" = (/obj/structure/chair/wood{dir = 4},/turf/open/floor/f13/wood,/area/f13/hub)
+"au" = (/obj/structure/table/wood/settler,/obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans,/turf/open/floor/f13/wood,/area/f13/hub)
+"av" = (/obj/structure/closet/wardrobe/chaplain_black,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aw" = (/turf/open/floor/f13/wood,/area/f13/chapel)
+"ax" = (/obj/structure/table/wood,/obj/item/weapon/shovel,/turf/open/floor/f13/wood,/area/f13/chapel)
+"ay" = (/obj/structure/table/wood,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
+"az" = (/obj/structure/chair/wood/worn{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
+"aA" = (/obj/structure/closet,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aB" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aC" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
+"aD" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"aE" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/wasteland)
+"aF" = (/obj/structure/window/fulltile/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
 "aG" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
 "aH" = (/obj/structure/table/wood/fancy,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
 "aI" = (/obj/structure/bookcase,/turf/open/floor/f13/wood,/area/f13/chapel)
@@ -37,51 +37,52 @@
 "aK" = (/obj/structure/chair/wood/fancy,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
 "aL" = (/obj/machinery/light{dir = 1},/turf/open/floor/holofloor/carpet,/area/f13/chapel)
 "aM" = (/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"aN" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/chapel)
-"aO" = (/obj/structure/table/wood,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aP" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"aQ" = (/turf/open/indestructible/ground/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
-"aR" = (/obj/structure/table/wood/fancy,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"aS" = (/obj/structure/table/wood/fancy,/obj/item/weapon/storage/book/bible,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"aT" = (/obj/structure/table/wood/bar,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
-"aU" = (/obj/structure/chair/bench,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aV" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"aW" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aX" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/turf/open/floor/f13/wood,/area/f13/chapel)
-"aY" = (/turf/open/indestructible/ground/sidewalk{dir = 2; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"aZ" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"ba" = (/turf/open/indestructible/ground/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/wasteland)
-"bb" = (/turf/open/indestructible/ground/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/wasteland)
+"aN" = (/obj/structure/decoration/sign{desc = "It's a portrait of a person you don't know anything about."; icon_state = "painting_president"; name = "portrait"; pixel_y = 32},/turf/open/floor/carpet,/area/f13/chapel)
+"aO" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/chapel)
+"aP" = (/obj/structure/table/wood,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aQ" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"aR" = (/turf/open/indestructible/ground/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
+"aS" = (/obj/structure/table/wood/fancy,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
+"aT" = (/obj/structure/table/wood/fancy,/obj/item/weapon/storage/book/bible,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
+"aU" = (/obj/structure/table/wood/bar,/turf/open/floor/holofloor/carpet,/area/f13/chapel)
+"aV" = (/obj/structure/chair/bench,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aW" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"aX" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aY" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/turf/open/floor/f13/wood,/area/f13/chapel)
+"aZ" = (/turf/open/indestructible/ground/sidewalk{dir = 2; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"ba" = (/turf/open/indestructible/ground/sidewalk{dir = 8; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"bb" = (/turf/open/indestructible/ground/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/wasteland)
+"bc" = (/turf/open/indestructible/ground/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/wasteland)
 
 (1,1,1) = {"
-aaaaabababababababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababababababacabababababababaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaabaaaaaaaaaaaaacacaaaaaaaaaaabababababadadadadadadadaaaa
-aaaaabaaaaaaaaaaaaaaacacaaaaaaaaabaaaeaeaaafagahaiahagafaaaa
-aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaabajaeaeaaadakahadalamadaaaa
-aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiahahadadadadaaaa
-aaaaabaaaaaaaaanaaaaaaanaaaaaaaaabaaaeaeaaadahahagahaoadaaaa
-aaaaabaaaaaaapapaqapapapapaaaaaaabaaaeaeaaadarahahasatadaaaa
-aaaaabaaaaanapauavavawaxapanaaaaabababababadahahahahahadaaaa
-aaaaabaaaaaaapavavavavayapaaaaaaabaaaaaaaaadafadaiadafadaaaa
-aaaaabaaaaaaapazavaAavavapaaaaaaabaaaaaaaaaaaaaBaCaDaaaaaaaa
-aaaaapapaEapapapapapaqaFapapaEapapaaaaaaaaaaaaaBaCaDaaaaaaaa
-aaapapaGavaHaIaJaKaLaMaMaIaHavaNapapaaaaaaaaaaaBaCaDaaaaaaaa
-aaapaOavavavaMaMaMaMaMaMaMavavavaOapaaaaaaaaaaaPaQaDaaaaaaaa
-aaapaOavavavaMaRaSaRaMaTaMavavavaOapaaaaaaaaaaaaaBaDaaaaaaaa
-aaapapaUaAavavaMaMaMaMaMavavaAaUapapaaaaaaaaaaaaaPaVaaaaaaaa
-aaaaapapapaWavaUaUaMaUaUavaXapapapaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaapapavavavaMavavavapapaaaaaaaaaaaaaaaaaaaYaZaaaaaaaa
-aaaaaaaaaaapavaUaUaMaUaUavapaaaaaaaaaaaaaaaaaaaYbaaDaaaaaaaa
-aaaaaaaaaaaEavavavaMavavavaEaaaaaaaaaaaaaaaaaaaBaCaDaaaaaaaa
-aaaaaaaaaaapaGaUaUaMaUaUaNapaaaaaaaaaaaaaaaaaaaBbbaVaaaaaaaa
-aaaaaaaaaaaEavavavaMavavavaEaaaaaaaaaaaaaaaaaaaBaDaaaaaaaaaa
-aaaaaaaaaaapavaUaUaMaUaUavapaaaaaaaaaaaaaaaaaaaPaVaaaaaaaaaa
-aaaaaaaaanapavaAavavavaAavapanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaapapapapaqapapapapaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaanaaaBaCaDaaanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaBaCaDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaYadadadaa
-aaaaaaaaaaaaaaaaaBbbaVaaaaaaaaaaaaaaaaaaaaaaaaaaaaaBaiahadaa
-aaaaaaaaaaaaaaaaaPaVaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaPadadadaa
+aaaaabaaaaaaaaaaaaadadaaaaaaaaaaabababababaeaeaeaeaeaeaeaaaa
+aaaaabaaaaaaaaaaaaaaadadaaaaaaaaabaaafafaaagahaiajaiahagaaaa
+aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaabakafafaaaealaiaeamanaeaaaa
+aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaajaiaiaeaeaeaeaaaa
+aaaaabaaaaaaaaaoaaaaaaaoaaaaaaaaabaaafafaaaeaiaiahaiapaeaaaa
+aaaaabaaaaaaaqaqaraqaqaqaqaaaaaaabaaafafaaaeasaiaiatauaeaaaa
+aaaaabaaaaaoaqavawawaxayaqaoaaaaabababababaeaiaiaiaiaiaeaaaa
+aaaaabaaaaaaaqawawawawazaqaaaaaaabaaaaaaaaaeagaeajaeagaeaaaa
+aaaaabaaaaaaaqaAawaBawawaqaaaaaaabaaaaaaaaaaaaaCaDaEaaaaaaaa
+aaaaaqaqaFaqaqaqaqaqaraqaqaqaFaqaqaaaaaaaaaaaaaCaDaEaaaaaaaa
+aaaqaqaGawaHaIaJaKaLaMaNaIaHawaOaqaqaaaaaaaaaaaCaDaEaaaaaaaa
+aaaqaPawawawaMaMaMaMaMaMaMawawawaPaqaaaaaaaaaaaQaRaEaaaaaaaa
+aaaqaPawawawaMaSaTaSaMaUaMawawawaPaqaaaaaaaaaaaaaCaEaaaaaaaa
+aaaqaqaVaBawawaMaMaMaMaMawawaBaVaqaqaaaaaaaaaaaaaQaWaaaaaaaa
+aaaaaqaqaqaXawaVaVaMaVaVawaYaqaqaqaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaqaqawawawaMawawawaqaqaaaaaaaaaaaaaaaaaaaZbaaaaaaaaa
+aaaaaaaaaaaqawaVaVaMaVaVawaqaaaaaaaaaaaaaaaaaaaZbbaEaaaaaaaa
+aaaaaaaaaaaFawawawaMawawawaFaaaaaaaaaaaaaaaaaaaCaDaEaaaaaaaa
+aaaaaaaaaaaqaGaVaVaMaVaVaOaqaaaaaaaaaaaaaaaaaaaCbcaWaaaaaaaa
+aaaaaaaaaaaFawawawaMawawawaFaaaaaaaaaaaaaaaaaaaCaEaaaaaaaaaa
+aaaaaaaaaaaqawaVaVaMaVaVawaqaaaaaaaaaaaaaaaaaaaQaWaaaaaaaaaa
+aaaaaaaaaoaqawaBawawawaBawaqaoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaqaqaqaqaraqaqaqaqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaoaaaCaDaEaaaoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaCaDaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaeaeaeaa
+aaaaaaaaaaaaaaaaaCbcaWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCajaiaeaa
+aaaaaaaaaaaaaaaaaQaWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaQaeaeaeaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}

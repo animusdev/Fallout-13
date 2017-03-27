@@ -3297,12 +3297,12 @@
 /area/awaymission/centcomAway/general)
 "kn" = (
 /obj/structure/table,
-/obj/item/device/flashlight/torch/flarered,
+/obj/item/device/flashlight/torch/flare,
 /turf/open/floor/plasteel/black,
 /area/awaymission/centcomAway/hangar)
 "ko" = (
 /obj/structure/table,
-/obj/item/device/flashlight/torch/flarered,
+/obj/item/device/flashlight/torch/flare,
 /turf/open/floor/plating,
 /area/awaymission/centcomAway/hangar)
 "kp" = (
