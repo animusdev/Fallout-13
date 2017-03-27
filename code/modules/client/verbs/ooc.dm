@@ -71,6 +71,104 @@
 			else if(!(key in C.prefs.ignoring))
 				to_chat(C, "<font color='[normal_ooc_colour]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[keyname]:</EM> <span class='message'>[msg]</span></span></font>")
 
+/client/verb/looc(msg as text)
+	set name = "LOOC"
+	set desc = "Local OOC, seen only by those in view."
+	set category = "OOC"
+
+	if(say_disabled)	//This is here to try to identify lag problems
+		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+		return
+
+	if(!mob)	
+		return
+	
+	if(IsGuestKey(key))
+		to_chat(src, "Guests may not use OOC.")
+		return
+
+	msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	if(!msg)	return
+
+	if(!holder)
+		if(mob.stat == DEAD)
+			to_chat(src, "<span class='danger'>You are not alive enough to use LOOC.</span>")
+			return
+		if(prefs.muted & MUTE_OOC)
+			to_chat(src, "<span class='danger'>You cannot use OOC (muted).</span>")
+			return
+		if(jobban_isbanned(src, "OOC"))
+			to_chat(src, "<span class='danger'>You have been banned from OOC.</span>")
+			return
+		if(handle_spam_prevention(msg,MUTE_OOC))
+			return
+		if(findtext(msg, "byond://"))
+			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
+			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
+			return
+
+	log_ooc("(LOCAL) [mob.name]/[key] : [msg]")
+
+	var/mob/source = mob.get_looc_source()
+
+	var/display_name = key
+	if(holder && holder.fakekey)
+		display_name = holder.fakekey
+	if(mob.stat != DEAD)
+		display_name = mob.name
+
+	var/turf/T = get_turf(source)
+	var/list/listening = list()
+	listening |= src	// We can always hear ourselves.
+	var/list/listening_obj = list()
+	var/list/eye_heard = list()
+
+		// This is essentially a copy/paste from living/say() the purpose is to get mobs inside of objects without recursing through
+		// the contents of every mob and object in get_mobs_or_objects_in_view() looking for PAI's inside of the contents of a bag inside the
+		// contents of a mob inside the contents of a welded shut locker we essentially get a list of turfs and see if the mob is on one of them.
+
+	if(T)
+		var/list/hear = get_hearers_in_view(7,T)
+		var/list/hearturfs = list()
+
+		for(var/I in hear)
+			if(ismob(I))
+				var/mob/M = I
+				listening |= M.client
+				hearturfs += M.locs[1]
+			else if(isobj(I))
+				var/obj/O = I
+				hearturfs |= O.locs[1]
+				listening_obj |= O
+
+		for(var/mob/M in player_list)
+			if(isAI(M))
+				var/mob/living/silicon/ai/A = M
+				if(A.eyeobj && (A.eyeobj.locs[1] in hearturfs))
+					eye_heard |= M.client
+					listening |= M.client
+					continue
+
+			if(M.loc && M.locs[1] in hearturfs)
+				listening |= M.client
+
+
+	for(var/client/C in listening)
+		if(C.prefs.toggles & CHAT_OOC)
+			display_name = src.key
+			if(holder)
+				if(holder.fakekey)
+					if(C.holder)
+						display_name = "[holder.fakekey]/([src.key])"
+					else
+						display_name = holder.fakekey
+			to_chat(C, "<font color='[normal_ooc_colour]'><span class='ooc'><span class='prefix'>LOOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
+
+/mob/proc/get_looc_source()
+	return src
+
+
 /proc/toggle_ooc(toggle = null)
 	if(toggle != null) //if we're specifically en/disabling ooc
 		if(toggle != ooc_allowed)
