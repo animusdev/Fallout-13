@@ -37,10 +37,10 @@
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Feral Ghoul"
-	desc = "Have you ever seen a hungry ghoul before?<br>It's just like other feral ghouls, yet it's more aggressive and confident about the fact you are the best food around."
-	icon_state = "retro_ghoul"
-	icon_living = "retro_ghoul"
-	icon_dead = "retro_ghoul_d"
+	desc = "Have you ever seen a hungry ghoul before?<br>It's just like other feral ghouls, yet it's more aggressive and confident about the fact you are the best food around.<br>It is missing a left arm."
+	icon_state = "angry_ghoul"
+	icon_living = "angry_ghoul"
+	icon_dead = "angry_ghoul_d"
 	icon_gib = "gib"
 	maxHealth = 75
 	health = 75

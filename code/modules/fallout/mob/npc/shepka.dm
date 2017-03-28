@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/shepka
-	name = "Anus overlord"
+	name = "Shepard"
 	desc = "Horrible creature that arrived from the system of Tau Ceti."
 	icon_state = "shepherd"
 	icon_living = "shepherd"
@@ -21,7 +21,7 @@
 	melee_damage_upper = 50
 	aggro_vision_range = 20 //I SEE EVERYTHING
 	idle_vision_range = 10
-	attacktext = "suck soul"
+	attacktext = "sucks soul"
 	move_to_delay = 1
 
 /mob/living/simple_animal/hostile/shepka/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)

@@ -1,10 +1,10 @@
 /mob/living/simple_animal/hostile/commanded/dog
 	name = "dog"
-	desc = "A large brown bear, grown by admins for admins."
+	desc = "A large brown dog, grown by admins for admins."
 
-	icon_state = "husky"
-	icon_living = "husky"
-	icon_dead = "husky_dead"
+	icon_state = "dog"
+	icon_living = "dog"
+	icon_dead = "dog_dead"
 
 	health = 150
 	maxHealth = 150
