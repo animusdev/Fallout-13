@@ -25,106 +25,106 @@
 "ay" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/secret)
 "az" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/secret)
 "aA" = (/turf/open/floor/f13,/area/f13/secret)
-"aB" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowbrokenvertical"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
-"aC" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"aD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/oil,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"aE" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowvertical"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
-"aF" = (/obj/structure/tires/five,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"aG" = (/obj/effect/decal/goo,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"aH" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/secret)
-"aI" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/secret)
-"aJ" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/secret)
-"aK" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/village)
-"aL" = (/obj/vehicle/fuel/motorcycle/flamy,/turf/open/indestructible/ground/desert,/area/f13/ruins)
-"aM" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/aggressive,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"aN" = (/obj/structure/simple_door/dirtyglass,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"aO" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"aP" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/building)
-"aQ" = (/obj/structure/barrel/dangerous,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"aR" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
-"aS" = (/obj/structure/simple_door/brokenglass,/obj/structure/decoration/rag,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"aT" = (/turf/open/indestructible/ground/dirt{dir = 9; icon_state = "dirt"},/area/f13/wasteland)
-"aU" = (/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirt"},/area/f13/wasteland)
-"aV" = (/turf/open/indestructible/ground/dirt{dir = 5; icon_state = "dirt"},/area/f13/wasteland)
-"aW" = (/obj/structure/closet/coffin,/turf/open/indestructible/ground/desert,/area/f13/village)
-"aX" = (/obj/structure/toilet,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
-"aY" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
-"aZ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb/cobweb2,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
-"ba" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/building)
-"bb" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bc" = (/obj/machinery/light/street{dir = 1; pixel_x = -32},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"bd" = (/obj/machinery/light/street,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"be" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/remains/human,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bf" = (/obj/effect/decal/cleanable/dirt,/obj/item/weapon/reagent_containers/food/snacks/grown/harebell,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bg" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
-"bh" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
-"bi" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/oil,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bj" = (/turf/open/indestructible/ground/dirt{dir = 10; icon_state = "dirt"},/area/f13/wasteland)
-"bk" = (/obj/structure/tires/two,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"bl" = (/obj/structure/tires,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"bm" = (/turf/closed/wall/f13/store,/area/f13/chapel)
-"bn" = (/obj/structure/simple_door/interior,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bo" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/chapel)
-"bp" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
-"bq" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/chapel)
-"br" = (/turf/open/floor/f13,/area/f13/chapel)
-"bs" = (/obj/effect/decal/cleanable/cobweb,/obj/effect/decal/cleanable/ash,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bt" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bu" = (/obj/effect/decal/cleanable/dirt,/obj/structure/bookcase,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bv" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb/cobweb2,/obj/structure/chair/comfy{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bw" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/chapel)
-"bx" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
-"by" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/chapel)
-"bz" = (/turf/closed/wall/f13/wood,/area/f13/village)
-"bA" = (/obj/effect/decal/cleanable/dirt,/obj/structure/displaycase,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aB" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/village)
+"aC" = (/obj/structure/fence/door,/turf/open/indestructible/ground/desert,/area/f13/village)
+"aD" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowbrokenvertical"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
+"aE" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aF" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/oil,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aG" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowvertical"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
+"aH" = (/obj/structure/tires/five,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"aI" = (/obj/effect/decal/goo,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"aJ" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/secret)
+"aK" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/secret)
+"aL" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/secret)
+"aM" = (/obj/vehicle/fuel/motorcycle/flamy,/turf/open/indestructible/ground/desert,/area/f13/ruins)
+"aN" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/aggressive,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aO" = (/obj/structure/simple_door/dirtyglass,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aP" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aQ" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/building)
+"aR" = (/obj/structure/barrel/dangerous,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"aS" = (/obj/structure/closet/coffin,/turf/open/indestructible/ground/desert,/area/f13/village)
+"aT" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
+"aU" = (/obj/structure/simple_door/brokenglass,/obj/structure/decoration/rag,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"aV" = (/turf/open/indestructible/ground/dirt{dir = 9; icon_state = "dirt"},/area/f13/wasteland)
+"aW" = (/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirt"},/area/f13/wasteland)
+"aX" = (/turf/open/indestructible/ground/dirt{dir = 5; icon_state = "dirt"},/area/f13/wasteland)
+"aY" = (/obj/structure/toilet,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
+"aZ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
+"ba" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb/cobweb2,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
+"bb" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/building)
+"bc" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bd" = (/obj/machinery/light/street{dir = 1; pixel_x = -32},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"be" = (/obj/machinery/light/street,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"bf" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/remains/human,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bg" = (/obj/effect/decal/cleanable/dirt,/obj/item/weapon/reagent_containers/food/snacks/grown/harebell,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bh" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
+"bi" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/building)
+"bj" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/oil,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bk" = (/turf/open/indestructible/ground/dirt{dir = 10; icon_state = "dirt"},/area/f13/wasteland)
+"bl" = (/obj/structure/tires/two,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"bm" = (/obj/structure/tires,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"bn" = (/turf/closed/wall/f13/store,/area/f13/chapel)
+"bo" = (/obj/structure/simple_door/interior,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bp" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/chapel)
+"bq" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
+"br" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/chapel)
+"bs" = (/turf/open/floor/f13,/area/f13/chapel)
+"bt" = (/turf/closed/wall/f13/wood,/area/f13/village)
+"bu" = (/obj/effect/decal/cleanable/cobweb,/obj/effect/decal/cleanable/ash,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bv" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bw" = (/obj/effect/decal/cleanable/dirt,/obj/structure/bookcase,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bx" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb/cobweb2,/obj/structure/chair/comfy{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"by" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/chapel)
+"bz" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
+"bA" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/chapel)
 "bB" = (/turf/closed/wall/f13/wood,/area/f13/chapel)
 "bC" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bD" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bE" = (/obj/effect/decal/cleanable/dirt,/obj/structure/chair/comfy{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bF" = (/turf/open/indestructible/ground/dirt{dir = 4; icon_state = "dirtcorner"},/area/f13/wasteland)
-"bG" = (/obj/structure/closet/wardrobe/chaplain_black,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bH" = (/turf/open/floor/f13/wood,/area/f13/chapel)
-"bI" = (/obj/structure/table/wood,/obj/item/weapon/shovel,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bJ" = (/obj/structure/table/wood,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bK" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowbroken"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
-"bL" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowdestroyed"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
-"bM" = (/turf/open/indestructible/ground/dirt{dir = 6; icon_state = "dirt"},/area/f13/wasteland)
-"bN" = (/obj/structure/barrel,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"bO" = (/obj/structure/chair/wood/worn{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
-"bP" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bQ" = (/obj/effect/decal/cleanable/dirt,/obj/structure/urinal{pixel_y = 32},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"bR" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb/cobweb2,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"bS" = (/obj/structure/closet,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/obj/item/clothing/under/burial,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bT" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bU" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"bV" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/aggressive,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"bW" = (/obj/structure/toilet{dir = 8},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"bX" = (/obj/structure/window/fulltile/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
-"bY" = (/obj/structure/decoration/sign{desc = "It's a portrait of a person you don't know anything about."; icon_state = "painting_president"; name = "portrait"},/turf/closed/wall/f13/wood,/area/f13/chapel)
-"bZ" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"ca" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sink{dir = 4; pixel_x = 14},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
-"cb" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
-"cc" = (/obj/structure/table/wood/fancy,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
-"cd" = (/obj/structure/bookcase,/turf/open/floor/carpet,/area/f13/chapel)
-"ce" = (/obj/structure/chair/wood/modern,/turf/open/floor/carpet,/area/f13/chapel)
-"cf" = (/obj/structure/chair/wood/fancy,/turf/open/floor/carpet,/area/f13/chapel)
-"cg" = (/obj/machinery/light{dir = 1},/turf/open/floor/carpet,/area/f13/chapel)
-"ch" = (/turf/open/floor/carpet,/area/f13/chapel)
-"ci" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/chapel)
-"cj" = (/obj/structure/flora/tree/tall,/turf/open/indestructible/ground/desert,/area/f13/ruins)
-"ck" = (/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirtcorner"},/area/f13/wasteland)
-"cl" = (/obj/structure/table/wood,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
-"cm" = (/obj/structure/campfire,/turf/open/indestructible/ground/desert,/area/f13/ruins)
-"cn" = (/obj/structure/barrel/two,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"co" = (/obj/structure/table/wood/fancy,/turf/open/floor/carpet,/area/f13/chapel)
-"cp" = (/obj/structure/table/wood/fancy,/obj/item/weapon/storage/book/bible,/turf/open/floor/carpet,/area/f13/chapel)
-"cq" = (/obj/structure/table/wood/bar,/turf/open/floor/carpet,/area/f13/chapel)
-"cr" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/ruins)
-"cs" = (/obj/structure/barrel/old,/turf/open/indestructible/ground/desert,/area/f13/forest)
-"ct" = (/obj/structure/chair/bench,/turf/open/floor/f13/wood,/area/f13/chapel)
-"cu" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/ruins)
-"cv" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
-"cw" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/turf/open/floor/f13/wood,/area/f13/chapel)
+"bD" = (/obj/effect/decal/cleanable/dirt,/obj/structure/displaycase,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bE" = (/obj/structure/closet/cabinet,/turf/open/floor/f13/wood,/area/f13/chapel)
+"bF" = (/turf/open/floor/f13/wood,/area/f13/chapel)
+"bG" = (/obj/structure/table/wood,/obj/item/weapon/shovel,/turf/open/floor/f13/wood,/area/f13/chapel)
+"bH" = (/obj/structure/table/wood,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
+"bI" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bJ" = (/obj/effect/decal/cleanable/dirt,/obj/structure/chair/comfy{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bK" = (/turf/open/indestructible/ground/dirt{dir = 4; icon_state = "dirtcorner"},/area/f13/wasteland)
+"bL" = (/obj/structure/chair/wood/worn{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
+"bM" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowbroken"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
+"bN" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowdestroyed"},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
+"bO" = (/turf/open/indestructible/ground/dirt{dir = 6; icon_state = "dirt"},/area/f13/wasteland)
+"bP" = (/obj/structure/barrel,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"bQ" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/chapel)
+"bR" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bS" = (/obj/effect/decal/cleanable/dirt,/obj/structure/urinal{pixel_y = 32},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"bT" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb/cobweb2,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"bU" = (/obj/structure/window/fulltile/wood,/turf/open/floor/f13/wood,/area/f13/chapel)
+"bV" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"bW" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/aggressive,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"bX" = (/obj/structure/toilet{dir = 8},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"bY" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13/wood,/area/f13/chapel)
+"bZ" = (/obj/structure/table/wood/fancy,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
+"ca" = (/obj/structure/bookcase,/turf/open/floor/f13/wood,/area/f13/chapel)
+"cb" = (/obj/structure/chair/wood/modern,/turf/open/floor/carpet,/area/f13/chapel)
+"cc" = (/obj/structure/chair/wood/fancy,/turf/open/floor/carpet,/area/f13/chapel)
+"cd" = (/obj/machinery/light{dir = 1},/turf/open/floor/carpet,/area/f13/chapel)
+"ce" = (/turf/open/floor/carpet,/area/f13/chapel)
+"cf" = (/obj/structure/decoration/sign{desc = "It's a portrait of a person you don't know anything about."; icon_state = "painting_president"; name = "portrait"; pixel_y = 32},/turf/open/floor/carpet,/area/f13/chapel)
+"cg" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/chapel)
+"ch" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"ci" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sink{dir = 4; pixel_x = 14},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/building)
+"cj" = (/obj/structure/table/wood,/obj/item/candle,/turf/open/floor/f13/wood,/area/f13/chapel)
+"ck" = (/obj/structure/flora/tree/tall,/turf/open/indestructible/ground/desert,/area/f13/ruins)
+"cl" = (/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirtcorner"},/area/f13/wasteland)
+"cm" = (/obj/structure/table/wood/fancy,/turf/open/floor/carpet,/area/f13/chapel)
+"cn" = (/obj/structure/table/wood/fancy,/obj/item/weapon/storage/book/bible,/turf/open/floor/carpet,/area/f13/chapel)
+"co" = (/obj/structure/table/wood/bar,/turf/open/floor/carpet,/area/f13/chapel)
+"cp" = (/obj/structure/campfire,/turf/open/indestructible/ground/desert,/area/f13/ruins)
+"cq" = (/obj/structure/barrel/two,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"cr" = (/obj/structure/chair/bench,/turf/open/floor/f13/wood,/area/f13/chapel)
+"cs" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/ruins)
+"ct" = (/obj/structure/barrel/old,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"cu" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/obj/item/weapon/storage/box/matches,/turf/open/floor/f13/wood,/area/f13/chapel)
+"cv" = (/obj/structure/table/wood,/obj/item/weapon/storage/fancy/candle_box,/turf/open/floor/f13/wood,/area/f13/chapel)
+"cw" = (/obj/structure/fence,/turf/open/indestructible/ground/desert,/area/f13/ruins)
 "cx" = (/obj/structure/fence/door,/turf/open/indestructible/ground/desert,/area/f13/ruins)
 "cy" = (/obj/structure/simple_door/metal/store,/obj/structure/decoration/rag,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/building)
 "cz" = (/obj/effect/decal/cleanable/dirt,/turf/closed/wall/f13/ruins,/area/f13/building)
@@ -199,7 +199,7 @@
 "dQ" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/rifle/scope,/obj/item/ammo_box/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dR" = (/obj/structure/rack,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/obj/item/weapon/suppressor,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dS" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
-"dT" = (/turf/closed/wall/f13/wood,/area/f13/building)
+"dT" = (/turf/closed/wall/f13/wood,/area/f13/shack)
 "dU" = (/obj/structure/rack,/obj/item/weapon/twohanded/superhammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dV" = (/obj/structure/rack,/obj/item/weapon/mounted_chainsaw,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dW" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/turbo,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
@@ -207,8 +207,8 @@
 "dY" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/assault_rifle,/obj/item/ammo_box/magazine/m556,/obj/item/ammo_box/magazine/m556,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dZ" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/shotgun/rifle,/obj/item/ammo_box/m308,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "ea" = (/obj/structure/rack,/obj/item/weapon/powergauntlet,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
-"eb" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/building)
-"ec" = (/turf/open/floor/f13/wood,/area/f13/building)
+"eb" = (/obj/structure/simple_door/wood,/turf/open/floor/f13/wood,/area/f13/shack)
+"ec" = (/turf/open/floor/f13/wood,/area/f13/shack)
 "ed" = (/obj/structure/rack,/obj/item/weapon/twohanded/sledgehammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "ee" = (/obj/structure/rack,/obj/item/weapon/machete,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "ef" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
@@ -327,197 +327,225 @@
 "go" = (/obj/machinery/light/small/red,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
 "gp" = (/obj/effect/decal/cleanable/shreds,/turf/open/indestructible/ground/mountain,/area/f13/caves)
 "gq" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/hub)
-"gr" = (/obj/structure/simple_door/blast,/turf/open/indestructible/ground/tunnel,/area/f13/sewer)
-"gs" = (/obj/structure/table,/obj/item/weapon/screwdriver,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
-"gt" = (/obj/structure/table,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"gu" = (/obj/structure/table,/obj/item/weapon/wrench,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"gv" = (/obj/item/weapon/gun/ballistic/automatic/pistol/n99,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gw" = (/obj/item/clothing/head/helmet/f13/supaflyhelmet,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gx" = (/turf/closed/wall/f13/store,/area/f13/sewer)
-"gy" = (/obj/item/ammo_box/magazine/m10mm_adv,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gz" = (/obj/effect/decal/cleanable/vomit/old,/obj/item/weapon/reagent_containers/pill/patch/radx,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gA" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/sewer)
-"gB" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/sewer)
-"gC" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/sewer)
-"gD" = (/turf/open/floor/f13,/area/f13/sewer)
-"gE" = (/turf/open/floor/f13{dir = 8; icon_state = "warndarkcorners"},/area/f13/tunnel)
-"gF" = (/obj/item/clothing/suit/armor/f13/supafly,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gG" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/sewer)
-"gH" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/sewer)
-"gI" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/sewer)
-"gJ" = (/obj/item/weapon/paper/crumpled/bloody{info = "Reminder: The treasure is hidden in a Cave of Doom, 20 miles to the north away from New Reno. Ask locals about 'that one famous cave' no one has come back from. The treasure is totally worth the risk. And remember - you have paid 100 caps for the info, go and get thousand times more you gave away!"},/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gK" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"gL" = (/mob/living/simple_animal/hostile/protectron,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"gM" = (/turf/open/floor/f13{dir = 10; icon_state = "warndark"},/area/f13/tunnel)
-"gN" = (/turf/open/floor/f13{dir = 1; icon_state = "warndarkcorners"},/area/f13/tunnel)
-"gO" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
-"gP" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"gQ" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"gR" = (/obj/structure/rack,/obj/item/weapon/screwdriver/power,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"gS" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"gT" = (/turf/closed/wall/f13/store,/area/f13/tunnel)
-"gU" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/sewer)
-"gV" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/sewer)
-"gW" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 5; icon_state = "warndark"},/area/f13/sewer)
-"gX" = (/obj/machinery/light/small/red{dir = 8},/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
-"gY" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/tunnel)
-"gZ" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/tunnel)
-"ha" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/tunnel)
-"hb" = (/turf/open/floor/f13,/area/f13/tunnel)
-"hc" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/sewer)
-"hd" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/sewer)
-"he" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/sewer)
-"hf" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"hg" = (/mob/living/simple_animal/hostile/molerat,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hh" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/tunnel)
-"hi" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/tunnel)
-"hj" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/tunnel)
-"hk" = (/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/sewer)
-"hl" = (/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/sewer)
-"hm" = (/obj/machinery/light/small/red{dir = 4},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"hn" = (/turf/open/floor/f13{dir = 10; icon_state = "warndark"},/area/f13/sewer)
-"ho" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "warndark"},/area/f13/sewer)
-"hp" = (/turf/open/floor/f13{dir = 6; icon_state = "warndark"},/area/f13/sewer)
-"hq" = (/obj/structure/closet/toolcloset,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/tunnel)
-"hr" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/tunnel)
-"hs" = (/obj/effect/decal/remains/human,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"ht" = (/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hu" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/sewer)
-"hv" = (/obj/structure/table,/obj/item/weapon/weldingtool,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
-"hw" = (/obj/item/clothing/under/f13/settler,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hx" = (/obj/item/weapon/storage/backpack/explorer,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hy" = (/obj/structure/table,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
-"hz" = (/obj/item/clothing/head/f13/stormchaser,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hA" = (/turf/closed/wall/f13/store,/area/f13/subway)
-"hB" = (/obj/item/weapon/storage/toolbox/mechanical,/turf/open/floor/f13{dir = 6; icon_state = "warndark"},/area/f13/tunnel)
-"hC" = (/obj/item/weapon/storage/box/snappops,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hD" = (/obj/effect/gibspawner/human,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hE" = (/obj/item/clothing/under/f13/trader,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hF" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/subway)
-"hG" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/subway)
-"hH" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/subway)
-"hI" = (/turf/open/floor/f13,/area/f13/subway)
-"hJ" = (/obj/item/weapon/holodisk/bigiron,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hK" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/subway)
-"hL" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/subway)
-"hM" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/subway)
-"hN" = (/obj/structure/table_frame,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
-"hO" = (/turf/open/floor/f13{dir = 4; icon_state = "warndarkcorners"},/area/f13/tunnel)
-"hP" = (/obj/item/weapon/reagent_containers/food/drinks/flask/vault113,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hQ" = (/mob/living/simple_animal/hostile/ghoul/aggressive,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"hR" = (/mob/living/simple_animal/hostile/rad_scorpion,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"hS" = (/obj/item/weapon/storage/fancy/krotchy_box,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hT" = (/obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"hU" = (/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"hV" = (/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"hW" = (/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"hX" = (/obj/structure/decoration/vent/rusty{icon_state = "ventrustyalt"; pixel_x = -32; pixel_y = -1},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelwastelandfullvar"},/area/f13/sewer)
-"hY" = (/turf/open/floor/f13{icon_state = "warndarkcorners"},/area/f13/tunnel)
-"hZ" = (/mob/living/simple_animal/hostile/commanded/smeagol,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"ia" = (/obj/item/weapon/wrench/brass,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"ib" = (/obj/machinery/light/small/red{dir = 8},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
-"ic" = (/obj/structure/table,/obj/item/weapon/storage/firstaid,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"id" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"ie" = (/obj/structure/closet/crate/engineering/electrical,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"if" = (/turf/closed/indestructible/f13/matrix,/area/start)
-"ig" = (/obj/machinery/light/small/red{dir = 4},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"ih" = (/obj/structure/table,/obj/item/weapon/krotchy,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"ii" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"ij" = (/turf/closed/indestructible/f13/obsidian,/area/start)
-"ik" = (/obj/structure/closet/crate/bin,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"il" = (/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/tunnel)
-"im" = (/obj/structure/closet/crate,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"in" = (/obj/structure/closet/toolcloset,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"io" = (/obj/structure/closet/firecloset,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"ip" = (/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/sewer)
-"iq" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"ir" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
-"is" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/sewer)
-"it" = (/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/sewer)
-"iu" = (/obj/structure/closet/crate/trashcart,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"iv" = (/obj/machinery/light/small/red,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
-"iw" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"ix" = (/obj/structure/decoration/vent{icon_state = "ventorange"; pixel_y = 32},/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"iy" = (/obj/item/weapon/crowbar/red,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"iz" = (/obj/effect/landmark/start,/turf/open/floor/f13{icon_state = "greensolid"},/area/start)
-"iA" = (/turf/closed/indestructible/f13/subway,/area/f13/subway)
-"iB" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopleft"},/area/f13/subway)
-"iC" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopmiddle"},/area/f13/subway)
-"iD" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytunnelleft"},/area/f13/subway)
-"iE" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytunnelsupport"},/area/f13/subway)
-"iF" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytunnelright"},/area/f13/subway)
-"iG" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopright"},/area/f13/subway)
-"iH" = (/turf/closed/wall/f13/tunnel,/area/f13/subway)
-"iI" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/subway)
-"iJ" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopvent"},/area/f13/subway)
-"iK" = (/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/subway)
-"iL" = (/mob/living/simple_animal/hostile/cazador,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"iM" = (/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
-"iN" = (/obj/machinery/light/small/red{dir = 4},/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
-"iO" = (/obj/structure/handrail/yellow,/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/subway)
-"iP" = (/turf/open/floor/f13{icon_state = "rampuptop"},/area/f13/subway)
-"iQ" = (/obj/machinery/light/small/red{dir = 8},/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
-"iR" = (/obj/item/weapon/storage/toolbox/mechanical,/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
-"iS" = (/turf/open/indestructible/ground/subway,/area/f13/subway)
-"iT" = (/obj/effect/decal/remains/human,/turf/open/indestructible/ground/subway,/area/f13/subway)
-"iU" = (/mob/living/simple_animal/hostile/deathclaw,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
-"iV" = (/turf/open/indestructible/ground/subway{icon_state = "railsmiddle"},/area/f13/subway)
-"iW" = (/turf/open/indestructible/ground/subway{icon_state = "railsright"},/area/f13/subway)
-"iX" = (/turf/open/indestructible/ground/subway{icon_state = "railspair"},/area/f13/subway)
-"iY" = (/turf/open/indestructible/ground/subway{icon_state = "railssingle"},/area/f13/subway)
-"iZ" = (/turf/open/indestructible/ground/subway{icon_state = "railsleft"},/area/f13/subway)
-"ja" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottom"},/area/f13/subway)
-"jb" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottomleft"},/area/f13/subway)
-"jc" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottommiddle"},/area/f13/subway)
-"jd" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottomright"},/area/f13/subway)
-"je" = (/turf/closed/indestructible/f13/splashscreen,/area/start)
+"gr" = (/obj/structure/tires/half,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"gs" = (/obj/structure/simple_door/blast,/turf/open/indestructible/ground/tunnel,/area/f13/sewer)
+"gt" = (/obj/structure/table,/obj/item/weapon/screwdriver,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
+"gu" = (/obj/structure/table,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"gv" = (/obj/structure/table,/obj/item/weapon/wrench,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"gw" = (/obj/item/weapon/gun/ballistic/automatic/pistol/n99,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gx" = (/obj/item/clothing/head/helmet/f13/supaflyhelmet,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gy" = (/turf/closed/wall/f13/store,/area/f13/sewer)
+"gz" = (/obj/item/ammo_box/magazine/m10mm_adv,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gA" = (/obj/effect/decal/cleanable/vomit/old,/obj/item/weapon/reagent_containers/pill/patch/radx,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gB" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/sewer)
+"gC" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/sewer)
+"gD" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/sewer)
+"gE" = (/turf/open/floor/f13,/area/f13/sewer)
+"gF" = (/turf/open/floor/f13{dir = 8; icon_state = "warndarkcorners"},/area/f13/tunnel)
+"gG" = (/obj/item/clothing/suit/armor/f13/supafly,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gH" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/sewer)
+"gI" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/sewer)
+"gJ" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/sewer)
+"gK" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop0"; icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
+"gL" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop2left"; icon_state = "horizontaltopbordertop2left"},/area/f13/wasteland)
+"gM" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertopright"; icon_state = "horizontaltopbordertopright"},/area/f13/wasteland)
+"gN" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertopleft"; icon_state = "horizontaltopbordertopleft"},/area/f13/wasteland)
+"gO" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop3"; icon_state = "horizontaltopbordertop3"},/area/f13/wasteland)
+"gP" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontaltopbordertop2right"; icon_state = "horizontaltopbordertop2right"},/area/f13/wasteland)
+"gQ" = (/obj/item/weapon/paper/crumpled/bloody{info = "Reminder: The treasure is hidden in a Cave of Doom, 20 miles to the north away from New Reno. Ask locals about 'that one famous cave' no one has come back from. The treasure is totally worth the risk. And remember - you have paid 100 caps for the info, go and get thousand times more you gave away!"},/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gR" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom0"; icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
+"gS" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2left (WEST)"; icon_state = "horizontaltopborderbottom2left"; dir = 8},/area/f13/wasteland)
+"gT" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottomright"; icon_state = "horizontaltopborderbottomright"},/area/f13/wasteland)
+"gU" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottomleft"; icon_state = "horizontaltopborderbottomleft"},/area/f13/wasteland)
+"gV" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2 (WEST)"; icon_state = "horizontaltopborderbottom2"; dir = 8},/area/f13/wasteland)
+"gW" = (/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom2right"; icon_state = "horizontaltopborderbottom2right"},/area/f13/wasteland)
+"gX" = (/obj/structure/closet/bus,/turf/open/indestructible/ground/road{tag = "icon-horizontaltopborderbottom0"; icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
+"gY" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"gZ" = (/mob/living/simple_animal/hostile/protectron,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"ha" = (/turf/open/floor/f13{dir = 10; icon_state = "warndark"},/area/f13/tunnel)
+"hb" = (/turf/open/floor/f13{dir = 1; icon_state = "warndarkcorners"},/area/f13/tunnel)
+"hc" = (/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"hd" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop3"; icon_state = "horizontalbottombordertop3"},/area/f13/wasteland)
+"he" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerinner (EAST)"; icon_state = "innermaincornerinner"; dir = 4},/area/f13/wasteland)
+"hf" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerouter (WEST)"; icon_state = "innermaincornerouter"; dir = 8},/area/f13/wasteland)
+"hg" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertopleft"; icon_state = "horizontalbottombordertopleft"},/area/f13/wasteland)
+"hh" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2"; icon_state = "horizontalbottombordertop2"},/area/f13/wasteland)
+"hi" = (/turf/open/indestructible/ground/road{tag = "icon-horizontalbottombordertop2right"; icon_state = "horizontalbottombordertop2right"},/area/f13/wasteland)
+"hj" = (/turf/open/indestructible/ground/road{tag = "icon-hole"; icon_state = "hole"},/area/f13/wasteland)
+"hk" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
+"hl" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerouter (EAST)"; icon_state = "innermaincornerouter"; dir = 4},/area/f13/wasteland)
+"hm" = (/turf/open/indestructible/ground/road{tag = "icon-innermaincornerinner (WEST)"; icon_state = "innermaincornerinner"; dir = 8},/area/f13/wasteland)
+"hn" = (/obj/structure/tires,/turf/open/indestructible/ground/road,/area/f13/wasteland)
+"ho" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"hp" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"hq" = (/obj/structure/rack,/obj/item/weapon/screwdriver/power,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"hr" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"hs" = (/turf/closed/wall/f13/store,/area/f13/tunnel)
+"ht" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom0"; icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
+"hu" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottomright"; icon_state = "horizontalbottomborderbottomright"},/area/f13/wasteland)
+"hv" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottomleft"; icon_state = "horizontalbottomborderbottomleft"},/area/f13/wasteland)
+"hw" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/sewer)
+"hx" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/sewer)
+"hy" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 5; icon_state = "warndark"},/area/f13/sewer)
+"hz" = (/obj/machinery/light/small/red{dir = 8},/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
+"hA" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/tunnel)
+"hB" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/tunnel)
+"hC" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/tunnel)
+"hD" = (/turf/open/floor/f13,/area/f13/tunnel)
+"hE" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/sewer)
+"hF" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/sewer)
+"hG" = (/obj/structure/table/reinforced,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/sewer)
+"hH" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"hI" = (/mob/living/simple_animal/hostile/molerat,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"hJ" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/tunnel)
+"hK" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/tunnel)
+"hL" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/tunnel)
+"hM" = (/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/sewer)
+"hN" = (/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/sewer)
+"hO" = (/obj/machinery/light/small/red{dir = 4},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"hP" = (/turf/open/floor/f13{dir = 10; icon_state = "warndark"},/area/f13/sewer)
+"hQ" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "warndark"},/area/f13/sewer)
+"hR" = (/turf/open/floor/f13{dir = 6; icon_state = "warndark"},/area/f13/sewer)
+"hS" = (/obj/structure/closet/toolcloset,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/tunnel)
+"hT" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/tunnel)
+"hU" = (/obj/effect/decal/remains/human,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"hV" = (/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"hW" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/sewer)
+"hX" = (/obj/structure/table,/obj/item/weapon/weldingtool,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
+"hY" = (/obj/item/clothing/under/f13/settler,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"hZ" = (/obj/item/weapon/storage/backpack/explorer,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"ia" = (/obj/structure/table,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/tunnel)
+"ib" = (/obj/item/clothing/head/f13/stormchaser,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"ic" = (/turf/closed/wall/f13/store,/area/f13/subway)
+"id" = (/obj/item/weapon/storage/toolbox/mechanical,/turf/open/floor/f13{dir = 6; icon_state = "warndark"},/area/f13/tunnel)
+"ie" = (/obj/item/weapon/storage/box/snappops,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"if" = (/obj/effect/gibspawner/human,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"ig" = (/obj/item/clothing/under/f13/trader,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"ih" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/subway)
+"ii" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/subway)
+"ij" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/subway)
+"ik" = (/turf/open/floor/f13,/area/f13/subway)
+"il" = (/obj/item/weapon/holodisk/bigiron,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"im" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/subway)
+"in" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/subway)
+"io" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/subway)
+"ip" = (/obj/structure/table_frame,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
+"iq" = (/turf/open/floor/f13{dir = 4; icon_state = "warndarkcorners"},/area/f13/tunnel)
+"ir" = (/obj/item/weapon/reagent_containers/food/drinks/flask/vault113,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"is" = (/mob/living/simple_animal/hostile/ghoul/aggressive,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"it" = (/mob/living/simple_animal/hostile/rad_scorpion,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"iu" = (/obj/item/weapon/storage/fancy/krotchy_box,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"iv" = (/obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"iw" = (/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"ix" = (/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"iy" = (/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"iz" = (/obj/structure/decoration/vent/rusty{icon_state = "ventrustyalt"; pixel_x = -32; pixel_y = -1},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelwastelandfullvar"},/area/f13/sewer)
+"iA" = (/turf/open/floor/f13{icon_state = "warndarkcorners"},/area/f13/tunnel)
+"iB" = (/mob/living/simple_animal/hostile/commanded/smeagol,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"iC" = (/obj/item/weapon/wrench/brass,/turf/open/indestructible/ground/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"iD" = (/obj/machinery/light/small/red{dir = 8},/turf/open/indestructible/ground/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
+"iE" = (/obj/structure/table,/obj/item/weapon/storage/firstaid,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"iF" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"iG" = (/obj/structure/closet/crate/engineering/electrical,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"iH" = (/turf/closed/indestructible/f13/matrix,/area/start)
+"iI" = (/obj/machinery/light/small/red{dir = 4},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"iJ" = (/obj/structure/table,/obj/item/weapon/krotchy,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"iK" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"iL" = (/turf/closed/indestructible/f13/obsidian,/area/start)
+"iM" = (/obj/structure/closet/crate/bin,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"iN" = (/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/tunnel)
+"iO" = (/obj/structure/closet/crate,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"iP" = (/obj/structure/closet/toolcloset,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"iQ" = (/obj/structure/closet/firecloset,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"iR" = (/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/sewer)
+"iS" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"iT" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/tunnel)
+"iU" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/sewer)
+"iV" = (/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/sewer)
+"iW" = (/obj/structure/closet/crate/trashcart,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"iX" = (/obj/machinery/light/small/red,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/tunnel)
+"iY" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"iZ" = (/obj/structure/decoration/vent{icon_state = "ventorange"; pixel_y = 32},/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"ja" = (/obj/item/weapon/crowbar/red,/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"jb" = (/obj/effect/landmark/start,/turf/open/floor/f13{icon_state = "greensolid"},/area/start)
+"jc" = (/turf/closed/indestructible/f13/subway,/area/f13/subway)
+"jd" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopleft"},/area/f13/subway)
+"je" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopmiddle"},/area/f13/subway)
+"jf" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytunnelleft"},/area/f13/subway)
+"jg" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytunnelsupport"},/area/f13/subway)
+"jh" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytunnelright"},/area/f13/subway)
+"ji" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopright"},/area/f13/subway)
+"jj" = (/turf/closed/wall/f13/tunnel,/area/f13/subway)
+"jk" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/subway)
+"jl" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaytopvent"},/area/f13/subway)
+"jm" = (/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/subway)
+"jn" = (/mob/living/simple_animal/hostile/cazador,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"jo" = (/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
+"jp" = (/obj/machinery/light/small/red{dir = 4},/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
+"jq" = (/obj/structure/handrail/yellow,/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/subway)
+"jr" = (/turf/open/floor/f13{icon_state = "rampuptop"},/area/f13/subway)
+"js" = (/obj/machinery/light/small/red{dir = 8},/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
+"jt" = (/obj/item/weapon/storage/toolbox/mechanical,/turf/open/floor/f13{icon_state = "warndark"},/area/f13/subway)
+"ju" = (/turf/open/indestructible/ground/subway,/area/f13/subway)
+"jv" = (/obj/effect/decal/remains/human,/turf/open/indestructible/ground/subway,/area/f13/subway)
+"jw" = (/mob/living/simple_animal/hostile/deathclaw,/turf/open/floor/f13{icon_state = "greensolid"},/area/f13/building)
+"jx" = (/turf/open/indestructible/ground/subway{icon_state = "railsmiddle"},/area/f13/subway)
+"jy" = (/turf/open/indestructible/ground/subway{icon_state = "railsright"},/area/f13/subway)
+"jz" = (/turf/open/indestructible/ground/subway{icon_state = "railspair"},/area/f13/subway)
+"jA" = (/turf/open/indestructible/ground/subway{icon_state = "railssingle"},/area/f13/subway)
+"jB" = (/turf/open/indestructible/ground/subway{icon_state = "railsleft"},/area/f13/subway)
+"jC" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottom"},/area/f13/subway)
+"jD" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottomleft"},/area/f13/subway)
+"jE" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottommiddle"},/area/f13/subway)
+"jF" = (/turf/closed/indestructible/f13/subway{icon_state = "subwaybottomright"},/area/f13/subway)
+"jG" = (/turf/closed/indestructible/f13/splashscreen,/area/start)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaabababababababababababababababababababababaaacacacacacacacacacacacacacacacacacacacacacaaadadadadadadadadadadadadadadadadadadadadadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaabababababababababababababababababababababaaacacacacafafafafafafafafagafafacacacacacacaaadahaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiajadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeakaeaeaaadadalalalalalaladadaa
 aaabababababababababababababababababababababaaacacacacafamanaoafapaqaraoasafacacacacacacaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeawaeaeaeaeaeaeaeaeaaadadalaxayazaAaladadaa
-aaabababababababababababababababababababababaaacacacacaBaoamaoafaCaoaoaoaDaEacacacacacacaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaFaeaeaeaeaGaeaeaeaeaeaeaeaeaeaeaeaeaaadadalaHaIaAaAaJadadaa
-aaabababaKaKaKaKaKaKaKaKaKaKaKaKaKaKaKabababaaacacaLacafaMaoamaNaOaoaoaPamafacacacacacacaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaQaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadalaAaAaAaAaladadaa
-aaabababaKabababababababababababababaKabababaaacacacacafafaRafafaSafafafafafacacacacacacaaadatauauauaTaUaUaUaUaUaUaUaUaUaVauauauavadaaaeawaeaeaeaGaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadalalalalalaladadaa
-aaabababaKababababababaWaWabababababaKabababaaacafafafafaXaYaZafambaamaobbafacacacacacacaaadatauauauavbcadadadadadadadbdatauauauavadaaaeaeaeaeaeaeaeakaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababaKabababababababaWaWababababaKabababaaacafbebfafbgbhaYafbiamaoaoaoaBacacacacacacaaadatauauaubjaiaiaiaiaiaiaiajadatauauauavadaaaeaeaeaeaeaeaeaebkaeaeaeaeaeaeaeaeblaeaeaeaaadadbmbmbmbmbmbmadadaa
-aaabababaKabababababababababababababaKabababaaacafafafafafafafafafbnafafafafafafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbmbobpbqbrbmadadaa
-aaabababaKabababababababababababababaKabababaaacafbsbtamamamamamamamaobubuambvafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeblaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbmbwbxbrbrbyadadaa
-aaabababaKababababbzabababbzababababaKabababaaacafamaoaoaoamaoaoamaoaoaDamaMbAafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbmbrbrbrbrbmadadaa
-aaabababaKabababbBbBbCbBbBbBbBabababaKabababaaacafaDamamamaoamamamaoambDamambEafacacacacaaadbFaUaUaUaUaUaUaUaVauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbmbmbmbmbmbmadadaa
-aaabababaKababbzbBbGbHbHbIbJbBbzababaKabababaaacafamaOaoafafafafafafbKafbLafafafacacacacaaadahaiaiaiaiaiaiaibMauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaebNaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababaKabababbBbHbHbHbHbObBabababaKabababaaacafbPaoamafbQbQbRafacacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababaKabababbBbSbHbTbHbHbBabababaKabababaaacagamamamaRbUbVbWafacacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababbBbBbXbBbBbBbBbBbCbYbBbBbXbBbBabababaaacafaoaoamafbUbZcaafacacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababbBbBcbbHcccdcecfcgchchcdccbHcibBbBababaaacafamaoaoafafafafafacacacacacacaccjacacacaaadatauauauaTaUaUaUaUaUaUaUckadatauauauavadaaaeaeawakaeaFaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababbBclbHbHbHchchchchchchchbHbHbHclbBababaaacaBamamaoafacacacacacacacacaccmacacacacacaaadatauauauavbcadadadadadadadbdatauauauavadaaaeaeaeaecnaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababbBclbHbHbHchcocpcochcqchbHbHbHclbBababaaacaBaoamaOafacacaccracacacacacacacacacacacaaadatauauaubjaiaiaiaiaiaiaiajadatauauauavadaaaeaeaeaeaGcsaecsaeaeaeaeaeakbkaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababbBbBctbTbHbHchchchchchbHbHbTctbBbBababaaacafamamamafacacacacacacacacacaccucucucucuaaadatauauauauauauauauauauauavadatauauauavadaaaeaecsaeaGaGaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababbBbBbBcvbHctctchctctbHcwbBbBbBabababaaacafamaoamafacacacacacacacacacaccxacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeblaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababbBbBbHbHbHchbHbHbHbBbBabababababaaacafcyczcyafcucucxcucucuafafafafafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaecsaGaecnaeaeaaadadadadadadadadadadaa
-aaababababababbBbHctctchctctbHbBababababababaaaccAcBcBcBcCacaccDcEcEcEafcFcGcHafacacacacaaadbFaUaUaUaUaUaUaUaVauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaGaGaeaeaeaeaaadadadadadadadadadadaa
-aaababababababbXbHbHbHchbHbHbHbXababababababaaaccIcJcKcBcLcEcEcMcBcKcBcycNcOcPafacacacacaaadadadadadadadbdadatauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaQaeaeaaadadadadadadadadadadaa
-aaababababababbBcbctctchctctcibBababababababaaaccQcIcJcBcBcBcBcRcScScSafcTcUcVafacacacacaaadahaiaiaiaiaiaiaibMauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeblaeaeaaadadadadadadadadadadaa
-aaababababababbXbHbHbHchbHbHbHbXababababababaaacacaccIcJcKcBcRcWacafafafcXcTcUafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaecYaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababababababbBbHctctchctctbHbBababababababaaacacacaccAcBcKcCacacaBcTcTcUcUcTafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaQaeaGaeaeaeaeaeaeaeaeakaeaeaaadadadadadadadadadadaa
-aaabababababbzbBbHbTbHbHbHbTbHbBbzabababababaaacacacaccAcBcBcLcZacaEdacUdbdcddafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaGaecYaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababababababbBbBbBbBbCbBbBbBbBababababababaaacacaccQcAcBcBcKcLcZafafafafafafafacacacacaaadatauauauaTaUaUaUaUaUaUaUckadatauauauavadaaaeaeaeaeaeaeaeaeaeaGaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababbzabdedfdgabbzabababababababaaacacacaccIcJcBcBcBcLcZacacacacacacacacacacaaadatauauauavbcaddhaddhaddhaddiatauauauavadaaaeaeaeaeaGaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababdedfdgabababababababababaaacacacacaccIcScJcBcBcCacacacacacacacacacacaaadatauauaubjaiaiaiaiaiaiaiajadatauauauavadaaaeaeaeaeaeaeaFaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababdedjdkabababababababababaaacacacacacacaccAcKcBcCdlacacacacacacacacacaaadatauauauauauaudmaudnaudoavadatauauauavadaaaeaeaeaeaecsaedpaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababdqdkababababababababababaaacacacacacacaccIcJcKcCacacacaccracacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaGaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababdrababdsdtabababababababababaaaccjacacacacacaccAcBcCacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababdsdudgababdvababababababaaacacacacacacacaccAcBcLcZacacacacacacacacacaaadatauauauaTaUaUaUaUaUaUaUckadatauauauavadaaaeaeaeblaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababdedfdgabababababababababaaacacacacacacacaccIcJcBcLcZacacacacacacacacaaadatauauauavbcaddwaddwaddwadbdatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababaBaBaBaBaBaBaBaCaBaBaBaBaBaBaBabababaaacacacacaDaoamaoafaEaoaoaoaFaGacacacacacacaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaHaeaeaeaeaIaeaeaeaeaeaeaeaeaeaeaeaeaaadadalaJaKaAaAaLadadaa
+aaabababaBabababababababababababababaBabababaaacacaMacafaNaoamaOaPaoaoaQamafacacacacacacaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaRaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadalaAaAaAaAaladadaa
+aaabababaBababababababaSaSabababababaBabababaaacacacacafafaTafafaUafafafafafacacacacacacaaadatauauauaVaWaWaWaWaWaWaWaWaWaXauauauavadaaaeawaeaeaeaIaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadalalalalalaladadaa
+aaabababaBabababababababaSaSababababaBabababaaacafafafafaYaZbaafambbamaobcafacacacacacacaaadatauauauavbdadadadadadadadbeatauauauavadaaaeaeaeaeaeaeaeakaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababaBabababababababababababababaBabababaaacafbfbgafbhbiaZafbjamaoaoaoaDacacacacacacaaadatauauaubkaiaiaiaiaiaiaiajadatauauauavadaaaeaeaeaeaeaeaeaeblaeaeaeaeaeaeaeaebmaeaeaeaaadadbnbnbnbnbnbnadadaa
+aaabababaBabababababababababababababaCabababaaacafafafafafafafafafboafafafafafafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbnbpbqbrbsbnadadaa
+aaabababaBababababbtabababbtababababaBabababaaacafbubvamamamamamamamaobwbwambxafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaebmaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbnbybzbsbsbAadadaa
+aaabababaBabababbBbBbCbBbBbBbBabababaBabababaaacafamaoaoaoamaoaoamaoaoaFamaNbDafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbnbsbsbsbsbnadadaa
+aaabababaBababbtbBbEbFbFbGbHbBbtababaBabababaaacafaFamamamaoamamamaoambIamambJafacacacacaaadbKaWaWaWaWaWaWaWaXauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadbnbnbnbnbnbnadadaa
+aaabababaBabababbBbFbFbFbFbLbBabababaBabababaaacafamaPaoafafafafafafbMafbNafafafacacacacaaadahaiaiaiaiaiaiaibOauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaebPaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababaBabababbBbEbFbQbFbFbBabababaBabababaaacafbRaoamafbSbSbTafacacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababbBbBbUbBbBbBbBbBbCbBbBbBbUbBbBabababaaacagamamamaTbVbWbXafacacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababbBbBbYbFbZcacbcccdcecfcabZbFcgbBbBababaaacafaoaoamafbVchciafacacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababbBcjbFbFbFcececececececebFbFbFcjbBababaaacafamaoaoafafafafafacacacacacacacckacacacaaadatauauauaVaWaWaWaWaWaWaWcladatauauauavadaaaeaeawakaeaHaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababbBcjbFbFbFcecmcncmcecocebFbFbFcjbBababaaacaDamamaoafacacacacacacacacaccpacacacacacaaadatauauauavbdadadadadadadadbeatauauauavadaaaeaeaeaecqaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababbBbBcrbQbFbFcececececebFbFbQcrbBbBababaaacaDaoamaPafacacaccsacacacacacacacacacacacaaadatauauaubkaiaiaiaiaiaiaiajadatauauauavadaaaeaeaeaeaIctaectaeaeaeaeaeakblaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababbBbBbBcubFcrcrcecrcrbFcvbBbBbBabababaaacafamamamafacacacacacacacacacaccwcwcwcwcwaaadatauauauauauauauauauauauavadatauauauavadaaaeaectaeaIaIaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababbBbBbFbFbFcebFbFbFbBbBabababababaaacafamaoamafacacacacacacacacacaccxacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaebmaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababababababbBbFcrcrcecrcrbFbBababababababaaacafcyczcyafcwcwcxcwcwcwafafafafafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaectaIaecqaeaeaaadadadadadadadadadadaa
+aaababababababbUbFbFbFcebFbFbFbUababababababaaaccAcBcBcBcCacaccDcEcEcEafcFcGcHafacacacacaaadbKaWaWaWaWaWaWaWaXauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaIaIaeaeaeaeaaadadadadadadadadadadaa
+aaababababababbBbYcrcrcecrcrcgbBababababababaaaccIcJcKcBcLcEcEcMcBcKcBcycNcOcPafacacacacaaadadadadadadadbeadatauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaRaeaeaaadadadadadadadadadadaa
+aaababababababbUbFbFbFcebFbFbFbUababababababaaaccQcIcJcBcBcBcBcRcScScSafcTcUcVafacacacacaaadahaiaiaiaiaiaiaibOauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebmaeaeaaadadadadadadadadadadaa
+aaababababababbBbFcrcrcecrcrbFbBababababababaaacacaccIcJcKcBcRcWacafafafcXcTcUafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaecYaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababbtbBbFbQbFbFbFbQbFbBbtabababababaaacacacaccAcBcKcCacacaDcTcTcUcUcTafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaRaeaIaeaeaeaeaeaeaeaeakaeaeaaadadadadadadadadadadaa
+aaababababababbBbBbBbBbCbBbBbBbBababababababaaacacacaccAcBcBcLcZacaGdacUdbdcddafacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaIaecYaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababbtabdedfdgabbtabababababababaaacacaccQcAcBcBcKcLcZafafafafafafafacacacacaaadatauauauaVaWaWaWaWaWaWaWcladatauauauavadaaaeaeaeaeaeaeaeaeaeaIaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababdedfdgabababababababababaaacacacaccIcJcBcBcBcLcZacacacacacacacacacacaaadatauauauavbdaddhaddhaddhaddiatauauauavadaaaeaeaeaeaIaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababdedfdgabababababababababaaacacacacaccIcScJcBcBcCacacacacacacacacacacaaadatauauaubkaiaiaiaiaiaiaiajadatauauauavadaaaeaeaeaeaeaeaHaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababdedjdkabababababababababaaacacacacacacaccAcKcBcCdlacacacacacacacacacaaadatauauauauauaudmaudnaudoavadatauauauavadaaaeaeaeaeaectaedpaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababdqdkababababababababababaaacacacacacacaccIcJcKcCacacacaccsacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaIaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababdrababdsdtabababababababababaaacckacacacacacaccAcBcCacacacacacacacacacacaaadatauauauauauauauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababdsdudgabababababababababaaacacacacacacacaccAcBcLcZacacacacacacacacacaaadatauauauaVaWaWaWaWaWaWaWcladatauauauavadaaaeaeaebmaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababdedfdgababababdvababababaaacacacacacacacaccIcJcBcLcZacacacacacacacacaaadatauauauavbdaddwaddwaddwadbeatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaabababababababababdedjdkabababababababababaadxdxdxdxdydzdAdxdxdxdBdxdxdxdydzdAdxdxdxdxaaadatauauauavadahaiaiaiaiaiajadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaababababdCababababdedgababababababababababaadxdDdDdEdDdDdDdEdFdDdDdDdGdEdDdDdDdEdDdDdxaaadatauauauavadatdHaudIaudJavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaedKaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaabababababababababdqdkababababababababababaadxdDdLdDdMdDdNdDdOdDdPdDdQdDdRdDdSdDdSdDdxaaadatauauauavadatauauauauauavadatauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababababababababababababababdsdTdTdTabababaadxdDdUdDdVdDdWdDdXdDdYdDdZdDeadDdSdDdSdDdxaaadatauauaubjaibMauauauauaubjaibMauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaababababababababababababababdeebecdTabababaadxdDeddDeedDefegehdDeidDejdDekdDdSdDdSdDdxaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaebkaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababababababababababababababdsdTdTdTabababaadxdDdUdDdVdDdWdDdXdDdYdDdZdDeadDdSdDdSdDdxaaadatauauaubkaibOauauauauaubkaibOauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaababababababababababababababdeebecdTabababaadxdDeddDeedDefegehdDeidDejdDekdDdSdDdSdDdxaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaeblaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaababababababababababababababdqdTdTdTabababaadxdDeldDemdDendDeodDepdDeqdDerdDdSdDdSdDdxaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababababababababababababababaadxdDesdDetdDeudDevdDewdDexdDeydDdSdDdSdDdxaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
-aaabababababababababababababababababababababaadxdDdDezdDdDdDezdDdDdDdDdDezdDdDdDezdDdDdxaaadbFaUaUaUaUaUaUaUaUaUaUaUaUaUaUaUaUaUckadaaaeaeaeaeaeaeaeaeeAaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababdvabababababababababababababaadxdDesdDetdDeudDevdDewdDexdDeydDdSdDdSdDdxaaadatauauauauauauauauauauauauauauauauauavadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
+aaabababababababababababababababababababababaadxdDdDezdDdDdDezdDdDdDdDdDezdDdDdDezdDdDdxaaadbKaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWcladaaaeaeaeaeaeaeaeaeeAaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaabababababababababababababababababababababaadxdxdxdxdxdxdxdxdxdxdDdxdxdxdxdxdxdxdxdxdxaaadadadadadadadadadadadadadadadadadadadadadaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaadadadadadadadadadadaa
 aaaaaaaaaaaaaaaaaaaaeBabeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeCdDeCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBadeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBaeeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaeBeBeBeBeBeBeBeBeBeBeDeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeDeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeDeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeDeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBeBaa
@@ -534,43 +562,43 @@ aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfC
 aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfMfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfPfCeXaaeYfbfbfbeYfnfbeZfQfReVfRfSeZfbfbfbfbfdfbeYaafafaeWeWeWfafafaeWfafaeWeWeWeWeWeWfafafafaaaadadadadadadadadadadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfMfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfPfCeXaaeYfxfTfbeYeYeYeZeZeZfUeZeZeZfoeYeYfbfbfbeYaafafaeWeWfafafafafafafafafafafVeWfafafafafaaaadadadadadadadadadadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfMfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfPfCeXaaeYfbfbfneYfWfWfbeZfXfYfZeZfbfnfbeYfnfbfbeYaafaeWeWeWfafagagagafafafafafafafafafkfkfkfaaaadadgbgbgbgbgbgbadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaeYeYfoeYeYfdfbgdeZfufYfGeZfTfbfbeYeYeYeYeYaafaeWeWeWeWfafafafafafleWeWfafafafafkfkfkfaaaadadgbgegfggghgbadadaa
+aaadadadadaddiadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaeYeYfoeYeYfdfbgdeZfufYfGeZfTfbfbeYeYeYeYeYaafaeWeWeWeWfafafafafafleWeWfafafafafkfkfkfaaaadadgbgegfggghgbadadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfdeYfbfnfbeZfufYfGeZfbfbfnfbfdgifbeYaafafaeWeWeWfBfafafaeWeWeWeWeWfafafafkfkfkfaaaadadgbgjgkghghgladadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYgmfbfbfffbfbfbeZgnfYfGeZfbfdgofbfbfbfneYaafafafafaeWeWgpeWfaeWeWfafaeWeWeWfafafafafaaaadadgbghghghghgbadadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXgqeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfdfbfbeYfbfbfdeZfufYfGeZeYeYeYeYeYfbfbeYaafafkfafafaeWeWeWeWeWfafafafaeWeWeWfafafafaaaadadgbgbgbgbgbgbadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYeYgreYeYgsfbgdeZfufYfGeZfbfdfefbfnfbfbeYaafafkfafafafafaeWeWfafagafafaeWeWeWeWeWfafaaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfdfbfbeYgtgugteZfufYfGeZfnfffdfbfbfbfneYaafafafafleWfafafafafafafafagvgweWfafaeWeWfaaaadadgxgxgxgxgxgxadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYgmfbfdeYeYeYeYeZgnfYfGeZeZfUeZeZeZeZeZeZaafafaeWeWeWeWeWfaeWeWfafagyeWfteWfafafagzfaaaadadgxgAgBgCgDgxadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfbeYfbfefbeZfufYgEfhfhfYfhfhfhfhfZeZaafaeWeWeWfaeWeWeWeWeWeWfKeWgFeWfafafafafafaaaadadgxgGgHgDgDgIadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfCfCfCfCeXaaeYeYfoeYeYfdfbfIeZfufYfYfYfYfYfYfYfYfYfGeZaafaeWgJeWfafaeWeWeWfafaeWeWfafafafafafkfkfaaaadadgxgDgDgDgDgxadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCgKfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNgLfCeXaaeYfnfbfbfnfbfbfneZgMfRfRfRfRfRfRfRgNfYfGeZaafafaeWeWfafafafafafafafafafagagagafafkfkfaaaadadgxgxgxgxgxgxadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCgKfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNgLfCeXaaeYfbfbfnfbfbfdfbeZeZeZeZeZeZeZeZeZfufYgOeZaafafaeWeWeWfaeWfafaeWfafaeWfagagagafafafafaaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCgKfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNgLfCeXaaeYeYeYeYeYeYfbfbeZgPgQgReZgPgSgPeZfufYfGeZaafafafaeWeWeWeWeWfaeWeWeWeWfafafafafaeWfJfaaaadadgTgTgTgTgTgTadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaeYgUgVgVgWeYfbfbeZfveVeVeZeVfveVeZgXfYfGeZaafafkfafafaeWeWeWeWeWeWeWeWfBfafafaeWfzeWfaaaadadgTgYgZhahbgTadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYhchdhdheeYfnfbeZgPfvgPeZhfeVhfeZfufYfGeZaafafkfafafafafaeWfKeWfafaeWeWeWfaeWgphgeWfaaaadadgThhhihbhbhjadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYhkhdhdhleYfbhmeZeZfpeZeZeZfpeZeZfufYfGeZaafafafaeWfKfafafafafafafafaeWeWeWeWeWeWfafaaaadadgThbhbhbhbgTadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYhnhohdhpeYfbfdeZhqfYfhhrfhfYfZeZfufYfGeZaafafahghseWfBfafafaeWhtfaeWeWeWeWeWfafafafaaaadadgTgTgTgTgTgTadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYeYeYhueYeYfbfbeZfEfYfYfYfYfYhveZgXfYfGeZaafafKeWhwhgfafafaflhxeWeWeWeWeWfafafafkfkfaaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfdfbfbfbfnfbfbeZfEfYfYfYfYfYhyeZfufYfGeZaafaeWeWfafafahzeWeWeWeWeWfKeWeWeWfafafkfkfaaaadadhAhAhAhAhAhAadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfbfbfbfbfbeZgMfRfRfYfRfRhBeZfufYfGeZaafaeWeWeWfahCeWhDhEeWeWeWeWeWeWeWfBfafafafaaaadadhAhFhGhHhIhAadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbeYeYeYeYeYeZeZeZeZfpeZeZeZeZfufYgOeZaafaeWeWeWeWeWeWeWeWeWeWhJeWeWhgeWeWfKfafafaaaadadhAhKhLhIhIhMadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfCfCfCfCeXaaeYgmfbeYfbhNfbfbeZfXfhfhfYfhfhfhfhhOfYfGeZaafafafJeWeWeWfafahteWhgeWeWeWeWfaeWeWeWhPfaaaadadhAhIhIhIhIhAadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfChQfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNhRfCeXaaeYfbfdeYfbfnfbfdeZgnfYfYfYfYfYfYfYfYfYfGeZaafafafaeWeWfafafafafKhSeWfafafafafahTeWfafaaaadadhAhAhAhAhAhAadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfChUhVfNfOeUeUeUeUeUeUeUeUeUfOfNfNhWfCeXaaeYfbfbeYhXfbfbhmeZfufYhYfRfRfRfRfRfRfRfSeZaafafafafafafafafafafafafafafafafafafafafafaaaadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfChZfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNhRfCeXaaeYfbfbeYfbfniafbeZfufYfGeZeZeZeZeZeZeZeZeZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaeYibfbeYfbfbfbfTeZfufYfGeZfYfYeZfvicidieeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZaaififififififififififififififif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbeYeYffeYeYeZgnfYfGeZfYfYfpeVfvfvigeZihfYfYiifYfYfYfYfYfYiifYfYfYfYfYfYeZaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfbfbfbfbfneZfufYfGeZfYfYeZfveVeVfveZikfYfYfYfYfYfYfYfYfYfYfYfYfYfYfYfYeZaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfnfbfbfnfbfbfpfYfYfYilfYfYeZeZeZeZeZeZfYfYfYeZeZeZeZeZeZeZileZeZeZeZfpeZeZaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYeYhueYeYeYhueYeZfufYfGeZfYfYiifYfYfYfYiifYfYfYeZimgQineZfveVeVeVioeZfveVfveZaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYipipipeYipipipeZeZfpeZeZfYfYfYfYfYfYfYfYfYfYfYeZiqeVeVfpeVeVfveVireZiqfvideZaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYisitiseYisitiseZiufYfYeZeZeZeZeZeZeZeZeZeZeZeZeZidideVeZeVfveVfveVeZidiviqeZaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXgqeXeXeXeXeXeXeXaaeYeYeYeYeYeYeYeYeZeZfYfYfYiwfYixfYiwfYiyfYeZfpfpeZeZeZeZeZeZeZfpeZeZeZeZeZeZeZaaifijijijijijijizijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfCfCfCfCeXaaiAiBiCiDiEiFiCiGiAiHiIiIiIiIiIiIiIiIiIiIiIiHiAiBiJiCiCiJiGiAiHiKiHiAiBiCiCiGiAaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCiLfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfNfCeXaaiMiMiMiMiMiMiMiMiNiHiOiOiOiOiOiPiOiOiOiOiOiHiQiMiMiMiRiMiMiMiMiMiMiMiMiMiMiMiMaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCiLfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfNfCeXaaiSiSiTiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCiLfNfNfOeUeUeUeUeUeUeUeUeUfOfNiUfNfCeXaaiViViViViViViViViViViViViViViViViViViViViViViWiXiYiSiYiXiYiZiViViViViViViViViVaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSiSaaifijijijijijijijijijijijijijif
-aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXaajajbjcjcjcjcjcjdjajajajbjcjcjcjcjcjcjcjdjajajajbjcjcjcjcjcjcjcjcjcjcjcjcjcjdjaaaifijijijijijijijijijijijijijif
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajeifififififififififififififif
+aaadadadadadadadadadadadadadgradadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYeYgseYeYgtfbgdeZfufYfGeZfbfdfefbfnfbfbeYaafafkfafafafafaeWeWfafagafafaeWeWeWeWeWfafaaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfdfbfbeYgugvgueZfufYfGeZfnfffdfbfbfbfneYaafafafafleWfafafafafafafafagwgxeWfafaeWeWfaaaadadgygygygygygyadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYgmfbfdeYeYeYeYeZgnfYfGeZeZfUeZeZeZeZeZeZaafafaeWeWeWeWeWfaeWeWfafagzeWfteWfafafagAfaaaadadgygBgCgDgEgyadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfbeYfbfefbeZfufYgFfhfhfYfhfhfhfhfZeZaafaeWeWeWfaeWeWeWeWeWeWfKeWgGeWfafafafafafaaaadadgygHgIgEgEgJadadaa
+aagKgKgLgMadadadadgNgOgPgKgKgKgKgKgKgKgKgKgKaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfCfCfCfCeXaaeYeYfoeYeYfdfbfIeZfufYfYfYfYfYfYfYfYfYfGeZaafaeWgQeWfafaeWeWeWfafaeWeWfafafafafafkfkfaaaadadgygEgEgEgEgyadadaa
+aagRgRgSgTadadadadgUgVgVgWgRgRgRgXgRgRgRgRgRaaeXfCgYfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNgZfCeXaaeYfnfbfbfnfbfbfneZhafRfRfRfRfRfRfRhbfYfGeZaafafaeWeWfafafafafafafafafafagagagafafkfkfaaaadadgygygygygygyadadaa
+aahchchdhehfadadadhghdhhhhhihchchchchchchjhcaaeXfCgYfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNgZfCeXaaeYfbfbfnfbfbfdfbeZeZeZeZeZeZeZeZeZfufYhkeZaafafaeWeWeWfaeWfafaeWfafaeWfagagagafafafafaaaadadadadadadadadadadaa
+aahchchhhhhehfadadhlhmhdhhhhhihchjhchchnhchcaaeXfCgYfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNgZfCeXaaeYeYeYeYeYeYfbfbeZhohphqeZhohrhoeZfufYfGeZaafafafaeWeWeWeWeWfaeWeWeWeWfafafafafaeWfJfaaaadadhshshshshshsadadaa
+aahthththththuadadadhvhththththththththththtaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaeYhwhxhxhyeYfbfbeZfveVeVeZeVfveVeZhzfYfGeZaafafkfafafaeWeWeWeWeWeWeWeWfBfafafaeWfzeWfaaaadadhshAhBhChDhsadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYhEhFhFhGeYfnfbeZhofvhoeZhHeVhHeZfufYfGeZaafafkfafafafafaeWfKeWfafaeWeWeWfaeWgphIeWfaaaadadhshJhKhDhDhLadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYhMhFhFhNeYfbhOeZeZfpeZeZeZfpeZeZfufYfGeZaafafafaeWfKfafafafafafafafaeWeWeWeWeWeWfafaaaadadhshDhDhDhDhsadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYhPhQhFhReYfbfdeZhSfYfhhTfhfYfZeZfufYfGeZaafafahIhUeWfBfafafaeWhVfaeWeWeWeWeWfafafafaaaadadhshshshshshsadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYeYeYhWeYeYfbfbeZfEfYfYfYfYfYhXeZhzfYfGeZaafafKeWhYhIfafafaflhZeWeWeWeWeWfafafafkfkfaaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfdfbfbfbfnfbfbeZfEfYfYfYfYfYiaeZfufYfGeZaafaeWeWfafafaibeWeWeWeWeWfKeWeWeWfafafkfkfaaaadadicicicicicicadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfbfbfbfbfbeZhafRfRfYfRfRideZfufYfGeZaafaeWeWeWfaieeWifigeWeWeWeWeWeWeWfBfafafafaaaadadicihiiijikicadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbeYeYeYeYeYeZeZeZeZfpeZeZeZeZfufYhkeZaafaeWeWeWeWeWeWeWeWeWeWileWeWhIeWeWfKfafafaaaadadiciminikikioadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfCfCfCfCeXaaeYgmfbeYfbipfbfbeZfXfhfhfYfhfhfhfhiqfYfGeZaafafafJeWeWeWfafahVeWhIeWeWeWeWfaeWeWeWirfaaaadadicikikikikicadadaa
+aaadadadadadadadadadadadadadadaddiadadadadadaaeXfCisfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNitfCeXaaeYfbfdeYfbfnfbfdeZgnfYfYfYfYfYfYfYfYfYfGeZaafafafaeWeWfafafafafKiueWfafafafafaiveWfafaaaadadicicicicicicadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCiwixfNfOeUeUeUeUeUeUeUeUeUfOfNfNiyfCeXaaeYfbfbeYizfbfbhOeZfufYiAfRfRfRfRfRfRfRfSeZaafafafafafafafafafafafafafafafafafafafafafaaaadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCiBfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNitfCeXaaeYfbfbeYfbfniCfbeZfufYfGeZeZeZeZeZeZeZeZeZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaaeYiDfbeYfbfbfbfTeZfufYfGeZfYfYeZfviEiFiGeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZaaiHiHiHiHiHiHiHiHiHiHiHiHiHiHiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbeYeYffeYeYeZgnfYfGeZfYfYfpeVfvfviIeZiJfYfYiKfYfYfYfYfYfYiKfYfYfYfYfYfYeZaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfbfbfbfbfbfneZfufYfGeZfYfYeZfveVeVfveZiMfYfYfYfYfYfYfYfYfYfYfYfYfYfYfYfYeZaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYfbfnfbfbfnfbfbfpfYfYfYiNfYfYeZeZeZeZeZeZfYfYfYeZeZeZeZeZeZeZiNeZeZeZeZfpeZeZaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYeYhWeYeYeYhWeYeZfufYfGeZfYfYiKfYfYfYfYiKfYfYfYeZiOhpiPeZfveVeVeViQeZfveVfveZaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYiRiRiReYiRiRiReZeZfpeZeZfYfYfYfYfYfYfYfYfYfYfYeZiSeVeVfpeVeVfveViTeZiSfviFeZaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXeXeXeXeXeXeXeXeXaaeYiUiViUeYiUiViUeZiWfYfYeZeZeZeZeZeZeZeZeZeZeZeZeZiFiFeVeZeVfveVfveVeZiFiXiSeZaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeUeUeUeXgqeXeXeXeXeXeXeXaaeYeYeYeYeYeYeYeYeZeZfYfYfYiYfYiZfYiYfYjafYeZfpfpeZeZeZeZeZeZeZfpeZeZeZeZeZeZeZaaiHiLiLiLiLiLiLjbiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXfDeUeUeUeXeXeXfCfCfCfCfCeXaajcjdjejfjgjhjejijcjjjkjkjkjkjkjkjkjkjkjkjkjjjcjdjljejejljijcjjjmjjjcjdjejejijcaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCjnfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfNfCeXaajojojojojojojojojpjjjqjqjqjqjqjrjqjqjqjqjqjjjsjojojojtjojojojojojojojojojojojoaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCjnfNfNfOeUeUeUeUeUeUeUeUeUfOfNfNfNfCeXaajujujvjujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujuaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCjnfNfNfOeUeUeUeUeUeUeUeUeUfOfNjwfNfCeXaajxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjxjyjzjAjujAjzjAjBjxjxjxjxjxjxjxjxjxaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXfCfCfCfCfCeXeXeXeUeUeUgceXeXfCfCfCfCfCeXaajujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujujuaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaadadadadadadadadadadadadadadadadadadadadadaaeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXaajCjDjEjEjEjEjEjFjCjCjCjDjEjEjEjEjEjEjEjFjCjCjCjDjEjEjEjEjEjEjEjEjEjEjEjEjEjFjCaaiHiLiLiLiLiLiLiLiLiLiLiLiLiLiH
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajGiHiHiHiHiHiHiHiHiHiHiHiHiHiH
 "}
