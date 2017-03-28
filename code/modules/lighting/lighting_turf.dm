@@ -130,6 +130,9 @@
 	var/old_affecting_lights = affecting_lights
 	var/old_lighting_overlay = lighting_overlay
 	var/old_corners = corners
+	var/old_sun_affecting_lights = sun_affecting_lights
+	var/old_sun_lighting_overlay = sun_lighting_overlay
+	var/old_sun_corners = suncorners
 
 	. = ..() //At this point the turf has changed
 
@@ -137,11 +140,16 @@
 	lighting_overlay = old_lighting_overlay
 	affecting_lights = old_affecting_lights
 	corners = old_corners
+	sun_affecting_lights = old_sun_affecting_lights
+	sun_lighting_overlay = old_sun_lighting_overlay
+	suncorners = old_sun_corners
 	if (old_opacity != opacity || dynamic_lighting != old_dynamic_lighting)
 		reconsider_lights()
 
 	if (dynamic_lighting != old_dynamic_lighting)
 		if (IS_DYNAMIC_LIGHTING(src))
 			lighting_build_overlay()
+			sun_lighting_build_overlay()
 		else
 			lighting_clear_overlay()
+			sun_lighting_clear_overlay()
