@@ -4,6 +4,7 @@
 	icon_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
 	origin_tech = "combat=3;materials=2"
+	mag_load_sound = 'sound/effects/wep_magazines/bullet_insert.ogg'
 	casing_ejector = 0
 
 /obj/item/weapon/gun/ballistic/revolver/New()
@@ -28,6 +29,7 @@
 	var/num_loaded = magazine.attackby(A, user, params, 1)
 	if(num_loaded)
 		to_chat(user, "<span class='notice'>You load [num_loaded] shell\s into \the [src].</span>")
+		playsound(loc, mag_load_sound, 50)
 		A.update_icon()
 		update_icon()
 		chamber_round(0)
@@ -45,6 +47,7 @@
 			num_unloaded++
 	if (num_unloaded)
 		to_chat(user, "<span class='notice'>You unload [num_unloaded] shell\s from [src].</span>")
+		playsound(loc, pick('sound/effects/wep_misc/casing_bounce1.ogg', 'sound/effects/wep_misc/casing_bounce2.ogg', 'sound/effects/wep_misc/casing_bounce3.ogg'), 80)
 	else
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 

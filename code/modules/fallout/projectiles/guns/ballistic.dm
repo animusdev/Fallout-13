@@ -45,6 +45,9 @@
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
@@ -58,6 +61,8 @@
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
 	pumpsound = 'sound/weapons/boltpump.ogg'
+	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
+	
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "rifle-scope"
@@ -80,6 +85,9 @@
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	name = "10-mm submachine gun"

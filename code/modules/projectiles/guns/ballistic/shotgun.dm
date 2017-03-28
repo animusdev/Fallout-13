@@ -12,6 +12,7 @@
 	casing_ejector = 0
 	var/recentpump = 0 // to prevent spammage
 	var/pumpsound = 'sound/weapons/shotgunpump.ogg'
+	mag_load_sound = 'sound/effects/wep_magazines/insertShotgun.ogg'
 	weapon_weight = WEAPON_MEDIUM
 
 
@@ -22,6 +23,7 @@
 	var/num_loaded = magazine.attackby(A, user, params, 1)
 	if(num_loaded)
 		to_chat(user, "<span class='notice'>You load [num_loaded] shell\s into \the [src]!</span>")
+		playsound(loc, mag_load_sound, 50)
 		A.update_icon()
 		update_icon()
 
@@ -111,7 +113,7 @@
 	var/bolt_open = 0
 
 /obj/item/weapon/gun/ballistic/shotgun/boltaction/pump(mob/M)
-	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	playsound(M, pumpsound, 60, 1)
 	if(bolt_open)
 		pump_reload(M)
 	else
