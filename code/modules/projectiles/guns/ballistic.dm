@@ -9,6 +9,10 @@
 	var/obj/item/ammo_box/magazine/magazine
 	var/casing_ejector = 1 //whether the gun ejects the chambered casing
 
+	var/mag_load_sound = 'sound/effects/wep_magazines/handgun_generic_load.ogg'
+	var/mag_unload_sound = 'sound/effects/wep_magazines/handgun_generic_unload.ogg'
+	var/chamber_sound = 'sound/effects/wep_magazines/generic_chamber.ogg'
+
 /obj/item/weapon/gun/ballistic/New()
 	..()
 	if(!spawnwithmagazine)
@@ -33,6 +37,7 @@
 		if(casing_ejector)
 			AC.forceMove(get_turf(src)) //Eject casing onto ground.
 			AC.SpinAnimation(10, 1) //next gen special effects
+			playsound(loc, pick('sound/effects/wep_misc/casing_bounce1.ogg', 'sound/effects/wep_misc/casing_bounce2.ogg', 'sound/effects/wep_misc/casing_bounce3.ogg'), 50)
 			chambered = null
 		else if(empty_chamber)
 			chambered = null
@@ -60,6 +65,7 @@
 			magazine = AM
 			magazine.forceMove(src)
 			to_chat(user, "<span class='notice'>You load a new magazine into \the [src].</span>")
+			playsound(loc, mag_load_sound, 50)
 			chamber_round()
 			A.update_icon()
 			update_icon()
@@ -113,11 +119,13 @@
 		magazine.update_icon()
 		magazine = null
 		to_chat(user, "<span class='notice'>You pull the magazine out of \the [src].</span>")
+		playsound(loc, mag_unload_sound, 50)
 	else if(chambered)
 		AC.forceMove(get_turf(src))
 		AC.SpinAnimation(10, 1)
 		chambered = null
 		to_chat(user, "<span class='notice'>You unload the round from \the [src]'s chamber.</span>")
+		playsound(loc, chamber_sound, 50)
 	else
 		to_chat(user, "<span class='notice'>There's no magazine in \the [src].</span>")
 	update_icon()
