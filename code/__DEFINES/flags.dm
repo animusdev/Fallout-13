@@ -38,6 +38,7 @@
 #define UNUSED_TRANSIT_TURF 2
 #define CAN_BE_DIRTY 4 //If a turf can be made dirty at roundstart. This is also used in areas.
 #define CAN_HAVE_NATURE 8
+#define ADJACENCIES_OVERLAY 16
 
 /*
 	These defines are used specifically with the atom/pass_flags bitmask

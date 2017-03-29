@@ -10,16 +10,9 @@ turf/var/rockpick=null
 turf/closed/mineral/proc/randomizerock(mineraltype)
 	icon_state = pick("rock1","rock2","rock3","rock4","rock5","rock6")
 	spawn(50)
-		if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
-			rockTurfEdgeCache = list()
-			rockTurfEdgeCache.len = 4
-			rockTurfEdgeCache[NORTH_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_n", layer = 6)
-			rockTurfEdgeCache[SOUTH_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_s", layer = 6)
-			rockTurfEdgeCache[EAST_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_e", layer = 6)
-			rockTurfEdgeCache[WEST_EDGING] = image('icons/fallout/turfs/mining.dmi', "rock_side_w", layer = 6)
-
 		spawn(1)
-			fullUpdateJunctionOverlays()
+			for(var/turf/t in orange(1,src))
+				t.updateMineralOverlays()
 	switch(mineraltype)
 		if("iron")
 			icon_state = pick("rock_Iron1","rock_Iron2","rock_Iron3")
@@ -75,6 +68,13 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 /turf/closed/mineral/shuttleRotate(rotation)
 	setDir(angle2dir(rotation+dir2angle(dir)))
 	queue_smooth(src)
+
+/turf/closed/mineral/ChangeTurf(path, defer_change = FALSE, ignore_air = FALSE)
+	for(var/turf/t in range(1,src))
+		t.clearMineralOverlays()
+	..()
+	for(var/turf/t in range(1,src))
+		t.updateMineralOverlays()
 
 
 /turf/closed/mineral/attackby(obj/item/weapon/pickaxe/P, mob/user, params)

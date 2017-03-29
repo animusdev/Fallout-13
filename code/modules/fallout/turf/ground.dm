@@ -44,18 +44,16 @@ var/global/list/desertTurfEdgeCache
 
 /turf/open/indestructible/ground/desert
 	name = "desert"
-	icon_state = "wasteland1"
+	icon_state = "wasteland"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 	/obj/item/seeds/ferocactus, /obj/item/seeds/corn,/obj/item/seeds/shroom)
 	slowdown = 0.1
-	flags = CAN_HAVE_NATURE
+	flags = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
 
 /turf/open/indestructible/ground/desert/New()
 	icon_state = "wasteland[rand(1,31)]"
 	..()
-	fullUpdateJunctionOverlays()
-
 /turf/open/indestructible/ground/dirt
 	name = "dirt"
 	icon_state = "dirtfull"
