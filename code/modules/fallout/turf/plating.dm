@@ -10,3 +10,9 @@
 
 /turf/open/floor/plating/wooden/make_plating()
 	return src
+
+/turf/open/floor/plating/tunnel
+	name = "metal floor"
+	icon_state = "tunneldirty"
+	icon = 'icons/fallout/turfs/ground.dmi'
+	baseturf = /turf/open/indestructible/ground/mountain

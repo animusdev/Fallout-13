@@ -86,11 +86,6 @@ var/global/list/desertTurfEdgeCache
 	..()
 	icon_state = "rockfloor[rand(1,2)]"
 
-/turf/open/indestructible/ground/tunnel
-	name = "metal floor"
-	icon_state = "tunneldirty"
-	icon = 'icons/fallout/turfs/ground.dmi'
-
 /turf/open/indestructible/ground/subway
 	name = "subway tunnel"
 	icon_state = "railsnone"
