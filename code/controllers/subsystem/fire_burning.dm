@@ -34,6 +34,10 @@ var/datum/subsystem/fire_burning/SSfire_burning
 
 		if(O.resistance_flags & ON_FIRE)
 			O.take_damage(20, BURN, "fire", 0)
+			var/turf/open/location = get_turf(O)//shity code detected
+			if(istype(location))
+				var/datum/gas_mixture/affected = location.air
+				affected.temperature *= 1.01
 		else
 			processing -= O
 

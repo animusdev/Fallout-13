@@ -57,6 +57,10 @@
 				var/obj/item/weapon/reagent_containers/food/snacks/S = new /obj/item/weapon/reagent_containers/food/snacks/badrecipe()
 				H.put_in_active_hand(S)
 			qdel(F)
+	else
+		. = ..()
+		if(fired)
+			P.fire_act(1000, 500)
 
 /obj/structure/campfire/fire_act(exposed_temperature, exposed_volume)
 	fire()
@@ -77,6 +81,10 @@
 		set_light(3)
 	else
 		set_light(1)
+	var/turf/open/location = get_turf(src)//shity code detected
+	if(istype(location))
+		var/datum/gas_mixture/affected = location.air
+		affected.temperature *= 1.01
 
 /obj/structure/campfire/proc/fire(mob/living/user)
 
@@ -93,7 +101,6 @@
 
 /obj/structure/campfire/proc/burn_process()
 	var/turf/location = get_turf(src)
-	location.hotspot_expose(1000,500,1)
 	for(var/A in location)
 		if(A == src)
 			continue
