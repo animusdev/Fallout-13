@@ -236,7 +236,6 @@
 				if( i>1 && !(user.is_holding(src))) //for burst firing
 					break
 			if(i > 1 && (user.mouse_on_atom && (ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom))))
-				target = user.mouse_on_atom
 				params = user.mouse_on_params
 				if(target in user.contents)
 					break

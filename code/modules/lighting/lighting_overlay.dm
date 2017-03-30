@@ -17,6 +17,10 @@
 
 	var/needs_update = FALSE
 
+#ifdef LIGHTING_ANIMATION
+	var/target_color
+#endif
+
 /atom/movable/lighting_overlay/New(var/atom/loc, var/no_update = FALSE)
 	. = ..()
 	verbs.Cut()
@@ -33,6 +37,10 @@
 		return
 
 	update_overlay()
+
+#if defined(LIGHTING_ANIMATION)
+	animate_color()
+#endif
 
 /atom/movable/lighting_overlay/Destroy(var/force)
 	if (force)
@@ -81,13 +89,24 @@
 //	var/lum = max > 1e-6
 //	luminosity = 1
 
-	animate(src, color = list(
+#ifdef LIGHTING_ANIMATION
+	target_color = list(
 		cr.cache_r, cr.cache_g, cr.cache_b, 0,
 		cg.cache_r, cg.cache_g, cg.cache_b, 0,
 		cb.cache_r, cb.cache_g, cb.cache_b, 0,
 		ca.cache_r, ca.cache_g, ca.cache_b, 0,
 		0, 0, 0, 1
-	) , time = 1.5)
+	)
+#else
+	color = list(
+		cr.cache_r, cr.cache_g, cr.cache_b, 0,
+		cg.cache_r, cg.cache_g, cg.cache_b, 0,
+		cb.cache_r, cb.cache_g, cb.cache_b, 0,
+		ca.cache_r, ca.cache_g, ca.cache_b, 0,
+		0, 0, 0, 1
+	)
+#endif
+
 
 /atom/movable/lighting_overlay/ex_act(severity)
 	return 0
@@ -109,3 +128,6 @@
 /atom/movable/lighting_overlay/forceMove(atom/destination, var/no_tp=FALSE, var/harderforce = FALSE)
 	if(harderforce)
 		. = ..()
+
+/atom/movable/lighting_overlay/proc/animate_color()
+	animate(src, color = target_color, time = LIGHTING_ANIMATE_TIME, flags = ANIMATION_RELATIVE )

@@ -21,7 +21,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	name          = "Sun Lighting"
 	init_order    = 2
 	display_order = 6
-	wait          = 2
+	wait          = LIGHTING_INTERVAL
 	priority      = 25
 	flags         = SS_TICKER
 
@@ -100,7 +100,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		resuming_stage = STAGE_SOURCES
 
 	while (currentrun_lights.len)
-		var/datum/light_source/L = currentrun_lights[currentrun_lights.len]
+		var/datum/sunlight_source/L = currentrun_lights[currentrun_lights.len]
 		currentrun_lights.len--
 
 		if (L.check() || L.destroyed || L.force_update)
@@ -125,7 +125,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		resuming_stage = STAGE_CORNERS
 
 	while (currentrun_corners.len)
-		var/datum/lighting_corner/C = currentrun_corners[currentrun_corners.len]
+		var/datum/sunlighting_corner/C = currentrun_corners[currentrun_corners.len]
 		currentrun_corners.len--
 
 		C.update_overlays()
@@ -134,13 +134,12 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 			return
 
 	if (resuming_stage == STAGE_CORNERS || !resumed)
-		currentrun_overlays = sunlighting_update_overlays
-		sunlighting_update_overlays = list()
+		currentrun_overlays = sunlighting_update_overlays.Copy()
 
 		resuming_stage = STAGE_OVERLAYS
 
 	while (currentrun_overlays.len)
-		var/atom/movable/lighting_overlay/O = currentrun_overlays[currentrun_overlays.len]
+		var/atom/movable/sunlighting_overlay/O = currentrun_overlays[currentrun_overlays.len]
 		currentrun_overlays.len--
 
 		if (qdeleted(O))
@@ -150,7 +149,11 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		O.needs_update = FALSE
 		if (MC_TICK_CHECK)
 			return
-
+#if defined(LIGHTING_ANIMATION)
+	for(var/atom/movable/sunlighting_overlay/O in sunlighting_update_overlays)
+		O.animate_color()
+#endif
+	sunlighting_update_overlays.Cut()
 	resuming_stage = 0
 
 

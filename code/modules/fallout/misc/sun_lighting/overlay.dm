@@ -16,6 +16,11 @@
 
 	var/needs_update = FALSE
 
+#ifdef LIGHTING_ANIMATION
+	var/target_color
+#endif
+
+
 /atom/movable/sunlighting_overlay/New(var/atom/loc, var/no_update = FALSE)
 	. = ..()
 	verbs.Cut()
@@ -34,6 +39,10 @@
 		return
 
 	update_overlay()
+
+#if defined(LIGHTING_ANIMATION)
+	animate_color()
+#endif
 
 /atom/movable/sunlighting_overlay/Destroy(var/force)
 	if (force)
@@ -90,14 +99,23 @@
 		ca  = sundummy_lighting_corner_full
 
 	var/max = max(cr.cache_mx, cg.cache_mx, cb.cache_mx, ca.cache_mx)
-	animate(src, color = list(
+#ifdef LIGHTING_ANIMATION
+	target_color = list(
 		cr.cache, cr.cache, cr.cache, max(cr.cache, cr.cache, cr.cache),
 		cg.cache, cg.cache, cg.cache, max(cg.cache, cg.cache, cg.cache),
 		cb.cache, cb.cache, cb.cache, max(cb.cache, cb.cache, cb.cache),
 		ca.cache, ca.cache, ca.cache, max(ca.cache, ca.cache, ca.cache),
 		0, 0, 0, 0
-	), time = 1.5)
-
+	)
+#else
+	color = list(
+		cr.cache, cr.cache, cr.cache, max(cr.cache, cr.cache, cr.cache),
+		cg.cache, cg.cache, cg.cache, max(cg.cache, cg.cache, cg.cache),
+		cb.cache, cb.cache, cb.cache, max(cb.cache, cb.cache, cb.cache),
+		ca.cache, ca.cache, ca.cache, max(ca.cache, ca.cache, ca.cache),
+		0, 0, 0, 0
+	)
+#endif
 	if(max || T.is_openspace())
 		luminosity = 1
 	else
@@ -123,3 +141,6 @@
 /atom/movable/sunlighting_overlay/forceMove(atom/destination, var/no_tp=FALSE, var/harderforce = FALSE)
 	if(harderforce)
 		. = ..()
+
+/atom/movable/sunlighting_overlay/proc/animate_color()
+	animate(src, color = target_color, time = LIGHTING_ANIMATE_TIME, flags = ANIMATION_RELATIVE)

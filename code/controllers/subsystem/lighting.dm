@@ -13,7 +13,7 @@ var/list/lighting_update_overlays  = list() // List of lighting overlays queued 
 	name          = "Lighting"
 	init_order    = 1
 	display_order = 5
-	wait          = 2
+	wait          = LIGHTING_INTERVAL
 	priority      = 25
 	flags         = SS_TICKER
 
@@ -88,13 +88,11 @@ var/list/lighting_update_overlays  = list() // List of lighting overlays queued 
 			return
 
 	if (resuming_stage == STAGE_CORNERS || !resumed)
-		currentrun_overlays = lighting_update_overlays
-		lighting_update_overlays = list()
+		currentrun_overlays = lighting_update_overlays.Copy()
 
 		resuming_stage = STAGE_OVERLAYS
 
 	while (currentrun_overlays.len)
-		currentrun_overlays.Swap(1,currentrun_overlays.len)
 		var/atom/movable/lighting_overlay/O = currentrun_overlays[currentrun_overlays.len]
 		currentrun_overlays.len--
 
@@ -105,7 +103,11 @@ var/list/lighting_update_overlays  = list() // List of lighting overlays queued 
 		O.needs_update = FALSE
 		if (MC_TICK_CHECK)
 			return
-
+#if defined(LIGHTING_ANIMATION)
+	for(var/atom/movable/lighting_overlay/O in lighting_update_overlays)
+		O.animate_color()
+#endif
+	lighting_update_overlays.Cut()
 	resuming_stage = 0
 
 
