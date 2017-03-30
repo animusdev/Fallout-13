@@ -1305,6 +1305,7 @@
 #include "code\modules\fallout\obj\structures\simple_door.dm"
 #include "code\modules\fallout\obj\structures\table_smooth.dm"
 #include "code\modules\fallout\obj\structures\vault_door.dm"
+#include "code\modules\fallout\obj\structures\well.dm"
 #include "code\modules\fallout\obj\structures\window.dm"
 #include "code\modules\fallout\obj\structures\trash\barrel.dm"
 #include "code\modules\fallout\obj\structures\trash\tires.dm"

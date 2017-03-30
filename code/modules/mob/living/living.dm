@@ -191,6 +191,8 @@
 		if(pulling == AM)
 			stop_pulling()
 		step(AM, t)
+		if(client)
+			client.move_delay += (AM.self_weight + AM.contents_weight)/RATIO_WEIGHT
 		now_pushing = 0
 
 //mob verbs are a lot faster than object verbs

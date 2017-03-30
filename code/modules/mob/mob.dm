@@ -360,7 +360,7 @@ var/next_mob_id = 0
 /mob/proc/get_pulling_delay()
 	if(!pulling)
 		return 0
-	. = (pulling.self_weight + pulling.contents_weight)/10
+	. = (pulling.self_weight + pulling.contents_weight)/RATIO_WEIGHT
 
 /mob/proc/update_pull_hud_icon()
 	if(hud_used)
