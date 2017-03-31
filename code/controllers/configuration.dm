@@ -244,6 +244,8 @@
 	var/minutetopiclimit
 	var/secondtopiclimit
 
+	var/list/whitelist = list()
+	var/whitelist_on = 0
 /datum/configuration/New()
 	gamemode_cache = typecacheof(/datum/game_mode,TRUE)
 	for(var/T in gamemode_cache)
@@ -733,6 +735,8 @@
 					MAX_EX_FLAME_RANGE = BombCap
 				else
 					diary << "Unknown setting in configuration: '[name]'"
+
+	whitelist = load_whitelist()
 
 	fps = round(fps)
 	if(fps <= 0)

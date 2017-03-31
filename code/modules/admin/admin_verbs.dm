@@ -66,7 +66,11 @@ var/list/admin_verbs_admin = list(
 	/client/proc/customiseSNPC, /* Customise any interactive crewmembers in the world */
 	/client/proc/resetSNPC, /* Resets any interactive crewmembers in the world */
 	/client/proc/toggleSNPC, /* Toggles an npc's processing mode */
-	/client/proc/open_shuttle_manipulator /* Opens shuttle manipulator UI */
+	/client/proc/open_shuttle_manipulator, /* Opens shuttle manipulator UI */
+	/datum/admins/proc/add_whitelist,
+	/datum/admins/proc/remove_whitelist,
+	/datum/admins/proc/who_whitelist,
+	/datum/admins/proc/toogle_whitelist
 	)
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
