@@ -25,8 +25,8 @@
 "y" = (/turf/closed/indestructible/f13/splashscreen,/area/start)
 "z" = (/turf/open/floor/f13{icon_state = "darksolid"},/area/f13/bunker)
 "A" = (/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/bunker)
-"B" = (/turf/open/indestructible/ground/tunnel,/area/f13/caves)
-"C" = (/turf/open/indestructible/ground/tunnel,/area/f13/wasteland)
+"B" = (/turf/open/floor/plating/tunnel,/area/f13/caves)
+"C" = (/turf/open/floor/plating/tunnel,/area/f13/wasteland)
 "D" = (/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
 
 (1,1,1) = {"

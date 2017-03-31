@@ -120,7 +120,7 @@
 	power_environ = 0
 	valid_territory = 0
 	outdoors = 1
-	ambience = list('sound/ambience/ambispace.ogg','sound/ambience/title2.ogg')
+	ambience = list('sound/ambience/ambispace.ogg')
 	blob_allowed = 0
 
 
