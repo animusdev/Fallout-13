@@ -199,6 +199,7 @@
 			O.maptext = ""
 			O.layer = ABOVE_HUD_LAYER
 			O.plane = ABOVE_HUD_PLANE
+			O.appearance_flags |= NO_CLIENT_COLOR
 			cx++
 			if(cx > (4+cols))
 				cx = 4
@@ -359,6 +360,7 @@
 		W.dropped(M)
 	W.layer = initial(W.layer)
 	W.plane = initial(W.plane)
+	W.appearance_flags &= ~NO_CLIENT_COLOR
 	W.forceMove(new_location)
 
 	for(var/mob/M in can_see_contents())
