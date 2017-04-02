@@ -8,7 +8,7 @@
 
 /obj/structure/simple_door
 	name = "wooden door"
-	desc = "It opens and closes."
+	desc = "It opens and closes - nothing out of the ordinary."
 	icon = 'icons/fallout/objects/structures/doors.dmi'
 	icon_state = "house"
 	opacity = 1
@@ -16,7 +16,7 @@
 	anchored = 1
 	layer = ABOVE_ALL_MOB_LAYER
 	explosion_block = 0.5
-	var/door_type = "wasteland"
+	var/door_type = "house"
 	var/opaque = 1
 	var/manual_opened = 0
 	var/material_count = 10
