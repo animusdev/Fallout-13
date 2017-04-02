@@ -160,6 +160,7 @@
 		held_items[hand_index] = I
 		I.layer = ABOVE_HUD_LAYER
 		I.plane = ABOVE_HUD_PLANE
+		I.appearance_flags |= NO_CLIENT_COLOR
 		I.equipped(src, slot_hands)
 		if(I.pulledby)
 			I.pulledby.stop_pulling()

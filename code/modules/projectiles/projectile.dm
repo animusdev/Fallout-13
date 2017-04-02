@@ -289,6 +289,9 @@
 
 			var/ox = round(screenview/2) //"origin" x
 			var/oy = round(screenview/2) //"origin" y
+			if(user.client)
+				x += user.client.pixel_x
+				y += user.client.pixel_y
 //			to_chat(world, "Pixel position: [x] [y]")
 			var/angle = Atan2(y - oy, x - ox)
 //			to_chat(world, "Angle: [angle]")

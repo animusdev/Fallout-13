@@ -29,4 +29,5 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "bites"
+	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2

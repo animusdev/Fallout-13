@@ -235,8 +235,6 @@
 			if(!issilicon(user))
 				if( i>1 && !(user.is_holding(src))) //for burst firing
 					break
-			if(i > 1 && (user.mouse_on_atom && (ismob(user.mouse_on_atom) || isobj(user.mouse_on_atom) || isturf(user.mouse_on_atom))))
-				params = user.mouse_on_params
 				if(target in user.contents)
 					break
 				if(target == user)
@@ -246,7 +244,6 @@
 					sprd = round((rand() - 0.5) * (randomized_gun_spread + randomized_bonus_spread))
 				else //Smart spread
 					sprd = round((i / burst_size - 0.5) * (randomized_gun_spread + randomized_bonus_spread))
-
 				if(!chambered.fire_casing(target, user, params, ,suppressed, zone_override, sprd))
 					shoot_with_empty_chamber(user)
 					break
@@ -451,13 +448,27 @@
 
 /datum/action/toggle_scope_zoom/IsAvailable()
 	. = ..()
-	if(!. && gun)
-		gun.zoom(owner, FALSE)
+	if(!.)
+		return 0
+	if(!owner.is_holding(gun))
+		return 0
+	return 1
 
 /datum/action/toggle_scope_zoom/Remove(mob/living/L)
 	gun.zoom(L, FALSE)
 	..()
 
+/mob/living/var/obj/item/weapon/gun/zoomgun
+
+/mob/living/Move(loc,dir)
+	..()
+	if(zoomgun)
+		zoomgun.zoom(src, FALSE)
+
+/mob/living/setDir(newdir)
+	if(zoomgun && dir != newdir)
+		zoomgun.zoom(src, FALSE)
+	..()
 
 /obj/item/weapon/gun/proc/zoom(mob/living/user, forced_zoom)
 	if(!user || !user.client)
@@ -471,7 +482,22 @@
 		else
 			zoomed = !zoomed
 
+	update_zoom(user)
+
+/obj/item/weapon/gun/equipped(mob/user, slot)
+	..()
+	if(azoom && user && user.client)
+		update_zoom(user)
+		azoom.UpdateButtonIcon()
+
+/obj/item/weapon/gun/proc/update_zoom(mob/living/user)
+	if(!user || !user.client)
+		return
 	if(zoomed)
+		if(!user.is_holding(src))
+			zoom(user, FALSE)
+			return
+		user.zoomgun = src
 		var/_x = 0
 		var/_y = 0
 		switch(user.dir)
@@ -487,9 +513,9 @@
 		user.client.pixel_x = world.icon_size*_x
 		user.client.pixel_y = world.icon_size*_y
 	else
+		user.zoomgun = null
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
-
 
 //Proc, so that gun accessories/scopes/etc. can easily add zooming.
 /obj/item/weapon/gun/proc/build_zooming()
