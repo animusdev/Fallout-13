@@ -674,7 +674,7 @@ var/next_mob_id = 0
 	if(lying)
 		pass_flags |= PASSCRAWL
 	else
-		pass_flags ^= PASSCRAWL
+		pass_flags &= ~PASSCRAWL
 	return canmove
 
 
