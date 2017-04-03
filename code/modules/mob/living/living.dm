@@ -543,6 +543,7 @@
 /mob/living/verb/resist()
 	set name = "Resist"
 	set category = "IC"
+	set hidden = 1
 
 	if(!isliving(src) || next_move > world.time || incapacitated(ignore_restraints = 1))
 		return

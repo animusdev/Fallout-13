@@ -740,6 +740,7 @@
 		H.dna && H.dna.species && (!(NOHUNGER in H.dna.species.species_traits)))
 		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
+		var/thirst_rate = THIRST_FACTOR
 		if(H.satiety > 0)
 			H.satiety--
 		if(H.satiety < 0)
@@ -747,7 +748,9 @@
 			if(prob(round(-H.satiety/40)))
 				H.Jitter(5)
 			hunger_rate = 3 * HUNGER_FACTOR
+			thirst_rate = 5 * THIRST_FACTOR
 		H.nutrition = max(0, H.nutrition - hunger_rate)
+		H.water_level = max(0, H.water_level - thirst_rate)
 
 
 	if (H.nutrition > NUTRITION_LEVEL_FULL)
@@ -774,14 +777,33 @@
 		H.metabolism_efficiency = 1
 
 	switch(H.nutrition)
-		if(NUTRITION_LEVEL_FULL to INFINITY)
+		if(NUTRITION_LEVEL_FAT to INFINITY)
 			H.throw_alert("nutrition", /obj/screen/alert/fat)
-		if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FULL)
+		if(NUTRITION_LEVEL_WELL_FED to NUTRITION_LEVEL_FAT)
 			H.clear_alert("nutrition")
+		if(NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
+			H.throw_alert("nutrition", /obj/screen/alert/starving, 1)
+		if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
+			H.throw_alert("nutrition", /obj/screen/alert/starving, 2)
 		if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
-			H.throw_alert("nutrition", /obj/screen/alert/hungry)
+			H.throw_alert("nutrition", /obj/screen/alert/starving, 3)
 		else
-			H.throw_alert("nutrition", /obj/screen/alert/starving)
+			H.throw_alert("nutrition", /obj/screen/alert/starving, 4)
+	switch(H.water_level)
+		if(THIRST_LEVEL_LIGHT to INFINITY)
+			H.clear_alert("thirst")
+		if(THIRST_LEVEL_MIDDLE to THIRST_LEVEL_LIGHT)
+			H.throw_alert("thirst", /obj/screen/alert/thirst, 1)
+		if (THIRST_LEVEL_HARD to THIRST_LEVEL_MIDDLE)
+			H.throw_alert("thirst", /obj/screen/alert/thirst, 2)
+		if (THIRST_LEVEL_DEADLY to THIRST_LEVEL_HARD)
+			H.throw_alert("thirst", /obj/screen/alert/thirst, 3)
+		else
+			H.throw_alert("thirst", /obj/screen/alert/thirst, 4)
+	if(H.water_level < THIRST_LEVEL_DEADLY || H.nutrition < NUTRITION_LEVEL_STARVING)
+		H.adjustOxyLoss(2)
+		H.adjustToxLoss(2)
+	return 1
 
 
 /datum/species/proc/update_sight(mob/living/carbon/human/H)
@@ -917,6 +939,7 @@
 		. += 2
 
 	if(!ignoreslow && !flightpack && gravity)
+	/*
 		if(H.wear_suit)
 			. += H.wear_suit.slowdown
 		if(H.shoes)
@@ -926,6 +949,7 @@
 		for(var/obj/item/I in H.held_items)
 			if(I.flags & HANDSLOW)
 				. += I.slowdown
+	*/
 		var/health_deficiency = (100 - H.health + H.staminaloss)
 		var/hungry = (500 - H.nutrition) / 5 // So overeat would be 100 and default level would be 80
 		if(health_deficiency >= 40)
@@ -935,6 +959,8 @@
 				. += (health_deficiency / 25)
 		if((hungry >= 70) && !flight)		//Being hungry won't stop you from using flightpack controls/flapping your wings although it probably will in the wing case but who cares.
 			. += hungry / 50
+		if(H.water_level < THIRST_LEVEL_MIDDLE)
+			. += (THIRST_LEVEL_FULL - H.water_level)/50
 		if(H.disabilities & FAT)
 			. += (1.5 - flight)
 		if(H.bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT)

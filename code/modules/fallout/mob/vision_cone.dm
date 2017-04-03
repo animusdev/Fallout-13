@@ -58,6 +58,14 @@ proc/cone(atom/center = usr, dir = NORTH, list/list = oview(center))
 mob/proc/update_vision_cone()
 	return
 
+//Updating fov position on screen depends from client.pixel_x/y values
+mob/proc/update_fov_position()
+
+mob/living/update_fov_position()
+	if(!client || !fov)
+		return
+	fov.screen_loc = "1:[-client.pixel_x],1:[-client.pixel_y]"
+
 mob/living/update_vision_cone()
 	if(src.client)
 		var/image/I = null
@@ -78,7 +86,7 @@ mob/living/update_vision_cone()
 				src.client.hidden_mobs += M
 				if(src.pulling == M)//If we're pulling them we don't want them to be invisible, too hard to play like that.
 					I.override = 0
-			
+
 			//Optional items can be made invisible too. Uncomment this part if you wish to items to be invisible. Potentially cpu intensive.
 			//var/obj/item/O
 			//for(O in cone(src, OPPOSITE_DIR(src.dir), oview(src)))

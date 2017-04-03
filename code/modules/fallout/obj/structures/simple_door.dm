@@ -14,7 +14,7 @@
 	opacity = 1
 	density = 1
 	anchored = 1
-	layer = ABOVE_ALL_MOB_LAYER
+	layer = CLOSED_DOOR_LAYER
 	explosion_block = 0.5
 	var/door_type = "house"
 	var/opaque = 1
@@ -56,6 +56,7 @@
 	set_opacity(0)
 	density = 0
 	icon_state = "[door_type]open"
+	layer = OPEN_DOOR_LAYER
 
 /obj/structure/simple_door/proc/Close(animate)
 	playsound(src.loc, close_sound, 30, 0, 0)
@@ -68,6 +69,7 @@
 	set_opacity(opaque)
 	density = 1
 	moving = 0
+	layer = CLOSED_DOOR_LAYER
 
 /obj/structure/simple_door/proc/SwitchState(animate)
 	if(density)

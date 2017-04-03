@@ -24,6 +24,7 @@
 	var/overdose_threshold = 0
 	var/addiction_threshold = 0
 	var/addiction_stage = 0
+	var/water_factor = 0
 	var/overdosed = 0 // You fucked up and this is now triggering its overdose effects, purge that shit quick.
 
 /datum/reagent/Destroy() // This should only be called by the holder, so it's already handled clearing its references
@@ -49,6 +50,7 @@
 
 /datum/reagent/proc/on_mob_life(mob/living/M)
 	current_cycle++
+	M.water_level += water_factor
 	holder.remove_reagent(src.id, metabolization_rate * M.metabolism_efficiency) //By default it slowly disappears.
 	return
 

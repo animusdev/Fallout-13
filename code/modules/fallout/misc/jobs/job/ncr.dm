@@ -29,7 +29,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	back = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	l_pocket = /obj/item/device/radio
-	r_pocket = /obj/item/clothing/glasses/night
+	r_pocket = /obj/item/device/flashlight/torch/flare/blue
 	belt_contents = list(/obj/item/ammo_box/magazine/m556 = 3, \
 		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 2, \
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
@@ -96,7 +96,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer
 	back = /obj/item/weapon/minigunpack
 	l_pocket = /obj/item/device/radio
-	r_pocket = /obj/item/clothing/glasses/night
+	r_pocket = /obj/item/device/flashlight/torch/flare/blue
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, /obj/item/ammo_box/magazine/m10mm_adv = 2)
 

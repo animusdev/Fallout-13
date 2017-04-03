@@ -51,6 +51,12 @@
 #define NUTRITION_LEVEL_HUNGRY 250
 #define NUTRITION_LEVEL_STARVING 150
 
+#define THIRST_LEVEL_FULL 500
+#define THIRST_LEVEL_LIGHT 300
+#define THIRST_LEVEL_MIDDLE 200
+#define THIRST_LEVEL_HARD 100
+#define THIRST_LEVEL_DEADLY 75
+
 //Slime evolution threshold. Controls how fast slimes can split/grow
 #define SLIME_EVOLUTION_THRESHOLD 10
 

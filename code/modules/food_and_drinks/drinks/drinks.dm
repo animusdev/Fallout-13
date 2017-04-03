@@ -30,6 +30,17 @@
 	if(!canconsume(M, user))
 		return 0
 
+	var/fullness = M.water_level + 10
+	for(var/datum/reagent/C in M.reagents.reagent_list) //we add the nutrition value of what we're currently digesting
+		fullness += C.water_factor * C.volume / C.metabolization_rate
+
+	if(fullness > THIRST_LEVEL_FULL)
+		if(M == user)
+			to_chat(M, "<span class='notice'>You can't drink anymore.</span>")
+		else
+			to_chat(user, "<span class='notice'>[M] can't drink anymore.</span>")
+		return 0
+
 	if(M == user)
 		to_chat(M, "<span class='notice'>You swallow a gulp of [src].</span>")
 

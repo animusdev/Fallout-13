@@ -516,6 +516,7 @@
 		user.zoomgun = null
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
+	user.update_fov_position()
 
 //Proc, so that gun accessories/scopes/etc. can easily add zooming.
 /obj/item/weapon/gun/proc/build_zooming()

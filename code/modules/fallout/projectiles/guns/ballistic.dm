@@ -33,6 +33,7 @@
 	zoom_amt = 4
 	w_class = WEIGHT_CLASS_NORMAL
 	self_weight = 0.85
+	recoil = 2
 
 /obj/item/weapon/gun/ballistic/automatic/rifle
 	name = "Automatic Rifle .308"
@@ -48,6 +49,7 @@
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	recoil = 2
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
@@ -62,7 +64,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	pumpsound = 'sound/weapons/boltpump.ogg'
 	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
-	
+	recoil = 2
+
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "rifle-scope"
@@ -127,6 +130,7 @@
 	casing_ejector = 1
 	w_class = WEIGHT_CLASS_HUGE
 	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
+	recoil = 2
 
 /obj/item/weapon/gun/ballistic/automatic/bozar
 	name = "\improper Bozar"
@@ -145,3 +149,4 @@
 	zoomable = TRUE
 	zoom_amt = 7
 	w_class = WEIGHT_CLASS_HUGE
+	recoil = 3
