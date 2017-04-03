@@ -103,6 +103,7 @@
 	description = "A ubiquitous chemical substance that is composed of hydrogen and oxygen."
 	color = "#AAAAAA77" // rgb: 170, 170, 170, 77 (alpha)
 	var/cooling_temperature = 2
+	water_factor = 5 * REAGENTS_METABOLISM
 
 /*
  *	Water reaction to turf
