@@ -76,7 +76,7 @@ var/global/list/desertTurfEdgeCache
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/mountain
-	name = "mountain"
+	name = "cave"
 	icon_state = "rockfloor1"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	allowed_plants = list(/obj/item/seeds/glow)
