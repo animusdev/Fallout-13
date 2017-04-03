@@ -3,7 +3,6 @@
 	id = "ghoul"
 	limbs_id = "ghoul"
 	default_color = "AB6F54"
-	fixed_mut_color = "AB6F54"
 	roundstart = 1
 	armor = -30
 	speedmod = 0.5
@@ -11,7 +10,7 @@
 	punchdamagehigh = 6
 	punchstunthreshold = 6
 	use_skintones = 0
-	species_traits = list(RADIMMUNE, NOBLOOD, VIRUSIMMUNE, MUTCOLORS)
+	species_traits = list(RADIMMUNE, NOBLOOD, VIRUSIMMUNE)
 	sexes = 0
 
 /datum/species/ghoul/on_species_gain(mob/living/carbon/C, datum/species/old_species)
