@@ -67,6 +67,9 @@
 
 	H.set_faction(faction)
 	H.set_status(status)
+	var/datum/f13_faction/F = get_faction_datum(H.social_faction)
+	if(F && F.flags & HAVE_FREQ)
+		H.add_memory("[F.name] is using freq ([F.freq]) with encryption key ([F.encryption_key])")
 
 //	if(!visualsOnly && announce)
 //		announce(H)

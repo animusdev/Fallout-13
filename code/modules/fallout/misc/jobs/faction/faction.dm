@@ -25,16 +25,20 @@ proc/get_faction_members(var/faction)
 /datum/f13_faction
 	var/name = "UNKNOWN"
 	var/id = "none"
-	var/welcome_text = ""
-	var/color = "#171717"
-	var/list/verbs = list()
-	var/head_status = null
-	var/list/craft_recipes = list()
 	var/flags = null
-	var/voting = 0
 
+	var/welcome_text = "" //Showing text on faction joining
+	var/color = "#171717"
+
+	var/head_status = null //Main status at this faction. Currently using for leader voting
+
+// Frequency settings
 	var/freq
 	var/encryption_key
+
+	var/tmp/voting = 0 //Have head voting now
+	var/list/craft_recipes = list() //recipes which can craft every member of this faction
+	var/list/verbs = list() //Verbs which had every member
 
 /datum/f13_faction/New()
 	..()
@@ -42,11 +46,13 @@ proc/get_faction_members(var/faction)
 		freq = sanitize_frequency(rand(MIN_FREQ, MAX_FREQ))
 		encryption_key = format_encryption_key(rand(0, 9999))
 
+//Vote for new leader. At voting involvement near staying members
+//This proc is so big, but it's easy to understand.
 mob/proc/begin_head_voting()
 	set name = "Leader Voting"
 	set category = "Faction"
 
-	if(stat == DEAD)
+	if(stat)
 		return
 
 	var/datum/f13_faction/F = get_faction_datum(src.social_faction)
@@ -62,13 +68,13 @@ mob/proc/begin_head_voting()
 		to_chat(src, "<span class='notice'>You already [F.head_status].</span>")
 		return 0
 
-	if(alert("You are sure?",,"Yes","No")=="No")
+	if(alert("Are you sure?",,"Yes","No")=="No")
 		return 0
 
 	var/list/all_members = get_faction_members(F.name)
 	var/list/all_head_candidates = list()
 	for(var/mob/M in all_members)
-		if(M.stat != DEAD && M.ckey)
+		if(!M.stat && M.ckey)
 			all_head_candidates += M
 	if(all_head_candidates.len < 2)
 		to_chat(src, "<span class='notice'>You are the last member of your faction.</span>")
@@ -105,7 +111,7 @@ mob/proc/begin_head_voting()
 						M.say("PUTIN THE BEST!!!")
 					sleep(20)
 					M.say("I changed my mind...")
-				M.say(pick("I vote for [choice].", "[choice] - I choose you!", "I choose [choice] to be [F.head_status].", "I believe [choice] is worthy to be our leader."))
+				M.say(pick("I vote for [choice].", "[choice] - I choose you!!!", "I choose [choice] to be [F.head_status].", "I believe [choice] is worthy to be our leader."))
 			choices[choice] += 1
 			voters_count -= 1
 
@@ -161,15 +167,10 @@ mob/proc/set_faction(var/faction)
 
 	src.social_faction = F.name
 	src.faction += F.name
-	to_chat(src, "<span class='notice'>You have joined the <span style='color: [F.color];'>[F.name]</span> faction.</span>")
-	if(F.flags & HAVE_FREQ)
-		src.add_memory("[F.name] is using freq ([F.freq]) with encryption key ([F.encryption_key])")
+
 	src.allow_recipes += F.craft_recipes
 	src.verbs += F.verbs
 
-
-	if(F.welcome_text)
-		to_chat(src, F.welcome_text)
 	return 1
 
 /datum/f13_faction/vault
