@@ -1,6 +1,6 @@
 /datum/job
 
-	var/status = "Wastelander"
+	var/status = "none"
 
 	var/whitelist_on = 0
 

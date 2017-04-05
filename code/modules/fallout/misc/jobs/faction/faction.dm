@@ -6,7 +6,7 @@ proc/get_faction_by_freq(freq)
 	for(var/F in human_factions)
 		var/datum/f13_faction/datum = get_faction_datum(F)
 		if(freq == datum.freq)
-			return datum.name
+			return datum.id
 	return null
 
 proc/get_faction_datum(faction)
@@ -26,6 +26,7 @@ proc/get_faction_members(var/faction)
 	var/name = "UNKNOWN"
 	var/id = "none"
 	var/flags = null
+	var/list/jobs
 
 	var/welcome_text = "" //Showing text on faction joining
 	var/color = "#171717"
@@ -71,7 +72,7 @@ mob/proc/begin_head_voting()
 	if(alert("Are you sure?",,"Yes","No")=="No")
 		return 0
 
-	var/list/all_members = get_faction_members(F.name)
+	var/list/all_members = get_faction_members(F.id)
 	var/list/all_head_candidates = list()
 	for(var/mob/M in all_members)
 		if(!M.stat && M.ckey)
@@ -158,15 +159,15 @@ mob/proc/set_faction(var/faction)
 	var/datum/f13_faction/last_F = get_faction_datum(src.social_faction)
 	if(!F)
 		return 0
-	if(F.name == src.social_faction)
+	if(F.id == src.social_faction)
 		return 1
 	if(last_F)
 		src.verbs -= last_F.verbs
 		src.allow_recipes -= last_F.craft_recipes
-		src.faction -= last_F.name
+		src.faction -= last_F.id
 
-	src.social_faction = F.name
-	src.faction += F.name
+	src.social_faction = F.id
+	src.faction += F.id
 
 	src.allow_recipes += F.craft_recipes
 	src.verbs += F.verbs
@@ -197,7 +198,8 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/legion
 	name = "Legion"
-	head_status = "Legat"
+	head_status = "Legate"
+	id = "legion"
 	color = "#C24D44"
 	flags = HAVE_FREQ | HAVE_FLAG
 //	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \

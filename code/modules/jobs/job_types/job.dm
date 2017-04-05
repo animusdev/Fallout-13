@@ -17,7 +17,7 @@
 	var/department_flag = 0
 
 	//Players will be allowed to spawn in as jobs that are set to "Station"
-	var/faction = "None"
+	var/faction = "none"
 
 	//How many players can be this job
 	var/total_positions = 0

@@ -60,13 +60,13 @@ var/datum/subsystem/job/SSjob
 	var/list/factions = subtypesof(/datum/f13_faction)
 	for(var/F in factions)
 		var/datum/f13_faction/faction = new F()
-		human_factions[faction.name] = faction
+		human_factions[faction.id] = faction
 
 /datum/subsystem/job/proc/SetupStatus()
 	var/list/status = subtypesof(/datum/status)
 	for(var/S in status)
 		var/datum/status/stat = new S()
-		human_status[stat.name] = stat
+		human_status[stat.id] = stat
 
 /datum/subsystem/job/proc/GetJob(rank)
 	if(!occupations.len)
