@@ -26,7 +26,7 @@ proc/get_faction_members(var/faction)
 	var/name = "UNKNOWN"
 	var/id = "none"
 	var/flags = null
-	var/list/jobs
+	var/list/jobs = list()
 
 	var/welcome_text = "" //Showing text on faction joining
 	var/color = "#171717"
@@ -46,6 +46,9 @@ proc/get_faction_members(var/faction)
 	if(flags & HAVE_FREQ)
 		freq = sanitize_frequency(rand(MIN_FREQ, MAX_FREQ))
 		encryption_key = format_encryption_key(rand(0, 9999))
+	for(var/datum/job/job in SSjob.occupations)
+		if(job.faction == src.id)
+			jobs += job
 
 //Vote for new leader. At voting involvement near staying members
 //This proc is so big, but it's easy to understand.
@@ -214,9 +217,9 @@ mob/proc/set_faction(var/faction)
 	id = "none"
 
 /datum/f13_faction/den
-	name = "Den"
+	name = "City"
 	color = "#804B00"
-	id = "den"
+	id = "city"
 	head_status = "Sheriff"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)

@@ -3,7 +3,7 @@ Legion
 */
 
 //recruit
-/datum/job/legion/recruit
+/datum/job/recruit
 	title = "Recruit"
 	flag = LEGRECRUIT
 	department_head = list("Centurion")
@@ -22,7 +22,7 @@ Legion
 	access = list()
 	minimal_access = list()
 
-/datum/outfit/job/legrecruit
+/datum/outfit/legrecruit
 	name = "Recruit"
 	id = null
 	ears = null
@@ -50,7 +50,7 @@ Legion
 /*	/obj/item/weapon/machete = 1*/)
 
 //decan
-/datum/job/legion/decan
+/datum/job/decan
 	title = "Decanus"
 	flag = LEGDECAN
 	department_head = list("Centurion")
@@ -98,7 +98,7 @@ Legion
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //vexillarius
-/datum/job/legion/vex
+/datum/job/vex
 	title = "Vexillarius"
 	flag = LEGVEX
 	department_head = list("Legate")
@@ -145,7 +145,7 @@ Legion
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //centurion
-/datum/job/legion/centurion
+/datum/job/centurion
 	title = "Centurion"
 	flag = LEGCENTURION
 	department_head = list("Legate")
@@ -192,7 +192,7 @@ Legion
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //legat
-/datum/job/legion/legate
+/datum/job/legate
 	title = "Legate"
 	flag = LEGLEGAT
 	department_head = list("Caesar")
