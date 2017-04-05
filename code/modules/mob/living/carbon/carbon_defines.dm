@@ -1,6 +1,7 @@
 /mob/living/carbon
 	gender = MALE
 	pressure_resistance = 15
+	self_weight = 60
 	var/list/stomach_contents		= list()
 	var/list/internal_organs		= list()	//List of /obj/item/organ in the mob. They don't go in the contents for some reason I don't want to know.
 	var/list/internal_organs_slot	= list()	//Same as above, but stores "slot ID" - "organ" pairs for easy access.
