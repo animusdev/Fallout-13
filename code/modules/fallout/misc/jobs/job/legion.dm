@@ -219,7 +219,7 @@ Legion
 	ears = null
 	belt = null
 
-/datum/outfit/job/leglegat/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/leglegate/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
 	shoes = /obj/item/clothing/shoes/f13/legionlegate

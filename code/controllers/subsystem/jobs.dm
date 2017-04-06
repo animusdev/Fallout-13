@@ -148,6 +148,10 @@ var/datum/subsystem/job/SSjob
 			Debug("GRJ player not old enough, Player: [player]")
 			continue
 
+		if(!job.is_gender_allowed(player.client))
+			Debug("GRJ job gender check failed, Player: [player]")
+			continue
+
 		if(player.mind && job.title in player.mind.restricted_roles)
 			Debug("GRJ incompatible with antagonist role, Player: [player], Job: [job.title]")
 			continue
@@ -312,6 +316,9 @@ var/datum/subsystem/job/SSjob
 			// Loop through all jobs
 			for(var/datum/job/job in shuffledoccupations) // SHUFFLE ME BABY
 				if(!job)
+					continue
+
+				if(!job.is_gender_allowed(player.client))
 					continue
 
 				if(jobban_isbanned(player, job.title))
@@ -482,6 +489,8 @@ var/datum/subsystem/job/SSjob
 				continue
 			if(!job.player_old_enough(player.client))
 				level6++
+				continue
+			if(!job.is_gender_allowed(player.client))
 				continue
 			if(player.client.prefs.GetJobDepartment(job, 1) & job.flag)
 				level1++
