@@ -53,9 +53,9 @@
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Glowing Feral Ghoul"
 	desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are a necrotic post-humans, rotting, zombie-like mutants, that are so irradiated they actually glow in the dark."
-	icon_state = "retro_glowingghoul"
-	icon_living = "retro_glowingghoul"
-	icon_dead = "retro_glowingghoul_d"
+	icon_state = "retro_glowghoul"
+	icon_living = "retro_glowghoul"
+	icon_dead = "retro_glowghoul_d"
 	icon_gib = "gib"
 	maxHealth = 100
 	health = 100
