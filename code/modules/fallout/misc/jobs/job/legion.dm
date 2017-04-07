@@ -3,13 +3,13 @@ Legion
 */
 
 //recruit
-/datum/job/legion/recruit
-	title = "Legion Recruit"
+/datum/job/recruit
+	title = "Recruit"
 	flag = LEGRECRUIT
-	department_head = list("Legion Centurion")
+	department_head = list("Centurion")
 	department_flag = WASTELAND
-	faction = "Legion"
-	status = "Recruit"
+	faction = "legion"
+	status = "recruit"
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the centurion"
@@ -22,8 +22,8 @@ Legion
 	access = list()
 	minimal_access = list()
 
-/datum/outfit/job/legrecruit
-	name = "Legion Recruit"
+/datum/outfit/legrecruit
+	name = "Recruit"
 	id = null
 	ears = null
 	belt = null
@@ -50,13 +50,13 @@ Legion
 /*	/obj/item/weapon/machete = 1*/)
 
 //decan
-/datum/job/legion/decan
-	title = "Legion Decanus"
+/datum/job/decan
+	title = "Decanus"
 	flag = LEGDECAN
-	department_head = list("Legion Centurion")
+	department_head = list("Centurion")
 	department_flag = WASTELAND
-	faction = "Legion"
-	status = "Decanus"
+	faction = "legion"
+	status = "decanus"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the centurion"
@@ -70,7 +70,7 @@ Legion
 	minimal_access = list()
 
 /datum/outfit/job/legdecan
-	name = "Legion Decanus"
+	name = "Decanus"
 	id = null
 	ears = null
 	belt = null
@@ -98,13 +98,13 @@ Legion
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //vexillarius
-/datum/job/legion/vex
-	title = "Legion Vexillarius"
+/datum/job/vex
+	title = "Vexillarius"
 	flag = LEGVEX
-	department_head = list("Legion Legate")
+	department_head = list("Legate")
 	department_flag = WASTELAND
-	faction = "Legion"
-	status = "Vexillarius"
+	faction = "legion"
+	status = "vexillarius"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the legate"
@@ -118,7 +118,7 @@ Legion
 	minimal_access = list()
 
 /datum/outfit/job/legvex
-	name = "Legion Vexillarius"
+	name = "Vexillarius"
 	id = null
 	ears = null
 	belt = null
@@ -145,16 +145,16 @@ Legion
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //centurion
-/datum/job/legion/centurion
-	title = "Legion Centurion"
+/datum/job/centurion
+	title = "Centurion"
 	flag = LEGCENTURION
-	department_head = list("Legion Legate")
+	department_head = list("Legate")
 	department_flag = WASTELAND
-	faction = "Legion"
-	status = "Centurion"
+	faction = "legion"
+	status = "centurion"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the legat"
+	supervisors = "the legate"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -165,7 +165,7 @@ Legion
 	minimal_access = list()
 
 /datum/outfit/job/legcenturion
-	name = "Legion Centurion"
+	name = "Centurion"
 	id = null
 	ears = null
 	belt = null
@@ -192,13 +192,13 @@ Legion
 	/obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 //legat
-/datum/job/legion/legate
-	title = "Legion Legate"
+/datum/job/legate
+	title = "Legate"
 	flag = LEGLEGAT
 	department_head = list("Caesar")
 	department_flag = WASTELAND
-	faction = "Legion"
-	status = "Legate"
+	faction = "legion"
+	status = "legate"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Caesar"
@@ -214,12 +214,12 @@ Legion
 	minimal_access = list()
 
 /datum/outfit/job/leglegate
-	name = "Legion Legate"
+	name = "Legate"
 	id = null
 	ears = null
 	belt = null
 
-/datum/outfit/job/leglegat/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/leglegate/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(/obj/item/clothing/under/pants/f13/caravan)
 	shoes = /obj/item/clothing/shoes/f13/legionlegate

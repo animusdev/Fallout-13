@@ -1,10 +1,10 @@
 /datum/job/squad_leader
-	title = "NCR Squad Leader"
+	title = "Squad Leader"
 	flag = SQDLEAD
 	department_head = list("NCR Command")
 	department_flag = WASTELAND
-	faction = "NCR"
-	status = "Squad Leader"
+	faction = "ncr"
+	status = "squad_leader"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the NCR command"
@@ -19,7 +19,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/squad_leader
-	name = "NCR Squad Leader"
+	name = "Squad Leader"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -35,12 +35,12 @@
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
 
 /datum/job/ranger
-	title = "NCR Ranger"
+	title = "Ranger"
 	flag = RANGER
 	department_head = list("Squad Leader")
 	department_flag = WASTELAND
-	faction = "NCR"
-	status = "Ranger"
+	faction = "ncr"
+	status = "ranger"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the squad leader"
@@ -53,7 +53,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/ranger
-	name = "NCR Ranger"
+	name = "Ranger"
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/light
@@ -66,12 +66,12 @@
 		/obj/item/ammo_box/m44 = 3)
 
 /datum/job/elite_trooper
-	title = "NCR Elite Trooper"
+	title = "Elite Trooper"
 	flag = SERGEANT
 	department_head = list("Squad Leader")
 	department_flag = WASTELAND
-	faction = "NCR"
-	status = "Elite Trooper"
+	faction = "ncr"
+	status = "etrooper"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the squad leader"
@@ -85,7 +85,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/elite_trooper
-	name = "NCR Elite Trooper"
+	name = "Elite Trooper"
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat
@@ -101,12 +101,12 @@
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, /obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 /datum/job/trooper
-	title = "NCR Trooper"
+	title = "Trooper"
 	flag = TROOPER
 	department_head = list("Squad Leader")
 	department_flag = WASTELAND
-	faction = "NCR"
-	status = "Trooper"
+	faction = "ncr"
+	status = "trooper"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the squad leader"
@@ -120,7 +120,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/trooper
-	name = "NCR Trooper"
+	name = "Trooper"
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/swat

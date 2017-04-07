@@ -34,6 +34,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	self_weight = 0.85
 	recoil = 2
+	scopetype = /obj/screen/fullscreen/scope/short
 
 /obj/item/weapon/gun/ballistic/automatic/rifle
 	name = "Automatic Rifle .308"
@@ -74,6 +75,7 @@
 	zoomable = TRUE
 	zoom_amt = 6
 	w_class = WEIGHT_CLASS_NORMAL
+	scopetype = /obj/screen/fullscreen/scope/medium
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	name = "Assault Rifle 5.56mm"
@@ -150,3 +152,4 @@
 	zoom_amt = 7
 	w_class = WEIGHT_CLASS_HUGE
 	recoil = 3
+	scopetype = /obj/screen/fullscreen/scope/long

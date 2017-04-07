@@ -208,31 +208,31 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		return 0
 	S.cd = "/"
 
-	to_chat(S["version"], SAVEFILE_VERSION_MAX)//updates (or failing that the sanity checks) will ensure data is not invalid at load. Assume up-to-date
+	S["version"] << SAVEFILE_VERSION_MAX//updates (or failing that the sanity checks) will ensure data is not invalid at load. Assume up-to-date
 
 
 	//general preferences
-	to_chat(S["ooccolor"], ooccolor)
-	to_chat(S["lastchangelog"], lastchangelog)
-	to_chat(S["UI_style"], UI_style)
-	to_chat(S["hotkeys"], hotkeys)
-	to_chat(S["tgui_fancy"], tgui_fancy)
-	to_chat(S["tgui_lock"], tgui_lock)
-	to_chat(S["be_special"], be_special)
-	to_chat(S["default_slot"], default_slot)
-	to_chat(S["toggles"], toggles)
-	to_chat(S["chat_toggles"], chat_toggles)
-	to_chat(S["ghost_form"], ghost_form)
-	to_chat(S["ghost_orbit"], ghost_orbit)
-	to_chat(S["ghost_accs"], ghost_accs)
-	to_chat(S["ghost_others"], ghost_others)
-	to_chat(S["preferred_map"], preferred_map)
-	to_chat(S["ignoring"], ignoring)
-	to_chat(S["ghost_hud"], ghost_hud)
-	to_chat(S["inquisitive_ghost"], inquisitive_ghost)
-	to_chat(S["uses_glasses_colour"], uses_glasses_colour)
-	to_chat(S["clientfps"], clientfps)
-	to_chat(S["parallax"], parallax)
+	S["ooccolor"] << ooccolor
+	S["lastchangelog"] << lastchangelog
+	S["UI_style"] << UI_style
+	S["hotkeys"] << hotkeys
+	S["tgui_fancy"] << tgui_fancy
+	S["tgui_lock"] << tgui_lock
+	S["be_special"] << be_special
+	S["default_slot"] << default_slot
+	S["toggles"] << toggles
+	S["chat_toggles"] << chat_toggles
+	S["ghost_form"] << ghost_form
+	S["ghost_orbit"] << ghost_orbit
+	S["ghost_accs"] << ghost_accs
+	S["ghost_others"] << ghost_others
+	S["preferred_map"] << preferred_map
+	S["ignoring"] << ignoring
+	S["ghost_hud"] << ghost_hud
+	S["inquisitive_ghost"] << inquisitive_ghost
+	S["uses_glasses_colour"] << uses_glasses_colour
+	S["clientfps"] << clientfps
+	S["parallax"] << parallax
 
 	return 1
 
@@ -394,54 +394,54 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 
 	//Character
-	to_chat(S["OOC_Notes"], metadata)
-	to_chat(S["real_name"], real_name)
-	to_chat(S["name_is_always_random"], be_random_name)
-	to_chat(S["body_is_always_random"], be_random_body)
-	to_chat(S["gender"], gender)
-	to_chat(S["age"], age)
-	to_chat(S["hair_color"], hair_color)
-	to_chat(S["facial_hair_color"], facial_hair_color)
-	to_chat(S["eye_color"], eye_color)
-	to_chat(S["skin_tone"], skin_tone)
-	to_chat(S["hair_style_name"], hair_style)
-	to_chat(S["facial_style_name"], facial_hair_style)
-	to_chat(S["underwear"], underwear)
-	to_chat(S["undershirt"], undershirt)
-	to_chat(S["socks"], socks)
-	to_chat(S["backbag"], backbag)
-	to_chat(S["species"], pref_species.id)
-	to_chat(S["feature_mcolor"], features["mcolor"])
-	to_chat(S["feature_lizard_tail"], features["tail_lizard"])
-	to_chat(S["feature_human_tail"], features["tail_human"])
-	to_chat(S["feature_lizard_snout"], features["snout"])
-	to_chat(S["feature_lizard_horns"], features["horns"])
-	to_chat(S["feature_human_ears"], features["ears"])
-	to_chat(S["feature_lizard_frills"], features["frills"])
-	to_chat(S["feature_lizard_spines"], features["spines"])
-	to_chat(S["feature_lizard_body_markings"], features["body_markings"])
-	to_chat(S["feature_lizard_legs"], features["legs"])
-	to_chat(S["clown_name"], custom_names["clown"])
-	to_chat(S["mime_name"], custom_names["mime"])
-	to_chat(S["ai_name"], custom_names["ai"])
-	to_chat(S["cyborg_name"], custom_names["cyborg"])
-	to_chat(S["religion_name"], custom_names["religion"])
-	to_chat(S["deity_name"], custom_names["deity"])
+	S["OOC_Notes"] << metadata
+	S["real_name"] << real_name
+	S["name_is_always_random"] << be_random_name
+	S["body_is_always_random"] << be_random_body
+	S["gender"] << gender
+	S["age"] << age
+	S["hair_color"] << hair_color
+	S["facial_hair_color"] << facial_hair_color
+	S["eye_color"] << eye_color
+	S["skin_tone"] << skin_tone
+	S["hair_style_name"] << hair_style
+	S["facial_style_name"] << facial_hair_style
+	S["underwear"] << underwear
+	S["undershirt"] << undershirt
+	S["socks"] << socks
+	S["backbag"] << backbag
+	S["species"] << pref_species.id
+	S["feature_mcolor"] << features["mcolor"]
+	S["feature_lizard_tail"] << features["tail_lizard"]
+	S["feature_human_tail"] << features["tail_human"]
+	S["feature_lizard_snout"] << features["snout"]
+	S["feature_lizard_horns"] << features["horns"]
+	S["feature_human_ears"] << features["ears"]
+	S["feature_lizard_frills"] << features["frills"]
+	S["feature_lizard_spines"] << features["spines"]
+	S["feature_lizard_body_markings"] << features["body_markings"]
+	S["feature_lizard_legs"] << features["legs"]
+	S["clown_name"] << custom_names["clown"]
+	S["mime_name"] << custom_names["mime"]
+	S["ai_name"] << custom_names["ai"]
+	S["cyborg_name"] << custom_names["cyborg"]
+	S["religion_name"] << custom_names["religion"]
+	S["deity_name"] << custom_names["deity"]
 
 	//Jobs
-	to_chat(S["joblessrole"], joblessrole)
-	to_chat(S["job_civilian_high"], job_civilian_high)
-	to_chat(S["job_civilian_med"], job_civilian_med)
-	to_chat(S["job_civilian_low"], job_civilian_low)
-	to_chat(S["job_medsci_high"], job_medsci_high)
-	to_chat(S["job_medsci_med"], job_medsci_med)
-	to_chat(S["job_medsci_low"], job_medsci_low)
-	to_chat(S["job_engsec_high"], job_engsec_high)
-	to_chat(S["job_engsec_med"], job_engsec_med)
-	to_chat(S["job_engsec_low"], job_engsec_low)
-	to_chat(S["job_wasteland_high"], job_wasteland_high)
-	to_chat(S["job_wasteland_med"], job_wasteland_med)
-	to_chat(S["job_wasteland_low"], job_wasteland_low)
+	S["joblessrole"] << joblessrole
+	S["job_civilian_high"] << job_civilian_high
+	S["job_civilian_med"] << job_civilian_med
+	S["job_civilian_low"] << job_civilian_low
+	S["job_medsci_high"] << job_medsci_high
+	S["job_medsci_med"] << job_medsci_med
+	S["job_medsci_low"] << job_medsci_low
+	S["job_engsec_high"] << job_engsec_high
+	S["job_engsec_med"] << job_engsec_med
+	S["job_engsec_low"] << job_engsec_low
+	S["job_wasteland_high"] << job_wasteland_high
+	S["job_wasteland_med"] << job_wasteland_med
+	S["job_wasteland_low"] << job_wasteland_low
 
 	return 1
 

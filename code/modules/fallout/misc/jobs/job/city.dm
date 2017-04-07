@@ -2,8 +2,8 @@
 	title = "Sheriff"
 	flag = SHERIFF
 	department_flag = WASTELAND
-	faction = "City" //desert faction shall disable appearing as scavenger after readying
-	status = "Sheriff"
+	faction = "city" //desert faction shall disable appearing as scavenger after readying
+	status = "sheriff"
 	total_positions = 1
 	spawn_positions = 1 //does not matter for late join
 	supervisors = "nobody"
@@ -35,8 +35,8 @@
 	title = "Settler"
 	flag = SETTLER
 	department_flag = WASTELAND
-	faction = "City" //desert faction shall disable appearing as scavenger after readying
-	status = "Member"
+	faction = "city" //desert faction shall disable appearing as scavenger after readying
+	status = "member"
 	total_positions = 10
 	spawn_positions = 10 //does not matter for late join
 	supervisors = "nobody"

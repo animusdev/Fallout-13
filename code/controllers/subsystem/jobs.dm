@@ -60,13 +60,13 @@ var/datum/subsystem/job/SSjob
 	var/list/factions = subtypesof(/datum/f13_faction)
 	for(var/F in factions)
 		var/datum/f13_faction/faction = new F()
-		human_factions[faction.name] = faction
+		human_factions[faction.id] = faction
 
 /datum/subsystem/job/proc/SetupStatus()
 	var/list/status = subtypesof(/datum/status)
 	for(var/S in status)
 		var/datum/status/stat = new S()
-		human_status[stat.name] = stat
+		human_status[stat.id] = stat
 
 /datum/subsystem/job/proc/GetJob(rank)
 	if(!occupations.len)
@@ -146,6 +146,10 @@ var/datum/subsystem/job/SSjob
 
 		if(!job.player_old_enough(player.client))
 			Debug("GRJ player not old enough, Player: [player]")
+			continue
+
+		if(!job.is_gender_allowed(player.client))
+			Debug("GRJ job gender check failed, Player: [player]")
 			continue
 
 		if(player.mind && job.title in player.mind.restricted_roles)
@@ -312,6 +316,9 @@ var/datum/subsystem/job/SSjob
 			// Loop through all jobs
 			for(var/datum/job/job in shuffledoccupations) // SHUFFLE ME BABY
 				if(!job)
+					continue
+
+				if(!job.is_gender_allowed(player.client))
 					continue
 
 				if(jobban_isbanned(player, job.title))
@@ -482,6 +489,8 @@ var/datum/subsystem/job/SSjob
 				continue
 			if(!job.player_old_enough(player.client))
 				level6++
+				continue
+			if(!job.is_gender_allowed(player.client))
 				continue
 			if(player.client.prefs.GetJobDepartment(job, 1) & job.flag)
 				level1++
