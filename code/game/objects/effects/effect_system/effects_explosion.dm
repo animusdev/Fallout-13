@@ -45,7 +45,7 @@
 /obj/effect/explosion/New()
 	..()
 	set_light(8, l_color = LIGHT_COLOR_FIRE)
-	QDEL_IN(src, 10)
+	QDEL_IN(src, 20.8)
 
 /obj/effect/explosion/ex_act(severity, target)
 	return 0
