@@ -48,6 +48,7 @@
 	burst_size = 1
 	zoomable = TRUE
 	zoom_amt = 3
+	scopetype = /obj/screen/fullscreen/scope/short
 
 /obj/item/weapon/gun/energy/plasma/pistol
 	name ="Plasma Pistol"

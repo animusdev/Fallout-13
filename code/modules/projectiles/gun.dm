@@ -58,6 +58,7 @@
 	var/zoomed = FALSE //Zoom toggle
 	var/zoom_amt = 3 //Distance in TURFs to move the user's screen forward (the "zoom" effect)
 	var/datum/action/toggle_scope_zoom/azoom
+	var/scopetype
 
 	//Gun safety.
 	var/safety = 0
@@ -512,10 +513,14 @@
 
 		user.client.pixel_x = world.icon_size*_x
 		user.client.pixel_y = world.icon_size*_y
+		if(scopetype)
+			user.overlay_fullscreen("scope", scopetype)
 	else
 		user.zoomgun = null
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
+		if(scopetype)
+			user.clear_fullscreen("scope", 0)
 	user.update_fov_position()
 
 //Proc, so that gun accessories/scopes/etc. can easily add zooming.
