@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/commanded/dog
-	name = "dog"
-	desc = "A large brown dog, grown by admins for admins."
+	name = "dogshit"
+	desc = "A large brown dog."
 
 	icon_state = "dog"
 	icon_living = "dog"
@@ -31,3 +31,10 @@
 	melee_damage_upper = 30
 
 	known_commands = list("stay", "stop", "attack", "follow", "defend", "enemy", "friend", "pull")
+
+/mob/living/simple_animal/hostile/commanded/dog/listen(var/mob/speaker, var/text)
+	..()
+	if(stance == COMMANDED_DEFEND || stance == COMMANDED_ATTACK)
+		icon_state = "[initial(icon_state)]_angry"
+	else
+		icon_state = "[initial(icon_state)]"

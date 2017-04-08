@@ -396,6 +396,7 @@
 		allowed_targets += M
 		if(M in friends)
 			friends -= M
+
 /mob/living/simple_animal/hostile/commanded/attack_animal(mob/living/simple_animal/M)
 	. = ..()
 	if(. && retribution)
@@ -403,6 +404,7 @@
 		allowed_targets += M //fuck this guy in particular.
 		if(M in friends) //We were buds :'(
 			friends -= M
+
 /mob/living/simple_animal/hostile/commanded/attack_paw(mob/living/carbon/monkey/M)
 	. = ..()
 	if(. && retribution)
