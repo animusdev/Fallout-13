@@ -185,16 +185,16 @@
 	name = "MRE"
 	desc = "The Meal, Ready-to-Eat : commonly known as the MRE - is a self-contained, individual field ration in lightweight packaging.<br>It's commonly used by military groups for service members to use in combat or other field conditions where organized food facilities are not available."
 	icon_state = "mre"
-	bonus_reagents = list("silver_sulfadiazine" = 10, "vitamin" = 2)
-	list_reagents = list("nutriment" = 50)
+	bonus_reagents = list("silver_sulfadiazine" = 10, "tricordrazine" = 10, "vitamin" = 2)
+	list_reagents = list("nutriment" = 30)
 	filling_color = "#B22222"
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/galette
 	name = "dehydrated pea soup"
 	desc = "A piece of military food ration.<br>Faded label on the front says: 'Dehydrated peas. Chew well, take with water. 60g.'"
 	icon_state = "galette"
-	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2)
-	list_reagents = list("nutriment" = 20)
+	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2, "tricordrazine" = 2)
+	list_reagents = list("nutriment" = 10)
 	filling_color = "#B22222"
 
 //Grownable
