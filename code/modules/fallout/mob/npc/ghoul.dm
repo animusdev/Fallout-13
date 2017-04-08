@@ -64,3 +64,7 @@
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
 	light_range = 2
+
+/mob/living/simple_animal/hostile/ghoul/glowing/New()
+	..()
+	SSradiation.processing += src

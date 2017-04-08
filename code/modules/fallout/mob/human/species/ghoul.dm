@@ -45,6 +45,7 @@
 		b.max_damage -= 15
 	C.faction |= "ghoul"
 	C.set_light(2, 1, LIGHT_COLOR_GREEN)
+	SSradiation.processing += C
 
 /datum/species/ghoul/glowing/on_species_loss(mob/living/carbon/C)
 	..()
@@ -52,3 +53,4 @@
 	C.faction -= "ghoul"
 	for(var/obj/item/bodypart/b in C.bodyparts)
 		b.max_damage = initial(b.max_damage)
+	SSradiation.processing -= C
