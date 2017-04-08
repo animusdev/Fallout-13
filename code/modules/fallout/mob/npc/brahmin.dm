@@ -6,7 +6,7 @@
 	icon_living = "brahmin"
 	icon_dead = "brahmin_d"
 	icon_gib = "brahmin_g"
-	speak = list("Moo?","Moo!","MOOOOOO","Heeey brooo!","Heeey yooou!")
+	speak = list("Moo.","Moo?","Moo!","MOOOOOO","Moo, I say.","Heeey brooo!","Heeey yooou!") //Original Brahmin from Fallout
 	speak_emote = list("moos","moos hauntingly")
 	emote_hear = list("brays.")
 	emote_see = list("shakes its head.")

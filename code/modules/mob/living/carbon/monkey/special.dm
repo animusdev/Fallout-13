@@ -6,8 +6,8 @@
 	var/relic_hat	//Note: these two are paths
 	var/relic_mask
 	var/memory_saved = 0
-	var/list/pet_monkey_names = list("Toecutter", "Humungus", "Dealgood", "Immortan")
-	var/list/rare_pet_monkey_names = list("Horrigan", "Gammorin", "Attis")
+	var/list/pet_monkey_names = list("Toecutter", "Humungus", "Dealgood", "Immortan") //Mad Max 1979 - 1981 - 1985 - 2015
+	var/list/rare_pet_monkey_names = list("Horrigan", "Gammorin", "Attis") //Fallout series Super mutants
 
 /mob/living/carbon/monkey/special/New()
 	Read_Memory()
