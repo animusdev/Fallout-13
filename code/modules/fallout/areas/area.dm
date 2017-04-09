@@ -304,7 +304,7 @@
 	grow_chance = 5
 
 /area/f13/brotherhood
-	name = "Brotherhood Of Steel"//Brother Hood
+	name = "Brotherhood of Steel"//Brother Hood
 	icon_state = "brotherhood"
 	ambience = list('sound/f13ambience/enclave_vault.ogg')
 	ambientmusic = list('sound/f13music/fo2_brotherhood.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
@@ -323,6 +323,17 @@
 	'sound/f13ambience/ambigen_13.ogg','sound/f13ambience/ambigen_14.ogg','sound/ambience/signal.ogg')
 	blob_allowed = 0
 	environment = 6
+	grow_chance = 5
+
+/area/f13/ahs
+	name = "Adepts of Hubology Studies"
+	icon_state = "ahs"
+	ambience = list('sound/f13ambience/enclave_vault.ogg')
+	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/ambience/signal.ogg')
+	blob_allowed = 0
+	environment = 5
 	grow_chance = 5
 
 /area/f13/ncr
