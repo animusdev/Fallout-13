@@ -157,12 +157,12 @@
 
 /area/f13/citycaves
 	name = "City Caves"
-	icon_state = "caves"
+	icon_state = "citycaves"
 	ambience = list('sound/f13ambience/cave.ogg')
 	ambientmusic = list('sound/f13music/fo2_city.ogg','sound/f13music/fo2_hub.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/f13ambience/ambigen_15.ogg','sound/f13ambience/ambigen_16.ogg','sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg')
 	environment = 8
-	grow_chance = 75
+	grow_chance = 25
 
 /area/f13/chapel
 	name = "Chapel"
