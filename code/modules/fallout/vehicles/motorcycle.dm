@@ -68,7 +68,7 @@
 //Motorcycle riding datum
 
 /datum/riding/motorcycle/fast
-	vehicle_move_delay = 0.8
+	vehicle_move_delay = 0.7
 
 /datum/riding/motorcycle/slow
 	vehicle_move_delay = 1.2

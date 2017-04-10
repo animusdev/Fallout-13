@@ -28,7 +28,7 @@
 
 /datum/riding/motorcycle/buggy
 	keytype = /obj/item/key/buggy
-	vehicle_move_delay = 0.7
+	vehicle_move_delay = 0.8
 
 /datum/riding/motorcycle/buggy/handle_vehicle_offsets()
 	..()
