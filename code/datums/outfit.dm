@@ -22,7 +22,7 @@
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
 	var/list/belt_contents = list()
 
-/datum/outfit/proc/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/proc/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, /datum/outfit/additional)
 	//to be overriden for customization depending on client prefs,species etc
 	return
 
@@ -36,50 +36,69 @@
 	//Start with uniform,suit,backpack for additional slots
 	if(uniform)
 		H.equip_to_slot_or_del(new uniform(H),slot_w_uniform)
+	CHECK_TICK
 	if(suit)
 		H.equip_to_slot_or_del(new suit(H),slot_wear_suit)
+	CHECK_TICK
 	if(back)
 		H.equip_to_slot_or_del(new back(H),slot_back)
+	CHECK_TICK
 	if(belt)
 		H.equip_to_slot_or_del(new belt(H),slot_belt)
+	CHECK_TICK
 	if(gloves)
 		H.equip_to_slot_or_del(new gloves(H),slot_gloves)
+	CHECK_TICK
 	if(shoes)
 		H.equip_to_slot_or_del(new shoes(H),slot_shoes)
+	CHECK_TICK
 	if(head)
 		H.equip_to_slot_or_del(new head(H),slot_head)
+	CHECK_TICK
 	if(mask)
 		H.equip_to_slot_or_del(new mask(H),slot_wear_mask)
+	CHECK_TICK
 	if(neck)
 		H.equip_to_slot_or_del(new neck(H),slot_neck)
+	CHECK_TICK
 	if(ears)
 		H.equip_to_slot_or_del(new ears(H),slot_ears)
+	CHECK_TICK
 	if(glasses)
 		H.equip_to_slot_or_del(new glasses(H),slot_glasses)
+	CHECK_TICK
 	if(id)
 		H.equip_to_slot_or_del(new id(H),slot_wear_id)
+	CHECK_TICK
 	if(suit_store)
 		H.equip_to_slot_or_del(new suit_store(H),slot_s_store)
+	CHECK_TICK
 
 	if(l_hand)
 		H.put_in_l_hand(new l_hand(H))
+	CHECK_TICK
 	if(r_hand)
 		H.put_in_r_hand(new r_hand(H))
+	CHECK_TICK
 
 	if(!visualsOnly) // Items in pockets or backpack don't show up on mob's icon.
 		if(l_pocket)
 			H.equip_to_slot_or_del(new l_pocket(H),slot_l_store)
+			CHECK_TICK
 		if(r_pocket)
 			H.equip_to_slot_or_del(new r_pocket(H),slot_r_store)
+			CHECK_TICK
 
 		for(var/path in backpack_contents)
 			var/number = backpack_contents[path]
 			for(var/i=0,i<number,i++)
 				H.equip_to_slot_or_del(new path(H),slot_in_backpack)
+				CHECK_TICK
 		for(var/path in belt_contents)
 			var/number = belt_contents[path]
 			for(var/i=0,i<number,i++)
 				H.belt:handle_item_insertion(new path(H), 1, H)
+				CHECK_TICK
 
 	if(!H.head && istype(H.wear_suit, /obj/item/clothing/suit/space/hardsuit))
 		var/obj/item/clothing/suit/space/hardsuit/HS = H.wear_suit

@@ -79,3 +79,4 @@
 //FACTIONS
 #define HAVE_FREQ 1
 #define HAVE_FLAG 2
+#define DONATE 4

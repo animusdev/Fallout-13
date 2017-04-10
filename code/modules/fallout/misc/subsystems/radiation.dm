@@ -26,6 +26,8 @@ var/datum/subsystem/ambient/SSradiation
 	var/list/currentrun = src.currentrun
 	CYCLE
 	for(var/i = 0, i < increment, i++)
+		if(!currentrun.len)
+			break
 		var/atom/thing = currentrun[currentrun.len]
 		currentrun.len--
 		if(thing)

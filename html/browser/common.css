@@ -1,11 +1,17 @@
 body 
 { 
+	
 	padding: 0;
 	margin: 0;
 	background-color: #000000;
 	font-size: 12px;
 	color: #0bcc62;
 	line-height: 170%;
+}
+.wrap {
+	margin: 0 auto;
+	width: 640px;
+	height: 750px;
 }
 
 hr
@@ -25,9 +31,11 @@ a, a:link, a:visited, a:active, .linkOn, .linkOff
 	text-decoration: none;
 	background: #124b28;
 	border: 1px solid #161616;
-	padding: 1px 4px 1px 4px;
+	/*padding: 1px 4px 1px 4px;*/
+	padding: 1px 5px;
 	margin: 0 2px 0 0;
 	cursor:default;
+	white-space: nowrap;
 }
 
 a:hover 
@@ -85,6 +93,10 @@ a.icon img, .linkOn.icon img
 	width: 18px;
 	height: 18px;
 }
+ol {
+	padding: 0;
+	margin: 0;
+}
 
 ul
 {
@@ -96,6 +108,7 @@ ul
 li
 {
 	padding: 0 0 2px 0;
+	
 }
 
 img, a img 
@@ -160,7 +173,9 @@ h4
 	padding: 8px;
 	font-family: Courier New, Courier, monospace;
 }
-
+.uiContent h2 {
+	display: inline-block;
+}
 .good
 {
 	color: #00ff00;
@@ -313,4 +328,94 @@ div.notice
 {
 	width: 100%;
 	clear: both;
+}
+
+.first_block, .second_block {
+	width: 49%;
+	display: inline-block;
+}
+.third_block {
+	padding-top: 13px;
+	
+}
+
+.third_block_39 {
+	width: 48%;
+	float: left;
+}
+.l70 {
+	width: 80%;
+}
+.right_block {
+	width: 25%;
+	float: left;
+}
+.right_block table {
+	margin-left: 14px;
+}
+
+.frame ol {
+	padding-left: 20px;
+}
+.frame {
+	width: 180px;
+	height: 260px;
+	border: 1px solid #067639;
+	margin-top: 10px;
+}
+.wrap_frame {
+	padding-left: 5px;
+}
+.left_block_table {
+	float: left;
+	width: 180px;
+}
+.job	{
+	width: 26%;
+	float: left;
+}
+.right_block_frame {
+	padding-left: 220px;
+	margin-top: 20px;
+}
+.leg_title {
+	display: inline-block;
+	position: relative;
+	top: -12px;
+}
+.leg_img {
+	padding-top: 5px;
+}
+.middle_img  {
+	border: 1px solid #067639;
+	margin-top: 21px;
+}
+.job_p {
+	text-align: center;
+	margin-top: -15px;
+	width: 145px;
+	height: 90px;
+	overflow: auto;
+	border: 1px solid #067639;
+}
+.job_p a {
+	display: block;
+	margin-bottom: 2.5px;
+	margin-left: 5px;
+}
+.left_mid {
+	float: left;
+	margin-right: 2px;
+}
+.a_block {
+	margin-top: -15px;
+	width: 300px;
+	height: 20px;
+}
+.g {
+	height: 15px;
+}
+.mid_item {
+	overflow: hidden ;
+	white-space: nowrap;
 }

@@ -24,12 +24,15 @@ proc/get_faction_members(var/faction)
 
 /datum/f13_faction
 	var/name = "UNKNOWN"
+	var/full_name = "UNKNOWN"
 	var/id = "none"
 	var/flags = null
 	var/list/jobs = list()
 
 	var/welcome_text = "" //Showing text on faction joining
 	var/color = "#171717"
+	var/description = "No description"
+	var/preview_image = 'html/factions/neutral.png'
 
 	var/head_status = null //Main status at this faction. Currently using for leader voting
 
@@ -49,6 +52,8 @@ proc/get_faction_members(var/faction)
 	for(var/datum/job/job in SSjob.occupations)
 		if(job.faction == src.id)
 			jobs += job
+	if(preview_image)
+		register_asset("[id].png", preview_image)
 
 //Vote for new leader. At voting involvement near staying members
 //This proc is so big, but it's easy to understand.
@@ -177,20 +182,77 @@ mob/proc/set_faction(var/faction)
 
 	return 1
 
+/datum/f13_faction/neutral
+	name = "Neutral"
+	full_name = "No Faction"
+	id = "none"
+
+/datum/f13_faction/city
+	name = "City"
+	color = "#804B00"
+	id = "city"
+	head_status = "Sheriff"
+	preview_image = 'html/factions/city.png'
+	full_name = "City Dwellers"
+	flags = HAVE_FREQ
+	verbs = list(/mob/proc/begin_head_voting)
+
+/datum/f13_faction/raider
+	name = "Raiders"
+	color = "#804B00"
+	id = "raiders"
+	head_status = "Gang Leader"
+	preview_image = 'html/factions/raider.png'
+	full_name = "Motherfuckers"
+	verbs = list(/mob/proc/begin_head_voting)
+
 /datum/f13_faction/vault
 	name = "Vault"
 	color = "#005A20"
 	id = "vault"
+	full_name = "Vault Tec"
+	preview_image = 'html/factions/vault.png'
 	head_status = "Overseer"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 //	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
+
+/datum/f13_faction/brotherhood
+	name = "Brotherhood"
+	color = "#005A20"
+	id = "bs"
+	full_name = "Brotherhood of Steel"
+	preview_image = 'html/factions/brotherhood.png'
+	head_status = "Elder"
+	flags = HAVE_FREQ
+	verbs = list(/mob/proc/begin_head_voting)
+
+/datum/f13_faction/enclave
+	name = "Enclave"
+	color = "#005A20"
+	id = "enclave"
+	full_name = "Enclave"
+	preview_image = 'html/factions/enclave.png'
+	head_status = "General"
+	flags = HAVE_FREQ
+	verbs = list(/mob/proc/begin_head_voting)
+
+/datum/f13_faction/hubs
+	name = "Hubologists"
+	color = "#005A20"
+	id = "hubs"
+	full_name = "Hubologists"
+	preview_image = 'html/factions/neutral.png'
+	head_status = "Hubologist"
+	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/ncr
 	name = "NCR"
 	id = "ncr"
 	color = "#020080"
 	flags = HAVE_FREQ | HAVE_FLAG
+	full_name = "New California Republic"
+	preview_image = 'html/factions/ncr.png'
 	head_status = "Squad Leader"
 	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Your current objectives are:<br>\
@@ -202,6 +264,8 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/legion
 	name = "Legion"
 	head_status = "Legate"
+	full_name = "Caesar's Legion"
+	preview_image = 'html/factions/legion.png'
 	id = "legion"
 	color = "#C24D44"
 	flags = HAVE_FREQ | HAVE_FLAG
@@ -212,15 +276,14 @@ mob/proc/set_faction(var/faction)
 	2. You must enslave the occupants of the wasteland, and suppress any resistance unless they can't be overpowered.<br>\
 	3. As a Legion solider you will torture and kill any NCR member you come across, fight to your death in a name of Caesar!"
 
-/datum/f13_faction/wasteland
-	name = "Wasteland"
-	id = "none"
-
-/datum/f13_faction/den
-	name = "City"
-	color = "#804B00"
-	id = "city"
-	head_status = "Sheriff"
-	flags = HAVE_FREQ
+/datum/f13_faction/followers
+	name = "Followers"
+	color = "#005A20"
+	id = "followers"
+	full_name = "Followers of Appocalypse"
+	preview_image = 'html/factions/followers.png'
+	head_status = "IDK"
 	verbs = list(/mob/proc/begin_head_voting)
+
+
 //	craft_recipes = list(/datum/table_recipe/den_encryption_key)

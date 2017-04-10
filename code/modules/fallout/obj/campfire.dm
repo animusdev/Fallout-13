@@ -6,15 +6,9 @@
 	opacity = 0
 
 	var/fired = 0
-
 	var/fuel = 300
-
 	light_color = LIGHT_COLOR_FIRE
-
 	var/burned = 0
-
-	var/list/hearers = list()
-
 	desc = "It's campfire. I need some fire source."
 
 	icon = 'icons/fallout/objects/structures/campfire.dmi'

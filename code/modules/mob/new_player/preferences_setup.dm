@@ -5,9 +5,9 @@
 		gender = gender_override
 	else
 		gender = pick(MALE,FEMALE)
-	underwear = random_underwear(gender)
-	undershirt = random_undershirt(gender)
-	socks = random_socks()
+	underwear = null
+	undershirt = null
+	socks = null
 	skin_tone = random_skin_tone()
 	hair_style = random_hair_style(gender)
 	facial_hair_style = random_facial_hair_style(gender)
@@ -34,35 +34,23 @@
 				preview_icon.Scale(64, 64)
 				return
 
-	// Set up the dummy for its photoshoot
-	var/mob/living/carbon/human/dummy/mannequin = new()
 	copy_to(mannequin)
-
+	CHECK_TICK
 	// Determine what job is marked as 'High' priority, and dress them up as such.
 	var/datum/job/previewJob
-	var/highRankFlag = job_civilian_high | job_medsci_high | job_engsec_high | job_wasteland_high
 
-	if(job_civilian_low & ASSISTANT)
-		previewJob = SSjob.GetJob("Assistant")
-	else if(highRankFlag)
-		var/highDeptFlag
-		if(job_civilian_high)
-			highDeptFlag = CIVILIAN
-		else if(job_medsci_high)
-			highDeptFlag = MEDSCI
-		else if(job_engsec_high)
-			highDeptFlag = ENGSEC
-		else if(job_wasteland_high)
-			highDeptFlag = WASTELAND
-
-		for(var/datum/job/job in SSjob.occupations)
-			if(job.flag == highRankFlag && job.department_flag == highDeptFlag)
-				previewJob = job
-				break
-
+	for(var/datum/job/job in SSjob.occupations)
+		if(job.flag == choiced_job_flag && job.department_flag == choiced_department_flag)
+			previewJob = job
+			break
+	CHECK_TICK
+	for (var/obj/item/I in mannequin.get_equipped_items())
+		qdel(I)
+	CHECK_TICK
 	if(previewJob)
 		mannequin.job = previewJob.title
 		previewJob.equip(mannequin, TRUE)
+
 	CHECK_TICK
 	preview_icon = icon('icons/effects/effects.dmi', "nothing")
 	preview_icon.Scale(48+32, 16+32)
@@ -85,4 +73,3 @@
 	CHECK_TICK
 	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
 	CHECK_TICK
-	qdel(mannequin)

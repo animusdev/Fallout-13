@@ -3,7 +3,7 @@
 	var/last_move = null
 	var/anchored = 0
 	var/throwing = 0
-	var/throw_speed = 2 //How many tiles to move per ds when being thrown. Float values are fully supported
+	var/throw_speed = 8 //How many tiles to move per ds when being thrown. Float values are fully supported
 	var/throw_range = 7
 	var/mob/pulledby = null
 	var/languages_spoken = 0 //For say() and Hear()

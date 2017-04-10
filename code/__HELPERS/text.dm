@@ -616,3 +616,12 @@ var/list/binary = list("0","1")
 	var/list/tosend = list()
 	tosend["data"] = finalized
 	to_chat(log, json_encode(tosend))
+
+proc/FormatText(text, list/data)
+	for(var/element in data)
+		var/element_lenght = length(element) + 2
+		var/index = findtext(text, "%[element]%")
+		while(index)
+			text = copytext(text, 1, index) + data[element] + copytext(text, index+element_lenght)
+			index = findtext(text, "%[element]%", index)
+	return text

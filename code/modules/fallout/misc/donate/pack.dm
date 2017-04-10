@@ -4,4 +4,9 @@
 		id = "shit"
 		desc = "Something wrong."
 		list/items = list()
+		list/roles = list()
+		list/pets = list()
 		price = 99999
+	proc
+		on_set(client/client)
+			return 1

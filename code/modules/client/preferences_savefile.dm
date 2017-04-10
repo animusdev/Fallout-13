@@ -250,7 +250,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	slot = sanitize_integer(slot, 1, max_save_slots, initial(default_slot))
 	if(slot != default_slot)
 		default_slot = slot
-		to_chat(S["default_slot"], slot)
+		S["default_slot"] << slot
 
 	S.cd = "/character[slot]"
 	var/needs_update = savefile_needs_update(S)
@@ -268,7 +268,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		pref_species = new rando_race()
 
 	if(!S["features["mcolor"]"] || S["features["mcolor"]"] == "#000")
-		to_chat(S["features["mcolor"]"], "#FFF")
+		S["features["mcolor"]"] << "#FFF"
 
 	//Character
 	S["OOC_Notes"]			>> metadata
@@ -283,10 +283,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["skin_tone"]			>> skin_tone
 	S["hair_style_name"]	>> hair_style
 	S["facial_style_name"]	>> facial_hair_style
-	S["underwear"]			>> underwear
-	S["undershirt"]			>> undershirt
-	S["socks"]				>> socks
-	S["backbag"]			>> backbag
+//	S["underwear"]			>> underwear
+//	S["undershirt"]			>> undershirt
+//	S["socks"]				>> socks
+//	S["backbag"]			>> backbag
 	S["feature_mcolor"]					>> features["mcolor"]
 	S["feature_lizard_tail"]			>> features["tail_lizard"]
 	S["feature_lizard_snout"]			>> features["snout"]
@@ -322,6 +322,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["job_wasteland_high"]	>> job_wasteland_high
 	S["job_wasteland_med"]	>> job_wasteland_med
 	S["job_wasteland_low"]	>> job_wasteland_low
+	S["outfits"] >> outfits
 
 
 	//try to fix any outdated data if necessary
@@ -390,7 +391,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		return 0
 	S.cd = "/character[default_slot]"
 
-	to_chat(S["version"], SAVEFILE_VERSION_MAX)//load_character will sanitize any bad data, so assume up-to-date.
+	S["version"] << SAVEFILE_VERSION_MAX //load_character will sanitize any bad data, so assume up-to-date.
 
 
 	//Character
@@ -406,10 +407,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["skin_tone"] << skin_tone
 	S["hair_style_name"] << hair_style
 	S["facial_style_name"] << facial_hair_style
-	S["underwear"] << underwear
-	S["undershirt"] << undershirt
-	S["socks"] << socks
-	S["backbag"] << backbag
+//	S["underwear"] << underwear
+//	S["undershirt"] << undershirt
+//	S["socks"] << socks
+//	S["backbag"] << backbag
 	S["species"] << pref_species.id
 	S["feature_mcolor"] << features["mcolor"]
 	S["feature_lizard_tail"] << features["tail_lizard"]
@@ -442,9 +443,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["job_wasteland_high"] << job_wasteland_high
 	S["job_wasteland_med"] << job_wasteland_med
 	S["job_wasteland_low"] << job_wasteland_low
+	S["outfits"] << outfits
 
 	return 1
-
 
 #undef SAVEFILE_VERSION_MAX
 #undef SAVEFILE_VERSION_MIN
@@ -459,4 +460,5 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 /client/verb/savefile_import(path as text)
 	var/savefile/S = new /savefile(path)
 	S.ImportText("/",file("[path].txt"))
+
 */
