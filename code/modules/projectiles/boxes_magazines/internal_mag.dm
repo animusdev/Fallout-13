@@ -184,9 +184,7 @@
 	caliber = "gatling"
 	max_ammo = 1
 /obj/item/ammo_box/magazine/internal/minigun/get_round(keep = 0)
-	..()
-	if(!stored_ammo.len)
-		stored_ammo[1] = new ammo_type(src)
+	return stored_ammo[1]
 
 
 /obj/item/ammo_box/magazine/internal/bow

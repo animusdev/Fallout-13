@@ -12,8 +12,8 @@
 	var/obj/item/weapon/gun/ballistic/minigun/gun = null
 	var/armed = 0 //whether the gun is attached, 0 is attached, 1 is the gun is wielded.
 	var/overheat = 0
-	var/overheat_max = 40
-	var/heat_diffusion = 1
+	var/overheat_max = 100
+	var/heat_diffusion = 2
 
 /obj/item/weapon/minigunpack/New()
 	gun = new(src)
