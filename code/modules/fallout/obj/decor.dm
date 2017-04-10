@@ -8,7 +8,7 @@
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "rag" //skulls, skin
 	anchored = 1
-	level = ABOVE_MOB_LAYER
+	layer = 3.2
 
 /obj/structure/decoration/sign //Signs.
 	name = "sign"
