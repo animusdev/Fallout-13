@@ -211,6 +211,15 @@
 	close_sound = "sound/f13machines/doorchainlink_close.ogg"
 	opaque = 0
 
+/obj/structure/simple_door/metal/ventilation
+	name = "ventilation system"
+	desc = "As you take a closer look, you notice a handle at the bottom of ventilation system access hatch."
+	icon_state = "ventilation"
+	door_type = "ventilation"
+	open_sound = "sound/f13machines/doorhidden_open.ogg"
+	close_sound = "sound/f13machines/doorhidden_close.ogg"
+	hard_open = 0
+
 /obj/structure/simple_door/metal/vault
 	name = "vault wall"
 	desc = "A sturdy and cold metal wall."
@@ -219,7 +228,6 @@
 	door_type = "vaultfwall"
 	open_sound = "sound/f13items/flashlight_on.ogg"
 	close_sound = "sound/f13items/flashlight_off.ogg"
-	hard_open = 0
 
 /obj/structure/simple_door/metal/vaultreinforced
 	name = "vault reinforced wall"
@@ -229,7 +237,6 @@
 	door_type = "vaultfrwall"
 	open_sound = "sound/f13items/flashlight_on.ogg"
 	close_sound = "sound/f13items/flashlight_off.ogg"
-	hard_open = 0
 
 /obj/structure/simple_door/blast
 	name = "blast door"

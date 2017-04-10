@@ -22,7 +22,7 @@
 
 /obj/effect/decal/reflector
 	name = "road reflector"
-	desc = "It's one of ancient road safety devices.<br>Here's how it works:<br>A reflective plate is reflecting the street and car lights ensuring the visibility of the road median separating the lanes.<br>The steel part makes a small regular bump along the median to wake the driver if he/she drifts across."
+	desc = "An ancient road safety device.<br>Here's how it works:<br>A reflective plate is reflecting the street and car lights ensuring the visibility of the road median separating the lanes.<br>The steel part makes a small regular bump along the median to wake the driver if he/she drifts across."
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "reflectorvertical" //reflectorhorizontal
 	anchored = 1
