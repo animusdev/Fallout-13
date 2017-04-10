@@ -191,7 +191,7 @@ mob/proc/set_faction(var/faction)
 	name = "City"
 	color = "#804B00"
 	id = "city"
-	head_status = "Sheriff"
+	head_status = "Mayor"
 	preview_image = 'html/factions/city.png'
 	full_name = "City Dwellers"
 	flags = HAVE_FREQ
@@ -203,14 +203,14 @@ mob/proc/set_faction(var/faction)
 	id = "raiders"
 	head_status = "Gang Leader"
 	preview_image = 'html/factions/raider.png'
-	full_name = "Motherfuckers"
+	full_name = "Chaotic Evil"
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/vault
 	name = "Vault"
 	color = "#005A20"
 	id = "vault"
-	full_name = "Vault Tec"
+	full_name = "Vault-Tec Industries"
 	preview_image = 'html/factions/vault.png'
 	head_status = "Overseer"
 	flags = HAVE_FREQ
@@ -237,13 +237,13 @@ mob/proc/set_faction(var/faction)
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 
-/datum/f13_faction/hubs
+/datum/f13_faction/ahs
 	name = "Hubologists"
 	color = "#005A20"
 	id = "hubs"
-	full_name = "Hubologists"
-	preview_image = 'html/factions/neutral.png'
-	head_status = "Hubologist"
+	full_name = "Adepts of Hubology Studies"
+	preview_image = 'html/factions/ahs.png'
+	head_status = "AHS-8"
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/ncr
@@ -253,7 +253,7 @@ mob/proc/set_faction(var/faction)
 	flags = HAVE_FREQ | HAVE_FLAG
 	full_name = "New California Republic"
 	preview_image = 'html/factions/ncr.png'
-	head_status = "Squad Leader"
+	head_status = "General"
 	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Your current objectives are:<br>\
 1. As an NCR soldier you must uphold the law around the town, exterminate any raiders you see, seek and destroy the Legion members.<br>\
@@ -282,7 +282,7 @@ mob/proc/set_faction(var/faction)
 	id = "followers"
 	full_name = "Followers of Appocalypse"
 	preview_image = 'html/factions/followers.png'
-	head_status = "IDK"
+	head_status = "Leader"
 	verbs = list(/mob/proc/begin_head_voting)
 
 
