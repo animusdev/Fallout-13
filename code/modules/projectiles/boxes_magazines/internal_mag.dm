@@ -182,7 +182,11 @@
 	name = "gatling gun fusion core"
 	ammo_type = /obj/item/ammo_casing/caseless/laser/gatling
 	caliber = "gatling"
-	max_ammo = 5000
+	max_ammo = 1
+/obj/item/ammo_box/magazine/internal/minigun/get_round(keep = 0)
+	..()
+	if(!stored_ammo.len)
+		stored_ammo[1] = new ammo_type(src)
 
 
 /obj/item/ammo_box/magazine/internal/bow

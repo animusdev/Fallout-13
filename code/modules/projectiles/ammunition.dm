@@ -23,11 +23,15 @@
 /obj/item/ammo_casing/New()
 	..()
 	if(projectile_type)
-		BB = new projectile_type(src)
+		BB = PoolOrNew(projectile_type,src)
 	pixel_x = rand(-10, 10)
 	pixel_y = rand(-10, 10)
 	setDir(pick(alldirs))
 	update_icon()
+
+/obj/item/ammo_casing/Destroy()
+	..()
+	return QDEL_HINT_PUTINPOOL
 
 /obj/item/ammo_casing/update_icon()
 	..()
