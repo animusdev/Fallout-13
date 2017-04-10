@@ -56,6 +56,10 @@
 	permutated = list()
 	return ..()
 
+/obj/item/projectile/Destroy()
+	..()
+	return QDEL_HINT_PUTINPOOL
+
 /obj/item/projectile/proc/Range()
 	range--
 	if(range <= 0 && loc)

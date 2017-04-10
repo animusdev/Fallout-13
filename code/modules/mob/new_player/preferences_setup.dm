@@ -44,9 +44,6 @@
 			previewJob = job
 			break
 	CHECK_TICK
-	for (var/obj/item/I in mannequin.get_equipped_items())
-		qdel(I)
-	CHECK_TICK
 	if(previewJob)
 		mannequin.job = previewJob.title
 		previewJob.equip(mannequin, TRUE)
@@ -73,3 +70,6 @@
 	CHECK_TICK
 	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
 	CHECK_TICK
+	for (var/obj/item/I in mannequin.get_equipped_items())
+		mannequin.unEquip(I, TRUE)
+		PlaceInPool(I, FALSE)
