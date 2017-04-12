@@ -1,4 +1,4 @@
-//Fallout 13 main walls directory
+//Fallout 13 general destructible walls directory
 
 /turf/closed/wall/f13/
 	name = "glitch"
@@ -189,7 +189,7 @@
 turf/closed/indestructible/f13/splashscreen/New()
 	.=..()
 	name = "Fallout 13"
-	desc = "The wasteland is calling."
+	desc = "The Wasteland is calling!"
 	icon = 'icons/fallout/misc/lobby.dmi'
 	icon_state = "title[rand(1,13)]"
 	layer = 60

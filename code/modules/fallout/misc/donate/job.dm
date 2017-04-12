@@ -1,3 +1,5 @@
+//Fallout 13 - supporters deserve a reward!
+
 var/const/MESSIAH			=(1<<50)
 var/const/SLIMEMAN			=(1<<51)
 //SourcePony

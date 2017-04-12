@@ -1,5 +1,8 @@
+//Fallout 13 Vault blast doors and controls directory
+
 /obj/structure/vault_door
-	name = "113 Vault door"
+	name = "Vault 113 blast door"
+	desc = "A conventional Vault blast door of \"Nine cog\" model.<br>A blast door design incorporates proper sealants against radiation and other hazardous elements that may be created in the event of a nuclear war, to properly protect its inhabitants."
 	icon = 'icons/fallout/machines/gear.dmi'
 	icon_state = "113closed"
 	density = 1
@@ -21,7 +24,7 @@
 	integrity_failure = 3000
 
 /obj/structure/vault_door/old
-	name = "Old vault door"
+	name = "\proper ancient Vault blast door"
 	icon_state = "oldclosed"
 	close_state = "oldclosed"
 	open_state = "oldopen"
@@ -71,7 +74,7 @@
 //Lever
 
 /obj/machinery/doorButtons/vaultButton
-	name = "vault access"
+	name = "Vault access"
 	icon = 'icons/fallout/machines/lever.dmi'
 	icon_state = "lever"
 	anchored = 1

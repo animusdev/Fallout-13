@@ -1,3 +1,5 @@
+//Fallout 13 - memorial to human cruelty.
+
 /mob/living/simple_animal/hostile/shepka
 	name = "Shepard"
 	desc = "Horrible creature that arrived from the system of Tau Ceti."

@@ -1,3 +1,5 @@
+//Fallout 13 general indestructible floor directory
+
 /turf
 	var/baseturf_icon
 	var/baseturf_dir = 0

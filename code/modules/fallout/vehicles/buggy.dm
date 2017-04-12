@@ -1,3 +1,5 @@
+//Fallout 13 dune buggy directory
+
 /obj/vehicle/fuel/motorcycle/buggy
 	name = "dune buggy"
 	desc = "<i>Ain't no place for a fancy cars on the Wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"

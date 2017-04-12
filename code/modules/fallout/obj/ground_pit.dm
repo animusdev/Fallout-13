@@ -1,3 +1,5 @@
+//Fallout 13 - Ain't no grave, that can hold my body down.
+
 //functions for digging pits in the ground and storing stuff in it
 #define NUMCONTENT 5
 #define NUMBURYTIMES 3
@@ -14,7 +16,7 @@
 
 
 /obj/dugpit
-	name = "pit"
+	name = "dug pit"
 	anchored = 1
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "pit"
@@ -28,7 +30,7 @@ obj/dugpit/New(lnk)
 /obj/dugpit/proc/dugresist(usr)
 	//try to unbury self
 	var/mob/living/user = usr
-	user << "<span class='danger'>You start digging from inside, trying to unbury self!</span>"
+	user << "<span class='danger'>You start digging from the inside, trying to unbury yourself!</span>"
 	if(do_after(user, (5*10), target = src))
 		if (prob(10))
 			user << "<span class='danger'>You have managed to move some of the ground!</span>"
@@ -57,11 +59,11 @@ obj/dugpit/New(lnk)
 		if(!istype(W, /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow))
 			for(var/mob/M in viewers(usr, null))
 				if(M == usr)
-					to_chat(usr, "<span class='notice'>You put [W] in the hole.</span>")
+					to_chat(usr, "<span class='notice'>You put [W] in the pit.</span>")
 				else if(in_range(M, usr)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] puts [W] in the hole.</span>", 1)
+					M.show_message("<span class='notice'>[usr] puts [W] in the pit.</span>", 1)
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] puts [W] in the hole.</span>", 1)
+					M.show_message("<span class='notice'>[usr] puts [W] in the pit.</span>", 1)
 		pitcontents += W
 		W.forceMove(mypit)
 		storedindex = storedindex+1
@@ -79,7 +81,7 @@ obj/dugpit/New(lnk)
 			pitcontents-=I
 
 /turf/open/indestructible/ground/desert/proc/finishBury(mob/user)
-	to_chat(user, "<span class='notice'>You cover the hole with dirt.</span>")
+	to_chat(user, "<span class='notice'>You cover the pit with dirt.</span>")
 	dug = 0
 	//icon_plating = "[environment_type]"
 	icon_state = "wasteland[rand(1,31)]"
@@ -119,7 +121,7 @@ obj/dugpit/New(lnk)
 					break
 			playsound(src, 'sound/effects/shovel_dig.ogg', 50, 1)
 			if (gravebody!=null)
-				to_chat(user, "<span class='notice'>You start covering the body in the hole with dirt...</span>")
+				to_chat(user, "<span class='notice'>You start covering the body in the pit with dirt...</span>")
 				if (do_after(user, digging_speed*3, target=gravebody))
 					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
@@ -131,7 +133,7 @@ obj/dugpit/New(lnk)
 						finishBury(user)
 						finishCoffin()
 			else
-				to_chat(user, "<span class='notice'>You start covering the hole with dirt...</span>")
+				to_chat(user, "<span class='notice'>You start covering the pit with dirt...</span>")
 				if(do_after(user, digging_speed, target = src))
 					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)

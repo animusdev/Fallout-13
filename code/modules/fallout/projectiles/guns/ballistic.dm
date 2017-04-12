@@ -1,3 +1,5 @@
+//Fallout 13 ballistic firearms directory
+
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	name = "10-mm pistol"
 	desc = "Self-loading pistol Colt 6520 10mm. After each shot, the weapon recharges long until the end of the store."
@@ -21,7 +23,7 @@
 /obj/item/weapon/gun/ballistic/revolver/magnum
 	name = "Magnum"
 	icon_state = "44magnum"
-	desc = "The Smith & Wesson Model 29 is a powerful, six-shot, double-action revolver manufactured by the U.S. company Smith & Wesson since 1955. Centuries later, copies of it can still be found in the wastes. "
+	desc = "The Smith & Wesson Model 29 is a powerful, six-shot, double-action revolver manufactured by the U.S. company Smith & Wesson since 1955. Centuries later, copies of it can still be found in the wastes."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/m44

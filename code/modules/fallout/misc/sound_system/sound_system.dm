@@ -1,14 +1,14 @@
 /*
-Atoms ambient sound system... WHY NO ONE MAKED THIS BEFORE UH????
+Atoms ambient sound system... WHY NO ONE HAS MADE THIS BEFORE UH????
 
-BeginAmbient - just starting playing some sound all time
+BeginAmbient - just starting to play a specific sound on the loop
 
-StopAmbient - ... I'm realyy should say it?
+StopAmbient - ... Should I really explain it?
 
 
-WARNING!! BE CAREFUL WITH THIS SHIT, I DON'T SURE IT'S WORKING RIGHT
+WARNING!! BE CAREFUL WITH THIS SHIT, I'M NOT SURE IT'S WORKING RIGHT
 
-by JackerZz special for Fallout 13.
+by JackerZz special gift for Fallout 13.
 
 */
 

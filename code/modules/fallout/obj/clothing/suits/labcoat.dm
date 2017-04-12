@@ -12,7 +12,7 @@
 
 /obj/item/clothing/suit/toggle/labcoat/f13/warriors
 	name = "warriors jacket"
-	desc = "A red leather jacket, with a word 'Warriors' sewn above the white wings on the back."
+	desc = "A red leather jacket, with a word \"Warriors\" sewn above the white wings on the back."
 	icon_state = "warriors"
 	item_state = "owl"
 	body_parts_covered = CHEST

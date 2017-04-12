@@ -1,7 +1,7 @@
-//Fallout 13 specific NPC directory
+//Fallout 13 protectron directory
 
 /mob/living/simple_animal/hostile/protectron
-	name = "Protectron"
+	name = "protectron"
 	desc = "A pre-War type of protectron.<br>It's a really dangerous machine."
 	icon_state = "protectron_old"
 	icon_living = "protectron_old"
@@ -46,7 +46,7 @@
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/laser.ogg'
 
-/mob/living/simple_animal/pet/dog/protectron  //not a dog,
+/mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Marvin"
 	desc = "A standard RobCo RX2 V1.16.4 'vault helper', loaded with Vault protocols.<br>Looks like it was kept operational for an indefinite period of time - a body is covered in cracks and dents of various size, that have been repared so many times you are amazed the machine is still functioning at all."
 	icon = 'icons/fallout/mobs/animal.dmi'

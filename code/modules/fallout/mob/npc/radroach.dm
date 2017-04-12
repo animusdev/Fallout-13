@@ -1,5 +1,7 @@
+//Fallout 13 radroach directory
+
 /mob/living/simple_animal/hostile/radroach
-	name = "Radroach"
+	name = "radroach"
 	desc = "Great American cockroaches, colloquially called radroaches, or giant cockroaches, are giant versions of the pre-War species that have been mutated by radiation.."
 	icon_state = "radroach"
 	icon_living = "radroach"

@@ -1,3 +1,5 @@
+//Fallout 13 grass directory
+
 /obj/item/stack/sheet/grass
 	name = "grass"
 	singular_name = "tuft of grass"

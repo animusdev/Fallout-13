@@ -110,7 +110,7 @@
 
 /obj/item/clothing/suit/f13/hubologist
 	name = "Hubologist's robe"
-	desc = "A black robe worn by zealots of Habology.<br>Be aware - the spirits of the dead are all around us!"
+	desc = "A black robe worn by Adepts of Hubology Studies.<br>Beware - the spirits of the dead are all around us!"
 	icon_state = "hubologist"
 	item_state = "wcoat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR

@@ -47,12 +47,12 @@
 	soundLength = 430
 
 /obj/item/weapon/holodisk/runninggun
-	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This particular holodisk is obviously one of rare Radio New Vegas broadcast records.<br>There is a 'Running Gun' inscription on the side."
+	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This particular holodisk is obviously one of rare Radio New Vegas broadcast records.<br>There is a \"Running Gun\" inscription on the side."
 	soundFile =  'sound/f13music/new_vegas_show_bonus_1.ogg'
 	soundLength = 1836
 
 /obj/item/weapon/holodisk/bigiron
-	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This particular holodisk is obviously one of rare Radio New Vegas broadcast records.<br>There is a 'Big Iron' inscription on the side."
+	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This particular holodisk is obviously one of rare Radio New Vegas broadcast records.<br>There is a \"Big Iron\" inscription on the side."
 	soundFile =  'sound/f13music/new_vegas_show_bonus_2.ogg'
 	soundLength = 2448
 

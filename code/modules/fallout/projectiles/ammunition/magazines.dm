@@ -1,3 +1,5 @@
+//Fallout 13 firearms ammo directory
+
 /obj/item/ammo_box/magazine/m10mm
 	name = "pistol magazine (10mm)"
 	icon_state = "9x19p"

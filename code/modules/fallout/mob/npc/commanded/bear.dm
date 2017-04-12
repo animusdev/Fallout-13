@@ -1,3 +1,5 @@
+//Fallout 13 - by admins for admins.
+
 /mob/living/simple_animal/hostile/commanded/bear
 	name = "bear"
 	desc = "A large brown bear, grown by admins for admins."

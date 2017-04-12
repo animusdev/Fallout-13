@@ -1,3 +1,5 @@
+//Fallout 13 ambush bus directory
+
 /obj/structure/closet/bus
 	name = "\proper ancient City Liner bus"
 	desc = "A derelict bus that belonged to a City Liner network.<br>Despite all the decades it has spent out in the open, the exterior looks more or less intact."

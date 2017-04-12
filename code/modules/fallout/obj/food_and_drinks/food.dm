@@ -71,7 +71,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram
 	name = "Cram"
-	desc = "A blue labeled tin of processed meat, primarily used as rations for soldiers in pre-War times."
+	desc = "A blue labeled tin of processed meat, primarily used as rations for soldiers during the pre-War times."
 	icon_state = "cram"
 	bonus_reagents = list("radium" = 1, "vitamin" = 5)
 	list_reagents = list("nutriment" = 20)
@@ -95,7 +95,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/fancylads
 	name = "Fancy Lads"
-	desc = "The presence of snack cakes is a nod to the urban myth that Twinkies and other similar foods would survive a nuclear war.<br>The slogan is 'A big delight in every bite'."
+	desc = "The presence of snack cakes is a nod to the urban myth that Twinkies and other similar foods would survive a nuclear war.<br>The slogan is \"A big delight in every bite\"."
 	icon_state = "fancylads"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 20)
@@ -103,7 +103,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/sugarbombs
 	name = "Sugar Bombs"
-	desc = "Sugar Bombs is a pre-War breakfast cereal that can be found all around the Wasteland, packaged in white and blue boxes with a red ovoid logo at the top, fully labeled as 'Sugar Bombs breakfast cereal'."
+	desc = "Sugar Bombs is a pre-War breakfast cereal that can be found all around the Wasteland, packaged in white and blue boxes with a red ovoid logo at the top, fully labeled as \"Sugar Bombs breakfast cereal\"."
 	icon_state = "sugarbombs"
 	bonus_reagents = list("radium" = 3, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
@@ -111,7 +111,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/crisps
 	name = "Crisps"
-	desc = "Potato Crisps are packaged in a small red and green box, with a yellow bubble encouraging the purchaser to 'See Moon Map Offer on Back!'."
+	desc = "Potato Crisps are packaged in a small red and green box, with a yellow bubble encouraging the purchaser to \"See Moon Map Offer on Back!\"."
 	icon_state = "crisps"
 	bonus_reagents = list("radium" = 1, "vitamin" = 1)
 	list_reagents = list("nutriment" = 5)
@@ -175,7 +175,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans
 	name = "Pork n' Beans"
-	desc = "Pork n' Beans come in a small brown and orange tin, with a label that reads 'Greasy Prospector Improved Pork And Beans'.<br>Toward the bottom of the label is printed that the beans come 'With Hickory Smoked Pig Fat Chunks'."
+	desc = "Pork n' Beans come in a small brown and orange tin, with a label that reads \"Greasy Prospector Improved Pork And Beans\".<br>Toward the bottom of the label is printed that the beans come \"With Hickory Smoked Pig Fat Chunks\"."
 	icon_state = "porknbeans"
 	bonus_reagents = list("radium" = 3, "vitamin" = 2)
 	list_reagents = list("nutriment" = 35)
@@ -191,7 +191,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/galette
 	name = "dehydrated pea soup"
-	desc = "A piece of military food ration.<br>Faded label on the front says: 'Dehydrated peas. Chew well, take with water. 60g.'"
+	desc = "A piece of military food ration.<br>Faded label on the front says: \"Dehydrated peas. Chew well, take with water. 60g.\""
 	icon_state = "galette"
 	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2, "tricordrazine" = 2)
 	list_reagents = list("nutriment" = 10)

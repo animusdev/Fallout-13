@@ -1,3 +1,5 @@
+//Fallout 13 air clearing simulation
+
 /turf/open/process_cell() //Fresh air
 	..()
 	var/area/A = get_area(src)

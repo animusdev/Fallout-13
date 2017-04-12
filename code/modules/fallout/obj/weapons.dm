@@ -1,3 +1,5 @@
+//Fallout 13 melee weapons directory
+
 /obj/item/weapon/machete
 	name = "\proper machete"
 	desc = "The machete appears to be a makeshift weapon, as it consists of a lawn mower blade strapped to a wooden handle.<br>It is the primary melee weapon of Caesar's Legion."
@@ -120,7 +122,7 @@
 
 /obj/item/weapon/twohanded/superhammer
 	name = "super sledge"
-	desc = "Also called 'Superkuvalda' - BoS produced these using the most modern weapons technology.<br>It's equipped with storage of kinetic energy to enhance the impact."
+	desc = "Also called \"Superkuvalda\" - BoS produced these using the most modern weapons technology.<br>It's equipped with storage of kinetic energy to enhance the impact."
 	icon_state = "supersledgehammer0"
 	icon = 'icons/fallout/objects/melee.dmi'
 	flags = CONDUCT

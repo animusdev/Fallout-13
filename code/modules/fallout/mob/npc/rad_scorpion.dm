@@ -1,3 +1,5 @@
+//Fallout 13 rad scorpion directory
+
 /mob/living/simple_animal/hostile/rad_scorpion
 	name = "rad scorpion"
 	desc = "It's a rad scorpion with a blue shell, the look of it makes you shudder.<br>This one has razor sharp sting."
@@ -35,7 +37,7 @@
 	idle_vision_range = 7
 
 /mob/living/simple_animal/hostile/rad_scorpion/black
-	name = "Giant rad scorpion"
+	name = "giant rad scorpion"
 	desc = "It's a giant rad scorpion with a black shell, the look of it makes you shudder in fear.<br>This one has giant pincers."
 	icon_state = "radscorpion_black"
 	icon_living = "radscorpion_black"

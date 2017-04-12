@@ -1,3 +1,5 @@
+//Fallout 13 campfire directory
+
 /obj/structure/campfire
 	name = "campfire"
 
@@ -9,7 +11,7 @@
 	var/fuel = 300
 	light_color = LIGHT_COLOR_FIRE
 	var/burned = 0
-	desc = "It's campfire. I need some fire source."
+	desc = "A warm, bright and hopeful fire source - when it's burning of course."
 
 	icon = 'icons/fallout/objects/structures/campfire.dmi'
 	icon_state = "campfire20"
@@ -28,7 +30,7 @@
 	else if(istype(P, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/W = P
 		if(fuel > 400)
-			to_chat(user, "You can't add anymore")
+			to_chat(user, "You can't add more fuel - wait till some of it burns away!")
 			return
 		if(W.use(1))
 			user.visible_message("[user] has added fuel to [src].", "<span class='notice'>You have added fuel to [src].</span>")
@@ -38,7 +40,7 @@
 			return
 		var/mob/living/carbon/human/H = user
 		var/obj/item/weapon/reagent_containers/food/snacks/F = P
-		to_chat(user, "You begin cook [F.name]")
+		to_chat(user, "You start cooking a [F.name]")
 		if(do_after(user, 20, target = src))
 			if(F.cooked_type)
 				H.drop_item()
@@ -87,9 +89,9 @@
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
 	START_PROCESSING(SSobj, src)
 	fired = 1
-	desc = "Fired campfire... It's hot."
+	desc = "Burning campfire... A warm, bright and hopeful fire source.<br>It's hot!"
 	if(user)
-		user.visible_message("[user] has fire [src].", "<span class='notice'>You have fire [src].</span>")
+		user.visible_message("[user] has lit a [src].", "<span class='notice'>You have lit a [src].</span>")
 	update_icon()
 	burn_process()
 
@@ -117,7 +119,7 @@
 
 /obj/structure/campfire/extinguish()
 	name = "burned campfire"
-	desc = "It's burned..."
+	desc = "It has burned to ashes..."
 	icon_state = "campfire0"
 	fired = 0
 	burned = 1

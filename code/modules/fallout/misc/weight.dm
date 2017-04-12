@@ -1,3 +1,5 @@
+//Fallout 13 object and item weight simulation
+
 /atom/movable
 	var/contents_weight = 0
 	var/self_weight

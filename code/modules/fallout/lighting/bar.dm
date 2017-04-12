@@ -1,3 +1,5 @@
+//Fallout 13 neon signs directory
+
 /obj/machinery/light/sign
 	name = "bar sign"
 	icon_state = "blue0"

@@ -1,4 +1,5 @@
 //Fallout 13 caves and mining system, classics of SS13 circa 2012
+
 /**********************Mineral deposits**************************/
 
 var/global/list/rockTurfEdgeCache

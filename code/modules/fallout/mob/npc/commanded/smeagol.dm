@@ -1,3 +1,5 @@
+//Fallout 13 - my precious...
+
 /mob/living/simple_animal/hostile/commanded/smeagol
 	name = "Smeagol"
 	desc = "A small slimy creature.<br>It was probably intelligent very long time ago, but something has transformed it overtime."

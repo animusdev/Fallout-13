@@ -40,6 +40,8 @@
 		icon = 'icons/fallout/flora/trees.dmi'
 		icon_state = "tree_stump"
 
+//Fallout 13 general flora directory
+
 /obj/structure/flora/tree/tall
 	name = "dead tree"
 	desc = "A rather tall tree that has been dead for a long time.<br>Interestingly it is still standing after all the time."

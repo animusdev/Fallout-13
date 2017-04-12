@@ -1,3 +1,5 @@
+//Fallout 13 Wasteland medicine directory
+
 /obj/item/weapon/reagent_containers/pill/patch/styptic
 	name = "brute patch"
 	desc = "Helps with brute injuries."

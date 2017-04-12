@@ -1,5 +1,7 @@
+//Fallout 13 gecko directory
+
 /mob/living/simple_animal/hostile/gecko
-	name = "Gecko"
+	name = "gecko"
 	desc = "It's Gecko, not G.E.C.K."
 	icon_state = "gecko"
 	icon_living = "gecko"

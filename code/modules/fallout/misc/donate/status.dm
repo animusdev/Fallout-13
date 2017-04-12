@@ -1,3 +1,5 @@
+//Fallout 13 - supporters are the best!
+
 //SourcePony
 /datum/status/messiah
 	name = "Messiah"

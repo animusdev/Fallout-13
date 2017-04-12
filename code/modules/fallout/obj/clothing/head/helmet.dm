@@ -70,7 +70,7 @@
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"
-	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough 'mass produced' look to it, as it is issued to all NCR soldiers and MPs."
+	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass produced\" look to it, as it is issued to all NCR soldiers and MPs."
 	icon_state = "trooper"
 	item_state = "trooper"
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, acid = 10)
@@ -117,7 +117,7 @@
 
 /obj/item/clothing/head/helmet/f13/ranger/old
 	name = "old ranger helmet"
-	desc = "An old military helmet, commonly worn by Desert Rangers, that went through the fire and flames, saving a single life in a heavy bloodshed.<br>This particular helmet has a 'Forgive me mama' insciption on the side."
+	desc = "An old military helmet, commonly worn by Desert Rangers, that went through the fire and flames, saving a single life in a heavy bloodshed.<br>This particular helmet has a \"Forgive me mama\" insciption on the side."
 	icon_state = "oldranger"
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, acid = 10)

@@ -1,3 +1,5 @@
+//Fallout 13 brahmin directory
+
 /mob/living/simple_animal/cow/brahmin
 	name = "brahmin"
 	desc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."

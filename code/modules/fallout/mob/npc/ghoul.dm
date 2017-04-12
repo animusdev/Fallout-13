@@ -1,5 +1,7 @@
+//Fallout 13 npc ghouls directory
+
 /mob/living/simple_animal/hostile/ghoul
-	name = "Feral Ghoul"
+	name = "feral ghoul"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are a necrotic post-humans, decrepit, rotting, zombie-like mutants."
 	icon_state = "retro_ghoul"
 	icon_living = "retro_ghoul"
@@ -36,7 +38,7 @@
 	faction = list("hostile", "ghoul")
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
-	name = "Feral Ghoul"
+	name = "feral ghoul"
 	desc = "Have you ever seen a hungry ghoul before?<br>It's just like other feral ghouls, yet it's more aggressive and confident about the fact you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul"
 	icon_living = "angry_ghoul"
@@ -51,7 +53,7 @@
 	attacktext = "chomps"
 
 /mob/living/simple_animal/hostile/ghoul/glowing
-	name = "Glowing Feral Ghoul"
+	name = "glowing feral ghoul"
 	desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are a necrotic post-humans, rotting, zombie-like mutants, that are so irradiated they actually glow in the dark."
 	icon_state = "retro_glowghoul"
 	icon_living = "retro_glowghoul"

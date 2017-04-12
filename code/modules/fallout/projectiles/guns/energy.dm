@@ -1,3 +1,5 @@
+//Fallout 13 energy firearms directory
+
 /*
 /obj/item/weapon/gun/energy/laser/wattz1000
 	name = "Laser pistol"

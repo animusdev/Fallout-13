@@ -1,3 +1,5 @@
+//Fallout 13 radiation simulation
+
 /atom
 	var
 		rad_heavy_range = 1

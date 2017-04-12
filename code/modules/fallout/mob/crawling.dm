@@ -1,3 +1,5 @@
+//Fallout 13 - crawling is fun
+
 // So stupid, but it works. Other stuff doing at /mob/proc/update_canmove()
 // To crawle under structure just set can_crawled = 1 on it and add to CanPass PASSCRAWL check.
 

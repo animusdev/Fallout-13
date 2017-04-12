@@ -55,7 +55,7 @@
 
 /obj/item/crafting/resistor
 	name = "resistor"
-	desc = "Tesla Warrior: 'Stop right there, criminal electron!' - Electron: 'You'll never catch me!!!' *Zoom* *Zoom* *Pew* *Pew* *Pew*"
+	desc = "Tesla Warrior says, \"Stop right there, criminal electron!\"<br>Electron says, \"You'll never catch me!!!\"<br>*Zoom* *Zoom* *Pew* *Pew* *Pew*"
 	icon_state = "resistor_1"
 /obj/item/crafting/resistor/New()
 	..()

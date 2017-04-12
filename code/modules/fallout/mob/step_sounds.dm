@@ -1,3 +1,5 @@
+//Fallout 13 - you can't see what's behing, but you can hear it.
+
 /turf
 	var/list/step_sounds = list("human" = "footsteps")
 

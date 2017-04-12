@@ -1,5 +1,7 @@
+//Fallout 13 dog companion
+
 /mob/living/simple_animal/hostile/commanded/dog
-	name = "dogshit"
+	name = "doge" //Much doge. Such amaze. Wow.
 	desc = "A large brown dog."
 
 	icon_state = "dog"

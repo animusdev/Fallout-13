@@ -1,6 +1,8 @@
+//Fallout 13 cazador directory
+
 /mob/living/simple_animal/hostile/cazador
-	name = "Cazador"
-	desc = "Big flying thing."
+	name = "cazador"
+	desc = "A big and ugly flying thing."
 	icon_state = "cazador"
 	icon_living = "cazador"
 	icon_gib = "gib"
@@ -22,11 +24,11 @@
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	self_weight = 45
 
-	sound_speak = list('sound/f13npc/cazadore_charge1.ogg','sound/f13npc/cazadore_charge2.ogg','sound/f13npc/cazadore_charge3.ogg')
+	sound_speak = list('sound/f13npc/cazador_charge1.ogg','sound/f13npc/cazador_charge2.ogg','sound/f13npc/cazador_charge3.ogg')
 	sound_speak_chance = 5
 
 	aggro_sound_chance = 50
-	aggro_sound = 'sound/f13npc/cazadore_alert.ogg'
+	aggro_sound = 'sound/f13npc/cazador_alert.ogg'
 
 	damage_coeff = list(BRUTE = 1, BURN = 0, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 	harm_intent_damage = 10

@@ -1,3 +1,5 @@
+//Fallout 13 crafting recipes general directory
+
 //Weapons
 /datum/crafting_recipe/spear
 	name = "Spear"
@@ -26,10 +28,9 @@
 				/obj/item/crafting/wonderglue = 1)
 	category = CAT_MISC
 
-
 //Armor
 /datum/crafting_recipe/leatherarmor
-	name = "leather armor"
+	name = "Leather Armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
 	reqs = list(/obj/item/stack/sheet/animalhide = 6,
 				/obj/item/crafting/duct_tape = 1,
@@ -39,7 +40,7 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/metalarmor
-	name = "metal armor"
+	name = "Metal Armor"
 	result = /obj/item/clothing/suit/armor/f13/bmetalarmor
 	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/stack/cable_coil = 5,

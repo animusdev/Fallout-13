@@ -1,5 +1,7 @@
+//Fallout 13 super mutants directory
+
 /mob/living/simple_animal/hostile/supermutant
-	name = "Mutant"
+	name = "super mutant"
 	desc = "A huge and ugly super mutant."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "hulk_113_s"
@@ -30,7 +32,7 @@
 	icon_state = icon_dead
 	..()
 
-/mob/living/simple_animal/pet/dog/mutant    //this is supermutant, not a dog and he friendly
+/mob/living/simple_animal/pet/dog/mutant    //This is a supermutant, totally not a dog, and he is friendly
 	name = "Brah Min"
 	desc = "A huge and ugly super mutant with a showel full of brahmin feces.<br>He behaves like totally insane and it seems he can speak only English language.<br>He's all concerned only about his (probably not much so) brahmins."
 	icon = 'icons/fallout/mobs/supermutant.dmi'

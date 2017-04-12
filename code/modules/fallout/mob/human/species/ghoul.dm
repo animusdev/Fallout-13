@@ -1,3 +1,5 @@
+//Fallout 13 playable ghouls directory
+
 /datum/species/ghoul
 	name = "Ghoul"
 	id = "ghoul"

@@ -1,3 +1,5 @@
+//Fallout 13 plasma directory
+
 /obj/item/projectile/beam/plasma
 	name = "plasma"
 	damage = 40

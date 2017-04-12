@@ -1,4 +1,4 @@
-//Fallout 13 decorations
+//Fallout 13 decorative decals - the rest of pure decorative stuff is in decor.dm
 
 /obj/effect/decal/goo
 	name = "puddle of goo"

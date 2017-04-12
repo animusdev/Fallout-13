@@ -1,3 +1,5 @@
+//Fallout 13 radiation simulation
+
 var/datum/subsystem/ambient/SSradiation
 
 /datum/subsystem/radiation

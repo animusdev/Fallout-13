@@ -1,3 +1,5 @@
+//Fallout 13 general fuel directory - Gas! Petrol! Guzzolene!
+
 /obj/vehicle/fuel
 	name = "vehicle"
 	desc = "Something going wrong."

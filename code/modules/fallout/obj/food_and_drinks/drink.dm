@@ -1,3 +1,5 @@
+//Fallout 13 general drinks directory
+
 /obj/item/weapon/reagent_containers/food/drinks/bottle/sunset //Howdy, pardner!
 	name = "Sunset Sarsaparilla"
 	desc = "A traditional radiation-free carbonated beverage of a root-beer-type.<br>Tastes like sunshine!"

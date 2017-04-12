@@ -1,3 +1,5 @@
+//Fallout 13 barrels directory
+
 /obj/structure/barrel
 	name = "barrel"
 	desc = "A metal container with something in it.<br>By the look of it, it was manufactured recently."
@@ -15,12 +17,18 @@
 	rad_heavy_range = 1
 	rad_light_range = 4
 	rad_severity = 10
-	self_weight = 70
+	self_weight = 60
 
 /obj/structure/barrel/dangerous/New()
 	..()
 	START_PROCESSING(SSobj, src)
 	SSradiation.processing += src
+
+/obj/structure/barrel/explosive
+	name = "fuel barrel"
+	desc = "That is one strange metal barrel, made of strange metal that did not rust after all the decades.<br>And it has a strange label on it...<br>I wonder if there is anything left in it."
+	icon_state = "explosive"
+	self_weight = 40
 
 /obj/structure/barrel/old
 	name = "old barrel"

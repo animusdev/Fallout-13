@@ -1,3 +1,5 @@
+//Fallout 13 turf smoothing simulation
+
 /turf/proc/updateMineralOverlays()
 	clearMineralOverlays()
 	if(istype(get_step(src, NORTH), /turf/closed/mineral))

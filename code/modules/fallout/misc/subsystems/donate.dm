@@ -1,3 +1,5 @@
+//Fallout 13 - Loadsamoney
+
 var/datum/subsystem/ambient/SSdonate
 
 /datum/subsystem/donate

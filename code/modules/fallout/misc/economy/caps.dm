@@ -1,3 +1,5 @@
+//Fallout 13 base of Wasteland economics
+
 /obj/item/stack/caps
 	name = "caps"
 	desc = "It's worth 1 cap."

@@ -261,6 +261,7 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 100, rad = 60)
+	self_weight = 25
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor Mk I"
@@ -268,6 +269,7 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	armor = list(melee = 70, bullet = 50, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
+	self_weight = 20
 
 /obj/item/clothing/suit/armor/f13/power_armor/superadvanced
 	name = "advanced power armor Mk II"
@@ -275,13 +277,15 @@
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
 	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/power_armor/shocktrooper
 	name = "shocktrooper power armor"
-	desc = "A 'black devil' power armor, is a high-end model of power armor used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the MK I and II."
+	desc = "A \"black devil\" power armor, is a high-end model of power armor used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the MK I and II."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
 	armor = list(melee = 90, bullet = 70, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 90)
+	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/power_armor/badmin
 	name = "advanced power armor Mk III"
@@ -298,7 +302,7 @@
 	desc = "A classic suit of plate armour, highly effective at stopping melee attacks."
 	icon_state = "knight_green"
 	item_state = "knight_green"
-	self_weight = 50
+	self_weight = 40
 
 /obj/item/clothing/suit/armor/riot/knight/yellow
 	icon_state = "knight_yellow"

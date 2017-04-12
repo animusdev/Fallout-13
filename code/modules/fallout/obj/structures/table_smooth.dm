@@ -1,3 +1,5 @@
+//Fallout 13 table smoothing simulation
+
 /obj/structure/table
 	relative()
 		var/table_type = 0 //stand_alone table

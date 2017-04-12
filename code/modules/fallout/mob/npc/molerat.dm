@@ -1,5 +1,7 @@
+//Fallout 13 molerat directory
+
 /mob/living/simple_animal/hostile/molerat
-	name = "Molerat"
+	name = "molerat"
 	desc = "A giant rodent"
 	icon_state = "mole_rat"
 	icon_living = "mole_rat"

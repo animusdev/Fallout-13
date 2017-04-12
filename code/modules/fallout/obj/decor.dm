@@ -1,3 +1,5 @@
+//Fallout 13 structural decorations directory
+
 /obj/structure/decoration
 	anchored = 1
 	level = ABOVE_NORMAL_TURF_LAYER

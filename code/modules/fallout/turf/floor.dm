@@ -1,3 +1,5 @@
+//Fallout 13 general destructible floor directory
+
 /turf/open/floor/f13
 	name = "floor"
 
@@ -41,4 +43,3 @@
 		make_plating()
 		playsound(src, C.usesound, 80, 1)
 		return
-

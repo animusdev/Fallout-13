@@ -1,3 +1,5 @@
+//Fallout 13 - the best sound atmosphere there is before year 2020
+
 var/datum/subsystem/ambient/SSambient
 
 /datum/subsystem/ambient

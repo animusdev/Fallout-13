@@ -1,3 +1,5 @@
+//Fallout 13 energy guns ammo directory
+
 /obj/item/ammo_casing/energy/f13plasma
 	projectile_type = /obj/item/projectile/beam/plasma
 	delay = 2

@@ -1,9 +1,11 @@
+//Fallout 13 - Loadsamoney!
+
 var/global/list/all_donate_packs = list()
 
 proc/load_donate_packs()
 	var/list/all_packs = subtypesof(/datum/donate_pack)
 	if(!all_packs.len)
-		to_chat(world, "<span class='boldannounce'>Error setting up jobs, no donate packs datums found</span>")
+		to_chat(world, "<span class='boldannounce'>Error setting up jobs, no donate packs datums found!</span>")
 		return 0
 	for(var/type in all_packs)
 		var/datum/donate_pack/D = new type()
