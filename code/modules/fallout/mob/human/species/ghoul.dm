@@ -12,6 +12,11 @@
 	species_traits = list(RADIMMUNE, NOBLOOD, VIRUSIMMUNE)
 	sexes = 0
 
+/datum/species/ghoul/qualifies_for_faction(faction_id)
+	if(faction_id == "legion" || faction_id == "city")
+		return 0
+	return 1
+
 //Ghouls have weak limbs.
 /datum/species/ghoul/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()

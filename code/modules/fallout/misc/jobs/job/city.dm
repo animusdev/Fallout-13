@@ -1,3 +1,25 @@
+/datum/job/mayor
+	title = "Mayor"
+	flag = MAYOR
+	department_flag = WASTELAND
+	faction = "city" //desert faction shall disable appearing as scavenger after readying
+	status = "mayor"
+	total_positions = 1
+	spawn_positions = 1 //does not matter for late join
+	supervisors = "nobody"
+	selection_color = "#804B00"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/mayor
+
+/datum/outfit/job/mayor
+	name = "Mayor"
+	id = null
+	ears = null
+	belt = null
+	backpack = null
+	satchel = null
+
 /datum/job/sheriff
 	title = "Sheriff"
 	flag = SHERIFF
@@ -6,7 +28,7 @@
 	status = "sheriff"
 	total_positions = 1
 	spawn_positions = 1 //does not matter for late join
-	supervisors = "nobody"
+	supervisors = "Mayor"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -28,7 +50,7 @@
 	head = /obj/item/clothing/head/f13/cowboy
 	suit_store = /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
 	glasses = /obj/item/clothing/glasses/sunglasses
-	l_hand = /obj/item/weapon/gun/ballistic/shotgun
+	back = /obj/item/weapon/gun/ballistic/shotgun
 //	ears = /obj/item/device/radio/headset/headset_den
 
 /datum/job/settler
@@ -39,7 +61,7 @@
 	status = "member"
 	total_positions = 10
 	spawn_positions = 10 //does not matter for late join
-	supervisors = "nobody"
+	supervisors = "Mayor"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()

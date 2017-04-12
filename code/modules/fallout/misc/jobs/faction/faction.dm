@@ -191,7 +191,7 @@ mob/proc/set_faction(var/faction)
 	name = "City"
 	color = "#804B00"
 	id = "city"
-	head_status = "Mayor"
+	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
 	full_name = "City Dwellers"
 	flags = HAVE_FREQ
@@ -201,7 +201,7 @@ mob/proc/set_faction(var/faction)
 	name = "Raiders"
 	color = "#804B00"
 	id = "raiders"
-	head_status = "Gang Leader"
+	head_status = "gang_leader"
 	preview_image = 'html/factions/raider.png'
 	full_name = "Chaotic Evil"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -212,7 +212,7 @@ mob/proc/set_faction(var/faction)
 	id = "vault"
 	full_name = "Vault-Tec Industries"
 	preview_image = 'html/factions/vault.png'
-	head_status = "Overseer"
+	head_status = "overseer"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 //	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
@@ -223,7 +223,7 @@ mob/proc/set_faction(var/faction)
 	id = "bs"
 	full_name = "Brotherhood of Steel"
 	preview_image = 'html/factions/brotherhood.png'
-	head_status = "Elder"
+	head_status = "elder"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 
@@ -233,7 +233,7 @@ mob/proc/set_faction(var/faction)
 	id = "enclave"
 	full_name = "Enclave"
 	preview_image = 'html/factions/enclave.png'
-	head_status = "General"
+	head_status = "enclave_general"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 
@@ -243,7 +243,7 @@ mob/proc/set_faction(var/faction)
 	id = "hubs"
 	full_name = "Adepts of Hubology Studies"
 	preview_image = 'html/factions/ahs.png'
-	head_status = "AHS-8"
+	head_status = "ahs8"
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/ncr
@@ -253,7 +253,7 @@ mob/proc/set_faction(var/faction)
 	flags = HAVE_FREQ | HAVE_FLAG
 	full_name = "New California Republic"
 	preview_image = 'html/factions/ncr.png'
-	head_status = "General"
+	head_status = "ncr_general"
 	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Your current objectives are:<br>\
 1. As an NCR soldier you must uphold the law around the town, exterminate any raiders you see, seek and destroy the Legion members.<br>\
@@ -263,7 +263,7 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/legion
 	name = "Legion"
-	head_status = "Legate"
+	head_status = "legate"
 	full_name = "Caesar's Legion"
 	preview_image = 'html/factions/legion.png'
 	id = "legion"
@@ -282,7 +282,7 @@ mob/proc/set_faction(var/faction)
 	id = "followers"
 	full_name = "Followers of Appocalypse"
 	preview_image = 'html/factions/followers.png'
-	head_status = "Leader"
+	head_status = "leader"
 	verbs = list(/mob/proc/begin_head_voting)
 
 

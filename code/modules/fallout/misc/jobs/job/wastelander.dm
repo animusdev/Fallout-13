@@ -1,6 +1,6 @@
 /datum/job/wastelander
-	title = "Wastelander"
-	flag = WASTELANDER
+	title = "Adventurer"
+	flag = ADVENTURER
 	department_flag = WASTELAND
 	faction = "none" //desert faction shall disable appearing as scavenger after readying
 	status = "none"
@@ -10,10 +10,10 @@
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
-	outfit = /datum/outfit/job/wastelander
+	outfit = /datum/outfit/job/adventurer
 
-/datum/outfit/job/wastelander
-	name = "Wastelander"
+/datum/outfit/job/adventurer
+	name = "Adventurer"
 	id = null
 	ears = null
 	belt = null

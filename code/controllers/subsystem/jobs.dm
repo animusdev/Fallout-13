@@ -123,6 +123,8 @@ var/datum/subsystem/job/SSjob
 		if(!job.is_gender_allowed(player.client))
 			Debug("FOC job gender check failed, Player: [player]")
 			continue
+		if(!player.client.prefs.pref_species.qualifies_for_faction(job.faction))
+			continue
 		if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
 			Debug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
@@ -160,6 +162,8 @@ var/datum/subsystem/job/SSjob
 			Debug("GRJ non-human failed, Player: [player]")
 			continue
 
+		if(!player.client.prefs.pref_species.qualifies_for_faction(job.faction))
+			continue
 
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
@@ -337,6 +341,8 @@ var/datum/subsystem/job/SSjob
 					Debug("DO non-human failed, Player: [player], Job:[job.title]")
 					continue
 
+				if(!player.client.prefs.pref_species.qualifies_for_faction(job.faction))
+					continue
 
 				// If the player wants that job on this level, then try give it to him.
 				if(player.client.prefs.GetJobDepartment(job, level) & job.flag)

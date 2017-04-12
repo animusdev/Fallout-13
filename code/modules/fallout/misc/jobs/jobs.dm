@@ -13,8 +13,9 @@ var/const/LEGLEGAT			=(1<<8)
 
 var/const/SHERIFF			=(1<<9)
 var/const/SETTLER			=(1<<10)
-var/const/WASTELANDER		=(1<<11)
+var/const/ADVENTURER		=(1<<11)
 var/const/RAIDER        	=(1<<12)
+var/const/MAYOR				=(1<<13)
 
 //var/const/VAULT			=(1<<6)
 

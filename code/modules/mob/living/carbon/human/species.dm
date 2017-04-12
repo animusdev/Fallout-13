@@ -101,6 +101,9 @@
 		return 0
 	return 1
 
+/datum/species/proc/qualifies_for_faction(faction_id)
+	return 1
+
 /datum/species/proc/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	// Drop the items the new species can't wear
 	for(var/slot_id in no_equip)

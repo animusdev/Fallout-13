@@ -1,10 +1,12 @@
 /datum/preferences/proc/ShowCharacterSetup(mob/user)
 	if(!user || !user.client)
 		return
-	update_preview_icon()
-	CHECK_TICK
-	user << browse_rsc(preview_icon, "previewicon.png")
-	CHECK_TICK
+	if(update_preview)
+		update_preview_icon()
+		update_preview = 0
+		CHECK_TICK
+		user << browse_rsc(preview_icon, "previewicon.png")
+		CHECK_TICK
 	if(parent)
 		parent.update_donate_data()
 	CHECK_TICK
@@ -32,13 +34,33 @@
 			if(i > parent.allowed_factions.len)
 				break
 			var/datum/f13_faction/faction = parent.allowed_factions[i]
-			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' [faction == choiced_faction ? "class='linkOn'" : ""]>[faction.name]</a>"
+			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[faction.full_name]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
+	if(!factions_data)
+		factions_data = "No available factions"
 	CHECK_TICK
 	var/jobs_data
 	if(parent && parent.allowed_factions)
 		for(var/datum/job/j in SSjob.occupations)
 			if(j.faction == choiced_faction.id)
-				jobs_data += "<a class=\"l70[j.flag == choiced_job_flag && j.department_flag == choiced_department_flag? " linkOn" : ""]\" href='?_src_=prefs;preference=job_equip;task=input;job_key=[j.flag];department_key=[j.department_flag];'>[j.title]</a>"
+				var/available = parent.mob.IsJobAvailable(null, j)
+				if(available)
+					var/job_class = "disabled_job"
+					var/prefUpperLevel = 3
+					if(GetJobDepartment(j, 1) & j.flag)
+						job_class = "high_job"
+						prefUpperLevel = 4
+					else if(GetJobDepartment(j, 2) & j.flag)
+						job_class = "middle_job"
+						prefUpperLevel = 1
+					else if(GetJobDepartment(j, 3) & j.flag)
+						job_class = "low_job"
+						prefUpperLevel = 2
+
+					jobs_data += "<a class=\"l70 [job_class][j.flag == choiced_job_flag && j.department_flag == choiced_department_flag? " linkOn" : ""] tooltip\" data-tooltip=\"Role description\" href='?_src_=prefs;preference=job_equip;task=input;job_key=[j.flag];level=[prefUpperLevel];rank=[j.title];department_key=[j.department_flag];'>[j.title]</a>"
+				else
+					jobs_data += "<span class=\"170 linkOff\">[j.title]</span>"
+	if(!jobs_data)
+		jobs_data = "<span class=\"170\">No available roles</span>"
 	CHECK_TICK
 
 	var/list/data = list(
@@ -78,15 +100,10 @@
 	var/html = text("<center>\
 	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Settings</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a>\
 	</center>\
-	\
 	<HR>\
-	\
 	<center>\
 	[]\
 	</center>\
-	 \
-	\
-	\
 	<div class=\"first_block\">\
 		<h2>Identity</h2>\
 		<table width='100%'>\
@@ -111,8 +128,6 @@
 			</tr>\
 		</table>\
 	</div>\
-	\
-	\
 	<div class=\"second_block\">\
 		<h2>Body</h2>\
 		<table>\
@@ -142,7 +157,6 @@
 			</tr>\
 			\
 		</table>\
-		\
 	</div>\
 	<div class=\"third_block\">\
 		<div class=\"third_block_39\">\
@@ -193,16 +207,12 @@
 					<a href='?_src_=prefs;preference=next_shoes;task=input'>&gt;</a>\
 				</div>\
 			</div>\
-			\
-			\
-			\
 		</div><!--1 блок 39-->\
 		<div class=\"third_block_39 job\">\
 		<h3>Choose your role</h3><br>\
 			<div class=\"job_p\">\
 				[]\
 			</div>\
-			\
 			<div class=\"middle_img\">\
 				<img src=\"previewicon.png\" width=\"160\" height=\"96\" alt=\"player-preview\">\
 			</div>\
@@ -235,19 +245,7 @@
 						<a href='?_src_=prefs;preference=next_pocket_2;task=input'>&gt;</a>\
 					</div>\
 				</div>\
-				\
-				\
-				\
-				\
-				\
 				</div>\
-				\
-				\
-				\
-				\
-				\
-				\
-				\
 			</div>\
 			\
 		</div>\
@@ -264,7 +262,6 @@
 						</td>\
 					</tr>\
 				</table>\
-				\
 				<table>\
 					<tr>\
 						<td valign='top' width='21%'>\
@@ -275,9 +272,6 @@
 						</td>\
 					</tr>\
 				</table>\
-				\
-				\
-				\
 				<table>\
 					<tr>\
 						<td valign='top' width='21%'>\
