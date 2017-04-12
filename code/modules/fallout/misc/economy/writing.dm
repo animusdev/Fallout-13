@@ -165,9 +165,12 @@
 //There are icons for pencils to wear off, as well as sharpeners in icons/fallout/objetcs/bureauracy.dmi - yet unused.
 //For now, these are just pens writing in grey.
 
-/obj/item/weapon/pen/pencil/New()
-	..()
+/obj/item/weapon/pen/pencil
 	name = "pencil"
 	desc = "The most cheap and simple, yet effective writing tool."
-	icon_state = pick("pencil-r","pencil-y","pencil-g","pencil-b")
+	icon_state = "pencil-y"
 	colour = "grey"
+
+/obj/item/weapon/pen/pencil/New()
+	..()
+	icon_state = pick("pencil-r","pencil-y","pencil-g","pencil-b")

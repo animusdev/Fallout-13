@@ -1,7 +1,7 @@
 /obj/item/weapon/folder
 	name = "folder"
 	desc = "A folder."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/fallout/objects/bureaucracy.dmi'
 	icon_state = "folder"
 	w_class = WEIGHT_CLASS_SMALL
 	pressure_resistance = 2
@@ -18,6 +18,11 @@
 /obj/item/weapon/folder/yellow
 	desc = "A yellow folder."
 	icon_state = "folder_yellow"
+
+/obj/item/weapon/folder/yellow/secret
+	name = "folder- 'TOP SECRET'"
+	desc = "A folder stamped \"Top Secret - Property of Vault-Tec Industries. Unauthorized distribution is punishable by the law.\""
+	icon_state = "folder_secret"
 
 /obj/item/weapon/folder/white
 	desc = "A white folder."
