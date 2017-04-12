@@ -118,27 +118,27 @@ mob/proc/set_status(var/status)
 	id = "recruit"
 	change_faction = 1
 
-/datum/status/legion/decanus
+/datum/status/decanus
 	name = "Decanus"
 	id = "decanus"
 	change_faction = 1
 	can_invite_to = list("recruit")
 	color = "#A6423B"
-/datum/status/legion/vexillarius
+/datum/status/vexillarius
 	name = "Vexillarius"
 	id = "vexillarius"
 	change_faction = 1
 	can_invite_to = list("recruit", "decanus")
 //	craft_recipes = list(/datum/table_recipe/legion_vex_armor, /datum/table_recipe/legion_vex_helm)
 	color = "#983C36"
-/datum/status/legion/centurion
+/datum/status/centurion
 	name = "Centurion"
 	id = "centurion"
 	change_faction = 1
 	can_invite_to = list("recruit", "decanus", "vexillarius")
 //	craft_recipes = list(/datum/table_recipe/legion_cent_armor, /datum/table_recipe/legion_cent_helm)
 	color = "#8D3731"
-/datum/status/legion/legate
+/datum/status/legate
 	name = "Legate"
 	id = "legate"
 	change_faction = 1
@@ -146,63 +146,74 @@ mob/proc/set_status(var/status)
 //	craft_recipes = list(/datum/table_recipe/legion_legat_armor, /datum/table_recipe/legion_legat_helm, \
 	/datum/table_recipe/legion_legat_gloves, /datum/table_recipe/legion_legat_shoes)
 	color = "#7A302A"
-/datum/status/ncr/ranger
+
+/datum/status/ranger
 	name = "Ranger"
 	id = "ranger"
 	change_faction = 1
-//	can_invite_to = list("Recruit")
-//	craft_recipes = list(/datum/table_recipe/ncr_ranger_helm, /datum/table_recipe/ncr_ranger_armor)
 	color = "#020070"
 
-/datum/status/ncr/squad_leader
-	name = "Squad Leader"
-	id = "squad_leader"
+/datum/status/squad_leader
+	name = "General"
+	id = "ncr_general"
 	change_faction = 1
 	can_invite_to = list("recruit", "ranger", "trooper", "etrooper")
 	color = "#02005C"
 
-/datum/status/ncr/trooper
+/datum/status/trooper
 	name = "Trooper"
 	id = "trooper"
 	change_faction = 1
-//	can_invite_to = list("Recruit", "Ranger")
 	color = "#02005C"
 
-/datum/status/ncr/elite_trooper
+/datum/status/elite_trooper
 	name = "Elite Trooper"
 	id = "etrooper"
 	change_faction = 1
-//	can_invite_to = list("Recruit", "Ranger")
 	color = "#02005C"
+
 /datum/status/raider
 	name = "Raider"
 	id = "raider"
-	purge_faction = "Wasteland"
-	can_invite_to_himself = 1
+	purge_faction = "raiders"
 	color = "#FF0000"
+
+/datum/status/gang_leader
+	name = "Gang Leader"
+	id = "gang_leader"
+	purge_faction = "raiders"
+	can_invite_to = list("raider")
+	color = "#FF0000"
+
 //	craft_recipes = list(/datum/table_recipe/raider_yankee_armor, /datum/table_recipe/raider_supafly_armor, \
 	/datum/table_recipe/raider_supafly_helmet, /datum/table_recipe/raider_yankee_helmet)
 
-/datum/status/wastelander
-	name = "Wastelander"
+/datum/status/neutral
+	name = "Neutral"
 	id = "none"
-	purge_faction = "Wasteland"
+	purge_faction = "none"
 
 /datum/status/member
 	name = "Member"
 	id = "member"
 	change_faction = 1
 
-/datum/status/den/sheriff
+/datum/status/sheriff
 	name = "Sheriff"
 	id = "sheriff"
 	can_invite_to = list("member")
-	purge_faction = "Den"
+	purge_faction = "city"
 	color = "#704200"
 
+/datum/status/mayor
+	name = "Mayor"
+	id = "mayor"
+	can_invite_to = list("member", "sheriff")
+	purge_faction = "city"
+	color = "#704200"
 
-/datum/status/vault/overseer
+/datum/status/overseer
 	name = "Overseer"
 	can_invite_to = list("member")
-	purge_faction = "Vault"
+	purge_faction = "vault"
 	color = "#00491A"

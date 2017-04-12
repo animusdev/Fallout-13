@@ -107,6 +107,8 @@ var/list/preferences_datums = list()
 
 	var/list/datum/outfit/outfits
 
+	var/update_preview = 1
+
 	var/tmp/datum/f13_faction/choiced_faction
 	var/tmp/choiced_faction_index = 1
 	var/tmp/choiced_job_flag
@@ -606,8 +608,11 @@ var/list/preferences_datums = list()
 				SetChoices(user)
 		return 1
 	if(href_list["preference"] == "job_equip")
-		choiced_job_flag = text2num(href_list["job_key"])
-		choiced_department_flag = text2num(href_list["department_key"])
+		if(choiced_job_flag == text2num(href_list["job_key"]) && choiced_department_flag == text2num(href_list["department_key"]))
+			SetJobPreferenceLevel(SSjob.GetJob(href_list["rank"]), text2num(href_list["level"]))
+		else
+			choiced_job_flag = text2num(href_list["job_key"])
+			choiced_department_flag = text2num(href_list["department_key"])
 
 	switch(href_list["task"])
 		if("random")
@@ -638,6 +643,7 @@ var/list/preferences_datums = list()
 					backbag = pick(backbaglist)
 				if("all")
 					random_character()
+			update_preview = 1
 		if("faction_next")
 			choiced_faction_index += 4
 			if(choiced_faction_index > parent.allowed_factions.len)
@@ -702,6 +708,7 @@ var/list/preferences_datums = list()
 					var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference") as null|color
 					if(new_hair)
 						hair_color = sanitize_hexcolor(new_hair)
+					update_preview = 1
 
 
 				if("hair_style")
@@ -712,23 +719,27 @@ var/list/preferences_datums = list()
 						new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in hair_styles_female_list
 					if(new_hair_style)
 						hair_style = new_hair_style
+					update_preview = 1
 
 				if("next_hair_style")
 					if (gender == MALE)
 						hair_style = next_list_item(hair_style, hair_styles_male_list)
 					else
 						hair_style = next_list_item(hair_style, hair_styles_female_list)
+					update_preview = 1
 
 				if("previous_hair_style")
 					if (gender == MALE)
 						hair_style = previous_list_item(hair_style, hair_styles_male_list)
 					else
 						hair_style = previous_list_item(hair_style, hair_styles_female_list)
+					update_preview = 1
 
 				if("facial")
 					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference") as null|color
 					if(new_facial)
 						facial_hair_color = sanitize_hexcolor(new_facial)
+					update_preview = 1
 
 				if("facial_hair_style")
 					var/new_facial_hair_style
@@ -738,18 +749,21 @@ var/list/preferences_datums = list()
 						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in facial_hair_styles_female_list
 					if(new_facial_hair_style)
 						facial_hair_style = new_facial_hair_style
+					update_preview = 1
 
 				if("next_facehair_style")
 					if (gender == MALE)
 						facial_hair_style = next_list_item(facial_hair_style, facial_hair_styles_male_list)
 					else
 						facial_hair_style = next_list_item(facial_hair_style, facial_hair_styles_female_list)
+					update_preview = 1
 
 				if("previous_facehair_style")
 					if (gender == MALE)
 						facial_hair_style = previous_list_item(facial_hair_style, facial_hair_styles_male_list)
 					else
 						facial_hair_style = previous_list_item(facial_hair_style, facial_hair_styles_female_list)
+					update_preview = 1
 
 				if("underwear")
 					underwear = "Nude"
@@ -764,6 +778,7 @@ var/list/preferences_datums = list()
 					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference") as color|null
 					if(new_eyes)
 						eye_color = sanitize_hexcolor(new_eyes)
+					update_preview = 1
 
 				if("species")
 
@@ -776,6 +791,7 @@ var/list/preferences_datums = list()
 						var/temp_hsv = RGBtoHSV(features["mcolor"])
 						if(features["mcolor"] == "#000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#7F7F7F")[3]))
 							features["mcolor"] = pref_species.default_color
+						update_preview = 1
 				if("mutant_color")
 					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Character Preference") as color|null
 					if(new_mutantcolor)
@@ -786,123 +802,89 @@ var/list/preferences_datums = list()
 							features["mcolor"] = sanitize_hexcolor(new_mutantcolor)
 						else
 							to_chat(user, "<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+					update_preview = 1
 
 				if("tail_lizard")
 					var/new_tail
 					new_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in tails_list_lizard
 					if(new_tail)
 						features["tail_lizard"] = new_tail
+					update_preview = 1
 
 				if("tail_human")
 					var/new_tail
 					new_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in tails_list_human
 					if(new_tail)
 						features["tail_human"] = new_tail
+					update_preview = 1
 
 				if("snout")
 					var/new_snout
 					new_snout = input(user, "Choose your character's snout:", "Character Preference") as null|anything in snouts_list
 					if(new_snout)
 						features["snout"] = new_snout
+					update_preview = 1
 
 				if("horns")
 					var/new_horns
 					new_horns = input(user, "Choose your character's horns:", "Character Preference") as null|anything in horns_list
 					if(new_horns)
 						features["horns"] = new_horns
+					update_preview = 1
 
 				if("ears")
 					var/new_ears
 					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in ears_list
 					if(new_ears)
 						features["ears"] = new_ears
+					update_preview = 1
 
 				if("wings")
 					var/new_wings
 					new_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in r_wings_list
 					if(new_wings)
 						features["wings"] = new_wings
+					update_preview = 1
 
 				if("frills")
 					var/new_frills
 					new_frills = input(user, "Choose your character's frills:", "Character Preference") as null|anything in frills_list
 					if(new_frills)
 						features["frills"] = new_frills
+					update_preview = 1
 
 				if("spines")
 					var/new_spines
 					new_spines = input(user, "Choose your character's spines:", "Character Preference") as null|anything in spines_list
 					if(new_spines)
 						features["spines"] = new_spines
+					update_preview = 1
 
 				if("body_markings")
 					var/new_body_markings
 					new_body_markings = input(user, "Choose your character's body markings:", "Character Preference") as null|anything in body_markings_list
 					if(new_body_markings)
 						features["body_markings"] = new_body_markings
+					update_preview = 1
 
 				if("legs")
 					var/new_legs
 					new_legs = input(user, "Choose your character's legs:", "Character Preference") as null|anything in legs_list
 					if(new_legs)
 						features["legs"] = new_legs
+					update_preview = 1
 
 				if("s_tone")
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in skin_tones
 					if(new_s_tone)
 						skin_tone = new_s_tone
+					update_preview = 1
 
 				if("ooccolor")
 					var/new_ooccolor = input(user, "Choose your OOC colour:", "Game Preference") as color|null
 					if(new_ooccolor)
 						ooccolor = sanitize_ooccolor(new_ooccolor)
 
-				if("bag")
-					var/new_backbag = input(user, "Choose your character's style of bag:", "Character Preference")  as null|anything in backbaglist
-					if(new_backbag)
-						backbag = new_backbag
-
-				if("clown_name")
-					var/new_clown_name = reject_bad_name( input(user, "Choose your character's clown name:", "Character Preference")  as text|null )
-					if(new_clown_name)
-						custom_names["clown"] = new_clown_name
-					else
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
-
-				if("mime_name")
-					var/new_mime_name = reject_bad_name( input(user, "Choose your character's mime name:", "Character Preference")  as text|null )
-					if(new_mime_name)
-						custom_names["mime"] = new_mime_name
-					else
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
-
-				if("ai_name")
-					var/new_ai_name = reject_bad_name( input(user, "Choose your character's AI name:", "Character Preference")  as text|null, 1 )
-					if(new_ai_name)
-						custom_names["ai"] = new_ai_name
-					else
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, 0-9, -, ' and .</font>")
-
-				if("cyborg_name")
-					var/new_cyborg_name = reject_bad_name( input(user, "Choose your character's cyborg name:", "Character Preference")  as text|null, 1 )
-					if(new_cyborg_name)
-						custom_names["cyborg"] = new_cyborg_name
-					else
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, 0-9, -, ' and .</font>")
-
-				if("religion_name")
-					var/new_religion_name = reject_bad_name( input(user, "Choose your character's religion:", "Character Preference")  as text|null )
-					if(new_religion_name)
-						custom_names["religion"] = new_religion_name
-					else
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
-
-				if("deity_name")
-					var/new_deity_name = reject_bad_name( input(user, "Choose your character's deity:", "Character Preference")  as text|null )
-					if(new_deity_name)
-						custom_names["deity"] = new_deity_name
-					else
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 				if ("preferred_map")
 					var/maplist = list()
 					var/default = "Default"
@@ -950,6 +932,7 @@ var/list/preferences_datums = list()
 					socks = random_socks()
 					facial_hair_style = random_facial_hair_style(gender)
 					hair_style = random_hair_style(gender)
+					update_preview = 1
 
 				if("hotkeys")
 					hotkeys = !hotkeys

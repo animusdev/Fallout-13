@@ -5,7 +5,7 @@ Raider
 	title = "Raider"
 	flag = RAIDER
 	department_flag = WASTELAND
-	faction = "none" //desert faction shall disable appearing as scavenger after readying
+	faction = "raiders" //desert faction shall disable appearing as scavenger after readying
 	status = "raider"
 	total_positions = -1
 	spawn_positions = -1 //does not matter for late join

@@ -1,10 +1,10 @@
 /datum/job/squad_leader
-	title = "Squad Leader"
+	title = "General"
 	flag = SQDLEAD
 	department_head = list("NCR Command")
 	department_flag = WASTELAND
 	faction = "ncr"
-	status = "squad_leader"
+	status = "ncr_general"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the NCR command"
@@ -19,7 +19,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/squad_leader
-	name = "Squad Leader"
+	name = "NCR General"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -37,13 +37,13 @@
 /datum/job/ranger
 	title = "Ranger"
 	flag = RANGER
-	department_head = list("Squad Leader")
+	department_head = list("General")
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "ranger"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the squad leader"
+	supervisors = "the general"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -68,13 +68,13 @@
 /datum/job/elite_trooper
 	title = "Elite Trooper"
 	flag = SERGEANT
-	department_head = list("Squad Leader")
+	department_head = list("General")
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "etrooper"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the squad leader"
+	supervisors = "the general"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -103,13 +103,13 @@
 /datum/job/trooper
 	title = "Trooper"
 	flag = TROOPER
-	department_head = list("Squad Leader")
+	department_head = list("General")
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "trooper"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the squad leader"
+	supervisors = "the general"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 

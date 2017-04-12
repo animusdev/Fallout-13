@@ -269,10 +269,11 @@
 					return
 				to_chat(src, "<span class='notice'>Vote successful.</span>")
 
-/mob/new_player/proc/IsJobAvailable(rank)
-	var/datum/job/job = SSjob.GetJob(rank)
+/mob/proc/IsJobAvailable(rank, datum/job/job)
 	if(!job)
-		return 0
+		job = SSjob.GetJob(rank)
+		if(!job)
+			return 0
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(job.title == "Assistant")
 			if(isnum(client.player_age) && client.player_age <= 14) //Newbies can always be assistants
@@ -289,6 +290,8 @@
 	if(!job.is_gender_allowed(src.client))
 		return 0
 	if(config.enforce_human_authority && !client.prefs.pref_species.qualifies_for_rank(rank, client.prefs.features))
+		return 0
+	if(!client.prefs.pref_species.qualifies_for_faction(job.faction))
 		return 0
 	return 1
 
