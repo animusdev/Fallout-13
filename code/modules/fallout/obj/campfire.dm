@@ -89,7 +89,7 @@
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
 	START_PROCESSING(SSobj, src)
 	fired = 1
-	desc = "Burning campfire... A warm, bright and hopeful fire source.<br>It's hot!"
+	desc = "Burning campfire... A warm, bright and hopeful fire source.<br><b>It's hot!</b>"
 	if(user)
 		user.visible_message("[user] has lit a [src].", "<span class='notice'>You have lit a [src].</span>")
 	update_icon()

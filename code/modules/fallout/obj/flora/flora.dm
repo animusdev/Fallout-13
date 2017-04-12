@@ -1,3 +1,5 @@
+//Fallout 13 general flora directory
+
 /obj/structure/flora/grass/wasteland
 	icon = 'icons/fallout/flora/flora.dmi'
 	icon_state = "tall_grass_1"
@@ -39,8 +41,6 @@
 	if(cut)
 		icon = 'icons/fallout/flora/trees.dmi'
 		icon_state = "tree_stump"
-
-//Fallout 13 general flora directory
 
 /obj/structure/flora/tree/tall
 	name = "dead tree"
