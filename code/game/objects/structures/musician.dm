@@ -299,9 +299,9 @@
 
 
 /obj/structure/piano
-	name = "space minimoog"
+	name = "grand piano"
 	icon = 'icons/obj/musician.dmi'
-	icon_state = "minimoog"
+	icon_state = "old"
 	anchored = 1
 	density = 1
 	var/datum/song/song
@@ -312,13 +312,13 @@
 	song = new("piano", src)
 
 	if(prob(50))
-		name = "space minimoog"
-		desc = "This is a minimoog, like a space piano, but more spacey!"
-		icon_state = "minimoog"
+		name = "grand piano"
+		desc = "An old grand piano.<br>It's in a pretty good shape after all the decades."
+		icon_state = "old"
 	else
-		name = "space piano"
-		desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
-		icon_state = "piano"
+		name = "shattered grand piano"
+		desc = "A very old grand piano.<br>It sure is a bit shattered..."
+		icon_state = "oldshattered"
 
 /obj/structure/piano/Destroy()
 	qdel(song)
@@ -367,3 +367,8 @@
 				anchored = 0
 	else
 		return ..()
+
+/obj/structure/piano/pristine
+	name = "grand piano"
+	desc = "Black in color, and pristine by the look.<br>This particular piano seems to be in a better condition than anything else you could see out in the wastes."
+	icon_state = "piano"
