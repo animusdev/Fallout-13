@@ -431,8 +431,7 @@ var/datum/subsystem/job/SSjob
 			H = new_mob
 
 	to_chat(H, "<b>You are the [rank].</b>")
-	to_chat(H, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
-	to_chat(H, "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>")
+	to_chat(H, "<b>As the [rank] you answer directly to [job.supervisors].</b>")
 	if(job.req_admin_notify)
 		to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
 	if(config.minimal_access_threshold)

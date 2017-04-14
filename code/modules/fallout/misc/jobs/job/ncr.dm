@@ -27,7 +27,7 @@
 	suit = /obj/item/clothing/suit/armor/f13/sergeant
 	head = /obj/item/clothing/head/f13/sergeant
 	belt = /obj/item/weapon/storage/belt/military/army
-	back = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
+	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	l_pocket = /obj/item/device/radio
 	r_pocket = /obj/item/device/flashlight/torch/flare/blue
 	belt_contents = list(/obj/item/ammo_box/magazine/m556 = 3, \
@@ -60,7 +60,7 @@
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/ranger
 	belt = /obj/item/weapon/storage/belt/military/assault
-	suit_store = /obj/item/weapon/gun/ballistic/revolver/magnum
+	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
 	belt_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 2, \
 		/obj/item/ammo_box/m44 = 3)
@@ -94,7 +94,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	suit_store = /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	mask = /obj/item/clothing/mask/gas/sechailer
-	back = /obj/item/weapon/minigunpack
+	weapon = /obj/item/weapon/minigunpack
 	l_pocket = /obj/item/device/radio
 	r_pocket = /obj/item/device/flashlight/torch/flare/blue
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
@@ -128,7 +128,7 @@
 	head = /obj/item/clothing/head/helmet/f13/trooper
 	glasses = /obj/item/clothing/glasses/f13/biker
 	belt = /obj/item/weapon/storage/belt/military/army
-	back = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
+	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	l_pocket = /obj/item/device/radio
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, /obj/item/ammo_box/magazine/m556 = 2)

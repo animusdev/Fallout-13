@@ -228,6 +228,7 @@
 	put_on_delay = 40
 	strip_delay = 40
 	self_weight = 2
+	allowed = list(/obj/item/weapon/gun/ballistic/revolver)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/old
 	name = "worn NCR Veteran Ranger combat armor"
