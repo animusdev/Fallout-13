@@ -62,9 +62,9 @@
 
 					jobs_data += "<a class=\"l70 [job_class][selected_job == j ? " linkOn" : ""] tooltip\" data-tooltip=\"[RoleTooltip(j.title, j.department_head, j.desc, priority)]\" href='?_src_=prefs;preference=job_equip;task=input;job_key=[j.flag];level=[prefUpperLevel];rank=[j.title];department_key=[j.department_flag];'>[j.title]</a>"
 				else
-					jobs_data += "<a class=\"170 linkOn unavailable_job\">[j.title]</a>"
+					jobs_data += "<a class=\"170 unavailable_job\">[j.title]</a>"
 	if(!jobs_data)
-		jobs_data = "<span class=\"170\">No available roles</span>"
+		jobs_data = "No available roles"
 	CHECK_TICK
 
 //Outfit data. Showing name of weared items. Taking item objects from pool (They already created and pooled at update_preview_icon())
@@ -378,6 +378,6 @@
 	return "<b>[name]</b><br><i>[desc]</i>"
 
 /datum/preferences/proc/RoleTooltip(name, list/heads,desc, priority)
-	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinate: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[desc]</i>"
+	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinates to: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[desc]</i>"
 
 #undef MAX_ITEM_LENGTH
