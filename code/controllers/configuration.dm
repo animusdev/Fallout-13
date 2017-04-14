@@ -74,7 +74,7 @@
 	var/server
 	var/banappeals
 	var/wikiurl = "http://fallout-13.wikia.com/wiki/Fallout_13_Wikia" // Default wiki link.
-	var/forumurl = "http://wasteland.expert/" //default forums
+	var/forumurl = "https://www.reddit.com/r/Fallout13/" //default forums
 	var/rulesurl = "http://www.tgstation13.org/wiki/Rules" // default rules
 	var/discord = "https://discordapp.com/invite/fECUGbv" //default github
 	var/bitbucket = "https://bitbucket.org/Jackerzz/fallout/issues?status=new&status=open"

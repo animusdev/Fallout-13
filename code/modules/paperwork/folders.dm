@@ -21,7 +21,7 @@
 
 /obj/item/weapon/folder/yellow/secret
 	name = "folder- 'TOP SECRET'"
-	desc = "A folder stamped \"Top Secret - Property of Vault-Tec Industries. Unauthorized distribution is punishable by the law.\""
+	desc = "A folder stamped \"Top Secret - Property of Vault-Tec Corporation. Unauthorized distribution is punishable by the law.\""
 	icon_state = "folder_secret"
 
 /obj/item/weapon/folder/white

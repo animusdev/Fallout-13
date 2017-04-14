@@ -103,7 +103,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/sugarbombs
 	name = "Sugar Bombs"
-	desc = "Sugar Bombs is a pre-War breakfast cereal that can be found all around the Wasteland, packaged in white and blue boxes with a red ovoid logo at the top, fully labeled as \"Sugar Bombs breakfast cereal\"."
+	desc = "Sugar Bombs is a pre-War breakfast cereal that can be found all around the wasteland, packaged in white and blue boxes with a red ovoid logo at the top, fully labeled as \"Sugar Bombs breakfast cereal\"."
 	icon_state = "sugarbombs"
 	bonus_reagents = list("radium" = 3, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
