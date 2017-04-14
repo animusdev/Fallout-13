@@ -1,5 +1,6 @@
 /datum/job/wastelander
 	title = "Adventurer"
+	desc = "No description."
 	flag = ADVENTURER
 	department_flag = WASTELAND
 	faction = "none" //desert faction shall disable appearing as scavenger after readying

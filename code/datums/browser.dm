@@ -28,6 +28,7 @@
 	if (nref)
 		ref = nref
 	add_stylesheet("common", 'html/browser/common.css') // this CSS sheet is common to all UIs
+	add_script("simpleTooltip.js", 'html/browser/js/simpleTooltip.js')
 
 /datum/browser/proc/add_head_content(nhead_content)
 	head_content = nhead_content
@@ -71,7 +72,7 @@
 	<head>
 		[head_content]
 	</head>
-	<body scroll=auto>
+	<body scroll=auto onload="initToolTips('A','IMG')">
 		<div class='uiWrapper'>
 			[title ? "<div class='uiTitleWrapper'><div [title_attributes]><tt>[title]</tt></div></div>" : ""]
 			<div class='uiContent'>

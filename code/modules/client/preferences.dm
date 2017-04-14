@@ -111,8 +111,7 @@ var/list/preferences_datums = list()
 
 	var/tmp/datum/f13_faction/choiced_faction
 	var/tmp/choiced_faction_index = 1
-	var/tmp/choiced_job_flag
-	var/tmp/choiced_department_flag
+	var/tmp/datum/job/selected_job
 
 	var/tmp/mob/living/carbon/human/dummy/mannequin = new()
 
@@ -140,8 +139,12 @@ var/list/preferences_datums = list()
 /datum/preferences/proc/ShowChoices(mob/user)
 	if(!user || !user.client)
 		return
-	update_preview_icon()
-	user << browse_rsc(preview_icon, "previewicon.png")
+	if(update_preview)
+		update_preview_icon()
+		update_preview = 0
+		CHECK_TICK
+		user << browse_rsc(preview_icon, "previewicon.png")
+		CHECK_TICK
 	var/dat = "<center>"
 
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a> "
@@ -581,38 +584,12 @@ var/list/preferences_datums = list()
 			text += ".</span>"
 			to_chat(user, text)
 		return
-
-	if(href_list["preference"] == "job")
-		switch(href_list["task"])
-			if("close")
-				user << browse(null, "window=mob_occupation")
-				ShowChoices(user)
-			if("reset")
-				ResetJobs()
-				SetChoices(user)
-			if("random")
-				switch(joblessrole)
-					if(RETURNTOLOBBY)
-						if(jobban_isbanned(user, "Assistant"))
-							joblessrole = BERANDOMJOB
-						else
-							joblessrole = BEASSISTANT
-					if(BEASSISTANT)
-						joblessrole = BERANDOMJOB
-					if(BERANDOMJOB)
-						joblessrole = RETURNTOLOBBY
-				SetChoices(user)
-			if("setJobLevel")
-				UpdateJobPreference(user, href_list["text"], text2num(href_list["level"]))
-			else
-				SetChoices(user)
-		return 1
 	if(href_list["preference"] == "job_equip")
-		if(choiced_job_flag == text2num(href_list["job_key"]) && choiced_department_flag == text2num(href_list["department_key"]))
-			SetJobPreferenceLevel(SSjob.GetJob(href_list["rank"]), text2num(href_list["level"]))
+		if(selected_job && selected_job.flag == text2num(href_list["job_key"]) && selected_job.department_flag == text2num(href_list["department_key"]))
+			SetJobPreferenceLevel(selected_job, text2num(href_list["level"]))
 		else
-			choiced_job_flag = text2num(href_list["job_key"])
-			choiced_department_flag = text2num(href_list["department_key"])
+			selected_job = SSjob.GetJob(href_list["rank"])
+			update_preview = 1
 
 	switch(href_list["task"])
 		if("random")
@@ -1014,6 +991,7 @@ var/list/preferences_datums = list()
 						random_character()
 						real_name = random_unique_name(gender)
 						save_character()
+					update_preview = 1
 
 				if("tab")
 					if (href_list["tab"])

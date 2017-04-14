@@ -18,6 +18,7 @@
 	var/suit_store = null
 	var/r_hand = null
 	var/l_hand = null
+	var/weapon = null
 	var/internals_slot = null //ID of slot containing a gas tank
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
 	var/list/belt_contents = list()
@@ -72,6 +73,11 @@
 	CHECK_TICK
 	if(suit_store)
 		H.equip_to_slot_or_del(PoolOrNew(suit_store,H),slot_s_store)
+	CHECK_TICK
+
+	if(weapon)
+		H.put_in_active_hand(PoolOrNew(weapon,H))
+		H.quick_equip()
 	CHECK_TICK
 
 	if(l_hand)

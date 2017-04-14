@@ -617,6 +617,14 @@ var/list/binary = list("0","1")
 	tosend["data"] = finalized
 	to_chat(log, json_encode(tosend))
 
+proc/CutText(text, length)
+	var/text_len = length(text)
+	if(text_len <= length)
+		return text
+	if(copytext(text,text_len - 1,text_len) == " ")
+		text = copytext(text, 1,text_len - 2)
+	return copytext(text, 1, length) + ".."
+
 proc/FormatText(text, list/data)
 	for(var/element in data)
 		var/element_lenght = length(element) + 2

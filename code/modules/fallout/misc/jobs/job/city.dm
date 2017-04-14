@@ -48,15 +48,15 @@
 	shoes = /obj/item/clothing/shoes/workboots
 	suit = /obj/item/clothing/suit/f13/sheriff
 	head = /obj/item/clothing/head/f13/cowboy
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
+	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
 	glasses = /obj/item/clothing/glasses/sunglasses
 	back = /obj/item/weapon/gun/ballistic/shotgun
-//	ears = /obj/item/device/radio/headset/headset_den
 
 /datum/job/settler
 	title = "Settler"
 	flag = SETTLER
 	department_flag = WASTELAND
+	desc = "No description."
 	faction = "city" //desert faction shall disable appearing as scavenger after readying
 	status = "member"
 	total_positions = 10

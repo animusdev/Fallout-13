@@ -189,7 +189,7 @@
 turf/closed/indestructible/f13/splashscreen/New()
 	.=..()
 	name = "Fallout 13"
-	desc = "The Wasteland is calling!"
+	desc = "The wasteland is calling!"
 	icon = 'icons/fallout/misc/lobby.dmi'
 	icon_state = "title[rand(1,13)]"
 	layer = 60

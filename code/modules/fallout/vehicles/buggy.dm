@@ -2,7 +2,7 @@
 
 /obj/vehicle/fuel/motorcycle/buggy
 	name = "dune buggy"
-	desc = "<i>Ain't no place for a fancy cars on the Wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"
+	desc = "<i>Ain't no place for a fancy cars on the wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "buggy_dune"
 	datum_type = /datum/riding/motorcycle/buggy

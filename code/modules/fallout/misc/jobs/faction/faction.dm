@@ -31,7 +31,7 @@ proc/get_faction_members(var/faction)
 
 	var/welcome_text = "" //Showing text on faction joining
 	var/color = "#171717"
-	var/description = "No description"
+	var/description = "<b>Alignment: Chaotic Badmin</b><br>Something's wrong!<br><i>Badmins spawn shit and factions engine has broken.</i>"
 	var/preview_image = 'html/factions/neutral.png'
 
 	var/head_status = null //Main status at this faction. Currently using for leader voting
@@ -184,7 +184,8 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/neutral
 	name = "Neutral"
-	full_name = "No Faction"
+	full_name = "Independent Wastelanders"
+	description = "<b>Alignment: True Neutral</b><br>Wastelanders - is a catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
 	id = "none"
 
 /datum/f13_faction/city
@@ -194,6 +195,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
 	full_name = "City Dwellers"
+	description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - is a group of wastelanders, that have holed up in the town to wait worst things out and hope for the best.<br>As City evolved, its citizens became different from the rest of wasteland dwellers - they value the safety of a city, give preference to better food and clothing, and mostly trust the elect Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 
@@ -203,14 +205,16 @@ mob/proc/set_faction(var/faction)
 	id = "raiders"
 	head_status = "gang_leader"
 	preview_image = 'html/factions/raider.png'
-	full_name = "Chaotic Evil"
+	full_name = "Raider Gang"
+	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - are any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/vault
 	name = "Vault"
 	color = "#005A20"
 	id = "vault"
-	full_name = "Vault-Tec Industries"
+	full_name = "Vault-Tec Corporation"
+	description = "<b>Alignment: True Neutral</b><br>The Vault-Tec Corporation, or simply the VTC - was a company contracted by the United States government before the Great War to design and produce the vault system, a vast network of complex bomb and research shelters.<br>When the bombs fell, thousands of carefully selected Vault dwellers, were sealed within the safe confinements of the Vaults, and their lucky descendants have lived to our days."
 	preview_image = 'html/factions/vault.png'
 	head_status = "overseer"
 	flags = HAVE_FREQ
@@ -222,6 +226,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "bs"
 	full_name = "Brotherhood of Steel"
+	description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel, or simply the Brotherhood - is a quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on strict subordination and Code of Conduct.<br><i>The Steel Endures!</i>"
 	preview_image = 'html/factions/brotherhood.png'
 	head_status = "elder"
 	flags = HAVE_FREQ
@@ -232,6 +237,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "enclave"
 	full_name = "Enclave"
+	description = "<b>Alignment: Lawful Evil</b><br>The Enclave - is a secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government, and claims to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>The Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
 	preview_image = 'html/factions/enclave.png'
 	head_status = "enclave_general"
 	flags = HAVE_FREQ
@@ -240,8 +246,9 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/ahs
 	name = "Hubologists"
 	color = "#005A20"
-	id = "hubs"
+	id = "ahs"
 	full_name = "Adepts of Hubology Studies"
+	description = "<b>Alignment: Neutral Good</b><br>The Adepts of Hubology Studies, or simply Hubologists - are a religious sect that originated as a cult founded before the Great War by a man known as Dick Hubbell aka The Hub.<br>Hubology as a religion promotes the idea that humans are plagued by the spirits of the dead, causing neurodynes to form.<br>The degree to which a member has devoted his or her time, efforts and caps to Hubology accords him or her a numerical rank."
 	preview_image = 'html/factions/ahs.png'
 	head_status = "ahs8"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -252,6 +259,7 @@ mob/proc/set_faction(var/faction)
 	color = "#020080"
 	flags = HAVE_FREQ | HAVE_FLAG
 	full_name = "New California Republic"
+	description = "<b>Alignment: Lawful Good</b><br>The New California Republic, or simply the NCR - is a large, democratic federation with massive population based in California, with holdings in other States.<br>The NCR emphasizes and claims to support a myriad of old world values, such as: democracy, personal liberty, and the rule of law.<br>It also strives to restore general order to the wasteland - the improvement and development of infrastructure along with economic systems, and a basic common peace between the people."
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -265,6 +273,7 @@ mob/proc/set_faction(var/faction)
 	name = "Legion"
 	head_status = "legate"
 	full_name = "Caesar's Legion"
+	description = "<b>Alignment: Lawful Evil</b><br>Caesar's Legion, or simply the Legion - is an autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy or division of roles.<br><i>Ave Caesar!</i>"
 	preview_image = 'html/factions/legion.png'
 	id = "legion"
 	color = "#C24D44"
@@ -281,6 +290,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "followers"
 	full_name = "Followers of Appocalypse"
+	description = "<b>Alignment: Neutral Good</b><br>The Followers of the Apocalypse, or simply the Followers - is a post-War organization that has set a goal to tend the inhabitants of the wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single Great Leader, but a handful of independent Leaders for each group."
 	preview_image = 'html/factions/followers.png'
 	head_status = "leader"
 	verbs = list(/mob/proc/begin_head_voting)

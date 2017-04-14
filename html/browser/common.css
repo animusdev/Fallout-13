@@ -397,6 +397,7 @@ div.notice
 	height: 88px;
 	overflow: auto;
 	border: 1px solid #067639;
+	text-align: center;
 }
 .job_p .linkOff, .job_p a {
 	display: block;
@@ -425,31 +426,30 @@ div {
    border-radius: 4px;
    -khtml-border-radius: 4px;
 }
-.tooltip::after {
+.tool_tip {
 	background: #022210;
 	border: 1px solid #067639;
-	content: attr(data-tooltip);
-	margin-top: -24px;
-	opacity: 0;
 	padding: 3px 7px;
 	position: absolute;
 	visibility: hidden;
-			
-	transition: all 0.4s ease-in-out;
 }	
-.tooltip:hover::after {
-	opacity: 1;
-	visibility: visible;
-}
 .disabled_job {
-	border-color: white !important;
+	background-color: #999999 !important;
+	color: #FFF !important;
 }
 .low_job {
-	border-color: #191970 !important;
+	background-color: #e2af00 !important;
+	color: #000 !important;
 }
 .middle_job {
-	border-color: #FFE283 !important;
+	background-color: #082C08 !important;
+	color: #146D14 !important;
 }
 .high_job {
-	border-color: #DE3652 !important;
+	background-color: #146D14 !important;
+	color: #082C08 !important;
+}
+.unavailable_job {
+	background-color: #C24D44 !important;
+	color: #000 !important;
 }

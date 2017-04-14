@@ -36,17 +36,9 @@
 
 	copy_to(mannequin)
 	CHECK_TICK
-	// Determine what job is marked as 'High' priority, and dress them up as such.
-	var/datum/job/previewJob
-
-	for(var/datum/job/job in SSjob.occupations)
-		if(job.flag == choiced_job_flag && job.department_flag == choiced_department_flag)
-			previewJob = job
-			break
-	CHECK_TICK
-	if(previewJob)
-		mannequin.job = previewJob.title
-		previewJob.equip(mannequin, TRUE)
+	if(selected_job)
+		mannequin.job = selected_job.title
+		selected_job.equip(mannequin, TRUE)
 
 	CHECK_TICK
 	preview_icon = icon('icons/effects/effects.dmi', "nothing")
