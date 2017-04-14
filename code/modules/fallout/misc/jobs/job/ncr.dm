@@ -1,5 +1,6 @@
 /datum/job/squad_leader
 	title = "General"
+	desc = "No description."
 	flag = SQDLEAD
 	department_head = list("NCR Command")
 	department_flag = WASTELAND
@@ -36,6 +37,7 @@
 
 /datum/job/ranger
 	title = "Ranger"
+	desc = "No description."
 	flag = RANGER
 	department_head = list("General")
 	department_flag = WASTELAND
@@ -67,6 +69,7 @@
 
 /datum/job/elite_trooper
 	title = "Elite Trooper"
+	desc = "No description."
 	flag = SERGEANT
 	department_head = list("General")
 	department_flag = WASTELAND
@@ -102,6 +105,7 @@
 
 /datum/job/trooper
 	title = "Trooper"
+	desc = "No description."
 	flag = TROOPER
 	department_head = list("General")
 	department_flag = WASTELAND

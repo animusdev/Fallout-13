@@ -185,6 +185,7 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/neutral
 	name = "Neutral"
 	full_name = "No Faction"
+	description = "No description"
 	id = "none"
 
 /datum/f13_faction/city
@@ -194,6 +195,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
 	full_name = "City Dwellers"
+	description = "No description"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 
@@ -204,6 +206,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "gang_leader"
 	preview_image = 'html/factions/raider.png'
 	full_name = "Chaotic Evil"
+	description = "No description"
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/vault
@@ -211,6 +214,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "vault"
 	full_name = "Vault-Tec Industries"
+	description = "No description"
 	preview_image = 'html/factions/vault.png'
 	head_status = "overseer"
 	flags = HAVE_FREQ
@@ -222,6 +226,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "bs"
 	full_name = "Brotherhood of Steel"
+	description = "No description"
 	preview_image = 'html/factions/brotherhood.png'
 	head_status = "elder"
 	flags = HAVE_FREQ
@@ -232,6 +237,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "enclave"
 	full_name = "Enclave"
+	description = "No description"
 	preview_image = 'html/factions/enclave.png'
 	head_status = "enclave_general"
 	flags = HAVE_FREQ
@@ -242,6 +248,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "hubs"
 	full_name = "Adepts of Hubology Studies"
+	description = "No description"
 	preview_image = 'html/factions/ahs.png'
 	head_status = "ahs8"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -252,6 +259,7 @@ mob/proc/set_faction(var/faction)
 	color = "#020080"
 	flags = HAVE_FREQ | HAVE_FLAG
 	full_name = "New California Republic"
+	description = "No description"
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -265,6 +273,7 @@ mob/proc/set_faction(var/faction)
 	name = "Legion"
 	head_status = "legate"
 	full_name = "Caesar's Legion"
+	description = "No description"
 	preview_image = 'html/factions/legion.png'
 	id = "legion"
 	color = "#C24D44"
@@ -281,6 +290,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "followers"
 	full_name = "Followers of Appocalypse"
+	description = "No description"
 	preview_image = 'html/factions/followers.png'
 	head_status = "leader"
 	verbs = list(/mob/proc/begin_head_voting)

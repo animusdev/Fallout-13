@@ -3,6 +3,7 @@ Raider
 */
 /datum/job/raider
 	title = "Raider"
+	desc = "No description."
 	flag = RAIDER
 	department_flag = WASTELAND
 	faction = "raiders" //desert faction shall disable appearing as scavenger after readying

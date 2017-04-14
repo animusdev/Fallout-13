@@ -4,6 +4,7 @@ Legion
 //legat
 /datum/job/legate
 	title = "Legate"
+	desc = "No description."
 	flag = LEGLEGAT
 	department_head = list("Caesar")
 	department_flag = WASTELAND
@@ -36,6 +37,7 @@ Legion
 //centurion
 /datum/job/centurion
 	title = "Centurion"
+	desc = "No description."
 	flag = LEGCENTURION
 	department_head = list("Legate")
 	department_flag = WASTELAND
@@ -66,6 +68,7 @@ Legion
 //vexillarius
 /datum/job/vex
 	title = "Vexillarius"
+	desc = "No description."
 	flag = LEGVEX
 	department_head = list("Legate")
 	department_flag = WASTELAND
@@ -96,6 +99,7 @@ Legion
 //decan
 /datum/job/decan
 	title = "Decanus"
+	desc = "No description."
 	flag = LEGDECAN
 	department_head = list("Centurion")
 	department_flag = WASTELAND
@@ -127,6 +131,7 @@ Legion
 //recruit
 /datum/job/recruit
 	title = "Recruit"
+	desc = "No description."
 	flag = LEGRECRUIT
 	department_head = list("Centurion")
 	department_flag = WASTELAND

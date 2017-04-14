@@ -56,6 +56,7 @@
 	title = "Settler"
 	flag = SETTLER
 	department_flag = WASTELAND
+	desc = "No description."
 	faction = "city" //desert faction shall disable appearing as scavenger after readying
 	status = "member"
 	total_positions = 10
