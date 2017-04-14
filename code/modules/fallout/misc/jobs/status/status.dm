@@ -214,6 +214,7 @@ mob/proc/set_status(var/status)
 
 /datum/status/overseer
 	name = "Overseer"
+	id = "overseer"
 	can_invite_to = list("member")
 	purge_faction = "vault"
 	color = "#00491A"
