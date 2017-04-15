@@ -22,95 +22,100 @@
 "av" = (/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
 "aw" = (/turf/open/floor/f13{icon_state = "bluedirtychess2"},/area/f13/secret)
 "ax" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
-"ay" = (/turf/open/floor/f13/wood,/area/f13/building)
+"ay" = (/obj/structure/bookcase/random/fiction,/turf/open/floor/f13/wood,/area/f13/building)
 "az" = (/obj/structure/table/wood/settler,/turf/open/floor/f13/wood,/area/f13/building)
 "aA" = (/obj/structure/closet/cabinet,/turf/open/floor/f13/wood,/area/f13/building)
-"aB" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/building)
-"aC" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/building)
-"aD" = (/obj/structure/window/fulltile/store{icon_state = "storewindowtop"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
-"aE" = (/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"aF" = (/obj/structure/table/wood/bar,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"aG" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bluedirtychess2"},/area/f13/secret)
-"aH" = (/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
-"aI" = (/obj/structure/window/fulltile/store{icon_state = "storewindowvertical"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
-"aJ" = (/obj/structure/table/wood/bar,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"aK" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
-"aL" = (/obj/structure/window/fulltile/store{icon_state = "storewindowbottom"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
-"aM" = (/obj/structure/chair/stool/bar,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"aN" = (/obj/structure/chair/stool/bar,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"aO" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowbottom"; name = "kebab outpost wall"},/area/f13/secret)
-"aP" = (/obj/machinery/light{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"aQ" = (/obj/machinery/light{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"aR" = (/obj/structure/closet/cabinet,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"aS" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/building)
-"aT" = (/obj/structure/piano/pristine,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"aU" = (/obj/structure/simple_door/glass,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"aV" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"aW" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13/wood,/area/f13/building)
-"aX" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/building)
-"aY" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"aZ" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"ba" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/wasteland)
-"bb" = (/turf/open/indestructible/ground/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
-"bc" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
-"bd" = (/turf/open/indestructible/ground/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/wasteland)
-"be" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"bf" = (/obj/machinery/light{dir = 8},/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bg" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"bh" = (/obj/machinery/light{dir = 4},/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bi" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bj" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/secret)
-"bk" = (/obj/machinery/vending/nukacolavend,/turf/open/floor/f13/wood,/area/f13/secret)
-"bl" = (/obj/structure/decoration/sign{desc = "Remove kebab."; icon_state = "vault_kebab"; name = "kebab sign"; pixel_x = -10; pixel_y = 28},/turf/open/floor/f13/wood,/area/f13/secret)
-"bm" = (/turf/open/floor/f13/wood,/area/f13/secret)
-"bn" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/secret)
-"bo" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/secret)
-"bp" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13/wood,/area/f13/secret)
-"bq" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/secret)
-"br" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/secret)
-"bs" = (/obj/structure/table/wood/classic,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"bt" = (/obj/structure/closet/cabinet,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bu" = (/obj/machinery/light{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"bv" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"bw" = (/obj/structure/simple_door/brokenglass,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bx" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowvertical"; name = "kebab outpost wall"},/area/f13/secret)
-"by" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bz" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/secret)
-"bA" = (/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
-"bB" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
-"bC" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
-"bD" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
-"bE" = (/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/secret)
+"aB" = (/turf/open/floor/f13/wood,/area/f13/building)
+"aC" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/building)
+"aD" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/building)
+"aE" = (/obj/structure/window/fulltile/store{icon_state = "storewindowtop"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aF" = (/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aG" = (/obj/structure/table/wood/bar,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aH" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bluedirtychess2"},/area/f13/secret)
+"aI" = (/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
+"aJ" = (/obj/structure/window/fulltile/store{icon_state = "storewindowvertical"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aK" = (/obj/structure/table/wood/bar,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aL" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluerustychess2"},/area/f13/secret)
+"aM" = (/obj/structure/window/fulltile/store{icon_state = "storewindowbottom"},/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/secret)
+"aN" = (/obj/structure/chair/stool/bar,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aO" = (/obj/structure/chair/stool/bar,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aP" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowbottom"; name = "kebab outpost wall"},/area/f13/secret)
+"aQ" = (/obj/machinery/light{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aR" = (/obj/machinery/light{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aS" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aT" = (/obj/structure/closet/cabinet,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aU" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/building)
+"aV" = (/obj/structure/piano/pristine,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"aW" = (/obj/structure/simple_door/glass,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aX" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"aY" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13/wood,/area/f13/building)
+"aZ" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/building)
+"ba" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bb" = (/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"bc" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavement"},/area/f13/wasteland)
+"bd" = (/turf/open/indestructible/ground/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
+"be" = (/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"bf" = (/turf/open/indestructible/ground/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/wasteland)
+"bg" = (/turf/open/indestructible/ground/sidewalk{dir = 1; icon_state = "outerpavementcorner"},/area/f13/wasteland)
+"bh" = (/obj/machinery/light{dir = 8},/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bi" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bj" = (/obj/machinery/light{dir = 4},/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bk" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bl" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/secret)
+"bm" = (/obj/machinery/vending/nukacolavend,/turf/open/floor/f13/wood,/area/f13/secret)
+"bn" = (/obj/structure/decoration/sign{desc = "Remove kebab."; icon_state = "vault_kebab"; name = "kebab sign"; pixel_x = -10; pixel_y = 28},/turf/open/floor/f13/wood,/area/f13/secret)
+"bo" = (/turf/open/floor/f13/wood,/area/f13/secret)
+"bp" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/secret)
+"bq" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/secret)
+"br" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13/wood,/area/f13/secret)
+"bs" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/secret)
+"bt" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/secret)
+"bu" = (/obj/structure/table/wood/classic,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bv" = (/obj/structure/bookcase/random/fiction,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bw" = (/obj/structure/bookcase/manuals/medical,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bx" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"by" = (/obj/structure/closet/cabinet,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bz" = (/obj/machinery/light{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bA" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
+"bB" = (/obj/structure/simple_door/brokenglass,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bC" = (/turf/closed/wall/f13/supermart{desc = "Remove kebab."; icon_state = "storeprewindowvertical"; name = "kebab outpost wall"},/area/f13/secret)
+"bD" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bE" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/secret)
+"bF" = (/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
+"bG" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
+"bH" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bluedirtychess"},/area/f13/secret)
+"bI" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"bJ" = (/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "bluerustychess"},/area/f13/secret)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaababaaacadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaeacaaababababacafaaaaaaaeagagagagagagagagagagagagagad
 aaaeagahaiabababababaiajagadaaakalamanaoaoaoapaqalalalalalaf
 aaakarararararasarararararafaaakatauavavavavavaualawaxawalaf
-aaakarayazaAayayaBayayaCarafaaakaDavavaEavaFaEaEaGawawaHalaf
-aaakarayayayayayayayayayarafaaakaIavaJaJaJaJavaEalaKawawalaf
-aaakarayayayayayayayazayarafaaakaLavaMaNaMaMavavalalalalalaf
-aaakarazazayayayayayazayarafaaakaOaPavavaEaEavaQalavavaRalaf
-aaakarayayaSayayayaSayayarafaaakalaTaEavavavaEavaUaEavaValaf
-aaakararaWararaXararaWararafaaakalavavaEavavavavalavaYaYalaf
-aaaZbababababbbcbdbababababeaaakalbfbgaEaEavavbhalavaEbialaf
-aaaaaaaaaaaaakbcafaaaaaaaaaaaaakalavavavaEavavavalaEbgaEalaf
-aaagagagagagahbcajagagagadaaaaakalalalalalbjalalalalalalalaf
-aaaaaaaaaaaaaaaaaaaaaaaaafaaaaakbcbcalbkblbmbmbnbmbmbmbmalaf
-aaaaaaaaaaaaaaaaaaaaaaaaajagagahbcbcalbmbmbmbmbmbobobmbmalaf
-aaaaaaaaaaaaaaaaaaaaaaaabcbcbcbcbcbcbpbmbmbmbmbmbobmbmbmbpaf
-aaaaaaaaaaaaaaaaaaaaaaaabdbababbbcbcalbmbmbmbmbmbobobmbmalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakbcbcalbmbmbmbmbqbmbmbmbralaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalalalalalbjalalalalalalalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakatbsaEavaEaEaEavalaEbsbtalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaDavavaEavaEavbualavavbialaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaIaEaEavavavavaEalaEavaEalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaIaEavbvbvaEavavbwavavaValaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakbxaEavbybyavavaEalaEaEavalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaIaEavavavavaEaQalalalalalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaIaEaEavaEavavavalbzbAbBalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaLbybybyavaEavaEbCbAbAaHalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaOaEavbDavbDaEavalbAbEbAalaf
+aaakarayazaAaBaBaCaBaBaDarafaaakaEavavaFavaGaFaFaHawawaIalaf
+aaakaraBaBaBaBaBaBaBaBaBarafaaakaJavaKaKaKaKavaFalaLawawalaf
+aaakaraBaBaBaBaBaBaBazaBarafaaakaMavaNaOaNaNavavalalalalalaf
+aaakarazazaBaBaBaBaBazaBarafaaakaPaQavavaFaFavaRalaSaSaTalaf
+aaakaraBaBaUaBaBaBaUaBaBarafaaakalaVaFavavavaFavaWaFavaXalaf
+aaakararaYararaZararaYararafaaakalavavaFavavavavalavbabaalaf
+aabbbcbcbcbcbdbebfbcbcbcbcbgaaakalbhbiaFaFavavbjalavaFbkalaf
+aaaaaaaaaaaaakbeafaaaaaaaaaaaaakalavavavaFavavavalaFbiaFalaf
+aaagagagagagahbeajagagagadaaaaakalalalalalblalalalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaafaaaaakbebealbmbnbobobpboboboboalaf
+aaaaaaaaaaaaaaaaaaaaaaaaajagagahbebealbobobobobobqbqboboalaf
+aaaaaaaaaaaaaaaaaaaaaaaabebebebebebebrbobobobobobqbobobobraf
+aaaaaaaaaaaaaaaaaaaaaaaabfbcbcbdbebealbobobobobobqbqboboalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakbebealbobobobobsbobobobtalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalalalalalblalalalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakatbubvbwbxaFaFavalaFbubyalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaEavavaFavaFavbzalavavbkalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaJaFaFavavavavaFalaFavaFalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaJaFavbAbAaFavavbBavavaXalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakbCaFavbDbDavavaFalaFbAavalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaJaFavavavavaFaRalalalalalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaJaFaFavaFavavavalbEbFbGalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaMbDbDbDavaFavaFbHbFbFaIalaf
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaPaFavbIavbIaFavalbFbJbFalaf
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalalalalalalalalalalalalalaf
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZbabababababababababababababe
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbcbcbcbcbcbcbcbcbcbcbcbcbcbg
 "}

@@ -184,7 +184,7 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/neutral
 	name = "Neutral"
-	full_name = "Independent wastelanders"
+	full_name = "Independent Wastelanders"
 	description = "<b>Alignment: True Neutral</b><br>Wastelanders - is a catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
 	id = "none"
 
@@ -194,7 +194,7 @@ mob/proc/set_faction(var/faction)
 	id = "city"
 	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
-	full_name = "City dwellers"
+	full_name = "City Dwellers"
 	description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - is a group of wastelanders, that have holed up in the town to wait worst things out and hope for the best.<br>As City evolved, its citizens became different from the rest of wasteland dwellers - they value the safety of a city, give preference to better food and clothing, and mostly trust the elect Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
