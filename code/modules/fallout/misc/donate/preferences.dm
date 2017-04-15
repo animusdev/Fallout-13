@@ -177,197 +177,193 @@
 	)
 	CHECK_TICK
 
-	var/html = "<center>\
-	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Settings</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a>\
-	</center>\
-	<HR>\
-	<center>\
-	[data["saves_data"]]\
-	</center>\
-	<div class=\"first_block\">\
-		<h2>Identity</h2>\
-		<table width='100%'>\
-			<tr>\
-				<td width='75%' valign='top'>\
-					<a href='?_src_=prefs;preference=name;task=random'>Random Name</a>\
-					<a href='?_src_=prefs;preference=name'>Always Random Name: [data["r_name"]]</a>\
-					<br>\
-					<b>Name:</b>\
-					<a href='?_src_=prefs;preference=name;task=input'>[data["name"]]</a>\
-					<br>\
-					<b>Gender:</b> \
-					<a href='?_src_=prefs;preference=gender'>[data["gender"]]</a>\
-					<br>\
-					<b>Age:</b> \
-					<a href='?_src_=prefs;preference=age;task=input'>[data["age"]]</a>\
-					<br>\
-				</td>	\
-				<!--<td valign='center'>\
-					<div class='statusDisplay'><center><img src=\"img/person.png\" width=160 height=96></center></div>\
-				</td-->\
-			</tr>\
-		</table>\
-	</div>\
-	<div class=\"second_block\">\
-		<h2>Body</h2>\
-		<table>\
-			<tr>\
-				<td>\
-					<a href='?_src_=prefs;preference=all;task=random'>Random Body</a>\
-				</td>\
-				<td>\
-					<a href='?_src_=prefs;preference=all'>Always Random Body: [data["r_body"]]</a><br>\
-				</td>\
-			</tr>\
-			<tr>\
-				<td>\
-					<b>Species:</b>\
-				</td>\
-				<td>\
-					<b>Skin Tone</b>\
-				</td>\
-			</tr>\
-			<tr>\
-				<td>\
-					<a href='?_src_=prefs;preference=species;task=input'>[data["species"]]</a>\
-				</td>\
-				<td>\
-					<a href='?_src_=prefs;preference=s_tone;task=input'>[data["skin_tone"]]</a>\
-				</td>\
-			</tr>\
-			\
-		</table>\
-	</div>\
-	<div class=\"third_block\">\
-		<div class=\"third_block_39\">\
-			<h3>Choose your faction</h3><br>\
-			<div class=\"a_block\">\
-				[data["factions_data"]]\
-			</div>\
-			\
-			<div class=\"left_block_table\">\
-				<a href='?_src_=prefs;task=faction_previous'>&lt;</a> \
-				<a href='?_src_=prefs;task=faction_next'>&gt;</a>\
-				<div class=\"frame\">\
-					<div class=\"wrap_frame\">\
-						<center>\
-							<div class=\"leg_img\">\
-								<img src=\"[data["f_id"]].png\" alt=\"logo\">\
-							</div>\
-						</center>\
-						<b><center>[data["f_name"]]</center></b>\
-						[data["f_desc"]]\
-					</div>\
-					\
-				</div>\
-			</div>\
-			<div class=\"right_block_frame\">\
-				<div class=\"right_block_frame_item\">\
-					<h3>Headgear</h3>\
-					<a href='?_src_=prefs;preference=helmet;task=input;gear=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>\
-					<a href='?_src_=prefs;preference=previous_helmet;task=input'>&lt;</a> \
-					<a href='?_src_=prefs;preference=next_helmet;task=input'>&gt;</a>\
-				</div>\
-				<div class=\"right_block_frame_item\">\
-					<h3>Armor</h3>\
-					<a href='?_src_=prefs;preference=armor;task=input' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>\
-					<a href='?_src_=prefs;preference=previous_armor;task=input'>&lt;</a> \
-					<a href='?_src_=prefs;preference=next_armor;task=input'>&gt;</a>\
-				</div>\
-				<div class=\"right_block_frame_item\">\
-					<h3>Uniform</h3>\
-					<a href='?_src_=prefs;preference=uniform;task=input' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>\
-					<a href='?_src_=prefs;preference=previous_uniform;task=input'>&lt;</a> \
-					<a href='?_src_=prefs;preference=next_uniform;task=input'>&gt;</a>\
-				</div>\
-				<div class=\"right_block_frame_item\">\
-					<h3>Shoes</h3>\
-					<a href='?_src_=prefs;preference=shoes;task=input' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>\
-					<a href='?_src_=prefs;preference=previous_shoes;task=input'>&lt;</a> \
-					<a href='?_src_=prefs;preference=next_shoes;task=input'>&gt;</a>\
-				</div>\
-			</div>\
-		</div><!--1 блок 39-->\
-		<div class=\"third_block_39 job\">\
-		<h3>Choose your role</h3><br>\
-			<div class=\"job_p\">\
-				[data["jobs_data"]]\
-			</div>\
-			<div class=\"middle_img\">\
-				<img src=\"previewicon.png\" width=\"160\" height=\"96\" alt=\"player-preview\">\
-			</div>\
-			<div class=\"middle_text\">\
-				<div class=\"left_mid\">\
-					<div class=\"mid_item\">\
-						<h3>Gloves</h3>\
-						<a href='?_src_=prefs;preference=gloves;task=input' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>\
-						<a href='?_src_=prefs;preference=previous_gloves;task=input'>&lt;</a> \
-						<a href='?_src_=prefs;preference=next_gloves;task=input'>&gt;</a>\
-					</div>\
-					<div class=\"mid_item\">\
-						<h3>Pocket 1</h3>\
-						<a href='?_src_=prefs;preference=pocket_1;task=input' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>\
-						<a href='?_src_=prefs;preference=previous_pocket_1;task=input'>&lt;</a> \
-						<a href='?_src_=prefs;preference=next_pocket_1;task=input'>&gt;</a>\
-					</div>\
-				</div>\
-				<div class=\"right_mid\">\
-					<div class=\"mid_item\">\
-						<h3>Weapon</h3>\
-						<a href='?_src_=prefs;preference=weapon;task=input' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>\
-						<a href='?_src_=prefs;preference=previous_weapon;task=input'>&lt;</a> \
-						<a href='?_src_=prefs;preference=next_weapon;task=input'>&gt;</a>\
-					</div>\
-					<div class=\"mid_item\">\
-						<h3>Pocket 2</h3>\
-						<a href='?_src_=prefs;preference=pocket_2;task=input' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>\
-						<a href='?_src_=prefs;preference=previous_pocket_2;task=input'>&lt;</a> \
-						<a href='?_src_=prefs;preference=next_pocket_2;task=input'>&gt;</a>\
-					</div>\
-				</div>\
-				</div>\
-			</div>\
-			\
-		</div>\
-		<div class=\"right_block\">\
-					<table>\
-					<tr>\
-						<td valign='top' width='21%'>\
-							<h3>Hair Style</h3>\
-							<a href='?_src_=prefs;preference=hair_style;task=input'>[data["hair_style"]]</a><br>\
-							<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a> \
-							<a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><br>\
-							<span style='border:1px solid #161616; background-color: [data["hair_color"]];'>&nbsp;&nbsp;&nbsp;</span> \
-							<a href='?_src_=prefs;preference=hair;task=input'>Change</a><br>\
-						</td>\
-					</tr>\
-				</table>\
-				<table>\
-					<tr>\
-						<td valign='top' width='21%'>\
-							<h3>Facial Hair Style</h3>\
-							<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[data["f_hair_style"]]</a><br>\
-							<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><br><span style='border: 1px solid #161616; background-color: [data["f_hair_color"]];'>&nbsp;&nbsp;&nbsp;</span> \
-							<a href='?_src_=prefs;preference=facial;task=input'>Change</a><br>\
-						</td>\
-					</tr>\
-				</table>\
-				<table>\
-					<tr>\
-						<td valign='top' width='21%'>\
-							<h3>Eye Color</h3>\
-							<span style='border: 1px solid #161616; background-color: [data["eye_color"]];'>&nbsp;&nbsp;&nbsp;</span> \
-							<a href='?_src_=prefs;preference=eyes;task=input'>Change</a><br>\
-						</td>\
-					</tr>\
-				</table>\
-				</div>\
-				<div class=\"clearBoth g\" ></div>\
-				<hr><center>\
-				<a href='?_src_=prefs;preference=load'>Undo</a>\
-				<a href='?_src_=prefs;preference=save'>Save Setup</a>\
-				<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>\
-				</center>"
+	var/html = {"<center>
+	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Settings</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a>
+	</center>
+	<HR>
+	<center>
+	[data["saves_data"]]
+	</center>
+	<div class="first_block">
+		<h2>Identity</h2>
+		<table width='100%'>
+			<tr>
+				<td width='75%' valign='top'>
+					<a href='?_src_=prefs;preference=name;task=random'>Random Name</a>
+					<a href='?_src_=prefs;preference=name'>Always Random Name: [data["r_name"]]</a>
+					<br>
+					<b>Name:</b>
+					<a href='?_src_=prefs;preference=name;task=input'>[data["name"]]</a>
+					<br>
+					<b>Gender:</b>
+					<a href='?_src_=prefs;preference=gender'>[data["gender"]]</a>
+					<br>
+					<b>Age:</b>
+					<a href='?_src_=prefs;preference=age;task=input'>[data["age"]]</a>
+					<br>
+				</td>
+				<!--<td valign='center'>
+					<div class='statusDisplay'><center><img src="img/person.png" width=160 height=96></center></div>
+				</td-->
+			</tr>
+		</table>
+	</div>
+	<div class="second_block">
+		<h2>Body</h2>
+		<table>
+			<tr>
+				<td>
+					<a href='?_src_=prefs;preference=all;task=random'>Random Body</a>
+				</td>
+				<td>
+					<a href='?_src_=prefs;preference=all'>Always Random Body: [data["r_body"]]</a><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Species:</b>
+				</td>
+				<td>
+					<b>Skin Tone</b>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href='?_src_=prefs;preference=species;task=input'>[data["species"]]</a>
+				</td>
+				<td>
+					<a href='?_src_=prefs;preference=s_tone;task=input'>[data["skin_tone"]]</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="third_block">
+		<div class="third_block_39">
+			<h3>Choose your faction</h3><br>
+			<div class="a_block">
+				[data["factions_data"]]
+			</div>
+			<div class="left_block_table">
+				<a href='?_src_=prefs;task=faction_previous'>&lt;</a>
+				<a href='?_src_=prefs;task=faction_next'>&gt;</a>
+				<div class="frame">
+					<div class="wrap_frame">
+						<center>
+							<div class="leg_img">
+								<img src="[data["f_id"]].png" alt="logo">
+							</div>
+						</center>
+						<b><center>[data["f_name"]]</center></b>
+						[data["f_desc"]]
+					</div>
+				</div>
+			</div>
+			<div class="right_block_frame">
+				<div class="right_block_frame_item">
+					<h3>Headgear</h3>
+					<a href='?_src_=prefs;preference=helmet;task=input;gear=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous_helmet;task=input'>&lt;</a>
+					<a href='?_src_=prefs;preference=next_helmet;task=input'>&gt;</a>
+				</div>
+				<div class="right_block_frame_item">
+					<h3>Armor</h3>
+					<a href='?_src_=prefs;preference=armor;task=input' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous_armor;task=input'>&lt;</a>
+					<a href='?_src_=prefs;preference=next_armor;task=input'>&gt;</a>
+				</div>
+				<div class="right_block_frame_item">
+					<h3>Uniform</h3>
+					<a href='?_src_=prefs;preference=uniform;task=input' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous_uniform;task=input'>&lt;</a>
+					<a href='?_src_=prefs;preference=next_uniform;task=input'>&gt;</a>
+				</div>
+				<div class="right_block_frame_item">
+					<h3>Shoes</h3>
+					<a href='?_src_=prefs;preference=shoes;task=input' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous_shoes;task=input'>&lt;</a>
+					<a href='?_src_=prefs;preference=next_shoes;task=input'>&gt;</a>
+				</div>
+			</div>
+		</div><!--1 блок 39-->
+		<div class="third_block_39 job">
+		<h3>Choose your role</h3><br>
+			<div class="job_p">
+				[data["jobs_data"]]
+			</div>
+			<div class="middle_img">
+				<img src="previewicon.png" width="160" height="96" alt="player-preview">
+			</div>
+			<div class="middle_text">
+				<div class="left_mid">
+					<div class="mid_item">
+						<h3>Gloves</h3>
+						<a href='?_src_=prefs;preference=gloves;task=input' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous_gloves;task=input'>&lt;</a>
+						<a href='?_src_=prefs;preference=next_gloves;task=input'>&gt;</a>
+					</div>
+					<div class="mid_item">
+						<h3>Pocket 1</h3>
+						<a href='?_src_=prefs;preference=pocket_1;task=input' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous_pocket_1;task=input'>&lt;</a>
+						<a href='?_src_=prefs;preference=next_pocket_1;task=input'>&gt;</a>
+					</div>
+				</div>
+				<div class="right_mid">
+					<div class="mid_item">
+						<h3>Weapon</h3>
+						<a href='?_src_=prefs;preference=weapon;task=input' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous_weapon;task=input'>&lt;</a>
+						<a href='?_src_=prefs;preference=next_weapon;task=input'>&gt;</a>
+					</div>
+					<div class="mid_item">
+						<h3>Pocket 2</h3>
+						<a href='?_src_=prefs;preference=pocket_2;task=input' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous_pocket_2;task=input'>&lt;</a>
+						<a href='?_src_=prefs;preference=next_pocket_2;task=input'>&gt;</a>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="right_block">
+					<table>
+					<tr>
+						<td valign='top' width='21%'>
+							<h3>Hair Style</h3>
+							<a href='?_src_=prefs;preference=hair_style;task=input'>[data["hair_style"]]</a><br>
+							<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a>
+							<a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><br>
+							<span style='border:1px solid #161616; background-color: [data["hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
+							<a href='?_src_=prefs;preference=hair;task=input'>Change</a><br>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td valign='top' width='21%'>
+							<h3>Facial Hair Style</h3>
+							<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[data["f_hair_style"]]</a><br>
+							<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><br><span style='border: 1px solid #161616; background-color: [data["f_hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
+							<a href='?_src_=prefs;preference=facial;task=input'>Change</a><br>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td valign='top' width='21%'>
+							<h3>Eye Color</h3>
+							<span style='border: 1px solid #161616; background-color: [data["eye_color"]];'>&nbsp;&nbsp;&nbsp;</span>
+							<a href='?_src_=prefs;preference=eyes;task=input'>Change</a><br>
+						</td>
+					</tr>
+				</table>
+				</div>
+				<div class="clearBoth g" ></div>
+				<hr><center>
+				<a href='?_src_=prefs;preference=load'>Undo</a>
+				<a href='?_src_=prefs;preference=save'>Save Setup</a>
+				<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>
+				</center>"}
 	CHECK_TICK
 	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
 	popup.set_content(html)

@@ -432,6 +432,7 @@ div {
 	padding: 3px 7px;
 	position: absolute;
 	visibility: hidden;
+	max-width: 300px;
 }	
 .disabled_job {
 	background-color: #999999 !important;

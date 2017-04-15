@@ -621,8 +621,8 @@ proc/CutText(text, length)
 	var/text_len = length(text)
 	if(text_len <= length)
 		return text
-	if(copytext(text,text_len - 1,text_len) == " ")
-		text = copytext(text, 1,text_len - 2)
+	if(copytext(text,text_len - 2,text_len) == " ")
+		text = copytext(text, 1,text_len - 1)
 	return copytext(text, 1, length) + ".."
 
 proc/FormatText(text, list/data)
