@@ -143,12 +143,13 @@
 	item_color = "springm"
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/doomsday
-	name = "doomsday cult outfit"
+/obj/item/clothing/under/f13/bodyguard
+	name = "bodyguard outfit"
 	desc = "A grimy pre-war dress shirt, tie, and slacks, with some makeshift pauldrons made of scrap metal attached with leather straps."
-	icon_state = "doomsday"
+	icon_state = "bodyguard"
 	item_state = "sl_suit"
-	item_color = "doomsday"
+	item_color = "bodyguard"
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/rag

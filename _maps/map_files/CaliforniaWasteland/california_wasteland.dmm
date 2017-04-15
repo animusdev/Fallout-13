@@ -388,7 +388,7 @@
 "hx" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
 "hy" = (/obj/structure/simple_door/room,/turf/open/indestructible/ground/sidewalk,/area/f13/building)
 "hz" = (/obj/machinery/light/small,/turf/open/indestructible/ground/sidewalk,/area/f13/building)
-"hA" = (/obj/effect/decal/ruins{tag = "icon-ventorange"; icon_state = "ventorange"},/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
+"hA" = (/obj/structure/decoration/ruins{tag = "icon-ventorange"; icon_state = "ventorange"},/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
 "hB" = (/obj/structure/extinguisher_cabinet,/turf/closed/wall/f13/store,/area/f13/building)
 "hC" = (/obj/structure/simple_door/room,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/building)
 "hD" = (/obj/structure/barrel/dangerous,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
