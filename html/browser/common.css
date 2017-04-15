@@ -359,8 +359,8 @@ div.notice
 	padding-left: 20px;
 }
 .frame {
-	width: 180px;
-	height: 260px;
+	width: 200px;
+	height: 100%;
 	border: 1px solid #067639;
 	margin-top: 10px;
 }
@@ -376,7 +376,7 @@ div.notice
 	float: left;
 }
 .right_block_frame {
-	padding-left: 220px;
+	padding-left: 210px;
 	margin-top: 20px;
 }
 .leg_title {
@@ -394,7 +394,7 @@ div.notice
 .job_p {
 	margin-top: -15px;
 	width: 145px;
-	height: 88px;
+	height: 87px;
 	overflow: auto;
 	border: 1px solid #067639;
 	text-align: center;
