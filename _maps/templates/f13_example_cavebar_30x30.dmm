@@ -1,7 +1,50 @@
 "a" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "b" = (/turf/closed/mineral,/area/f13/caves)
 "c" = (/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"d" = (/turf/closed/mineral,/area/f13/bar)
+"d" = (/turf/closed/wall/f13/store,/area/f13/bar)
+"e" = (/obj/structure/sink/kitchen,/turf/closed/wall/f13/store,/area/f13/bar)
+"f" = (/turf/open/floor/plasteel/darkyellow,/area/f13/bar)
+"g" = (/obj/structure/table/wood/classic,/obj/item/weapon/reagent_containers/food/drinks/drinkingglass{pixel_x = 2; pixel_y = 1},/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,/obj/item/weapon/reagent_containers/food/drinks/drinkingglass{pixel_x = 3},/obj/item/weapon/reagent_containers/food/drinks/drinkingglass{pixel_x = 4; pixel_y = 3},/obj/item/weapon/reagent_containers/food/drinks/drinkingglass{pixel_y = 4},/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,/turf/open/floor/f13/wood,/area/f13/bar)
+"h" = (/obj/structure/table/wood/classic,/obj/item/weapon/reagent_containers/food/drinks/shaker,/turf/open/floor/f13/wood,/area/f13/bar)
+"i" = (/obj/structure/closet/crate/freezer,/obj/item/weapon/reagent_containers/food/drinks/soda_cans/sodawater,/obj/item/weapon/reagent_containers/food/drinks/soda_cans/space_mountain_wind,/obj/item/weapon/reagent_containers/food/drinks/soda_cans/space_up,/obj/item/weapon/reagent_containers/food/drinks/soda_cans/starkist,/obj/item/weapon/reagent_containers/food/drinks/soda_cans/thirteenloko,/obj/item/weapon/reagent_containers/food/drinks/soda_cans/tonic,/turf/open/floor/f13/wood,/area/f13/bar)
+"j" = (/turf/open/floor/f13/wood,/area/f13/bar)
+"k" = (/obj/structure/closet/crate/bin,/turf/open/floor/f13/wood,/area/f13/bar)
+"l" = (/obj/structure/safe,/turf/open/floor/f13/wood,/area/f13/bar)
+"m" = (/obj/structure/chair/wood/worn{dir = 1},/turf/open/floor/f13/wood,/area/f13/bar)
+"n" = (/obj/structure/closet/fridge,/obj/item/weapon/reagent_containers/food/drinks/ale,/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac,/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,/obj/item/weapon/reagent_containers/food/drinks/bottle/gin,/obj/item/weapon/reagent_containers/food/drinks/bottle/hcider,/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua,/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice,/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,/obj/item/weapon/reagent_containers/food/drinks/bottle/wine,/turf/open/floor/f13/wood,/area/f13/bar)
+"o" = (/obj/structure/simple_door/metal,/turf/open/floor/f13/wood,/area/f13/bar)
+"p" = (/turf/closed/mineral,/area/f13/bar)
+"q" = (/obj/structure/closet/cabinet,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/obj/item/weapon/gun/ballistic/shotgun/trail,/turf/open/floor/f13/wood,/area/f13/bar)
+"r" = (/obj/structure/simple_door/interior,/turf/open/floor/f13/wood,/area/f13/bar)
+"s" = (/obj/structure/piano,/turf/open/floor/f13/wood,/area/f13/bar)
+"t" = (/obj/structure/chair/wood/worn{dir = 8},/turf/open/floor/f13/wood,/area/f13/bar)
+"u" = (/obj/machinery/vending/nukacolavend/full,/turf/open/floor/f13/wood,/area/f13/bar)
+"v" = (/obj/structure/closet/fridge/meat,/turf/open/floor/f13/wood,/area/f13/bar)
+"w" = (/obj/structure/table/wood/bar,/turf/open/floor/f13/wood,/area/f13/bar)
+"x" = (/obj/structure/window/fulltile/ruins{icon_state = "ruinswindowvertical"},/turf/open/floor/f13/wood,/area/f13/bar)
+"y" = (/obj/structure/closet/fridge/standard,/turf/open/floor/f13/wood,/area/f13/bar)
+"z" = (/obj/structure/table/wood/bar,/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,/turf/open/floor/f13/wood,/area/f13/bar)
+"A" = (/obj/structure/chair/wood/worn,/turf/open/floor/f13/wood,/area/f13/bar)
+"B" = (/obj/structure/table/reinforced,/obj/item/weapon/kitchen/knife,/obj/item/weapon/kitchen/rollingpin,/turf/open/floor/f13/wood,/area/f13/bar)
+"C" = (/obj/structure/table/wood/bar,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/turf/open/floor/f13/wood,/area/f13/bar)
+"D" = (/obj/structure/table/wood/bar,/obj/item/weapon/reagent_containers/glass/rag{pixel_x = 3; pixel_y = 4},/turf/open/floor/f13/wood,/area/f13/bar)
+"E" = (/obj/structure/chair/wood/worn{dir = 4},/turf/open/floor/f13/wood,/area/f13/bar)
+"F" = (/obj/structure/table/wood/classic,/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,/turf/open/floor/f13/wood,/area/f13/bar)
+"G" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/food/condiment/enzyme,/obj/item/weapon/reagent_containers/glass/beaker/large,/turf/open/floor/f13/wood,/area/f13/bar)
+"H" = (/obj/structure/chair/stool/bar,/turf/open/floor/f13/wood,/area/f13/bar)
+"I" = (/obj/structure/kitchenspike,/turf/open/floor/f13/wood,/area/f13/bar)
+"J" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/food/condiment/peppermill{pixel_x = 2; pixel_y = 3},/turf/open/floor/f13/wood,/area/f13/bar)
+"K" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/turf/open/floor/f13/wood,/area/f13/bar)
+"L" = (/obj/structure/table/reinforced,/turf/open/floor/f13/wood,/area/f13/bar)
+"M" = (/obj/structure/table/wood/classic,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/turf/open/floor/f13/wood,/area/f13/bar)
+"N" = (/obj/structure/table/wood/classic,/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola,/turf/open/floor/f13/wood,/area/f13/bar)
+"O" = (/obj/structure/table/wood/classic,/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,/turf/open/floor/f13/wood,/area/f13/bar)
+"P" = (/turf/open/floor/plasteel/freezer,/area/f13/bar)
+"Q" = (/obj/structure/closet/chefcloset,/turf/open/floor/plasteel/freezer,/area/f13/bar)
+"R" = (/obj/structure/table/wood/classic,/turf/open/floor/f13/wood,/area/f13/bar)
+"S" = (/obj/structure/kitchenspike,/turf/open/floor/plasteel/freezer,/area/f13/bar)
+"T" = (/obj/structure/table/reinforced,/obj/item/weapon/kitchen/knife,/obj/item/weapon/kitchen/knife/butcher,/obj/item/weapon/machete,/turf/open/floor/plasteel/freezer,/area/f13/bar)
+"U" = (/obj/structure/closet/crate/freezer,/turf/open/floor/plasteel/freezer,/area/f13/bar)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -12,26 +55,26 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-bbbbbbbbbbbccccccbbbbbbbbbbbba
-bbbbbbccccccccccccbbbbbbbbbbba
-bbbbcccccccccccccccbbbbbbbbbba
-bbbcccccccccccccccccbbbbbbbbba
-bbbcccccccccccccccccccbbbbbbba
-bbbccccccccccccccccccccbbbbbba
-bbccccccccccccccccccccccbbbbba
-bbcccccccccccccccccccccccbbbba
-bbccccccccccccccccccccccccccba
-bbccccccccccccccccccccccccccca
-bbccccccccccccccccccccccccccca
-bbccccccccccccccccccccccccccca
-bbbcccccccccccccccccccccccccca
-bbbcccccccccccccccccbbbbccccca
-bbbbcccccccccccccccbbbbbbbccca
-bbbbbcccccccccccccbbbbbbbbbbba
-bbbbbbcccccccccccbbbbbbbbbbbba
-bbbbbbbbbccccccbbbbbbbbbbbbbba
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-dddbbbbbbbbbbbbbbbbbbbbbbbbbba
-dddbbbbbbbbbbbbbbbbbbbbbbbbbba
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+bbbbbbbbbbbccdddddbbbbbbbbbbba
+bbbbbbbddddeddfffdbbbbbbbbbbba
+bbbbbbddghijkdfffdcbbbbbbbbbba
+bbbbbcdljmjjnddoddddpbbbbbbbba
+bbbbbcdqjjjjjrjjjjkddcbbbbbbba
+bbbddedddrddddstjjjudccbbbbbba
+bbddvjdjjjjjjwjjjjjjxcccbbbbba
+bbdyjjrjjjjjjzjjAjjjdccccbbbba
+bbdBjjdwCwzDwwjEFtjjxcccccccba
+bbdGjjdHHHHHHHjjmjjjdcccccccca
+bbdIjjJjjjjjjjjjjjjjrcccccccca
+bbddjjKjjAjjjAjjjAjjdcccccccca
+bbbdjjLjEMtjENtjEOtddcccccccca
+bbbdrddjjmjjjmjjddddbbbbccccca
+bbbdPQedjjjjjjjddccbbbbbbbccca
+bbcdPPPdENtdERtdccbbbbbbbbbbba
+bccdSTUdddddddddcbbbbbbbbbbbba
+ccbdddddbccccccbbbbbbbbbbbbbba
+cccbbbbbbbbbbbbbbbbbbbbbbbbbba
+bcccbbbbbbbbbbbbbbbbbbbbbbbbba
+bbcccbbbbbbbbbbbbbbbbbbbbbbbba
+bbbccbbbbbbbbbbbbbbbbbbbbbbbba
 "}
