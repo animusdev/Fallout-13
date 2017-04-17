@@ -9,7 +9,7 @@
 		#define MAP_PATH "map_files/debug"
         #define MAP_FILE "wasteland.dmm"
         #define MAP_NAME "Debug Wasteland"
-        #define MAP_FACTIONS_LIST list("ncr", "legion", "none", "city", "raiders")
+//		#define MAP_FACTIONS_LIST list("ncr", "legion", "none", "city", "raiders")
 
 		#define MAP_TRANSITION_CONFIG DEFAULT_MAP_TRANSITION_CONFIG
 
