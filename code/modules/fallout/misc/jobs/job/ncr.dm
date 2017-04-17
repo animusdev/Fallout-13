@@ -117,6 +117,12 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
+	required_items = list(/obj/item/clothing/suit/armor/f13/ncr/soldier,
+	/obj/item/clothing/suit/armor/f13/ncr/patriot, /obj/item/clothing/suit/armor/f13/ncr/commie,
+	/obj/item/clothing/suit/armor/f13/ncr/preacher, /obj/item/clothing/suit/armor/f13/ncr/lover,
+	/obj/item/clothing/suit/armor/f13/ncr/stalker, /obj/item/clothing/suit/armor/f13/ncr/punisher,
+	/obj/item/clothing/suit/armor/f13/ncr/facewrap)
+
 
 	outfit = /datum/outfit/job/trooper
 

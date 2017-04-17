@@ -629,6 +629,32 @@ var/list/preferences_datums = list()
 			choiced_faction_index -= 4
 			if(choiced_faction_index < 1)
 				choiced_faction_index = parent.allowed_factions.len + 1 - parent.allowed_factions.len % 4
+		if("equip")
+			if(selected_job)
+				var/item = input(user, "Choose your [href_list["item"]] equipment:", "Character Preference")  as null|anything in GetItemNamesList(href_list["item"] == "pocket_1" || href_list["item"] == "pocket_2" ? "misc" : href_list["item"], selected_job)
+				var/datum/outfit/O = outfits[selected_job.type]
+				if(O)
+					var/item_type = null
+					if(item != "none")
+						item_type = GetItemByName(item, href_list["item"], selected_job)
+					switch(href_list["item"])
+						if("head")
+							O.head = item_type
+						if("armor")
+							O.suit = item_type
+						if("shoes")
+							O.shoes = item_type
+						if("gloves")
+							O.gloves = item_type
+						if("pocket_1")
+							O.r_pocket = item_type
+						if("pocket_2")
+							O.l_pocket = item_type
+						if("weapon")
+							O.weapon = item_type
+						if("uniform")
+							O.uniform = item_type
+					update_preview = 1
 		if("input")
 			switch(href_list["preference"])
 				if("faction")

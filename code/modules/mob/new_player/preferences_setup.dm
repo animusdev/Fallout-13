@@ -37,8 +37,9 @@
 	copy_to(mannequin)
 	CHECK_TICK
 	if(selected_job)
+		var/datum/outfit/O = GetOutfit(selected_job.type)
 		mannequin.job = selected_job.title
-		selected_job.equip(mannequin, TRUE)
+		selected_job.equip(mannequin, TRUE, override_outfit = O)
 
 	CHECK_TICK
 	preview_icon = icon('icons/effects/effects.dmi', "nothing")

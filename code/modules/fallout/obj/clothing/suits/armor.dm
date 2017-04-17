@@ -154,7 +154,7 @@
 	self_weight = 12
 
 /obj/item/clothing/suit/armor/f13/ncr
-	name = "NCR trooper armor"
+	name = "trooper armor"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
 	icon_state = "ncr_armor1"
 	item_state = "ncr_armor1"
@@ -165,42 +165,49 @@
 	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/ncr/soldier
+	name = "trooper armor \"soldier\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR soldiers in combat environments.<br>This one had breastplate emblazoned with the emblem of the NCR, that has slightly faded overtime."
 	icon_state = "ncr_armor2"
 	item_state = "ncr_armor2"
 
 /obj/item/clothing/suit/armor/f13/ncr/patriot
+	name = "trooper armor \"patriot\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor3"
 	item_state = "ncr_armor3"
 
 /obj/item/clothing/suit/armor/f13/ncr/commie
+	name = "trooper armor \"commie\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
 	icon_state = "ncr_armor4"
 	item_state = "ncr_armor4"
 
 /obj/item/clothing/suit/armor/f13/ncr/preacher
+	name = "trooper armor \"preacher\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor5"
 	item_state = "ncr_armor5"
 
 /obj/item/clothing/suit/armor/f13/ncr/lover
+	name = "trooper armor \"lover\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR lovers in combat environments.<br>This one has a heart symbol painted over the chestplate with pink paint - it must be a battalion insignia."
 	icon_state = "ncr_armor6"
 	item_state = "ncr_armor6"
 
 /obj/item/clothing/suit/armor/f13/ncr/stalker //Cheeki breeki i v damke !!!
+	name = "trooper armor \"stalker\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR explorers in combat environments.<br>This one has a radiation symbol painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor7"
 	item_state = "ncr_armor7"
 
 /obj/item/clothing/suit/armor/f13/ncr/punisher
+	name = "trooper armor \"punisher\""
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR heroes and villains in combat environments.<br>This one has a skull symbol painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor8"
 	item_state = "ncr_armor8"
 
 /obj/item/clothing/suit/armor/f13/ncr/facewrap
-	name = "NCR face wrap armor"
+	name = "face wrap armor"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
 	icon_state = "ncr_armor9"
 	item_state = "ncr_armor9"
