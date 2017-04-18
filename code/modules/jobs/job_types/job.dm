@@ -65,6 +65,8 @@
 
 	if(override_outfit)
 		H.equipOutfit(override_outfit, visualsOnly)
+	else if(H.client && H.client.prefs)
+		H.equipOutfit(H.client.prefs.GetOutfit(src), visualsOnly)
 	else if(outfit)
 		H.equipOutfit(outfit, visualsOnly)
 
