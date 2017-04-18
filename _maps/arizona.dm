@@ -4,12 +4,12 @@
 
 		#define MINETYPE "lavaland"
 
-        #include "map_files\debug\wasteland.dmm"
+        #include "map_files\ArizonaWasteland\arizona_wasteland.dmm"
 
-		#define MAP_PATH "map_files/debug"
-        #define MAP_FILE "wasteland.dmm"
-        #define MAP_NAME "Debug Wasteland"
-//		#define MAP_FACTIONS_LIST list("ncr", "legion", "none", "city", "raiders")
+		#define MAP_PATH "map_files/ArizonaWasteland"
+        #define MAP_FILE "arizona_wasteland.dmm"
+        #define MAP_NAME "Arizona Wasteland"
+        #define MAP_FACTIONS_LIST list("ncr", "legion", "none", "city", "raiders")
 
 		#define MAP_TRANSITION_CONFIG DEFAULT_MAP_TRANSITION_CONFIG
 

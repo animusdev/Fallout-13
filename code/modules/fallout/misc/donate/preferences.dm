@@ -261,27 +261,27 @@
 			<div class="right_block_frame">
 				<div class="right_block_frame_item">
 					<h3>Headgear</h3>
-					<a href='?_src_=prefs;preference=helmet;task=input;gear=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>
-					<a href='?_src_=prefs;preference=previous_helmet;task=input'>&lt;</a>
-					<a href='?_src_=prefs;preference=next_helmet;task=input'>&gt;</a>
+					<a href='?_src_=prefs;preference=chooise;task=equip;item=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous;task=equip;item=head'>&lt;</a>
+					<a href='?_src_=prefs;preference=next;task=equip;item=head'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
 					<h3>Armor</h3>
-					<a href='?_src_=prefs;preference=armor;task=input' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>
-					<a href='?_src_=prefs;preference=previous_armor;task=input'>&lt;</a>
-					<a href='?_src_=prefs;preference=next_armor;task=input'>&gt;</a>
+					<a href='?_src_=prefs;preference=chooise;task=equip;item=armor' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous;task=equip;item=armor'>&lt;</a>
+					<a href='?_src_=prefs;preference=next;task=equip;item=armor'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
 					<h3>Uniform</h3>
-					<a href='?_src_=prefs;preference=uniform;task=input' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>
-					<a href='?_src_=prefs;preference=previous_uniform;task=input'>&lt;</a>
-					<a href='?_src_=prefs;preference=next_uniform;task=input'>&gt;</a>
+					<a href='?_src_=prefs;preference=chooise;task=equip;item=uniform' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous;task=equip;item=uniform'>&lt;</a>
+					<a href='?_src_=prefs;preference=next;task=equip;item=uniform'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
 					<h3>Shoes</h3>
-					<a href='?_src_=prefs;preference=shoes;task=input' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>
-					<a href='?_src_=prefs;preference=previous_shoes;task=input'>&lt;</a>
-					<a href='?_src_=prefs;preference=next_shoes;task=input'>&gt;</a>
+					<a href='?_src_=prefs;preference=chooise;task=equip;item=shoes' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>
+					<a href='?_src_=prefs;preference=previous;task=equip;item=shoes'>&lt;</a>
+					<a href='?_src_=prefs;preference=next;task=equip;item=shoes'>&gt;</a>
 				</div>
 			</div>
 		</div><!--1 блок 39-->
@@ -297,29 +297,29 @@
 				<div class="left_mid">
 					<div class="mid_item">
 						<h3>Gloves</h3>
-						<a href='?_src_=prefs;preference=gloves;task=input' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>
-						<a href='?_src_=prefs;preference=previous_gloves;task=input'>&lt;</a>
-						<a href='?_src_=prefs;preference=next_gloves;task=input'>&gt;</a>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=gloves' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous;task=equip;item=gloves'>&lt;</a>
+						<a href='?_src_=prefs;preference=next;task=equip;item=gloves'>&gt;</a>
 					</div>
 					<div class="mid_item">
 						<h3>Pocket 1</h3>
-						<a href='?_src_=prefs;preference=pocket_1;task=input' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
-						<a href='?_src_=prefs;preference=previous_pocket_1;task=input'>&lt;</a>
-						<a href='?_src_=prefs;preference=next_pocket_1;task=input'>&gt;</a>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_1'>&lt;</a>
+						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_1'>&gt;</a>
 					</div>
 				</div>
 				<div class="right_mid">
 					<div class="mid_item">
 						<h3>Weapon</h3>
-						<a href='?_src_=prefs;preference=weapon;task=input' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>
-						<a href='?_src_=prefs;preference=previous_weapon;task=input'>&lt;</a>
-						<a href='?_src_=prefs;preference=next_weapon;task=input'>&gt;</a>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=weapon' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous;task=equip;item=weapon'>&lt;</a>
+						<a href='?_src_=prefs;preference=next;task=equip;item=weapon'>&gt;</a>
 					</div>
 					<div class="mid_item">
 						<h3>Pocket 2</h3>
-						<a href='?_src_=prefs;preference=pocket_2;task=input' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
-						<a href='?_src_=prefs;preference=previous_pocket_2;task=input'>&lt;</a>
-						<a href='?_src_=prefs;preference=next_pocket_2;task=input'>&gt;</a>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_2'>&lt;</a>
+						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_2'>&gt;</a>
 					</div>
 				</div>
 				</div>
@@ -375,5 +375,80 @@
 
 /datum/preferences/proc/RoleTooltip(name, list/heads,desc, priority)
 	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinates to: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[desc]</i>"
+
+/datum/preferences/proc/GetItemNamesList(itype, datum/job/job)
+	if(!parent.allowed_items[itype])
+		return list()
+	var/list/names = list("none")
+	var/datum/outfit/O = new job.outfit()
+	if(O)
+		switch(itype)
+			if("head")
+				names += get_var_from_type(O.head, "name")
+			if("armor")
+				names += get_var_from_type(O.suit, "name")
+			if("shoes")
+				names += get_var_from_type(O.shoes, "name")
+			if("gloves")
+				names += get_var_from_type(O.gloves, "name")
+			if("pocket_1")
+				names += get_var_from_type(O.r_pocket, "name")
+			if("pocket_2")
+				names += get_var_from_type(O.l_pocket, "name")
+			if("weapon")
+				names += get_var_from_type(O.weapon, "name")
+			if("uniform")
+				names += get_var_from_type(O.uniform, "name")
+	if(job.required_items)
+		for(var/item in job.required_items)
+			if(slot_name_by_type(item) == itype)
+				names += get_var_from_type(item, "name")
+	for(var/item in parent.allowed_items[itype])
+		names += get_var_from_type(item, "name")
+	return names
+
+/datum/preferences/proc/GetItemByName(name, itype, datum/job/job)
+	if(!parent.allowed_items[itype])
+		return null
+	for(var/item in parent.allowed_items[itype])
+		if(get_var_from_type(item, "name") == name)
+			return item
+	if(job.required_items)
+		for(var/item in job.required_items)
+			if(slot_name_by_type(item) == itype && get_var_from_type(item, "name") == name)
+				return item
+	var/datum/outfit/O = new job.outfit()
+	if(O)
+		switch(itype)
+			if("head")
+				if(get_var_from_type(O.head, "name"))
+					return O.head
+			if("armor")
+				if(get_var_from_type(O.suit, "name"))
+					return O.suit
+			if("shoes")
+				if(get_var_from_type(O.shoes, "name"))
+					return O.shoes
+			if("gloves")
+				if(get_var_from_type(O.gloves, "name"))
+					return O.gloves
+			if("pocket_1")
+				if(get_var_from_type(O.r_pocket, "name"))
+					return O.r_pocket
+			if("pocket_2")
+				if(get_var_from_type(O.l_pocket, "name"))
+					return O.l_pocket
+			if("weapon")
+				if(get_var_from_type(O.weapon, "name"))
+					return O.weapon
+			if("uniform")
+				if(get_var_from_type(O.uniform, "name"))
+					return O.uniform
+	return null
+
+/datum/preferences/proc/GetOutfit(job)
+	if(!outfits || !outfits[job])
+		return null
+	return outfits[job]
 
 #undef MAX_ITEM_LENGTH

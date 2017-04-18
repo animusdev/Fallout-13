@@ -37,10 +37,6 @@ var/datum/subsystem/job/SSjob
 		var/datum/job/job = new J()
 		if(!job)
 			continue
-#if defined(MAP_FACTIONS_LIST)
-		if(!(job.faction in MAP_FACTIONS_LIST))
-			continue
-#endif
 		if(!job.config_check())
 			continue
 		occupations += job
@@ -60,6 +56,10 @@ var/datum/subsystem/job/SSjob
 	var/list/factions = subtypesof(/datum/f13_faction)
 	for(var/F in factions)
 		var/datum/f13_faction/faction = new F()
+#if defined(MAP_FACTIONS_LIST)
+		if(!(faction.id in MAP_FACTIONS_LIST))
+			continue
+#endif
 		human_factions[faction.id] = faction
 
 /datum/subsystem/job/proc/SetupStatus()
