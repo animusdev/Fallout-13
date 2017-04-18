@@ -377,7 +377,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	return 1
 
 /datum/preferences/proc/ItemTooltip(var/name, var/desc)
-	return "<b>[name]</b><br><i>[desc]</i>"
+	return "<b>[html_encode(name)]</b><br><i>[html_encode(desc)]</i>"
 
 /datum/preferences/proc/RoleTooltip(name, list/heads,desc, priority)
 	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinates to: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[desc]</i>"
