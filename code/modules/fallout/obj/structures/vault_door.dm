@@ -74,7 +74,8 @@
 //Lever
 
 /obj/machinery/doorButtons/vaultButton
-	name = "Vault access"
+	name = "Vault access panel"
+	desc = "Pull the lever to open the door - it's that simple."
 	icon = 'icons/fallout/machines/lever.dmi'
 	icon_state = "lever"
 	anchored = 1
