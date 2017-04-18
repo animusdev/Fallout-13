@@ -1,4 +1,10 @@
 #define MAX_ITEM_LENGTH 9
+/*
+This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step, to avoid lags.
+
+                                                                                      JackerZz.
+*/
+
 
 /datum/preferences/proc/ShowCharacterSetup(mob/user)
 	if(!user || !user.client)
@@ -303,7 +309,7 @@
 					</div>
 					<div class="mid_item">
 						<h3>Pocket 1</h3>
-						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_1'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_1'>&gt;</a>
 					</div>
@@ -317,7 +323,7 @@
 					</div>
 					<div class="mid_item">
 						<h3>Pocket 2</h3>
-						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_2'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_2'>&gt;</a>
 					</div>
@@ -371,84 +377,63 @@
 	return 1
 
 /datum/preferences/proc/ItemTooltip(var/name, var/desc)
-	return "<b>[name]</b><br><i>[desc]</i>"
+	return "<b>[html_encode(name)]</b><br><i>[html_encode(desc)]</i>"
 
 /datum/preferences/proc/RoleTooltip(name, list/heads,desc, priority)
 	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinates to: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[desc]</i>"
 
+//Just changing list of allowed item paths to item names.
 /datum/preferences/proc/GetItemNamesList(itype, datum/job/job)
-	if(!parent.allowed_items[itype])
-		return list()
 	var/list/names = list("none")
-	var/datum/outfit/O = new job.outfit()
-	if(O)
-		switch(itype)
-			if("head")
-				names += get_var_from_type(O.head, "name")
-			if("armor")
-				names += get_var_from_type(O.suit, "name")
-			if("shoes")
-				names += get_var_from_type(O.shoes, "name")
-			if("gloves")
-				names += get_var_from_type(O.gloves, "name")
-			if("pocket_1")
-				names += get_var_from_type(O.r_pocket, "name")
-			if("pocket_2")
-				names += get_var_from_type(O.l_pocket, "name")
-			if("weapon")
-				names += get_var_from_type(O.weapon, "name")
-			if("uniform")
-				names += get_var_from_type(O.uniform, "name")
-	if(job.required_items)
-		for(var/item in job.required_items)
-			if(slot_name_by_type(item) == itype)
-				names += get_var_from_type(item, "name")
-	for(var/item in parent.allowed_items[itype])
+	var/list/items = GetItems(itype, job)
+	for(var/item in items)
 		names += get_var_from_type(item, "name")
 	return names
 
+//Return item path from item name. It's looking in allowed items to selected job.
 /datum/preferences/proc/GetItemByName(name, itype, datum/job/job)
-	if(!parent.allowed_items[itype])
-		return null
-	for(var/item in parent.allowed_items[itype])
-		if(get_var_from_type(item, "name") == name)
+	var/list/items = GetItems(itype, job)
+	for(var/item in items)
+		if(name == get_var_from_type(item, "name"))
 			return item
-	if(job.required_items)
-		for(var/item in job.required_items)
-			if(slot_name_by_type(item) == itype && get_var_from_type(item, "name") == name)
-				return item
+	return null
+
+//Return accessable list of types of items for selected job and selected slot (head,armor, misc).
+/datum/preferences/proc/GetItems(itype, datum/job/job)
+	var/list/items = list()
 	var/datum/outfit/O = new job.outfit()
 	if(O)
 		switch(itype)
 			if("head")
-				if(get_var_from_type(O.head, "name"))
-					return O.head
+				items += O.head
 			if("armor")
-				if(get_var_from_type(O.suit, "name"))
-					return O.suit
+				items += O.suit
 			if("shoes")
-				if(get_var_from_type(O.shoes, "name"))
-					return O.shoes
+				items += O.shoes
 			if("gloves")
-				if(get_var_from_type(O.gloves, "name"))
-					return O.gloves
-			if("pocket_1")
-				if(get_var_from_type(O.r_pocket, "name"))
-					return O.r_pocket
-			if("pocket_2")
-				if(get_var_from_type(O.l_pocket, "name"))
-					return O.l_pocket
+				items += O.gloves
+			if("misc")
+				items += O.r_pocket
+				items += O.l_pocket
 			if("weapon")
-				if(get_var_from_type(O.weapon, "name"))
-					return O.weapon
+				items += O.weapon
 			if("uniform")
-				if(get_var_from_type(O.uniform, "name"))
-					return O.uniform
-	return null
+				items += O.uniform
+	if(job.required_items)
+		for(var/item in job.required_items)
+			if(slot_name_by_type(item) == itype)
+				items += item
+	for(var/item in parent.allowed_items[itype])
+		if(item in job.allowed_items)
+			items += item
+	return items
 
+//Get saved outfit of "job"
 /datum/preferences/proc/GetOutfit(job)
-	if(!outfits || !outfits[job])
+	if(!outfits || !job)
 		return null
-	return outfits[job]
+	if(ispath(job))
+		return outfits[job]
+	return outfits[job:type]
 
 #undef MAX_ITEM_LENGTH
