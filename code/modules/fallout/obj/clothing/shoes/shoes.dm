@@ -39,7 +39,7 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/f13/legionleather
-	name = "Legion leather boots"
+	name = "leather boots"
 	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
 	icon_state = "legionleather"
 	item_state = "legionleather"
@@ -47,7 +47,7 @@
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/legionmetal
-	name = "Legion metal boots"
+	name = "metal boots"
 	desc = "A pair of metal boots commonly worn by the Caesar's Legion veterans."
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
@@ -56,7 +56,7 @@
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
 /obj/item/clothing/shoes/f13/legionlegate
-	name = "Legion legate boots"
+	name = "legate boots"
 	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"

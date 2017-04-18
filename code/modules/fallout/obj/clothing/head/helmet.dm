@@ -59,8 +59,8 @@
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
 	desc = "An old combat helmet, out of use around the time of the Great War."
-	icon_state = "combat_helmet"
-	item_state = "combat_helmet"
+	icon_state = "combat"
+	item_state = "combat"
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0, acid = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
@@ -124,7 +124,7 @@
 	self_weight = 0.45
 
 /obj/item/clothing/head/helmet/f13/legrecruit
-	name = "Legion recruit helmet"
+	name = "recruit helmet"
 	desc = "A Legion recruit helmet, that's made of fine molerat leather. Or was it gecko leather? I think this other guy from Legion had a helmet made of brahmin leather..."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
@@ -135,7 +135,7 @@
 	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/legvexil
-	name = "Legion vexillarius hat"
+	name = "vexillarius hat"
 	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
@@ -146,7 +146,7 @@
 	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/legdecan
-	name = "Legion decanus helmet"
+	name = "decanus helmet"
 	desc = "A Legion decanus helmet, it's made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
@@ -157,7 +157,7 @@
 	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles.
-	name = "Legion decanus helmet"
+	name = "decanus helmet"
 	desc = "A Legion decanus helmet, it's made of tanned leather.<br>This one has particularly spiky feathers..."
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
@@ -165,7 +165,7 @@
 	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
-	name = "Legion centurion helmet"
+	name = "centurion helmet"
 	desc = "A metal helmet commonly worn by Caesar's Legion ranked officer - the Centurion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
@@ -176,7 +176,7 @@
 	self_weight = 0.6
 
 /obj/item/clothing/head/helmet/f13/leglegate
-	name = "Legion legate helmet"
+	name = "legate helmet"
 	desc = "A metal helmet destined to adorn the head of Caesar's Legion ranked officer - the Legate."
 	icon_state = "leglegate"
 	item_state = "leglegate"
@@ -303,7 +303,7 @@
 	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/ncr
-	name = "NCR power helmet"
+	name = "salvaged power helmet"
 	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers.<br>It's damn hot inside of it."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"

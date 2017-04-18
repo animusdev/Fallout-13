@@ -346,7 +346,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/enclaveo
-	name = "Enclave officer uniform"
+	name = "officer uniform"
 	desc = "A standard Enclave officer uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the wasteland."
 	icon_state = "enclaveo"
 	item_state = "bl_suit"
@@ -357,7 +357,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/ncr
-	name = "NCR overcoat"
+	name = "overcoat"
 	desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
@@ -366,7 +366,7 @@
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/ncr/torn
-	name = "torn NCR overcoat"
+	name = "torn overcoat"
 	desc = "Some time ago it looked like a regular NCR uniform, but now it looks like a total mess of ripped cloth."
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "tornovercoat"
@@ -390,7 +390,7 @@
 
 //Fluff
 
-/obj/item/clothing/under/f13/jensen
+/obj/item/clothing/under/f13/cyberpunk
 	name = "cyberpunk suit"
 	desc = "You never asked for anything that stylish."
 	icon_state = "jensen"

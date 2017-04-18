@@ -5,7 +5,7 @@
 	self_weight = 0.2
 
 /obj/item/clothing/head/soft/f13/enclave
-	name = "Enclave officer hat"
+	name = "officer hat"
 	desc = "A standard-issue Enclave officer's cap."
 	icon_state = "enclavesoft"
 	item_color = "enclave"

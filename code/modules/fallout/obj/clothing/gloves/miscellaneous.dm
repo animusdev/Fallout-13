@@ -28,9 +28,11 @@
 	put_on_delay = 40
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/legion
-	name = "Legion gloves"
+	name = "leather gloves"
 	desc = "A large leather gloves commonly worn by Caesar's henchmen."
 	icon_state = "legion"
 	item_state = "legion"
@@ -40,9 +42,11 @@
 	put_on_delay = 40
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/legionlegate
-	name = "Legion legate gloves"
+	name = "legate gloves"
 	desc = "A large metal gloves commonly worn by Caesar's Legion ranked officer - the Legate."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
@@ -52,6 +56,8 @@
 	put_on_delay = 40
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/doom
 	name = "strange gloves"
