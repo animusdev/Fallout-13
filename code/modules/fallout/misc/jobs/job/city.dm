@@ -2,10 +2,10 @@
 	title = "Mayor"
 	flag = MAYOR
 	department_flag = WASTELAND
-	faction = "city" //desert faction shall disable appearing as scavenger after readying
+	faction = "city"
 	status = "mayor"
 	total_positions = 1
-	spawn_positions = 1 //does not matter for late join
+	spawn_positions = 1
 	supervisors = "nobody"
 	selection_color = "#804B00"
 	access = list()
@@ -24,10 +24,10 @@
 	title = "Sheriff"
 	flag = SHERIFF
 	department_flag = WASTELAND
-	faction = "city" //desert faction shall disable appearing as scavenger after readying
+	faction = "city"
 	status = "sheriff"
 	total_positions = 1
-	spawn_positions = 1 //does not matter for late join
+	spawn_positions = 1
 	supervisors = "Mayor"
 	selection_color = "#804B00"
 	access = list()
@@ -36,14 +36,6 @@
 
 /datum/outfit/job/sheriff
 	name = "Sheriff"
-	id = null
-	ears = null
-	belt = null
-	backpack = null
-	satchel = null
-
-/datum/outfit/job/sheriff/pre_equip(mob/living/carbon/human/H)
-	..()
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/workboots
 	suit = /obj/item/clothing/suit/f13/sheriff
@@ -57,10 +49,10 @@
 	flag = SETTLER
 	department_flag = WASTELAND
 	desc = "No description."
-	faction = "city" //desert faction shall disable appearing as scavenger after readying
+	faction = "city"
 	status = "member"
 	total_positions = 10
-	spawn_positions = 10 //does not matter for late join
+	spawn_positions = 10
 	supervisors = "Mayor"
 	selection_color = "#804B00"
 	access = list()
@@ -74,12 +66,4 @@
 	belt = null
 	backpack = null
 	satchel = null
-
-/datum/outfit/job/settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(/obj/item/clothing/under/f13/settler,\
-		/obj/item/clothing/under/f13/brahmin,\
-		/obj/item/clothing/under/f13/machinist,\
-		/obj/item/clothing/under/f13/lumberjack,\
-		/obj/item/clothing/under/f13/trader)
-//	ears = /obj/item/device/radio/headset/headset_den
+	uniform = /obj/item/clothing/under/f13/settler
