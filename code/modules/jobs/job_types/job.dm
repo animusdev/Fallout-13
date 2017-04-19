@@ -35,8 +35,9 @@
 	//Sellection screen color
 	var/selection_color = "#ffffff"
 
-	var/list/allowed_items = list()
-	var/list/required_items = list()
+	var/list/allowed_packs = list("default") //Packs which will be available to this job
+	var/list/required_items = list() // Items which available by default
+	var/list/denied_items = list() // Items which can't be set up on this job anyway
 
 	//If this is set to 1, a text is printed to the player when jobs are assigned, telling him that he should let admins know that he has to disconnect.
 	var/req_admin_notify

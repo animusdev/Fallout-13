@@ -16,11 +16,6 @@
 
 	outfit = /datum/outfit/job/squad_leader
 
-	required_items = list(/obj/item/weapon/gun/ballistic/automatic/smg10mm,
-	/obj/item/ammo_box/magazine/m10mm_auto, /obj/item/ammo_box/magazine/m556,
-	/obj/item/weapon/gun/ballistic/automatic/pistol/n99, /obj/item/ammo_box/magazine/m10mm_adv,
-	/obj/item/weapon/reagent_containers/pill/patch/stimpak)
-
 	access = list()
 	minimal_access = list()
 
@@ -38,7 +33,7 @@
 		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 2, \
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 		/obj/item/device/radio = 1, \
-		/obj/item/device/flashlight/torch/flare/blue = 2)
+		/obj/item/device/flashlight/torch/flare/blue = 1)
 
 /datum/job/ranger
 	title = "Ranger"
@@ -125,14 +120,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
-	required_items = list(
-	/obj/item/clothing/suit/armor/f13/ncr/patriot, /obj/item/clothing/suit/armor/f13/ncr/commie,
-	/obj/item/clothing/suit/armor/f13/ncr/preacher, /obj/item/clothing/suit/armor/f13/ncr/lover,
-	/obj/item/clothing/suit/armor/f13/ncr/stalker, /obj/item/clothing/suit/armor/f13/ncr/punisher,
-	/obj/item/clothing/suit/armor/f13/ncr/facewrap, /obj/item/weapon/gun/ballistic/automatic/smg10mm,
-	/obj/item/ammo_box/magazine/m10mm_auto, /obj/item/ammo_box/magazine/m556,
-	/obj/item/weapon/gun/ballistic/automatic/pistol/n99, /obj/item/ammo_box/magazine/m10mm_adv,
-	/obj/item/weapon/reagent_containers/pill/patch/stimpak)
+	required_items = list(/obj/item/clothing/suit/armor/f13/ncr/facewrap)
 
 
 	outfit = /datum/outfit/job/trooper
@@ -151,5 +139,4 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \
-	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/device/radio = 1)
+	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/m556 = 3)
