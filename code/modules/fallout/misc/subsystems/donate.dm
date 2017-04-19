@@ -6,8 +6,8 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content
 	name = "Content"
-	init_order = 100
-	priority = 100
+	init_order = 0
+	priority = 0
 
 	var/list/all_content_packs = list()
 
@@ -15,6 +15,8 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content/New()
 	NEW_SS_GLOBAL(SScontent)
+
+/datum/subsystem/content/Initialize(timeofday)
 	load_content_packs()
 	update_all_data()
 
