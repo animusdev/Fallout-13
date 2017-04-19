@@ -16,9 +16,12 @@ Raider
 	minimal_access = list()
 	outfit = /datum/outfit/job/raider
 
+	required_items = list(
+	/obj/item/clothing/under/f13/merccharm,
+	/obj/item/clothing/suit/armor/f13/supafly
+	)
+
 /datum/outfit/job/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/mercadv
 	shoes = /obj/item/clothing/shoes/jackboots
-	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	r_pocket = /obj/item/device/flashlight/torch

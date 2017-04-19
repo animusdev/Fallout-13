@@ -10,7 +10,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	if(!user || !user.client)
 		return
 	if(parent)
-		parent.update_donate_data()
+		parent.update_content_data()
 	CHECK_TICK
 	if(!choiced_faction)
 		choiced_faction = get_faction_datum("none")
@@ -423,9 +423,12 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		for(var/item in job.required_items)
 			if(slot_name_by_type(item) == itype)
 				items += item
-	for(var/item in parent.allowed_items[itype])
-		if(item in job.allowed_items)
-			items += item
+	for(var/id in parent.content_packs)
+		var/datum/content_pack/pack = SScontent.get_pack(id)
+		if(id in job.allowed_packs)
+			for(var/item in pack.sorted_items[itype])
+				if(!(item in job.denied_items))
+					items += item
 	return items
 
 //Get saved outfit of "job"
