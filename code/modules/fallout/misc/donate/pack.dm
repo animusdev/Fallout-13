@@ -57,3 +57,52 @@
 		/obj/item/weapon/pipe
 		)
 	price = -1
+
+/datum/content_pack/super_ten
+	name = "Super 10"
+	id = "super_ten"
+	desc = "Pack of 10mm guns."
+	items = list(
+		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
+		/obj/item/ammo_box/magazine/m10mm_adv,
+		/obj/item/weapon/gun/ballistic/automatic/smg10mm,
+		/obj/item/ammo_box/magazine/m10mm_auto
+		)
+	price = 200
+
+/datum/content_pack/raiders_pack
+	name = "Raider's additional armor"
+	id = "raiders_pack"
+	desc = "Pack of raider's armor."
+	items = list(
+		/obj/item/clothing/suit/armor/f13/yankee,
+		/obj/item/clothing/head/helmet/f13/yankee,
+		/obj/item/clothing/head/helmet/f13/supaflyhelmet
+		)
+	price = 150
+
+/datum/content_pack/trooper_armors
+	name = "Additional NCR armor"
+	id = "trooper_armors"
+	desc = "NCR armor with different icons."
+	items = list(
+		/obj/item/clothing/suit/armor/f13/ncr/patriot,
+		/obj/item/clothing/suit/armor/f13/ncr/commie,
+		/obj/item/clothing/suit/armor/f13/ncr/preacher,
+		/obj/item/clothing/suit/armor/f13/ncr/lover,
+		/obj/item/clothing/suit/armor/f13/ncr/stalker,
+		/obj/item/clothing/suit/armor/f13/ncr/punisher
+		)
+	price = 200
+
+/datum/content_pack/madmax
+	name = "Mad Max outfit"
+	id = "madmax"
+	desc = "Items, stealed of Mad Max."
+	items = list(
+		/obj/item/clothing/suit/f13/mfp,
+		/obj/item/clothing/head/f13/safari,
+		/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
+		/obj/item/weapon/gun/ballistic/shotgun/trail
+		)
+	price = 300
