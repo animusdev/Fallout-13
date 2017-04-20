@@ -6,7 +6,7 @@ var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charg
 "stop" = "quit,leave,drop,freeze,pause,cease,layoff,хватит,стоп,остановись,харе,перестань,фу", "stay" = "wait,hold,still,idle,сто€ть,стой,мест,не двигайс€", \
 "randy" = "rand,рэнд,ренд", "bear" = "grizzly,миш,медвед,косолап", "brahmin" = "cow,брамин,коров,му", \
 "me" = "my,mine,мен€,мной,€,мне", "anybody" = "every,each,all,все,кажд", "dance" = "танц,пл€ши", "defend" = "guard,protect,secur,enforce,watch,защищ,защит,берег,хран,сторож", \
-"legion" = "легион", "ncr" = "нкр", "raider" = "bandit,criminal,raid,рейд,хулиг,банд", "enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,traitor,villain,dick,douche,prick,spy,agent,враг,плох,зло,опас,угр,пред,шпи,враж,мудак,пидор", "friend" = "buddy,master,good,ally,partner,друг,друз,повел,хоз,хор,союз,пар", "pull" = "grab,bring,get,drag,fetch,take,drag,haul,tow,deliver,rescue,save,help,тащи,неси,хват,возьми,вз€,спас,букс", "doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пЄс,собак,кобел,щен,пса,волк", \
+"legion" = "легион", "ncr" = "нкр", "raider" = "bandit,criminal,raid,psych,insane,maniac,sadist,рейд,хулиг,банд,псих,шиз,мани,садист,содом", "enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,traitor,villain,dick,douche,prick,spy,agent,враг,плох,зло,опас,угр,пред,шпи,враж,мудак,пидор", "friend" = "buddy,master,good,ally,partner,друг,друз,повел,хоз,хор,союз,пар", "pull" = "grab,bring,get,drag,fetch,take,drag,haul,tow,deliver,rescue,save,help,тащи,неси,хват,возьми,вз€,спас,букс", "doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пЄс,собак,кобел,щен,пса,волк", \
 "smeagol" = "gollum,hobbit,смегол,лысый,гол,гор,урод,хобит,пучеглаз")
 
 
