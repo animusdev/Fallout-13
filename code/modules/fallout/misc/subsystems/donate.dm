@@ -19,19 +19,11 @@ var/datum/subsystem/content/SScontent
 	NEW_SS_GLOBAL(SScontent)
 
 /datum/subsystem/content/Initialize(timeofday)
+	check_connection()
 	load_content_packs()
-	update_all_data()
-	if(curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp"))
-		var/data = file2text("temp")
-		if(data == "OK")
-			system_state = "Work"
-		else
-			system_state = "Error: " + data
-	else
-		system_state = "Can't connect"
 
 /datum/subsystem/content/fire(resumed = 0)
-//	update_all_data()
+	system_state = check_connection()
 
 /datum/subsystem/content/stat_entry()
 	..("[system_state]")
@@ -42,6 +34,20 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content/proc/get_pack(id)
 	return all_content_packs[id]
+
+/datum/subsystem/content/proc/get_data(ckey)
+	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
+		return file2text("temp")
+	return "0:"
+
+/datum/subsystem/content/proc/check_connection()
+	if(curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp"))
+		var/data = file2text("temp")
+		if(data == "OK")
+			return "Work"
+		else
+			return "Error: " + data
+	return "Can't connect"
 
 /datum/subsystem/content/proc/load_content_packs()
 	var/list/all_packs = subtypesof(/datum/content_pack)

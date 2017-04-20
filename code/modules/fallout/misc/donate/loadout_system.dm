@@ -25,15 +25,12 @@ client
 		update_content_packs(reload)
 			content_packs = list()
 			add_pack("default", reload)
-			var/money
-			var/packs
-			if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
-				var/data = file2text("temp")
-				var/data_array = splittext(data,":")
-				money = text2num(data_array[1])
-				packs = data_array[2]
-			content_packs = splittext(packs,",")
-			donate_money = money
+			var/data = SScontent.get_data(ckey(ckey))
+			var/data_array = splittext(data,":")
+			donate_money = text2num(data_array[1])
+
+			for(var/pack in splittext(data_array[2],","))
+				add_pack(pack, reload)
 #if defined(ALL_PACKS_AVAILABLE)
 			for(var/pack in SScontent.all_content_packs)
 				add_pack(pack, reload)
