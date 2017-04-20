@@ -2,11 +2,11 @@ var/list/translit_symbols = list("а" = "a", "б" = "b", "в" = "v", "г" = "g", "д"
  "й" = "y", "к" = "k", "л" = "l", "м" = "m", "н" = "n", "о" = "o", "п" = "p", "р" = "r", "с" = "c", "т" = "t", "у" = "y", \
  "ф" = "f", "х" = "h", "ц" = "tc", "ч" = "ch", "ш" = "sh", "щ" = "sh", "ы" = "i", "э" = "e", "ю" = "yu", "€" = "ya", \
  "ь" = "", "ъ" = "")
-var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charge,bit,target,fuck,фас,мочи,кус,бей,атак,ебашь,уеб", "follow" = "come,to me,after,with,escort,convoy,chase,пиздуй,иди,сюда,ко мне,к ноге,р€дом,за мной,пров,прес", \
-"stop" = "quit,leave,drop,freeze,pause,cease,layoff,хватит,стоп,остановись,харе,перестань,фу", "stay" = "wait,hold,still,idle,сто€ть,стой,мест,не двигайс€", \
+var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charge,bit,target,fuck,фас,мочи,кус,бей,атак,ебашь,уеб,хоп", "follow" = "come,to me,after,with,escort,convoy,chase,пиздуй,иди,сюда,ко мне,к ноге,р€дом,за мной,пров,след,вперед", \
+"stop" = "quit,leave,drop,freeze,pause,cease,layoff,хватит,стоп,остановись,харе,перестань,фу,нет,нельз€", "stay" = "wait,hold,still,idle,сто€ть,стой,мест,не двигайс€", \
 "randy" = "rand,рэнд,ренд", "bear" = "grizzly,миш,медвед,косолап", "brahmin" = "cow,брамин,коров,му", \
 "me" = "my,mine,мен€,мной,€,мне", "anybody" = "every,each,all,все,кажд", "dance" = "танц,пл€ши", "defend" = "guard,protect,secur,enforce,watch,защищ,защит,берег,хран,сторож", \
-"legion" = "легион", "ncr" = "нкр", "raider" = "bandit,criminal,raid,psych,insane,maniac,sadist,рейд,хулиг,банд,псих,шиз,мани,садист,содом", "enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,fag,traitor,villain,dick,douche,prick,spy,agent,враг,плох,зло,опас,угр,пред,шпи,враж,муд,пидор", "friend" = "buddy,master,good,kind,ally,partner,друг,друз,добр,повел,хоз,хор,союз,пар", "pull" = "grab,bring,get,drag,fetch,take,haul,tow,deliver,rescue,save,help,тащи,неси,хват,возьми,вз€,спас,букс", "doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пЄс,собак,кобел,щен,пса,волк", \
+"legion" = "легион", "ncr" = "нкр", "raider" = "bandit,criminal,raid,psych,insane,maniac,sadist,рейд,хулиг,банд,псих,шиз,мани,садист,содом", "enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,fag,traitor,villain,dick,douche,prick,spy,agent,враг,чуж,плох,зло,опас,угр,пред,шпи,враж,муд,пидор", "friend" = "buddy,master,good,kind,ally,partner,друг,друз,добр,повел,хоз,хор,союз,пар", "pull" = "grab,bring,get,drag,fetch,take,haul,tow,deliver,rescue,save,help,апорт,тащи,неси,хват,возьми,вз€,спас,букс", "doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пЄс,собак,кобел,щен,пса,волк", \
 "smeagol" = "gollum,hobbit,смегол,лысый,гол,гор,урод,хобит,пучеглаз")
 
 
