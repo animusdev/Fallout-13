@@ -34,6 +34,8 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
 
+	allowed_packs = list("default", "super_ten")
+
 /datum/outfit/job/sheriff
 	name = "Sheriff"
 	uniform = /obj/item/clothing/under/f13/cowboyb
