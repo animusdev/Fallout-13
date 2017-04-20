@@ -25,9 +25,13 @@ client
 		update_content_packs(reload)
 			content_packs = list()
 			add_pack("default", reload)
-			var/money = shell("curl [ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&action=money")
-			to_chat(world, money)
-			var/packs = shell("curl [ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&action=packs")
+			var/money
+			var/packs
+			if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
+				var/data = file2text("temp")
+				var/data_array = splittext(data,":")
+				money = data_array[1]
+				packs = data_array[2]
 			content_packs = splittext(packs,",")
 			donate_money = money
 #if defined(ALL_PACKS_AVAILABLE)
