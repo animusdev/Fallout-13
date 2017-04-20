@@ -19,6 +19,8 @@ Legion
 
 	whitelist_on = 1
 
+	allowed_packs = list("default", "super_ten")
+
 	outfit = /datum/outfit/job/leglegate
 
 	access = list()
@@ -49,6 +51,8 @@ Legion
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
+
+	allowed_packs = list("default", "super_ten")
 
 	outfit = /datum/outfit/job/legcenturion
 
@@ -81,6 +85,8 @@ Legion
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
+	allowed_packs = list("default", "super_ten")
+
 	outfit = /datum/outfit/job/legvex
 
 	access = list()
@@ -111,6 +117,8 @@ Legion
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
+
+	allowed_packs = list("default", "super_ten")
 
 	outfit = /datum/outfit/job/legdecan
 
@@ -143,6 +151,8 @@ Legion
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
+
+	allowed_packs = list("default", "super_ten")
 
 	outfit = /datum/outfit/job/legrecruit
 

@@ -1,5 +1,6 @@
 //Fallout 13 - Loadsamoney!
 #define DONATE_UPDATE_DELAY 6000
+#define ALL_PACKS_AVAILABLE 1
 client
 	var
 		list/allowed_roles
@@ -21,6 +22,10 @@ client
 		update_content_packs(reload)
 			content_packs = list()
 			add_pack("default", reload)
+#if defined(ALL_PACKS_AVAILABLE)
+			for(var/pack in SScontent.all_content_packs)
+				add_pack(pack, reload)
+#endif
 
 		add_pack(pack_id, reload)
 			content_packs |= pack_id
