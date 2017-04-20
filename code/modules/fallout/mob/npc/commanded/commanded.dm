@@ -36,7 +36,7 @@
 		else
 			if(L.stat)
 				return 0
-		if(allowed_targets.Find("everyone") && !(the_target == master || friends.Find(the_target)))
+		if(allowed_targets.Find("anybody") && !(the_target == master || friends.Find(the_target)))
 			return 1
 		if(allowed_targets.Find(the_target) || is_enemy(the_target))
 			return 1
@@ -64,7 +64,7 @@
 		var/mob/speaker = command_buffer[1]
 		var/text = command_buffer[2]
 		var/filtered_name = lowertext_uni(html_decode(name))
-		if(parse_phrase(text,filtered_name) || parse_phrase(text,"everyone")) //in case somebody wants to command 8 bears at once.
+		if(parse_phrase(text,filtered_name) || parse_phrase(text,"anybody")) //in case somebody wants to command 8 bears at once.
 			var/substring = copytext(text,length(filtered_name)+1) //get rid of the name.
 			listen(speaker,substring)
 		command_buffer.Remove(command_buffer[1],command_buffer[2])
@@ -90,8 +90,8 @@
 	if(!HasTargetsList)
 		possible_targets = ListTargets()
 	var/mode = "specific"
-	if("everyone" in allowed_targets) //we have been given the golden gift of murdering everything. Except our master, of course. And our friends. So just mostly everyone.
-		mode = "everyone"
+	if("anybody" in allowed_targets) //we have been given the golden gift of murdering everything. Except our master, of course. And our friends. So just mostly everyone.
+		mode = "anybody"
 	for(var/atom/A in possible_targets)
 		var/mob/M = null
 		if(A == src)
@@ -296,8 +296,8 @@
 		pointed_target = null
 		accepted()
 		return 1
-	if(parse_phrase(text,"everyone")) //if its just 'attack' then just attack anybody, same for if they say 'everyone', somebody, anybody. Assuming non-pickiness.
-		allowed_targets = list("everyone")//everyone? EVERYONE
+	if(parse_phrase(text,"anybody")) //if its just 'attack' then just attack anybody, same for if they say 'everyone', somebody, anybody. Assuming non-pickiness.
+		allowed_targets = list("anybody")//everyone? EVERYONE
 		accepted()
 		return 1
 

@@ -39,7 +39,7 @@
 	..()
 
 /mob/living/simple_animal/hostile/commanded/smeagol/accepted()
-	say("Yes, my precious.")
+	say("Yes, Master!")
 
 /mob/living/simple_animal/hostile/commanded/smeagol/unacsessable()
-	say("Forgive me, precious.")
+	say("Forgive me, my Master.")

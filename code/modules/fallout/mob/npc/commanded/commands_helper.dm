@@ -2,12 +2,12 @@ var/list/translit_symbols = list("а" = "a", "б" = "b", "в" = "v", "г" = "g", "д"
  "й" = "y", "к" = "k", "л" = "l", "м" = "m", "н" = "n", "о" = "o", "п" = "p", "р" = "r", "с" = "c", "т" = "t", "у" = "y", \
  "ф" = "f", "х" = "h", "ц" = "tc", "ч" = "ch", "ш" = "sh", "щ" = "sh", "ы" = "i", "э" = "e", "ю" = "yu", "я" = "ya", \
  "ь" = "", "ъ" = "")
-var/static/list/phrases_storage = list("attack" = "фас,мочи,бей,атак,ебашь,уеб", "follow" = "пиздуй,иди,сюда,ко мне,к ноге,рядом,за мной", \
-"stop" = "хватит,стоп,остановись,харе,перестань", "stay" = "стоять,стой,на месте,не двигайся", \
-"andrew" = "эндрю,андре", "bear" = "мишк,медвед,косолап", "brahmin" = "брамин,коров", \
-"me" = "меня,мной,я,мне", "everyone" = "все,кажд", "dance" = "танц,пляши", "defend" = "защищ,защит,спас,хран", \
-"legion" = "легион", "ncr" = "нкр", "enemy" = "враг", "friend" = "друг,друз", "pull" = "тащи,неси", "dogshit" = "псин,пёс,собак", \
-"smeagol" = "смегол,лысый,хобит,пучеглазый")
+var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charge,bit,target,fuck,фас,мочи,кус,бей,атак,ебашь,уеб", "follow" = "come,to me,after,with,escort,convoy,chase,пиздуй,иди,сюда,ко мне,к ноге,рядом,за мной,пров,прес", \
+"stop" = "quit,leave,drop,freeze,pause,cease,layoff,хватит,стоп,остановись,харе,перестань,фу", "stay" = "wait,hold,still,idle,стоять,стой,мест,не двигайся", \
+"randy" = "rand,рэнд,ренд", "bear" = "grizzly,миш,медвед,косолап", "brahmin" = "cow,брамин,коров", \
+"me" = "my,mine,меня,мной,я,мне", "anybody" = "every,each,all,все,кажд", "dance" = "танц,пляши", "defend" = "guard,protect,secur,enforce,watch,защищ,защит,берег,хран,сторожи", \
+"legion" = "легион", "ncr" = "нкр", "enemy" = "foe,bad,bully,bandit,evil,danger,threat,monster,asshole,traitor,villain,criminal,dick,raid,spy,agent,враг,плох,зло,опас,угр,рейд,хулиг,банд,пред,прес,враж,мудак,пидор", "friend" = "buddy,master,good,ally,partner,друг,друз,повел,хоз,хор,союз,партнер", "pull" = "grab,bring,get,drag,fetch,take,drag,haul,tow,deliver,rescue,save,help,тащи,неси,хват,возьми,взя,спас,букс", "doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пёс,собак,кобел,щен,пса,волк", \
+"smeagol" = "gollum,hobbit,смегол,лысый,голый,урод,хобит,пучеглазый")
 
 
 proc/translit(text)
