@@ -348,7 +348,6 @@ var/next_mob_id = 0
 /mob/verb/stop_pulling()
 	set name = "Stop Pulling"
 	set category = "IC"
-	set hidden = 1
 
 	if(pulling)
 		pulling.pulledby = null
