@@ -21,7 +21,7 @@ var/datum/subsystem/content/SScontent
 	update_all_data()
 
 /datum/subsystem/content/fire(resumed = 0)
-	update_all_data()
+//	update_all_data()
 
 /datum/subsystem/content/proc/update_all_data()
 	for(var/client/C)
