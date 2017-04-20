@@ -1412,6 +1412,6 @@ for(type in view(range, dview_mob))
 		return "shoes"
 	if(ispath(type, /obj/item/clothing/under))
 		return "uniform"
-	if(ispath(type, /obj/item/weapon))
+	if(ispath(type, /obj/item/weapon) && !ispath(type, /obj/item/weapon/reagent_containers))
 		return "weapon"
 	return "misc"
