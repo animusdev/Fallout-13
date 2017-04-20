@@ -9,6 +9,8 @@ var/datum/subsystem/content/SScontent
 	init_order = 0
 	priority = 0
 
+	var/system_state = -1
+
 	var/list/all_content_packs = list()
 
 	wait = 6000
@@ -19,9 +21,20 @@ var/datum/subsystem/content/SScontent
 /datum/subsystem/content/Initialize(timeofday)
 	load_content_packs()
 	update_all_data()
+	if(curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp"))
+		var/data = file2text("temp")
+		if(data == "OK")
+			system_state = "Work"
+		else
+			system_state = "Error: " + data
+	else
+		system_state = "Can't connect"
 
 /datum/subsystem/content/fire(resumed = 0)
 //	update_all_data()
+
+/datum/subsystem/content/stat_entry()
+	..("[system_state]")
 
 /datum/subsystem/content/proc/update_all_data()
 	for(var/client/C)

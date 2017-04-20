@@ -1,7 +1,7 @@
 //Fallout 13 - Loadsamoney!
 #define DONATE_UPDATE_DELAY 6000
 #define ALL_PACKS_AVAILABLE 1
-#define ADDRESS_DONATE_DATA "http://178.33.188.131/payment/user-data.php" //Address of taking donates data. Like money count, packs list.
+
 // NOTICE:
 // SERVER MUST HAVE CURL TOOL! This feature use shell to get data.
 client
@@ -30,7 +30,7 @@ client
 			if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
 				var/data = file2text("temp")
 				var/data_array = splittext(data,":")
-				money = data_array[1]
+				money = text2num(data_array[1])
 				packs = data_array[2]
 			content_packs = splittext(packs,",")
 			donate_money = money
