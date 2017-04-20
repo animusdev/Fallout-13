@@ -127,20 +127,28 @@
 	item_color = "benny"
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/relaxedwearm
+/obj/item/clothing/under/f13/relaxedwear
 	name = "pre-War male relaxedwear"
 	desc = "A dirty long-sleeve blue shirt with a greenish brown sweater-vest and slacks."
-	icon_state = "relaxedwearm"
+	icon_state = "relaxedwear_m"
 	item_state = "g_suit"
-	item_color = "relaxedwearm"
+	item_color = "relaxedwear_m"
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/springm
+/obj/item/clothing/under/f13/spring
 	name = "pre-War male spring outfit"
 	desc = "A dirty long-sleeve beige shirt with a red sweater-vest and brown trousers."
-	icon_state = "springm"
+	icon_state = "spring_m"
 	item_state = "brownjsuit"
-	item_color = "springm"
+	item_color = "spring_m"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/formal
+	name = "pre-War formal wear"
+	desc = "A dark purple jacket with an old white shirt and dirty dark purple trousers.<br>Traditionally worn by the richest of the post-War world."
+	icon_state = "spring_m"
+	item_state = "brownjsuit"
+	item_color = "spring_m"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bodyguard

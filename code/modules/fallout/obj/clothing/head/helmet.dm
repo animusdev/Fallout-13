@@ -11,7 +11,7 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	self_weight = 1.5
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/broken
 	name = "broken power helmet"
@@ -32,6 +32,16 @@
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	self_weight = 2
+
+/obj/item/clothing/head/helmet/f13/motorcycle
+	name = "motorcycle helmet"
+	desc = "A type of helmet used by motorcycle riders.<br>The primary goal of a motorcycle helmet is motorcycle safety - to protect the rider's head during impact, thus preventing or reducing head injury and saving the rider's life."
+	icon_state = "motorcycle"
+	item_state = "motorcycle"
+	flags = HEADCOVERSEYES
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
+	self_weight = 1.5
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
@@ -54,7 +64,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
-	self_weight = 0.5
+	self_weight = 1.5
 
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
@@ -78,7 +88,7 @@
 	put_on_delay = 10
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
-	self_weight = 0.2
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/ranger
 	name = "ranger helmet"
@@ -121,7 +131,7 @@
 	icon_state = "oldranger"
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, acid = 10)
-	self_weight = 0.45
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/legrecruit
 	name = "recruit helmet"
@@ -132,7 +142,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 30
-	self_weight = 0.6
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/legvexil
 	name = "vexillarius hat"
@@ -143,7 +153,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
-	self_weight = 0.6
+	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan
 	name = "decanus helmet"
@@ -154,7 +164,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 40
-	self_weight = 0.6
+	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles.
 	name = "decanus helmet"
@@ -173,7 +183,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
-	self_weight = 0.6
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/leglegate
 	name = "legate helmet"
@@ -186,7 +196,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
-	self_weight = 0.6
+	self_weight = 3
 
 /obj/item/clothing/head/f13/strange
 	name = "strange helmet"
