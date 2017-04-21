@@ -32,7 +32,7 @@
 		  	<span style="float: right; font-style: normal; font-weight: lighter; font-size: xx-small;">balance: [parent.donate_money] </span><br>
 		  	description:
 		  	<p style="margin-left: 25px; font-size: x-small;">[spack_data["desc"]]</p>
-		  	Price: [pack.id in parent.content_packs ? "purchased" : pack.price]<br>
+		  	Price: [(pack.id in parent.content_packs) ? "purchased" : pack.price]<br>
            	<a href='?_src_=prefs;preference=content_packs;buy=[pack.id]'>Buy</a>
             <div style="display: block; width: 98%; border: 1px solid #0bcc62; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; height: 68%;">
               <div style="width: 30%; display: inline-block; float: left;">

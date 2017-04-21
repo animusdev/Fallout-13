@@ -25,8 +25,7 @@
 
 /mob/new_player/proc/new_player_panel()
 
-	var/output = "balance: [client.donate_money]"
-	output += "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
+	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)

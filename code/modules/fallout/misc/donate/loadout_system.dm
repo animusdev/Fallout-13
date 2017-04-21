@@ -1,6 +1,6 @@
 //Fallout 13 - Loadsamoney!
 #define DONATE_UPDATE_DELAY 6000
-#define ALL_PACKS_AVAILABLE 1
+//#define ALL_PACKS_AVAILABLE 1
 
 // NOTICE:
 // SERVER MUST HAVE CURL TOOL! This feature use shell to get data.
