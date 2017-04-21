@@ -113,6 +113,8 @@ var/list/preferences_datums = list()
 	var/tmp/choiced_faction_index = 1
 	var/tmp/datum/job/selected_job
 
+	var/tmp/selected_pack
+
 	var/tmp/mob/living/carbon/human/dummy/mannequin = new()
 
 /datum/preferences/New(client/C)
@@ -590,6 +592,23 @@ var/list/preferences_datums = list()
 		else
 			selected_job = SSjob.GetJob(href_list["rank"])
 			update_preview = 1
+
+	if(href_list["preference"] == "content_packs")
+		if(href_list["buy"])
+			var/datum/content_pack/pack = SScontent.get_pack(href_list["buy"])
+			if(pack.id in parent.content_packs)
+				to_chat(user, "<span class='warning'>You already have [pack.name]!</span>")
+			else if(parent.donate_money < pack.price)
+				to_chat(user, "<span class='warning'>Not enough money!</span>")
+			else if(SScontent.buy_pack(parent.ckey, pack.id, pack.price))
+				to_chat(user, "You get \"[pack.name]\".")
+				parent.update_content_data(TRUE)
+			else
+				to_chat(user, "<span class='warning'>Something wrong!</span>.")
+		if(href_list["pack"])
+			selected_pack = href_list["pack"]
+		ShowContentPacks(user)
+		return 1
 
 	switch(href_list["task"])
 		if("random")

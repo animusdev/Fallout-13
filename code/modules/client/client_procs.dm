@@ -112,6 +112,7 @@ var/next_external_rsc = 0
 	if(config.whitelist_on && !check_whitelist(src.ckey))
 		Destroy(src)
 		return
+	update_content_data()
 	chatOutput = new(src)
 	var/tdata = TopicData //save this for later use
 	TopicData = null							//Prevent calls to client.Topic from connect

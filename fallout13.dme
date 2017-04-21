@@ -1228,6 +1228,7 @@
 #include "code\modules\fallout\misc\whitelist.dm"
 #include "code\modules\fallout\misc\donate\loadout_system.dm"
 #include "code\modules\fallout\misc\donate\pack.dm"
+#include "code\modules\fallout\misc\donate\packs_show.dm"
 #include "code\modules\fallout\misc\donate\preferences.dm"
 #include "code\modules\fallout\misc\economy\economy.dm"
 #include "code\modules\fallout\misc\economy\writing.dm"

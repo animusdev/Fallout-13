@@ -19,7 +19,7 @@ var/datum/subsystem/content/SScontent
 	NEW_SS_GLOBAL(SScontent)
 
 /datum/subsystem/content/Initialize(timeofday)
-	check_connection()
+	system_state = check_connection()
 	load_content_packs()
 
 /datum/subsystem/content/fire(resumed = 0)
@@ -39,6 +39,13 @@ var/datum/subsystem/content/SScontent
 	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
 		return file2text("temp")
 	return "0:"
+
+/datum/subsystem/content/proc/buy_pack(ckey, pack_id, price)
+	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "pack" = "[pack_id]", "price" = "[price]", "action" = "buy"), "temp"))
+		var/result = file2text("temp")
+		if(result == "SUCCESS")
+			return 1
+	return 0
 
 /datum/subsystem/content/proc/check_connection()
 	if(curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp"))
