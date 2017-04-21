@@ -25,7 +25,8 @@
 
 /mob/new_player/proc/new_player_panel()
 
-	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
+	var/output = "balance: [client.donate_money]"
+	output += "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
@@ -34,8 +35,10 @@
 			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
 
 	else
-		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View Manifest</A></p>"
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+
+	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Content Packs</a></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
@@ -105,6 +108,10 @@
 			ready = text2num(href_list["ready"])
 		else
 			ready = 0
+
+	if(href_list["show_content"])
+		client.prefs.ShowContentPacks(src)
+		return 1
 
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window
