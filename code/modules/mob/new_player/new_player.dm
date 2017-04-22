@@ -39,7 +39,7 @@
 
 	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Content Packs</a></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contriubution</a></p>"
+	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contribute</a></p>"
 
 	if(client && client.holder)
 		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
