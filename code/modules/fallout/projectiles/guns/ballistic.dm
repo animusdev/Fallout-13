@@ -81,7 +81,7 @@
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	name = "Assault Rifle 5.56mm"
-	icon_state = "assault_rifle"
+	icon_state = "assault-rifle"
 	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2"

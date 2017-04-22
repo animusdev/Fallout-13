@@ -4,7 +4,7 @@
 	name = "plasma"
 	damage = 40
 	irradiate = 15
-	icon_state = "plasma_beam"
+	icon_state = "plasma-beam"
 	icon = 'icons/fallout/objects/guns/projectiles.dmi'
 	impact_effect_type = /obj/effect/overlay/temp/impact_effect/plasma
 	light_range = 1

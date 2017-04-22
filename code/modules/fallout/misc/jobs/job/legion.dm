@@ -1,7 +1,5 @@
-	/*
-Legion
-*/
-//legat
+//Fallout 13 Legion faction directory
+
 /datum/job/legate
 	title = "Legate"
 	desc = "No description."
@@ -29,7 +27,7 @@ Legion
 /datum/outfit/job/leglegate
 	name = "Legate"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionlegate
+	shoes = /obj/item/clothing/shoes/f13/combat/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
 	suit = /obj/item/clothing/suit/armor/f13/leglegate
 	head = /obj/item/clothing/head/helmet/f13/leglegate
@@ -62,7 +60,7 @@ Legion
 /datum/outfit/job/legcenturion
 	name = "Centurion"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionmetal
+	shoes = /obj/item/clothing/shoes/f13/combat/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
 	head = /obj/item/clothing/head/helmet/f13/legcenturion
@@ -95,7 +93,7 @@ Legion
 /datum/outfit/job/legvex
 	name = "Vexillarius"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionmetal
+	shoes = /obj/item/clothing/shoes/f13/combat/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
 	head = /obj/item/clothing/head/helmet/f13/legvexil
@@ -128,7 +126,7 @@ Legion
 /datum/outfit/job/legdecan
 	name = "Decanus"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionleather
+	shoes = /obj/item/clothing/shoes/f13/combat/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legdecan
@@ -162,7 +160,7 @@ Legion
 /datum/outfit/job/prime
 	name = "Prime"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionleather
+	shoes = /obj/item/clothing/shoes/f13/combat/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legrecruit

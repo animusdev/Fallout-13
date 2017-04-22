@@ -40,6 +40,8 @@
 	desc = "Available to: All roles!<br>Everyone has that, for free!<br><i>Note: All roles have the items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
+		// Hats
+		/obj/item/clothing/head/f13/pot,
 		// Uniforms
 		/obj/item/clothing/under/pants/f13/cloth,
 		/obj/item/clothing/under/pants/f13/caravan,
@@ -86,7 +88,7 @@
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor (+6 skins)"
 	id = "trooper_armor"
-	desc = "Available to: NCR only!<br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "Available to: NCR roles only!<br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,
@@ -97,8 +99,32 @@
 		)
 	price = 60
 
+/datum/content_pack/team_fortress
+	name = "Hat simulator"
+	id = "team_fortress"
+	desc = "Available to: Neutral, City and Raider roles only!<br>Experience power of Fallout 13 with our perfectly developed hat simulation system."
+	items = list(
+		/obj/item/clothing/head/soft/f13/baseball,
+		/obj/item/clothing/head/f13/cowboy,
+		/obj/item/clothing/head/f13/bandit,
+		/obj/item/clothing/head/f13/stormchaser,
+		/obj/item/clothing/head/f13/gambler
+		)
+	price = 60
+
+/datum/content_pack/khan
+	name = "Great Khan set"
+	id = "khan"
+	desc = "Available to: Neutral and Raider roles only!<br>The glory of the Great Khans will be restored!"
+	items = list(
+		/obj/item/clothing/under/pants/f13/khan,
+		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
+		/obj/item/clothing/head/helmet/f13/supaflyhelmet
+		)
+	price = 180
+
 /datum/content_pack/super_ten
-	name = "Super 10"
+	name = "Super 10 (+2 guns)"
 	id = "super_ten"
 	desc = "Available to: All roles!<br>Pay-to-win pack of 10mm guns."
 	items = list(
@@ -109,25 +135,14 @@
 		)
 	price = 240
 
-/datum/content_pack/raiders_pack
-	name = "Raider's additional armor"
-	id = "raiderpack"
-	desc = "Pack of raider's armor."
-	items = list(
-		/obj/item/clothing/suit/armor/f13/yankee,
-		/obj/item/clothing/head/helmet/f13/yankee,
-		/obj/item/clothing/head/helmet/f13/supaflyhelmet
-		)
-	price = 150
-
 /datum/content_pack/madmax
-	name = "Mad Max"
+	name = "Mad Max set"
 	id = "madmax"
-	desc = "Carefully selected items from Mad Max movie franchise."
+	desc = "Available to: Neutral and Raider roles only!<br>Carefully selected items from Mad Max movie franchise."
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
 		/obj/item/clothing/head/f13/safari,
 		/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
 		/obj/item/weapon/gun/ballistic/shotgun/trail
 		)
-	price = 300
+	price = 600

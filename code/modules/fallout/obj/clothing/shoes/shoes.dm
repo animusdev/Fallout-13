@@ -28,7 +28,21 @@
 	icon_state = "cowboy"
 	item_state = "cowboy"
 
-/obj/item/clothing/shoes/f13/diesel
+/obj/item/clothing/shoes/f13/combat
+	name = "military boots"
+	desc = "High speed, no drag combat boots designed for use by US army before the Great War."
+	icon_state = "legionleather"
+	item_state = "legionleather"
+	permeability_coefficient = 0.01
+	flags = NOSLIP
+	self_weight = 0.8
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	strip_delay = 50
+	resistance_flags = 0
+	self_weight = 0.5
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
+
+/obj/item/clothing/shoes/f13/combat/diesel
 	name = "diesel boots"
 	desc = "Fancy female knee high platform boots with shiny steel clasps."
 	icon_state = "diesel"
@@ -38,29 +52,26 @@
 	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
-/obj/item/clothing/shoes/f13/legionleather
+/obj/item/clothing/shoes/f13/combat/legionleather
 	name = "leather boots"
 	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
 	icon_state = "legionleather"
 	item_state = "legionleather"
-	item_color = "cult"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
-/obj/item/clothing/shoes/f13/legionmetal
+/obj/item/clothing/shoes/f13/combat/legionmetal
 	name = "metal boots"
 	desc = "A pair of metal boots commonly worn by the Caesar's Legion veterans."
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
-	item_color = "cult"
 	self_weight = 1
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
-/obj/item/clothing/shoes/f13/legionlegate
+/obj/item/clothing/shoes/f13/combat/legionlegate
 	name = "legate boots"
 	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
-	item_color = "cult"
 	self_weight = 0.8
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 
