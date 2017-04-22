@@ -37,7 +37,7 @@
 /datum/content_pack/starter
 	name = "Starter"
 	id = "starter"
-	desc = "Available to: All roles!<br>Everyone has that, for free!<br><i>Note: All roles have the items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
+	desc = "<b>Available to: All roles!</b><br>Everyone has that, for free!<br><i>Note: All roles have the items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
 		// Hats
@@ -72,7 +72,7 @@
 /datum/content_pack/cigarettes
 	name = "Cigarettes for Lead Developer"
 	id = "cigarettes"
-	desc = "Available to: All roles!<br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes."
+	desc = "<b>Available to: All roles!</b><br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes."
 	items = list(
 		/obj/item/weapon/storage/fancy/rollingpapers,
 		/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
@@ -88,7 +88,7 @@
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor (+6 skins)"
 	id = "trooper_armor"
-	desc = "Available to: NCR roles only!<br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,
@@ -100,9 +100,9 @@
 	price = 60
 
 /datum/content_pack/team_fortress
-	name = "Hat simulator"
+	name = "Hat simulator (+5 hats)"
 	id = "team_fortress"
-	desc = "Available to: Neutral, City and Raider roles only!<br>Experience power of Fallout 13 with our perfectly developed hat simulation system."
+	desc = "<b>Available to: Neutral, City and Raider roles only!</b><br>Experience power of Fallout 13 with our perfectly developed hat simulation system."
 	items = list(
 		/obj/item/clothing/head/soft/f13/baseball,
 		/obj/item/clothing/head/f13/cowboy,
@@ -112,10 +112,20 @@
 		)
 	price = 60
 
+/datum/content_pack/bard
+	name = "Wandering musician"
+	id = "bard"
+	desc = "<b>Available to: All roles!</b><br>Russian General says, :<br>\"I do not like rock-and-roll music. This is too loud! I like folk music, soft, nice music, huh? Polka, waltz, anything!\""
+	items = list(
+		/obj/item/device/harmonica,
+		/obj/item/device/instrument/guitar
+		)
+	price = 180
+
 /datum/content_pack/khan
-	name = "Great Khan set"
+	name = "Great Khan expansion"
 	id = "khan"
-	desc = "Available to: Neutral and Raider roles only!<br>The glory of the Great Khans will be restored!"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>The glory of the Great Khans will be restored!"
 	items = list(
 		/obj/item/clothing/under/pants/f13/khan,
 		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
@@ -124,10 +134,11 @@
 	price = 180
 
 /datum/content_pack/super_ten
-	name = "Super 10 (+2 guns)"
+	name = "Super 10"
 	id = "super_ten"
-	desc = "Available to: All roles!<br>Pay-to-win pack of 10mm guns."
+	desc = "<b>Available to: All roles!</b><br>Pay-to-win pack of 10mm guns and a powerful 10 iron club."
 	items = list(
+		/obj/item/weapon/golf10,
 		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
 		/obj/item/ammo_box/magazine/m10mm_adv,
 		/obj/item/weapon/gun/ballistic/automatic/smg10mm,
@@ -135,10 +146,23 @@
 		)
 	price = 240
 
+/datum/content_pack/off
+	name = "OFF"
+	id = "off"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from OFF game."
+	items = list(
+		/obj/item/clothing/head/soft/black,
+		/obj/item/clothing/under/f13/batter,
+		/obj/item/weapon/twohanded/baseball,
+		/obj/item/clothing/gloves/f13/basebal,
+		/obj/item/clothing/shoes/laceup
+		)
+	price = 300
+
 /datum/content_pack/madmax
-	name = "Mad Max set"
+	name = "Mad Max"
 	id = "madmax"
-	desc = "Available to: Neutral and Raider roles only!<br>Carefully selected items from Mad Max movie franchise."
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from Mad Max movie franchise."
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
 		/obj/item/clothing/head/f13/safari,

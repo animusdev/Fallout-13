@@ -7,7 +7,7 @@
 	item_state = "machete"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	force = 25
+	force = 20
 	throwforce = 15
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -16,13 +16,26 @@
 	block_chance = 20
 	sharpness = IS_SHARP
 
-/obj/item/weapon/golf
+/obj/item/weapon/golf9
 	name = "9 iron"
-	desc = "This old 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
-	icon_state = "golf"
-	item_state = "golf"
+	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	icon_state = "golf9"
+	item_state = "golf9"
 	slot_flags = SLOT_BELT
 	force = 17
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 2
+	icon = 'icons/fallout/objects/melee.dmi'
+
+/obj/item/weapon/golf10
+	name = "10 iron"
+	desc = "This old and quite deadly 10 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	icon_state = "golf10"
+	item_state = "golf10"
+	slot_flags = SLOT_BELT
+	force = 20
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
@@ -89,11 +102,11 @@
 	name = "baseball bat"
 	desc = "A wooden source of joy and pain."
 	icon = 'icons/fallout/objects/melee.dmi'
-	force = 7
-	throwforce = 15
+	force = 5
+	throwforce = 10
 	w_class = 3
-	force_unwielded = 7
-	force_wielded = 16
+	force_unwielded = 15
+	force_wielded = 20
 	obj_integrity = 200
 	max_integrity = 200
 
@@ -102,7 +115,7 @@
 	name = "tribal spear"
 	desc = "A haphazardly-constructed, yet still deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
-	force = 10
+	force = 20
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
 	force_unwielded = 10
@@ -126,7 +139,7 @@
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
-	throwforce = 70
+	throwforce = 60
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3
 	armour_penetration = 10
