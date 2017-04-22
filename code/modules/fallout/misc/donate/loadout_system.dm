@@ -24,7 +24,7 @@ client
 
 		update_content_packs(reload)
 			content_packs = list()
-			add_pack("default", reload)
+			add_pack("starter", reload)
 			var/data = SScontent.get_data(ckey(ckey))
 			var/data_array = splittext(data,":")
 			donate_money = text2num(data_array[1])
