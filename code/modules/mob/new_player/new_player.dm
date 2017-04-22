@@ -39,7 +39,10 @@
 
 	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Content Packs</a></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contriubution</a></p>"
+
+	if(client && client.holder)
+		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -115,6 +118,9 @@
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window
 		new_player_panel()
+
+	if(href_list["contribute"])
+		src << link("http://178.33.188.131/payment/index.php?ckey=[ckey(client.ckey)]")
 
 	if(href_list["observe"])
 

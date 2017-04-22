@@ -5,7 +5,7 @@
 		packs_data += "<a href='?_src_=prefs;preference=content_packs;pack=[pack.id]' data-tooltip=\"[pack.desc]\">[pack.name]</a><br>"
 	var/list/spack_data = list()
 	if(!selected_pack)
-		selected_pack = "default"
+		selected_pack = "starter"
 
 	var/datum/content_pack/pack = SScontent.get_pack(selected_pack)
 	spack_data["name"] = "[pack.name]"
