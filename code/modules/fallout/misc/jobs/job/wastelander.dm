@@ -1,3 +1,29 @@
+/datum/job/settler
+	title = "Settler"
+	flag = SETTLER
+	department_flag = WASTELAND
+	desc = "No description."
+	faction = "none"
+	status = "none"
+	total_positions = 10
+	spawn_positions = 10
+	supervisors = "none"
+	selection_color = "#ece19d"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/settler
+
+	allowed_packs = list("starter", "super_ten", "madmax")
+
+/datum/outfit/job/settler
+	name = "Settler"
+	id = null
+	ears = null
+	belt = null
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/settler
+
 /datum/job/adventurer
 	title = "Adventurer"
 	desc = "No description."
@@ -20,10 +46,10 @@
 	uniform = /obj/item/clothing/under/f13/brahmin
 	shoes = /obj/item/clothing/shoes/f13/tan
 
-/datum/job/mercenarie
-	title = "Mercenarie"
+/datum/job/mercenary
+	title = "Mercenary"
 	desc = "No description."
-	flag = MERCENARIE
+	flag = MERCENARY
 	department_flag = MEDSCI
 	faction = "none"
 	status = "none"
@@ -33,11 +59,11 @@
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
-	outfit = /datum/outfit/job/mercenarie
+	outfit = /datum/outfit/job/mercenary
 
 	allowed_packs = list("starter", "super_ten", "madmax")
 
-/datum/outfit/job/mercenarie
-	name = "Mercenarie"
+/datum/outfit/job/mercenary
+	name = "Mercenary"
 	uniform = /obj/item/clothing/under/f13/brahmin
 	shoes = /obj/item/clothing/shoes/f13/tan

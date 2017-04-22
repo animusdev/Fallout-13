@@ -47,6 +47,6 @@ Raider
 	allowed_packs = list("starter", "super_ten", "madmax")
 
 /datum/outfit/job/gang_leader
-	name = "Mercenarie"
+	name = "Gang Leader"
 	uniform = /obj/item/clothing/under/f13/brahmin
 	shoes = /obj/item/clothing/shoes/f13/tan

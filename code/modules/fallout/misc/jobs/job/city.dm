@@ -45,27 +45,3 @@
 	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
 	glasses = /obj/item/clothing/glasses/sunglasses
 	back = /obj/item/weapon/gun/ballistic/shotgun
-
-/datum/job/settler
-	title = "Settler"
-	flag = SETTLER
-	department_flag = WASTELAND
-	desc = "No description."
-	faction = "city"
-	status = "member"
-	total_positions = 10
-	spawn_positions = 10
-	supervisors = "Mayor"
-	selection_color = "#804B00"
-	access = list()
-	minimal_access = list()
-	outfit = /datum/outfit/job/settler
-
-/datum/outfit/job/settler
-	name = "Settler"
-	id = null
-	ears = null
-	belt = null
-	backpack = null
-	satchel = null
-	uniform = /obj/item/clothing/under/f13/settler
