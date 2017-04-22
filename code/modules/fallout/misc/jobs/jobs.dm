@@ -20,5 +20,8 @@ var/const/MAYOR				=(1<<13)
 
 //This jobs using medsci flag, cause me too lazy.
 
+var/const/MERCENARIE		=(1<<7)
+var/const/GANGLEAD			=(1<<8)
+
 //var/const/VAULT			=(1<<6)
 
