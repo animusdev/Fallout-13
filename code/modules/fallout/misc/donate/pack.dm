@@ -68,9 +68,9 @@
 	price = -1
 
 /datum/content_pack/cigarettes
-	name = "Cigarettes for Jackerzz"
+	name = "Cigarettes for Lead Developer"
 	id = "cigarettes"
-	desc = "Available to: All roles!<br>The most simple way to encourage the Lead Developer is to get him a pack of cigarettes."
+	desc = "Available to: All roles!<br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes."
 	items = list(
 		/obj/item/weapon/storage/fancy/rollingpapers,
 		/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
