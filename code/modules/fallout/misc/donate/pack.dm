@@ -4,7 +4,7 @@
 	var
 		name = "What?"
 		id = "shit"
-		desc = "Something is wrong."
+		desc = "Something is wrong. Maybe you already have this item pack?"
 		list/items = list()
 		list/sorted_items = list()
 		list/roles = list()
@@ -34,19 +34,22 @@
 		sort_items()
 
 
-
 /datum/content_pack/starter
 	name = "Starter"
 	id = "starter"
-	desc = "Everyone has that, for free!"
+	desc = "Available to: All roles!<br>Everyone has that, for free!"
 	items = list(
-		/obj/item/clothing/shoes/f13/brownie,
 		/obj/item/clothing/shoes/f13/rag,
 		/obj/item/clothing/shoes/f13/tan,
+		/obj/item/clothing/shoes/f13/brownie,
 		// Uniforms
+		/obj/item/clothing/under/f13/rag,
+		/obj/item/clothing/under/f13/tribal,
+		/obj/item/clothing/under/f13/female/tribal,
 		/obj/item/clothing/under/f13/settler,
 		/obj/item/clothing/under/f13/brahmin,
-		/obj/item/clothing/under/f13/tribal,
+		/obj/item/clothing/under/f13/female/brahmin,
+		/obj/item/clothing/under/f13/worn,
 		// Suits
 		/obj/item/clothing/suit/f13/vest,
 		// Items
@@ -61,7 +64,7 @@
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor (+6 skins)"
 	id = "trooper_armor"
-	desc = "Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "Available to: NCR only!<br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,
@@ -75,14 +78,14 @@
 /datum/content_pack/super_ten
 	name = "Super 10"
 	id = "super_ten"
-	desc = "Pay-to-win pack of 10mm guns."
+	desc = "Available to: All roles!<br>Pay-to-win pack of 10mm guns."
 	items = list(
 		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
 		/obj/item/ammo_box/magazine/m10mm_adv,
 		/obj/item/weapon/gun/ballistic/automatic/smg10mm,
 		/obj/item/ammo_box/magazine/m10mm_auto
 		)
-	price = 200
+	price = 240
 
 /datum/content_pack/raiders_pack
 	name = "Raider's additional armor"
@@ -96,9 +99,9 @@
 	price = 150
 
 /datum/content_pack/madmax
-	name = "Mad Max outfit"
+	name = "Mad Max"
 	id = "madmax"
-	desc = "Items, stealed of Mad Max."
+	desc = "Carefully selected items from Mad Max movie franchise."
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
 		/obj/item/clothing/head/f13/safari,
