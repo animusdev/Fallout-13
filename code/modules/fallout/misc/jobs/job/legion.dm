@@ -41,7 +41,7 @@ Legion
 	title = "Centurion"
 	desc = "No description."
 	flag = LEGCENTURION
-	department_head = list("Legate")
+	department_head = list("legate")
 	department_flag = WASTELAND
 	faction = "legion"
 	status = "centurion"
@@ -74,7 +74,7 @@ Legion
 	title = "Vexillarius"
 	desc = "No description."
 	flag = LEGVEX
-	department_head = list("Legate")
+	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
 	faction = "legion"
 	status = "vexillarius"
@@ -107,7 +107,7 @@ Legion
 	title = "Decanus"
 	desc = "No description."
 	flag = LEGDECAN
-	department_head = list("Centurion")
+	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
 	faction = "legion"
 	status = "decanus"
@@ -136,15 +136,15 @@ Legion
 	mask = /obj/item/clothing/mask/bandana/f13/legdecan
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 
-//recruit
-/datum/job/recruit
-	title = "Recruit"
+//prime
+/datum/job/prime
+	title = "Prime"
 	desc = "No description."
-	flag = LEGRECRUIT
+	flag = PRIME
 	department_head = list("Centurion")
 	department_flag = WASTELAND
 	faction = "legion"
-	status = "recruit"
+	status = "prime"
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the centurion"
@@ -154,13 +154,13 @@ Legion
 
 	allowed_packs = list("starter", "super_ten")
 
-	outfit = /datum/outfit/job/legrecruit
+	outfit = /datum/outfit/job/prime
 
 	access = list()
 	minimal_access = list()
 
-/datum/outfit/job/legrecruit
-	name = "Recruit"
+/datum/outfit/job/prime
+	name = "Prime"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
 	shoes = /obj/item/clothing/shoes/f13/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
