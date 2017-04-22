@@ -1272,6 +1272,7 @@
 #include "code\modules\fallout\mob\npc\radroach.dm"
 #include "code\modules\fallout\mob\npc\shepka.dm"
 #include "code\modules\fallout\mob\npc\supermutant.dm"
+#include "code\modules\fallout\mob\npc\wolf.dm"
 #include "code\modules\fallout\mob\npc\commanded\_commanded.dm"
 #include "code\modules\fallout\mob\npc\commanded\bear.dm"
 #include "code\modules\fallout\mob\npc\commanded\commanded.dm"

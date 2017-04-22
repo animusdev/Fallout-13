@@ -14,7 +14,7 @@
 
 	whitelist_on = 1
 
-	allowed_packs = list("default", "super_ten")
+	allowed_packs = list("starter", "super_ten")
 
 	outfit = /datum/outfit/job/squad_leader
 
@@ -53,7 +53,7 @@
 
 	outfit = /datum/outfit/job/ranger
 
-	allowed_packs = list("default", "super_ten")
+	allowed_packs = list("starter", "super_ten")
 
 	required_items = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak)
 
@@ -88,7 +88,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
-	allowed_packs = list("default", "super_ten")
+	allowed_packs = list("starter", "super_ten")
 
 	outfit = /datum/outfit/job/elite_trooper
 
@@ -125,7 +125,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
-	allowed_packs = list("default", "super_ten", "trooper_armors")
+	allowed_packs = list("starter", "super_ten", "trooper_armor")
 
 	required_items = list(/obj/item/clothing/suit/armor/f13/ncr/facewrap)
 

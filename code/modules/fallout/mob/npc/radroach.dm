@@ -10,9 +10,9 @@
 	icon = 'icons/fallout/mobs/animal.dmi'
 	speak_chance = 0
 	turns_per_move = 5
-	response_help = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm = "hits"
+	response_help = "pokes"
+	response_disarm = "pushes aside"
+	response_harm = "stomps"
 	environment_smash = 0
 	move_to_delay = 1.8
 	maxHealth = 15

@@ -4,7 +4,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/gecko
 	name = "gecko fillet"
-	desc = "A fillet of gecko meat."
+	desc = "A tasty fillet of gecko meat.<br>If you cook it, it tastes like chicken!"
 	icon_state = "fishfillet"
 	list_reagents = list("nutriment" = 6, "carpotoxin" = 1, "vitamin" = 2)
 	bitesize = 2 //Smaller animal
@@ -14,16 +14,25 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat
 	name = "molerat meat"
-	desc = "A slab of molerat meat."
+	desc = "A slab of smelly molerat meat."
 	list_reagents = list("nutriment" = 3, "carpotoxin" = 3)
-	bitesize = 4
+	bitesize = 3
 	filling_color = "#FA8072"
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	slice_path = null
 
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/wolf
+	name = "dog meat"
+	desc = "Some Asians love this stuff.<br>It does not taste too bad actually."
+	list_reagents = list("nutriment" = 6, "vitamin" = 2)
+	bitesize = 4 //Average animal
+	filling_color = "#FA8072"
+	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/wolf
+	slice_path = null
+
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw
 	name = "deathclaw meat"
-	desc = "A slab of deathclaw meat."
+	desc = "A slab of hard but delicious deathclaw meat."
 	list_reagents = list("nutriment" = 9, "vitamin" = 9)
 	bitesize = 6 //Big slabs of meat from a massive creature
 	filling_color = "#FA8072"
@@ -34,11 +43,15 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/gecko
 	name = "gecko steak"
-	desc = "Tastes like chicken."
+	desc = "A delicious steak made of finest gecko meat.<br>Tastes like chicken!"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	name = "molerat steak"
 	desc = "A smelly molerat steak.<br>What did you expect from roasted mutant rodent meat?"
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/steak/wolf
+	name = "dog steak"
+	desc = "A dog steak does not look attractive, but some people eat worse things when it comes to survival.<br>What did you expect from roasted dog?"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/deathclaw
 	name = "deathclaw steak"

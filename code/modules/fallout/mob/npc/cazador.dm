@@ -10,8 +10,8 @@
 	environment_smash = 1
 	turns_per_move = 15
 	butcher_results = list()
-	response_help = "pets"
-	response_disarm = "gently pushes aside"
+	response_help = "pokes"
+	response_disarm = "punches"
 	response_harm = "hits"
 	emote_taunt = list("gnashes")
 	taunt_chance = 30

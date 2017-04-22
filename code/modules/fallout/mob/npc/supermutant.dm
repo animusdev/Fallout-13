@@ -14,7 +14,7 @@
 	environment_smash = 2
 	turns_per_move = 5
 	response_help = "touches"
-	response_disarm = "tries to push aside"
+	response_disarm = "tries to perform a kung fu move when suddenly remembers that it's actually"
 	response_harm = "hits"
 	maxHealth = 300
 	health = 300

@@ -12,8 +12,8 @@
 	turns_per_move = 5
 	environment_smash = 0
 	response_help = "hugs"
-	response_disarm = "gently pushes aside"
-	response_harm = "hits"
+	response_disarm = "pushes aside"
+	response_harm = "slaps"
 	move_to_delay = 2
 	maxHealth = 50
 	health = 50

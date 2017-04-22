@@ -34,7 +34,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
 
-	allowed_packs = list("default", "super_ten")
+	allowed_packs = list("starter", "super_ten")
 
 /datum/outfit/job/sheriff
 	name = "Sheriff"

@@ -8,9 +8,9 @@
 	icon_dead = "gecko_dead"
 	icon_gib = "gib"
 	turns_per_move = 1
-	response_help = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm = "hits"
+	response_help = "pokes"
+	response_disarm = "pushes aside"
+	response_harm = "kicks"
 	maxHealth = 60
 	health = 60
 	self_weight = 35

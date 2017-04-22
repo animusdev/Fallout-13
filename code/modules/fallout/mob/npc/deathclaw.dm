@@ -11,8 +11,8 @@
 	move_to_delay = 1.5
 	turns_per_move = 5
 	response_help = "touches"
-	response_disarm = "tries to push aside"
-	response_harm = "hits"
+	response_disarm = "tries to grab a deathclaw by its large"
+	response_harm = "hits a deathclaw right in its large"
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5, /obj/item/stack/sheet/animalhide/deathclaw=3)
 	maxHealth = 500
 	health = 500

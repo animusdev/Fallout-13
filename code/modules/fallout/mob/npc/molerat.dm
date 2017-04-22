@@ -10,7 +10,7 @@
 	turns_per_move = 1
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
-	response_harm = "hits"
+	response_harm = "kicks"
 	butcher_results = list(/obj/item/stack/sheet/animalhide/molerat = 1, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat = 1)
 	maxHealth = 30

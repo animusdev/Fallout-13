@@ -144,7 +144,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/formal
-	name = "pre-War formal wear"
+	name = "pre-War male formal wear"
 	desc = "A dark purple jacket with an old white shirt and dirty dark purple trousers.<br>Traditionally worn by the richest of the post-War world."
 	icon_state = "spring_m"
 	item_state = "brownjsuit"
@@ -169,7 +169,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/tribal
-	name = "tribal outfit"
+	name = "male tribal outfit"
 	desc = "A male outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
 	icon_state = "tribal_m"
 	item_state = "lgloves"
@@ -177,7 +177,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/tribal
-	name = "tribal outfit"
+	name = "female tribal outfit"
 	desc = "A female outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
 	icon_state = "tribal_f"
 	item_state = "lgloves"
@@ -193,7 +193,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/brahmin //Male version
-	name = "brahmin-skin outfit"
+	name = "male brahmin-skin outfit"
 	desc = "A basic male outfit consisting of a white shirt and patched trousers with Y-shaped suspenders."
 	icon_state = "brahmin_m"
 	item_state = "brownjsuit"
@@ -201,7 +201,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/brahmin //Female version
-	name = "brahmin-skin outfit"
+	name = "female brahmin-skin outfit"
 	desc = "A basic female outfit consisting of a rolled-up long-sleeve shirt and patched trousers with Y-shaped suspenders.<br>Fitted for female wastelanders."
 	icon_state = "brahmin_f"
 	item_state = "brownjsuit"
@@ -210,7 +210,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/doctor //Male version
-	name = "doctor fatigues"
+	name = "male doctor fatigues"
 	desc = "A white t-shirt, a small brown satchel bag and brown trousers with pouches attached to the belt.<br>Fitted for male wastelanders."
 	icon_state = "doctor_m"
 	item_state = "brownjsuit"
@@ -219,7 +219,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/doctor //Female version
-	name = "doctor fatigues"
+	name = "female doctor fatigues"
 	desc = "A white t-shirt with brown trousers, and a small brown satchel bag attached to it.<br>Fitted for female wastelanders."
 	icon_state = "doctor_f"
 	item_state = "brownjsuit"
@@ -229,7 +229,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/mercadv //Male version
-	name = "merc adventurer outfit"
+	name = "male merc adventurer outfit"
 	desc = "A large leather jacket with torn-off sleeves, paired with a red sweater, a necklace with three teeth of unknown origin strung on, and a pair of brown leather pants.<br>There is also a rough leather bandolier for additional storage capacity.<br>Fitted for male wastelanders."
 	icon_state = "merca_m"
 	item_state = "bl_suit"
@@ -240,7 +240,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/mercadv //Female version
-	name = "merc adventurer outfit"
+	name = "female merc adventurer outfit"
 	desc = "A large leather jacket with torn-off sleeves, paired with a midriff-revealing red and black top and a pair of brown leather pants.<br>There is also a rough leather bandolier and belt for additional storage capacity.<br>Fitted for female wastelanders."
 	icon_state = "merca_f"
 	item_state = "bl_suit"
@@ -252,7 +252,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/merccharm //Male version
-	name = "merc charmer outfit"
+	name = "male merc charmer outfit"
 	desc = "A blue and gray outfit resembling a three piece suit, heavily stitched and reinforced with a small metal cup on the groin area.<br>Fitted for male wastelanders."
 	icon_state = "mercc_m"
 	item_state = "bl_suit"
@@ -263,7 +263,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/merccharm //Female version
-	name = "merc charmer outfit"
+	name = "female merc charmer outfit"
 	desc = "A ripped and torn blue female business suit, it still gives ladies a rather sexy look.<br>Fitted for female wastelanders."
 	icon_state = "mercc_f"
 	item_state = "bl_suit"

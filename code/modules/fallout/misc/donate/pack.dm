@@ -35,10 +35,10 @@
 
 
 
-/datum/content_pack/default
-	name = "Default"
-	id = "default"
-	desc = "Everyone has that."
+/datum/content_pack/starter
+	name = "Starter"
+	id = "starter"
+	desc = "Everyone has that, for free!"
 	items = list(
 		/obj/item/clothing/shoes/f13/brownie,
 		/obj/item/clothing/shoes/f13/rag,
@@ -58,10 +58,24 @@
 		)
 	price = -1
 
+/datum/content_pack/trooper_armor
+	name = "Batallion themed NCR armor (+6 skins)"
+	id = "trooper_armor"
+	desc = "Form a strike squad with your friends, wearing the matching NCR armor sets!<br>A set includes:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	items = list(
+		/obj/item/clothing/suit/armor/f13/ncr/patriot,
+		/obj/item/clothing/suit/armor/f13/ncr/commie,
+		/obj/item/clothing/suit/armor/f13/ncr/preacher,
+		/obj/item/clothing/suit/armor/f13/ncr/lover,
+		/obj/item/clothing/suit/armor/f13/ncr/stalker,
+		/obj/item/clothing/suit/armor/f13/ncr/punisher
+		)
+	price = 60
+
 /datum/content_pack/super_ten
 	name = "Super 10"
 	id = "super_ten"
-	desc = "Pack of 10mm guns."
+	desc = "Pay-to-win pack of 10mm guns."
 	items = list(
 		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
 		/obj/item/ammo_box/magazine/m10mm_adv,
@@ -80,20 +94,6 @@
 		/obj/item/clothing/head/helmet/f13/supaflyhelmet
 		)
 	price = 150
-
-/datum/content_pack/trooper_armors
-	name = "Additional NCR armor"
-	id = "trooper_armors"
-	desc = "NCR armor with different icons."
-	items = list(
-		/obj/item/clothing/suit/armor/f13/ncr/patriot,
-		/obj/item/clothing/suit/armor/f13/ncr/commie,
-		/obj/item/clothing/suit/armor/f13/ncr/preacher,
-		/obj/item/clothing/suit/armor/f13/ncr/lover,
-		/obj/item/clothing/suit/armor/f13/ncr/stalker,
-		/obj/item/clothing/suit/armor/f13/ncr/punisher
-		)
-	price = 200
 
 /datum/content_pack/madmax
 	name = "Mad Max outfit"

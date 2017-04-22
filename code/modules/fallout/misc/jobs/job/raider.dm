@@ -16,7 +16,7 @@ Raider
 	minimal_access = list()
 	outfit = /datum/outfit/job/raider
 
-	allowed_packs = list("default", "super_ten", "raiders_pack")
+	allowed_packs = list("starter", "super_ten", "raiders_pack")
 
 	required_items = list(
 	/obj/item/clothing/under/f13/merccharm,
