@@ -67,6 +67,22 @@
 		)
 	price = -1
 
+/datum/content_pack/cigarettes
+	name = "Cigarettes for Jackerzz"
+	id = "cigarettes"
+	desc = "Available to: All roles!<br>The most simple way to encourage the Lead Developer is to get him a pack of cigarettes."
+	items = list(
+		/obj/item/weapon/storage/fancy/rollingpapers,
+		/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
+		/obj/item/weapon/storage/fancy/cigarettes/cigpack_joy,
+		/obj/item/clothing/mask/cigarette,
+		/obj/item/clothing/mask/cigarette/rollie,
+		/obj/item/clothing/mask/cigarette/cigar,
+		/obj/item/clothing/mask/cigarette/cigar/cohiba,
+		/obj/item/clothing/mask/cigarette/cigar/havana
+		)
+	price = 60
+
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor (+6 skins)"
 	id = "trooper_armor"

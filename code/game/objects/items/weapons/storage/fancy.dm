@@ -189,17 +189,17 @@
 	icon_state = "tortoise"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift
-	name = "Uplift Smooth"
+	name = "Uplift Smooth Cigarettes"
 	desc = "Your favorite brand, now menthol flavored."
 	icon_state = "uplift"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_robust
-	name = "Robust"
+	name = "Robust Cigarettes"
 	desc = "Smoked by the robust."
 	icon_state = "robust"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_robustgold
-	name = "Robust Gold"
+	name = "Robust Gold Cigarettes"
 	desc = "Smoked by the truly robust."
 	icon_state = "robustg"
 
@@ -209,12 +209,12 @@
 		reagents.add_reagent("gold",1)
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_carp
-	name = "Carp Classic"
+	name = "Carp Classic Cigarettes"
 	desc = "Since 2313."
 	icon_state = "carp"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_syndicate
-	name = "unknown"
+	name = "Unknown Cigarettes"
 	desc = "An obscure brand of cigarettes."
 	icon_state = "syndie"
 
@@ -224,19 +224,18 @@
 		reagents.add_reagent("omnizine",15)
 	name = "cigarette packet"
 
-
-/obj/item/weapon/storage/fancy/cigarettes/cigpack_midori
-	name = "Midori Tabako"
-	desc = "You can't understand the runes, but the packet smells funny."
-	icon_state = "midori"
+/obj/item/weapon/storage/fancy/cigarettes/cigpack_joy
+	name = "Joy Cigarettes"
+	desc = "A box full of joy, also the packet smells funny."
+	icon_state = "joy"
 	spawn_type = /obj/item/clothing/mask/cigarette/rollie
 
-/obj/item/weapon/storage/fancy/cigarettes/cigpack_shadyjims
-	name ="Shady Jim's Super Slims"
-	desc = "Is your weight slowing you down? Having trouble running away from gravitational singularities? Can't stop stuffing your mouth? Smoke Shady Jim's Super Slims and watch all that fat burn away. Guaranteed results!"
-	icon_state = "shadyjim"
+/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron
+	name ="Myron's Patented Cigarettes"
+	desc = "Is your weight slowing you down? Having trouble running away from hungry geckos? Can't stop stuffing your mouth? Smoke Shady Jim's Super Slims and watch all that fat burn away. Guaranteed results!"
+	icon_state = "myron"
 
-/obj/item/weapon/storage/fancy/cigarettes/cigpack_shadyjims/New()
+/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron/New()
 	..()
 	for(var/i = 1 to storage_slots)
 		reagents.add_reagent("lipolicide",4)
@@ -246,7 +245,7 @@
 
 /obj/item/weapon/storage/fancy/rollingpapers
 	name = "rolling paper pack"
-	desc = "A pack of rolling papers."
+	desc = "Instruction: Dry any plant or fruit on a drying rack, make a rollie."
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig_paper_pack"

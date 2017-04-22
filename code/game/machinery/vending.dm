@@ -771,7 +771,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 					/obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift = 3,
 					/obj/item/weapon/storage/fancy/cigarettes/cigpack_robust = 3,
 					/obj/item/weapon/storage/fancy/cigarettes/cigpack_carp = 3,
-					/obj/item/weapon/storage/fancy/cigarettes/cigpack_midori = 3,
+					/obj/item/weapon/storage/fancy/cigarettes/cigpack_joy = 3,
 					/obj/item/weapon/storage/box/matches = 10,
 					/obj/item/weapon/lighter/greyscale = 4,
 					/obj/item/weapon/storage/fancy/rollingpapers = 5)

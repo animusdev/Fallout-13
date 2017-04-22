@@ -1552,8 +1552,8 @@
 	cost = 3000
 	num_contained = 6
 	contains = list(/obj/item/weapon/poster/contraband,
-					/obj/item/weapon/storage/fancy/cigarettes/cigpack_shadyjims,
-					/obj/item/weapon/storage/fancy/cigarettes/cigpack_midori,
+					/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
+					/obj/item/weapon/storage/fancy/cigarettes/cigpack_joy,
 					/obj/item/seeds/ambrosia/deus,
 					/obj/item/clothing/neck/necklace/dope)
 	crate_name = "crate"
