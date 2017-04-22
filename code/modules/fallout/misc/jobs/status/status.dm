@@ -118,46 +118,58 @@ mob/proc/set_status(var/status)
 	id = "recruit"
 	change_faction = 1
 
+/datum/status/prime
+	name = "Prime"
+	id = "prime"
+	change_faction = 1
+	color = "#A6423B"
+
 /datum/status/decanus
 	name = "Decanus"
 	id = "decanus"
 	change_faction = 1
-	can_invite_to = list("recruit")
+	can_invite_to = list("recruit", "prime")
 	color = "#A6423B"
 /datum/status/vexillarius
 	name = "Vexillarius"
 	id = "vexillarius"
 	change_faction = 1
-	can_invite_to = list("recruit", "decanus")
+	can_invite_to = list("recruit", "prime", "decanus")
 //	craft_recipes = list(/datum/table_recipe/legion_vex_armor, /datum/table_recipe/legion_vex_helm)
 	color = "#983C36"
 /datum/status/centurion
 	name = "Centurion"
 	id = "centurion"
 	change_faction = 1
-	can_invite_to = list("recruit", "decanus", "vexillarius")
+	can_invite_to = list("recruit", "prime", "decanus", "vexillarius")
 //	craft_recipes = list(/datum/table_recipe/legion_cent_armor, /datum/table_recipe/legion_cent_helm)
 	color = "#8D3731"
 /datum/status/legate
 	name = "Legate"
 	id = "legate"
 	change_faction = 1
-	can_invite_to = list("recruit", "decanus", "vexillarius", "centurion")
+	can_invite_to = list("recruit", "prime", "decanus", "vexillarius", "centurion")
 //	craft_recipes = list(/datum/table_recipe/legion_legat_armor, /datum/table_recipe/legion_legat_helm, \
 	/datum/table_recipe/legion_legat_gloves, /datum/table_recipe/legion_legat_shoes)
 	color = "#7A302A"
 
-/datum/status/ranger
-	name = "Ranger"
-	id = "ranger"
+/datum/status/vranger
+	name = "Veteran Ranger"
+	id = "vranger"
 	change_faction = 1
 	color = "#020070"
 
-/datum/status/squad_leader
+/datum/status/ncr_general
 	name = "General"
 	id = "ncr_general"
 	change_faction = 1
-	can_invite_to = list("recruit", "ranger", "trooper", "etrooper")
+	can_invite_to = list("recruit", "trooper", "sergeant")
+	color = "#02005C"
+
+/datum/status/ncr_sergeant
+	name = "Sergeant"
+	id = "ncr_sergeant"
+	change_faction = 1
 	color = "#02005C"
 
 /datum/status/trooper
