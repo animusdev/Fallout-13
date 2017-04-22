@@ -34,19 +34,36 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/pipe
-	name = "pipe"
+	name = "lead pipe"
 	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon_state = "pipe"
 	item_state = "pipe"
 	slot_flags = SLOT_BELT
-	force = 14
+	force = 15
 	throw_speed = 3
 	throw_range = 4
-	throwforce = 14
+	throwforce = 10
 	w_class = 3
 	icon = 'icons/fallout/objects/melee.dmi'
 
-/obj/item/weapon/twohanded/pipe/suicide_act(mob/user)
+/obj/item/weapon/pipe/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/tireiron
+	name = "tire iron"
+	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
+	icon_state = "tire"
+	item_state = "tire"
+	slot_flags = SLOT_BELT
+	force = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 3
+	icon = 'icons/fallout/objects/melee.dmi'
+
+/obj/item/weapon/tireiron/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
 	return (BRUTELOSS|FIRELOSS)
 

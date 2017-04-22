@@ -4,7 +4,7 @@
 	var
 		name = "What?"
 		id = "shit"
-		desc = "Something is wrong. Maybe you already have this item pack?"
+		desc = "Something is wrong! Maybe you already have this content pack?"
 		list/items = list()
 		list/sorted_items = list()
 		list/roles = list()
@@ -37,12 +37,12 @@
 /datum/content_pack/starter
 	name = "Starter"
 	id = "starter"
-	desc = "Available to: All roles!<br>Everyone has that, for free!"
+	desc = "Available to: All roles!<br>Everyone has that, for free!<br><i>Note: All roles have the items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
-		/obj/item/clothing/shoes/f13/tan,
-		/obj/item/clothing/shoes/f13/brownie,
 		// Uniforms
+		/obj/item/clothing/under/pants/f13/cloth,
+		/obj/item/clothing/under/pants/f13/caravan,
 		/obj/item/clothing/under/f13/rag,
 		/obj/item/clothing/under/f13/tribal,
 		/obj/item/clothing/under/f13/female/tribal,
@@ -51,13 +51,19 @@
 		/obj/item/clothing/under/f13/female/brahmin,
 		/obj/item/clothing/under/f13/worn,
 		// Suits
-		/obj/item/clothing/suit/f13/vest,
+		/obj/item/clothing/suit/f13/mantle_liz,
 		// Items
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival,
+		/obj/item/weapon/storage/fancy/cigarettes,
+		/obj/item/weapon/storage/fancy/cigarettes/tortoise,
+		/obj/item/weapon/storage/box/matches,
 		/obj/item/device/flashlight/torch,
 		// Weapons
-		/obj/item/weapon/hatchet,
-		/obj/item/weapon/pipe
+		/obj/item/weapon/pipe,
+		/obj/item/weapon/tireiron,
+		/obj/item/weapon/kitchen/rollingpin,
+		/obj/item/weapon/kitchen/knife,
+		/obj/item/weapon/kitchen/knife/butcher
 		)
 	price = -1
 
@@ -89,7 +95,7 @@
 
 /datum/content_pack/raiders_pack
 	name = "Raider's additional armor"
-	id = "raiders_pack"
+	id = "raiderpack"
 	desc = "Pack of raider's armor."
 	items = list(
 		/obj/item/clothing/suit/armor/f13/yankee,

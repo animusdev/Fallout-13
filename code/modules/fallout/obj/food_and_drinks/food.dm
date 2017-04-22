@@ -92,7 +92,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram/large
 	name = "big Cram"
-	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers during the Pre-War times."
+	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers during the pre-War times."
 	icon_state = "cram_large"
 	bonus_reagents = list("radium" = 2, "vitamin" = 10)
 	list_reagents = list("nutriment" = 40)

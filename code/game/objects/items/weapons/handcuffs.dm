@@ -322,7 +322,7 @@
 	breakouttime = 20 // Cyborgs shouldn't have a strong restraint
 
 /obj/item/weapon/restraints/legcuffs/bola
-	name = "bola"
+	name = "makeshift bola"
 	desc = "A restraining device designed to be thrown at the target. Upon connecting with said target, it will wrap around their legs, making it difficult for them to move quickly."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "bola"

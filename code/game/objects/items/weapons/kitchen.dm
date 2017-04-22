@@ -53,7 +53,7 @@
 /obj/item/weapon/kitchen/knife
 	name = "kitchen knife"
 	icon_state = "knife"
-	desc = "A general purpose Chef's Knife made by SpaceCook Incorporated. Guaranteed to stay sharp for years to come."
+	desc = "A general purpose Chef's Knife made by WonderCook Incorporated. Guaranteed to stay sharp for years to come."
 	flags = CONDUCT
 	force = 10
 	w_class = WEIGHT_CLASS_SMALL
@@ -90,7 +90,7 @@
 /obj/item/weapon/kitchen/knife/butcher
 	name = "butcher's cleaver"
 	icon_state = "butch"
-	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown by-products."
+	desc = "A huge thing used for chopping and chopping up meat. This includes wasteland settlers and settler by-products."
 	flags = CONDUCT
 	force = 15
 	throwforce = 10
@@ -114,7 +114,7 @@
 	icon_state = "survivalknife"
 	desc = "A hunting grade survival knife."
 	force = 15
-	throwforce = 15
+	throwforce = 10
 
 /obj/item/weapon/kitchen/knife/combat/bone
 	name = "bone dagger"
@@ -146,7 +146,7 @@
 
 /obj/item/weapon/kitchen/rollingpin
 	name = "rolling pin"
-	desc = "Used to knock out the Bartender."
+	desc = "Used to knock out the cheating husband."
 	icon_state = "rolling_pin"
 	force = 8
 	throwforce = 5

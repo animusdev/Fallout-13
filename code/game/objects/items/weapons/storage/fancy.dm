@@ -111,8 +111,8 @@
 //CIG PACK//
 ////////////
 /obj/item/weapon/storage/fancy/cigarettes
-	name = "Space Cigarettes"
-	desc = "The most popular brand of cigarettes, sponsors of the Space Olympics."
+	name = "Big Boss Cigarettes"
+	desc = "A small box containing pre-War cigarettes.<br>Its valued by merchants for average rarity and high demand.<br>This box is labeled with the name of a brand or company, \"Big Boss\" .<br>An image of a snake is seen on both sides of the box."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig"
 	item_state = "cigpacket"
@@ -183,10 +183,10 @@
 	else
 		to_chat(user, "<span class='notice'>There are no [icon_type]s left in the pack.</span>")
 
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco
-	name = "DromedaryCo"
+/obj/item/weapon/storage/fancy/cigarettes/tortoise
+	name = "Grey Tortoise Cigarettes"
 	desc = "A packet of six imported DromedaryCo cancer sticks. A label on the packaging reads, \"Wouldn't a slow death make a change?\""
-	icon_state = "dromedary"
+	icon_state = "tortoise"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift
 	name = "Uplift Smooth"
@@ -246,7 +246,7 @@
 
 /obj/item/weapon/storage/fancy/rollingpapers
 	name = "rolling paper pack"
-	desc = "A pack of NanoTrasen brand rolling papers."
+	desc = "A pack of rolling papers."
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig_paper_pack"

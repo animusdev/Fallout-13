@@ -16,7 +16,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 ///////////
 /obj/item/weapon/match
 	name = "match"
-	desc = "A simple match stick, used for lighting fine smokables."
+	desc = "A simple match stick, used for starting fires or lighting fine smokables."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "match_unlit"
 	var/lit = FALSE
