@@ -33,8 +33,8 @@
 /datum/crafting_recipe/tribalarmor
 	name = "Tribal Armor"
 	result = /obj/item/clothing/suit/armor/f13/tribal
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 4,
-				/obj/item/crafting/duct_tape = 1,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 3,
+				/obj/item/crafting/duct_tape = 1)
 	tools = /obj/item/weapon/wirecutters
 	time = 120
 	category = CAT_PRIMAL
