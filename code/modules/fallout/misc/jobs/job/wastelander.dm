@@ -40,8 +40,11 @@
 	allowed_packs = list("starter", "cigarettes", "super_ten", "madmax")
 
 	required_items = list(
+	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/merccharm,
-	/obj/item/clothing/suit/armor/f13/supafly
+	/obj/item/clothing/under/f13/female/merccharm,
+	/obj/item/clothing/under/f13/doctor,
+	/obj/item/clothing/under/f13/female/doctor,
 	)
 
 	denied_items = list(
@@ -66,7 +69,7 @@
 
 /datum/job/mercenary
 	title = "Mercenary"
-	desc = "A peaceful ways, are not always the best ways.<br>No sense to waste time for diplomacy, when you can shoot bad guys and earn yourself a fortune."
+	desc = "A peaceful ways, are not always the best ways.<br>Why waste time for diplomacy, when you can shoot bad guys and earn yourself a fortune."
 	flag = MERCENARY
 	department_flag = MEDSCI
 	faction = "none"

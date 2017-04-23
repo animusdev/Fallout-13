@@ -56,6 +56,8 @@
 		/obj/item/clothing/suit/f13/mantle_liz,
 		// Items
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival,
+		/obj/item/weapon/dice/d6,
+		/obj/item/weapon/deck,
 		/obj/item/weapon/storage/fancy/cigarettes,
 		/obj/item/weapon/storage/fancy/cigarettes/tortoise,
 		/obj/item/weapon/storage/box/matches,
@@ -114,14 +116,19 @@
 	price = 60
 
 /datum/content_pack/wardrobe
-	name = "Wasteland fashion"
+	name = "High fashion"
 	id = "wardrobe"
-	desc = "<b>Available to: Neutral and City roles only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection year 2255."
+	desc = "<b>Available to: Neutral and City roles only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !"
 	items = list(
 		/obj/item/clothing/shoes/f13/brownie,
 		// Uniforms
-		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
-		/obj/item/clothing/head/helmet/f13/supaflyhelmet
+		/obj/item/clothing/under/f13/relaxedwear,
+		/obj/item/clothing/under/f13/spring,
+		/obj/item/clothing/under/f13/merchant,
+		/obj/item/clothing/under/f13/trader,
+		/obj/item/clothing/under/f13/caravaneer,
+		/obj/item/clothing/under/f13/lumberjack,
+		/obj/item/clothing/under/f13/machinist
 		)
 	price = 180
 
