@@ -31,9 +31,23 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
+/obj/item/clothing/gloves/f13/ncr
+	name = "soldier gloves"
+	desc = "A large leather gloves commonly worn by NCR servicemen."
+	icon_state = "ncr"
+	item_state = "ncr"
+	item_color = null
+	transfer_prints = TRUE
+	strip_delay = 20
+	put_on_delay = 40
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+
 /obj/item/clothing/gloves/f13/legion
 	name = "leather gloves"
-	desc = "A large leather gloves commonly worn by Caesar's henchmen."
+	desc = "A large leather gloves commonly worn by Caesar's Legion henchmen."
 	icon_state = "legion"
 	item_state = "legion"
 	item_color = null

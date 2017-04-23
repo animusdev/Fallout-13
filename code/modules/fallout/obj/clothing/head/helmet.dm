@@ -3,16 +3,6 @@
 /obj/item/clothing/head/helmet/f13
 	icon = 'icons/fallout/clothing/hats.dmi'
 
-/obj/item/clothing/head/helmet/f13/supaflyhelmet
-	name = "supa-fly raider helmet"
-	desc = "A makeshift raider helmet, made of leather.<br>It heavily smells with chems and sweat."
-	icon_state = "supafly"
-	item_state = "supafly"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	self_weight = 1
-
 /obj/item/clothing/head/helmet/f13/broken
 	name = "broken power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it has ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
@@ -41,7 +31,38 @@
 	flags = HEADCOVERSEYES
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 10
 	self_weight = 1.5
+
+/obj/item/clothing/head/helmet/f13/firefighter
+	name = "firefighter helmet"
+	desc = "A firefighter's helmet worn on top of a fire-retardant covering and broken gas mask.<br>It heavily smells with sweat."
+	icon_state = "firefighter"
+	item_state = "firefighter"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 10
+	strip_delay = 30
+	resistance_flags = FIRE_PROOF
+	self_weight = 1.5
+
+/obj/item/clothing/head/helmet/f13/supaflyhelmet
+	name = "supa-fly raider helmet"
+	desc = "A makeshift raider helmet, made of leather.<br>It heavily smells with chems and sweat."
+	icon_state = "supafly"
+	item_state = "supafly"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 20
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
@@ -51,6 +72,8 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 30
 	self_weight = 1.5
 
 /obj/item/clothing/head/helmet/f13/eyebot
@@ -60,11 +83,11 @@
 	item_state = "eyebot"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, acid = 20)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES||HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
-	self_weight = 1.5
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
@@ -92,7 +115,7 @@
 
 /obj/item/clothing/head/helmet/f13/ranger
 	name = "ranger helmet"
-	desc = "An old military helmet, commonly worn by NCR Rangers."
+	desc = "An old military helmet with a built in nightvision device, commonly worn by NCR Veteran Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 80, acid = 20)
@@ -101,7 +124,7 @@
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
-	self_weight = 0.45
+	self_weight = 1
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
 	glass_colour_type = /datum/client_colour/glass_colour/red
@@ -150,7 +173,7 @@
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	self_weight = 0.5
@@ -172,7 +195,7 @@
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
 	flags = HEADCOVERSEYES
-	flags_inv = HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
 	name = "centurion helmet"
@@ -205,7 +228,7 @@
 	icon_state = "strange"
 	item_state = "helmet"
 	armor = list(melee = 40, bullet = 20, laser = 40, energy = 40, bomb = 20, bio = 100, rad = 50, acid = 100)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES||HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
@@ -217,7 +240,7 @@
 	icon_state = "doom"
 	item_state = "doom"
 	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100)
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 30
 	strip_delay = 10
 	resistance_flags = UNACIDABLE

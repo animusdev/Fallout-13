@@ -42,7 +42,7 @@
 	name = "Automatic Rifle .308"
 	icon_state = "rifle-automatic"
 	item_state = "shotgun"
-	icon = 'icons/fallout/objects/guns/rifle.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/m308
 	can_suppress = 1
@@ -58,7 +58,7 @@
 	name = "Rifle .308"
 	icon_state = "rifle"
 	item_state = "shotgun"
-	icon = 'icons/fallout/objects/guns/rifle.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/m308
 	can_suppress = 1

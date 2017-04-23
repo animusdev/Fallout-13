@@ -31,14 +31,14 @@
 /obj/item/clothing/shoes/f13/khan
 	name = "Great Khan boots"
 	desc = "A pair of leather boots reinforced with metal plates.<br>These are commonly worn by Great Khans raiders."
-	icon_state = "legionmetal"
+	icon_state = "legionmetal" //It's that simple
 	item_state = "legionmetal"
 	self_weight = 0.5
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military
 	name = "military boots"
-	desc = "High speed, no drag combat boots designed for use by US army before the Great War."
+	desc = "High speed, no drag combat boots designed for use by U.S. army before the Great War."
 	icon_state = "military"
 	item_state = "military"
 	permeability_coefficient = 0.01
@@ -63,8 +63,8 @@
 /obj/item/clothing/shoes/f13/military/legionleather
 	name = "leather boots"
 	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
-	icon_state = "military"
-	item_state = "military"
+	icon_state = "legionleather"
+	item_state = "legionleather"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/legionmetal

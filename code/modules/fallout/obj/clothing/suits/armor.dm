@@ -55,6 +55,17 @@
 	strip_delay = 10
 	self_weight = 15
 
+/obj/item/clothing/suit/armor/f13/tribal
+	name = "tribal armor"
+	desc = "A set of armor made of gecko hides.<br>It's pretty good for a makeshift armor."
+	icon_state = "tribal"
+	item_state = "tribal"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 40
+	strip_delay = 40
+
 /obj/item/clothing/suit/armor/f13/supafly
 	name = "supa-fly raider armor"
 	desc = "Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
