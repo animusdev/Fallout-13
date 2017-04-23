@@ -37,7 +37,7 @@
 /datum/content_pack/starter
 	name = "Starter"
 	id = "starter"
-	desc = "<b>Available to: All roles!</b><br>Everyone has these vital items, for free!<br><i>Note: All roles have listed weapons and the items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
+	desc = "<b>Available to: All roles!</b><br>Everyone has these vital items, for free!<br><i>Note: All roles have listed weapons and items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
 		// Hats
@@ -81,7 +81,7 @@
 /datum/content_pack/cigarettes
 	name = "Cigarettes for Lead Developer"
 	id = "cigarettes"
-	desc = "<b>Available to: All roles!</b><br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes.<br>.<br>.<br>.<br><i>Note: World Health Organization discourages you from smoking. Inhaling any kind of smoke is bad for your health!</i>"
+	desc = "<b>Available to: All roles!</b><br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes.<br>...<br><i>Note: World Health Organization discourages you from smoking. Inhaling any kind of smoke is bad for your health!</i>"
 	items = list(
 		/obj/item/weapon/storage/fancy/rollingpapers,
 		/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
@@ -97,7 +97,7 @@
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor"
 	id = "trooper_armor"
-	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor decals:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,
