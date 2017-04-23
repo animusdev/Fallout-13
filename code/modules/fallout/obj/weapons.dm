@@ -22,7 +22,7 @@
 	icon_state = "golf9"
 	item_state = "golf9"
 	slot_flags = SLOT_BELT
-	force = 17
+	force = 15
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
@@ -119,7 +119,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 24
+	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3

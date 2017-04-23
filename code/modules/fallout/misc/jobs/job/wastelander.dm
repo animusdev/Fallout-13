@@ -39,6 +39,24 @@
 
 	allowed_packs = list("starter", "cigarettes", "super_ten", "madmax")
 
+	required_items = list(
+	/obj/item/clothing/under/f13/merccharm,
+	/obj/item/clothing/suit/armor/f13/supafly
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
 /datum/outfit/job/adventurer
 	name = "Adventurer"
 	backpack = null
@@ -68,5 +86,5 @@
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/merccharm
-	shoes = /obj/item/clothing/shoes/f13/combat
+	shoes = /obj/item/clothing/shoes/f13/military
 	suit = /obj/item/clothing/suit/f13/veteran

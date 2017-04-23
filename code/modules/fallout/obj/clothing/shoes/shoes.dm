@@ -28,11 +28,19 @@
 	icon_state = "cowboy"
 	item_state = "cowboy"
 
-/obj/item/clothing/shoes/f13/combat
+/obj/item/clothing/shoes/f13/khan
+	name = "Great Khan boots"
+	desc = "A pair of leather boots reinforced with metal plates.<br>These are commonly worn by Great Khans raiders."
+	icon_state = "legionmetal"
+	item_state = "legionmetal"
+	self_weight = 0.5
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+
+/obj/item/clothing/shoes/f13/military
 	name = "military boots"
 	desc = "High speed, no drag combat boots designed for use by US army before the Great War."
-	icon_state = "legionleather"
-	item_state = "legionleather"
+	icon_state = "military"
+	item_state = "military"
 	permeability_coefficient = 0.01
 	flags = NOSLIP
 	self_weight = 0.8
@@ -42,7 +50,7 @@
 	self_weight = 0.5
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
-/obj/item/clothing/shoes/f13/combat/diesel
+/obj/item/clothing/shoes/f13/military/diesel
 	name = "diesel boots"
 	desc = "Fancy female knee high platform boots with shiny steel clasps."
 	icon_state = "diesel"
@@ -52,14 +60,14 @@
 	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
-/obj/item/clothing/shoes/f13/combat/legionleather
+/obj/item/clothing/shoes/f13/military/legionleather
 	name = "leather boots"
 	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
-	icon_state = "legionleather"
-	item_state = "legionleather"
+	icon_state = "military"
+	item_state = "military"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
-/obj/item/clothing/shoes/f13/combat/legionmetal
+/obj/item/clothing/shoes/f13/military/legionmetal
 	name = "metal boots"
 	desc = "A pair of metal boots commonly worn by the Caesar's Legion veterans."
 	icon_state = "legionmetal"
@@ -67,7 +75,7 @@
 	self_weight = 1
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
-/obj/item/clothing/shoes/f13/combat/legionlegate
+/obj/item/clothing/shoes/f13/military/legionlegate
 	name = "legate boots"
 	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
 	icon_state = "legionlegate"

@@ -20,8 +20,13 @@ Raider
 	allowed_packs = list("starter", "super_ten", "raiders_pack")
 
 	required_items = list(
-	/obj/item/clothing/under/f13/merccharm,
-	/obj/item/clothing/suit/armor/f13/supafly
+	/obj/item/weapon/golf9,
+	/obj/item/weapon/restraints/legcuffs/bola/raider,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin
 	)
 
 /datum/outfit/job/raider

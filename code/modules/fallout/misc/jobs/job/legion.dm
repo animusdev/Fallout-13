@@ -27,7 +27,7 @@
 /datum/outfit/job/leglegate
 	name = "Legate"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/combat/legionlegate
+	shoes = /obj/item/clothing/shoes/f13/military/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
 	suit = /obj/item/clothing/suit/armor/f13/leglegate
 	head = /obj/item/clothing/head/helmet/f13/leglegate
@@ -60,7 +60,7 @@
 /datum/outfit/job/legcenturion
 	name = "Centurion"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/combat/legionmetal
+	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
 	head = /obj/item/clothing/head/helmet/f13/legcenturion
@@ -93,7 +93,7 @@
 /datum/outfit/job/legvex
 	name = "Vexillarius"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/combat/legionmetal
+	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
 	head = /obj/item/clothing/head/helmet/f13/legvexil
@@ -126,7 +126,7 @@
 /datum/outfit/job/legdecan
 	name = "Decanus"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/combat/legionleather
+	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legdecan
@@ -160,7 +160,7 @@
 /datum/outfit/job/prime
 	name = "Prime"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/combat/legionleather
+	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/legion
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legrecruit

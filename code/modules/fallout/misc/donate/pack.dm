@@ -65,7 +65,8 @@
 		/obj/item/weapon/tireiron,
 		/obj/item/weapon/kitchen/rollingpin,
 		/obj/item/weapon/kitchen/knife,
-		/obj/item/weapon/kitchen/knife/butcher
+		/obj/item/weapon/kitchen/knife/butcher,
+		/obj/item/weapon/restraints/legcuffs/bola
 		)
 	price = -1
 
@@ -112,8 +113,20 @@
 		)
 	price = 60
 
+/datum/content_pack/wardrobe
+	name = "Wasteland fashion"
+	id = "wardrobe"
+	desc = "<b>Available to: Neutral and City roles only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection year 2255."
+	items = list(
+		/obj/item/clothing/shoes/f13/brownie,
+		// Uniforms
+		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
+		/obj/item/clothing/head/helmet/f13/supaflyhelmet
+		)
+	price = 180
+
 /datum/content_pack/bard
-	name = "Wandering musician"
+	name = "Musical instruments"
 	id = "bard"
 	desc = "<b>Available to: All roles!</b><br>Russian General says, :<br>\"I do not like rock-and-roll music. This is too loud! I like folk music, soft, nice music, huh? Polka, waltz, anything!\""
 	items = list(
@@ -123,13 +136,15 @@
 	price = 180
 
 /datum/content_pack/khan
-	name = "Great Khan expansion"
+	name = "Great Khan"
 	id = "khan"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>The glory of the Great Khans will be restored!"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>The glory of the Great Khans will be restored!<br><i>Note: Great Khan jacket can be zipped up as well.</i>"
 	items = list(
+		/obj/item/clothing/shoes/f13/khan,
 		/obj/item/clothing/under/pants/f13/khan,
 		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
-		/obj/item/clothing/head/helmet/f13/supaflyhelmet
+		/obj/item/weapon/twohanded/tribal_spear,
+		/obj/item/weapon/restraints/legcuffs/bola/tribal
 		)
 	price = 180
 
