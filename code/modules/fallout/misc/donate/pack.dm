@@ -154,7 +154,7 @@
 		/obj/item/clothing/head/soft/black,
 		/obj/item/clothing/under/f13/batter,
 		/obj/item/weapon/twohanded/baseball,
-		/obj/item/clothing/gloves/f13/basebal,
+		/obj/item/clothing/gloves/f13/baseball,
 		/obj/item/clothing/shoes/laceup
 		)
 	price = 300
