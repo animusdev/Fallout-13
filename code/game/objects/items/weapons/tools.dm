@@ -218,7 +218,7 @@
  */
 /obj/item/weapon/wirecutters
 	name = "wirecutters"
-	desc = "This cuts wires."
+	desc = "This cuts wires and cloth, just like scissors."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = null
 	flags = CONDUCT
@@ -608,19 +608,19 @@
 	materials = list(MAT_METAL=70, MAT_GLASS=120)
 	origin_tech = "engineering=3;plasmatech=2"
 
-/obj/item/weapon/weldingtool/experimental
-	name = "experimental welding tool"
-	desc = "An experimental welder capable of self-fuel generation and less harmful to the eyes."
-	icon_state = "exwelder"
-	item_state = "exwelder"
+/obj/item/weapon/weldingtool/experimental //Moded for Fallout 13 blowtorch
+	name = "blowtorch"
+	desc = "A fuel-burning tool used for applying flame and heat to various applications, usually metalworking."
+	icon_state = "blowtorch"
+	item_state = "blowtorch"
 	max_fuel = 40
 	materials = list(MAT_METAL=70, MAT_GLASS=120)
 	origin_tech = "materials=4;engineering=4;bluespace=3;plasmatech=4"
 	var/last_gen = 0
 	change_icons = 0
-	can_off_process = 1
-	light_intensity = 1
-	toolspeed = 0.5
+	can_off_process = 0
+	light_intensity = 2
+	toolspeed = 1
 	var/nextrefueltick = 0
 
 /obj/item/weapon/weldingtool/experimental/brass
@@ -649,7 +649,7 @@
 	usesound = 'sound/items/Crowbar.ogg'
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	force = 5
+	force = 10
 	throwforce = 7
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=50)
@@ -665,7 +665,7 @@
 
 /obj/item/weapon/crowbar/red
 	icon_state = "crowbar_red"
-	force = 8
+	force = 15
 
 /obj/item/weapon/crowbar/brass
 	name = "brass crowbar"
@@ -685,7 +685,7 @@
 /obj/item/weapon/crowbar/large
 	name = "crowbar"
 	desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big."
-	force = 12
+	force = 15
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 3
 	throw_range = 3
@@ -709,7 +709,7 @@
 	materials = list(MAT_METAL=150,MAT_SILVER=50,MAT_TITANIUM=25)
 	origin_tech = "materials=2;engineering=2"
 	usesound = 'sound/items/jaws_pry.ogg'
-	force = 15
+	force = 20
 	toolspeed = 0.25
 
 /obj/item/weapon/crowbar/power/suicide_act(mob/user)

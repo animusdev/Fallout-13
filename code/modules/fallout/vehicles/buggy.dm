@@ -28,6 +28,11 @@
 	..()
 	icon_state = pick("key-buggy-r","key-buggy-y","key-buggy-g","key-buggy-b")
 
+/obj/item/key/buggy/wheel
+	name = "steering wheel"
+	desc = "A vital part of an automobile, that was made of metal and later decorated with a freaky skull.<br>Oh, what a day… What a lovely day!"
+	icon_state = "wheel"
+
 /datum/riding/motorcycle/buggy
 	keytype = /obj/item/key/buggy
 	vehicle_move_delay = 0.8

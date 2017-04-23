@@ -29,7 +29,7 @@
 	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/kit
-	name = "armor kit"
+	name = "makeshift armor kit"
 	desc = "A several armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
 	icon_state = "armorkit"
 	item_state = "armorkit"
@@ -39,9 +39,16 @@
 	strip_delay = 30
 	self_weight = 5
 
-/obj/item/clothing/suit/armor/f13/kit/punk
+/obj/item/clothing/suit/armor/f13/punk
+	name = "armor kit"
+	desc = "A several armor parts you can wear over the clothing for moderate basic protection from the dangers of wasteland.<br>Do you feel lucky now? Well, do ya, punk?"
 	icon_state = "punkit" //Punk it
 	item_state = "punkit" //Pun kit
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 20, rad = 20, fire = 50, acid = 50)
+	put_on_delay = 30
+	strip_delay = 30
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"

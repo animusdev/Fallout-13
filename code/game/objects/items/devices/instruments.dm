@@ -82,7 +82,7 @@
 	icon = 'icons/obj/musician.dmi'
 	icon_state = "eguitar"
 	item_state = "eguitar"
-	force = 12
+	force = 15
 	attack_verb = list("played metal on", "shredded", "crashed", "smashed")
 	hitsound = 'sound/weapons/stringsmash.ogg'
 	instrumentId = "eguitar"

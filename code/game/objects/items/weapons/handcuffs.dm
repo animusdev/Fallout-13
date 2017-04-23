@@ -329,6 +329,7 @@
 	breakouttime = 30//easy to apply, easy to break out of
 	gender = NEUTER
 	origin_tech = "engineering=3;combat=1"
+	throwforce = 5
 	var/weaken = 0
 
 /obj/item/weapon/restraints/legcuffs/bola/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback)
@@ -360,6 +361,7 @@
 	desc = "A strong bola, made by elderly tribal craftsman. It looks heavy, enough so that it could trip somebody."
 	icon_state = "bola_t"
 	breakouttime = 100 //Way harder to break out of
+	throwforce = 10
 	weaken = 1
 
 /obj/item/weapon/restraints/legcuffs/bola/energy //For Security

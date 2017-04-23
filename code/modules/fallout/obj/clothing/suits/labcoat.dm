@@ -20,7 +20,7 @@
 
 /obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 	name = "wanderer jacket"
-	desc = "A zipped-up hoodie made of tanned leather"
+	desc = "A zipped-up hoodie made of tanned leather."
 	icon_state = "wanderer"
 	item_state = "owl"
 	body_parts_covered = CHEST
