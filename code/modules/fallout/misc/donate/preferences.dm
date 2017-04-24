@@ -37,7 +37,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			if(i > parent.allowed_factions.len)
 				break
 			var/datum/f13_faction/faction = parent.allowed_factions[i]
-			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[faction.full_name]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
+			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
 	if(!factions_data)
 		factions_data = "<center>No available factions</center>"
 
@@ -68,7 +68,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 
 					jobs_data += "<a class=\"l70 [job_class][selected_job == j ? " linkOn" : ""] tooltip\" data-tooltip=\"[RoleTooltip(j.title, j.department_head, j.desc, priority)]\" href='?_src_=prefs;preference=job_equip;task=input;job_key=[j.flag];level=[prefUpperLevel];rank=[j.title];department_key=[j.department_flag];'>[j.title]</a>"
 				else
-					jobs_data += "<a class=\"170 unavailable_job\">[j.title]</a>"
+					jobs_data += "<a class=\"l70 unavailable_job\">[j.title]</a>"
 	if(!jobs_data)
 		jobs_data = "No available roles"
 	CHECK_TICK
@@ -149,7 +149,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	"r_name" = "[be_random_name ? "Yes" : "No"]",
 	"name" = "[real_name]",
 
-	"gender" = "[gender == MALE ? "Male" : "Female"]",
+	"gender" = "[gender == MALE ? "&#9794;Male" : "&#9792;Female"]",
 	"age" = "[age]",
 	"r_body" = "[be_random_body ? "Yes" : "No"]",
 	"species" = "[pref_species ? pref_species.name : "Human"]",
@@ -367,7 +367,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<div class="clearBoth g" ></div>
 				<hr><center>
 				<a href='?_src_=prefs;preference=load'>Undo</a>
-				<a href='?_src_=prefs;preference=save'>Save Setup</a>
+				<a href='?_src_=prefs;preference=save'>&#128190; Save Setup</a>
 				<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>
 				</center>"}
 	CHECK_TICK
@@ -377,10 +377,10 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	return 1
 
 /datum/preferences/proc/ItemTooltip(var/name, var/desc)
-	return "<b>[html_encode(name)]</b><br><i>[html_encode(desc)]</i>"
+	return "<b>[quoter(name)]</b><br><i>[quoter(desc)]</i>"
 
 /datum/preferences/proc/RoleTooltip(name, list/heads,desc, priority)
-	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinates to: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[desc]</i>"
+	return "<b>[name]</b><br>[istype(heads) && heads.len ? "subordinates to: [jointext(heads, ", ")]<br>" : ""]priority: [priority]<br><i>[quoter(desc)]</i>"
 
 //Just changing list of allowed item paths to item names.
 /datum/preferences/proc/GetItemNamesList(itype, datum/job/job)

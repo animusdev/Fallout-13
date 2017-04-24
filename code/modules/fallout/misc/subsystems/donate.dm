@@ -21,6 +21,7 @@ var/datum/subsystem/content/SScontent
 /datum/subsystem/content/Initialize(timeofday)
 	system_state = check_connection()
 	load_content_packs()
+	update_all_data()
 
 /datum/subsystem/content/fire(resumed = 0)
 	system_state = check_connection()

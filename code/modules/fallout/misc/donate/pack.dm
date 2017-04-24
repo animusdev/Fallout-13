@@ -73,7 +73,7 @@
 		/obj/item/weapon/screwdriver,
 		/obj/item/weapon/wirecutters,
 		/obj/item/weapon/wrench,
-		/obj/item/weapon/weldingtool/experimental
+		/obj/item/weapon/weldingtool/experimental,
 		/obj/item/weapon/restraints/legcuffs/bola
 		)
 	price = -1

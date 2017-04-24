@@ -633,3 +633,6 @@ proc/FormatText(text, list/data)
 			text = copytext(text, 1, index) + data[element] + copytext(text, index+element_lenght)
 			index = findtext(text, "%[element]%", index)
 	return text
+
+/proc/quoter(text)
+	return replacetext(text, "\"", "&quot;")
