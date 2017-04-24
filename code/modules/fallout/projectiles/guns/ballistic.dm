@@ -2,7 +2,7 @@
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	name = "10-mm pistol"
-	desc = "Self-loading pistol Colt 6520 10mm. After each shot, the weapon recharges long until the end of the store."
+	desc = "Self-loading pistol N99 is known for its ability to survive in the harshest of conditions.<br>This great weapon is able to be reliably restored to working condition after an extended exposure to hard elements without maintenance."
 	icon_state = "n99"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	w_class = 2
@@ -23,7 +23,7 @@
 /obj/item/weapon/gun/ballistic/revolver/magnum
 	name = "Magnum"
 	icon_state = "44magnum"
-	desc = "The Smith & Wesson Model 29 is a powerful, six-shot, double-action revolver manufactured by the U.S. company Smith & Wesson since 1955. Centuries later, copies of it can still be found in the wastes."
+	desc = "The Smith & Wesson Model 29 is a powerful, six-shot, double-action revolver manufactured by the U.S. company Smith & Wesson since 1955.<br>Centuries later, copies of it can still be found in the wastes."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/m44
@@ -56,6 +56,7 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
+	desc = "A pre-War bolt-action hunting rifle."
 	icon_state = "rifle"
 	item_state = "shotgun"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -69,7 +70,6 @@
 	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
 	recoil = 2
 
-
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "rifle-scope"
 	item_state = "shotgun"
@@ -81,6 +81,7 @@
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	name = "Assault Rifle 5.56mm"
+	desc = "Assault Rifle also known as Service Rifle by NCR troops - is a semi-automatic medium power rifle, this rifle is chambered in the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
 	icon_state = "assault-rifle"
 	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -112,7 +113,7 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/pipe
 	name = "pipe gun"
-	desc = "Can hold one shell."
+	desc = "Makeshift shotgun that can hold a single shell."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "pipe-gun"
 	item_state = "shotgun"
@@ -124,7 +125,7 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/trail
 	name = "trail carbine"
-	desc = "The trail carbine features a good ammunition capacity, great balance of damage and damage-per-second (DPS), brisk rate of fire, and high accuracy."
+	desc = "The trail carbine features a good ammunition capacity, brisk rate of fire, and high accuracy."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "trail-carbine"
 	item_state = "shotgun"
@@ -138,7 +139,7 @@
 
 /obj/item/weapon/gun/ballistic/automatic/bozar
 	name = "\improper Bozar"
-	desc = "The ultimate refinement of the sniper's art. Although, somewhat finicky and prone to jamming if not kept scrupulously clean, the big weapon's accuracy more than makes up for its extra maintenance requirements."
+	desc = "The ultimate refinement of the sniper's art.<br>Although, somewhat finicky and prone to jamming if not kept scrupulously clean, the big weapon's accuracy more than makes up for its extra maintenance requirements."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "bozar"
 	item_state = "arg" //Looks like bozar

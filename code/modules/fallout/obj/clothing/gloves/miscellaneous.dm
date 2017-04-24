@@ -46,7 +46,7 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/ncr
-	name = "soldier gloves"
+	name = "trooper gloves"
 	desc = "A large leather gloves commonly worn by NCR servicemen."
 	icon_state = "ncr"
 	item_state = "ncr"

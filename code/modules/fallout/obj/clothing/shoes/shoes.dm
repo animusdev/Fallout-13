@@ -70,6 +70,13 @@
 	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
+/obj/item/clothing/shoes/f13/military/ncr
+	name = "trooper boots"
+	desc = "A pair of tan leather boots with footcloths commonly worn by NCR servicemen."
+	icon_state = "ncr"
+	item_state = "ncr"
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+
 /obj/item/clothing/shoes/f13/military/legionleather
 	name = "leather boots"
 	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
