@@ -76,6 +76,11 @@ a.white:hover
 	color: #ffffff; 
 	background: #999999;
 	border-color: #666666;
+	pointer-events: none;
+}
+
+.have {
+	border-color: #8f8a21 !important;
 }
 
 a.icon, .linkOn.icon, .linkOff.icon
@@ -461,7 +466,6 @@ div {
 	position: absolute;
 	padding: 5px;
 	background: #022210;
-	height: 100%;
 	width: 20%;
 	left: 10px;
 	top: 40px;
@@ -472,7 +476,6 @@ div {
 	position: absolute;
 	padding: 5px;
 	background-color: #000F02;
-	height: 100%;
 	width: 70%;
 	left: 25%;
 	top: 40px;
