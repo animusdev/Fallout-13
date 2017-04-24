@@ -244,7 +244,7 @@
 	put_on_delay = 30
 	strip_delay = 10
 	resistance_flags = UNACIDABLE
-	self_weight = 1
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/magneto
 	name = "magneto's helmet"
@@ -299,7 +299,7 @@
 	put_on_delay = 50
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
-	self_weight = 5
+	self_weight = 3
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced
 	name = "advanced Mk II power helmet"
@@ -316,7 +316,7 @@
 	put_on_delay = 50
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
-	self_weight = 5
+	self_weight = 4
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced Mk I power helmet"
@@ -333,21 +333,7 @@
 	put_on_delay = 50
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
-	self_weight = 5
-
-/obj/item/clothing/head/helmet/power_armor/ncr
-	name = "salvaged power helmet"
-	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers.<br>It's damn hot inside of it."
-	icon_state = "t45bhelmet"
-	item_state = "t45bhelmet"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 80, rad = 40)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	put_on_delay = 50
-	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	self_weight = 5
+	self_weight = 4
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
@@ -359,6 +345,20 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
+
+/obj/item/clothing/head/helmet/power_armor/ncr
+	name = "salvaged power helmet"
+	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers.<br>It's damn hot inside of it."
+	icon_state = "t45bhelmet"
+	item_state = "t45bhelmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 80, rad = 40)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 50
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE

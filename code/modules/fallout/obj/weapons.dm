@@ -150,11 +150,55 @@
 	obj_integrity = 200
 	max_integrity = 200
 
+/obj/item/weapon/hammer
+	name = "hammer"
+	desc = "A simple construction tool, that can also be used to bring the revenge upon those who kidnapped you and kept you in the basement for several years." //Old Boy (2003)
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "hammer"
+	slot_flags = SLOT_BELT
+	force = 15
+	throwforce = 10
+	w_class = 3
+	obj_integrity = 200
+	max_integrity = 200
+
+/obj/item/weapon/twohanded/sledgehammer
+	name = "sledgehammer"
+	desc = "Strong but heavy weapon of destruction, that works well only if you know how to use it properly."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "sledgehammer"
+	flags = CONDUCT
+	slot_flags = SLOT_BACK
+	force = 5
+	force_unwielded = 5
+	force_wielded = 20
+	throwforce = 25
+	throw_range = 7
+	w_class = 4
+	var/charged = 0
+	origin_tech = "combat=3;powerstorage=3"
+
+/obj/item/weapon/twohanded/largehammer
+	name = "large sledgehammer"
+	desc = "Large, strong, heavy weapon of DESTRUCTION."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "largesledgehammer0"
+	flags = CONDUCT
+	slot_flags = SLOT_BACK
+	force = 5
+	force_unwielded = 10
+	force_wielded = 25
+	throwforce = 25
+	throw_range = 7
+	w_class = 4
+	var/charged = 0
+	origin_tech = "combat=4;powerstorage=4"
+
 /obj/item/weapon/twohanded/superhammer
 	name = "super sledge"
 	desc = "Also called \"Superkuvalda\" - BoS produced these using the most modern weapons technology.<br>It's equipped with storage of kinetic energy to enhance the impact."
-	icon_state = "supersledgehammer0"
 	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "supersledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
 	force = 5
@@ -180,7 +224,6 @@
 		charged = 1
 	return
 
-
 /obj/item/weapon/twohanded/superhammer/attack(mob/M, mob/user)
 	..()
 	spawn(0)
@@ -196,19 +239,3 @@
 		var/mob/living/L = target
 		L.Stun(3)
 		shock(L)
-
-/obj/item/weapon/twohanded/sledgehammer
-	name = "sledgehammer"
-	desc = "Strong, heavy weapon of DESTRUCTION."
-	icon_state = "largesledgehammer0"
-	icon = 'icons/fallout/objects/melee.dmi'
-	flags = CONDUCT
-	slot_flags = SLOT_BACK
-	force = 5
-	force_unwielded = 10
-	force_wielded = 25
-	throwforce = 25
-	throw_range = 7
-	w_class = 4
-	var/charged = 1
-	origin_tech = "combat=5;powerstorage=5"

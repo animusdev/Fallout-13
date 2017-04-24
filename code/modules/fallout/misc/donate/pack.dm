@@ -69,6 +69,7 @@
 		/obj/item/weapon/kitchen/knife,
 		/obj/item/weapon/kitchen/knife/butcher,
 		/obj/item/weapon/scalpel,
+		/obj/item/weapon/hammer,
 		/obj/item/weapon/crowbar,
 		/obj/item/weapon/screwdriver,
 		/obj/item/weapon/wirecutters,
@@ -91,20 +92,6 @@
 		/obj/item/clothing/mask/cigarette/cigar,
 		/obj/item/clothing/mask/cigarette/cigar/cohiba,
 		/obj/item/clothing/mask/cigarette/cigar/havana
-		)
-	price = 60
-
-/datum/content_pack/trooper_armor
-	name = "Batallion themed NCR armor"
-	id = "trooper_armor"
-	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
-	items = list(
-		/obj/item/clothing/suit/armor/f13/ncr/patriot,
-		/obj/item/clothing/suit/armor/f13/ncr/commie,
-		/obj/item/clothing/suit/armor/f13/ncr/preacher,
-		/obj/item/clothing/suit/armor/f13/ncr/lover,
-		/obj/item/clothing/suit/armor/f13/ncr/stalker,
-		/obj/item/clothing/suit/armor/f13/ncr/punisher
 		)
 	price = 60
 
@@ -150,10 +137,37 @@
 		)
 	price = 180
 
+/datum/content_pack/trooper_armor
+	name = "Batallion themed NCR armor"
+	id = "trooper_armor"
+	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	items = list(
+		/obj/item/clothing/suit/armor/f13/ncr/patriot,
+		/obj/item/clothing/suit/armor/f13/ncr/commie,
+		/obj/item/clothing/suit/armor/f13/ncr/preacher,
+		/obj/item/clothing/suit/armor/f13/ncr/lover,
+		/obj/item/clothing/suit/armor/f13/ncr/stalker,
+		/obj/item/clothing/suit/armor/f13/ncr/punisher
+		)
+	price = 60
+
+/datum/content_pack/heavy_trooper
+	name = "NCR Heavy Trooper"
+	id = "heavy_trooper"
+	desc = "<b>Available to: NCR Trooper and NCR Sergeant roles only!</b><br>Become the NCR Heavy Trooper with a set of NCR salvaged power armor and a big gun!"
+	items = list(
+		/obj/item/clothing/head/helmet/power_armor/ncr,
+		/obj/item/clothing/suit/armor/f13/power_armor/ncr,
+		/obj/item/weapon/twohanded/largehammer,
+		/obj/item/weapon/gun/ballistic/automatic/rifle,
+		/obj/item/ammo_box/magazine/m308,
+		)
+	price = 180
+
 /datum/content_pack/khan
 	name = "Great Khan"
 	id = "khan"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>The glory of the Great Khans will be restored with this themed outfit set!<br>Or you can use this tribal spear to effectively defend yourself against a wildlife, at the start of the game.<i>Note: Great Khan jacket can be zipped up as well.</i>"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>The glory of the Great Khans will be restored with this themed outfit set!<br>Or you can use this tribal spear to effectively defend yourself against a wildlife, at the start of the game.<br><i>Note: Great Khan jacket can be zipped up as well.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/khan,
 		/obj/item/clothing/under/pants/f13/khan,
@@ -179,7 +193,7 @@
 /datum/content_pack/punk
 	name = "Punk"
 	id = "punk"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>If the game doesn't feel metal enough for you, this set of items will fix it.<i>Note: Punk lives!</i><br>"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>If the game doesn't feel metal enough for you, this set of items may fix it.<br><i>Note: Punk lives!</i><br>"
 	items = list(
 		/obj/item/clothing/shoes/f13/military/diesel,
 		/obj/item/clothing/shoes/f13/military/female/diesel,
@@ -192,7 +206,7 @@
 /datum/content_pack/off
 	name = "OFF"
 	id = "off"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from OFF game.<i>Note: Purification in progress...</i><br>"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from OFF game.<br><i>Note: Purification in progress...</i><br>"
 	items = list(
 		/obj/item/clothing/head/soft/black,
 		/obj/item/clothing/under/f13/batter,
@@ -205,7 +219,7 @@
 /datum/content_pack/madmax
 	name = "Mad Max"
 	id = "madmax"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from Mad Max movie franchise.<i>Note: Steering wheel is used just like a car key.<br>The content pack may be expanded in future with new items you will get for free if you already had this pack.</i>"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from an entire Mad Max movie franchise.<br><i>Note: Steering wheel is used just like a car key.<br>The content pack may be expanded in future with new items you will get for free if you already had this pack.</i>"
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
 		/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
@@ -214,3 +228,17 @@
 		/obj/item/key/buggy/wheel
 		)
 	price = 600
+
+/datum/content_pack/doom
+	name = "Doom"
+	id = "doom"
+	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from Doom game.<br><i>Note: Union Aerospace Corporation welcomes you aboard a shuttle leaving Earth on the way to Mars. Please fasten your seatbelts and have a safe flight!</i>"
+	items = list(
+		/obj/item/clothing/head/helmet/f13/doom,
+		/obj/item/clothing/suit/armor/f13/doom,
+		/obj/item/clothing/under/pants/f13/doom,
+		/obj/item/clothing/gloves/f13/doom,
+		/obj/item/clothing/shoes/f13/doom,
+		/obj/item/weapon/twohanded/required/chainsaw
+		)
+	price = 1000

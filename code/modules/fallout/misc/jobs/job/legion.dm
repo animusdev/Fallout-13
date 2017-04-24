@@ -61,7 +61,7 @@
 	name = "Centurion"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
-	gloves = /obj/item/clothing/gloves/f13/legion
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
 	head = /obj/item/clothing/head/helmet/f13/legcenturion
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
@@ -94,7 +94,7 @@
 	name = "Vexillarius"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
-	gloves = /obj/item/clothing/gloves/f13/legion
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
 	head = /obj/item/clothing/head/helmet/f13/legvexil
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
@@ -127,7 +127,7 @@
 	name = "Decanus"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
-	gloves = /obj/item/clothing/gloves/f13/legion
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legdecan
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
@@ -161,7 +161,7 @@
 	name = "Prime"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
-	gloves = /obj/item/clothing/gloves/f13/legion
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion

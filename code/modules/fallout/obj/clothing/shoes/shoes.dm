@@ -16,9 +16,9 @@
 	icon_state = "tan"
 	item_state = "tan"
 
-/obj/item/clothing/shoes/f13/brownie
+/obj/item/clothing/shoes/f13/brownie //Make a craft recipe, and delete this comment.
 	name = "brown shoes"
-	desc = "A pair of brown leather shoes."
+	desc = "A pair of brown leather shoes made of wasteland animals hides."
 	icon_state = "brownie"
 	item_state = "brownie"
 
