@@ -68,7 +68,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 
 					jobs_data += "<a class=\"l70 [job_class][selected_job == j ? " linkOn" : ""] tooltip\" data-tooltip=\"[RoleTooltip(j.title, j.department_head, j.desc, priority)]\" href='?_src_=prefs;preference=job_equip;task=input;job_key=[j.flag];level=[prefUpperLevel];rank=[j.title];department_key=[j.department_flag];'>[j.title]</a>"
 				else
-					jobs_data += "<a class=\"170 unavailable_job\">[j.title]</a>"
+					jobs_data += "<a class=\"l70 unavailable_job\">[j.title]</a>"
 	if(!jobs_data)
 		jobs_data = "No available roles"
 	CHECK_TICK
@@ -149,7 +149,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	"r_name" = "[be_random_name ? "Yes" : "No"]",
 	"name" = "[real_name]",
 
-	"gender" = "[gender == MALE ? "Male" : "Female"]",
+	"gender" = "[gender == MALE ? "&#9794;Male" : "&#9792;Female"]",
 	"age" = "[age]",
 	"r_body" = "[be_random_body ? "Yes" : "No"]",
 	"species" = "[pref_species ? pref_species.name : "Human"]",
