@@ -73,6 +73,17 @@
 	put_on_delay = 40
 	strip_delay = 40
 
+/obj/item/clothing/suit/armor/f13/slam
+	name = "slammer raider armor"
+	desc = "A crude armor that appears to employ a tire of some kind as the shoulder pad, around the waist appears to be a mattress or quilt for a bed.<br>Come on and slam and you are turned to the jam!"
+	icon_state = "slam"
+	item_state = "slam"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 20
+	strip_delay = 40
+
 /obj/item/clothing/suit/armor/f13/supafly
 	name = "supa-fly raider armor"
 	desc = "Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
