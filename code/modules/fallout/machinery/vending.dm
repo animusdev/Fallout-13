@@ -10,6 +10,8 @@
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 4)
 	refill_canister = /obj/item/weapon/vending_refill/nukacolavend
 	self_weight = 150
+	brightness_on = 2
+	light_color = LIGHT_COLOR_RED
 
 /obj/machinery/vending/nukacolavend/New()
 	desc = pick("You can barely read the engravement on the side of a machine:<br>\"Warning: If you tamper with this unit you will have to answer to the Nuka-Cola Corporation.\"","The machine makes you nostalgic for the best days of your childhood.<br>What if there are still some bottles left? Or maybe not.","If there is anything left from humanity after all the decades of rage and stagnation, that sure is Nuka-Cola.")

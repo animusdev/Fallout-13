@@ -123,6 +123,7 @@ Class Procs:
 	var/interact_open = 0 // Can the machine be interacted with when in maint/when the panel is open.
 	var/interact_offline = 0 // Can the machine be interacted with while de-powered.
 	var/speed_process = 0 // Process as fast as possible?
+	var/brightness_on = 0
 
 /obj/machinery/New()
 	if (!armor)
