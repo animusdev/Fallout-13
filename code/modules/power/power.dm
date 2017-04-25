@@ -85,9 +85,10 @@
 										// by default, check equipment channel & set flag
 										// can override if needed
 	if(powered(power_channel))
+		set_light(brightness_on)
 		stat &= ~NOPOWER
 	else
-
+		set_light(0)
 		stat |= NOPOWER
 	return
 

@@ -13,7 +13,7 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 40, acid = 20)
 	var/obj/item/weapon/circuitboard/computer/circuit = null // if circuit==null, computer can't disassembly
 	var/processing = 0
-	var/brightness_on = 2
+	brightness_on = 2
 	var/icon_keyboard = "generic_key"
 	var/icon_screen = "generic"
 	var/clockwork = FALSE
@@ -73,10 +73,6 @@
 
 /obj/machinery/computer/power_change()
 	..()
-	if(stat & NOPOWER)
-		set_light(0)
-	else
-		set_light(brightness_on)
 	update_icon()
 	return
 

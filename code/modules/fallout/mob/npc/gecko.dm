@@ -18,6 +18,8 @@
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/gecko_charge1.ogg','sound/f13npc/gecko_charge2.ogg','sound/f13npc/gecko_charge3.ogg')
 
+	death_sound = 'sound/f13npc/gecko_death.ogg'
+
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/gecko_alert.ogg'
 
