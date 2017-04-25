@@ -27,6 +27,8 @@
 	sound_speak = list('sound/f13npc/cazador_charge1.ogg','sound/f13npc/cazador_charge2.ogg','sound/f13npc/cazador_charge3.ogg')
 	sound_speak_chance = 5
 
+	death_sound = 'sound/f13npc/cazador_death.ogg'
+
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/cazador_alert.ogg'
 

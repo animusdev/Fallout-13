@@ -23,6 +23,8 @@
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/molerat_alert.ogg'
 
+	death_sound = 'sound/f13npc/molerat_death.ogg'
+
 	environment_smash = 0
 	faction = list("hostile", "molerat")
 	icon = 'icons/fallout/mobs/animal.dmi'

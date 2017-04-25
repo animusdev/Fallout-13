@@ -18,6 +18,8 @@
 	health = 200
 	self_weight = 120
 
+	death_sound = 'sound/f13npc/scorpion_death.ogg'
+
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/scorpion_charge1.ogg','sound/f13npc/scorpion_charge2.ogg','sound/f13npc/scorpion_charge3.ogg')
 

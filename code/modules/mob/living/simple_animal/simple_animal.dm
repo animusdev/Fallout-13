@@ -308,7 +308,7 @@
 		drop_all_held_items()
 	if(!gibbed)
 		if(death_sound)
-			playsound(get_turf(src),death_sound, 200, 1)
+			playsound(get_turf(src),death_sound, 50, 1)
 		if(deathmessage)
 			visible_message("<span class='danger'>\The [src] [deathmessage]</span>")
 		else if(!del_on_death)
