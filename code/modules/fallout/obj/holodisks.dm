@@ -85,3 +85,7 @@
 	item_state = "music1"
 	soundFile =  'sound/f13items/music_box.ogg' //Amazing grace
 	soundLength = 320
+
+/obj/item/weapon/holodisk/musicbox/New()
+	..()
+	name = "music box"
