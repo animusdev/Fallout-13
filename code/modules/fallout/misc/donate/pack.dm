@@ -153,7 +153,7 @@
 	price = 60
 
 /datum/content_pack/heavy_trooper
-	name = "NCR Heavy Trooper"
+	name = "NCR Heavy Infantry Corps"
 	id = "heavy_trooper"
 	desc = "<b>Available to: NCR Trooper and NCR Sergeant roles only!</b><br>Become the NCR Heavy Trooper with a set of NCR salvaged power armor and a big gun!"
 	items = list(
