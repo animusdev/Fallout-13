@@ -35,6 +35,8 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 
+	death_sound = 'sound/f13npc/roach_death.ogg'
+
 	minbodytemp = 0
 	maxbodytemp = 1500
 

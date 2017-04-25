@@ -22,6 +22,8 @@
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/deathclaw_charge1.ogg','sound/f13npc/deathclaw_charge2.ogg','sound/f13npc/deathclaw_charge3.ogg')
 
+	death_sound = 'sound/f13npc/deathclaw_death.ogg'
+
 	environment_smash = 3 // YOU CAN'T HIDE FROM ME
 	force_threshold = 15
 	faction = list("hostile", "deathclaw")

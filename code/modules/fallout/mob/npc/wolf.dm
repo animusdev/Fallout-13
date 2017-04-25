@@ -21,6 +21,8 @@
 	aggro_sound_chance = 50
 	aggro_sound = list('sound/f13npc/dog_alert1.ogg','sound/f13npc/dog_alert2.ogg','sound/f13npc/dog_alert3.ogg')
 
+	death_sound = 'sound/f13npc/dog_death.ogg'
+
 	environment_smash = 0
 	butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/wolf = 1)

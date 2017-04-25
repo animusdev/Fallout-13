@@ -22,6 +22,8 @@
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/ghoul_charge1.ogg','sound/f13npc/ghoul_charge2.ogg','sound/f13npc/ghoul_charge3.ogg')
 
+	death_sound = 'sound/f13npc/ghoul_death.ogg'
+
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/ghoul_alert.ogg'
 
