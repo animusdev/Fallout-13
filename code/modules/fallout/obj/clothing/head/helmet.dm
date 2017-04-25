@@ -89,17 +89,29 @@
 	resistance_flags = FIRE_PROOF
 	self_weight = 2
 
-/obj/item/clothing/head/helmet/f13/combat
-	name = "combat helmet"
-	desc = "An old combat helmet, out of use around the time of the Great War."
-	icon_state = "combat"
-	item_state = "combat"
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0, acid = 0)
+/obj/item/clothing/head/helmet/f13/combat_mk1
+	name = "reinforced combat helmet mark I"
+	desc = "A ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
+	icon_state = "combat_mk1"
+	item_state = "combat_mk1"
+	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
 	flags_inv = HIDEEARS|HIDEHAIR
-	put_on_delay = 10
-	strip_delay = 50
+	put_on_delay = 20
+	strip_delay = 40
 	resistance_flags = FIRE_PROOF
 	self_weight = 2
+
+/obj/item/clothing/head/helmet/f13/combat_mk2
+	name = "reinforced combat helmet mark II"
+	desc = "A complex ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
+	icon_state = "combat_mk2"
+	item_state = "combat_mk2"
+	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 30, acid = 40)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 20
+	strip_delay = 30
+	resistance_flags = FIRE_PROOF
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"

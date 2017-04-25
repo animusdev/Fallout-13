@@ -57,7 +57,6 @@
 	item_state = "metal_chestplate"
 	body_parts_covered = CHEST
 	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
-	slowdown = 1
 	put_on_delay = 30
 	strip_delay = 10
 	self_weight = 15
@@ -125,11 +124,10 @@
 	item_state = "bmetalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
-	slowdown = 1
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
-	self_weight = 10
+	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/legrecruit
 	name = "recruit armor"
@@ -171,16 +169,27 @@
 	put_on_delay = 60
 	strip_delay = 60
 
-/obj/item/clothing/suit/armor/f13/combat
-	name = "combat armor"
-	desc = "An old combat armor, out of use around the time of the War."
-	icon_state = "combat"
-	item_state = "combat"
+/obj/item/clothing/suit/armor/f13/combat_mk1
+	name = "reinforced combat armor mark I"
+	desc = "An advanced and expensive pre-War model of combat armor made of complex alloys.<br>"
+	icon_state = "combat_mk1"
+	item_state = "combat_mk1"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
+	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
 	put_on_delay = 60
 	strip_delay = 60
-	self_weight = 12
+	self_weight = 10
+
+/obj/item/clothing/suit/armor/f13/combat_mk2
+	name = "reinforced combat armor mark II"
+	desc = "An improved version of pre-War reinforced combat armor - designed to replace it, this high tech suit was created as a lightweight, more protective armor reserved for use by American shock troops and special forces."
+	icon_state = "combat_mk2"
+	item_state = "combat_mk2"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 30, acid = 40)
+	put_on_delay = 60
+	strip_delay = 60
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/ncr
 	name = "trooper armor"
