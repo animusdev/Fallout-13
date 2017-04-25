@@ -39,9 +39,7 @@
 			fuel_wasting += 2
 			PoolOrNew(/obj/effect/hotspot, get_turf(src))
 			if(prob(1)) //MOAR FIRE
-				fuel_wasting += 10
-				for(var/turf/turf in orange(1,src))
-					PoolOrNew(/obj/effect/hotspot, turf)
+				dyn_explosion(epicenter = src, power = fuel_holder.reagents.get_reagent_amount("welding_fuel")/10, flash_range = 2, adminlog = 0, flame_range = 5 ,silent = 1)
 
 	fuel_holder.reagents.remove_reagent("welding_fuel",fuel_wasting)
 
