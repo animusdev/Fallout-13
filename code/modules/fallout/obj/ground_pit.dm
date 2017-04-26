@@ -18,7 +18,7 @@
 /obj/dugpit
 	name = "dug pit"
 	anchored = 1
-	icon = 'icons/obj/decals.dmi'
+	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "pit"
 	mouse_opacity = 0
 	var/turf/open/indestructible/ground/desert/parent
