@@ -69,6 +69,20 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 /datum/subsystem/sunlight/proc/set_time_of_day(var/step)
 	if(step > time_cycle_steps.len)
 		step = 1
+		dodaychange()
+	switch(step)
+		if(0)
+			if(prob(15))
+				sandstorm()
+		if(1)
+			if(prob(15))
+				sandstorm()
+		if(2)
+			if(prob(15))
+				sandstorm()
+		if(3)
+			if(prob(15))
+				sandstorm()
 	step_started = world.time
 	current_step = step
 	current_step_datum = time_cycle_steps[current_step]

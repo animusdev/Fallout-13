@@ -1334,6 +1334,7 @@
 #include "code\modules\fallout\vehicles\bus.dm"
 #include "code\modules\fallout\vehicles\motorcycle.dm"
 #include "code\modules\fallout\vehicles\vehicle_fuel.dm"
+#include "code\modules\fallout\weather\sandstorm.dm"
 #include "code\modules\flufftext\Dreaming.dm"
 #include "code\modules\flufftext\Hallucination.dm"
 #include "code\modules\flufftext\TextFilters.dm"
