@@ -9,7 +9,7 @@
 	icon_state = "broken"
 	item_state = "broken"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	self_weight = 3
 
@@ -19,7 +19,7 @@
 	icon_state = "tribal"
 	item_state = "tribal"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10,fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	self_weight = 2
 
@@ -29,7 +29,7 @@
 	icon_state = "motorcycle"
 	item_state = "motorcycle"
 	flags = HEADCOVERSEYES
-	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 10
@@ -41,7 +41,7 @@
 	icon_state = "firefighter"
 	item_state = "firefighter"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -58,7 +58,7 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 20
@@ -70,7 +70,7 @@
 	icon_state = "yankee"
 	item_state = "yankee"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 30
@@ -82,7 +82,7 @@
 	icon_state = "eyebot"
 	item_state = "eyebot"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, acid = 20)
+	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 60, acid = 20)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
@@ -94,7 +94,7 @@
 	desc = "A ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
-	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
+	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 20, acid = 20)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 40
@@ -106,7 +106,7 @@
 	desc = "A complex ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
 	icon_state = "combat_mk2"
 	item_state = "combat_mk2"
-	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 30, acid = 40)
+	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 40, acid = 40)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 30
@@ -118,7 +118,7 @@
 	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass produced\" look to it, as it is issued to all NCR soldiers and MPs."
 	icon_state = "trooper"
 	item_state = "trooper"
-	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, acid = 10)
+	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 10)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 30
@@ -130,7 +130,7 @@
 	desc = "An old military helmet with a built in nightvision device, commonly worn by NCR Veteran Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
-	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 80, acid = 20)
+	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 80, fire = 50, acid = 20)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10
@@ -165,7 +165,7 @@
 	desc = "An old military helmet, commonly worn by Desert Rangers, that went through the fire and flames, saving a single life in a heavy bloodshed.<br>This particular helmet has a \"Forgive me mama\" insciption on the side."
 	icon_state = "oldranger"
 	item_state = "oldranger"
-	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, acid = 10)
+	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 30, acid = 10)
 	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/legrecruit
@@ -173,7 +173,7 @@
 	desc = "A Legion recruit helmet, that's made of fine molerat leather. Or was it gecko leather? I think this other guy from Legion had a helmet made of brahmin leather..."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
-	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0,fire = 0, acid = 10)
+	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 10)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 30
@@ -184,7 +184,7 @@
 	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
-	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
@@ -195,7 +195,7 @@
 	desc = "A Legion decanus helmet, it's made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
-	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 30, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 30, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 40
@@ -225,7 +225,7 @@
 	desc = "A metal helmet destined to adorn the head of Caesar's Legion ranked officer - the Legate."
 	icon_state = "leglegate"
 	item_state = "leglegate"
-	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 40, acid = 20)
+	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 40, fire = 50, acid = 20)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 10

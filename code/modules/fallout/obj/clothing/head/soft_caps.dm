@@ -14,6 +14,6 @@
 /obj/item/clothing/head/soft/f13/enclave
 	name = "officer hat"
 	desc = "A standard-issue Enclave officer's cap."
-	icon_state = "enclavesoft"
+	icon_state = "enclave"
 	item_color = "enclave"
 	flags_inv = HIDEHAIR
