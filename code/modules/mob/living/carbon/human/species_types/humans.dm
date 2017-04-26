@@ -8,6 +8,10 @@
 	use_skintones = 1
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 
+/datum/species/human/qualifies_for_faction(faction_id)
+	if(faction_id == "acolytes")
+		return 0
+	return 1
 
 /datum/species/human/qualifies_for_rank(rank, list/features)
 	if((!features["tail_human"] || features["tail_human"] == "None") && (!features["ears"] || features["ears"] == "None"))

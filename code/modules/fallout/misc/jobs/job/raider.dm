@@ -41,8 +41,8 @@ Raider
 	department_flag = MEDSCI
 	faction = "raiders"
 	status = "gang_leader"
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "nobody"
 	selection_color = "#ece19d"
 	access = list()
