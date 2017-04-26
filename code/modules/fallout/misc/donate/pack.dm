@@ -44,6 +44,7 @@
 		/obj/item/clothing/head/f13/headscarf,
 		/obj/item/clothing/head/f13/pot,
 		// Uniforms
+		/obj/item/clothing/under/pants/f13/ghoul,
 		/obj/item/clothing/under/pants/f13/cloth,
 		/obj/item/clothing/under/pants/f13/caravan,
 		/obj/item/clothing/under/f13/rag,

@@ -4,6 +4,12 @@
 	icon = 'icons/fallout/clothing/uniforms.dmi'
 	self_weight = 0.3
 
+/obj/item/clothing/under/pants/f13/ghoul
+	name = "ripped pants"
+	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
+	icon_state = "ghoul"
+	item_color = "ghoul"
+
 /obj/item/clothing/under/pants/f13/cloth
 	name = "cloth pants"
 	desc = "A pair of worn dusty cloth pants made of various textile pieces.<br>Commonly found all over the wasteland."
