@@ -8,15 +8,17 @@
 	icon_dead = "gecko_dead"
 	icon_gib = "gib"
 	turns_per_move = 1
-	response_help = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm = "hits"
+	response_help = "pokes"
+	response_disarm = "pushes aside"
+	response_harm = "kicks"
 	maxHealth = 60
 	health = 60
 	self_weight = 35
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/gecko_charge1.ogg','sound/f13npc/gecko_charge2.ogg','sound/f13npc/gecko_charge3.ogg')
+
+	death_sound = 'sound/f13npc/gecko_death.ogg'
 
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/gecko_alert.ogg'

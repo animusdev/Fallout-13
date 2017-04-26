@@ -29,11 +29,32 @@
 	category = CAT_MISC
 
 //Armor
+
+/datum/crafting_recipe/tribalarmor
+	name = "Tribal Armor"
+	result = /obj/item/clothing/suit/armor/f13/tribal
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 3,
+				/obj/item/crafting/duct_tape = 1)
+	tools = /obj/item/weapon/wirecutters
+	time = 120
+	category = CAT_PRIMAL
+
 /datum/crafting_recipe/leatherarmor
 	name = "Leather Armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
 	reqs = list(/obj/item/stack/sheet/animalhide = 6,
 				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 120
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/chestplate
+	name = "Metal Chestplate"
+	result = /obj/item/clothing/suit/armor/f13/chestplate
+	reqs = list(/obj/item/stack/sheet/animalhide = 1,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/sheet/metal = 3,,
 				/obj/item/crafting/wonderglue = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120

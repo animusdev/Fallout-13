@@ -34,10 +34,15 @@
 			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
 
 	else
-		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View Manifest</A></p>"
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Content Packs</a></p>"
+
+	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contribute</a></p>"
+
+	if(client && client.holder)
+		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -106,9 +111,16 @@
 		else
 			ready = 0
 
+	if(href_list["show_content"])
+		client.prefs.ShowContentPacks(src)
+		return 1
+
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window
 		new_player_panel()
+
+	if(href_list["contribute"])
+		src << link("http://178.33.188.131/payment/index.php?ckey=[ckey(client.ckey)]")
 
 	if(href_list["observe"])
 

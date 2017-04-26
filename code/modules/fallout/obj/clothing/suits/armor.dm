@@ -4,7 +4,7 @@
 	icon = 'icons/fallout/clothing/suits.dmi'
 	self_weight = 7.5
 
-/obj/item/clothing/suit/armor/f13/jensen
+/obj/item/clothing/suit/armor/f13/cyberpunk
 	name = "armored trenchcoat"
 	desc = "A trenchcoat augmented with a special alloy for some protection and style."
 	icon_state = "jensencoat"
@@ -29,7 +29,7 @@
 	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/kit
-	name = "armor kit"
+	name = "makeshift armor kit"
 	desc = "A several armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
 	icon_state = "armorkit"
 	item_state = "armorkit"
@@ -39,9 +39,16 @@
 	strip_delay = 30
 	self_weight = 5
 
-/obj/item/clothing/suit/armor/f13/kit/punk
+/obj/item/clothing/suit/armor/f13/punk
+	name = "armor kit"
+	desc = "A several armor parts you can wear over the clothing for moderate basic protection from the dangers of wasteland.<br>Do you feel lucky now? Well, do ya, punk?"
 	icon_state = "punkit" //Punk it
 	item_state = "punkit" //Pun kit
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 20, rad = 20, fire = 50, acid = 50)
+	put_on_delay = 30
+	strip_delay = 30
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"
@@ -50,10 +57,31 @@
 	item_state = "metal_chestplate"
 	body_parts_covered = CHEST
 	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
-	slowdown = 1
 	put_on_delay = 30
 	strip_delay = 10
 	self_weight = 15
+
+/obj/item/clothing/suit/armor/f13/tribal
+	name = "tribal armor"
+	desc = "A set of armor made of gecko hides.<br>It's pretty good for a makeshift armor."
+	icon_state = "tribal"
+	item_state = "tribal"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 40
+	strip_delay = 40
+
+/obj/item/clothing/suit/armor/f13/slam
+	name = "slammer raider armor"
+	desc = "A crude armor that appears to employ a tire of some kind as the shoulder pad, around the waist appears to be a mattress or quilt for a bed.<br>Come on and slam and you are turned to the jam!"
+	icon_state = "slam"
+	item_state = "slam"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 20
+	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/supafly
 	name = "supa-fly raider armor"
@@ -96,14 +124,13 @@
 	item_state = "bmetalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
-	slowdown = 1
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
-	self_weight = 10
+	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/legrecruit
-	name = "Legion recruit armor"
+	name = "recruit armor"
 	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
@@ -113,7 +140,7 @@
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/legvexil
-	name = "Legion vexillarius armor"
+	name = "vexillarius armor"
 	desc = "The armor appears to be based off of a suit of Caesar's Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the emblem of the Legion worn on the back."
 	icon_state = "legvexil"
 	item_state = "legvexil"
@@ -123,7 +150,7 @@
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/legcenturion
-	name = "Legion centurion armor"
+	name = "centurion armor"
 	desc = "The Legion centurion armor is by far the strongest suit of armor available to Caesar's Legion soldiers.<br>The armor is composed from various pieces of armor taken from that of the wearer's defeated opponents in combat."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
@@ -133,7 +160,7 @@
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/leglegate
-	name = "Legion legate armor"
+	name = "legate armor"
 	desc = "The armor appears to be a full suit of heavy gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
 	icon_state = "leglegate"
 	item_state = "leglegate"
@@ -142,19 +169,30 @@
 	put_on_delay = 60
 	strip_delay = 60
 
-/obj/item/clothing/suit/armor/f13/combat
-	name = "combat armor"
-	desc = "An old combat armor, out of use around the time of the war."
-	icon_state = "combat_armor"
-	item_state = "combat_armor"
+/obj/item/clothing/suit/armor/f13/combat_mk1
+	name = "reinforced combat armor mark I"
+	desc = "An advanced and expensive pre-War model of combat armor made of complex alloys.<br>"
+	icon_state = "combat_mk1"
+	item_state = "combat_mk1"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
+	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
 	put_on_delay = 60
 	strip_delay = 60
-	self_weight = 12
+	self_weight = 10
+
+/obj/item/clothing/suit/armor/f13/combat_mk2
+	name = "reinforced combat armor mark II"
+	desc = "An improved version of pre-War reinforced combat armor - designed to replace it, this high tech suit was created as a lightweight, more protective armor reserved for use by American shock troops and special forces."
+	icon_state = "combat_mk2"
+	item_state = "combat_mk2"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 30, acid = 40)
+	put_on_delay = 60
+	strip_delay = 60
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/ncr
-	name = "NCR trooper armor"
+	name = "trooper armor"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
 	icon_state = "ncr_armor1"
 	item_state = "ncr_armor1"
@@ -165,42 +203,49 @@
 	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/ncr/soldier
+	name = "standard issue trooper armor"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR soldiers in combat environments.<br>This one had breastplate emblazoned with the emblem of the NCR, that has slightly faded overtime."
 	icon_state = "ncr_armor2"
 	item_state = "ncr_armor2"
 
 /obj/item/clothing/suit/armor/f13/ncr/patriot
+	name = "trooper armor of \"Patriot\" battalion"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor3"
 	item_state = "ncr_armor3"
 
 /obj/item/clothing/suit/armor/f13/ncr/commie
+	name = "trooper armor of \"Commie\" battalion"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
 	icon_state = "ncr_armor4"
 	item_state = "ncr_armor4"
 
 /obj/item/clothing/suit/armor/f13/ncr/preacher
+	name = "trooper armor of \"Preacher\" battalion"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor5"
 	item_state = "ncr_armor5"
 
 /obj/item/clothing/suit/armor/f13/ncr/lover
+	name = "trooper armor of \"Lover\" battalion"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR lovers in combat environments.<br>This one has a heart symbol painted over the chestplate with pink paint - it must be a battalion insignia."
 	icon_state = "ncr_armor6"
 	item_state = "ncr_armor6"
 
 /obj/item/clothing/suit/armor/f13/ncr/stalker //Cheeki breeki i v damke !!!
+	name = "trooper armor of \"Stalker\" battalion"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR explorers in combat environments.<br>This one has a radiation symbol painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor7"
 	item_state = "ncr_armor7"
 
 /obj/item/clothing/suit/armor/f13/ncr/punisher
+	name = "trooper armor of \"Punisher\" battalion"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR heroes and villains in combat environments.<br>This one has a skull symbol painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor8"
 	item_state = "ncr_armor8"
 
 /obj/item/clothing/suit/armor/f13/ncr/facewrap
-	name = "NCR face wrap armor"
+	name = "face wrap armor"
 	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
 	icon_state = "ncr_armor9"
 	item_state = "ncr_armor9"
@@ -208,7 +253,7 @@
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 50, fire = 10, acid = 10) //Better radiation protection, thank the facewrap bro!
 
 /obj/item/clothing/suit/armor/f13/sergeant
-	name = "NCR Ranger patrol armor"
+	name = "ranger patrol armor"
 	desc = "A military-grade combat armor designed to protect key sections of the human body from ballistic trauma with hard armored plates made from complex polymers and ceramics, with a flexible body suit interwoven with thermal-dissipative membranes and bulletproof material.<br>It has a matte-finish olive drab coloring by default, making it suitable for woodland and/or urban camouflage."
 	icon_state = "sergeant"
 	item_state = "sergeant"
@@ -216,22 +261,22 @@
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
 	put_on_delay = 40
 	strip_delay = 40
-	self_weight = 8
+	self_weight = 7
 
 /obj/item/clothing/suit/armor/f13/rangercombat
-	name = "NCR Veteran Ranger trenchcoat"
-	desc = "An armored leather trenchcoat - traditional for the Desert Rangers, that is worn with pre-War riot armor."
+	name = "veteran ranger trenchcoat"
+	desc = "An armored leather trenchcoat - traditional uniform of the Desert Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
-	put_on_delay = 40
-	strip_delay = 40
+	put_on_delay = 20
+	strip_delay = 20
 	self_weight = 2
 	allowed = list(/obj/item/weapon/gun/ballistic/revolver)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/old
-	name = "worn NCR Veteran Ranger combat armor"
+	name = "worn veteran ranger combat armor"
 	desc = "A unique armor, that has been in countless battles, and a lot of blood was shed around it."
 	icon_state = "oldranger"
 	item_state = "oldranger"
@@ -250,7 +295,7 @@
 	self_weight = 35
 
 /obj/item/clothing/suit/armor/f13/power_armor/ncr
-	name = "NCR power armor"
+	name = "salvaged power armor"
 	desc = "A set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"

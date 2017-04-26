@@ -1,0 +1,37 @@
+"a" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"b" = (/turf/closed/mineral,/area/f13/caves)
+"c" = (/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"d" = (/turf/open/indestructible/ground/mountain,/area/f13/citycaves)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabbbbbbbbbbbbbcccccbbbbbbaaa
+aaabbbbbbbbbbcccccccccccbbbaaa
+aaabbbbbbbcccccccccccccccbbaaa
+aaabbbbbbcccccccccccccccccbaaa
+aaabbbbbccccccccccccccccccbaaa
+aaabbbbbccccccccccccccccccbaaa
+aaabbbbbccccccccccccccccccbaaa
+aaabbbbbccccccccccccccccccbaaa
+aaabbbbbbcccccccccccccccccbaaa
+aaabbbbbbbcccccccccccccccbbaaa
+aaabbbbbbbbccccccccccccbbbbaaa
+aaaddbbbbbbbcccccccbbbbbbbbaaa
+aaaddddbbbbbbbbcccbbbbbbbbbaaa
+aaadddddddbbbbbcccbbbbbbbbdaaa
+aaadddddddddbbdddddbbbbbbddaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

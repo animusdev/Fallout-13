@@ -1,5 +1,5 @@
 "aa" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"ab" = (/turf/open/indestructible/ground/road{dir = 6; icon_state = "innermaincornerouter"},/area/f13/wasteland)
+"ab" = (/turf/open/indestructible/ground/road{dir = 2; icon_state = "innermaincornerouter"},/area/f13/wasteland)
 "ac" = (/turf/open/indestructible/ground/road{dir = 8; icon_state = "innermaincornerouter"},/area/f13/wasteland)
 "ad" = (/turf/open/indestructible/ground/road{dir = 4; icon_state = "innermaincornerouter"},/area/f13/wasteland)
 "ae" = (/turf/open/indestructible/ground/road{dir = 1; icon_state = "innermaincornerouter"},/area/f13/wasteland)

@@ -1392,3 +1392,26 @@ for(type in view(range, dview_mob))
 			if(W.ini_dir == dir_to_check || W.ini_dir == FULLTILE_WINDOW_DIR || dir_to_check == FULLTILE_WINDOW_DIR)
 				return FALSE
 	return TRUE
+
+/proc/get_var_from_type(type, variable)
+	if(!type || !variable)
+		return null
+	var/obj = PoolOrNew(type)
+	var/var_data = obj:vars[variable]
+	PlaceInPool(obj,FALSE)
+	return var_data
+//Using in loadout system
+/proc/slot_name_by_type(type)
+	if(ispath(type, /obj/item/clothing/head))
+		return "head"
+	if(ispath(type, /obj/item/clothing/suit))
+		return "armor"
+	if(ispath(type, /obj/item/clothing/gloves))
+		return "gloves"
+	if(ispath(type, /obj/item/clothing/shoes))
+		return "shoes"
+	if(ispath(type, /obj/item/clothing/under))
+		return "uniform"
+	if(ispath(type, /obj/item/weapon) && !ispath(type, /obj/item/weapon/reagent_containers))
+		return "weapon"
+	return "misc"

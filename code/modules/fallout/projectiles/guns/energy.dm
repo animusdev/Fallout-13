@@ -38,7 +38,6 @@
 	shaded_charge = 1
 	fire_delay = 20
 
-
 /obj/item/weapon/gun/energy/plasma/glock
 	name ="Glock86"
 	icon_state = "glock86"
@@ -54,7 +53,7 @@
 
 /obj/item/weapon/gun/energy/plasma/pistol
 	name ="Plasma Pistol"
-	icon_state = "plasma_pistol"
+	icon_state = "plasma-pistol"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
 	origin_tech = "combat=2;magnets=3"
@@ -73,7 +72,7 @@
 
 /obj/item/weapon/gun/energy/plasma/turbo
 	name ="turbo plasma rifle"
-	icon_state = "Turbo_plasma_rifle"
+	icon_state = "turbo-plasma-rifle"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	desc = "A modified winchester P94 plasma rifle. The plasma bolt chamber has been hotwired to accelerate the bolt formation process."
 	origin_tech = "combat=6;magnets=6"

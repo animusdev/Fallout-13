@@ -27,6 +27,8 @@
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/robot_alert.ogg'
 
+	death_sound = 'sound/f13npc/robot_death.ogg'
+
 	harm_intent_damage = 5
 	melee_damage_lower = 5
 	melee_damage_upper = 10

@@ -16,9 +16,9 @@
 	icon_state = "tan"
 	item_state = "tan"
 
-/obj/item/clothing/shoes/f13/brownie
+/obj/item/clothing/shoes/f13/brownie //Make a craft recipe, and delete this comment.
 	name = "brown shoes"
-	desc = "A pair of brown leather shoes."
+	desc = "A pair of brown leather shoes made of wasteland animals hides."
 	icon_state = "brownie"
 	item_state = "brownie"
 
@@ -28,39 +28,75 @@
 	icon_state = "cowboy"
 	item_state = "cowboy"
 
-/obj/item/clothing/shoes/f13/diesel
-	name = "diesel boots"
-	desc = "Fancy female knee high platform boots with shiny steel clasps."
-	icon_state = "diesel"
-	item_state = "diesel"
+/obj/item/clothing/shoes/f13/khan
+	name = "Great Khan boots"
+	desc = "A pair of leather boots reinforced with metal plates.<br>These are commonly worn by Great Khans raiders."
+	icon_state = "legionmetal" //It's that simple
+	item_state = "legionmetal"
+	self_weight = 0.5
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+
+/obj/item/clothing/shoes/f13/military
+	name = "military boots"
+	desc = "High speed, no drag combat boots designed for use by U.S. army before the Great War."
+	icon_state = "military"
+	item_state = "military"
+	permeability_coefficient = 0.01
+	flags = NOSLIP
+	self_weight = 0.8
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	strip_delay = 50
+	resistance_flags = 0
+	self_weight = 0.5
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
+
+/obj/item/clothing/shoes/f13/military/diesel
+	name = "male diesel boots"
+	desc = "Fancy male steel-toe boots."
+	icon_state = "diesel_m"
+	item_state = "diesel_m"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
 	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
-/obj/item/clothing/shoes/f13/legionleather
-	name = "Legion leather boots"
+/obj/item/clothing/shoes/f13/military/female/diesel
+	name = "female diesel boots"
+	desc = "Fancy female knee high platform boots with shiny steel clasps."
+	icon_state = "diesel_f"
+	item_state = "diesel_f"
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	cold_protection = FEET
+	self_weight = 0.6
+	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+
+/obj/item/clothing/shoes/f13/military/ncr
+	name = "trooper boots"
+	desc = "A pair of tan leather boots with footcloths commonly worn by NCR servicemen."
+	icon_state = "ncr"
+	item_state = "ncr"
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+
+/obj/item/clothing/shoes/f13/military/legionleather
+	name = "leather boots"
 	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
 	icon_state = "legionleather"
 	item_state = "legionleather"
-	item_color = "cult"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
-/obj/item/clothing/shoes/f13/legionmetal
-	name = "Legion metal boots"
+/obj/item/clothing/shoes/f13/military/legionmetal
+	name = "metal boots"
 	desc = "A pair of metal boots commonly worn by the Caesar's Legion veterans."
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
-	item_color = "cult"
 	self_weight = 1
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
-/obj/item/clothing/shoes/f13/legionlegate
-	name = "Legion legate boots"
+/obj/item/clothing/shoes/f13/military/legionlegate
+	name = "legate boots"
 	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
-	item_color = "cult"
 	self_weight = 0.8
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 

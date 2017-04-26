@@ -157,6 +157,7 @@
 	name = "laceup shoes"
 	desc = "The height of fashion, and they're pre-polished!"
 	icon_state = "laceups"
+	flags = NOSLIP
 	put_on_delay = 50
 
 /obj/item/clothing/shoes/roman

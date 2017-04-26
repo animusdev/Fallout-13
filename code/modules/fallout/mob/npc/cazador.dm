@@ -10,8 +10,8 @@
 	environment_smash = 1
 	turns_per_move = 15
 	butcher_results = list()
-	response_help = "pets"
-	response_disarm = "gently pushes aside"
+	response_help = "pokes"
+	response_disarm = "punches"
 	response_harm = "hits"
 	emote_taunt = list("gnashes")
 	taunt_chance = 30
@@ -26,6 +26,8 @@
 
 	sound_speak = list('sound/f13npc/cazador_charge1.ogg','sound/f13npc/cazador_charge2.ogg','sound/f13npc/cazador_charge3.ogg')
 	sound_speak_chance = 5
+
+	death_sound = 'sound/f13npc/cazador_death.ogg'
 
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/cazador_alert.ogg'

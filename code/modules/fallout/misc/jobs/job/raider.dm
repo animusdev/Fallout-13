@@ -10,15 +10,48 @@ Raider
 	status = "raider"
 	total_positions = -1
 	spawn_positions = -1 //does not matter for late join
-	supervisors = "nobody"
+	supervisors = "gang leader"
+	department_head = list("gang leader")
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/raider
 
+	allowed_packs = list("starter", "super_ten", "raiders_pack")
+
+	required_items = list(
+	/obj/item/weapon/golf9,
+	/obj/item/weapon/restraints/legcuffs/bola/raider,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin
+	)
+
 /datum/outfit/job/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/mercadv
 	shoes = /obj/item/clothing/shoes/jackboots
-	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	r_pocket = /obj/item/device/flashlight/torch
+
+/datum/job/gang_leader
+	title = "Gang Leader"
+	desc = "No description."
+	flag = GANGLEAD
+	department_flag = MEDSCI
+	faction = "raiders"
+	status = "gang_leader"
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = "nobody"
+	selection_color = "#ece19d"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/gang_leader
+
+	allowed_packs = list("starter", "super_ten", "madmax")
+
+/datum/outfit/job/gang_leader
+	name = "Gang Leader"
+	uniform = /obj/item/clothing/under/f13/brahmin
+	shoes = /obj/item/clothing/shoes/f13/tan

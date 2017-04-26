@@ -1,7 +1,5 @@
-	/*
-Legion
-*/
-//legat
+//Fallout 13 Legion faction directory
+
 /datum/job/legate
 	title = "Legate"
 	desc = "No description."
@@ -19,6 +17,8 @@ Legion
 
 	whitelist_on = 1
 
+	allowed_packs = list("starter", "super_ten")
+
 	outfit = /datum/outfit/job/leglegate
 
 	access = list()
@@ -27,7 +27,7 @@ Legion
 /datum/outfit/job/leglegate
 	name = "Legate"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionlegate
+	shoes = /obj/item/clothing/shoes/f13/military/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
 	suit = /obj/item/clothing/suit/armor/f13/leglegate
 	head = /obj/item/clothing/head/helmet/f13/leglegate
@@ -39,7 +39,7 @@ Legion
 	title = "Centurion"
 	desc = "No description."
 	flag = LEGCENTURION
-	department_head = list("Legate")
+	department_head = list("legate")
 	department_flag = WASTELAND
 	faction = "legion"
 	status = "centurion"
@@ -50,6 +50,8 @@ Legion
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
+	allowed_packs = list("starter", "super_ten")
+
 	outfit = /datum/outfit/job/legcenturion
 
 	access = list()
@@ -58,8 +60,8 @@ Legion
 /datum/outfit/job/legcenturion
 	name = "Centurion"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionmetal
-	gloves = /obj/item/clothing/gloves/f13/legion
+	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
 	head = /obj/item/clothing/head/helmet/f13/legcenturion
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
@@ -70,7 +72,7 @@ Legion
 	title = "Vexillarius"
 	desc = "No description."
 	flag = LEGVEX
-	department_head = list("Legate")
+	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
 	faction = "legion"
 	status = "vexillarius"
@@ -81,6 +83,8 @@ Legion
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
+	allowed_packs = list("starter", "super_ten")
+
 	outfit = /datum/outfit/job/legvex
 
 	access = list()
@@ -89,8 +93,8 @@ Legion
 /datum/outfit/job/legvex
 	name = "Vexillarius"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionmetal
-	gloves = /obj/item/clothing/gloves/f13/legion
+	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
 	head = /obj/item/clothing/head/helmet/f13/legvexil
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
@@ -101,7 +105,7 @@ Legion
 	title = "Decanus"
 	desc = "No description."
 	flag = LEGDECAN
-	department_head = list("Centurion")
+	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
 	faction = "legion"
 	status = "decanus"
@@ -112,6 +116,8 @@ Legion
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
+	allowed_packs = list("starter", "super_ten")
+
 	outfit = /datum/outfit/job/legdecan
 
 	access = list()
@@ -120,23 +126,23 @@ Legion
 /datum/outfit/job/legdecan
 	name = "Decanus"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionleather
-	gloves = /obj/item/clothing/gloves/f13/legion
+	shoes = /obj/item/clothing/shoes/f13/military/legionleather
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legdecan
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	mask = /obj/item/clothing/mask/bandana/f13/legdecan
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 
-//recruit
-/datum/job/recruit
-	title = "Recruit"
+//prime
+/datum/job/prime
+	title = "Prime"
 	desc = "No description."
-	flag = LEGRECRUIT
+	flag = PRIME
 	department_head = list("Centurion")
 	department_flag = WASTELAND
 	faction = "legion"
-	status = "recruit"
+	status = "prime"
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the centurion"
@@ -144,16 +150,18 @@ Legion
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	outfit = /datum/outfit/job/legrecruit
+	allowed_packs = list("starter", "super_ten")
+
+	outfit = /datum/outfit/job/prime
 
 	access = list()
 	minimal_access = list()
 
-/datum/outfit/job/legrecruit
-	name = "Recruit"
+/datum/outfit/job/prime
+	name = "Prime"
 	uniform = /obj/item/clothing/under/pants/f13/caravan
-	shoes = /obj/item/clothing/shoes/f13/legionleather
-	gloves = /obj/item/clothing/gloves/f13/legion
+	shoes = /obj/item/clothing/shoes/f13/military/legionleather
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion

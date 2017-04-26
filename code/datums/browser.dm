@@ -72,7 +72,7 @@
 	<head>
 		[head_content]
 	</head>
-	<body scroll=auto onload="initToolTips('A','IMG')">
+	<body scroll=auto onload="initToolTips('A','IMG', 'LI')">
 		<div class='uiWrapper'>
 			[title ? "<div class='uiTitleWrapper'><div [title_attributes]><tt>[title]</tt></div></div>" : ""]
 			<div class='uiContent'>

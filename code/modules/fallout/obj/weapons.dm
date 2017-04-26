@@ -7,7 +7,7 @@
 	item_state = "machete"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	force = 25
+	force = 20
 	throwforce = 15
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -16,13 +16,26 @@
 	block_chance = 20
 	sharpness = IS_SHARP
 
-/obj/item/weapon/golf
+/obj/item/weapon/golf9
 	name = "9 iron"
-	desc = "This old 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
-	icon_state = "golf"
-	item_state = "golf"
+	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	icon_state = "golf9"
+	item_state = "golf9"
 	slot_flags = SLOT_BELT
-	force = 17
+	force = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 2
+	icon = 'icons/fallout/objects/melee.dmi'
+
+/obj/item/weapon/golf10
+	name = "10 iron"
+	desc = "This old and quite deadly 10 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	icon_state = "golf10"
+	item_state = "golf10"
+	slot_flags = SLOT_BELT
+	force = 20
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
@@ -34,19 +47,36 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/pipe
-	name = "pipe"
+	name = "lead pipe"
 	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon_state = "pipe"
 	item_state = "pipe"
 	slot_flags = SLOT_BELT
-	force = 14
+	force = 15
 	throw_speed = 3
 	throw_range = 4
-	throwforce = 14
+	throwforce = 10
 	w_class = 3
 	icon = 'icons/fallout/objects/melee.dmi'
 
-/obj/item/weapon/twohanded/pipe/suicide_act(mob/user)
+/obj/item/weapon/pipe/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/tireiron
+	name = "tire iron"
+	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
+	icon_state = "tire"
+	item_state = "tire"
+	slot_flags = SLOT_BELT
+	force = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 3
+	icon = 'icons/fallout/objects/melee.dmi'
+
+/obj/item/weapon/tireiron/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
 	return (BRUTELOSS|FIRELOSS)
 
@@ -72,11 +102,11 @@
 	name = "baseball bat"
 	desc = "A wooden source of joy and pain."
 	icon = 'icons/fallout/objects/melee.dmi'
-	force = 7
-	throwforce = 15
+	force = 5
+	throwforce = 10
 	w_class = 3
-	force_unwielded = 7
-	force_wielded = 16
+	force_unwielded = 15
+	force_wielded = 20
 	obj_integrity = 200
 	max_integrity = 200
 
@@ -85,11 +115,11 @@
 	name = "tribal spear"
 	desc = "A haphazardly-constructed, yet still deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
-	force = 10
+	force = 20
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 24
+	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3
@@ -109,7 +139,7 @@
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
-	throwforce = 70
+	throwforce = 60
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3
 	armour_penetration = 10
@@ -120,11 +150,55 @@
 	obj_integrity = 200
 	max_integrity = 200
 
+/obj/item/weapon/hammer
+	name = "hammer"
+	desc = "A simple construction tool, that can also be used to bring the revenge upon those who kidnapped you and kept you in the basement for several years." //Old Boy (2003)
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "hammer"
+	slot_flags = SLOT_BELT
+	force = 15
+	throwforce = 10
+	w_class = 3
+	obj_integrity = 200
+	max_integrity = 200
+
+/obj/item/weapon/twohanded/sledgehammer
+	name = "sledgehammer"
+	desc = "Strong but heavy weapon of destruction, that works well only if you know how to use it properly."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "sledgehammer"
+	flags = CONDUCT
+	slot_flags = SLOT_BACK
+	force = 5
+	force_unwielded = 5
+	force_wielded = 20
+	throwforce = 25
+	throw_range = 7
+	w_class = 4
+	var/charged = 0
+	origin_tech = "combat=3;powerstorage=3"
+
+/obj/item/weapon/twohanded/largehammer
+	name = "large sledgehammer"
+	desc = "Large, strong, heavy weapon of DESTRUCTION."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "largesledgehammer0"
+	flags = CONDUCT
+	slot_flags = SLOT_BACK
+	force = 5
+	force_unwielded = 10
+	force_wielded = 25
+	throwforce = 25
+	throw_range = 7
+	w_class = 4
+	var/charged = 0
+	origin_tech = "combat=4;powerstorage=4"
+
 /obj/item/weapon/twohanded/superhammer
 	name = "super sledge"
 	desc = "Also called \"Superkuvalda\" - BoS produced these using the most modern weapons technology.<br>It's equipped with storage of kinetic energy to enhance the impact."
-	icon_state = "supersledgehammer0"
 	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "supersledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
 	force = 5
@@ -150,7 +224,6 @@
 		charged = 1
 	return
 
-
 /obj/item/weapon/twohanded/superhammer/attack(mob/M, mob/user)
 	..()
 	spawn(0)
@@ -166,19 +239,3 @@
 		var/mob/living/L = target
 		L.Stun(3)
 		shock(L)
-
-/obj/item/weapon/twohanded/sledgehammer
-	name = "sledgehammer"
-	desc = "Strong, heavy weapon of DESTRUCTION."
-	icon_state = "largesledgehammer0"
-	icon = 'icons/fallout/objects/melee.dmi'
-	flags = CONDUCT
-	slot_flags = SLOT_BACK
-	force = 5
-	force_unwielded = 10
-	force_wielded = 25
-	throwforce = 25
-	throw_range = 7
-	w_class = 4
-	var/charged = 1
-	origin_tech = "combat=5;powerstorage=5"

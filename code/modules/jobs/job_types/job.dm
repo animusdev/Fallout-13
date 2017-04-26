@@ -35,6 +35,9 @@
 	//Sellection screen color
 	var/selection_color = "#ffffff"
 
+	var/list/allowed_packs = list("default") //Packs which will be available to this job
+	var/list/required_items = list() // Items which available by default
+	var/list/denied_items = list() // Items which can't be set up on this job anyway
 
 	//If this is set to 1, a text is printed to the player when jobs are assigned, telling him that he should let admins know that he has to disconnect.
 	var/req_admin_notify
@@ -54,14 +57,18 @@
 
 
 //But don't override this
-/datum/job/proc/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE)
+/datum/job/proc/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, override_outfit)
 	if(!H)
 		return 0
 
 	//Equip the rest of the gear
 	H.dna.species.before_equip_job(src, H, visualsOnly)
 
-	if(outfit)
+	if(override_outfit)
+		H.equipOutfit(override_outfit, visualsOnly)
+	else if(H.client && H.client.prefs)
+		H.equipOutfit(H.client.prefs.GetOutfit(src), visualsOnly)
+	else if(outfit)
 		H.equipOutfit(outfit, visualsOnly)
 
 	H.dna.species.after_equip_job(src, H, visualsOnly)

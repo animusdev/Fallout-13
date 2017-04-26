@@ -15,6 +15,7 @@
 	desc = "A lightweight cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
 	icon_state = "safari"
 	item_state = "dethat"
+	flags_inv = HIDEHAIR
 	armor = list(melee = 40, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0,fire = 30, acid = 0)
 
 /obj/item/clothing/head/f13/stormchaser
@@ -23,6 +24,13 @@
 	icon_state = "stormchaser"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/f13/headscarf
+	name = "headscarf"
+	desc = "A piece of cloth that be worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
+	icon_state = "headscarf"
+	item_state = "dethat"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR
 
 /obj/item/clothing/head/f13/pot
 	name = "metal cooking pot"
@@ -38,18 +46,21 @@
 	desc = "A high-crowned, wide-brimmed hat best known as the defining piece of attire for the North American cowboy."
 	icon_state = "cowboy"
 	item_state = "dethat"
+	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/bandit
 	name = "bandit hat"
 	desc = "A black cowboy hat with a large brim, curved to the sides, and a silver eagle pinned to the front."
 	icon_state = "bandit"
 	item_state = "fedora"
+	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/sergeant
 	name = "ranger hat"
 	desc = "A brown broad-brimmed felt hat, with a high crown, pinched symmetrically at the four corners.<br>It has the insignia plate of the New California Republic Rangers."
 	icon_state = "sergeant"
 	item_state = "dethat"
+	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/gambler
 	name = "gambler hat"

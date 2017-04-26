@@ -27,6 +27,7 @@
 	faction = list("ghoul")
 	butcher_results = list(/obj/effect/gibspawner/xeno = 1)
 	self_weight = 45
+	death_sound = 'sound/f13npc/ghoul_death.ogg'
 	var/obj/item/ring/precious
 
 /mob/living/simple_animal/hostile/commanded/smeagol/Life()
@@ -39,7 +40,7 @@
 	..()
 
 /mob/living/simple_animal/hostile/commanded/smeagol/accepted()
-	say("Yes, my precious.")
+	say("Yes, Master!")
 
 /mob/living/simple_animal/hostile/commanded/smeagol/unacsessable()
-	say("Forgive me, precious.")
+	say("Forgive me, my Master.")

@@ -16,9 +16,6 @@ var/datum/subsystem/ambient/SSradiation
 /datum/subsystem/radiation/New()
 	NEW_SS_GLOBAL(SSradiation)
 
-/datum/subsystem/radiation/stat_entry()
-	..("W:[wait]P:[processing.len]")
-
 /datum/subsystem/radiation/fire(resumed = 0)
 	if (!resumed && !src.currentrun.len)
 		src.currentrun = processing.Copy()

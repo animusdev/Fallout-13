@@ -53,12 +53,12 @@
 			if(stance != COMMANDED_MISC || incapacitated()) //something has stopped this ride.
 				return
 			var/message = pick(\
-							"moves his head back and forth!",\
-							"bobs his booty!",\
-							"shakes his paws in the air!",\
-							"wiggles his ears!",\
-							"taps his foot!",\
-							"shrugs his shoulders!",\
+							"moves its head back and forth!",\
+							"bobs its booty!",\
+							"shakes its paws in the air!",\
+							"wiggles its ears!",\
+							"taps its foot!",\
+							"shrugs its shoulders!",\
 							"dances like you've never seen!")
 			if(dir != WEST)
 				setDir(WEST)
@@ -68,4 +68,4 @@
 			sleep(30)
 		stance = COMMANDED_STOP
 		setDir(SOUTH)
-		src.emote("me",1,"finished with his dance.")
+		src.emote("me",1,"finished with its dance.")

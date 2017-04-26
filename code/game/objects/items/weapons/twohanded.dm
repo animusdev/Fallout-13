@@ -377,7 +377,7 @@
 // CHAINSAW
 /obj/item/weapon/twohanded/required/chainsaw
 	name = "chainsaw"
-	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
+	desc = "A versatile power tool. Useful for limbing trees and delimbing both humans and demons."
 	icon_state = "chainsaw_off"
 	flags = CONDUCT
 	force = 13

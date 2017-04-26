@@ -127,25 +127,33 @@
 	item_color = "benny"
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/relaxedwearm
+/obj/item/clothing/under/f13/relaxedwear
 	name = "pre-War male relaxedwear"
 	desc = "A dirty long-sleeve blue shirt with a greenish brown sweater-vest and slacks."
-	icon_state = "relaxedwearm"
+	icon_state = "relaxedwear_m"
 	item_state = "g_suit"
-	item_color = "relaxedwearm"
+	item_color = "relaxedwear_m"
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/springm
+/obj/item/clothing/under/f13/spring
 	name = "pre-War male spring outfit"
 	desc = "A dirty long-sleeve beige shirt with a red sweater-vest and brown trousers."
-	icon_state = "springm"
+	icon_state = "spring_m"
 	item_state = "brownjsuit"
-	item_color = "springm"
+	item_color = "spring_m"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/formal
+	name = "pre-War male formal wear"
+	desc = "A dark purple jacket with an old white shirt and dirty dark purple trousers.<br>Traditionally worn by the richest of the post-War world."
+	icon_state = "spring_m"
+	item_state = "brownjsuit"
+	item_color = "spring_m"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bodyguard
 	name = "bodyguard outfit"
-	desc = "A grimy pre-war dress shirt, tie, and slacks, with some makeshift pauldrons made of scrap metal attached with leather straps."
+	desc = "A grimy pre-War slacks, tie, and a dress shirt with some makeshift pauldrons made of scrap metal attached with leather straps."
 	icon_state = "bodyguard"
 	item_state = "sl_suit"
 	item_color = "bodyguard"
@@ -161,7 +169,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/tribal
-	name = "tribal outfit"
+	name = "male tribal outfit"
 	desc = "A male outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
 	icon_state = "tribal_m"
 	item_state = "lgloves"
@@ -169,7 +177,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/tribal
-	name = "tribal outfit"
+	name = "female tribal outfit"
 	desc = "A female outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
 	icon_state = "tribal_f"
 	item_state = "lgloves"
@@ -185,7 +193,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/brahmin //Male version
-	name = "brahmin-skin outfit"
+	name = "male brahmin-skin outfit"
 	desc = "A basic male outfit consisting of a white shirt and patched trousers with Y-shaped suspenders."
 	icon_state = "brahmin_m"
 	item_state = "brownjsuit"
@@ -193,7 +201,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/brahmin //Female version
-	name = "brahmin-skin outfit"
+	name = "female brahmin-skin outfit"
 	desc = "A basic female outfit consisting of a rolled-up long-sleeve shirt and patched trousers with Y-shaped suspenders.<br>Fitted for female wastelanders."
 	icon_state = "brahmin_f"
 	item_state = "brownjsuit"
@@ -202,7 +210,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/doctor //Male version
-	name = "doctor fatigues"
+	name = "male doctor fatigues"
 	desc = "A white t-shirt, a small brown satchel bag and brown trousers with pouches attached to the belt.<br>Fitted for male wastelanders."
 	icon_state = "doctor_m"
 	item_state = "brownjsuit"
@@ -211,7 +219,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/doctor //Female version
-	name = "doctor fatigues"
+	name = "female doctor fatigues"
 	desc = "A white t-shirt with brown trousers, and a small brown satchel bag attached to it.<br>Fitted for female wastelanders."
 	icon_state = "doctor_f"
 	item_state = "brownjsuit"
@@ -221,7 +229,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/mercadv //Male version
-	name = "merc adventurer outfit"
+	name = "male merc adventurer outfit"
 	desc = "A large leather jacket with torn-off sleeves, paired with a red sweater, a necklace with three teeth of unknown origin strung on, and a pair of brown leather pants.<br>There is also a rough leather bandolier for additional storage capacity.<br>Fitted for male wastelanders."
 	icon_state = "merca_m"
 	item_state = "bl_suit"
@@ -232,7 +240,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/mercadv //Female version
-	name = "merc adventurer outfit"
+	name = "female merc adventurer outfit"
 	desc = "A large leather jacket with torn-off sleeves, paired with a midriff-revealing red and black top and a pair of brown leather pants.<br>There is also a rough leather bandolier and belt for additional storage capacity.<br>Fitted for female wastelanders."
 	icon_state = "merca_f"
 	item_state = "bl_suit"
@@ -244,7 +252,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/merccharm //Male version
-	name = "merc charmer outfit"
+	name = "male merc charmer outfit"
 	desc = "A blue and gray outfit resembling a three piece suit, heavily stitched and reinforced with a small metal cup on the groin area.<br>Fitted for male wastelanders."
 	icon_state = "mercc_m"
 	item_state = "bl_suit"
@@ -255,7 +263,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/merccharm //Female version
-	name = "merc charmer outfit"
+	name = "female merc charmer outfit"
 	desc = "A ripped and torn blue female business suit, it still gives ladies a rather sexy look.<br>Fitted for female wastelanders."
 	icon_state = "mercc_f"
 	item_state = "bl_suit"
@@ -345,19 +353,30 @@
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/enclaveo
-	name = "Enclave officer uniform"
+/obj/item/clothing/under/f13/enclave_officer
+	name = "officer uniform"
 	desc = "A standard Enclave officer uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the wasteland."
-	icon_state = "enclaveo"
+	icon_state = "enclave_o"
 	item_state = "bl_suit"
-	item_color = "enclaveo"
+	item_color = "enclave_o"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	self_weight = 2
-	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 10, fire = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/ncr_officer
+	name = "officer uniform"
+	desc = "A standard NCR officer uniform.<br>Embroided New California Republic flag patches adorn both sleeves."
+	icon_state = "enclave_o"
+	item_state = "lb_suit"
+	item_color = "enclave_o"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	self_weight = 2
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/ncr
-	name = "NCR overcoat"
+	name = "overcoat"
 	desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
@@ -366,7 +385,7 @@
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/ncr/torn
-	name = "torn NCR overcoat"
+	name = "torn overcoat"
 	desc = "Some time ago it looked like a regular NCR uniform, but now it looks like a total mess of ripped cloth."
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "tornovercoat"
@@ -390,7 +409,7 @@
 
 //Fluff
 
-/obj/item/clothing/under/f13/jensen
+/obj/item/clothing/under/f13/cyberpunk
 	name = "cyberpunk suit"
 	desc = "You never asked for anything that stylish."
 	icon_state = "jensen"

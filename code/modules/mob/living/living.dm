@@ -373,7 +373,8 @@
 	SetWeakened(0, 0)
 	SetSleeping(0, 0)
 	radiation = 0
-	nutrition = NUTRITION_LEVEL_FED + 50
+	nutrition = NUTRITION_LEVEL_FULL
+	water_level = THIRST_LEVEL_FULL
 	bodytemperature = 310
 	set_blindness(0)
 	set_blurriness(0)
@@ -543,7 +544,6 @@
 /mob/living/verb/resist()
 	set name = "Resist"
 	set category = "IC"
-	set hidden = 1
 
 	if(!isliving(src) || next_move > world.time || incapacitated(ignore_restraints = 1))
 		return

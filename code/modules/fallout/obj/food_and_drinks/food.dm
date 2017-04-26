@@ -4,7 +4,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/gecko
 	name = "gecko fillet"
-	desc = "A fillet of gecko meat."
+	desc = "A tasty fillet of gecko meat.<br>If you cook it, it tastes like chicken!"
 	icon_state = "fishfillet"
 	list_reagents = list("nutriment" = 6, "carpotoxin" = 1, "vitamin" = 2)
 	bitesize = 2 //Smaller animal
@@ -14,16 +14,25 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat
 	name = "molerat meat"
-	desc = "A slab of molerat meat."
+	desc = "A slab of smelly molerat meat."
 	list_reagents = list("nutriment" = 3, "carpotoxin" = 3)
-	bitesize = 4
+	bitesize = 3
 	filling_color = "#FA8072"
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	slice_path = null
 
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/wolf
+	name = "dog meat"
+	desc = "Some Asians love this stuff.<br>It does not taste too bad actually."
+	list_reagents = list("nutriment" = 6, "vitamin" = 2)
+	bitesize = 4 //Average animal
+	filling_color = "#FA8072"
+	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/wolf
+	slice_path = null
+
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw
 	name = "deathclaw meat"
-	desc = "A slab of deathclaw meat."
+	desc = "A slab of hard but delicious deathclaw meat."
 	list_reagents = list("nutriment" = 9, "vitamin" = 9)
 	bitesize = 6 //Big slabs of meat from a massive creature
 	filling_color = "#FA8072"
@@ -34,11 +43,15 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/gecko
 	name = "gecko steak"
-	desc = "Tastes like chicken."
+	desc = "A delicious steak made of finest gecko meat.<br>Tastes like chicken!"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/molerat
 	name = "molerat steak"
 	desc = "A smelly molerat steak.<br>What did you expect from roasted mutant rodent meat?"
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/steak/wolf
+	name = "dog steak"
+	desc = "A dog steak does not look attractive, but some people eat worse things when it comes to survival.<br>What did you expect from roasted dog?"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/deathclaw
 	name = "deathclaw steak"
@@ -73,13 +86,13 @@
 	name = "Cram"
 	desc = "A blue labeled tin of processed meat, primarily used as rations for soldiers during the pre-War times."
 	icon_state = "cram"
-	bonus_reagents = list("radium" = 1, "vitamin" = 5)
+	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 20)
 	filling_color = "#B22222"
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram/large
 	name = "big Cram"
-	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers during the Pre-War times."
+	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers during the pre-War times."
 	icon_state = "cram_large"
 	bonus_reagents = list("radium" = 2, "vitamin" = 10)
 	list_reagents = list("nutriment" = 40)
@@ -89,7 +102,7 @@
 	name = "YumYum"
 	desc = "YumYum was a pre-War company in the United States, producing packaged foods.<br>YumYum Deviled Eggs was their major product."
 	icon_state = "yumyum"
-	bonus_reagents = list("radium" = 1, "vitamin" = 2)
+	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10)
 	filling_color = "#B22222"
 
@@ -105,7 +118,7 @@
 	name = "Sugar Bombs"
 	desc = "Sugar Bombs is a pre-War breakfast cereal that can be found all around the wasteland, packaged in white and blue boxes with a red ovoid logo at the top, fully labeled as \"Sugar Bombs breakfast cereal\"."
 	icon_state = "sugarbombs"
-	bonus_reagents = list("radium" = 3, "vitamin" = 2)
+	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
 	filling_color = "#B22222"
 
@@ -113,7 +126,7 @@
 	name = "Crisps"
 	desc = "Potato Crisps are packaged in a small red and green box, with a yellow bubble encouraging the purchaser to \"See Moon Map Offer on Back!\"."
 	icon_state = "crisps"
-	bonus_reagents = list("radium" = 1, "vitamin" = 1)
+	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 5)
 	filling_color = "#B22222"
 
@@ -161,7 +174,7 @@
 	name = "MechaMash"
 	desc = "MechaMash is packaged in a white box with blue highlights, and a wrench logo printed on the front.<br>It appears to be a form of instant potatoes that smells like WD-40..."
 	icon_state = "mechanist"
-	bonus_reagents = list("radium" = 1, "vitamin" = 3)
+	bonus_reagents = list("radium" = 2, "vitamin" = 3)
 	list_reagents = list("nutriment" = 15)
 	filling_color = "#B22222"
 
@@ -177,7 +190,23 @@
 	name = "Pork n' Beans"
 	desc = "Pork n' Beans come in a small brown and orange tin, with a label that reads \"Greasy Prospector Improved Pork And Beans\".<br>Toward the bottom of the label is printed that the beans come \"With Hickory Smoked Pig Fat Chunks\"."
 	icon_state = "porknbeans"
-	bonus_reagents = list("radium" = 3, "vitamin" = 2)
+	bonus_reagents = list("radium" = 1, "vitamin" = 2)
+	list_reagents = list("nutriment" = 35)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/borscht
+	name = "canned borscht"
+	desc = "A faded label says something in Cyrillic, but you can't understand a thing.<br>\"KOHCEPBA BKYCHOTA TOMAT CMETAHA MOCKBA\"<br>\"cynep cyn!\"<br>An image of a plate with some red soup explains a lot."
+	icon_state = "borscht"
+	bonus_reagents = list("radium" = 1, "vitamin" = 3)
+	list_reagents = list("nutriment" = 35)
+	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/f13/dog //Max Rockatansky favorite
+	name = "dog food"
+	desc = "A can of greasy meat with a faded cartoon dog on the label.<br>Smells bad, tastes worse, but filling.<br>Not good enough to get bitten over, though." //Mad Max: Road Warrior 1981 dog food scene reference
+	icon_state = "dog"
+	bonus_reagents = list("radium" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 35)
 	filling_color = "#B22222"
 

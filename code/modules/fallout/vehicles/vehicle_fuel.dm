@@ -2,7 +2,7 @@
 
 /obj/vehicle/fuel
 	name = "vehicle"
-	desc = "Something going wrong."
+	desc = "Something went wrong! Badmins spawn shit!"
 	icon_state = ""
 
 	var/fuel = 500
@@ -31,18 +31,15 @@
 
 	fuel_wasting += idle_wasting
 
-
 //Health check
 	var/health = (obj_integrity/max_integrity)
 	if(health < 1)
 		if(health < 0.5 && fuel > 100 && prob(10)) // If vehicle is broken it will burn
-			visible_message("<span class='warning'>[src] blazes!</span>")
+			visible_message("<span class='warning'>[src] is damaged badly, the engine blazes!</span>")
 			fuel_wasting += 2
 			PoolOrNew(/obj/effect/hotspot, get_turf(src))
 			if(prob(1)) //MOAR FIRE
-				fuel_wasting += 10
-				for(var/turf/turf in orange(1,src))
-					PoolOrNew(/obj/effect/hotspot, turf)
+				dyn_explosion(epicenter = src, power = fuel_holder.reagents.get_reagent_amount("welding_fuel")/10, flash_range = 2, adminlog = 0, flame_range = 5 ,silent = 1)
 
 	fuel_holder.reagents.remove_reagent("welding_fuel",fuel_wasting)
 
@@ -51,7 +48,7 @@
 
 /obj/vehicle/fuel/start_engine()
 	if(fuel_holder.reagents.get_reagent_amount("welding_fuel") < 1)
-		to_chat(usr, "<span class='warning'>[src] is ran out of fuel!</span>")
+		to_chat(usr, "<span class='warning'>[src] has ran out of fuel!</span>")
 		return
 	..()
 	START_PROCESSING(SSobj, src)
@@ -73,15 +70,15 @@
 		var/fuel_percent = fuel_holder.reagents.total_volume / fuel_holder.reagents.maximum_volume * 100
 		switch(fuel_percent)
 			if(95 to INFINITY)
-				to_chat(user, "<span class='notice'>It have full fuel tank.</span>")
+				to_chat(user, "<span class='notice'>Fuel meter shows 100% ! The fuel tank is full to the top. Let's ride!</span>")
 			if(60 to 95)
-				to_chat(user, "<span class='notice'>Fuel tank is not full.</span>")
+				to_chat(user, "<span class='notice'>Fuel meter shows 75% ! A fuel tank is not so full. It's still quite a lot.</span>")
 			if(25 to 60)
-				to_chat(user, "<span class='notice'>Only half fuel in a tank.</span>	")
+				to_chat(user, "<span class='notice'>Fuel meter shows 50% ! That should be just enough to find more fuel.</span>	")
 			if(1 to 25)
-				to_chat(user, "<span class='warning'>The fuel is almost over!</span>")
+				to_chat(user, "<span class='warning'>Fuel meter shows 25% ! The fuel is almost over!</span>")
 			else
-				to_chat(user, "<span class='danger'>No fuel there!</span>")
+				to_chat(user, "<span class='danger'>Fuel meter shows 0% ! There is no fuel left!</span>")
 
 
 
@@ -109,7 +106,7 @@
 
 
 			var/trans = W.reagents.trans_to(src, amount_per_transfer_from_this)
-			to_chat(user, "<span class='notice'>You transfer [trans] unit\s of the solution to [src].</span>")
+			to_chat(user, "<span class='notice'>You transfer [trans] units of the solution to [src].</span>")
 		else
 			if(!src.reagents.total_volume)
 				to_chat(user, "<span class='warning'>[src] is empty!</span>")
@@ -121,4 +118,4 @@
 
 
 			var/trans = src.reagents.trans_to(W, amount_per_transfer_from_this)
-			to_chat(user, "<span class='notice'>You transfer [trans] unit\s of the solution to [W].</span>")
+			to_chat(user, "<span class='notice'>You transfer [trans] units of the solution to [W].</span>")

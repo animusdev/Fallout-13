@@ -32,7 +32,7 @@
 
 /obj/item/weapon/dice //depreciated d6, use /obj/item/weapon/dice/d6 if you actually want a d6
 	name = "die"
-	desc = "A die with six sides. Basic and servicable."
+	desc = "A die with six sides. Basic and servicable.<br>Commonly used as a lucky charm, or the most basic way to earn some caps by placing bets."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "d6"
 	w_class = WEIGHT_CLASS_TINY

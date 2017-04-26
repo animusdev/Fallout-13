@@ -12,8 +12,8 @@
 	turns_per_move = 5
 	environment_smash = 0
 	response_help = "hugs"
-	response_disarm = "gently pushes aside"
-	response_harm = "hits"
+	response_disarm = "pushes aside"
+	response_harm = "slaps"
 	move_to_delay = 2
 	maxHealth = 50
 	health = 50
@@ -21,6 +21,8 @@
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/ghoul_charge1.ogg','sound/f13npc/ghoul_charge2.ogg','sound/f13npc/ghoul_charge3.ogg')
+
+	death_sound = 'sound/f13npc/ghoul_death.ogg'
 
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/ghoul_alert.ogg'

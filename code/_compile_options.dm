@@ -34,7 +34,7 @@
 #define DOOR_CRUSH_DAMAGE	15	//the amount of damage that airlocks deal when they crush you
 
 #define	HUNGER_FACTOR		0.1	//factor at which mob nutrition decreases
-#define	THIRST_FACTOR		0.4
+#define	THIRST_FACTOR		0.2
 #define	REAGENTS_METABOLISM 0.4	//How many units of reagent are consumed per tick, by default.
 #define REAGENTS_EFFECT_MULTIPLIER (REAGENTS_METABOLISM / 0.4)	// By defining the effect multiplier this way, it'll exactly adjust all effects according to how they originally were with the 0.4 metabolism
 
@@ -63,3 +63,5 @@
 #ifndef SERVERTOOLS
 #define SERVERTOOLS 0
 #endif
+
+#define ADDRESS_DONATE_DATA "http://178.33.188.131/payment/user-data.php" //Address of taking donates data. Like money count, packs list.

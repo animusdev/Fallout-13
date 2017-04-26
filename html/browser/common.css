@@ -26,16 +26,15 @@ hr
 }
 
 a, a:link, a:visited, a:active, .linkOn, .linkOff
-{ 
-	color: #0bcc62; 
+{
+	color: #0bcc62;
 	text-decoration: none;
 	background: #124b28;
 	border: 1px solid #161616;
 	/*padding: 1px 4px 1px 4px;*/
 	padding: 1px 5px;
-	margin: 0 2px 0 0;
-	cursor:default;
-	white-space: nowrap;
+	cursor: default;
+	white-space: normal;
 }
 
 a:hover 
@@ -77,6 +76,11 @@ a.white:hover
 	color: #ffffff; 
 	background: #999999;
 	border-color: #666666;
+	pointer-events: none;
+}
+
+.have {
+	border-color: #8f8a21 !important;
 }
 
 a.icon, .linkOn.icon, .linkOff.icon
@@ -103,6 +107,8 @@ ul
 	padding: 4px 0 0 10px;
 	margin: 0;
 	list-style-type: none;
+	opacity: 1;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 
 li
@@ -345,7 +351,6 @@ div.notice
 }
 .l70 {
 	width: 80%;
-	text-align: center;
 }
 .right_block {
 	width: 25%;
@@ -426,6 +431,9 @@ div {
    border-radius: 4px;
    -khtml-border-radius: 4px;
 }
+.uiContent .right_table div {
+}
+
 .tool_tip {
 	background: #022210;
 	border: 1px solid #067639;
@@ -453,4 +461,28 @@ div {
 .unavailable_job {
 	background-color: #C24D44 !important;
 	color: #000 !important;
+}
+.left_table {
+	position: absolute;
+	padding: 5px;
+	background: #022210;
+	width: 20%;
+	left: 10px;
+	top: 40px;
+	text-shadow: 0 0 0;
+	text-transform: capitalize;
+}
+.right_table {
+	position: absolute;
+	padding: 5px;
+	background-color: #000F02;
+	width: 70%;
+	left: 25%;
+	top: 40px;
+	text-shadow: 0 0 0;
+	text-transform: capitalize;
+	display: block;
+}
+ul {
+	list-style:circle
 }
