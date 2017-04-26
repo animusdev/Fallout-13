@@ -314,8 +314,8 @@
 	self_weight = 3
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced
-	name = "advanced Mk II power helmet"
-	desc = "An advanced power armor Mk II helmet - an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>It looks rather threatening."
+	name = "advanced mark II power helmet"
+	desc = "An advanced power armor mark II helmet - an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>It looks rather threatening."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -331,8 +331,8 @@
 	self_weight = 4
 
 /obj/item/clothing/head/helmet/power_armor/advanced
-	name = "advanced Mk I power helmet"
-	desc = "An advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
+	name = "advanced mark I power helmet"
+	desc = "An advanced power armor mark I helmet, typically used by the Enclave.<br>It looks somewhat threatening."
 	icon_state = "advanced"
 	item_state = "advanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE

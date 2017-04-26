@@ -92,6 +92,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
+	self_weight = 2
 
 /obj/item/clothing/under/f13/dbdu
 	name = "DBDU"
@@ -102,6 +103,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
+	self_weight = 2
 
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
@@ -159,6 +161,7 @@
 	item_color = "bodyguard"
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 3
 
 /obj/item/clothing/under/f13/rag
 	name = "torn rags"
@@ -342,6 +345,14 @@
 	icon_state = "vault113"
 	item_color = "vault113"
 
+/obj/item/clothing/under/f13/followers
+	name = "followers outfit "
+	desc = "A white shirt with a pair of brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
+	icon_state = "followers"
+	item_state = "bar_suit"
+	item_color = "followers"
+	can_adjust = 0
+
 /obj/item/clothing/under/f13/combat
 	name = "combat uniform"
 	desc = "An old combat uniform, out of use around the time of the Great War."
@@ -349,9 +360,9 @@
 	item_state = "bl_suit"
 	item_color = "combat"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	self_weight = 3
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/enclave_officer
 	name = "officer uniform"
@@ -360,9 +371,9 @@
 	item_state = "bl_suit"
 	item_color = "enclave_o"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	self_weight = 2
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/ncr_officer
 	name = "officer uniform"
@@ -371,9 +382,9 @@
 	item_state = "lb_suit"
 	item_color = "enclave_o"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	self_weight = 2
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/ncr
 	name = "overcoat"
@@ -381,7 +392,6 @@
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
 	item_color = "overcoat"
-	self_weight = 2
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/ncr/torn
@@ -391,7 +401,6 @@
 	icon_state = "tornovercoat"
 	item_color = "tornovercoat"
 	can_adjust = 0
-	self_weight = 2
 
 /obj/item/clothing/under/f13/recon
 	name = "recon armor"
@@ -547,7 +556,7 @@
 
 /obj/item/clothing/under/female
 	icon = 'icons/fallout/clothing/uniforms.dmi'
-	self_weight = 1.5
+	self_weight = 1
 
 /obj/item/clothing/under/female/nursesuit
 	desc = "A jumpsuit commonly worn by nursing staff in the medical department."
