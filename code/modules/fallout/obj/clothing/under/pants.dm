@@ -6,7 +6,7 @@
 
 /obj/item/clothing/under/pants/f13/ghoul
 	name = "ripped pants"
-	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
+	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't get to see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
 	icon_state = "ghoul"
 	item_color = "ghoul"
 
