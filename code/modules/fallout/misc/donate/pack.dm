@@ -142,7 +142,7 @@
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor"
 	id = "trooper_armor"
-	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "<b>Available to: NCR Trooper and NCR Sergeant roles only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,

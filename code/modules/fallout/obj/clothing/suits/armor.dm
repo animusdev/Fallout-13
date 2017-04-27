@@ -30,7 +30,7 @@
 
 /obj/item/clothing/suit/armor/f13/kit
 	name = "makeshift armor kit"
-	desc = "A several armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
+	desc = "A several armor parts you can wear over the clothing to get the most basic protection against the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
 	icon_state = "armorkit"
 	item_state = "armorkit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -41,7 +41,7 @@
 
 /obj/item/clothing/suit/armor/f13/punk
 	name = "armor kit"
-	desc = "A several armor parts you can wear over the clothing for moderate basic protection from the dangers of wasteland.<br>Do you feel lucky now? Well, do ya, punk?"
+	desc = "A several armor parts you can wear over the clothing for moderate protection against the dangers of wasteland.<br>Do you feel lucky now? Well, do ya, punk?"
 	icon_state = "punkit" //Punk it
 	item_state = "punkit" //Pun kit
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -131,7 +131,7 @@
 
 /obj/item/clothing/suit/armor/f13/legrecruit
 	name = "recruit armor"
-	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
+	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made of repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
