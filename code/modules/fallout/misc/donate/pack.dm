@@ -227,6 +227,7 @@
 		/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
 		/obj/item/weapon/gun/ballistic/shotgun/trail,
 		/obj/item/clothing/head/f13/safari,
+		/obj/item/clothing/under/pants/f13/warboy,
 		/obj/item/key/buggy/wheel
 		)
 	price = 600

@@ -347,10 +347,11 @@
 
 /obj/item/clothing/under/f13/followers
 	name = "followers outfit "
-	desc = "A white shirt with a pair of brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
+	desc = "A white shirt with a pair of dark brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
 	icon_state = "followers"
 	item_state = "bar_suit"
 	item_color = "followers"
+	allowed = list(/obj/item/weapon/scalpel, /obj/item/weapon/surgical_drapes, /obj/item/weapon/cautery, /obj/item/weapon/hemostat, /obj/item/weapon/retractor)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/combat
