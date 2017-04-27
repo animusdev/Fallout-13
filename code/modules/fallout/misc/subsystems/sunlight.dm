@@ -72,16 +72,16 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		dodaychange()
 	switch(step)
 		if(STEP_MORNING)
-			if(prob(15))
+			if(prob(10)) //Sunrise brings hope for a new better day
 				sandstorm()
 		if(STEP_DAY)
-			if(prob(15))
+			if(prob(15)) //Daylight bears hidden dangers
 				sandstorm()
 		if(STEP_EVENING)
-			if(prob(15))
+			if(prob(10)) //Sundown gives expectations of safer night
 				sandstorm()
 		if(STEP_NIGHT)
-			if(prob(15))
+			if(prob(5)) //The darkness of a night shouldn't be any worse
 				sandstorm()
 	step_started = world.time
 	current_step = step

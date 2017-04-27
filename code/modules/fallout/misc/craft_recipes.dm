@@ -73,9 +73,9 @@
 	category = CAT_PRIMAL
 
 //Med
-/datum/crafting_recipe/healpowder
-	name = "Heal Powder"
-	result = /obj/item/weapon/reagent_containers/pill/patch/healpowder
+/datum/crafting_recipe/healingpowder
+	name = "Healing Powder"
+	result = /obj/item/weapon/reagent_containers/pill/patch/healingpowder
 	time = 20
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
@@ -84,7 +84,7 @@
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/weapon/reagent_containers/pill/patch/stimpak
-	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healpowder = 1,
+	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 1,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1,
 				/obj/item/crafting/wonderglue = 1)
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)

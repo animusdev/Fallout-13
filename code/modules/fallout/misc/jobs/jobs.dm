@@ -20,8 +20,11 @@ var/const/MAYOR				=(1<<13)
 
 //This jobs using medsci flag, cause me too lazy.
 
-var/const/MERCENARY		=(1<<7)
+var/const/MERCENARY			=(1<<7)
 var/const/GANGLEAD			=(1<<8)
+var/const/GHOUL_MASTER		=(1<<9)
+var/const/GHOUL_HAND		=(1<<10)
+var/const/GHOUL_PRIEST		=(1<<11)
 
 //var/const/VAULT			=(1<<6)
 

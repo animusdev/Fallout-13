@@ -30,9 +30,9 @@
 	icon_state = "superstim_15"
 	self_weight = 0.1
 
-/obj/item/weapon/reagent_containers/pill/patch/healpowder
+/obj/item/weapon/reagent_containers/pill/patch/healingpowder
 	name = "Healing powder"
-	desc = "Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
+	desc = "A foul-smelling primitive healing medicine.<br>Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
 	list_reagents = list("omnizine" = 20)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "bandaid"

@@ -157,8 +157,8 @@
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "trooper"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 5
+	spawn_positions = 5
 	supervisors = "the general"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7

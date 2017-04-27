@@ -33,3 +33,11 @@
 	item_state = "jensencoat"
 	body_parts_covered = CHEST
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+
+/obj/item/clothing/suit/toggle/labcoat/f13/followers
+	name = "followers lab coat"
+	desc = "A worn white labcoat with some wiring assembly hanging from the right side.<br>On a closer look you can see an ancient bloodstains that could tell an entire story about thrilling adventures of a previous owner."
+	icon_state = "followers"
+	item_state = "labcoat"
+	body_parts_covered = CHEST
+	armor = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 10, acid = 10)

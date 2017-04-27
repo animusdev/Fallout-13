@@ -10,7 +10,7 @@
 	item_state = "broken"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10, fire = 0, acid = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	self_weight = 3
 
 /obj/item/clothing/head/helmet/f13/tribal
@@ -20,7 +20,7 @@
 	item_state = "tribal"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10, fire = 0, acid = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/motorcycle
@@ -42,7 +42,7 @@
 	item_state = "firefighter"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -59,7 +59,7 @@
 	item_state = "supafly"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 20
 	self_weight = 1
@@ -71,7 +71,7 @@
 	item_state = "yankee"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 30
 	self_weight = 1.5
@@ -83,7 +83,7 @@
 	item_state = "eyebot"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 60, acid = 20)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
@@ -95,7 +95,7 @@
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
 	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 20, acid = 20)
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 40
 	resistance_flags = FIRE_PROOF
@@ -132,7 +132,7 @@
 	item_state = "ranger"
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 80, fire = 50, acid = 20)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
@@ -207,7 +207,7 @@
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
 	flags = HEADCOVERSEYES
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
 	name = "centurion helmet"
@@ -227,7 +227,7 @@
 	item_state = "leglegate"
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 40, fire = 50, acid = 20)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
@@ -240,7 +240,7 @@
 	icon_state = "strange"
 	item_state = "helmet"
 	armor = list(melee = 40, bullet = 20, laser = 40, energy = 40, bomb = 20, bio = 100, rad = 50, acid = 100)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
@@ -252,7 +252,7 @@
 	icon_state = "doom"
 	item_state = "doom"
 	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 30
 	strip_delay = 10
 	resistance_flags = UNACIDABLE
@@ -303,7 +303,7 @@
 	item_state = "shocktrooper"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	armor = list(melee = 90, bullet = 70, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 90)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -314,13 +314,13 @@
 	self_weight = 3
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced
-	name = "advanced Mk II power helmet"
-	desc = "An advanced power armor Mk II helmet - an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>It looks rather threatening."
+	name = "advanced mark II power helmet"
+	desc = "An advanced power armor mark II helmet - an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>It looks rather threatening."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -331,13 +331,13 @@
 	self_weight = 4
 
 /obj/item/clothing/head/helmet/power_armor/advanced
-	name = "advanced Mk I power helmet"
-	desc = "An advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
+	name = "advanced mark I power helmet"
+	desc = "An advanced power armor mark I helmet, typically used by the Enclave.<br>It looks somewhat threatening."
 	icon_state = "advanced"
 	item_state = "advanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	armor = list(melee = 70, bullet = 50, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -354,7 +354,7 @@
 	item_state = "t45dhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 100, rad = 60)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	put_on_delay = 50
@@ -370,7 +370,7 @@
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 80, rad = 40)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 50
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
@@ -386,7 +386,7 @@
 	item_state = "knight_green"
 	armor = list(melee = 40, bullet = 20, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 30)
 	flags = null
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
 	dog_fashion = null

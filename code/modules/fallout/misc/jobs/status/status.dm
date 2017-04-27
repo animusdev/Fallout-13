@@ -230,3 +230,24 @@ mob/proc/set_status(var/status)
 	can_invite_to = list("member")
 	purge_faction = "vault"
 	color = "#00491A"
+
+//Acolytes
+
+/datum/status/atom_master
+	name = "Master"
+	id = "master_atom"
+	can_invite_to = list("hand_atom", "priest_atom")
+	purge_faction = "acolytes"
+	color = "#4fa102"
+
+/datum/status/atom_hand
+	name = "Hand"
+	id = "hand_atom"
+	purge_faction = "acolytes"
+	color = "#438702"
+
+/datum/status/atom_priest
+	name = "Priest"
+	id = "priest_atom"
+	purge_faction = "acolytes"
+	color = "#306300"

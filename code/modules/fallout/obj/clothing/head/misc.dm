@@ -23,14 +23,14 @@
 	desc = "Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is not glowing all day."
 	icon_state = "stormchaser"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/f13/headscarf
 	name = "headscarf"
 	desc = "A piece of cloth that be worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
 	icon_state = "headscarf"
 	item_state = "dethat"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/f13/pot
 	name = "metal cooking pot"
@@ -55,6 +55,13 @@
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/f13/ncr
+	name = "officer beret"
+	desc = "A soft round cap, usually of wool felt, with a flat crown that tilts to one side, used to identify officers of the New California Republic Army.<br>The beret seems to be camouflaged in various shades of green and brown, and has a cap badge of the NCR two-headed bear roaring up at a gold star."
+	icon_state = "officer"
+	item_state = "dethat"
+	flags_inv = HIDEHAIR
+
 /obj/item/clothing/head/f13/sergeant
 	name = "ranger hat"
 	desc = "A brown broad-brimmed felt hat, with a high crown, pinched symmetrically at the four corners.<br>It has the insignia plate of the New California Republic Rangers."
@@ -75,7 +82,7 @@
 	desc = "<font color='#157206'>Him haffi drop him fork and run,</font><br><font color='green'>Him can't stand up to Jah Jah son,</font><br><font color='#fd680e'>Him haffi lef' ya with him gun,</font><br><font color='red'>Dig off with him bomb.</font>"
 	icon_state = "rastacap"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD //This tam brings the warm reggae and Jamaican sun with it.
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
 

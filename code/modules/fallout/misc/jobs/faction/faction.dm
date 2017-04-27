@@ -295,5 +295,13 @@ mob/proc/set_faction(var/faction)
 	head_status = "leader"
 	verbs = list(/mob/proc/begin_head_voting)
 
+/datum/f13_faction/acolytes
+	name = "Acolytes"
+	color = "#204200"
+	id = "acolytes"
+	preview_image = 'html/factions/acolytes.png'
+	full_name = "Acolytes of Atom"
+	head_status = "master_atom"
+	verbs = list(/mob/proc/begin_head_voting)
 
 //	craft_recipes = list(/datum/table_recipe/den_encryption_key)
