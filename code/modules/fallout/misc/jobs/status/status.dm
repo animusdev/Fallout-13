@@ -1,5 +1,5 @@
 /mob
-	var/status = "Wastelander"
+	var/status = "none"
 	var/list/allow_recipes = list()
 
 var/human_status = list()
@@ -45,8 +45,8 @@ proc/remove_everyone_from_status(status)
 	..()
 	if(can_invite_to_himself)
 		can_invite_to += "[name]"
-	if(name != "Wastelander")
-		verbs += /mob/proc/convert_to_wastelander
+	if(id != "none")
+		verbs += /mob/proc/leave_faction
 	if(can_invite_to.len)
 		verbs += /mob/proc/convert_to_status
 
@@ -73,8 +73,8 @@ mob/proc/set_status(var/status)
 
 	return 1
 
-/mob/proc/convert_to_wastelander()
-	set name = "Become Wastelander"
+/mob/proc/leave_faction()
+	set name = "Leave Faction"
 	set category = "Faction"
 	if(status == "none")
 		return
