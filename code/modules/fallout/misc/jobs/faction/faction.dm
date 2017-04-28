@@ -117,7 +117,7 @@ mob/proc/begin_head_voting()
 					if(prob(50))
 						M.say("TRUMP FOREVER! MAKE WASTELAND GREAT AGAIN!!!")
 					else
-						M.say("PUTIN THE BEST!!!")
+						M.say("PUTIN THE BEST! BOBAH YPA - 3OBET MOCKBA!!!")
 					sleep(20)
 					M.say("I changed my mind...")
 				M.say(pick("I vote for [choice].", "[choice] - I choose you!!!", "I choose [choice] to be [F.head_status].", "I believe [choice] is worthy to be our leader."))
@@ -203,7 +203,7 @@ mob/proc/set_faction(var/faction)
 	name = "Raiders"
 	color = "#804B00"
 	id = "raiders"
-	head_status = "gang_leader"
+	head_status = "gangleader"
 	preview_image = 'html/factions/raider.png'
 	full_name = "Raider Gang"
 	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - are any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."

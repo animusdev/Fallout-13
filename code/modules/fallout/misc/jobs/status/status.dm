@@ -190,9 +190,9 @@ mob/proc/set_status(var/status)
 	purge_faction = "raiders"
 	color = "#FF0000"
 
-/datum/status/gang_leader
+/datum/status/gangleader
 	name = "Gang Leader"
-	id = "gang_leader"
+	id = "gangleader"
 	purge_faction = "raiders"
 	can_invite_to = list("raider")
 	color = "#FF0000"
