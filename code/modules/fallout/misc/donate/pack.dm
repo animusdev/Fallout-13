@@ -224,6 +224,7 @@
 	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from an entire Mad Max movie franchise.<br><i>Note: Steering wheel is used just like a car key.<br>The content pack may be expanded in future with new items you will get for free if you already had this pack.</i>"
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
+		/obj/item/clothing/suit/f13/mfp/raider,
 		/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
 		/obj/item/weapon/gun/ballistic/shotgun/trail,
 		/obj/item/clothing/head/f13/safari,
