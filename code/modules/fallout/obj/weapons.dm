@@ -166,7 +166,7 @@
 	name = "sledgehammer"
 	desc = "Strong but heavy weapon of destruction, that works well only if you know how to use it properly."
 	icon = 'icons/fallout/objects/melee.dmi'
-	icon_state = "sledgehammer"
+	icon_state = "sledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
 	force = 5
