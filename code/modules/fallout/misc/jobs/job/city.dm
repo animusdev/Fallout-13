@@ -12,6 +12,8 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/mayor
 
+// /obj/item/clothing/under/suit_jacket
+
 /datum/outfit/job/mayor
 	name = "Mayor"
 	id = null
