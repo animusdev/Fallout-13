@@ -1,3 +1,5 @@
+//Fallout 13 Neutral faction aka Wastelanders roles
+
 /datum/job/settler
 	title = "Settler"
 	flag = SETTLER

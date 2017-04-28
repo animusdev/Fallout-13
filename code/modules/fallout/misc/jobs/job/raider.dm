@@ -1,6 +1,5 @@
-/*
-Raider
-*/
+//Fallout 13 Raider faction roles
+
 /datum/job/raider
 	title = "Raider"
 	desc = "No description."
