@@ -8,7 +8,7 @@
 	status = "ncr_general"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the NCR command"
+	supervisors = "the NCR command HQ"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -21,7 +21,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/general
-	name = "NCR General"
+	name = "General"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -60,7 +60,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/sergeant
-	name = "NCR Sergeant"
+	name = "Sergeant"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -85,7 +85,7 @@
 	status = "vranger"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the NCR command"
+	supervisors = "the NCR command HQ"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -149,6 +149,7 @@
 	/obj/item/ammo_box/magazine/m10mm_adv = 2, \
 	/obj/item/device/radio = 1)
 */
+
 /datum/job/trooper
 	title = "Trooper"
 	desc = "No description."
