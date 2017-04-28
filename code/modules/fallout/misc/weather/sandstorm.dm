@@ -1,9 +1,10 @@
 var/stormactive=0
 proc/sandstorm(var/position)
-	for(var/area/A in world) //block(locate(1,1,1),locate(250,250,1)))
+	for(var/area/A in block(locate(1,1,1),locate(250,250,1)))
 		if(A.outdoors && !stormactive)
 			for(var/mob/M in view(10,A))
 				M << sound('sound/f13effects/sandstorm_warning.ogg')
+				M << "I hear a sandstorm approching.. I better seek shelter.*1 minute*"
 				spawn(600)
 					lightingsandloop(A,M)
 					stormactive=1
@@ -54,7 +55,7 @@ proc/lightningstrike(var/area/A,var/mob/M,var/turf/T,var/L)
 			for(M in view(7,T))
 				M << sound(ls)
 				for(M in view(1,T))
-					if(M.client)
+					if(M.ckey)
 						M << "You have been hit by lightning stopping your heart."
 					M.death()
 				spawn(1)

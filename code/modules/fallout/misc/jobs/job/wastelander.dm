@@ -88,7 +88,7 @@
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
-	/obj/item/clothing/under/f13/mercadv
+	/obj/item/clothing/under/f13/mercadv,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/female/merccharm,
 	/obj/item/clothing/under/f13/doctor,
