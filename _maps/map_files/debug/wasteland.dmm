@@ -205,7 +205,7 @@
 "dW" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "dX" = (/turf/closed/wall/f13/wood,/area/f13/shack)
 "dY" = (/obj/structure/rack,/obj/item/weapon/twohanded/superhammer,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
-"dZ" = (/obj/structure/rack,/obj/item/weapon/mounted_chainsaw,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
+"dZ" = (/obj/structure/rack,/obj/item/weapon/twohanded/required/chainsaw,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "ea" = (/obj/structure/rack,/obj/item/weapon/gun/energy/plasma/turbo,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "eb" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/rcw,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)
 "ec" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/assault_rifle,/obj/item/ammo_box/magazine/m556,/obj/item/ammo_box/magazine/m556,/turf/open/floor/f13{icon_state = "white"},/area/f13/building)

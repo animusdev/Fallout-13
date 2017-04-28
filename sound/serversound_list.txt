@@ -1,9 +1,4 @@
-## Feel Free to add more to this ##
-sound/f13music/Jet_garage.ogg
-sound/f13music/Jet_mama.ogg
-sound/f13music/Jet_news.ogg
-sound/f13music/Jet_rimshot.ogg
-sound/f13music/Jet_war.ogg
+## RADIO NEW VEGAS ##
 sound/f13music/new_vegas_show_1.ogg
 sound/f13music/new_vegas_show_2.ogg
 sound/f13music/new_vegas_show_3.ogg
@@ -13,7 +8,19 @@ sound/f13music/new_vegas_show_6.ogg
 sound/f13music/new_vegas_show_7.ogg
 sound/f13music/new_vegas_show_bonus_1.ogg
 sound/f13music/new_vegas_show_bonus_2.ogg
-sound/ambience/title1.ogg
-sound/ambience/title2.ogg
-sound/ambience/title3.ogg
+## ENCLAVE RADIO ##
+sound/f13music/enclave_dixie.ogg
+sound/f13music/enclave_hymn.ogg
+sound/f13music/enclave_montezuma.ogg
+sound/f13music/enclave_presidential.ogg
+sound/f13music/enclave_stars.ogg
+sound/f13music/enclave_washington.ogg
+sound/f13music/enclave_yankee.ogg
+## RUSSIAN LANGUAGE! - RADIO JET ##
+sound/f13music/Jet_garage.ogg
+sound/f13music/Jet_mama.ogg
+sound/f13music/Jet_news.ogg
+sound/f13music/Jet_rimshot.ogg
+sound/f13music/Jet_war.ogg
+## HONK ##
 sound/ambience/clown.ogg

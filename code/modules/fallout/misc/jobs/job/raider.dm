@@ -19,7 +19,7 @@
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
-	/obj/item/clothing/glasses/f13/biker
+	/obj/item/clothing/glasses/f13/biker,
 	/obj/item/clothing/suit/armor/f13/tribal,
 	/obj/item/clothing/suit/armor/f13/slam,
 	/obj/item/clothing/suit/armor/f13/yankee,
