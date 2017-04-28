@@ -24,7 +24,7 @@
 
 /datum/job/adventurer
 	title = "Adventurer"
-	desc = "A life is a journey.<br>You are free to choose what kind of a journey it is."
+	desc = "An offspring of wasteland wanderers.<br>Your life is a journey, and you are free to choose what kind of a journey it is."
 	flag = ADVENTURER
 	department_flag = WASTELAND
 	faction = "none" //desert faction shall disable appearing as scavenger after readying
@@ -71,7 +71,7 @@
 
 /datum/job/mercenary
 	title = "Mercenary"
-	desc = "A peaceful ways, are not always the best ways.<br>Why waste time for diplomacy, when you can shoot bad guys and earn yourself a fortune."
+	desc = "A spawn of guns and bullets.<br>You know that peaceful ways, are not always the best ways.<br>Why waste time for diplomacy, when you can shoot bad guys and earn yourself a fortune."
 	flag = MERCENARY
 	department_flag = MEDSCI
 	faction = "none"
