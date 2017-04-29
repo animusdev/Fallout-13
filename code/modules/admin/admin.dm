@@ -158,11 +158,11 @@ var/global/BSACooldown = 0
 			body += "<A href='?_src_=holder;simplemake=shade;mob=\ref[M]'>Shade</A>"
 			body += "<br>"
 
-	if (M.client)
 		body += "<br><br>"
 		body += "<b>Other actions:</b>"
 		body += "<br>"
 		body += "<A href='?_src_=holder;forcespeech=\ref[M]'>Forcesay</A> | "
+	if (M.client)
 		body += "<A href='?_src_=holder;tdome1=\ref[M]'>Thunderdome 1</A> | "
 		body += "<A href='?_src_=holder;tdome2=\ref[M]'>Thunderdome 2</A> | "
 		body += "<A href='?_src_=holder;tdomeadmin=\ref[M]'>Thunderdome Admin</A> | "

@@ -14,7 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
-#include "_maps\wasteland_debug.dm"
+#include "_maps\texas.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\heap.dm"
@@ -1311,6 +1311,7 @@
 #include "code\modules\fallout\obj\spawners\lootdrops.dm"
 #include "code\modules\fallout\obj\stack\grass.dm"
 #include "code\modules\fallout\obj\stack\hide.dm"
+#include "code\modules\fallout\obj\structures\billboard.dm"
 #include "code\modules\fallout\obj\structures\chair.dm"
 #include "code\modules\fallout\obj\structures\fence.dm"
 #include "code\modules\fallout\obj\structures\fridge.dm"
