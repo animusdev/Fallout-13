@@ -30,12 +30,15 @@
 	density = 1
 	smooth = SMOOTH_OLD
 	layer = ABOVE_ALL_MOB_LAYER
-	canSmoothWith = list(/turf/closed/wall, /turf/closed/wall/f13/ruins, /turf/closed/wall/f13/store, /turf/closed/wall/f13/supermart, /turf/closed/wall/f13/wood, /obj/structure/fence)
+	canSmoothWith = list(/turf/closed/wall, /turf/closed/wall/f13/ruins, /turf/closed/wall/f13/store, /turf/closed/wall/f13/supermart, /turf/closed/wall/f13/wood, /obj/structure/fence,
+	/turf/closed/mineral, /turf/closed/wall/f13/wood/house)
 
 /obj/structure/fence/update_icon()
 	queue_smooth(src)
 
 /obj/structure/fence/relative()
+	if(ticker.current_state == GAME_STATE_PLAYING)
+		return
 	var/icon_junction = 0
 	switch(junction)
 		if(0 to 3)
