@@ -15,7 +15,6 @@ var/datum/subsystem/radiation/SSradiation
 
 
 /datum/subsystem/radiation/fire(resumed = 0)
-	var/seconds = wait * 0.1
 	if (!resumed)
 		src.currentrun = processing.Copy()
 
