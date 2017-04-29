@@ -1,86 +1,83 @@
-/obj/item/trash
-	name = "Shitspawn"
-	desc = "It's a trash!"
+/obj/item/trash/f13
 	icon = 'icons/fallout/objects/janitor.dmi'
-	item_state = "null"
-	w_class = WEIGHT_CLASS_TINY
+	icon_state = "null"
 
-/obj/item/trash/bubblegum
+/obj/item/trash/f13/bubblegum
 	name = "Bubblegum"
-	item_state = "bubblegum"
+	icon_state = "bubblegum"
 
-/obj/item/trash/bubblegum_large
+/obj/item/trash/f13/bubblegum_large
 	name = "large bubblegum"
-	item_state = "bubblegum_large"
+	icon_state = "bubblegum_large"
 
-/obj/item/trash/cram
+/obj/item/trash/f13/cram
 	name = "cram"
-	item_state = "cram"
+	icon_state = "cram"
 
-/obj/item/trash/cram_large
+/obj/item/trash/f13/cram_large
 	name = "large cram"
-	item_state = "cram_large"
+	icon_state = "cram_large"
 
-/obj/item/trash/yumyum
+/obj/item/trash/f13/yumyum
 	name = "yumyum"
-	item_state = "yumyum"
+	icon_state = "yumyum"
 
-/obj/item/trash/fancylads
+/obj/item/trash/f13/fancylads
 	name = "fancylads"
-	item_state = "fancylads"
+	icon_state = "fancylads"
 
-/obj/item/trash/sugarbombs
+/obj/item/trash/f13/sugarbombs
 	name = "sugar bombs"
-	item_state = "sugarbombs"
+	icon_state = "sugarbombs"
 
-/obj/item/trash/crisps
+/obj/item/trash/f13/crisps
 	name = "crisps"
-	item_state = "crisps"
+	icon_state = "crisps"
 
-/obj/item/trash/steak
+/obj/item/trash/f13/steak
 	name = "steak"
-	item_state = "steak"
+	icon_state = "steak"
 
-/obj/item/trash/specialapples
+/obj/item/trash/f13/specialapples
 	name = "special apples"
-	item_state = "specialapples"
+	icon_state = "specialapples"
 
-/obj/item/trash/dandyapples
+/obj/item/trash/f13/dandyapples
 	name = "dandy apples"
-	item_state = "dandyapples"
+	icon_state = "dandyapples"
 
-/obj/item/trash/blamco_large
+/obj/item/trash/f13/blamco_large
 	name = "large blamco"
-	item_state = "blamco_large"
+	icon_state = "blamco_large"
 
-/obj/item/trash/blamco
+/obj/item/trash/f13/blamco
 	name = "blamco"
-	item_state = "blamco"
+	icon_state = "blamco"
 
-/obj/item/trash/mechanist
+/obj/item/trash/f13/mechanist
 	name = "mechanist"
-	item_state = "mechanist"
+	icon_state = "mechanist"
 
-/obj/item/trash/instamash
+/obj/item/trash/f13/instamash
 	name = "instamash"
-	item_state = "instamash"
+	icon_state = "instamash"
 
-/obj/item/trash/porknbeans
+/obj/item/trash/f13/porknbeans
 	name = "porknbeans"
-	item_state = "porknbeans"
+	icon_state = "porknbeans"
 
-/obj/item/trash/borsht
-	name = "borsht"
-	item_state = "borsht"
+/obj/item/trash/f13/borscht
+	name = "borscht"
+	icon_state = "borscht"
 
-/obj/item/trash/dog
+/obj/item/trash/f13/dog
 	name = "dog food"
-	item_state = "dog"
+	icon_state = "dog"
 
-/obj/item/trash/mre
+/obj/item/trash/f13/mre
 	name = "mre"
-	item_state = "mre"
+	icon_state = "mre"
 
-/obj/item/trash/rotten
+/obj/item/trash/f13/rotten
 	name = "rotten"
-	item_state = "rotten"
+	icon_state = "rotten"
