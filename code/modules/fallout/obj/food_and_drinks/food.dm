@@ -73,6 +73,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 2, "sugar" = 2)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/bubblegum
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum/large
 	name = "big Bubblegum"
@@ -81,6 +82,7 @@
 	bonus_reagents = list("radium" = 4, "vitamin" = 2)
 	list_reagents = list("nutriment" = 4, "sugar" = 4)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/bubblegum_large
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram
 	name = "Cram"
@@ -89,6 +91,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 20)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/cram
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram/large
 	name = "big Cram"
@@ -97,6 +100,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 10)
 	list_reagents = list("nutriment" = 40)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/cram_large
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/yumyum
 	name = "YumYum"
@@ -105,6 +109,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/yumyum
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/fancylads
 	name = "Fancy Lads"
@@ -113,6 +118,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 20)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/fancylads
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/sugarbombs
 	name = "Sugar Bombs"
@@ -121,6 +127,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/sugarbombs
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/crisps
 	name = "Crisps"
@@ -129,6 +136,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 5)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/crisps
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/steak
 	name = "Salisbury Steak"
@@ -137,6 +145,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 50)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/steak
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/specialapples
 	name = "Dandy Apples Special"
@@ -145,6 +154,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "tricordrazine" = 10)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/specialapples
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/dandyapples
 	name = "Dandy Boy Apples"
@@ -153,6 +163,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/dandyapples
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/blamco
 	name = "BlamCo"
@@ -161,6 +172,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 15)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/blamco
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/blamco/large
 	name = "big BlamCo"
@@ -169,6 +181,7 @@
 	bonus_reagents = list("radium" = 4, "vitamin" = 4)
 	list_reagents = list("nutriment" = 30)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/blamco_large
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/mechanic
 	name = "MechaMash"
@@ -177,6 +190,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 3)
 	list_reagents = list("nutriment" = 15)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/mechanist
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/instamash
 	name = "InstaMash"
@@ -185,6 +199,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 15)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/instamash
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans
 	name = "Pork n' Beans"
@@ -193,6 +208,7 @@
 	bonus_reagents = list("radium" = 1, "vitamin" = 2)
 	list_reagents = list("nutriment" = 35)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/porknbeans
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/borscht
 	name = "canned borscht"
@@ -201,6 +217,7 @@
 	bonus_reagents = list("radium" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 35)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/borscht
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/dog //Max Rockatansky favorite
 	name = "dog food"
@@ -209,6 +226,7 @@
 	bonus_reagents = list("radium" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 35)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/dog
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/mre
 	name = "MRE"
@@ -217,6 +235,7 @@
 	bonus_reagents = list("silver_sulfadiazine" = 10, "tricordrazine" = 10, "vitamin" = 2)
 	list_reagents = list("nutriment" = 30)
 	filling_color = "#B22222"
+	trash = /obj/item/trash/f13/mre
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/galette
 	name = "dehydrated pea soup"
