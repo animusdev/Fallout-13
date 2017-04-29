@@ -3,6 +3,8 @@ var/datum/subsystem/radiation/SSradiation
 /datum/subsystem/radiation
 	name = "Radiation"
 
+	wait = 50
+
 	var/list/currentrun = list()
 	var/list/processing = list()
 
