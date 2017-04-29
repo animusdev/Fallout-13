@@ -98,7 +98,7 @@
 	/obj/item/weapon/powergauntlet = 1,
 	/obj/item/weapon/golf10 = 1)
 
-/obj/effect/spawner/lootdrop/wmelee_high
+/obj/effect/spawner/lootdrop/wmelee_legend
 	color = "#FF0000"
 	loot = list(
 	/obj/item/weapon/twohanded/superhammer = 1)
