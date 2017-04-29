@@ -1311,6 +1311,7 @@
 #include "code\modules\fallout\obj\spawners\lootdrops.dm"
 #include "code\modules\fallout\obj\stack\grass.dm"
 #include "code\modules\fallout\obj\stack\hide.dm"
+#include "code\modules\fallout\obj\structures\billboard.dm"
 #include "code\modules\fallout\obj\structures\chair.dm"
 #include "code\modules\fallout\obj\structures\fence.dm"
 #include "code\modules\fallout\obj\structures\fridge.dm"
