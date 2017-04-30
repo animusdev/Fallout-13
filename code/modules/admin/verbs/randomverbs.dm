@@ -477,7 +477,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	else
 		priority_announce("A broadcast has been recorded and printed out at all functional communication terminals.", "Encrypted radio broadcast intercepted!", 'sound/f13music/broadcast.ogg')
 
-	print_command_report(input,"[confirm=="Yes" ? "" : "Encrypted message from "][command_name()] Update")
+	print_command_report(input,"[confirm=="Yes" ? "" : "Encrypted message from "][command_name()]")
 
 	log_admin("[key_name(src)] has transmitted a radio broadcast: [input]")
 	message_admins("[key_name_admin(src)] has transmitted a radio broadcast")
