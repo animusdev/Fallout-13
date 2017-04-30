@@ -77,7 +77,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum/large
 	name = "big Bubblegum"
-	desc = "A large Big Pops branded bubblegum."
+	desc = "A large \"Extra\" Big Pops branded bubblegum."
 	icon_state = "bubblegum_large"
 	bonus_reagents = list("radium" = 4, "vitamin" = 2)
 	list_reagents = list("nutriment" = 4, "sugar" = 4)
@@ -140,7 +140,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/steak
 	name = "Salisbury Steak"
-	desc = "Salisbury Steaks are found in big, subdued red boxes."
+	desc = "A worn, red box displaying a picture of steak with the words \"Salisbury Steak\" at the top and \"now with Gravy!\" at the bottom."
 	icon_state = "steak"
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 50)

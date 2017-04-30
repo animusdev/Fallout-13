@@ -1,9 +1,11 @@
+//Fallout 13 decorative billboards directory
+
 /obj/structure/billboard
 	name = "billboard"
-	desc = "Shitspawn detecte."
+	desc = "Shitspawn detected!<br>Please report the admin abuse immediately!<br>Just kidding, nevermind."
 	icon_state = "null"
 	density = 1
-	icon = 'icons/fallout/objects/structures/billboard.dmi'
+	icon = 'icons/fallout/machines/64x64.dmi'
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/structure/billboard/New()
@@ -16,19 +18,37 @@
 	S.verbs.Cut()
 
 /obj/structure/billboard/ritas
-	name = "rita's billboard"
-	desc = "Ritas!"
+	name = "Rita's Cafe billboard"
+	desc = "A defaced pre-War ad of Rita's cafe, it looks like wasteland took its toll."
 	icon_state = "ritas1"
 
 /obj/structure/billboard/ritas/New()
 	..()
-	icon_state = "ritas[rand(1,4)]"
+	icon_state = pick("ritas2","ritas3","ritas4")
+
+/obj/structure/billboard/ritas/pristine
+	name = "pristine Rita's Cafe billboard"
+	desc = "A pre-War ad of Rita's cafe.<br>Oddly enough, it's good as new."
+	icon_state = "ritas1"
+
+/obj/structure/billboard/ritas/pristine/New()
+	..()
+	icon_state = "ritas1"
 
 /obj/structure/billboard/cola
-	name = "cola's billboard"
-	desc = "Cola!"
+	name = "Nuka-Cola billboard"
+	desc = "A defaced pre-War ad of Nuka-Cola, it looks like wasteland took its toll."
 	icon_state = "cola1"
 
 /obj/structure/billboard/cola/New()
 	..()
-	icon_state = "cola[rand(1,4)]"
+	icon_state = pick("cola2","cola3","cola4")
+
+/obj/structure/billboard/cola/pristine
+	name = "pristine Nuka-Cola billboard"
+	desc = "A pre-War ad of Nuka-Cola.<br>Oddly enough, it's good as new."
+	icon_state = "cola1"
+
+/obj/structure/billboard/cola/pristine/New()
+	..()
+	icon_state = "cola1"
