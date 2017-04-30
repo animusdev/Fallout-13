@@ -359,6 +359,7 @@
 		update_sight()
 		reload_fullscreen()
 		. = 1
+	clear_fullscreen("death", 0)
 
 //proc used to completely heal a mob.
 /mob/living/proc/fully_heal(admin_revive = 0)

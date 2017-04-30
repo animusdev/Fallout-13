@@ -239,7 +239,7 @@ mob/proc/set_faction(var/faction)
 	full_name = "Enclave"
 	description = "<b>Alignment: Lawful Evil</b><br>The Enclave - is a secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government, and claims to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>The Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
 	preview_image = 'html/factions/enclave.png'
-	head_status = "enclave_general"
+	head_status = "colonel"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 

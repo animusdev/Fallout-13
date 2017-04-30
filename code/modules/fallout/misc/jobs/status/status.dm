@@ -278,3 +278,30 @@ mob/proc/set_status(var/status)
 	id = "volunteer"
 	purge_faction = "enclave"
 	color = "#000"
+
+//Brotherhood
+
+/datum/status/elder
+	name = "Elder"
+	id = "elder"
+	can_invite_to = list("paladin", "knight", "initiate")
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/paladin
+	name = "Paladin"
+	id = "paladin"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/knight
+	name = "Knight"
+	id = "knight"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/initiate
+	name = "Initiate"
+	id = "initiate"
+	purge_faction = "bs"
+	color = "#13306d"

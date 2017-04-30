@@ -124,6 +124,9 @@
 
 	if(href_list["observe"])
 
+		if(!client.holder)
+			return 1
+
 		if(alert(src,"Are you sure you wish to observe? You will not be able to play this round!","Player Setup","Yes","No") == "Yes")
 			if(!client)
 				return 1
@@ -178,7 +181,7 @@
 	if(href_list["manifest"])
 		ViewManifest()
 
-	if(href_list["SelectedJob"])
+	if(href_list["SelectedJobFlag"])
 
 		if(!enter_allowed)
 			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
@@ -189,7 +192,14 @@
 				to_chat(usr, "<span class='warning'>Server is full.</span>")
 				return
 
-		AttemptLateSpawn(href_list["SelectedJob"])
+		var/datum/job/job
+
+		for(var/datum/job/j in SSjob.occupations)
+			if(j.department_flag == text2num(href_list["JobDepartment"]) && j.flag == text2num(href_list["SelectedJobFlag"]))
+				job = j
+				break
+
+		AttemptLateSpawn(job)
 		return
 
 	if(!ready && href_list["preference"])
@@ -286,6 +296,8 @@
 		job = SSjob.GetJob(rank)
 		if(!job)
 			return 0
+	if(istype(rank,/datum/job))
+		job = rank
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(job.title == "Assistant")
 			if(isnum(client.player_age) && client.player_age <= 14) //Newbies can always be assistants
@@ -347,7 +359,6 @@
 
 	if(humanc)	//These procs all expect humans
 		data_core.manifest_inject(humanc)
-		AnnounceArrival(humanc, rank)
 		AddEmploymentContract(humanc)
 		if(highlander)
 			to_chat(humanc, "<span class='userdanger'><i>THERE CAN BE ONLY ONE!!!</i></span>")
@@ -398,14 +409,6 @@
 
 	var/dat = "<div class='notice'>Round Duration: [round(hours)]h [round(mins)]m</div>"
 
-	if(SSshuttle.emergency)
-		switch(SSshuttle.emergency.mode)
-			if(SHUTTLE_ESCAPE)
-				dat += "<div class='notice red'>The station has been evacuated.</div><br>"
-			if(SHUTTLE_CALL)
-				if(!SSshuttle.canRecall())
-					dat += "<div class='notice red'>The station is currently undergoing evacuation procedures.</div><br>"
-
 	var/available_job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobAvailable(job.title))
@@ -422,11 +425,11 @@
 			var/position_class = "otherPosition"
 			if (job.title in command_positions)
 				position_class = "commandPosition"
-			dat += "<a class='[position_class]' href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions])</a><br>"
+			dat += "<a class='[position_class]' href='byond://?src=\ref[src];SelectedJobFlag=[job.flag];JobDepartment=[job.department_flag]'>[job.title]</a><br>"
 	if(!job_count) //if there's nowhere to go, assistant opens up.
 		for(var/datum/job/job in SSjob.occupations)
 			if(job.title != "Assistant") continue
-			dat += "<a class='otherPosition' href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions])</a><br>"
+			dat += "<a class='otherPosition' href='byond://?src=\ref[src];SelectedJobFlag=[job.flag];JobDepartment=[job.department_flag]'>[job.title]</a><br>"
 			break
 	dat += "</div></div>"
 

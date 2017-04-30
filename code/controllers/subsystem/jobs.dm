@@ -73,6 +73,8 @@ var/datum/subsystem/job/SSjob
 		human_status[stat.id] = stat
 
 /datum/subsystem/job/proc/GetJob(rank)
+	if(istype(rank,/datum/job))
+		return rank
 	if(!occupations.len)
 		SetupOccupations()
 	return name_occupations[rank]
@@ -402,7 +404,6 @@ var/datum/subsystem/job/SSjob
 		var/obj/S = null
 		for(var/obj/effect/landmark/start/sloc in start_landmarks_list)
 			if(sloc.name != rank)
-				S = sloc //so we can revert to spawning them on top of eachother if something goes wrong
 				continue
 			if(locate(/mob/living) in sloc.loc)
 				continue
