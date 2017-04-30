@@ -19,19 +19,22 @@
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/under/f13/manager,
 	/obj/item/clothing/under/suit_jacket,
+	/obj/item/clothing/under/suit_jacket/really_black,
+	/obj/item/clothing/under/f13/bennys,
 	/obj/item/clothing/under/f13/gentlesuit,
-	/obj/item/clothing/under/f13/female/mercadv,
-	/obj/item/clothing/under/f13/female/merccharm,
-	/obj/item/clothing/under/f13/doctor,
-	/obj/item/clothing/under/f13/female/doctor,
-	/obj/item/clothing/under/f13/bodyguard,
-	/obj/item/clothing/suit/f13/duster,
+	/obj/item/clothing/under/f13/cowboyg,
+	/obj/item/clothing/under/f13/cowboyb,
+	/obj/item/clothing/under/f13/cowboyt,
+	/obj/item/clothing/under/suit_jacket/female,
+	/obj/item/clothing/under/female/plaid_skirt/blue,
+	/obj/item/clothing/under/female/plaid_skirt/purple,
+	/obj/item/clothing/under/female/plaid_skirt/green,
+	/obj/item/clothing/under/female/plaid_skirt,
 	/obj/item/clothing/suit/f13/cowboygvest,
-	/obj/item/clothing/suit/armor/f13/leatherarmor,
-	/obj/item/clothing/suit/armor/f13/bmetalarmor,
-	/obj/item/clothing/head/helmet/f13/tribal,
-	/obj/item/clothing/head/helmet/f13/eyebot
+	/obj/item/clothing/suit/f13/cowboybvest,
+	/obj/item/clothing/head/f13/purple
 	)
 
 	denied_items = list(
@@ -57,6 +60,8 @@
 	suit = null
 	head = /obj/item/clothing/head/f13/beaver
 
+// /obj/item/clothing/under/f13/female/flapper
+
 /datum/job/sheriff
 	title = "Sheriff"
 	desc = "A fearless lawkeeper.<br>You were chosen to protect them, now you have to choose: word or sword."
@@ -72,7 +77,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 /datum/outfit/job/sheriff
 	name = "Sheriff"
