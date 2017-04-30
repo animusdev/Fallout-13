@@ -251,3 +251,30 @@ mob/proc/set_status(var/status)
 	id = "priest_atom"
 	purge_faction = "acolytes"
 	color = "#306300"
+
+//Enclave
+
+/datum/status/colonel
+	name = "Colonel"
+	id = "colonel"
+	can_invite_to = list("encl_sergeant", "private", "volunteer")
+	purge_faction = "enclave"
+	color = "#000"
+
+/datum/status/encl_sergeant
+	name = "Sergeant"
+	id = "encl_sergeant"
+	purge_faction = "enclave"
+	color = "#000"
+
+/datum/status/private
+	name = "Private"
+	id = "private"
+	purge_faction = "enclave"
+	color = "#000"
+
+/datum/status/volunteer
+	name = "Volunteer"
+	id = "volunteer"
+	purge_faction = "enclave"
+	color = "#000"

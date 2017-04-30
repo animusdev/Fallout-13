@@ -39,6 +39,10 @@ var/datum/subsystem/job/SSjob
 			continue
 		if(!job.config_check())
 			continue
+#if defined(MAP_FACTIONS_LIST)
+		if(!(job.faction in MAP_FACTIONS_LIST))
+			continue
+#endif
 		occupations += job
 		name_occupations[job.title] = job
 		type_occupations[J] = job

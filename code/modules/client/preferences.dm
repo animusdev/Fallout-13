@@ -590,7 +590,10 @@ var/list/preferences_datums = list()
 		if(selected_job && selected_job.flag == text2num(href_list["job_key"]) && selected_job.department_flag == text2num(href_list["department_key"]))
 			SetJobPreferenceLevel(selected_job, text2num(href_list["level"]))
 		else
-			selected_job = SSjob.GetJob(href_list["rank"])
+			for(var/datum/job/j in SSjob.occupations)
+				if(j.department_flag == text2num(href_list["department_key"]) && j.flag == text2num(href_list["job_key"]))
+					selected_job = j
+					break
 			update_preview = 1
 
 	if(href_list["preference"] == "content_packs")
