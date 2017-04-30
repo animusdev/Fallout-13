@@ -25,11 +25,18 @@ var/const/ENCL_SERGEANT		=(1<<2)
 var/const/ENCL_PRIVATE		=(1<<3)
 var/const/VOLUNTEER			=(1<<4)
 
-var/const/MERCENARY			=(1<<7)
-var/const/GANGLEAD			=(1<<8)
-var/const/GHOUL_MASTER		=(1<<9)
-var/const/GHOUL_HAND		=(1<<10)
-var/const/GHOUL_PRIEST		=(1<<11)
+var/const/MERCENARY			=(1<<5)
+var/const/GANGLEAD			=(1<<6)
+var/const/GHOUL_MASTER		=(1<<7)
+var/const/GHOUL_HAND		=(1<<8)
+var/const/GHOUL_PRIEST		=(1<<9)
+
+//engsec
+
+var/const/ELDER				=(1<<1)
+var/const/PALADIN			=(1<<2)
+var/const/KNIGHT			=(1<<3)
+var/const/INITIATE			=(1<<4)
 
 //var/const/VAULT			=(1<<6)
 

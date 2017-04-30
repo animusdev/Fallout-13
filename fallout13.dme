@@ -1233,6 +1233,7 @@
 #include "code\modules\fallout\misc\economy\writing.dm"
 #include "code\modules\fallout\misc\jobs\jobs.dm"
 #include "code\modules\fallout\misc\jobs\faction\faction.dm"
+#include "code\modules\fallout\misc\jobs\job\brotherhood.dm"
 #include "code\modules\fallout\misc\jobs\job\city.dm"
 #include "code\modules\fallout\misc\jobs\job\enclave.dm"
 #include "code\modules\fallout\misc\jobs\job\ghouls.dm"
