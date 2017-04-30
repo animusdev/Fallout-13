@@ -14,7 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
-#include "_maps\texas.dm"
+#include "_maps\wasteland_debug.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\heap.dm"
@@ -1234,6 +1234,7 @@
 #include "code\modules\fallout\misc\jobs\jobs.dm"
 #include "code\modules\fallout\misc\jobs\faction\faction.dm"
 #include "code\modules\fallout\misc\jobs\job\city.dm"
+#include "code\modules\fallout\misc\jobs\job\enclave.dm"
 #include "code\modules\fallout\misc\jobs\job\ghouls.dm"
 #include "code\modules\fallout\misc\jobs\job\job.dm"
 #include "code\modules\fallout\misc\jobs\job\legion.dm"
