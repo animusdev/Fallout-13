@@ -11,6 +11,9 @@ proc/sandstorm(var/position)
 						lightingsandloop(A,M)
 						stormactive=1
 						M << sound('sound/f13effects/thunder_distant_1.ogg')
+						var/turf/T
+						for(T in view(1,A))
+							T.overlays += icon('icons/fallout/misc/weather.dmi',"sandstorm")
 						spawn(400)
 							M << sound('sound/f13effects/thunder_distant_2.ogg')
 							spawn(200)
@@ -21,6 +24,7 @@ proc/sandstorm(var/position)
 										M << sound('sound/f13effects/sandstorm_transition.ogg')
 										spawn(200)
 											M << sound('sound/f13effects/thunder_distant_1.ogg')
+											T.overlays -= icon('icons/fallout/misc/weather.dmi',"sandstorm")
 											return(1)
 
 
@@ -51,9 +55,9 @@ proc/lightningstrike(var/area/A,var/mob/M,var/turf/T,var/L)
 	if(A.outdoors)
 		var/list/ls=pick('sound/f13effects/thunder_1.ogg','sound/f13effects/thunder_2.ogg','sound/f13effects/thunder_3.ogg','sound/f13effects/thunder_4.ogg')
 		for(T in view(1,A))
-			T.overlays+='icons/effects/224x224.dmi'
+			T.overlays += icon('icons/effects/224x224.dmi',pick("lightning1","lightning2","lightning3","lightning4"))
 			spawn(25)
-				T.overlays-='icons/effects/224x224.dmi'
+				T.overlays-= icon('icons/effects/224x224.dmi',pick("lightning1","lightning2","lightning3","lightning4"))
 			for(M in view(7,T))
 				M << sound(ls)
 				for(M in view(1,T))
