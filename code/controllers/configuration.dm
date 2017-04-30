@@ -246,6 +246,9 @@
 
 	var/list/whitelist = list()
 	var/whitelist_on = 0
+
+	var/hostiles_count = 50
+
 /datum/configuration/New()
 	gamemode_cache = typecacheof(/datum/game_mode,TRUE)
 	for(var/T in gamemode_cache)
@@ -511,6 +514,8 @@
 
 		else if(type == "game_options")
 			switch(name)
+				if("hostiles_count")
+					config.hostiles_count 			= text2num(value)
 				if("damage_multiplier")
 					config.damage_multiplier		= text2num(value)
 				if("revival_pod_plants")

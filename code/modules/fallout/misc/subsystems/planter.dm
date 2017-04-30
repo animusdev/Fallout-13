@@ -7,7 +7,7 @@ var/datum/subsystem/planter/SSplanter
 	wait = 300
 
 /datum/subsystem/planter/New()
-	NEW_SS_GLOBAL(SSsunlight)
+	NEW_SS_GLOBAL(SSplanter)
 
 /datum/subsystem/planter/Initialize(timeofday, zlevel)
 	var/plants_count = (world.maxx * world.maxy * world.maxz) * 0.01
