@@ -159,4 +159,59 @@
 	/obj/item/trash/f13/borscht = 1,
 	/obj/item/trash/f13/dog = 1,
 	/obj/item/trash/f13/mre = 1,
-	/obj/item/trash/f13/rotten = 1)
+	/obj/item/trash/f13/rotten = 1,
+	/obj/item/clothing/head/f13/headscarf = 1)
+
+/obj/effect/spawner/lootdrop/clothing_low
+	color = "#FF0000"
+	loot = list(
+	/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
+	/obj/item/clothing/suit/armor/f13/slam = 1,
+	/obj/item/clothing/glasses/f13/biker = 1,
+	/obj/item/clothing/gloves/f13/leather = 1,
+	/obj/item/clothing/head/f13/police = 1,
+	/obj/item/clothing/head/f13/det_hat_alt = 1,
+	/obj/item/clothing/head/f13/bandit = 1,
+	/obj/item/clothing/head/helmet/f13/motorcycle = 1,
+	/obj/item/clothing/mask/balaclava = 1,
+	/obj/item/clothing/shoes/f13/brownie = 1,
+	/obj/item/clothing/shoes/f13/tan = 1,
+	/obj/item/clothing/shoes/f13/rag = 1,
+	/obj/item/clothing/under/f13/brahmin = 1,
+	/obj/item/clothing/under/f13/settler = 1,
+	/obj/item/clothing/suit/f13/vest = 1)
+
+/obj/effect/spawner/lootdrop/clothing_middle
+	color = "#FF0000"
+	loot = list(
+	/obj/item/clothing/gloves/f13/leather = 1,
+	/obj/item/clothing/head/f13/stormchaser = 1,
+	/obj/item/clothing/head/helmet/f13/tribal = 1,
+	/obj/item/clothing/head/helmet/f13/supaflyhelmet = 1,
+	/obj/item/clothing/head/helmet/f13/firefighter = 1,
+	/obj/item/clothing/head/helmet/f13/combat_mk1 = 1,
+	/obj/item/clothing/shoes/f13/military = 1,
+	/obj/item/clothing/shoes/f13/military/diesel = 1,
+	/obj/item/clothing/suit/armor/f13/combat_mk1 = 1,
+	/obj/item/clothing/suit/armor/f13/kit = 1,
+	/obj/item/clothing/suit/armor/f13/yankee = 1,
+	/obj/item/clothing/suit/f13/veteran = 1,
+	/obj/item/clothing/under/f13/cyberpunk = 1,
+	/obj/item/clothing/under/f13/combat = 1,
+	/obj/item/clothing/under/f13/petrochico = 1)
+
+/obj/effect/spawner/lootdrop/clothing_high
+	color = "#FF0000"
+	loot = list(
+	/obj/item/clothing/head/helmet/f13/combat_mk2 = 1,
+	/obj/item/clothing/suit/armor/f13/bmetalarmor = 1,
+	/obj/item/clothing/suit/armor/f13/combat_mk2 = 1)
+
+/obj/effect/spawner/lootdrop/clothing_legend
+	color = "#FF0000"
+	loot = list(
+	/obj/item/clothing/head/helmet/power_armor/t45d = 1,
+	/obj/item/clothing/head/helmet/power_armor/ncr = 1,
+	/obj/item/clothing/suit/armor/f13/power_armor/t45d = 1,
+	/obj/item/clothing/suit/armor/f13/power_armor/ncr = 1,
+	/obj/item/clothing/under/f13/recon = 1)
