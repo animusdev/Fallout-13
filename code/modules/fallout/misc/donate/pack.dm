@@ -171,9 +171,10 @@
 	id = "khan"
 	desc = "<b>Available to: Neutral and Raider factions only!</b><br>The glory of the Great Khans will be restored with this themed outfit set!<br>Or you can use this tribal spear to effectively defend yourself against a wildlife, at the start of the game.<br><i>Note: Great Khan jacket can be zipped up as well.</i>"
 	items = list(
-		/obj/item/clothing/shoes/f13/khan,
-		/obj/item/clothing/under/pants/f13/khan,
+		/obj/item/clothing/head/helmet/f13/khan,
 		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
+		/obj/item/clothing/under/pants/f13/khan,
+		/obj/item/clothing/shoes/f13/khan,
 		/obj/item/weapon/twohanded/tribal_spear,
 		/obj/item/weapon/restraints/legcuffs/bola/tribal
 		)

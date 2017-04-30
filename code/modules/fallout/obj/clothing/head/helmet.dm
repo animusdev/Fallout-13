@@ -11,6 +11,8 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	put_on_delay = 10
+	strip_delay = 20
 	self_weight = 3
 
 /obj/item/clothing/head/helmet/f13/tribal
@@ -21,6 +23,8 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 10, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	put_on_delay = 10
+	strip_delay = 30
 	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/motorcycle
@@ -89,11 +93,23 @@
 	resistance_flags = FIRE_PROOF
 	self_weight = 2
 
+/obj/item/clothing/head/helmet/f13/khan
+	name = "Great Khan helmet"
+	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
+	icon_state = "khan"
+	item_state = "khan"
+	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 20
+	self_weight = 1.5
+
 /obj/item/clothing/head/helmet/f13/combat_mk1
 	name = "reinforced combat helmet mark I"
 	desc = "A ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
+	flags = HEADCOVERSEYES
 	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 20, acid = 20)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 20

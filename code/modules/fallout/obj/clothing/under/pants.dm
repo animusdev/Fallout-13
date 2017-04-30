@@ -24,7 +24,7 @@
 
 /obj/item/clothing/under/pants/f13/khan
 	name = "Great Khan pants"
-	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by Great Khans raiders."
+	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by the Great Khans raiders."
 	icon_state = "khan"
 	item_color = "khan"
 	flags = THICKMATERIAL

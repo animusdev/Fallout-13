@@ -1,3 +1,5 @@
+//Fallout 13 City faction roles
+
 /datum/job/mayor
 	title = "Mayor"
 	desc = "A trustworthy authority.<br>You were chosen to guide them, now you have to choose: carrot or stick."
