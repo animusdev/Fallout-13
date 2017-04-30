@@ -73,6 +73,8 @@ var/datum/subsystem/job/SSjob
 		human_status[stat.id] = stat
 
 /datum/subsystem/job/proc/GetJob(rank)
+	if(istype(rank,/datum/job))
+		return rank
 	if(!occupations.len)
 		SetupOccupations()
 	return name_occupations[rank]

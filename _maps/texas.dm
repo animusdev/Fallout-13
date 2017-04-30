@@ -9,7 +9,7 @@
 		#define MAP_PATH "map_files/TexasWasteland"
         #define MAP_FILE "texas_wasteland.dmm"
         #define MAP_NAME "Texas Wasteland"
-        #define MAP_FACTIONS_LIST list("ncr", "legion", "none", "city", "raiders")
+        #define MAP_FACTIONS_LIST list("bs", "enclave", "none", "city", "raiders")
 
 		#define MAP_TRANSITION_CONFIG DEFAULT_MAP_TRANSITION_CONFIG
 
