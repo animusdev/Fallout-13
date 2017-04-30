@@ -13,7 +13,7 @@
 		news_network.SubmitArticle(text, "President", "Wasteland Chronicle", null)
 
 	else
-		announcement += "<h1 class='alert'>[command_name()] Update</h1>"
+		announcement += "<h1 class='alert'>[command_name()]</h1>"
 		if (title && length(title) > 0)
 			announcement += "<br><h2 class='alert'>[html_encode_ru(title)]</h2>"
 		if(title == "")
