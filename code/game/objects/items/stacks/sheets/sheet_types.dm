@@ -158,6 +158,8 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/sheet/mineral/wood
 
+
+
 /obj/item/stack/sheet/mineral/wood/New(var/loc, var/amount=null)
 	recipes = wood_recipes
 	return ..()
