@@ -131,8 +131,8 @@
 
 /turf/closed/wall/mineral/wood
 	name = "wooden wall"
-	desc = "A wall with wooden plating. Stiff."
-	icon = 'icons/fallout/turfs/walls/wood_wall.dmi'
+	desc = "A wall made by wasteland dweller."
+	icon = 'icons/fallout/turfs/walls/wood_crafted.dmi'
 	icon_state = "wood"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
 	hardness = 70
