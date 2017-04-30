@@ -96,6 +96,7 @@
 	/obj/item/clothing/under/f13/doctor,
 	/obj/item/clothing/under/f13/female/doctor,
 	/obj/item/clothing/under/f13/bodyguard,
+	/obj/item/clothing/suit/f13/duster,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
