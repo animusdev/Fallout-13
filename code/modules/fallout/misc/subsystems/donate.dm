@@ -49,13 +49,14 @@ var/datum/subsystem/content/SScontent
 	return 0
 
 /datum/subsystem/content/proc/check_connection()
-	if(curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp"))
+	var/R = curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp")
+	if(R)
 		var/data = file2text("temp")
 		if(data == "OK")
 			return "Work"
 		else
 			return "Error: " + data
-	return "Can't connect"
+	return "Can't connect: [R]"
 
 /datum/subsystem/content/proc/load_content_packs()
 	var/list/all_packs = subtypesof(/datum/content_pack)
