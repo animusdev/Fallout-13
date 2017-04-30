@@ -1,3 +1,5 @@
+//Fallout 13 trash items directory
+
 /obj/item/trash/f13
 	icon = 'icons/fallout/objects/janitor.dmi'
 	icon_state = "null"
@@ -101,3 +103,13 @@
 	name = "rotten food"
 	desc = "A plate of smelly rotten food. Yuck!"
 	icon_state = "rotten"
+
+/obj/item/trash/f13/tin
+	name = "tin can"
+	desc = "A rusty, empty tin can with no label."
+	icon_state = "tin"
+
+/obj/item/trash/f13/tin_large
+	name = "giant tin can"
+	desc = "A giant, rusty, rotten, empty tin can with no label.<br>Oh my... It's so big!<br>Did they sell canned whales before the Great War or something?"
+	icon_state = "tin"
