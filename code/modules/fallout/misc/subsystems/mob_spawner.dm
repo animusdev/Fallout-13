@@ -4,7 +4,7 @@ var/datum/subsystem/mob_spawner/SSspawner
 var/global/live_hostiles = 0
 
 /datum/subsystem/mob_spawner
-	name = "Planter"
+	name = "Mob Spawner"
 	wait = 300
 	var/list/spawners
 
@@ -20,6 +20,8 @@ var/global/live_hostiles = 0
 			qdel(spawner)
 
 /datum/subsystem/mob_spawner/fire()
+	if(!spawners || !spawners.len)
+		return
 	if(config.hostiles_count <= live_hostiles)
 		return
 	var/obj/effect/mob_spawner/S = pick(spawners)
