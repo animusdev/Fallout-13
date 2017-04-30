@@ -77,11 +77,6 @@
 	name = "medical crate"
 	icon_state = "medicalcrate"
 
-/obj/structure/closet/crate/freezer
-	desc = "A freezer."
-	name = "freezer"
-	icon_state = "freezer"
-
 /obj/structure/closet/crate/freezer/blood
 	name = "blood freezer"
 	desc = "A freezer containing packs of blood."
