@@ -243,7 +243,7 @@
 /obj/item/weapon/pickaxe/rust
 	name = "rusty pickaxe"
 	desc = "This pickaxe has seen better days."
-	icon = 'icons/fallout/objects/mining.dmi'
+	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe_rust"
 	force = 12
 	throwforce = 8
