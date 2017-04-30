@@ -27,11 +27,24 @@
 	icon_state = "brownie"
 	item_state = "brownie"
 
+/obj/item/clothing/shoes/f13/fancy
+	name = "black shoes"
+	desc = "A pair of fancy black leather shoes." //Nice shoes!
+	icon_state = "fancy"
+	item_state = "fancy"
+
 /obj/item/clothing/shoes/f13/cowboy
 	name = "cowboy boots"
 	desc = "A pair of cowhide boots with spurs.<br>They have a Cuban heel, rounded to pointed toe, high shaft, and, traditionally, no lacing."
 	icon_state = "cowboy"
 	item_state = "cowboy"
+
+/obj/item/clothing/shoes/f13/explorer
+	name = "worn boots"
+	desc = "A pair of slightly worn, steel-toed work boots.<br>These are still good at keeping toes uncrushed."
+	icon_state = "explorer"
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	self_weight = 1
 
 /obj/item/clothing/shoes/f13/khan
 	name = "Great Khan boots"
@@ -57,7 +70,7 @@
 
 /obj/item/clothing/shoes/f13/military/diesel
 	name = "male diesel boots"
-	desc = "Fancy male steel-toe boots."
+	desc = "Fancy male steel-toed boots."
 	icon_state = "diesel_m"
 	item_state = "diesel_m"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)

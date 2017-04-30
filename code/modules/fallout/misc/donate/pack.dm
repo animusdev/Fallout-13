@@ -214,7 +214,7 @@
 		/obj/item/clothing/under/f13/batter,
 		/obj/item/weapon/twohanded/baseball,
 		/obj/item/clothing/gloves/f13/baseball,
-		/obj/item/clothing/shoes/laceup
+		/obj/item/clothing/shoes/f13/fancy
 		)
 	price = 300
 

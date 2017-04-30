@@ -42,6 +42,7 @@
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
+	/obj/item/clothing/shoes/f13/explorer,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/merccharm,
 	/obj/item/clothing/under/f13/female/merccharm,
@@ -90,6 +91,7 @@
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/shoes/f13/explorer,
 	/obj/item/clothing/under/f13/mercadv,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/female/merccharm,
