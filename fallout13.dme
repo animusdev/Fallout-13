@@ -14,7 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
-#include "_maps\wasteland_debug.dm"
+#include "_maps\texas.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\heap.dm"
@@ -1220,6 +1220,7 @@
 #include "code\modules\fallout\misc\boarding.dm"
 #include "code\modules\fallout\misc\craft_recipes.dm"
 #include "code\modules\fallout\misc\curl.dm"
+#include "code\modules\fallout\misc\death_screens.dm"
 #include "code\modules\fallout\misc\overlays.dm"
 #include "code\modules\fallout\misc\radiation.dm"
 #include "code\modules\fallout\misc\scope_screens.dm"

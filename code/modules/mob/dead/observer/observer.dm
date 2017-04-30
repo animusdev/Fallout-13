@@ -243,7 +243,7 @@ Works together with spawning an observer, noted above.
 */
 
 /mob/proc/ghostize(can_reenter_corpse = 1)
-	if(key)
+	if(key && client.holder)
 		if(!cmptext(copytext(key,1,2),"@")) // Skip aghosts.
 			var/mob/dead/observer/ghost = new(src)	// Transfer safety to observer spawning proc.
 			SStgui.on_transfer(src, ghost) // Transfer NanoUIs.
@@ -258,6 +258,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "OOC"
 	set name = "Ghost"
 	set desc = "Relinquish your life and enter the land of the dead."
+
+	if(!client.holder)
+		to_chat(src, "Sorry, you can't be a ghost. Wait for respawn.")
+		return
 
 	if(stat != DEAD)
 		succumb()
