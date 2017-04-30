@@ -71,6 +71,7 @@
 		/obj/item/weapon/kitchen/knife,
 		/obj/item/weapon/kitchen/knife/butcher,
 		/obj/item/weapon/scalpel,
+		/obj/item/weapon/shovel,
 		/obj/item/weapon/hammer,
 		/obj/item/weapon/crowbar,
 		/obj/item/weapon/screwdriver,
