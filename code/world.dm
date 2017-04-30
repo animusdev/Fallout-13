@@ -322,11 +322,12 @@ var/inerror = 0
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/K2Yxxvs\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
+	s += "<img src='http://i.imgur.com/UrVghOE.gif'><br>"
 
 	var/list/features = list()
 
@@ -344,9 +345,6 @@ var/inerror = 0
 	if (config && config.allow_vote_mode)
 		features += "vote"
 
-	if (config && config.allow_ai)
-		features += "AI allowed"
-
 	var/n = 0
 	for (var/mob/M in player_list)
 		if (M.client)
@@ -358,7 +356,7 @@ var/inerror = 0
 		features += "~[n] player"
 
 	if (!host && config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+		features += "hosted by <b>Barsik</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
