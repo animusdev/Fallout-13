@@ -7,7 +7,7 @@ var/datum/subsystem/planter/SSplanter
 	wait = 300
 
 /datum/subsystem/planter/New()
-	NEW_SS_GLOBAL(SSsunlight)
+	NEW_SS_GLOBAL(SSplanter)
 
 /datum/subsystem/planter/Initialize(timeofday, zlevel)
 	var/plants_count = (world.maxx * world.maxy * world.maxz) * 0.01
@@ -29,7 +29,7 @@ var/datum/subsystem/planter/SSplanter
 
 /datum/subsystem/planter/proc/generate_trees()
 	for(var/turf/T in get_area_turfs(/area/f13/forest))
-		if(T.flags & CAN_HAVE_NATURE && prob(10) && !(locate(/obj) in T))
+		if(T.flags & CAN_HAVE_NATURE && prob(3) && !(locate(/obj) in T))
 			var/cont = 0
 			for(var/T2 in RANGE_TURFS(1,T))
 				if(locate(/obj/structure/flora/tree) in T2)

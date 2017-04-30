@@ -13,6 +13,7 @@
 	icon_state = "error"
 	icon = 'icons/fallout/turfs/areas.dmi'
 	has_gravity = 1
+	requires_power = 0
 
 //Wasteland generic areas
 

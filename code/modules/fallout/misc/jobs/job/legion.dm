@@ -45,7 +45,7 @@
 	status = "centurion"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the legate"
+	supervisors = "the Legate"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -78,7 +78,7 @@
 	status = "vexillarius"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the legate"
+	supervisors = "the Legate"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -111,7 +111,7 @@
 	status = "decanus"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the centurion"
+	supervisors = "the Centurion"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -145,7 +145,7 @@
 	status = "prime"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the centurion"
+	supervisors = "the Centurion"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE

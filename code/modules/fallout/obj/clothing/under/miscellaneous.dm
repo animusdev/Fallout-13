@@ -347,15 +347,16 @@
 
 /obj/item/clothing/under/f13/followers
 	name = "followers outfit "
-	desc = "A white shirt with a pair of brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
+	desc = "A white shirt with a pair of dark brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
 	icon_state = "followers"
 	item_state = "bar_suit"
 	item_color = "followers"
+	allowed = list(/obj/item/weapon/scalpel, /obj/item/weapon/surgical_drapes, /obj/item/weapon/cautery, /obj/item/weapon/hemostat, /obj/item/weapon/retractor)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/combat
 	name = "combat uniform"
-	desc = "An old combat uniform, out of use around the time of the Great War."
+	desc = "An ancient combat uniform, that went out of use around the time of the Great War."
 	icon_state = "combat"
 	item_state = "bl_suit"
 	item_color = "combat"
@@ -446,13 +447,13 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/villain
+/obj/item/clothing/under/f13/villain //Doubles as Gang Leader primary uniform for extra villainy
 	name = "green and black suit"
 	desc = "There is something evil in this suit, only a villain would wear something like that."
 	icon_state = "villain"
 	item_state = "syndicate-green"
 	item_color = "villain"
-	armor = list(melee = -10, bullet = -10, laser = -10, energy = -10, bomb = -10, bio = -10, rad = -10, fire = -10, acid = -10) //Because dying is fun.
+	armor = list(melee = -10, bullet = -10, laser = -10, energy = -10, bomb = -10, bio = -10, rad = -10, fire = -10, acid = -10) //Because dying is fun. Especially for evil masterminds.
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/gentlesuit

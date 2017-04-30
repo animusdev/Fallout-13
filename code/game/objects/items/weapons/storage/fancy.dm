@@ -112,7 +112,7 @@
 ////////////
 /obj/item/weapon/storage/fancy/cigarettes
 	name = "Big Boss Cigarettes"
-	desc = "A small box containing pre-War cigarettes.<br>Its valued by merchants for average rarity and high demand.<br>This box is labeled with the name of a brand or company, \"Big Boss\" .<br>An image of a snake is seen on both sides of the box."
+	desc = "A small box containing pre-War cigarettes.<br>Its valued by merchants for moderate rarity, solid quality and high demand.<br>This box is labeled with the name of a brand or company, \"Big Boss\" .<br>An image of a snake is seen on both sides of the box."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig"
 	item_state = "cigpacket"
@@ -185,7 +185,7 @@
 
 /obj/item/weapon/storage/fancy/cigarettes/tortoise
 	name = "Grey Tortoise Cigarettes"
-	desc = "A packet of six imported DromedaryCo cancer sticks. A label on the packaging reads, \"Wouldn't a slow death make a change?\""
+	desc = "A packet of six imported Grey Tortoise Cigarettes. A label on the packaging reads,<br>\"There is only one home to the life of a river-mussel;<br>There is only one home to the life of a tortoise;<br>There is only one shell to the soul of man: there is only one world to the spirit of our race.<br>If that world leaves its course and smashes on boulders of the great void, whose world will give us shelter?\"" //Wole Soyinka
 	icon_state = "tortoise"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift
@@ -232,7 +232,7 @@
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_myron
 	name ="Myron's Patented Cigarettes"
-	desc = "Is your weight slowing you down? Having trouble running away from hungry geckos? Can't stop stuffing your mouth? Smoke Shady Jim's Super Slims and watch all that fat burn away. Guaranteed results!"
+	desc = "Is your weight slowing you down? Having trouble running away from hungry geckos? Can't stop stuffing your mouth with pre-War junk food? Smoke Myron's Patented Cigarettes and watch all the troubles burn away. Guaranteed results!"
 	icon_state = "myron"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_myron/New()

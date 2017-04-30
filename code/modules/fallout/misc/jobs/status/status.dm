@@ -1,5 +1,5 @@
 /mob
-	var/status = "Wastelander"
+	var/status = "none"
 	var/list/allow_recipes = list()
 
 var/human_status = list()
@@ -45,8 +45,8 @@ proc/remove_everyone_from_status(status)
 	..()
 	if(can_invite_to_himself)
 		can_invite_to += "[name]"
-	if(name != "Wastelander")
-		verbs += /mob/proc/convert_to_wastelander
+	if(id != "none")
+		verbs += /mob/proc/leave_faction
 	if(can_invite_to.len)
 		verbs += /mob/proc/convert_to_status
 
@@ -73,8 +73,8 @@ mob/proc/set_status(var/status)
 
 	return 1
 
-/mob/proc/convert_to_wastelander()
-	set name = "Become Wastelander"
+/mob/proc/leave_faction()
+	set name = "Leave Faction"
 	set category = "Faction"
 	if(status == "none")
 		return
@@ -190,9 +190,9 @@ mob/proc/set_status(var/status)
 	purge_faction = "raiders"
 	color = "#FF0000"
 
-/datum/status/gang_leader
+/datum/status/gangleader
 	name = "Gang Leader"
-	id = "gang_leader"
+	id = "gangleader"
 	purge_faction = "raiders"
 	can_invite_to = list("raider")
 	color = "#FF0000"
@@ -251,3 +251,57 @@ mob/proc/set_status(var/status)
 	id = "priest_atom"
 	purge_faction = "acolytes"
 	color = "#306300"
+
+//Enclave
+
+/datum/status/colonel
+	name = "Colonel"
+	id = "colonel"
+	can_invite_to = list("encl_sergeant", "private", "volunteer")
+	purge_faction = "enclave"
+	color = "#000"
+
+/datum/status/encl_sergeant
+	name = "Sergeant"
+	id = "encl_sergeant"
+	purge_faction = "enclave"
+	color = "#000"
+
+/datum/status/private
+	name = "Private"
+	id = "private"
+	purge_faction = "enclave"
+	color = "#000"
+
+/datum/status/volunteer
+	name = "Volunteer"
+	id = "volunteer"
+	purge_faction = "enclave"
+	color = "#000"
+
+//Brotherhood
+
+/datum/status/elder
+	name = "Elder"
+	id = "elder"
+	can_invite_to = list("paladin", "knight", "initiate")
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/paladin
+	name = "Paladin"
+	id = "paladin"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/knight
+	name = "Knight"
+	id = "knight"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/initiate
+	name = "Initiate"
+	id = "initiate"
+	purge_faction = "bs"
+	color = "#13306d"

@@ -37,7 +37,7 @@
 /datum/content_pack/starter
 	name = "Starter"
 	id = "starter"
-	desc = "<b>Available to: All roles!</b><br>Everyone has these vital items, for free!<br><i>Note: All roles have listed weapons and items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
+	desc = "<b>Available to: All factions!</b><br>Everyone has these vital items, for free!<br><i>Note: All roles have listed weapons and items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
 		// Hats
@@ -84,7 +84,7 @@
 /datum/content_pack/cigarettes
 	name = "Cigarettes for Lead Developer"
 	id = "cigarettes"
-	desc = "<b>Available to: All roles!</b><br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes.<br>...<br><i>Note: World Health Organization discourages you from smoking. Inhaling any kind of smoke is bad for your health!</i>"
+	desc = "<b>Available to: All factions!</b><br>The most simple way to encourage the Lead Developer - Jackerzz aka Maxyo, is to get him a pack of cigarettes.<br>...<br><i>Note: World Health Organization discourages you from smoking. Inhaling any kind of smoke is bad for your health!</i>"
 	items = list(
 		/obj/item/weapon/storage/fancy/rollingpapers,
 		/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
@@ -100,7 +100,7 @@
 /datum/content_pack/team_fortress
 	name = "Hat simulator"
 	id = "team_fortress"
-	desc = "<b>Available to: Neutral, City and Raider roles only!</b><br>Experience power of Fallout 13 with our accurately developed hat simulation system.<br>This set includes five additional hats!"
+	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Experience power of Fallout 13 with our accurately developed hat simulation system.<br>This set includes five additional hats!"
 	items = list(
 		/obj/item/clothing/head/soft/f13/baseball,
 		/obj/item/clothing/head/f13/cowboy,
@@ -113,7 +113,7 @@
 /datum/content_pack/wardrobe
 	name = "High fashion"
 	id = "wardrobe"
-	desc = "<b>Available to: Neutral and City roles only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of pristine brown leather shoes, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: Bonus item - a dark red wasteland wanderer jacket that can be zipped up as well.</i>"
+	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of pristine brown leather shoes, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: Bonus item - a dark red wasteland wanderer jacket that can be zipped up as well.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/brownie,
 		// Uniforms
@@ -132,7 +132,7 @@
 /datum/content_pack/bard
 	name = "Musical instruments"
 	id = "bard"
-	desc = "<b>Available to: All roles!</b><br>Russian General says, :<br><i>\"I do not like rock-and-roll music. This is too loud! I like folk music, soft, nice music, huh? Polka, waltz, anything!\"</i><br><b>Six String Samurai (1998)</b>"
+	desc = "<b>Available to: All factions!</b><br>Russian General says, :<br><i>\"I do not like rock-and-roll music. This is too loud! I like folk music, soft, nice music, huh? Polka, waltz, anything!\"</i><br><b>Six String Samurai (1998)</b>"
 	items = list(
 		/obj/item/device/harmonica,
 		/obj/item/device/instrument/guitar
@@ -142,7 +142,7 @@
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor"
 	id = "trooper_armor"
-	desc = "<b>Available to: NCR Trooper role only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "<b>Available to: NCR Trooper and NCR Sergeant roles only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,
@@ -169,7 +169,7 @@
 /datum/content_pack/khan
 	name = "Great Khan"
 	id = "khan"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>The glory of the Great Khans will be restored with this themed outfit set!<br>Or you can use this tribal spear to effectively defend yourself against a wildlife, at the start of the game.<br><i>Note: Great Khan jacket can be zipped up as well.</i>"
+	desc = "<b>Available to: Neutral and Raider factions only!</b><br>The glory of the Great Khans will be restored with this themed outfit set!<br>Or you can use this tribal spear to effectively defend yourself against a wildlife, at the start of the game.<br><i>Note: Great Khan jacket can be zipped up as well.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/khan,
 		/obj/item/clothing/under/pants/f13/khan,
@@ -182,7 +182,7 @@
 /datum/content_pack/super_ten
 	name = "Super 10"
 	id = "super_ten"
-	desc = "<b>Available to: All roles!</b><br>Pay-to-win pack of 10mm guns and a powerful 10 iron club."
+	desc = "<b>Available to: All factions!</b><br>Pay-to-win pack of 10mm guns and a powerful 10 iron club."
 	items = list(
 		/obj/item/weapon/golf10,
 		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
@@ -195,7 +195,7 @@
 /datum/content_pack/punk
 	name = "Punk"
 	id = "punk"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>If the game doesn't feel metal enough for you, this set of items may fix it.<br><i>Note: Punk lives!</i><br>"
+	desc = "<b>Available to: Neutral and Raider factions only!</b><br>If the game doesn't feel metal enough for you, this set of items may fix it.<br><i>Note: Punk lives!</i><br>"
 	items = list(
 		/obj/item/clothing/shoes/f13/military/diesel,
 		/obj/item/clothing/shoes/f13/military/female/diesel,
@@ -208,7 +208,7 @@
 /datum/content_pack/off
 	name = "OFF"
 	id = "off"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from OFF game.<br><i>Note: Purification in progress...</i><br>"
+	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from OFF game.<br><i>Note: Purification in progress...</i><br>"
 	items = list(
 		/obj/item/clothing/head/soft/black,
 		/obj/item/clothing/under/f13/batter,
@@ -221,12 +221,14 @@
 /datum/content_pack/madmax
 	name = "Mad Max"
 	id = "madmax"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from an entire Mad Max movie franchise.<br><i>Note: Steering wheel is used just like a car key.<br>The content pack may be expanded in future with new items you will get for free if you already had this pack.</i>"
+	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from an entire Mad Max movie franchise.<br><i>Note: Steering wheel is used just like a car key.<br>The content pack may be expanded in future with new items you will get for free if you already had this pack.</i>"
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
+		/obj/item/clothing/suit/f13/mfp/raider,
 		/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
 		/obj/item/weapon/gun/ballistic/shotgun/trail,
 		/obj/item/clothing/head/f13/safari,
+		/obj/item/clothing/under/pants/f13/warboy,
 		/obj/item/key/buggy/wheel
 		)
 	price = 600
@@ -234,7 +236,7 @@
 /datum/content_pack/doom
 	name = "Doom"
 	id = "doom"
-	desc = "<b>Available to: Neutral and Raider roles only!</b><br>Carefully selected items from Doom game.<br><i>Note: Union Aerospace Corporation welcomes you aboard a shuttle leaving Earth on the way to Mars. Please fasten your seatbelts and have a safe flight!</i>"
+	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from Doom game.<br><i>Note: Union Aerospace Corporation welcomes you aboard a shuttle leaving Earth on the way to Mars. Please fasten your seatbelts and have a safe flight!</i>"
 	items = list(
 		/obj/item/clothing/head/helmet/f13/doom,
 		/obj/item/clothing/suit/armor/f13/doom,

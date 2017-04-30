@@ -66,3 +66,6 @@
 	for (var/obj/item/I in mannequin.get_equipped_items())
 		mannequin.unEquip(I, TRUE)
 		PlaceInPool(I, FALSE)
+	for (var/obj/item/I in mannequin.held_items)
+		mannequin.unEquip(I, TRUE)
+		PlaceInPool(I, FALSE)

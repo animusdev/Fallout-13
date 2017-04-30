@@ -2,13 +2,13 @@
 	title = "General"
 	desc = "No description."
 	flag = GENERAL
-	department_head = list("NCR command")
+	department_head = list("NCR Command HQ")
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "ncr_general"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the NCR command"
+	supervisors = "the NCR Command HQ"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -21,7 +21,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/general
-	name = "NCR General"
+	name = "General"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -47,7 +47,7 @@
 	status = "ncr_sergeant"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the general"
+	supervisors = "the General"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -60,7 +60,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/sergeant
-	name = "NCR Sergeant"
+	name = "Sergeant"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -79,13 +79,13 @@
 	title = "Veteran Ranger"
 	desc = "No description."
 	flag = RANGER
-	department_head = list("NCR command")
+	department_head = list("NCR Command HQ")
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "vranger"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the NCR command"
+	supervisors = "the NCR Command HQ"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 
@@ -149,6 +149,7 @@
 	/obj/item/ammo_box/magazine/m10mm_adv = 2, \
 	/obj/item/device/radio = 1)
 */
+
 /datum/job/trooper
 	title = "Trooper"
 	desc = "No description."
@@ -159,7 +160,7 @@
 	status = "trooper"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the general"
+	supervisors = "the General"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
 

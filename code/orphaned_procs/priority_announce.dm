@@ -1,25 +1,25 @@
-/proc/priority_announce(text, title = "", sound = 'sound/AI/attention.ogg', type)
+/proc/priority_announce(text, title = "", sound = 'sound/f13music/quest.ogg', type)
 	if(!text)
 		return
 
 	var/announcement
 
 	if(type == "Priority")
-		announcement += "<h1 class='alert'>Priority Announcement</h1>"
+		announcement += "<h1 class='alert'>Emergency Broadcast</h1>"
 		if (title && length(title) > 0)
 			announcement += "<br><h2 class='alert'>[html_encode_ru(title)]</h2>"
 	else if(type == "Captain")
-		announcement += "<h1 class='alert'>Captain Announces</h1>"
-		news_network.SubmitArticle(text, "Captain's Announcement", "Station Announcements", null)
+		announcement += "<h1 class='alert'>President's speech:</h1>"
+		news_network.SubmitArticle(text, "President", "Wasteland Chronicle", null)
 
 	else
-		announcement += "<h1 class='alert'>[command_name()] Update</h1>"
+		announcement += "<h1 class='alert'>[command_name()]</h1>"
 		if (title && length(title) > 0)
 			announcement += "<br><h2 class='alert'>[html_encode_ru(title)]</h2>"
 		if(title == "")
-			news_network.SubmitArticle(text, "Central Command Update", "Station Announcements", null)
+			news_network.SubmitArticle(text, "radio broadcast stenography", "Wasteland Chronicle", null)
 		else
-			news_network.SubmitArticle(title + "<br><br>" + text, "Central Command", "Station Announcements", null)
+			news_network.SubmitArticle(title + "<br><br>" + text, "radio broadcast stenography", "Wasteland Chronicle", null)
 
 	announcement += "<br><span class='alert'>[html_encode_ru(text)]</span><br>"
 	announcement += "<br>"
@@ -30,7 +30,7 @@
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				to_chat(M, sound(sound))
 
-/proc/print_command_report(text = "", title = "Central Command Update")
+/proc/print_command_report(text = "", title = "radio broadcast stenography")
 	for (var/obj/machinery/computer/communications/C in machines)
 		if(!(C.stat & (BROKEN|NOPOWER)) && C.z == ZLEVEL_STATION)
 			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper( C.loc )

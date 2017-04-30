@@ -6,7 +6,7 @@
 
 /obj/item/clothing/under/pants/f13/ghoul
 	name = "ripped pants"
-	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
+	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't get to see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
 	icon_state = "ghoul"
 	item_color = "ghoul"
 
@@ -30,6 +30,15 @@
 	flags = THICKMATERIAL
 	body_parts_covered = LEGS
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0)
+
+/obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
+	name = "war boy pants"
+	desc = "A pair of dark brown pants, perfect for the one who grabs the sun, riding to Valhalla."
+	icon_state = "warboy"
+	item_color = "warboy"
+	flags = THICKMATERIAL
+	body_parts_covered = LEGS
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 20)
 
 /obj/item/clothing/under/pants/f13/doom
 	name = "green pants"

@@ -25,3 +25,9 @@
 	..()
 	for(var/i = 0, i < 4, i++)
 		new /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human(src)
+
+/obj/structure/closet/crate/freezer
+	desc = "An old, rusted freezer, still good at keeping things cold though."
+	name = "freezer"
+	icon_state = "freezer"
+

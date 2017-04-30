@@ -82,7 +82,7 @@
 	icon_state = "eyebot"
 	item_state = "eyebot"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 60, acid = 20)
+	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 60, acid = 20)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
 	strip_delay = 50
@@ -195,7 +195,7 @@
 	desc = "A Legion decanus helmet, it's made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
-	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 30, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 40
@@ -214,7 +214,7 @@
 	desc = "A metal helmet commonly worn by Caesar's Legion ranked officer - the Centurion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 30, fire = 30, acid = 30)
+	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 30, fire = 30, acid = 30)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
@@ -225,7 +225,7 @@
 	desc = "A metal helmet destined to adorn the head of Caesar's Legion ranked officer - the Legate."
 	icon_state = "leglegate"
 	item_state = "leglegate"
-	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 40, fire = 50, acid = 20)
+	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 40, fire = 50, acid = 20)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
@@ -263,7 +263,7 @@
 	desc = "This helmet helps to resist all but the strongest or most unexpected of telepathic attacks.<br>This is achieved due to technology wired into the helmet itself."
 	icon_state = "magneto"
 	item_state = "magneto"
-	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 100, fire = 30)
+	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100, fire = 30)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 10
 	strip_delay = 50
@@ -384,7 +384,7 @@
 	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era."
 	icon_state = "knight_green"
 	item_state = "knight_green"
-	armor = list(melee = 40, bullet = 20, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 30)
+	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags = null
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -412,12 +412,13 @@
 
 /obj/item/clothing/head/helmet/knight/f13/metal
 	name = "metal helmet"
+	desc = "A metal helmet forged in fire, specially for the strongest warriors of the wasteland."
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 
 /obj/item/clothing/head/helmet/knight/f13/rider
 	name = "rider helmet" //Not raider. Rider.
-	desc = "It's a fancy dark metal helmet with orange spray painted flames."
+	desc = "A fancy dark metal helmet with orange spray painted flames."
 	icon_state = "rider"
 	item_state = "rider"
 	self_weight = 1

@@ -76,7 +76,7 @@
 	CHECK_TICK
 
 	if(weapon)
-		H.put_in_active_hand(PoolOrNew(weapon,H))
+		H.put_in_r_hand(PoolOrNew(weapon,H))
 		H.quick_equip()
 	CHECK_TICK
 

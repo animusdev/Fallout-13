@@ -10,7 +10,7 @@
 	icon_state = "retropolice"
 	item_state = "fedora"
 
-/obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max III
+/obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max 3 1985
 	name = "pith helmet"
 	desc = "A lightweight cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
 	icon_state = "safari"

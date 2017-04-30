@@ -1,8 +1,13 @@
 //Fallout 13 shoes directory
 
+/obj/item/clothing/shoes/combat/light //I'm a ninja!
+	name = "light combat boots"
+	self_weight = 0.1
+	flags = NOSLIP | QUIETSTEPSOUND
+
 /obj/item/clothing/shoes/f13
 	icon = 'icons/fallout/clothing/shoes.dmi'
-	self_weight = 0.1
+	self_weight = 0.5
 
 /obj/item/clothing/shoes/f13/rag
 	name = "footcloths"
@@ -33,7 +38,7 @@
 	desc = "A pair of leather boots reinforced with metal plates.<br>These are commonly worn by Great Khans raiders."
 	icon_state = "legionmetal" //It's that simple
 	item_state = "legionmetal"
-	self_weight = 0.5
+	self_weight = 1
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military
@@ -43,11 +48,11 @@
 	item_state = "military"
 	permeability_coefficient = 0.01
 	flags = NOSLIP
-	self_weight = 0.8
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
-	strip_delay = 50
+	put_on_delay = 30
+	strip_delay = 40
 	resistance_flags = 0
-	self_weight = 0.5
+	self_weight = 1
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/f13/military/diesel
@@ -57,7 +62,6 @@
 	item_state = "diesel_m"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
-	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/f13/military/female/diesel
@@ -67,7 +71,6 @@
 	item_state = "diesel_f"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
-	self_weight = 0.6
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/f13/military/ncr
@@ -89,7 +92,7 @@
 	desc = "A pair of metal boots commonly worn by the Caesar's Legion veterans."
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
-	self_weight = 1
+	self_weight = 2
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/legionlegate
@@ -97,7 +100,7 @@
 	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
-	self_weight = 0.8
+	self_weight = 3
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 
 //Fluff
@@ -121,11 +124,6 @@
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
 	flags = NOSLIP
 	self_weight = 2
-
-/obj/item/clothing/shoes/combat/light
-	name = "light combat boots"
-	self_weight = 0.1
-	flags = NOSLIP | QUIETSTEPSOUND
 
 /obj/item/clothing/shoes/f13/doom
 	name = "mars boots"

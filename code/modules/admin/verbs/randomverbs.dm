@@ -463,7 +463,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_create_centcom_report()
 	set category = "Special Verbs"
-	set name = "Create Command Report"
+	set name = "Radio Broadcast: Transmit"
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -471,30 +471,30 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!input)
 		return
 
-	var/confirm = alert(src, "Do you want to announce the contents of the report to the crew?", "Announce", "Yes", "No")
-	if(confirm == "Yes")
-		priority_announce(input, null, 'sound/AI/commandreport.ogg')
+	var/confirm = alert(src, "Public: The message is visible for everyone. Encrypted: Can be recieved only via communication terminals.", "Radio Broadcast", "Public", "Encrypted")
+	if(confirm == "Public")
+		priority_announce(input, null, 'sound/f13music/broadcast.ogg')
 	else
-		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
+		priority_announce("A broadcast has been recorded and printed out at all functional communication terminals.", "Encrypted radio broadcast intercepted!", 'sound/f13music/broadcast.ogg')
 
-	print_command_report(input,"[confirm=="Yes" ? "" : "Classified "][command_name()] Update")
+	print_command_report(input,"[confirm=="Yes" ? "" : "Encrypted message from "][command_name()]")
 
-	log_admin("[key_name(src)] has created a command report: [input]")
-	message_admins("[key_name_admin(src)] has created a command report")
+	log_admin("[key_name(src)] has transmitted a radio broadcast: [input]")
+	message_admins("[key_name_admin(src)] has transmitted a radio broadcast")
 	feedback_add_details("admin_verb","CCR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_change_command_name()
 	set category = "Special Verbs"
-	set name = "Change Command Name"
+	set name = "Radio Broadcast: Rename"
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
-	var/input = input(usr, "Please input a new name for Central Command.", "What?", "") as text|null
+	var/input = input(usr, "Please input a new title for world radio broadcasts.", "Radio Broadcast: Rename", "") as text|null
 	if(!input)
 		return
 	change_command_name(input)
-	message_admins("[key_name_admin(src)] has changed Central Command's name to [input]")
-	log_admin("[key_name(src)] has changed the Central Command name to: [input]")
+	message_admins("[key_name_admin(src)] has changed a world radio transmitter name to: [input]")
+	log_admin("[key_name(src)] has changed a world radio transmitter name to: [input]")
 
 /client/proc/cmd_admin_delete(atom/O as obj|mob|turf in world)
 	set category = "Admin"
