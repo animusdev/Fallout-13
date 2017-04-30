@@ -98,6 +98,8 @@
 		real_name = name
 	if(!loc)
 		stack_trace("Simple animal being instantiated in nullspace")
+	if(stat != DEAD)
+		live_hostiles++
 
 /mob/living/simple_animal/Login()
 	if(src && src.client)
@@ -325,6 +327,7 @@
 		icon_state = icon_dead
 		density = 0
 		lying = 1
+	live_hostiles--
 	..()
 
 /mob/living/simple_animal/proc/CanAttack(atom/the_target)
@@ -356,6 +359,7 @@
 		density = initial(density)
 		lying = 0
 		. = 1
+		live_hostiles++
 
 /mob/living/simple_animal/proc/make_babies() // <3 <3 <3
 	if(gender != FEMALE || stat || next_scan_time > world.time || !childtype || !animal_species || ticker.current_state != GAME_STATE_PLAYING)

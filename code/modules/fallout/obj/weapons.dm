@@ -239,3 +239,12 @@
 		var/mob/living/L = target
 		L.Stun(3)
 		shock(L)
+
+/obj/item/weapon/pickaxe/rust
+	name = "rusty pickaxe"
+	desc = "This pickaxe has seen better days."
+	icon = 'icons/fallout/objects/mining.dmi'
+	icon_state = "pickaxe_rust"
+	force = 12
+	throwforce = 8
+	digspeed = 45
