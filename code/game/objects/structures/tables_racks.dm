@@ -269,6 +269,7 @@
 	icontype = "bartable"
 	obj_integrity = 120
 	max_integrity = 120
+	can_crawled = 0
 	canSmoothWith = list(/obj/structure/table/wood/bar)
 
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
