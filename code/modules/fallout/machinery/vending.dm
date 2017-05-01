@@ -13,7 +13,7 @@
 	brightness_on = 2
 	light_color = LIGHT_COLOR_RED
 
-/obj/machinery/vending/nukacolavend/New()
+/obj/machinery/vending/nukacolavend/initialize()
 	desc = pick("You can barely read the engravement on the side of a machine:<br>\"Warning: If you tamper with this unit you will have to answer to the Nuka-Cola Corporation.\"","The machine makes you nostalgic for the best days of your childhood.<br>What if there are still some bottles left? Or maybe not.","If there is anything left from humanity after all the decades of rage and stagnation, that sure is Nuka-Cola.")
 	..()
 
@@ -26,7 +26,7 @@
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 10)
 	refill_canister = /obj/item/weapon/vending_refill/nukacolavend/full
 
-/obj/machinery/vending/nukacolavend/full/New()
+/obj/machinery/vending/nukacolavend/full/initialize()
 	desc = pick("You can clearly read the engravement on the side of a machine:<br>\"Warning: If you tamper with this unit you will have to answer to the Nuka-Cola Corporation.\"","This particular machine seems to be in a better condition than something you could see out in the wastes.<br>What if there are still some bottles left?","Cola. Cola never changes.<br>The Romans waged war because they didn't try Nuka-Cola. Spain built an empire from its lust for everything but Nuka-Cola.<br>All the empires on Earth have fallen, but Cola never changes.")
 	..()
 

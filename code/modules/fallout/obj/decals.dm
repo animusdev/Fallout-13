@@ -14,7 +14,7 @@
 	rad_light_range = 4
 	rad_severity = 10
 
-/obj/effect/decal/goo/New()
+/obj/effect/decal/goo/initialize()
 	..()
 	icon_state = "goo[rand(1,13)]"
 	START_PROCESSING(SSobj, src)

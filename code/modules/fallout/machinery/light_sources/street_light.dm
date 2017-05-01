@@ -15,7 +15,7 @@
 	light_type = null
 	light_color = LIGHT_COLOR_YELLOW
 
-/obj/machinery/light/street/New()
+/obj/machinery/light/street/initialize()
 	if(dir == 1)
 		pixel_x = -40
 	..()

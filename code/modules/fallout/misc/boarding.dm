@@ -9,7 +9,7 @@
 	var/planks = 3
 	var/maxplanks = 3
 
-/obj/structure/barricade/wooden/planks/New()
+/obj/structure/barricade/wooden/planks/initialize()
 	..()
 	checkplanks()
 	max_integrity = maxplanks*30
@@ -43,6 +43,6 @@
 	if(obj_integrity <= 0)
 		qdel(src)
 
-/obj/structure/barricade/wooden/planks/pregame/New() //Place these in the map maker to have a bit of randomization with boarded up windows/doors
+/obj/structure/barricade/wooden/planks/pregame/initialize() //Place these in the map maker to have a bit of randomization with boarded up windows/doors
 	planks = rand(1,maxplanks)
 	..()
