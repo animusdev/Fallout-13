@@ -59,7 +59,6 @@
 	if(!gibbed)
 		dead_mob_list += src
 	to_chat(src, "Wait for respawn at look at this screen. OOC -> Respawn.")
-	overlay_fullscreen("death", /obj/screen/fullscreen/death)
 	paralysis = 0
 	stunned = 0
 	weakened = 0
@@ -74,4 +73,5 @@
 	update_canmove()
 	med_hud_set_health()
 	med_hud_set_status()
+	overlay_fullscreen("death", /obj/screen/fullscreen/death)
 	return TRUE
