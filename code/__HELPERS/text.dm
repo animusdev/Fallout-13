@@ -636,3 +636,19 @@ proc/FormatText(text, list/data)
 
 /proc/quoter(text)
 	return replacetext(text, "\"", "&quot;")
+
+/proc/macro2html(text)
+	var/static/regex/text_macro = new("(\\xFF.)(.*)$")
+	return text_macro.Replace(text, /proc/replace_text_macro)
+
+/proc/replace_text_macro(match, code, rest)
+	var/regex/text_macro = new("(\\xFF.)(.*)$")
+	switch(code)
+		if("\red")
+			return "<span class='warning'>[text_macro.Replace(rest, /proc/replace_text_macro)]</span>"
+		if("\blue", "\green")
+			return "<span class='notice'>[text_macro.Replace(rest, /proc/replace_text_macro)]</span>"
+		if("\b")
+			return "<b>[text_macro.Replace(rest, /proc/replace_text_macro)]</b>"
+		else
+			return text_macro.Replace(rest, /proc/replace_text_macro)

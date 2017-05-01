@@ -23,6 +23,7 @@
 	var/hard_open = 1
 	var/moving = 0
 	var/material_type = /obj/item/stack/sheet/mineral/wood
+	var/can_disasemble = 0
 	var/open_sound = 'sound/machines/door_open.ogg'
 	var/close_sound = 'sound/machines/door_close.ogg'
 	var/opening_time = 2
@@ -86,7 +87,7 @@
 		for(var/obj/structure/barricade/wooden/planks/P in src.loc)
 			P.attackby(I, user, params)
 			return
-	if(istype(I, /obj/item/weapon/screwdriver) && do_after(user, 5, target = src))
+	if(istype(I, /obj/item/weapon/screwdriver) && can_disasemble && do_after(user, 5, target = src))
 		for(var/i = 1, i <= material_count, i++)
 			new material_type(get_turf(src))
 		user << "<span class='notice'>You disassemble [name].</span>"
@@ -96,6 +97,8 @@
 	attack_hand(user)
 
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
+	if(moving)
+		return 0
 	if(isliving(user))
 		var/mob/living/M = user
 		if(/obj/structure/barricade in src.loc)
@@ -146,14 +149,17 @@
 /obj/structure/simple_door/house
 	icon_state = "house"
 	door_type = "house"
+	can_disasemble = 1
 
 /obj/structure/simple_door/interior
 	icon_state = "interior"
 	door_type = "interior"
+	can_disasemble = 1
 
 /obj/structure/simple_door/room
 	icon_state = "room"
 	door_type = "room"
+	can_disasemble = 1
 
 /obj/structure/simple_door/dirtyglass
 	icon_state = "dirtyglass"
@@ -180,6 +186,7 @@
 /obj/structure/simple_door/wood
 	icon_state = "wood"
 	door_type = "wood"
+	can_disasemble = 1
 
 /obj/structure/simple_door/metal
 	name = "metal door"
@@ -197,6 +204,7 @@
 	icon_state = "store"
 	door_type = "store"
 	opaque = 0
+	can_disasemble = 1
 
 /obj/structure/simple_door/metal/barred
 	name = "barred door"

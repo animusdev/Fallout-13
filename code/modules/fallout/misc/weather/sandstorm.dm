@@ -1,19 +1,19 @@
 var/stormactive=0
 proc/sandstorm(var/position)
-	for(var/area/A in block(locate(1,1,1),locate(250,250,1)))
+	for(var/area/A in world)
 		if(A.outdoors && !stormactive)
 			for(var/mob/M in view(10,A))
 				M << sound('sound/f13effects/sandstorm_warning.ogg')
-				M << "A sudden gust of wind rises particles of sand and dust all around you."
+				to_chat(M,"A sudden gust of wind rises particles of sand and dust all around you.")
 				spawn(100)
-					M << "The clouds on the horizon get darker... The storm is coming! I better find a safe shelter now."
+					to_chat(M,"The clouds on the horizon get darker... The storm is coming! I better find a safe shelter now.")
 					spawn(600)
 						lightingsandloop(A,M)
 						stormactive=1
 						M << sound('sound/f13effects/thunder_distant_1.ogg')
 						var/turf/T
 						for(T in view(1,A))
-							T.overlays += icon('icons/fallout/misc/weather.dmi',"sandstorm")
+							T.overlays += 'icons/fallout/misc/weather.dmi'
 						spawn(400)
 							M << sound('sound/f13effects/thunder_distant_2.ogg')
 							spawn(200)
@@ -24,7 +24,8 @@ proc/sandstorm(var/position)
 										M << sound('sound/f13effects/sandstorm_transition.ogg')
 										spawn(200)
 											M << sound('sound/f13effects/thunder_distant_1.ogg')
-											T.overlays -= icon('icons/fallout/misc/weather.dmi',"sandstorm")
+											T.overlays -= 'icons/fallout/misc/weather.dmi'
+											stormactive=0
 											return(1)
 
 
@@ -54,15 +55,16 @@ proc/lightingsandloop(var/area/A,var/mob/M)
 proc/lightningstrike(var/area/A,var/mob/M,var/turf/T,var/L)
 	if(A.outdoors)
 		var/list/ls=pick('sound/f13effects/thunder_1.ogg','sound/f13effects/thunder_2.ogg','sound/f13effects/thunder_3.ogg','sound/f13effects/thunder_4.ogg')
+		var/P=icon('icons/effects/224x224.dmi',pick("lightning1","lightning2","lightning3","lightning4"))
 		for(T in view(1,A))
-			T.overlays += icon('icons/effects/224x224.dmi',pick("lightning1","lightning2","lightning3","lightning4"))
+			T.overlays += P
 			spawn(25)
-				T.overlays-= icon('icons/effects/224x224.dmi',pick("lightning1","lightning2","lightning3","lightning4"))
+				T.overlays-=P
 			for(M in view(7,T))
 				M << sound(ls)
 				for(M in view(1,T))
 					if(M.ckey)
-						M << "You have been hit by lightning stopping your heart."
+						to_chat(M,"You have been hit by lightning stopping your heart.")
 					M.death()
 				spawn(1)
 					return

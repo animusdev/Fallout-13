@@ -123,11 +123,11 @@
 
 	if(src.status != "Wastelander" && !skipface)
 		var/datum/status/S = get_status_datum(src.status)
-		if(S != null && S.name != "Wastelander")
+		if(S != null && S.id != "none")
 			msg += "[t_He] [t_is] <span style='color: [S.color]'>[S.name]</span>"
 			if(src.social_faction && !istype(src.social_faction, /list))
 				var/datum/f13_faction/F = get_faction_datum(src.social_faction)
-				if(F != null && F.name != "Wasteland")
+				if(F != null && F.id != "none")
 					msg += " of <span style='color: [F.color]'>[F.name]</span>"
 			msg += "\n"
 

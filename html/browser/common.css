@@ -80,7 +80,7 @@ a.white:hover
 }
 
 .have {
-	border-color: #8f8a21 !important;
+	background: #082C08 !important;
 }
 
 a.icon, .linkOn.icon, .linkOff.icon
@@ -451,11 +451,11 @@ div {
 	color: #000 !important;
 }
 .middle_job {
-	background-color: #082C08 !important;
+	background-color: #124b28 !important;
 	color: #146D14 !important;
 }
 .high_job {
-	background-color: #146D14 !important;
+	background-color: #0bcc62 !important;
 	color: #082C08 !important;
 }
 .unavailable_job {
@@ -470,7 +470,6 @@ div {
 	left: 10px;
 	top: 40px;
 	text-shadow: 0 0 0;
-	text-transform: capitalize;
 }
 .right_table {
 	position: absolute;
@@ -480,7 +479,6 @@ div {
 	left: 25%;
 	top: 40px;
 	text-shadow: 0 0 0;
-	text-transform: capitalize;
 	display: block;
 }
 ul {
