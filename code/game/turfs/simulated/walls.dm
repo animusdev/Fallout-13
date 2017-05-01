@@ -46,6 +46,8 @@
 			P.roll_and_drop(src)
 
 	var/turf/open/floor/F = ChangeTurf(plating_type)
+	if(!F)
+		return
 
 	if(devastated && prob(33))
 		F.break_tile()
