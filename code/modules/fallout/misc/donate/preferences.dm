@@ -195,7 +195,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<table width='100%'>
 			<tr>
 				<td width='75%' valign='top'>
-					<a href='?_src_=prefs;preference=name;task=random'>Random Name</a>
+					<a href='?_src_=prefs;preference=name;task=random'>&#9762; Random Name</a>
 					<a href='?_src_=prefs;preference=name'>Always Random Name: [data["r_name"]]</a>
 					<br>
 					<b>Name:</b>
@@ -219,7 +219,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<table>
 			<tr>
 				<td>
-					<a href='?_src_=prefs;preference=all;task=random'>Random Body</a>
+					<a href='?_src_=prefs;preference=all;task=random'>&#9762; Random Body</a>
 				</td>
 				<td>
 					<a href='?_src_=prefs;preference=all'>Always Random Body: [data["r_body"]]</a><br>
@@ -368,7 +368,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<hr><center>
 				<a href='?_src_=prefs;preference=load'>Undo</a>
 				<a href='?_src_=prefs;preference=save'>&#128190; Save Setup</a>
-				<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>
+				<a href='?_src_=prefs;preference=reset_all'>&#9762; Reset Setup</a>
 				</center>"}
 	CHECK_TICK
 	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
