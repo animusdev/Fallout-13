@@ -21,9 +21,8 @@ var/const/MAYOR				=(1<<13)
 //This jobs using medsci flag, cause me too lazy.
 
 var/const/COLONEL			=(1<<1)
-var/const/ENCL_SERGEANT		=(1<<2)
-var/const/ENCL_PRIVATE		=(1<<3)
-var/const/VOLUNTEER			=(1<<4)
+var/const/ENCLAVE_SERGEANT	=(1<<2)
+var/const/ENCLAVE_PRIVATE	=(1<<3)
 
 var/const/MERCENARY			=(1<<5)
 var/const/GANGLEAD			=(1<<6)
@@ -36,7 +35,6 @@ var/const/GHOUL_PRIEST		=(1<<9)
 var/const/ELDER				=(1<<1)
 var/const/PALADIN			=(1<<2)
 var/const/KNIGHT			=(1<<3)
-var/const/INITIATE			=(1<<4)
 
 //var/const/VAULT			=(1<<6)
 

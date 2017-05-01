@@ -130,6 +130,7 @@ mob/proc/set_status(var/status)
 	change_faction = 1
 	can_invite_to = list("recruit", "prime")
 	color = "#A6423B"
+
 /datum/status/vexillarius
 	name = "Vexillarius"
 	id = "vexillarius"
@@ -137,6 +138,7 @@ mob/proc/set_status(var/status)
 	can_invite_to = list("recruit", "prime", "decanus")
 //	craft_recipes = list(/datum/table_recipe/legion_vex_armor, /datum/table_recipe/legion_vex_helm)
 	color = "#983C36"
+
 /datum/status/centurion
 	name = "Centurion"
 	id = "centurion"
@@ -144,6 +146,7 @@ mob/proc/set_status(var/status)
 	can_invite_to = list("recruit", "prime", "decanus", "vexillarius")
 //	craft_recipes = list(/datum/table_recipe/legion_cent_armor, /datum/table_recipe/legion_cent_helm)
 	color = "#8D3731"
+
 /datum/status/legate
 	name = "Legate"
 	id = "legate"
@@ -257,13 +260,13 @@ mob/proc/set_status(var/status)
 /datum/status/colonel
 	name = "Colonel"
 	id = "colonel"
-	can_invite_to = list("encl_sergeant", "private", "volunteer")
+	can_invite_to = list("enclave_sergeant", "private", "volunteer")
 	purge_faction = "enclave"
 	color = "#000"
 
-/datum/status/encl_sergeant
+/datum/status/enclave_sergeant
 	name = "Sergeant"
-	id = "encl_sergeant"
+	id = "enclave_sergeant"
 	purge_faction = "enclave"
 	color = "#000"
 

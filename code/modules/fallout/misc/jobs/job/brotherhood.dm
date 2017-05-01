@@ -70,27 +70,3 @@
 
 /datum/outfit/job/knight
 	name = "Knight"
-
-/datum/job/initiate
-	title = "Initiate"
-	desc = "No description."
-	flag = INITIATE
-	department_head = list("Elder", "Paladin")
-	department_flag = ENGSEC
-	faction = "bs"
-	status = "volunteer"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Elder, Paladin"
-	selection_color = "#ec9d9d"
-	minimal_player_age = 7
-
-	allowed_packs = list("starter", "super_ten")
-
-	outfit = /datum/outfit/job/initiate
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/initiate
-	name = "Initiate"
