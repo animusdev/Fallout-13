@@ -403,7 +403,7 @@ var/datum/subsystem/job/SSjob
 	if(!joined_late)
 		var/obj/S = null
 		for(var/obj/effect/landmark/start/sloc in start_landmarks_list)
-			if(sloc.name != rank)
+			if(sloc.name != job.title)
 				continue
 			if(locate(/mob/living) in sloc.loc)
 				continue
@@ -428,20 +428,15 @@ var/datum/subsystem/job/SSjob
 			H.forceMove(S.loc)
 
 	if(H.mind)
-		H.mind.assigned_role = rank
+		H.mind.assigned_role = job.title
 
 	if(job)
 		var/new_mob = job.equip(H)
 		if(ismob(new_mob))
 			H = new_mob
 
-	to_chat(H, "<b>You are the [rank].</b>")
-	to_chat(H, "<b>As the [rank] you answer directly to [job.supervisors].</b>")
-	if(job.req_admin_notify)
-		to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
-	if(config.minimal_access_threshold)
-		to_chat(H, "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>")
-
+	to_chat(H, "<b>You are the [job.title].</b>")
+	to_chat(H, "<b>As the [job.title] you answer directly to [job.supervisors].</b>")
 	if(job && H)
 		job.after_spawn(H)
 

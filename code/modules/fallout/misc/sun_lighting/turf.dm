@@ -1,11 +1,8 @@
 /turf/proc/is_openspace()
-	if(open_space == -1)
-		if(istype(src,/turf/closed) || has_opaque_atom)
-			open_space = 0
-		else
-			var/area/A = get_area(src)
-			open_space = A.open_space
-	return open_space
+	if(istype(src,/turf/closed) || has_opaque_atom)
+		return 0
+	var/area/A = get_area(src)
+	return A.open_space
 
 /turf/proc/has_junction_closedspace()
 	for(var/turf/T in RANGE_TURFS(1,src))
@@ -27,7 +24,6 @@
 	var/tmp/atom/movable/sunlighting_overlay/sun_lighting_overlay
 	var/tmp/list/datum/sunlighting_corner/suncorners
 	var/tmp/list/datum/sunlight_source/sun_affecting_lights
-	var/open_space = -1
 
 	var/sun_lighting_corners_initialised
 

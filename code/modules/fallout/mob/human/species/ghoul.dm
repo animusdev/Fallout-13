@@ -35,7 +35,7 @@
 	name = "Glowing Ghoul"
 	id = "glowing ghoul"
 	limbs_id = "glowghoul"
-	roundstart = 1
+	roundstart = 0
 	armor = -30
 	speedmod = 0.5
 	brutemod = 1.3
