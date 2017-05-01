@@ -18,10 +18,11 @@ var/datum/subsystem/content/SScontent
 /datum/subsystem/content/New()
 	NEW_SS_GLOBAL(SScontent)
 
-/datum/subsystem/content/Initialize(timeofday)
+/datum/subsystem/content/Initialize(start_timeofday)
 	system_state = check_connection()
 	load_content_packs()
 	update_all_data()
+	..()
 
 /datum/subsystem/content/fire(resumed = 0)
 	system_state = check_connection()

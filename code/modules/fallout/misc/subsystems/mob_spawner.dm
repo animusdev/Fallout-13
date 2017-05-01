@@ -18,6 +18,7 @@ var/global/live_hostiles = 0
 			spawners += spawner
 		else
 			qdel(spawner)
+	..()
 
 /datum/subsystem/mob_spawner/fire()
 	if(!spawners || !spawners.len)

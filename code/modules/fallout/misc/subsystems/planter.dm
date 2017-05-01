@@ -17,6 +17,7 @@ var/datum/subsystem/planter/SSplanter
 			p.age = rand(1,5)
 	generate_trees()
 	generate_grass()
+	..()
 
 /datum/subsystem/planter/fire()
 	spawn_plant()
