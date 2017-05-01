@@ -97,6 +97,8 @@
 	attack_hand(user)
 
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
+	if(moving)
+		return 0
 	if(isliving(user))
 		var/mob/living/M = user
 		if(/obj/structure/barricade in src.loc)
