@@ -134,7 +134,9 @@ var/CURRENT_TICKLIMIT = TICK_LIMIT_RUNNING
 	for (var/datum/subsystem/SS in subsystems)
 		if (SS.flags & SS_NO_INIT)
 			continue
+		world.log << "Begin initialize [SS.name]"
 		SS.Initialize(world.timeofday)
+		world.log << "Finish initialize [SS.name]"
 		CHECK_TICK
 	CURRENT_TICKLIMIT = TICK_LIMIT_RUNNING
 
