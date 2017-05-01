@@ -16,11 +16,11 @@ var/datum/subsystem/mapping/SSmapping
 
 
 /datum/subsystem/mapping/Initialize(timeofday)
-//	preloadTemplates()
+	preloadTemplates()
 	// Pick a random away mission.
-//	createRandomZlevel()
+	createRandomZlevel()
 	// Generate mining.
-/*
+
 	var/mining_type = MINETYPE
 	if (mining_type == "lavaland")
 		seedRuins(list(5), config.lavaland_budget, /area/lavaland/surface/outdoors, lava_ruins_templates)
@@ -41,7 +41,6 @@ var/datum/subsystem/mapping/SSmapping
 
 	// Set up Z-level transistions.
 	setup_map_transitions()
-	*/
 	..()
 
 /* Nuke threats, for making the blue tiles on the station go RED
