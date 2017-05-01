@@ -137,7 +137,7 @@ var/CURRENT_TICKLIMIT = TICK_LIMIT_RUNNING
 		world.log << "Begin initialize [SS.name]"
 		SS.Initialize(world.timeofday)
 		world.log << "Finish initialize [SS.name]"
-		CHECK_TICK
+//		CHECK_TICK
 	CURRENT_TICKLIMIT = TICK_LIMIT_RUNNING
 
 	to_chat(world, "<span class='boldannounce'>Initializations complete!</span>")
