@@ -242,6 +242,7 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 			message = replacetext(message, "\proper", "")
 
 		message = replacetext(message, "\n", "<br>")
+		message = replacetext(message, "\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
 
 		message = macro2html(message)
 
