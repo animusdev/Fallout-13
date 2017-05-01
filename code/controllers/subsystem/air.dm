@@ -59,11 +59,11 @@ var/datum/subsystem/air/SSair
 	msg +=  "AS:[active_super_conductivity.len]"
 	..(msg)
 
-// OFF IT UNTIL IT USELESS
+
 /datum/subsystem/air/Initialize(timeofday)
-//	setup_allturfs()
-//	setup_atmos_machinery()
-//	setup_pipenets()
+	setup_allturfs()
+	setup_atmos_machinery()
+	setup_pipenets()
 	..()
 
 
