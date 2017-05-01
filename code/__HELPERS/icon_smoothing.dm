@@ -395,6 +395,8 @@
 
 	for(var/cdir in cardinal)
 		var/turf/T = get_step(src,cdir)
+		(!T)
+			continue
 		for(var/a_type in canSmoothWith)
 			var/A = locate(a_type) in T
 			if(A || T.type == a_type)
