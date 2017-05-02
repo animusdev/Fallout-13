@@ -15,9 +15,12 @@
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	required_items = list(
+	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/recon,
 	/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-	/obj/item/clothing/head/helmet/power_armor/t45d
+	/obj/item/clothing/head/helmet/power_armor/t45d,
+	/obj/item/weapon/gun/energy/laser/rifle/tri,
+	/obj/item/weapon/twohanded/superhammer
 	)
 
 	denied_items = list(
@@ -53,15 +56,15 @@
 
 /datum/job/paladin
 	title = "Paladin"
-	desc = "No description."
+	desc = "A guardian, the keeper of peace."
 	flag = PALADIN
-	department_head = list("Elder")
+	department_head = list("elder")
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "paladin"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "elder"
+	supervisors = "the Elder"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
@@ -69,17 +72,52 @@
 
 	outfit = /datum/outfit/job/paladin
 
+	required_items = list(
+	/obj/item/clothing/under/f13/recon,
+	/obj/item/weapon/gun/energy/laser/pistol,
+	/obj/item/weapon/gun/energy/laser/rifle/aer13,
+	/obj/item/weapon/twohanded/superhammer
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
 	access = list()
 	minimal_access = list()
 
 /datum/outfit/job/paladin
 	name = "Paladin"
+	backpack = null
+	satchel = null
+	gloves = /obj/item/clothing/gloves/f13/military
+	uniform = /obj/item/clothing/under/f13/combat
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
+	head = /obj/item/clothing/head/helmet/power_armor/t45d
+	belt = /obj/item/weapon/storage/belt/military/army
+	weapon = /obj/item/weapon/gun/energy/laser/rcw
+	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
+	/obj/item/device/radio = 1)
 
 /datum/job/knight
 	title = "Knight"
-	desc = "No description."
+	desc = "Bringer of the light."
 	flag = KNIGHT
-	department_head = list("Elder", "Paladin")
+	department_head = list("elder", "paladin")
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "knight"
@@ -91,6 +129,30 @@
 
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
+	required_items = list(
+	/obj/item/clothing/under/f13/recon,
+	/obj/item/weapon/gun/energy/laser/pistol,
+	/obj/item/weapon/twohanded/largehammer
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+
 	outfit = /datum/outfit/job/knight
 
 	access = list()
@@ -98,3 +160,14 @@
 
 /datum/outfit/job/knight
 	name = "Knight"
+	backpack = null
+	satchel = null
+	gloves = /obj/item/clothing/gloves/f13/military
+	uniform = /obj/item/clothing/under/f13/combat
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
+	head = /obj/item/clothing/head/helmet/power_armor/t45d
+	belt = /obj/item/weapon/storage/belt/military/army
+	weapon = /obj/item/weapon/gun/energy/laser/rifle
+	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \
+	/obj/item/device/radio = 1)

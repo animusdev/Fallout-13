@@ -16,7 +16,8 @@
 
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/power_armor/shocktrooper,
-	/obj/item/clothing/head/helmet/power_armor/shocktrooper
+	/obj/item/clothing/head/helmet/power_armor/shocktrooper,
+	/obj/item/weapon/gun/energy/plasma
 	)
 
 	denied_items = list(
@@ -45,6 +46,7 @@
 	name = "Colonel"
 	backpack = null
 	satchel = null
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	shoes = /obj/item/clothing/shoes/f13/military
 	suit = /obj/item/clothing/suit/f13/autumn
@@ -73,7 +75,8 @@
 	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/under/f13/dbdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/superadvanced,
-	/obj/item/clothing/head/helmet/power_armor/superadvanced
+	/obj/item/clothing/head/helmet/power_armor/superadvanced,
+	/obj/item/weapon/gun/energy/plasma
 	)
 
 	denied_items = list(
@@ -102,6 +105,7 @@
 	name = "Enclave Segeant"
 	backpack = null
 	satchel = null
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	shoes = /obj/item/clothing/shoes/f13/military
 	suit = null
@@ -130,7 +134,8 @@
 	required_items = list(
 	/obj/item/clothing/under/f13/dbdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/advanced,
-	/obj/item/clothing/head/helmet/power_armor/advanced
+	/obj/item/clothing/head/helmet/power_armor/advanced,
+	/obj/item/weapon/gun/energy/plasma/pistol
 	)
 
 	denied_items = list(
@@ -159,6 +164,7 @@
 	name = "Enclave Private"
 	backpack = null
 	satchel = null
+	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/bdu
 	shoes = /obj/item/clothing/shoes/f13/military
 	belt = /obj/item/weapon/storage/belt/military/army
