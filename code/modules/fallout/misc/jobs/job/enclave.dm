@@ -1,87 +1,28 @@
 /datum/job/colonel
 	title = "Colonel"
-	desc = "No description."
+	desc = "An actual American patriot.<br>You live by the principle that Main Goal is more important, than means of achieving it."
 	flag = COLONEL
-	department_head = list("Enclave command")
+	department_head = list("Enclave command HQ")
 	department_flag = MEDSCI
 	faction = "enclave"
 	status = "colonel"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Enclave command"
-	selection_color = "#ec9d9d"
-	minimal_player_age = 7
-
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
-
-	outfit = /datum/outfit/job/colonel
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/colonel
-	name = "Colonel"
-
-
-/datum/job/enclave_sergeant
-	title = "Sergeant"
-	desc = "No description."
-	flag = ENCLAVE_SERGEANT
-	department_head = list("Colonel")
-	department_flag = MEDSCI
-	faction = "enclave"
-	status = "enclave_sergeant"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Colonel"
-	selection_color = "#ec9d9d"
-	minimal_player_age = 7
-
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
-
-	outfit = /datum/outfit/job/enclave_sergeant
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave_sergeant
-	name = "Enclave Segeant"
-
-/datum/job/enclave_private
-	title = "Private"
-	desc = "No description."
-	flag = ENCLAVE_PRIVATE
-	department_head = list("Colonel", "Sergeant")
-	department_flag = MEDSCI
-	faction = "enclave"
-	status = "private"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Colonel, sergeant"
+	supervisors = "the Enclave command HQ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	required_items = list(
-	/obj/item/clothing/shoes/f13/tan,
-	/obj/item/clothing/shoes/f13/explorer,
-	/obj/item/clothing/under/f13/mercadv,
-	/obj/item/clothing/under/f13/female/mercadv,
-	/obj/item/clothing/under/f13/female/merccharm,
-	/obj/item/clothing/under/f13/doctor,
-	/obj/item/clothing/under/f13/female/doctor,
-	/obj/item/clothing/under/f13/bodyguard,
-	/obj/item/clothing/suit/f13/duster,
-	/obj/item/clothing/suit/armor/f13/kit,
-	/obj/item/clothing/suit/armor/f13/leatherarmor,
-	/obj/item/clothing/suit/armor/f13/bmetalarmor,
-	/obj/item/clothing/head/helmet/f13/tribal,
-	/obj/item/clothing/head/helmet/f13/eyebot
+	/obj/item/clothing/suit/armor/f13/power_armor/shocktrooper,
+	/obj/item/clothing/head/helmet/power_armor/shocktrooper
 	)
 
 	denied_items = list(
 	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
 	/obj/item/clothing/under/pants/f13/ghoul,
 	/obj/item/clothing/under/pants/f13/cloth,
 	/obj/item/clothing/under/pants/f13/caravan,
@@ -91,6 +32,121 @@
 	/obj/item/clothing/under/f13/settler,
 	/obj/item/clothing/under/f13/brahmin,
 	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+	outfit = /datum/outfit/job/colonel
+
+	access = list()
+	minimal_access = list()
+
+/datum/outfit/job/colonel
+	name = "Colonel"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/enclave_officer
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = /obj/item/clothing/suit/f13/autumn
+	belt = /obj/item/weapon/storage/belt/military/army
+	weapon = /obj/item/weapon/gun/energy/plasma/glock
+	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
+	/obj/item/device/radio = 1)
+
+/datum/job/enclave_sergeant
+	title = "Sergeant"
+	desc = "A loyal soldier.<br>You trust your commander, and orders from above - it's just about time to make America great again!"
+	flag = ENCLAVE_SERGEANT
+	department_head = list("colonel")
+	department_flag = MEDSCI
+	faction = "enclave"
+	status = "enclave_sergeant"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Colonel"
+	selection_color = "#ec9d9d"
+	minimal_player_age = 7
+
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/clothing/under/f13/bdu,
+	/obj/item/clothing/under/f13/dbdu,
+	/obj/item/clothing/suit/armor/f13/power_armor/superadvanced,
+	/obj/item/clothing/head/helmet/power_armor/superadvanced
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+	outfit = /datum/outfit/job/enclave_sergeant
+
+	access = list()
+	minimal_access = list()
+
+/datum/outfit/job/enclave_sergeant
+	name = "Enclave Segeant"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/enclave_officer
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = null
+	head = /obj/item/clothing/head/soft/f13/enclave
+	belt = /obj/item/weapon/storage/belt/military/army
+	weapon = /obj/item/weapon/gun/energy/plasma/pistol
+	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
+	/obj/item/device/radio = 1)
+
+/datum/job/enclave_private
+	title = "Private"
+	desc = "Enlist today."
+	flag = ENCLAVE_PRIVATE
+	department_head = list("colonel", "sergeant")
+	department_flag = MEDSCI
+	faction = "enclave"
+	status = "private"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "The Colonel"
+	selection_color = "#ec9d9d"
+	minimal_player_age = 7
+
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/clothing/under/f13/dbdu,
+	/obj/item/clothing/suit/armor/f13/power_armor/advanced,
+	/obj/item/clothing/head/helmet/power_armor/advanced
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
 	/obj/item/clothing/suit/f13/mantle_liz
 	)
 
@@ -101,3 +157,11 @@
 
 /datum/outfit/job/enclave_private
 	name = "Enclave Private"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/bdu
+	shoes = /obj/item/clothing/shoes/f13/military
+	belt = /obj/item/weapon/storage/belt/military/army
+	weapon = /obj/item/weapon/gun/energy/plasma
+	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \
+	/obj/item/device/radio = 1)

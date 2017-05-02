@@ -114,9 +114,9 @@
 /datum/content_pack/wardrobe
 	name = "High fashion"
 	id = "wardrobe"
-	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of pristine brown leather shoes, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: Bonus item - a dark red wasteland wanderer jacket that can be zipped up as well.</i>"
+	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of worn but sturdy work boots, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: Bonus item - a dark red wasteland wanderer jacket that can be zipped up as well.</i>"
 	items = list(
-		/obj/item/clothing/shoes/f13/brownie,
+		/obj/item/clothing/shoes/f13/explorer,
 		// Uniforms
 		/obj/item/clothing/under/f13/relaxedwear,
 		/obj/item/clothing/under/f13/spring,

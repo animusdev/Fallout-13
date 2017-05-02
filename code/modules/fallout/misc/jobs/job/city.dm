@@ -39,6 +39,8 @@
 
 	denied_items = list(
 	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
 	/obj/item/clothing/under/pants/f13/ghoul,
 	/obj/item/clothing/under/pants/f13/cloth,
 	/obj/item/clothing/under/pants/f13/caravan,
@@ -48,6 +50,7 @@
 	/obj/item/clothing/under/f13/settler,
 	/obj/item/clothing/under/f13/brahmin,
 	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
 	/obj/item/clothing/suit/f13/mantle_liz
 	)
 
@@ -61,6 +64,7 @@
 	head = /obj/item/clothing/head/f13/beaver
 
 // /obj/item/clothing/under/f13/female/flapper
+// /obj/item/clothing/shoes/f13/brownie
 
 /datum/job/sheriff
 	title = "Sheriff"
