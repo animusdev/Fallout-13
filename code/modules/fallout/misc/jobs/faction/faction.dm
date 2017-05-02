@@ -223,7 +223,7 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/brotherhood
 	name = "Brotherhood"
-	color = "#005A20"
+	color = "#00215a"
 	id = "bs"
 	full_name = "Brotherhood of Steel"
 	description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel, or simply the Brotherhood - is a quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on strict subordination and Code of Conduct.<br><i>The Steel Endures!</i>"
