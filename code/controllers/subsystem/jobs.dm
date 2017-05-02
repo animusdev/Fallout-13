@@ -435,7 +435,7 @@ var/datum/subsystem/job/SSjob
 		if(ismob(new_mob))
 			H = new_mob
 
-	to_chat(H, "<b>You are the [job.title].</b>")
+//	to_chat(H, "<b>You are the [job.title].</b>")
 	to_chat(H, "<b>As the [job.title] you answer directly to [job.supervisors].</b>")
 	if(job && H)
 		job.after_spawn(H)
