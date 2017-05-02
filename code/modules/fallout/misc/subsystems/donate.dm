@@ -40,7 +40,7 @@ var/datum/subsystem/content/SScontent
 /datum/subsystem/content/proc/get_data(ckey)
 	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
 		return file2text("temp")
-	return "0:"
+	return "-1:"
 
 /datum/subsystem/content/proc/buy_pack(ckey, pack_id, price)
 	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "pack" = "[pack_id]", "price" = "[price]", "action" = "buy"), "temp"))
