@@ -18,6 +18,7 @@
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
+	/obj/item/clothing/shoes/f13/brownie,
 	/obj/item/clothing/shoes/f13/tan,
 	/obj/item/clothing/under/f13/manager,
 	/obj/item/clothing/under/suit_jacket,
@@ -64,7 +65,6 @@
 	head = /obj/item/clothing/head/f13/beaver
 
 // /obj/item/clothing/under/f13/female/flapper
-// /obj/item/clothing/shoes/f13/brownie
 
 /datum/job/sheriff
 	title = "Sheriff"
