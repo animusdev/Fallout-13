@@ -12,7 +12,7 @@
         #define MAP_NAME "Texas Wasteland"
         #define MAP_FACTIONS_LIST list("bs", "enclave", "none", "city", "raiders")
 
-		#define MAP_TRANSITION_CONFIG DEFAULT_MAP_TRANSITION_CONFIG
+		#define MAP_TRANSITION_CONFIG list()
 
 #elif !defined(MAP_OVERRIDE)
 
