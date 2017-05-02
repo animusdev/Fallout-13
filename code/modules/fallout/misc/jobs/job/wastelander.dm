@@ -1,29 +1,5 @@
 //Fallout 13 Neutral faction aka Wastelanders roles
 
-/datum/job/settler
-	title = "Settler"
-	flag = SETTLER
-	department_flag = WASTELAND
-	desc = "A true child of wasteland.<br>In badlands you are born, in badlands lays your grave."
-	faction = "none"
-	status = "none"
-	total_positions = 10
-	spawn_positions = 10
-	supervisors = "none"
-	selection_color = "#ece19d"
-	access = list()
-	minimal_access = list()
-	outfit = /datum/outfit/job/settler
-
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
-
-/datum/outfit/job/settler
-	name = "Settler"
-	backpack = null
-	satchel = null
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/f13/rag
-
 /datum/job/adventurer
 	title = "Adventurer"
 	desc = "An offspring of wasteland wanderers.<br>Your life is a journey, and you are free to choose what kind of a journey it is."
