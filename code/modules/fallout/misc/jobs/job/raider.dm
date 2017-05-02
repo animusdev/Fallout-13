@@ -19,7 +19,10 @@
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/military,
+	/obj/item/clothing/shoes/f13/brownie,
+	/obj/item/clothing/shoes/f13/tan,
 	/obj/item/clothing/glasses/f13/biker,
+	/obj/item/clothing/under/suit_jacket,
 	/obj/item/clothing/suit/armor/f13/chestplate,
 	/obj/item/clothing/suit/armor/f13/tribal,
 	/obj/item/clothing/suit/armor/f13/slam,
@@ -54,7 +57,7 @@
 /datum/outfit/job/gangleader
 	name = "Gang Leader"
 	uniform = /obj/item/clothing/under/f13/villain
-	shoes = /obj/item/clothing/shoes/f13/tan
+	shoes = /obj/item/clothing/shoes/laceup
 
 /datum/job/raider
 	title = "Raider"

@@ -1,18 +1,41 @@
 /datum/job/elder
 	title = "Elder"
-	desc = "No description."
+	desc = "A source of wisdom.<br>You are the one, who shall fulfill the destiny."
 	flag = ELDER
-	department_head = list("BS command")
+	department_head = list("Brotherhood of Steel command HQ")
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "elder"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "BS command"
+	supervisors = "the Brotherhood of Steel command HQ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/clothing/under/f13/recon,
+	/obj/item/clothing/suit/armor/f13/power_armor/t45d,
+	/obj/item/clothing/head/helmet/power_armor/t45d
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
 
 	outfit = /datum/outfit/job/elder
 
@@ -21,7 +44,12 @@
 
 /datum/outfit/job/elder
 	name = "Elder"
-
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/combat
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = /obj/item/clothing/suit/f13/elder
+	weapon = /obj/item/weapon/gun/energy/laser/pistol
 
 /datum/job/paladin
 	title = "Paladin"
@@ -37,7 +65,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	outfit = /datum/outfit/job/paladin
 
@@ -61,7 +89,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	outfit = /datum/outfit/job/knight
 
