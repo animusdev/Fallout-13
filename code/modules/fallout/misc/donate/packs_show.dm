@@ -42,19 +42,19 @@
 		  	<h2>Price: [(pack.id in parent.content_packs) ? "purchased" : pack.price]</h2><br>
            	<a [(selected_pack in parent.content_packs) ? "class='linkOff'" : ""] href='?_src_=prefs;preference=content_packs;buy=[pack.id]'>Buy</a>
             <div style="display: block; width: 98%; border: 1px solid #0bcc62; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px">
-              <div style="width: 30%; display: inline-block; float: left;">
+              <div style="width: 30%; display: inline-block; float: left;[spack_data["items"] ? "" : " visibility: hidden;"]">
                 Items:
                 <ul style="margin-left: 25px;">
                   [spack_data["items"]]
                   </ul>
               </div>
-              <div style="width: 30%; display: inline-block; float: left;">
+              <div style="width: 30%; display: inline-block; float: left;[spack_data["roles"] ? "" : " visibility: hidden;"]">
                 Roles:
                 <ul style="margin-left: 25px;">
                   [spack_data["roles"]]
                   </ul>
                 </div>
-              <div style="width: 30%; display: inline-block; float: left;">
+              <div style="width: 30%; display: inline-block; float: left;[spack_data["pets"] ? "" : " visibility: hidden;"]">
                 Pets:
                 <ul style="margin-left: 25px;">
                   [spack_data["pets"]]
