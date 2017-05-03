@@ -37,9 +37,10 @@
 	/obj/item/clothing/head/helmet/knight/f13/rider,
 	/obj/item/clothing/head/welding/f13/fire,
 	/obj/item/clothing/head/welding/f13/japan,
+	/obj/item/weapon/golf9,
+	/obj/item/weapon/harpoon,
 	/obj/item/weapon/twohanded/sledgehammer,
 	/obj/item/weapon/twohanded/largehammer,
-	/obj/item/weapon/golf9,
 	/obj/item/weapon/powergauntlet,
 	/obj/item/weapon/restraints/legcuffs/bola/raider
 	)
