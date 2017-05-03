@@ -121,8 +121,8 @@
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "knight"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "Elder, Paladin"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7

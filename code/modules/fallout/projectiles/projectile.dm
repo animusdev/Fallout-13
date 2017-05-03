@@ -7,7 +7,6 @@
 	icon_state = "plasma"
 	icon = 'icons/fallout/objects/guns/projectiles.dmi'
 	impact_effect_type = /obj/effect/overlay/temp/impact_effect/plasma
-	light_range = 1
 	light_color = LIGHT_COLOR_GREEN
 	pass_flags = PASSTABLE | PASSGRILLE
 
