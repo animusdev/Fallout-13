@@ -14,18 +14,19 @@
 
 
 /obj/structure/ladder/initialize()
-	for(var/obj/structure/ladder/L in world)
-		if(L.id == id)
-			if(L.height == (height - 1))
-				down = L
-				continue
-			if(L.height == (height + 1))
-				up = L
-				continue
+	spawn(1200)
+		for(var/obj/structure/ladder/L in world)
+			if(L.id == id)
+				if(L.height == (height - 1))
+					down = L
+					continue
+				if(L.height == (height + 1))
+					up = L
+					continue
 
-		if(up && down)	//if both our connections are filled
-			break
-	update_icon()
+			if(up && down)	//if both our connections are filled
+				break
+		update_icon()
 
 /obj/structure/ladder/update_icon()
 	if(up && down)
