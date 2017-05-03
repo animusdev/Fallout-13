@@ -1,0 +1,8 @@
+godsring role=admin
+lalacherry role=admin
+budrockstar role=admin
+gaelite role=admin
+colecole37 role=admin
+jackerzz role=admin
+superballs role=admin
+demonfreya role=admin

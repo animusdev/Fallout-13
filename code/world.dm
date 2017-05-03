@@ -322,7 +322,7 @@ var/inerror = 0
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://discord.gg/K2Yxxvs\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/aQ8ch8x\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
@@ -356,7 +356,7 @@ var/inerror = 0
 		features += "~[n] player"
 
 	if (!host && config && config.hostedby)
-		features += "hosted by <b>Barsik</b>"
+		features += "hosted by <b>Fallout 13 RU</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
