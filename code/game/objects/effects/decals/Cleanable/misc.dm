@@ -37,16 +37,6 @@
 	desc = "It's still good. Four second rule!"
 	icon_state = "flour"
 
-/obj/effect/decal/cleanable/greenglow
-	name = "glowing goo"
-	desc = "Jeez. I hope that's not for lunch."
-	light_range = 1
-	light_color = LIGHT_COLOR_GREEN
-	icon_state = "greenglow"
-
-/obj/effect/decal/cleanable/greenglow/ex_act()
-	return
-
 /obj/effect/decal/cleanable/cobweb
 	name = "cobweb"
 	desc = "Somebody should remove that."
