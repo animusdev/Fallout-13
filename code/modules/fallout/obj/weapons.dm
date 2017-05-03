@@ -1,107 +1,10 @@
 //Fallout 13 melee weapons directory
 
-/obj/item/weapon/machete
-	name = "\proper machete"
-	desc = "The machete appears to be a makeshift weapon, as it consists of a lawn mower blade strapped to a wooden handle.<br>It is the primary melee weapon of Caesar's Legion."
-	icon_state = "machete"
-	item_state = "machete"
-	flags = CONDUCT
-	slot_flags = SLOT_BELT
-	force = 20
-	throwforce = 15
-	w_class = 3
-	hitsound = 'sound/weapons/bladeslice.ogg'
-	icon = 'icons/fallout/objects/melee.dmi'
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	block_chance = 20
-	sharpness = IS_SHARP
-
-/obj/item/weapon/golf9
-	name = "9 iron"
-	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
-	icon_state = "golf9"
-	item_state = "golf9"
-	slot_flags = SLOT_BELT
-	force = 15
-	throw_speed = 3
-	throw_range = 4
-	throwforce = 10
-	w_class = 2
-	icon = 'icons/fallout/objects/melee.dmi'
-
-/obj/item/weapon/golf10
-	name = "10 iron"
-	desc = "This old and quite deadly 10 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
-	icon_state = "golf10"
-	item_state = "golf10"
-	slot_flags = SLOT_BELT
-	force = 20
-	throw_speed = 3
-	throw_range = 4
-	throwforce = 10
-	w_class = 2
-	icon = 'icons/fallout/objects/melee.dmi'
-
-/obj/item/weapon/golf/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
-	return (BRUTELOSS|FIRELOSS)
-
-/obj/item/weapon/pipe
-	name = "lead pipe"
-	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
-	icon_state = "pipe"
-	item_state = "pipe"
-	slot_flags = SLOT_BELT
-	force = 15
-	throw_speed = 3
-	throw_range = 4
-	throwforce = 10
-	w_class = 3
-	icon = 'icons/fallout/objects/melee.dmi'
-
-/obj/item/weapon/pipe/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
-	return (BRUTELOSS|FIRELOSS)
-
-/obj/item/weapon/tireiron
-	name = "tire iron"
-	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
-	icon_state = "tire"
-	item_state = "tire"
-	slot_flags = SLOT_BELT
-	force = 15
-	throw_speed = 3
-	throw_range = 4
-	throwforce = 10
-	w_class = 3
-	icon = 'icons/fallout/objects/melee.dmi'
-
-/obj/item/weapon/tireiron/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
-	return (BRUTELOSS|FIRELOSS)
-
-/obj/item/weapon/powergauntlet
-	name = "power gauntlet"
-	desc = "Power Knuckles 'Big ram' produced by Beau.<br>Most consider it the best weapon for close combat.<br>Small but powerful battery provides the power for device operation."
-	icon_state = "powergauntlet"
-	item_state = "powergauntlet"
-	slot_flags = SLOT_BELT
-	force = 25
-	throw_speed = 3
-	throw_range = 4
-	throwforce = 10
-	w_class = 2
-	icon = 'icons/fallout/objects/melee.dmi'
-
-/obj/item/weapon/powergauntlet/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
-	return (BRUTELOSS|FIRELOSS)
-
 /obj/item/weapon/twohanded/baseball
-	icon_state = "baseball0"
 	name = "baseball bat"
 	desc = "A wooden source of joy and pain."
 	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "baseball0"
 	force = 5
 	throwforce = 10
 	w_class = 3
@@ -110,11 +13,149 @@
 	obj_integrity = 200
 	max_integrity = 200
 
+/obj/item/weapon/machete
+	name = "\proper machete"
+	desc = "The machete appears to be a makeshift weapon, as it consists of a lawn mower blade strapped to a wooden handle.<br>It is the primary melee weapon of Caesar's Legion."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "machete"
+	item_state = "machete"
+	flags = CONDUCT
+	slot_flags = SLOT_BELT
+	force = 20
+	throwforce = 15
+	w_class = 3
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	block_chance = 20
+	sharpness = IS_SHARP
+
+/obj/item/weapon/pipe
+	name = "lead pipe"
+	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "pipe"
+	item_state = "pipe"
+	slot_flags = SLOT_BELT
+	force = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 3
+
+/obj/item/weapon/pipe/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/tireiron
+	name = "tire iron"
+	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "tire"
+	item_state = "tire"
+	slot_flags = SLOT_BELT
+	force = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 3
+
+/obj/item/weapon/tireiron/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/golf9
+	name = "9 iron"
+	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "golf9"
+	item_state = "golf9"
+	slot_flags = SLOT_BELT
+	force = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 2
+
+/obj/item/weapon/golf10
+	name = "10 iron"
+	desc = "This old and quite deadly 10 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "golf10"
+	item_state = "golf10"
+	slot_flags = SLOT_BELT
+	force = 20
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 2
+
+/obj/item/weapon/golf/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/pan
+	name = "frying pan"
+	desc = "An ancient cast iron frying pan.<br>It's heavy, but fairly useful if you need to keep the mutants away, and don't have a better weapon around."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "pan"
+	item_state = "pan"
+	hitsound = 'sound/f13weapons/pan.ogg'
+	slot_flags = SLOT_BELT
+	force = 10 //Just try to swing a frying pan
+	throw_speed = 1
+	throw_range = 2
+	throwforce = 10
+	w_class = 2
+
+/obj/item/weapon/pan/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] keeps hitting \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/harpoon
+	name = "harpoon"
+	desc = "A rusty spear-like instrument previously used in fishing, whaling and sealing - now used for robbing, raiding and manhunting."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "harpoon"
+	force = 15
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = SLOT_BACK
+	throwforce = 20
+	throw_speed = 4
+	embedded_impact_pain_multiplier = 4
+	armour_penetration = 5
+	materials = list(MAT_METAL=1150, MAT_WOOD=2075)
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
+	sharpness = IS_SHARP
+	obj_integrity = 200
+	max_integrity = 200
+
+/obj/item/weapon/harpoon/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
+/obj/item/weapon/powergauntlet
+	name = "power gauntlet"
+	desc = "Power Knuckles 'Big ram' produced by Beau.<br>Most consider it the best weapon for close combat.<br>Small but powerful battery provides the power for device operation."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "powergauntlet"
+	item_state = "powergauntlet"
+	slot_flags = SLOT_BELT
+	force = 25
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	w_class = 2
+
+/obj/item/weapon/powergauntlet/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
+
 /obj/item/weapon/twohanded/tribal_spear
-	icon_state = "tribalspear0"
 	name = "tribal spear"
 	desc = "A haphazardly-constructed, yet still deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "tribalspear0"
 	force = 20
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
@@ -132,10 +173,10 @@
 	max_integrity = 200
 
 /obj/item/weapon/spear
-	icon_state = "spear"
 	name = "throwing spear"
 	desc = "A rather deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "spear"
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK

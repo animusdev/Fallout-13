@@ -43,6 +43,7 @@
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/brownie,
+	/obj/item/clothing/gloves/f13/leather,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/merccharm,
 	/obj/item/clothing/under/f13/female/merccharm,
@@ -91,6 +92,8 @@
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/gloves/f13/leather,
+	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/mercadv,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/female/merccharm,

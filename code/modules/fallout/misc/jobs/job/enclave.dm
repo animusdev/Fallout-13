@@ -72,6 +72,7 @@
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	required_items = list(
+	/obj/item/clothing/head/soft/f13/enclave,
 	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/under/f13/dbdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/superadvanced,
@@ -132,7 +133,7 @@
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	required_items = list(
-	/obj/item/clothing/under/f13/dbdu,
+	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/advanced,
 	/obj/item/clothing/head/helmet/power_armor/advanced,
 	/obj/item/weapon/gun/energy/plasma/pistol
@@ -165,7 +166,7 @@
 	backpack = null
 	satchel = null
 	gloves = /obj/item/clothing/gloves/f13/military
-	uniform = /obj/item/clothing/under/f13/bdu
+	uniform = /obj/item/clothing/under/f13/dbdu
 	shoes = /obj/item/clothing/shoes/f13/military
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/plasma

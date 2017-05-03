@@ -67,6 +67,7 @@
 		// Weapons
 		/obj/item/weapon/pipe,
 		/obj/item/weapon/tireiron,
+		/obj/item/weapon/pan,
 		/obj/item/weapon/kitchen/rollingpin,
 		/obj/item/weapon/kitchen/knife,
 		/obj/item/weapon/kitchen/knife/butcher,

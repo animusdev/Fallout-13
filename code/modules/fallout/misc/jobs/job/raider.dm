@@ -86,8 +86,9 @@
 	/obj/item/clothing/head/helmet/f13/motorcycle,
 	/obj/item/clothing/head/helmet/f13/firefighter,
 	/obj/item/clothing/head/helmet/f13/yankee,
-	/obj/item/weapon/twohanded/sledgehammer,
 	/obj/item/weapon/golf9,
+	/obj/item/weapon/harpoon,
+	/obj/item/weapon/twohanded/sledgehammer,
 	/obj/item/weapon/restraints/legcuffs/bola/raider
 	)
 
