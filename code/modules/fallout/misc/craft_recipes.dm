@@ -28,12 +28,43 @@
 				/obj/item/crafting/wonderglue = 1)
 	category = CAT_MISC
 
+/datum/crafting_recipe/radio
+	name = "Radio"
+	result = /obj/item/device/radio
+	time = 1000
+	reqs = list(/obj/item/crafting/diode = 2,
+				/obj/item/crafting/transistor = 1,
+				/obj/item/crafting/capacitor = 2,
+				/obj/item/crafting/resistor = 3,
+				/obj/item/crafting/bulb = 1,
+				/obj/item/crafting/board = 1,
+				/obj/item/crafting/frame = 1)
+	category = CAT_MISC
+
 //Armor
+
+/datum/crafting_recipe/shoes
+	name = "Shoes"
+	result = /obj/item/clothing/shoes/f13/tan
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
+				/obj/item/crafting/wonderglue = 1)
+	tools = /obj/item/weapon/wirecutters
+	time = 120
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/tribalarmor
+	name = "Tribal clothing"
+	result = /obj/item/clothing/under/f13/tribal
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
+				/obj/item/crafting/wonderglue = 1)
+	tools = /obj/item/weapon/wirecutters
+	time = 120
+	category = CAT_PRIMAL
 
 /datum/crafting_recipe/tribalarmor
 	name = "Tribal Armor"
 	result = /obj/item/clothing/suit/armor/f13/tribal
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 3,
+	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/crafting/duct_tape = 1)
 	tools = /obj/item/weapon/wirecutters
 	time = 120

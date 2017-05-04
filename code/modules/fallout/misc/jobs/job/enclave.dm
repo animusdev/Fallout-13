@@ -11,6 +11,7 @@
 	supervisors = "the Enclave command HQ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
+	whitelist_on = 1
 
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 

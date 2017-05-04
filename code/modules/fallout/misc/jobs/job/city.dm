@@ -14,6 +14,7 @@
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/mayor
+	whitelist_on = 1
 
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
