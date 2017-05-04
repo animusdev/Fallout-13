@@ -8,6 +8,9 @@
 	fire_sound = 'sound/weapons/Laser.ogg'
 	firing_effect_type = /obj/effect/overlay/temp/dir_setting/firing_effect/energy
 
+/obj/item/ammo_casing/energy/Destroy()
+	return QDEL_HINT_PUTINPOOL
+
 /obj/item/ammo_casing/energy/laser
 	projectile_type = /obj/item/projectile/beam/laser
 	select_name = "kill"

@@ -42,7 +42,7 @@
 	var/obj/item/ammo_casing/energy/shot
 	for (var/i = 1, i <= ammo_type.len, i++)
 		var/shottype = ammo_type[i]
-		shot = new shottype(src)
+		shot = PoolOrNew(shottype, src)
 		ammo_type[i] = shot
 	shot = ammo_type[select]
 	fire_sound = shot.fire_sound
