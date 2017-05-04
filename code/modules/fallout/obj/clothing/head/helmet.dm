@@ -329,6 +329,28 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 3
 
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/shocktrooper/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/shocktrooper/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
 /obj/item/clothing/head/helmet/power_armor/superadvanced
 	name = "advanced mark II power helmet"
 	desc = "An advanced power armor mark II helmet - an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>It looks rather threatening."
@@ -346,6 +368,28 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
 
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/superadvanced/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/superadvanced/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced mark I power helmet"
 	desc = "An advanced power armor mark I helmet, typically used by the Enclave.<br>It looks somewhat threatening."
@@ -362,6 +406,28 @@
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
+
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/advanced/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/advanced/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
