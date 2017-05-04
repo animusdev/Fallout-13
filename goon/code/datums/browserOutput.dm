@@ -42,6 +42,8 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 		broken = TRUE
 		return 0
 
+	sleep(5)
+
 	if(winget(owner, "browseroutput", "is-disabled") == "false") //Already setup
 		doneLoading()
 
