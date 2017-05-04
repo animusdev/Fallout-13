@@ -6,8 +6,8 @@
 /*				CAT_AMMO,
 				CAT_ROBOT,*/
 				CAT_MISC,
-/*				CAT_PRIMAL,
-				CAT_BREAD,
+				CAT_PRIMAL,
+/*				CAT_BREAD,
 				CAT_BURGER,
 				CAT_CAKE,
 				CAT_EGG,
