@@ -249,3 +249,16 @@
 		/obj/item/weapon/twohanded/required/chainsaw
 		)
 	price = 1000
+
+/datum/content_pack/leaders
+	name = "Leaders Set"
+	id = "leaders"
+	desc = "<i>Control everyone</i>"
+	roles = list(
+		/datum/job/gangleader,
+		/datum/job/general,
+		/datum/job/legate,
+		/datum/job/elder,
+		/datum/job/mayor
+		)
+	price = 1000

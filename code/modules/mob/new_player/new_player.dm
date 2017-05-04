@@ -317,6 +317,8 @@
 		return 0
 	if(!client.prefs.pref_species.qualifies_for_faction(job.faction))
 		return 0
+	if(job.whitelist_on && !(job.type in client.allowed_roles))
+		return 0
 	return 1
 
 

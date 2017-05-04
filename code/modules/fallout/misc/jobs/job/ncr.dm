@@ -11,6 +11,7 @@
 	supervisors = "the NCR Command HQ"
 	selection_color = "#9d9fec"
 	minimal_player_age = 7
+	whitelist_on = 1
 
 
 	allowed_packs = list("starter", "super_ten")

@@ -49,9 +49,7 @@
 	if(!F)
 		return
 
-	if(devastated && prob(33))
-		F.break_tile()
-	else if(explode && prob(33))
+	if(explode && prob(33))
 		F.ChangeTurf(F.baseturf)
 
 /turf/closed/wall/proc/break_wall()

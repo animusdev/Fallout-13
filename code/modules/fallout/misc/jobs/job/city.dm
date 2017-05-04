@@ -14,6 +14,7 @@
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/mayor
+	whitelist_on = 1
 
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
@@ -92,3 +93,27 @@
 	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
 	glasses = /obj/item/clothing/glasses/sunglasses
 	back = /obj/item/weapon/gun/ballistic/shotgun
+
+/datum/job/citizen
+	title = "Citizen"
+	flag = CITIZEN
+	department_flag = ENGSEC
+	desc = "bla"
+	faction = "city"
+	status = "member"
+	total_positions = 10
+	spawn_positions = 10
+	supervisors = "none"
+	selection_color = "#ece19d"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/citizen
+
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+
+/datum/outfit/job/citizen
+	name = "Citizen"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/settler
+	shoes = /obj/item/clothing/shoes/f13/rag

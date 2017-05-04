@@ -9,7 +9,7 @@
 	var/planks = 3
 	var/maxplanks = 3
 
-/obj/structure/barricade/wooden/planks/initialize()
+/obj/structure/barricade/wooden/planks/New()
 	..()
 	checkplanks()
 	max_integrity = maxplanks*30

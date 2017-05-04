@@ -4,8 +4,6 @@
 
 	var/whitelist_on = 0
 
-	var/donaters = 0
-
 	var/disallowed_gender = 0
 
 /datum/job/proc/is_gender_allowed(client/client)
