@@ -52,7 +52,7 @@
 	time = 120
 	category = CAT_PRIMAL
 
-/datum/crafting_recipe/tribalarmor
+/datum/crafting_recipe/tribalclothing
 	name = "Tribal clothing"
 	result = /obj/item/clothing/under/f13/tribal
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,

@@ -39,12 +39,7 @@
 	update_icon()
 
 /obj/item/weapon/gun/energy/proc/update_ammo_types()
-	var/obj/item/ammo_casing/energy/shot
-	for (var/i = 1, i <= ammo_type.len, i++)
-		var/shottype = ammo_type[i]
-		shot = PoolOrNew(shottype, src)
-		ammo_type[i] = shot
-	shot = ammo_type[select]
+	var/obj/item/ammo_casing/energy/shot = PoolOrNew(ammo_type[select], src)
 	fire_sound = shot.fire_sound
 
 /obj/item/weapon/gun/energy/Destroy()

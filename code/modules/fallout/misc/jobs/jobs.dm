@@ -36,5 +36,7 @@ var/const/ELDER				=(1<<1)
 var/const/PALADIN			=(1<<2)
 var/const/KNIGHT			=(1<<3)
 
+var/const/CITIZEN			=(1<<4)
+
 //var/const/VAULT			=(1<<6)
 
