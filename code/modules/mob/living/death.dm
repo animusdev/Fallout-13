@@ -73,5 +73,6 @@
 	update_canmove()
 	med_hud_set_health()
 	med_hud_set_status()
-	client.screen += PoolOrNew(/obj/screen/fullscreen/death)
+	if(client)
+		client.screen += PoolOrNew(/obj/screen/fullscreen/death)
 	return TRUE
