@@ -1,3 +1,5 @@
+//Fallout 13 Brotherhood of Steel faction roles
+
 /datum/job/elder
 	title = "Elder"
 	desc = "A source of wisdom.<br>You are the one, who shall fulfill the destiny."

@@ -1,3 +1,5 @@
+//Fallout 13 Enclave faction roles
+
 /datum/job/colonel
 	title = "Colonel"
 	desc = "An actual American patriot.<br>You live by the principle that Main Goal is more important, than means of achieving it."

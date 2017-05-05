@@ -1,4 +1,4 @@
-//Fallout 13 pants directory ...
+//Fallout 13 pants directory
 
 /obj/item/clothing/under/pants/f13
 	icon = 'icons/fallout/clothing/uniforms.dmi'

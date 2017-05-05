@@ -129,7 +129,7 @@
 		// Suits
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 		)
-	price = 180
+	price = 120
 
 /datum/content_pack/bard
 	name = "Musical instruments"
@@ -250,15 +250,70 @@
 		)
 	price = 1000
 
+/datum/content_pack/godfather
+	name = "Role: Gang Leader"
+	id = "godfather"
+	desc = "<b>Available to: Raider faction only!</b><br><i>You found paradise in this city. You had a good trade, you made a good living. The mercenaries protected you and there were courts of wasteland law. So you didn't need a friend like me. Now you come and say \"Leader, give me justice.\" But you don't ask with respect. You don't offer friendship. You don't even think to call me \"Godfather.\" You come into my house on the day my daughter is to be married and you ask me to do murder - for money.</i><br><b>Godfather (2255)</b>"
+	roles = list(
+		/datum/job/gangleader
+		)
+	price = 120
+
+/datum/content_pack/mayor
+	name = "Role: Mayor"
+	id = "mayor"
+	desc = "<b>Available to: City faction only!</b><br>\[insert clever Mayor related quote here\]"
+	roles = list(
+		/datum/job/mayor
+		)
+	price = 120
+
+/datum/content_pack/general
+	name = "Role: General"
+	id = "general"
+	desc = "<b>Available to: New California Republic faction only!</b><br>Don't anger a Bear, specially a two-headed one."
+	roles = list(
+		/datum/job/general
+		)
+	price = 240
+
+/datum/content_pack/legate
+	name = "Role: Legate"
+	id = "legate"
+	desc = "<b>Available to: Caesar's Legion faction only!</b><br><i>Caesar's will is the will of the Legion. Victory shall be ours, it shall be swift, and it will be honest, purchased with blood.</i>"
+	roles = list(
+		/datum/job/legate
+		)
+	price = 240
+
+/datum/content_pack/elder
+	name = "Role: Elder"
+	id = "elder"
+	desc = "<b>Available to: Brotherhood of Steel faction only!</b><br><i>Pledge in your hearts and minds, pledge by your guns that you will stand with them in battle until the end, trust each of them with your life.</i>"
+	roles = list(
+		/datum/job/elder
+		)
+	price = 240
+
+/datum/content_pack/colonel
+	name = "Role: Colonel"
+	id = "colonel"
+	desc = "<b>Available to: Enclave faction only!</b><br><i>When you see the Enclave, you see the United States government. We are authorized to restore order and civility, by any means necessary. The American people are worth fighting for. The future must be secured.</i>"
+	roles = list(
+		/datum/job/colonel
+		)
+	price = 240
+
 /datum/content_pack/leaders
-	name = "Leaders Set"
+	name = "Role: All Leaders set"
 	id = "leaders"
-	desc = "<i>Control everyone</i>"
+	desc = "<b>Available to: All factions except for Neutral!</b><br><i>Got to rule them all!</i>"
 	roles = list(
 		/datum/job/gangleader,
+		/datum/job/mayor,
 		/datum/job/general,
 		/datum/job/legate,
 		/datum/job/elder,
-		/datum/job/mayor
+		/datum/job/colonel
 		)
 	price = 1000
