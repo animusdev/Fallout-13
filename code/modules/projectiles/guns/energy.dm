@@ -68,10 +68,29 @@
 			recharge_newshot(1)
 		update_icon()
 
+/obj/item/weapon/gun/energy/attackby(obj/item/A, mob/user, params)
+	..()
+	if (istype(A, /obj/item/weapon/stock_parts/cell))
+		user.remove_from_mob(A)
+		power_supply = A
+		power_supply.forceMove(src)
+		to_chat(user, "<span class='notice'>You load a new power cell into \the [src].</span>")
+		update_icon()
+
 /obj/item/weapon/gun/energy/attack_self(mob/living/user as mob)
+/*
 	if(ammo_instances.len > 1)
 		select_fire(user)
 		update_icon()
+*/
+	if(power_supply)
+		power_supply.forceMove(get_turf(src.loc))
+		user.put_in_hands(power_supply)
+		power_supply = null
+		update_icon()
+		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+	else
+		to_chat(user, "<span class='warning'>There is no battery.</span>")
 
 /obj/item/weapon/gun/energy/can_shoot()
 	var/obj/item/ammo_casing/energy/shot = ammo_instances[select]
@@ -117,9 +136,9 @@
 
 /obj/item/weapon/gun/energy/update_icon()
 	cut_overlays()
-	var/ratio = Ceiling((power_supply.charge / power_supply.maxcharge) * charge_sections)
-	var/obj/item/ammo_casing/energy/shot = ammo_instances[select]
+	var/ratio = 0
 	var/iconState = "[icon_state]_charge"
+	var/obj/item/ammo_casing/energy/shot = ammo_instances[select]
 	var/itemState = null
 	if(!initial(item_state))
 		itemState = icon_state
@@ -128,9 +147,10 @@
 		iconState += "_[shot.select_name]"
 		if(itemState)
 			itemState += "[shot.select_name]"
-	if(power_supply.charge < shot.e_cost)
+	if(!power_supply || power_supply.charge < shot.e_cost)
 		add_overlay("[icon_state]_empty")
 	else
+		ratio = Ceiling((power_supply.charge / power_supply.maxcharge) * charge_sections)
 		if(!shaded_charge)
 			for(var/i = ratio, i >= 1, i--)
 				add_overlay(image(icon = icon, icon_state = iconState, pixel_x = ammo_x_offset * (i -1)))
