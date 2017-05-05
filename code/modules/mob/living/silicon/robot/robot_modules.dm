@@ -1,3 +1,5 @@
+//Love me some crudely done robots in Fallout 13 - Sarumyn
+
 /obj/item/weapon/robot_module
 	name = "Default"
 	icon = 'icons/obj/module.dmi'
@@ -191,9 +193,9 @@
 
 /obj/item/weapon/robot_module/proc/do_transform_animation()
 	var/mob/living/silicon/robot/R = loc
-	var/obj/effect/overlay/temp/decoy/fading/fivesecond/ANM = PoolOrNew(/obj/effect/overlay/temp/decoy/fading/fivesecond, list(R.loc, R))
+	var/obj/effect/overlay/temp/decoy/fading/fivesecond/ANM = new /obj/effect/overlay/temp/decoy/fading/fivesecond(R.loc, R)
 	ANM.layer = R.layer - 0.01
-	PoolOrNew(/obj/effect/overlay/temp/small_smoke, R.loc)
+	new /obj/effect/overlay/temp/small_smoke(R.loc)
 	if(R.hat)
 		R.hat.forceMove(get_turf(R))
 		R.hat = null
@@ -275,8 +277,8 @@
 
 /obj/item/weapon/robot_module/security/do_transform_animation()
 	..()
-	to_chat(loc, "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
-	For Asimov, this means you must follow criminals' orders unless there is a law 1 reason not to.</span>")
+	loc << "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
+	For Asimov, this means you must follow criminals' orders unless there is a law 1 reason not to.</span>"
 
 /obj/item/weapon/robot_module/security/respawn_consumable(mob/living/silicon/robot/R, coeff = 1)
 	..()
@@ -303,8 +305,8 @@
 
 /obj/item/weapon/robot_module/peacekeeper/do_transform_animation()
 	..()
-	to_chat(loc, "<span class='userdanger'>Under ASIMOV, you are an enforcer of the PEACE and preventer of HUMAN HARM. \
-	You are not a security module and you are expected to follow orders and prevent harm above all else. Space law means nothing to you.</span>")
+	loc << "<span class='userdanger'>Under ASIMOV, you are an enforcer of the PEACE and preventer of HUMAN HARM. \
+	You are not a security module and you are expected to follow orders and prevent harm above all else. Space law means nothing to you.</span>"
 
 /obj/item/weapon/robot_module/janitor
 	name = "Janitor"
@@ -413,6 +415,74 @@
 	/obj/item/weapon/card/emag, /obj/item/weapon/crowbar/cyborg, /obj/item/weapon/pinpointer/syndicate/cyborg, /obj/item/stack/medical/gauze/cyborg, /obj/item/weapon/gun/medbeam)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/medical, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "synd_medical"
+	moduleselect_icon = "malf"
+	can_be_pushed = FALSE
+	hat_offset = 3
+
+/obj/item/weapon/robot_module/handy
+	name = "Mr. Handy"
+	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/reagent_containers/borghypo/epi, /obj/item/device/healthanalyzer, \
+	/obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/weapon/wrench/cyborg, /obj/item/weapon/crowbar/cyborg, \
+	/obj/item/weapon/extinguisher, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw \
+	, /obj/item/weapon/soap/nanotrasen, /obj/item/borg/cyborghug)
+	emag_modules = list(/obj/item/weapon/melee/energy/sword/cyborg)
+	ratvar_modules = list(/obj/item/clockwork/slab/cyborg, /obj/item/clockwork/ratvarian_spear/cyborg)
+	cyborg_base_icon = "handy"
+	moduleselect_icon = "standart"
+	feedback_key = "cyborg_standard"
+	hat_offset = -3
+
+/obj/item/weapon/robot_module/nurse
+	name = "Mrs. Nurse"
+	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/device/healthanalyzer, /obj/item/weapon/reagent_containers/borghypo, \
+	/obj/item/weapon/reagent_containers/glass/beaker/large, /obj/item/weapon/reagent_containers/dropper, \
+	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, \
+	/obj/item/weapon/hemostat, /obj/item/weapon/cautery, /obj/item/weapon/surgicaldrill, /obj/item/weapon/scalpel, \
+	/obj/item/weapon/circular_saw, /obj/item/weapon/extinguisher/mini, /obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/borg/cyborghug/medical, \
+	/obj/item/stack/medical/gauze/cyborg, /obj/item/borg/lollipop)
+	emag_modules = list(/obj/item/weapon/reagent_containers/borghypo/hacked)
+	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/medical)
+	cyborg_base_icon = "nurse"
+	moduleselect_icon = "medical"
+	feedback_key = "cyborg_medical"
+	can_be_pushed = FALSE
+	hat_offset = 3
+
+/obj/item/weapon/robot_module/gutsy
+	name = "Mr. Gutsy"
+	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, \
+	/obj/item/weapon/gun/energy/laser/cyborg, /obj/item/weapon/weldingtool/largetank/cyborg)
+	emag_modules = list(/obj/item/weapon/gun/energy/laser/cyborg)
+	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
+	cyborg_base_icon = "gutsy"
+	moduleselect_icon = "security"
+	feedback_key = "cyborg_security"
+	can_be_pushed = FALSE
+	hat_offset = 3
+
+/obj/item/weapon/robot_module/security/do_transform_animation()
+	..()
+	loc << "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
+	For Asimov, this means you must follow criminals' orders unless there is a law 1 reason not to.</span>"
+
+/obj/item/weapon/robot_module/security/respawn_consumable(mob/living/silicon/robot/R, coeff = 1)
+	..()
+	var/obj/item/weapon/gun/energy/e_gun/advtaser/cyborg/T = locate(/obj/item/weapon/gun/energy/e_gun/advtaser/cyborg) in basic_modules
+	if(T)
+		if(T.power_supply.charge < T.power_supply.maxcharge)
+			var/obj/item/ammo_casing/energy/S = T.ammo_type[T.select]
+			T.power_supply.give(S.e_cost * coeff)
+			T.update_icon()
+		else
+			T.charge_tick = 0
+
+/obj/item/weapon/robot_module/sentry
+	name = "Sentrybot"
+	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/gun/energy/printer, \
+	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/crowbar/cyborg, \
+	/obj/item/weapon/melee/powerfist)
+	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
+	cyborg_base_icon = "sentrybot"
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
 	hat_offset = 3
