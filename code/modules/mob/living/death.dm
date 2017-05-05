@@ -73,5 +73,5 @@
 	update_canmove()
 	med_hud_set_health()
 	med_hud_set_status()
-	overlay_fullscreen("death", /obj/screen/fullscreen/death)
+	client.screen += PoolOrNew(/obj/screen/fullscreen/death)
 	return TRUE
