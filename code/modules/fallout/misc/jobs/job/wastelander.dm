@@ -105,7 +105,8 @@
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
 	/obj/item/clothing/head/helmet/f13/tribal,
-	/obj/item/clothing/head/helmet/f13/eyebot
+	/obj/item/clothing/head/helmet/f13/eyebot,
+	/obj/item/weapon/lighter/detonator
 	)
 
 	denied_items = list(
