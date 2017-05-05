@@ -27,3 +27,4 @@
 	icon_state = "singlevertical" //See decals.dmi for different icon states of road markings.
 	anchored = 1
 	layer = 2.1
+	resistance_flags = INDESTRUCTIBLE
