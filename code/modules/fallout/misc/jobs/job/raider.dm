@@ -25,6 +25,7 @@
 	/obj/item/clothing/glasses/f13/biker,
 	/obj/item/clothing/under/suit_jacket,
 	/obj/item/clothing/suit/armor/f13/chestplate,
+	/obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/suit/armor/f13/tribal,
 	/obj/item/clothing/suit/armor/f13/slam,
 	/obj/item/clothing/suit/armor/f13/supafly,

@@ -37,7 +37,7 @@
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	put_on_delay = 30
 	strip_delay = 30
-	self_weight = 5
+	self_weight = 2
 
 /obj/item/clothing/suit/armor/f13/punk
 	name = "armor kit"
@@ -48,7 +48,7 @@
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 20, rad = 20, fire = 50, acid = 50)
 	put_on_delay = 30
 	strip_delay = 30
-	self_weight = 5
+	self_weight = 2
 
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"
@@ -71,6 +71,7 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40
+	self_weight = 3
 
 /obj/item/clothing/suit/armor/f13/slam
 	name = "slammer raider armor"
@@ -82,6 +83,7 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 20
 	strip_delay = 40
+	self_weight = 4
 
 /obj/item/clothing/suit/armor/f13/supafly
 	name = "supa-fly raider armor"
@@ -93,6 +95,7 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 20
 	strip_delay = 40
+	self_weight = 3
 
 /obj/item/clothing/suit/armor/f13/yankee
 	name = "yankee raider armor"
@@ -104,6 +107,7 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/leatherarmor
 	name = "leather armor"
@@ -115,15 +119,27 @@
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 40
 	strip_delay = 40
-	self_weight = 4
+	self_weight = 5
+
+/obj/item/clothing/suit/armor/f13/metalarmor
+	name = "metal armor"
+	desc = "A craft metal armor created from a variety of scrap pieces put on a black leather armor."
+	icon_state = "metalarmor"
+	item_state = "metalarmor"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 60
+	strip_delay = 60
+	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/bmetalarmor
-	name = "metal armor"
-	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks like it might impair movement"
+	name = "black metal armor"
+	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks like it might impair movement."
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 20, acid = 0)
 	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60

@@ -103,6 +103,7 @@
 	/obj/item/clothing/suit/f13/duster,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
+	/obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
 	/obj/item/clothing/head/helmet/f13/tribal,
 	/obj/item/clothing/head/helmet/f13/eyebot,
