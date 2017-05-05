@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/mayor
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/brownie,
@@ -36,7 +36,8 @@
 	/obj/item/clothing/under/female/plaid_skirt,
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest,
-	/obj/item/clothing/head/f13/purple
+	/obj/item/clothing/head/f13/purple,
+	/obj/item/weapon/lighter/gold
 	)
 
 	denied_items = list(
@@ -82,7 +83,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 /datum/outfit/job/sheriff
 	name = "Sheriff"
@@ -98,7 +99,7 @@
 	title = "Citizen"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "bla"
+	desc = "I'll fix it tomorrow. Don't pick this job yet!"
 	faction = "city"
 	status = "member"
 	total_positions = 10
@@ -109,7 +110,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/citizen
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 /datum/outfit/job/citizen
 	name = "Citizen"

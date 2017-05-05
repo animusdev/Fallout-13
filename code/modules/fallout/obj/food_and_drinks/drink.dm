@@ -38,13 +38,13 @@
 	list_reagents = list("water" = 40, "silver_sulfadiazine" = 10)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vault13
-	name = "metal flask"
+	name = "Vault 13 flask"
 	desc = "Take a sip from your trusty Vault 13 canteen."
 	icon_state = "flask13"
 	list_reagents = list("water" = 30, "silver_sulfadiazine" = 10, "charcoal" = 20)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vault113
-	name = "metal flask"
+	name = "Vault 113 flask"
 	desc = "See this large yellow number? It means it's a Vault 113 canteen. Never forget."
 	icon_state = "flask113"
 	list_reagents = list("water" = 30, "radium" = 10, "mine_salve" = 20)

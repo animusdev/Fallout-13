@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/gangleader
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/military,
@@ -43,7 +43,9 @@
 	/obj/item/weapon/twohanded/sledgehammer,
 	/obj/item/weapon/twohanded/largehammer,
 	/obj/item/weapon/powergauntlet,
-	/obj/item/weapon/restraints/legcuffs/bola/raider
+	/obj/item/weapon/restraints/legcuffs/bola/raider,
+	/obj/item/weapon/lighter/gold,
+	/obj/item/weapon/lighter/detonator
 	)
 
 	denied_items = list(
@@ -77,7 +79,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/raider
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/glasses/f13/biker,
@@ -91,7 +93,8 @@
 	/obj/item/weapon/golf9,
 	/obj/item/weapon/harpoon,
 	/obj/item/weapon/twohanded/sledgehammer,
-	/obj/item/weapon/restraints/legcuffs/bola/raider
+	/obj/item/weapon/restraints/legcuffs/bola/raider,
+	/obj/item/weapon/lighter/detonator
 	)
 
 	denied_items = list(

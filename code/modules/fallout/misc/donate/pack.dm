@@ -95,7 +95,8 @@
 		/obj/item/clothing/mask/cigarette/rollie,
 		/obj/item/clothing/mask/cigarette/cigar,
 		/obj/item/clothing/mask/cigarette/cigar/cohiba,
-		/obj/item/clothing/mask/cigarette/cigar/havana
+		/obj/item/clothing/mask/cigarette/cigar/havana,
+		/obj/item/weapon/lighter
 		)
 	price = 60
 
@@ -128,6 +129,17 @@
 		/obj/item/clothing/under/f13/machinist,
 		// Suits
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
+		)
+	price = 120
+
+/datum/content_pack/vault13
+	name = "Vault 13"
+	id = "vault13"
+	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Vault 13 has opened long time ago, now you can try and pretend your relatives actually lived there, or explain that you got frozen in time somehow - that's why items you got, look so pristine.</i>"
+	items = list(
+		/obj/item/clothing/under/f13/vault/v13,
+		/obj/item/weapon/reagent_containers/food/drinks/flask/vault13,
+		/obj/item/weapon/lighter/vault13
 		)
 	price = 120
 

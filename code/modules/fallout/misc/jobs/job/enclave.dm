@@ -20,7 +20,8 @@
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/power_armor/shocktrooper,
 	/obj/item/clothing/head/helmet/power_armor/shocktrooper,
-	/obj/item/weapon/gun/energy/plasma
+	/obj/item/weapon/gun/energy/plasma,
+	/obj/item/weapon/lighter/engraved
 	)
 
 	denied_items = list(
@@ -80,7 +81,8 @@
 	/obj/item/clothing/under/f13/dbdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/superadvanced,
 	/obj/item/clothing/head/helmet/power_armor/superadvanced,
-	/obj/item/weapon/gun/energy/plasma
+	/obj/item/weapon/gun/energy/plasma,
+	/obj/item/weapon/lighter/engraved
 	)
 
 	denied_items = list(

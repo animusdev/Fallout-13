@@ -23,7 +23,8 @@
 	/obj/item/clothing/suit/armor/f13/power_armor/t45d,
 	/obj/item/clothing/head/helmet/power_armor/t45d,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
-	/obj/item/weapon/twohanded/superhammer
+	/obj/item/weapon/twohanded/superhammer,
+	/obj/item/weapon/lighter/engraved
 	)
 
 	denied_items = list(
@@ -79,7 +80,8 @@
 	/obj/item/clothing/under/f13/recon,
 	/obj/item/weapon/gun/energy/laser/pistol,
 	/obj/item/weapon/gun/energy/laser/rifle/aer13,
-	/obj/item/weapon/twohanded/superhammer
+	/obj/item/weapon/twohanded/superhammer,
+	/obj/item/weapon/lighter/engraved
 	)
 
 	denied_items = list(
