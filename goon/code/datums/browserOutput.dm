@@ -184,6 +184,10 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 	return replacetext(copytext(partial[2], 3, -5), "\n", "")
 
 /proc/bicon(var/obj, var/use_class = 1)
+	var/ispath = 0
+	if(ispath(obj))
+		ispath = 1
+		obj = PoolOrNew(obj)
 	var/class = use_class ? "class='icon misc'" : null
 	if (!obj)
 		return
@@ -205,6 +209,9 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 		bicon_cache[key] = icon2base64(I, key)
 	if(use_class)
 		class = "class='icon [A.icon_state]'"
+
+	if(ispath)
+		PlaceInPool(obj)
 
 	return "<img [class] src='data:image/png;base64,[bicon_cache[key]]'>"
 

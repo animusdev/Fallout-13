@@ -436,7 +436,11 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	if(!outfits || !job)
 		return null
 	if(ispath(job))
-		return outfits[job]
-	return outfits[job:type]
-
+		. = outfits[job]
+		if(!.)
+			. = get_var_from_type(job, "outfit")
+	else
+		. = outfits[job:type]
+		if(!.)
+			. = job:outfit
 #undef MAX_ITEM_LENGTH

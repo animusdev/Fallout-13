@@ -21,7 +21,7 @@
 		var/temp
 		for(var/item in pack.items)
 			temp = get_var_from_type(item, "name")
-			spack_data["items"] += "<li data-tooltip=\"[ItemTooltip(temp, get_var_from_type(item, "desc"))]\">[temp]</li>"
+			spack_data["items"] += "<li data-tooltip=\"[ItemTooltip(temp, get_var_from_type(item, "desc"))]\">[bicon(item)][temp]</li>"
 	if(pack.roles.len)
 		for(var/role in pack.roles)
 			var/temp = get_var_from_type(role, "title")
