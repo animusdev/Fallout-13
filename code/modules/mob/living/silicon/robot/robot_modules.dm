@@ -420,7 +420,7 @@
 	hat_offset = 3
 
 /obj/item/weapon/robot_module/handy
-	name = "Mr. Handy"
+	name = "Mr.Handy"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/reagent_containers/borghypo/epi, /obj/item/device/healthanalyzer, \
 	/obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/weapon/wrench/cyborg, /obj/item/weapon/crowbar/cyborg, \
 	/obj/item/weapon/extinguisher, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw \
@@ -433,7 +433,7 @@
 	hat_offset = -3
 
 /obj/item/weapon/robot_module/nurse
-	name = "Mrs. Nurse"
+	name = "Mrs.Nurse"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/device/healthanalyzer, /obj/item/weapon/reagent_containers/borghypo, \
 	/obj/item/weapon/reagent_containers/glass/beaker/large, /obj/item/weapon/reagent_containers/dropper, \
 	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, \
@@ -449,7 +449,7 @@
 	hat_offset = 3
 
 /obj/item/weapon/robot_module/gutsy
-	name = "Mr. Gutsy"
+	name = "Mr.Gutsy"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, \
 	/obj/item/weapon/gun/energy/laser/cyborg, /obj/item/weapon/weldingtool/largetank/cyborg)
 	emag_modules = list(/obj/item/weapon/gun/energy/laser/cyborg)
@@ -480,7 +480,7 @@
 	name = "Sentrybot"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/gun/energy/printer, \
 	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/crowbar/cyborg, \
-	/obj/item/weapon/melee/powerfist)
+	/obj/item/weapon/powergauntlet)///obj/item/weapon/powergauntlet
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "sentrybot"
 	moduleselect_icon = "malf"
