@@ -63,7 +63,7 @@
 	while(command_buffer.len > 0)
 		var/mob/speaker = command_buffer[1]
 		var/text = command_buffer[2]
-		var/filtered_name = lowertext_uni(html_decode(name))
+		var/filtered_name = lowertext(html_decode(name))
 		if(parse_phrase(text,filtered_name) || parse_phrase(text,"anybody")) //in case somebody wants to command 8 bears at once.
 			var/substring = copytext(text,length(filtered_name)+1) //get rid of the name.
 			listen(speaker,substring)

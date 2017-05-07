@@ -27,6 +27,8 @@
 	faction = list("ghoul")
 	butcher_results = list(/obj/effect/gibspawner/xeno = 1)
 	self_weight = 45
+	melee_damage_lower = 15
+	melee_damage_upper = 30
 	death_sound = 'sound/f13npc/ghoul_death.ogg'
 	var/obj/item/ring/precious
 
