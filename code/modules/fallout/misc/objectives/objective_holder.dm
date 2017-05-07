@@ -1,4 +1,4 @@
 /datum/objective_holder
 	var/datum/mind/owner
-	var/datum/objective/objective
+	var/datum/f13_objective/objective
 	var/list/data

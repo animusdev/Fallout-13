@@ -1,4 +1,4 @@
-/datum/objective
+/datum/f13_objective
 	var
 		name = "Objective"
 		desc = "Objective description"
@@ -13,7 +13,7 @@
 			if(!available_roles.Find("all") && !available_factions.Find(H.social_faction))
 				return 0
 			return 1
-		assignto(mob/living/human/H)
+		assignto(datum/mind/M)
 			return 1
 		check_complete(/datum/objective_holder/holder)
 			return 1
