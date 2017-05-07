@@ -74,6 +74,7 @@
 		user.remove_from_mob(A)
 		power_supply = A
 		power_supply.forceMove(src)
+		recharge_newshot(1)
 		to_chat(user, "<span class='notice'>You load a new power cell into \the [src].</span>")
 		update_icon()
 
