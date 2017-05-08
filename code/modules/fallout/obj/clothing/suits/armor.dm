@@ -328,8 +328,8 @@
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60 power armor"
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
-	icon_state = "t60dpowerarmor"
-	item_state = "t60dpowerarmor"
+	icon_state = "t60powerarmor"
+	item_state = "t60powerarmor"
 	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
 	self_weight = 25
 

@@ -190,8 +190,8 @@
 	icon_living = "robobrain"
 	icon_dead = "robobrain-frame"
 	picked = TRUE //the appearence of syndrones is static, you don't get to change it.
-	health = 250
-	maxHealth = 250
+	health = 200
+	maxHealth = 200
 	unsuitable_atmos_damage = 0
 	harm_intent_damage = 0
 	response_help  = "passes through"
@@ -203,7 +203,7 @@
 	melee_damage_upper = 20
 	attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	speed = 1
+	speed = 2
 	sight = 0
 	pass_flags = 0
 	dextrous = TRUE
