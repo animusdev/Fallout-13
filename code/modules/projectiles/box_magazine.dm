@@ -23,7 +23,7 @@
 /obj/item/ammo_box/New()
 	..()
 	if(!start_empty)
-		for(var/i = 1, stored_ammo.len <= max_ammo, i++)
+		while(stored_ammo.len <= max_ammo)
 			stored_ammo += new ammo_type(src)
 	update_icon()
 
