@@ -83,7 +83,7 @@
 
 
 //Wood
-/obj/item/stack/tile/wood
+/turf/open/floor/f13/wood
 	name = "wood floor tile"
 	singular_name = "wood floor tile"
 	desc = "An easy to fit wood floor tile."
