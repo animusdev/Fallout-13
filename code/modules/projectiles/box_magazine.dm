@@ -24,7 +24,7 @@
 	..()
 	if(!start_empty)
 		for(var/i = 1, stored_ammo.len <= max_ammo, i++)
-			stored_ammo += PoolOrNew(ammo_type, src)
+			stored_ammo += new ammo_type(src)
 	update_icon()
 
 /obj/item/ammo_box/proc/get_round(keep = 0)
