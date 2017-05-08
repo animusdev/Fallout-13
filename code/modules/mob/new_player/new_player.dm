@@ -120,7 +120,7 @@
 		new_player_panel()
 
 	if(href_list["contribute"])
-		src << link("http://fallout13.ru/payment/index.php?ckey=[ckey(client.ckey)]")
+		src << link("http://fallout13.ru/payment/index.php?ckey=[client.ckey]")
 
 	if(href_list["observe"])
 
@@ -317,6 +317,8 @@
 		return 0
 	if(!client.prefs.pref_species.qualifies_for_faction(job.faction))
 		return 0
+	if(job.whitelist_on && !(job.type in client.allowed_roles))
+		return 0
 	return 1
 
 
@@ -381,7 +383,7 @@
 		return
 	var/area/A = get_area(character)
 	var/message = "<span class='game deadsay'><span class='name'>\
-		[character.real_name]</span> ([rank]) has arrived at the station at \
+		[character.real_name]</span> ([rank]) has arrived at the wasteland at \
 		<span class='name'>[A.name]</span>.</span>"
 	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
 	if((!announcement_systems.len) || (!character.mind))

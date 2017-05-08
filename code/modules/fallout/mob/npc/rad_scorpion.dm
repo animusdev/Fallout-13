@@ -14,8 +14,8 @@
 	response_help  = "touches"
 	response_disarm = "hits"
 	response_harm   = "kicks"
-	maxHealth = 200
-	health = 200
+	maxHealth = 80
+	health = 80
 	self_weight = 120
 
 	death_sound = 'sound/f13npc/scorpion_death.ogg'
@@ -45,8 +45,8 @@
 	icon_living = "radscorpion_black"
 	icon_dead = "radscorpion_black_d"
 	icon_gib = "gib"
-	maxHealth = 275
-	health = 275
+	maxHealth = 150
+	health = 150
 	melee_damage_lower = 10
 	melee_damage_upper = 30
 	move_to_delay = 4

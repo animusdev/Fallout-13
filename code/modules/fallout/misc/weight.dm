@@ -4,7 +4,7 @@
 	var/contents_weight = 0
 	var/self_weight
 
-/atom/movable/New()
+/atom/movable/initialize()
 	..()
 	if(self_weight == null && isitem(src))
 		var/obj/item/I = src

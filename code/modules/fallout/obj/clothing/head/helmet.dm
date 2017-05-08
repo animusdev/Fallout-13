@@ -325,9 +325,31 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
-	strip_delay = 200
+	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 3
+
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/shocktrooper/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/shocktrooper/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced
 	name = "advanced mark II power helmet"
@@ -342,9 +364,31 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
-	strip_delay = 200
+	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
+
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/superadvanced/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/superadvanced/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced mark I power helmet"
@@ -359,9 +403,67 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
-	strip_delay = 200
+	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
+
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/advanced/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/advanced/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/power_armor/t60
+	name = "T-60 power helmet"
+	desc = "An old pre-War power armor helmet.<br>It's comfy inside of it."
+	icon_state = "t60helmet"
+	item_state = "t60helmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
+
+/obj/item/clothing/head/helmet/power_armor/t51b
+	name = "T-51b power helmet"
+	desc = "An old pre-War power armor helmet.<br>It's comfy inside of it."
+	icon_state = "t51bhelmet"
+	item_state = "t51bhelmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"

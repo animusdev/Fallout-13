@@ -13,7 +13,7 @@ var/global/posibrain_notif_cooldown = 0
 	brainmob = null
 	req_access = list(access_robotics)
 	mecha = null//This does not appear to be used outside of reference in mecha.dm.
-	braintype = "Android"
+	braintype = "Robot"
 	var/autoping = TRUE //if it pings on creation immediately
 	var/begin_activation_message = "<span class='notice'>You carefully locate the manual activation switch and start the positronic brain's boot process.</span>"
 	var/success_message = "<span class='notice'>The positronic brain pings, and its lights start flashing. Success!</span>"
@@ -48,7 +48,7 @@ var/global/posibrain_notif_cooldown = 0
 /obj/item/device/mmi/posibrain/attack_self(mob/user)
 	if(brainmob && !brainmob.key && !notified)
 		//Start the process of requesting a new ghost.
-		to_chat(user, begin_activation_message)
+		user << begin_activation_message
 		ping_ghosts("requested", FALSE)
 		notified = 1
 		used = 0
@@ -98,7 +98,7 @@ var/global/posibrain_notif_cooldown = 0
 
 /obj/item/device/mmi/posibrain/proc/transfer_personality(mob/candidate)
 	if(used || (brainmob && brainmob.key)) //Prevents hostile takeover if two ghosts get the prompt or link for the same brain.
-		to_chat(candidate, "This brain has already been taken! Please try your possession again later!")
+		candidate << "This brain has already been taken! Please try your possession again later!"
 		return FALSE
 	notified = 0
 	if(candidate.mind && !isobserver(candidate))
@@ -106,7 +106,7 @@ var/global/posibrain_notif_cooldown = 0
 	else
 		brainmob.ckey = candidate.ckey
 	name = "[initial(name)] ([brainmob.name])"
-	to_chat(brainmob, welcome_message)
+	brainmob << welcome_message
 	brainmob.mind.assigned_role = new_role
 	brainmob.stat = CONSCIOUS
 	dead_mob_list -= brainmob
@@ -131,14 +131,14 @@ var/global/posibrain_notif_cooldown = 0
 	else
 		msg = "[dead_message]"
 
-	to_chat(user, msg)
+	user << msg
 
 /obj/item/device/mmi/posibrain/New()
 	brainmob = new(src)
 	picked_fluff_name = pick(fluff_names)
 	brainmob.name = "[picked_fluff_name]-[rand(100, 999)]"
 	brainmob.real_name = brainmob.name
-	brainmob.forceMove(src)
+	brainmob.loc = src
 	brainmob.container = src
 	if(autoping)
 		ping_ghosts("created", TRUE)

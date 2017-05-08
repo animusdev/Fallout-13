@@ -5,11 +5,14 @@
 	delay = 2
 	randomspread = 1
 	variance = 5
+	select_name = "kill"
+	e_cost = 50
 	firing_effect_type = /obj/effect/overlay/temp/dir_setting/firing_effect/plasma
 
 /obj/item/ammo_casing/energy/f13plasma/turbo
 	projectile_type = /obj/item/projectile/beam/plasma/turbo
 	delay = 5
+	e_cost = 75
 
 /obj/item/ammo_casing/energy/f13plasma/tri
 	delay = 0

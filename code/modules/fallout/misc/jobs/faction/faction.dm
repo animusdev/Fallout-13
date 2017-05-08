@@ -223,7 +223,7 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/brotherhood
 	name = "Brotherhood"
-	color = "#005A20"
+	color = "#00215a"
 	id = "bs"
 	full_name = "Brotherhood of Steel"
 	description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel, or simply the Brotherhood - is a quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on strict subordination and Code of Conduct.<br><i>The Steel Endures!</i>"
@@ -299,8 +299,9 @@ mob/proc/set_faction(var/faction)
 	name = "Acolytes"
 	color = "#204200"
 	id = "acolytes"
-	preview_image = 'html/factions/acolytes.png'
 	full_name = "Acolytes of Atom"
+	description = "<b>Alignment: Chaotic Neutral</b><br>Have you ever met a bunch of crazed zealots willing to baptize you with radioactive waste?<br>These fanatics are likely to make it so, if you have a smooth skin - as they have all lost theirs decades ago.<br>They are faithful to their glorious God - the Great Atom, who brings salvation to all living.<br>They honor their faith, and are willing to do everything they can to please the Great Atom, and live eternal with a holy green glow."
+	preview_image = 'html/factions/acolytes.png'
 	head_status = "master_atom"
 	verbs = list(/mob/proc/begin_head_voting)
 

@@ -89,7 +89,7 @@
 	desc = "An easy to fit wood floor tile."
 	icon_state = "tile-wood"
 	origin_tech = "biotech=1"
-	turf_type = /turf/open/floor/wood
+	turf_type = /turf/open/floor/f13/wood
 	resistance_flags = FLAMMABLE
 
 

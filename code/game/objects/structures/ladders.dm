@@ -1,8 +1,10 @@
 /obj/structure/ladder
 	name = "ladder"
 	desc = "A sturdy metal ladder."
-	icon = 'icons/obj/structures.dmi'
-	icon_state = "ladder11"
+	icon = 'icons/fallout/objects/structures/stationary.dmi'
+	icon_state = "ladder_middle"
+	anchored = 1
+	resistance_flags = INDESTRUCTIBLE
 	var/id = null
 	var/height = 0							//the 'height' of the ladder. higher numbers are considered physically higher
 	var/obj/structure/ladder/down = null	//the ladder below this one
@@ -13,8 +15,8 @@
 	desc = "An extremely sturdy metal ladder."
 
 
-/obj/structure/ladder/New()
-	spawn(8)
+/obj/structure/ladder/initialize()
+	spawn(1200)
 		for(var/obj/structure/ladder/L in world)
 			if(L.id == id)
 				if(L.height == (height - 1))
@@ -30,16 +32,16 @@
 
 /obj/structure/ladder/update_icon()
 	if(up && down)
-		icon_state = "ladder11"
+		icon_state = "ladder_middle"
 
 	else if(up)
-		icon_state = "ladder10"
+		icon_state = "ladder_bottom"
 
 	else if(down)
-		icon_state = "ladder01"
+		icon_state = "ladder_top"
 
 	else	//wtf make your ladders properly assholes
-		icon_state = "ladder00"
+		icon_state = "ladder_dmg"
 
 /obj/structure/ladder/proc/go_up(mob/user,is_ghost)
 	if(!is_ghost)

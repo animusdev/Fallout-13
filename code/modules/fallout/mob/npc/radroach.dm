@@ -28,7 +28,7 @@
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/roach_alert.ogg'
 
-	melee_damage_lower = 1
+	melee_damage_lower = 5
 	melee_damage_upper = 5
 	attacktext = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'

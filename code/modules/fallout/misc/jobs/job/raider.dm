@@ -14,13 +14,18 @@
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/gangleader
+	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/military,
+	/obj/item/clothing/shoes/f13/brownie,
+	/obj/item/clothing/shoes/f13/tan,
 	/obj/item/clothing/glasses/f13/biker,
+	/obj/item/clothing/under/suit_jacket,
 	/obj/item/clothing/suit/armor/f13/chestplate,
+	/obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/suit/armor/f13/tribal,
 	/obj/item/clothing/suit/armor/f13/slam,
 	/obj/item/clothing/suit/armor/f13/supafly,
@@ -34,11 +39,14 @@
 	/obj/item/clothing/head/helmet/knight/f13/rider,
 	/obj/item/clothing/head/welding/f13/fire,
 	/obj/item/clothing/head/welding/f13/japan,
+	/obj/item/weapon/golf9,
+	/obj/item/weapon/harpoon,
 	/obj/item/weapon/twohanded/sledgehammer,
 	/obj/item/weapon/twohanded/largehammer,
-	/obj/item/weapon/golf9,
 	/obj/item/weapon/powergauntlet,
-	/obj/item/weapon/restraints/legcuffs/bola/raider
+	/obj/item/weapon/restraints/legcuffs/bola/raider,
+	/obj/item/weapon/lighter/gold,
+	/obj/item/weapon/lighter/detonator
 	)
 
 	denied_items = list(
@@ -54,7 +62,7 @@
 /datum/outfit/job/gangleader
 	name = "Gang Leader"
 	uniform = /obj/item/clothing/under/f13/villain
-	shoes = /obj/item/clothing/shoes/f13/tan
+	shoes = /obj/item/clothing/shoes/laceup
 
 /datum/job/raider
 	title = "Raider"
@@ -72,10 +80,11 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/raider
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/glasses/f13/biker,
+	/obj/item/clothing/suit/armor/f13/chestplate,
 	/obj/item/clothing/suit/armor/f13/tribal,
 	/obj/item/clothing/suit/armor/f13/slam,
 	/obj/item/clothing/suit/armor/f13/yankee,
@@ -83,9 +92,11 @@
 	/obj/item/clothing/head/helmet/f13/motorcycle,
 	/obj/item/clothing/head/helmet/f13/firefighter,
 	/obj/item/clothing/head/helmet/f13/yankee,
-	/obj/item/weapon/twohanded/sledgehammer,
 	/obj/item/weapon/golf9,
-	/obj/item/weapon/restraints/legcuffs/bola/raider
+	/obj/item/weapon/harpoon,
+	/obj/item/weapon/twohanded/sledgehammer,
+	/obj/item/weapon/restraints/legcuffs/bola/raider,
+	/obj/item/weapon/lighter/detonator
 	)
 
 	denied_items = list(

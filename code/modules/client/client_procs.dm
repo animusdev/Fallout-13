@@ -112,7 +112,7 @@ var/next_external_rsc = 0
 	if(config.whitelist_on && !check_whitelist(src.ckey))
 		Destroy(src)
 		return
-	if(SScontent && SScontent.all_content_packs)
+	if(SScontent && SScontent.all_content_packs && SScontent.all_content_packs.len)
 		update_content_data()
 	chatOutput = new(src)
 	var/tdata = TopicData //save this for later use

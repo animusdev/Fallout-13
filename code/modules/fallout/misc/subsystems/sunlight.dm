@@ -70,6 +70,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	if(step > time_cycle_steps.len)
 		step = STEP_DAY
 		dodaychange()
+		/*
 	switch(step)
 		if(STEP_MORNING)
 			if(prob(10)) //Sunrise brings hope for a new better day
@@ -83,6 +84,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		if(STEP_NIGHT)
 			if(prob(5)) //The darkness of a night shouldn't be any worse
 				sandstorm()
+				*/
 	step_started = world.time
 	current_step = step
 	current_step_datum = time_cycle_steps[current_step]

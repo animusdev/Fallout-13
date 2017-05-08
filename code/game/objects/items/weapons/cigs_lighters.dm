@@ -438,6 +438,36 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	heat = 1500
 	resistance_flags = FIRE_PROOF
 
+/obj/item/weapon/lighter/engraved
+	name = "engraved lighter"
+	desc = "A fancy lighter for someone classy."
+	icon_state = "engraved"
+	item_state = "zippo"
+
+/obj/item/weapon/lighter/gold
+	name = "golden lighter"
+	desc = "Pure gold shaped into a lighter."
+	icon_state = "gold"
+	item_state = "zippo"
+
+/obj/item/weapon/lighter/vault13
+	name = "Vault 13 lighter"
+	desc = "True relic from a legendary Vault."
+	icon_state = "13"
+	item_state = "zippo"
+
+/obj/item/weapon/lighter/black
+	name = "black lighter"
+	desc = "It is pitch black with cross engraved on the side.<br>Holy or cursed, you never know."
+	icon_state = "black"
+	item_state = "zippo"
+
+/obj/item/weapon/lighter/detonator
+	name = "bomb detonator"
+	desc = "A remote detonator linked to an explosive device."
+	icon_state = "detonator"
+	item_state = "zippo"
+
 /obj/item/weapon/lighter/greyscale
 	name = "cheap lighter"
 	desc = "A cheap-as-free lighter."

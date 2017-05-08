@@ -7,15 +7,15 @@
 	desc = "A true child of wasteland.<br>In badlands you are born, in badlands lays your grave."
 	faction = "none"
 	status = "none"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = -1
+	spawn_positions = -1
 	supervisors = "none"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/settler
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 /datum/outfit/job/settler
 	name = "Settler"
@@ -39,10 +39,11 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/adventurer
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
-	/obj/item/clothing/shoes/f13/explorer,
+	/obj/item/clothing/shoes/f13/brownie,
+	/obj/item/clothing/gloves/f13/leather,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/merccharm,
 	/obj/item/clothing/under/f13/female/merccharm,
@@ -79,19 +80,20 @@
 	department_flag = MEDSCI
 	faction = "none"
 	status = "none"
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 10
+	spawn_positions = 10
 	supervisors = "nobody"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/mercenary
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
-	/obj/item/clothing/shoes/f13/explorer,
+	/obj/item/clothing/gloves/f13/leather,
+	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/mercadv,
 	/obj/item/clothing/under/f13/female/mercadv,
 	/obj/item/clothing/under/f13/female/merccharm,
@@ -101,9 +103,11 @@
 	/obj/item/clothing/suit/f13/duster,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
+	/obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
 	/obj/item/clothing/head/helmet/f13/tribal,
-	/obj/item/clothing/head/helmet/f13/eyebot
+	/obj/item/clothing/head/helmet/f13/eyebot,
+	/obj/item/weapon/lighter/detonator
 	)
 
 	denied_items = list(

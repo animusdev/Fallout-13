@@ -41,7 +41,7 @@
 
 /obj/item/clothing/shoes/f13/explorer
 	name = "worn boots"
-	desc = "A pair of slightly worn, steel-toed work boots.<br>These are still good at keeping toes uncrushed."
+	desc = "A pair of slightly worn, steel-toed work boots.<br>These are still good at keeping toes uncrushed by a falling junk you find amid the ruins."
 	icon_state = "explorer"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 	self_weight = 1

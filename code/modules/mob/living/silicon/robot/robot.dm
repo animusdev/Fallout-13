@@ -1,3 +1,5 @@
+//Love me some robots in Fallout 13 - Sarumyn
+
 /mob/living/silicon/robot
 	name = "Cyborg"
 	real_name = "Cyborg"
@@ -837,6 +839,188 @@
 						<i>Help the operatives secure the disk at all costs!</i></b>"
 	set_module = /obj/item/weapon/robot_module/syndicate_medical
 
+/mob/living/silicon/robot/proc/place_on_head(obj/item/new_hat)
+	if(hat)
+		hat.forceMove(get_turf(src))
+	hat = new_hat
+	new_hat.forceMove(src)
+	update_icons()
+
+/mob/living/silicon/robot/sentry
+	icon_state = "sentrybot"
+	faction = list("syndicate")
+	bubble_icon = "syndibot"
+	maxHealth = 400
+	health = 400
+	req_access = list(access_syndicate)
+	lawupdate = FALSE
+	scrambledcodes = TRUE // These are rogue borgs.
+	ionpulse = TRUE
+	braintype = "Robot"
+	speed = 2
+	var/playstyle_string = "<span class='userdanger'>You are a Syndicate assault cyborg!</span><br>\
+							<b>You are armed with powerful offensive tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
+							Your cyborg LMG will slowly produce ammunition from your power supply, and your operative pinpointer will find and locate fellow nuclear operatives. \
+							<i>Help the operatives secure the disk at all costs!</i></b>"
+	var/set_module = /obj/item/weapon/robot_module/sentry
+
+/mob/living/silicon/robot/sentry/New(loc)
+	..()
+	cell.maxcharge = INFINITY
+	cell.charge = INFINITY
+	radio = new /obj/item/device/radio/borg/syndicate(src)
+	module.transform_to(set_module)
+	laws = new /datum/ai_laws/malfunction()
+	spawn(5)
+		if(playstyle_string)
+			src << playstyle_string
+
+/mob/living/silicon/robot/sentry/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/bullet))
+		var/reflectchance = 85 - round(P.damage/3)
+		if(prob(reflectchance))
+			apply_damage(P.damage * 0.3, P.damage_type)
+			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.original = locate(new_x, new_y, P.z)
+				P.starting = curloc
+				P.current = curloc
+				P.firer = src
+				P.yo = new_y - curloc.y
+				P.xo = new_x - curloc.x
+
+			return -1 // complete projectile permutation
+	else if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		var/reflectchance2 = 40 - round(P.damage/3)
+		if(prob(reflectchance2))
+			apply_damage(P.damage * 0.5, P.damage_type)
+			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.original = locate(new_x, new_y, P.z)
+				P.starting = curloc
+				P.current = curloc
+				P.firer = src
+				P.yo = new_y - curloc.y
+				P.xo = new_x - curloc.x
+
+			return -1 // complete projectile permutation
+	return (..(P))
+
+/mob/living/silicon/robot/handy
+	icon_state = "handy"
+	faction = list("syndicate")
+	bubble_icon = "syndibot"
+	maxHealth = 200
+	health = 200
+	req_access = list(access_syndicate)
+	lawupdate = FALSE
+	scrambledcodes = TRUE // These are rogue borgs.
+	ionpulse = TRUE
+	braintype = "Robot"
+	movement_type = FLYING
+	speed = 1
+	var/playstyle_string = "<span class='userdanger'>You are a Syndicate assault cyborg!</span><br>\
+							<b>You are armed with powerful offensive tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
+							Your cyborg LMG will slowly produce ammunition from your power supply, and your operative pinpointer will find and locate fellow nuclear operatives. \
+							<i>Help the operatives secure the disk at all costs!</i></b>"
+	var/set_module = /obj/item/weapon/robot_module/handy
+
+/mob/living/silicon/robot/handy/New(loc)
+	..()
+	cell.maxcharge = INFINITY
+	cell.charge = INFINITY
+	radio = new /obj/item/device/radio/borg/syndicate(src)
+	module.transform_to(set_module)
+	laws = new /datum/ai_laws/malfunction()
+	spawn(5)
+		if(playstyle_string)
+			src << playstyle_string
+
+/mob/living/silicon/robot/handy/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/bullet))
+		var/reflectchance = 70 - round(P.damage/3)
+		if(prob(reflectchance))
+			apply_damage(P.damage * 0.4, P.damage_type)
+			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.original = locate(new_x, new_y, P.z)
+				P.starting = curloc
+				P.current = curloc
+				P.firer = src
+				P.yo = new_y - curloc.y
+				P.xo = new_x - curloc.x
+
+			return -1 // complete projectile permutation
+	else if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		var/reflectchance2 = 40 - round(P.damage/3)
+		if(prob(reflectchance2))
+			apply_damage(P.damage * 0.5, P.damage_type)
+			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.original = locate(new_x, new_y, P.z)
+				P.starting = curloc
+				P.current = curloc
+				P.firer = src
+				P.yo = new_y - curloc.y
+				P.xo = new_x - curloc.x
+
+			return -1 // complete projectile permutation
+	return (..(P))
+
+/mob/living/silicon/robot/handy/nurse
+	icon_state = "nurse"
+	playstyle_string = "<span class='userdanger'>You are a Syndicate medical cyborg!</span><br>\
+						<b>You are armed with powerful medical tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
+						Your hypospray will produce Restorative Nanites, a wonder-drug that will heal most types of bodily damages, including clone and brain damage. It also produces morphine for offense. \
+						Your defibrillator paddles can revive operatives through their hardsuits, or can be used on harm intent to shock enemies! \
+						Your energy saw functions as a circular saw, but can be activated to deal more damage, and your operative pinpointer will find and locate fellow nuclear operatives. \
+						<i>Help the operatives secure the disk at all costs!</i></b>"
+	set_module = /obj/item/weapon/robot_module/nurse
+
+/mob/living/silicon/robot/handy/gutsy
+	icon_state = "gutsy"
+	maxHealth = 300
+	health = 300
+	playstyle_string = "<span class='userdanger'>You are a Syndicate medical cyborg!</span><br>\
+						<b>You are armed with powerful medical tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
+						Your hypospray will produce Restorative Nanites, a wonder-drug that will heal most types of bodily damages, including clone and brain damage. It also produces morphine for offense. \
+						Your defibrillator paddles can revive operatives through their hardsuits, or can be used on harm intent to shock enemies! \
+						Your energy saw functions as a circular saw, but can be activated to deal more damage, and your operative pinpointer will find and locate fellow nuclear operatives. \
+						<i>Help the operatives secure the disk at all costs!</i></b>"
+	set_module = /obj/item/weapon/robot_module/gutsy
+
 /mob/living/silicon/robot/proc/notify_ai(notifytype, oldname, newname)
 	if(!connected_ai)
 		return
@@ -987,11 +1171,3 @@
 
 	magpulse = module.magpulsing
 	updatename()
-
-
-/mob/living/silicon/robot/proc/place_on_head(obj/item/new_hat)
-	if(hat)
-		hat.forceMove(get_turf(src))
-	hat = new_hat
-	new_hat.forceMove(src)
-	update_icons()

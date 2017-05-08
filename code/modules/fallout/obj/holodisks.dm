@@ -17,7 +17,7 @@
 	var/soundLength = 50
 	var/soundFile = 'sound/f13music/mysterious_stranger.ogg'
 
-/obj/item/weapon/holodisk/New()
+/obj/item/weapon/holodisk/initialize()
         src.name = "holodisk #[rand(1,999)]"
         return ..()
 
@@ -86,6 +86,6 @@
 	soundFile =  'sound/f13items/music_box.ogg' //Amazing grace
 	soundLength = 320
 
-/obj/item/weapon/holodisk/musicbox/New()
+/obj/item/weapon/holodisk/musicbox/initialize()
 	..()
 	name = "music box"

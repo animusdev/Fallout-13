@@ -18,8 +18,9 @@ var/datum/subsystem/ambient/SSambient
 /datum/subsystem/ambient/New()
 	NEW_SS_GLOBAL(SSambient)
 
-/datum/subsystem/ambient/Initialize()
+/datum/subsystem/ambient/Initialize(start_timeofday)
 	next_speach = world.time + rand(min_wait_random_ambient, max_wait_random_ambient)
+	..()
 /datum/subsystem/ambient/stat_entry()
 	..("P:[processing.len]")
 

@@ -25,7 +25,7 @@
 	name = "diode"
 	desc = "It looks like something I saw in that useless broken television set once.<br>That thing is probably used in some electronic devices."
 	icon_state = "diode_1"
-/obj/item/crafting/diode/New()
+/obj/item/crafting/diode/initialize()
 	..()
 	icon_state = "diode_[rand(1,3)]"
 
@@ -33,7 +33,7 @@
 	name = "transistor"
 	desc = "Popov would love it, but Tesla got to see it.<br>The most useful electrical component."
 	icon_state = "transistor_1"
-/obj/item/crafting/transistor/New()
+/obj/item/crafting/transistor/initialize()
 	..()
 	icon_state = "transistor_[rand(1,3)]"
 
@@ -41,7 +41,7 @@
 	name = "capacitor"
 	desc = "It looks like something I saw inside of the radio once.<br>It seems like it's the most basic electrical component."
 	icon_state = "capacitor_1"
-/obj/item/crafting/capacitor/New()
+/obj/item/crafting/capacitor/initialize()
 	..()
 	icon_state = "capacitor_[rand(1,3)]"
 
@@ -49,7 +49,7 @@
 	name = "fuse"
 	desc = "A tiny glass tube with some wiring stuck inside of it.<br>I have no idea what it is."
 	icon_state = "fuse_1"
-/obj/item/crafting/furse/New()
+/obj/item/crafting/furse/initialize()
 	..()
 	icon_state = "fuse_[rand(1,3)]"
 
@@ -57,7 +57,7 @@
 	name = "resistor"
 	desc = "Tesla Warrior says, \"Stop right there, criminal electron!\"<br>Electron says, \"You'll never catch me!!!\"<br>*Zoom* *Zoom* *Pew* *Pew* *Pew*"
 	icon_state = "resistor_1"
-/obj/item/crafting/resistor/New()
+/obj/item/crafting/resistor/initialize()
 	..()
 	icon_state = "resistor_[rand(1,3)]"
 
@@ -65,7 +65,7 @@
 	name = "switch"
 	desc = "A common switch, used to light up the flashlight or activate a bomb timer." //Why i code it?
 	icon_state = "switch_1"
-/obj/item/crafting/switch/New()
+/obj/item/crafting/switch/initialize()
 	..()
 	icon_state = "switch_[rand(1,3)]"
 
@@ -73,7 +73,7 @@
 	name = "bulb"
 	desc = "And at last I see the light,<br>And it's like the fog has lifted,<br>And at last I see the light,<br>And it's like the sky is new,<br>And it's warm and real and bright,<br>And the world has somehow shifted,<br>All at once everything looks different."
 	icon_state = "bulb_1"
-/obj/item/crafting/bulb/New()
+/obj/item/crafting/bulb/initialize()
 	..()
 	icon_state = "bulb_[rand(1,3)]"
 
@@ -81,7 +81,7 @@
 	name = "empty circuit board"
 	desc = "A plastic board used to hold all other electrical components together."
 	icon_state = "board_1"
-/obj/item/crafting/board/New()
+/obj/item/crafting/board/initialize()
 	..()
 	icon_state = "board_[rand(1,3)]"
 
@@ -120,7 +120,7 @@
 	desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
 	icon_state = "wonderglue1"
 
-/obj/item/crafting/wonderglue/New()
+/obj/item/crafting/wonderglue/initialize()
 	..()
 	icon_state = "wonderglue[rand(1,2)]"
 
