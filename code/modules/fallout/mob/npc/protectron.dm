@@ -46,7 +46,7 @@
 	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/laser.ogg'
+	projectilesound = 'sound/weapons/resonator_fire.ogg'
 
 /mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Marvin"

@@ -7,6 +7,7 @@
 
 /obj/item/clothing/shoes/f13
 	icon = 'icons/fallout/clothing/shoes.dmi'
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 	self_weight = 0.5
 
 /obj/item/clothing/shoes/f13/rag
@@ -66,7 +67,6 @@
 	strip_delay = 40
 	resistance_flags = 0
 	self_weight = 1
-	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/f13/military/diesel
 	name = "male diesel boots"

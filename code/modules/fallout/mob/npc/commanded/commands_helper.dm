@@ -9,7 +9,7 @@ var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charg
 "none" = "neutral,wasteland,settler,farm,нейтрал,пустош,поселен,дерев,ферм,бомж", "city" = "citiz,mayor,sherif,город,мер,мэр,шериф,шэриф", "raiders" = "bandit,criminal,raid,gang,psych,insane,maniac,sadist,рейд,хулиг,банд,пахан,псих,шиз,мани,садист,содом", "vault" = "bunker,убежищ,бункер", "bs" = "bro,steel,knight,paladin,elder,брат,стал,рыцар,паладин,старейшин", "enclave" = "usa,сша,анклав", "ahs" = "hubolog,adept,хаболог,адепт", "ncr" = "california,republic,нкр,калифорни,республик", "legion" = "caesar,легион,цезарь", "followers" = "follower,apocalypse,следовате,апокалипсис", "acolytes" = "acolyt,atom,ghoul,аколит,атом,гул", \
 "enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,fag,traitor,villain,dick,douche,prick,spy,agent,враг,чуж,плох,зло,опас,угр,пред,шпи,враж,сволоч,муд,пидор", \
 "friend" = "buddy,master,good,kind,ally,partner,друг,друз,добр,повел,хоз,хор,союз,пар", "pull" = "grab,bring,get,drag,fetch,take,haul,tow,deliver,rescue,save,help,апорт,тащи,неси,хват,возьми,взя,заложи,спас,букс", \
-"doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пёс,собак,кобел,щен,пса,волк", \
+"doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пёс,собак,кобел,щен,пса,шавк,волк", \
 "smeagol" = "gollum,hobbit,смегол,лысый,гол,гор,урод,хобит,пучеглаз")
 
 

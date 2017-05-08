@@ -43,9 +43,9 @@
 /obj/item/ammo_box/m44
 	name = "speed loader (.44)"
 	desc = "Designed to quickly reload revolvers."
-	icon_state = "357"
+	icon_state = "38"
 	ammo_type = /obj/item/ammo_casing/m44
-	max_ammo = 7
+	max_ammo = 6
 	multiple_sprites = 1
 	self_weight = 0.2
 

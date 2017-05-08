@@ -43,7 +43,7 @@
 	faction = list("hostile", "enclave")
 	status_flags = CANPUSH
 	vision_range = 12
-	aggro_vision_range = 12
+	aggro_vision_range = 10
 	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
@@ -59,5 +59,5 @@
 
 	faction = list("hostile", "bs")
 
-	projectiletype = /obj/item/projectile/energy/net
+	projectiletype = /obj/item/projectile/energy/electrode
 	projectilesound = 'sound/weapons/resonator_blast.ogg'

@@ -345,6 +345,18 @@
 	icon_state = "vault113"
 	item_color = "vault113"
 
+/obj/item/clothing/under/f13/vault/v21
+	name = "Vault 21 jumpsuit"
+	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 21 on the back."
+	icon_state = "vault21"
+	item_color = "vault21"
+
+/obj/item/clothing/under/f13/vault/v42
+	name = "Vault 42 jumpsuit"
+	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Great Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 42 on the back."
+	icon_state = "vault42"
+	item_color = "vault42"
+
 /obj/item/clothing/under/f13/followers
 	name = "followers outfit "
 	desc = "A white shirt with a pair of dark brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
