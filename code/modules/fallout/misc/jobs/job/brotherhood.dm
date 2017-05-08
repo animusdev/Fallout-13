@@ -24,6 +24,7 @@
 	/obj/item/clothing/head/helmet/power_armor/t60,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
 	/obj/item/weapon/twohanded/superhammer,
+	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved
 	)
 

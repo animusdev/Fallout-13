@@ -1,8 +1,8 @@
 //Fallout 13 eyebot directory
 
 /mob/living/simple_animal/hostile/eyebot
-	name = "protectron"
-	desc = "A pre-War type of protectron.<br>It's a really dangerous machine."
+	name = "eyebot"
+	desc = "A hovering, propaganda-spewing reconnaissance and surveillance robot with radio antennas pointing out its back and loudspeakers in the front."
 	icon_state = "eyebot"
 	icon_living = "eyebot"
 	icon_dead = "eyebot_d"

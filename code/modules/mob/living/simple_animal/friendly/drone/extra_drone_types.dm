@@ -183,8 +183,8 @@
 	fully_heal(TRUE)
 
 /mob/living/simple_animal/drone/hand
-	name = "Handbot"
-	desc = ""
+	name = "RB-3928"
+	desc = "A robobrain - multi-purpose robot.<br>Its memories and programs are stored inside an organic or partially organic brain, contained in a domed shell atop its chassis.<br>It's considered intuitively superior to most robots, as human brains allow them a wider range of responses and functions.<br>Its hands can operate most tools and weapons usable by humans."
 	icon = 'icons/fallout/mobs/robots.dmi'
 	icon_state = "robobrain"
 	icon_living = "robobrain"

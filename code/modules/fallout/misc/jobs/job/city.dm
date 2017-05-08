@@ -88,11 +88,11 @@
 
 	required_items = list(
 	/obj/item/clothing/under/f13/cowboyg,
-	/obj/item/clothing/under/f13/cowboyb,
 	/obj/item/clothing/under/f13/cowboyt,
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest,
-	/obj/item/clothing/suit/f13/duster
+	/obj/item/clothing/suit/f13/duster,
+	/obj/item/ammo_box/magazine/internal/cylinder/m44
 	)
 
 	denied_items = list(
@@ -144,7 +144,6 @@
 	/obj/item/clothing/shoes/f13/cowboy,
 	/obj/item/clothing/under/f13/cowboyg,
 	/obj/item/clothing/under/f13/cowboyb,
-	/obj/item/clothing/under/f13/cowboyt,
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest
 	)

@@ -31,7 +31,7 @@
 	name = "magnum revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/m44
 	caliber = "44mm"
-	max_ammo = 7
+	max_ammo = 6
 
 /obj/item/ammo_casing/m44
 	desc = "A .44 bullet casing."
