@@ -47,4 +47,17 @@
 	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/misc/splort.ogg'
+	projectilesound = 'sound/weapons/emitter2.ogg'
+
+/mob/living/simple_animal/hostile/eyebot/floatingeye
+	name = "floating eyebot"
+	desc = "A quick-observation robot commonly found in pre-War military installations.<br>The floating eyebot uses a powerful taser to keep intruders in line."
+	icon_state = "floatingeye"
+	icon_living = "floatingeye"
+	icon_dead = "floatingeye_d"
+	icon_gib = "floatingeye_d"
+
+	faction = list("hostile", "bs")
+
+	projectiletype = /obj/item/projectile/energy/net
+	projectilesound = 'sound/weapons/emitter2.ogg'
