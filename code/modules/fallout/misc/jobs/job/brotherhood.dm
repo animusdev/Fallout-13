@@ -61,7 +61,7 @@
 
 /datum/job/paladin
 	title = "Paladin"
-	desc = "A guardian, the keeper of peace."
+	desc = "A guardian, the keeper of peace.<br>You are the one, who shall protect others."
 	flag = PALADIN
 	department_head = list("elder")
 	department_flag = ENGSEC
@@ -112,8 +112,8 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t60 //Temporary before we get T-51
-	head = /obj/item/clothing/head/helmet/power_armor/t60 //Temporary before we get T-51
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
+	head = /obj/item/clothing/head/helmet/power_armor/t51b
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rcw
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
@@ -121,7 +121,7 @@
 
 /datum/job/knight
 	title = "Knight"
-	desc = "Bringer of the light."
+	desc = "Bringer of the light.<br>You are the one, who shall bring justice."
 	flag = KNIGHT
 	department_head = list("elder", "paladin")
 	department_flag = ENGSEC

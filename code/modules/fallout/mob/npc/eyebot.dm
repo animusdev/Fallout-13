@@ -47,7 +47,7 @@
 	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/emitter2.ogg'
+	projectilesound = 'sound/weapons/resonator_fire.ogg'
 
 /mob/living/simple_animal/hostile/eyebot/floatingeye
 	name = "floating eyebot"
@@ -60,4 +60,4 @@
 	faction = list("hostile", "bs")
 
 	projectiletype = /obj/item/projectile/energy/net
-	projectilesound = 'sound/weapons/emitter2.ogg'
+	projectilesound = 'sound/weapons/resonator_blast.ogg'

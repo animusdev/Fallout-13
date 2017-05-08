@@ -305,9 +305,10 @@
 	flags = STOPSPRESSUREDMAGE
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	put_on_delay = 100
 	strip_delay = 200
-	resistance_flags = UNACIDABLE
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 35
 
 /obj/item/clothing/suit/armor/f13/power_armor/ncr
@@ -323,11 +324,19 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 100, rad = 60)
+	self_weight = 30
+
+/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	name = "T-51b power armor"
+	desc = "A mass-produced pinnacle of pre-War engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
+	icon_state = "t51bpowerarmor"
+	item_state = "t51bpowerarmor"
+	armor = list(melee = 70, bullet = 50, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
 	self_weight = 25
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60 power armor"
-	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
+	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
 	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)

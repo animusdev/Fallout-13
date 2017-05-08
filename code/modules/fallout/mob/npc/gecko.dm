@@ -11,8 +11,8 @@
 	response_help = "pokes"
 	response_disarm = "pushes aside"
 	response_harm = "kicks"
-	maxHealth = 60
-	health = 60
+	maxHealth = 50
+	health = 50
 	self_weight = 35
 
 	sound_speak_chance = 5
