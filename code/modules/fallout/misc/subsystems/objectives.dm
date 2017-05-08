@@ -20,4 +20,15 @@ var/datum/subsystem/objectives/SSobjectives
 		all_objectives += O
 
 /datum/subsystem/objectives/proc/setup_objectives()
+	var/list/objectives
 	for(var/datum/mind/mind in ticker.minds)
+		if(!mind.current)
+			continue
+
+		objectives = shuffle(all_objectives)
+		for(var/datum/f13_objective/O in objectives)
+			if(O.check_mob(mind.current))
+				O.assignto(mind)
+
+/datum/subsystem/objectives/proc/on_roundend()
+	return 1
