@@ -20,4 +20,4 @@ var/datum/subsystem/objectives/SSobjectives
 		all_objectives += O
 
 /datum/subsystem/objectives/proc/setup_objectives()
-	for(var/datum/ in ticker.minds)
+	for(var/datum/mind/mind in ticker.minds)
