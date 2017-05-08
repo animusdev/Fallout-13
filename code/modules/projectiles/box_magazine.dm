@@ -23,7 +23,7 @@
 /obj/item/ammo_box/New()
 	..()
 	if(!start_empty)
-		for(stored_ammo.len to max_ammo)
+		for(var/i = 1, stored_ammo.len <= max_ammo, i++)
 			stored_ammo += PoolOrNew(ammo_type, src)
 	update_icon()
 
