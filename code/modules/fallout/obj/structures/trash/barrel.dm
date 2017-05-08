@@ -22,6 +22,11 @@
 	START_PROCESSING(SSobj, src)
 	SSradiation.processing += src
 
+/obj/structure/reagent_dispensers/barrel/boom()
+	visible_message("<span class='danger'>\The [src] ruptures!</span>")
+	chem_splash(loc, 0, list(reagents))
+	qdel(src)
+
 /obj/structure/reagent_dispensers/barrel/explosive
 	name = "fuel barrel"
 	desc = "That is one strange metal barrel, made of strange metal that did not rust after all the decades.<br>And it has a strange label on it...<br>I wonder if there is anything left in it."
