@@ -7,8 +7,8 @@
 	desc = "A true child of wasteland.<br>In badlands you are born, in badlands lays your grave."
 	faction = "none"
 	status = "none"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = -1
+	spawn_positions = -1
 	supervisors = "none"
 	selection_color = "#ece19d"
 	access = list()
@@ -80,8 +80,8 @@
 	department_flag = MEDSCI
 	faction = "none"
 	status = "none"
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 10
+	spawn_positions = 10
 	supervisors = "nobody"
 	selection_color = "#ece19d"
 	access = list()

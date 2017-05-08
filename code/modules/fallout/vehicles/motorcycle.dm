@@ -13,7 +13,7 @@
 	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 40)
 	var/image/cover = null
 	var/datum_type = /datum/riding/motorcycle
-	self_weight = 150
+	self_weight = 300
 	engine_on_sound = 'sound/f13machines/bike_start.ogg'
 	engine_loop_sound = 'sound/f13machines/bike_loop.ogg'
 

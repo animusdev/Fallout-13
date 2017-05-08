@@ -20,8 +20,8 @@
 	required_items = list(
 	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/recon,
-	/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-	/obj/item/clothing/head/helmet/power_armor/t45d,
+	/obj/item/clothing/suit/armor/f13/power_armor/t60,
+	/obj/item/clothing/head/helmet/power_armor/t60,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
 	/obj/item/weapon/twohanded/superhammer,
 	/obj/item/weapon/lighter/engraved
@@ -66,8 +66,8 @@
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "paladin"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the Elder"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
@@ -111,8 +111,8 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = /obj/item/clothing/head/helmet/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t60 //Temporary before we get T-51
+	head = /obj/item/clothing/head/helmet/power_armor/t60 //Temporary before we get T-51
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rcw
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
@@ -126,8 +126,8 @@
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "knight"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 7
+	spawn_positions = 7
 	supervisors = "Elder, Paladin"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7

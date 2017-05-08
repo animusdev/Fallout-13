@@ -84,6 +84,7 @@
 
 	required_items = list(
 	/obj/item/clothing/glasses/f13/biker,
+	/obj/item/clothing/suit/armor/f13/chestplate,
 	/obj/item/clothing/suit/armor/f13/tribal,
 	/obj/item/clothing/suit/armor/f13/slam,
 	/obj/item/clothing/suit/armor/f13/yankee,

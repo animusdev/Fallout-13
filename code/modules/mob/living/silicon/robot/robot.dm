@@ -1,4 +1,4 @@
-//Love me some crudely done robots in Fallout 13 - Sarumyn
+//Love me some robots in Fallout 13 - Sarumyn
 
 /mob/living/silicon/robot
 	name = "Cyborg"
@@ -933,6 +933,7 @@
 	scrambledcodes = TRUE // These are rogue borgs.
 	ionpulse = TRUE
 	braintype = "Robot"
+	movement_type = FLYING
 	speed = 1
 	var/playstyle_string = "<span class='userdanger'>You are a Syndicate assault cyborg!</span><br>\
 							<b>You are armed with powerful offensive tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \

@@ -120,6 +120,15 @@
 	attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 
+/obj/item/weapon/nullrod/claymore/chaos_sword
+	icon_state = "chaosswordon"
+	item_state = "chaosswordon"
+	name = "cursed chainsaw sword"
+	desc = "Unleash the Chaos from the Warp!"
+	slot_flags = SLOT_BELT
+	attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
+	hitsound = 'sound/weapons/chainsawhit.ogg'
+
 /obj/item/weapon/nullrod/claymore/glowing
 	icon_state = "swordon"
 	item_state = "swordon"

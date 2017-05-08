@@ -325,6 +325,14 @@
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 100, rad = 60)
 	self_weight = 25
 
+/obj/item/clothing/suit/armor/f13/power_armor/t60
+	name = "T-60 power armor"
+	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
+	icon_state = "t60dpowerarmor"
+	item_state = "t60dpowerarmor"
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	self_weight = 25
+
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor mark I"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."

@@ -125,6 +125,8 @@
 		/obj/item/clothing/under/f13/merchant,
 		/obj/item/clothing/under/f13/trader,
 		/obj/item/clothing/under/f13/caravaneer,
+		/obj/item/clothing/under/f13/petrochico,
+		/obj/item/clothing/under/f13/mechanic,
 		/obj/item/clothing/under/f13/lumberjack,
 		/obj/item/clothing/under/f13/machinist,
 		// Suits
