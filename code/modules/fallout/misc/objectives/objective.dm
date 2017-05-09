@@ -16,14 +16,14 @@
 				return 0
 			return 1
 		assignto(datum/mind/M, var/list/data = list())
-			var/datum/objective_holder/holder = new /datum/objective_holder(src, M, data)
+			var/datum/objective_holder/holder = new /datum/objective_holder(M, src, data)
 			M.objective 	= holder
 			holders 			+= holder
 
-			to_chat(M.current, "Your current objective: <b>[name]</b>")
-			to_chat(M.current, "<i>[desc]<i>")
+			to_chat(M.current, "<span class='notice'>Your current objective: <b>[name]</b></span>")
+			to_chat(M.current, "\t<i>[desc]<i>")
 			if(data["custom_desc"])
-				to_chat(M.current, "[data["custom_desc"]]")
+				to_chat(M.current, "\t[data["custom_desc"]]")
 
 		check_complete(/datum/objective_holder/holder)
 			return 1

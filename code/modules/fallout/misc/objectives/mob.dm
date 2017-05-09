@@ -16,8 +16,8 @@
 				Role Objective:
 			</td>
 			<td>
-				<b>[mind.objective.name]<b><br>
-				<i>[mind.objective.desc]</i>
+				<b>[mind.objective.parent.name]<b><br>
+				<i>[mind.objective.parent.desc]</i>
 			</td>
 		</tr>
 	</table>
