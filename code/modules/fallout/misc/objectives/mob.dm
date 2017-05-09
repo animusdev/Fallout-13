@@ -1,5 +1,8 @@
 /mob/proc/show_objectives(var/mob/user)
-	if(!mind || !mind.objective)
+	if(!mind)
+		return
+	if(!mind.objective)
+		to_chat(user, "<span class='danger'>No objectives!</span>")
 		return
 	var/objective_completed = "<font color='#ff0000'>&#10008;</font>"
 	if(mind.objective.parent.check_complete(mind.objective))
