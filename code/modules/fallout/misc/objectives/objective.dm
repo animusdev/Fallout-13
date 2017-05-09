@@ -6,7 +6,7 @@
 		list/available_factions = list("all")
 		list/available_roles = list("all")
 
-		list/objective_holder/holders = list()
+		list/datum/objective_holder/holders = list()
 	proc
 		//Check can mob take this objective
 		check_mob(mob/living/carbon/human/H)
@@ -16,7 +16,7 @@
 				return 0
 			return 1
 		assignto(datum/mind/M, var/list/data = list())
-			var/datum/objective_holder/holder = new datum/objective_holder(src, M, data)
+			var/datum/objective_holder/holder = new /datum/objective_holder(src, M, data)
 			M.objective 	= holder
 			holders 			+= holder
 
