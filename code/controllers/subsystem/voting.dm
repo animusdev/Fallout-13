@@ -117,7 +117,7 @@ var/datum/subsystem/vote/SSvote
 	if(.)
 		switch(mode)
 			if("restart")
-				if(. == "Restart Round")
+				if(. == "End Round")
 					restart = 1
 			if("gamemode")
 				if(master_mode != .)

@@ -29,6 +29,7 @@ var/datum/subsystem/objectives/SSobjectives
 		for(var/datum/f13_objective/O in objectives)
 			if(O.check_mob(mind.current))
 				O.assignto(mind)
+				break
 
 /datum/subsystem/objectives/proc/on_roundend()
 	return 1

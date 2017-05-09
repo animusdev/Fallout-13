@@ -1245,6 +1245,7 @@
 #include "code\modules\fallout\misc\jobs\job\wastelander.dm"
 #include "code\modules\fallout\misc\jobs\med\chems.dm"
 #include "code\modules\fallout\misc\jobs\status\status.dm"
+#include "code\modules\fallout\misc\objectives\mob.dm"
 #include "code\modules\fallout\misc\objectives\objective.dm"
 #include "code\modules\fallout\misc\objectives\objective_holder.dm"
 #include "code\modules\fallout\misc\sound_system\sound_system.dm"

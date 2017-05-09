@@ -47,7 +47,7 @@
 	var/list/datum/objective/objectives = list()
 	var/list/datum/objective/special_verbs = list()
 
-	var/list/datum/f13_objective/f13_objectives = list()
+	var/datum/objective_holder/objective
 
 	var/list/cult_words = list()
 	var/list/spell_list = list() // Wizard mode & "Give Spell" badmin button.
