@@ -21,9 +21,9 @@
 			holders 			+= holder
 
 			to_chat(M.current, "<span class='notice'>Your current objective: <b>[name]</b></span>")
-			to_chat(M.current, "\t<i>[desc]<i>")
+			to_chat(M.current, FormatText("\t<i>[desc]<i>", data))
 			if(data["custom_desc"])
-				to_chat(M.current, "\t[data["custom_desc"]]")
+				to_chat(M.current, "\t[FormatText(data["custom_desc"],data)]")
 
 		check_complete(/datum/objective_holder/holder)
 			return 1

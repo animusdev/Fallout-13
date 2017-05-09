@@ -338,7 +338,6 @@
 	if(iscyborg(equip))	//Borgs get borged in the equip, so we need to make sure we handle the new mob.
 		character = equip
 
-
 	var/D = pick(latejoin)
 	if(!D)
 		for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
@@ -354,6 +353,8 @@
 
 	character.forceMove(D)
 	ticker.minds += character.mind
+
+	SSobjectives.give_random(character.mind)
 
 	var/mob/living/carbon/human/humanc
 	if(ishuman(character))
