@@ -183,9 +183,9 @@
 	fully_heal(TRUE)
 
 /mob/living/simple_animal/drone/hand
-	name = "RB-3928"
-	desc = "A robobrain - multi-purpose robot.<br>Its memories and programs are stored inside an organic or partially organic brain, contained in a domed shell atop its chassis.<br>It's considered intuitively superior to most robots, as human brains allow them a wider range of responses and functions.<br>Its hands can operate most tools and weapons usable by humans."
-	icon = 'icons/fallout/mobs/robots.dmi'
+	name = "Handbot"
+	desc = ""
+	icon = 'icons/mob/drone.dmi'
 	icon_state = "robobrain"
 	icon_living = "robobrain"
 	icon_dead = "robobrain-frame"
@@ -233,20 +233,6 @@
 	"2. Kill.\n"+\
 	"3. Destroy."
 	seeStatic = 0 //Our programming is superior.
-	var/obj/item/device/mmi/mmi = null
-
-/mob/living/silicon/robot/New(loc)
-	//MMI stuff. Held togheter by magic. ~Miauw
-	if(!mmi || !mmi.brainmob)
-		mmi = new (src)
-		mmi.brain = new /obj/item/organ/brain(mmi)
-		mmi.brain.name = "[real_name]'s brain"
-		mmi.icon_state = "mmi_full"
-		mmi.name = "Man-Machine Interface: [real_name]"
-		mmi.brainmob = new(mmi)
-		mmi.brainmob.name = src.real_name
-		mmi.brainmob.real_name = src.real_name
-		mmi.brainmob.container = mmi
 
 /mob/living/simple_animal/drone/hand/can_use_guns(obj/item/weapon/gun/G)
 	changeNext_move(CLICK_CD_RANGE*4) //about as much delay as an unupgraded kinetic accelerator
@@ -275,11 +261,10 @@
 			return
 
 /mob/living/simple_animal/drone/hand/brainbot
-	name = "Robobrain"
-	desc = ""
-	picked = TRUE //the appearence of syndrones is static, you don't get to change it.
-	health = 250
-	maxHealth = 250
+	name = "RB - "
+	desc = "A robobrain - multi-purpose robot.<br>Its memories and programs are stored inside an organic or partially organic brain, contained in a domed shell atop its chassis.<br>It's considered intuitively superior to most robots, as human brains allow them a wider range of responses and functions.<br>Its hands can operate most tools and weapons usable by humans."
+	health = 200
+	maxHealth = 200
 
 ///mob/living/simple_animal/drone/hand/humanoid
 //	name = "C-27"
@@ -297,7 +282,7 @@
 //	melee_damage_lower = 15
 //	melee_damage_upper = 25
 //	attacktext = "smashes their armored gauntlet into"
-//	speed = 2
+//	speed = 3
 //	environment_smash = 2
 //	attack_sound = 'sound/weapons/punch3.ogg'
 //
@@ -363,4 +348,4 @@
 	new /obj/item/weapon/weldingtool(src)
 	new /obj/item/weapon/crowbar(src)
 	new /obj/item/stack/cable_coil/random(src)
-	new /obj/item/weapon/powergauntlet(src)
+	new /obj/item/weapon/powergauntlet/robot(src)
