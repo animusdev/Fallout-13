@@ -185,6 +185,8 @@ var/datum/subsystem/ticker/ticker
 	equip_characters()
 	data_core.manifest()
 
+	SSobjectives.setup_objectives()
+
 	Master.RoundStart()
 
 	to_chat(world, "<B><FONT color='#3c4438'>The following events shall be remembered under the code name of:<br><FONT color='#77ca00'>[station_name()]</FONT><br><FONT color='#3c4438'>Best of luck with your survival!</FONT></B>")

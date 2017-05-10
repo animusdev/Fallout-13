@@ -354,7 +354,7 @@
 	character.forceMove(D)
 	ticker.minds += character.mind
 
-	SSobjectives.give_random(character.mind)
+	SSobjectives.give_random_mind(character.mind)
 
 	var/mob/living/carbon/human/humanc
 	if(ishuman(character))

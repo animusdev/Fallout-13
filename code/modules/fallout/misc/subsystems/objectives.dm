@@ -24,17 +24,33 @@ var/datum/subsystem/objectives/SSobjectives
 	for(var/datum/mind/mind in ticker.minds)
 		if(!mind.current)
 			continue
-		give_random(mind)
+		give_random_mind(mind)
+
+	for(var/F in human_factions)
+		var/datum/f13_faction/faction = human_factions[F]
+		give_random_faction(faction)
 
 /datum/subsystem/objectives/proc/on_roundend()
 	var/text
 	text += "<h2>Faction Objectives Results:</h2>"
-	//Blabla
-	text += "<br>---<br>---<br>---<br>"
+
+	for(var/F in human_factions)
+		var/datum/f13_faction/faction = human_factions[F]
+		var/datum/f13_objective/O = faction.objective.parent
+		var/desc = faction.objective.data["custom_desc"]
+		if(!desc)
+			desc = O.desc
+		if(O.check_complete(faction.objective))
+//			give_points(mind, O.points)
+			text += "\t<b>[faction.full_name]</b> <font color='#00FF00'>succes</font> objective:<br>"
+			text += "\t\t <i>[desc]</i><br>"
+		else
+			text += "\t<b>[faction.full_name]</b> <font color='#FF0000'>fail</font> objective:<br>"
+			text += "\t\t <i>[desc]</i><br>"
 
 	text += "<h2>Individual Objectives Results:</h2>"
 
-	for(var/datum/mind in ticker.minds)
+	for(var/datum/mind/mind in ticker.minds)
 		if(!mind.objective)
 			continue
 		var/datum/f13_objective/O = mind.objective.parent
@@ -52,14 +68,27 @@ var/datum/subsystem/objectives/SSobjectives
 
 	return 1
 
-/datum/subsystem/objectives/proc/give_random(datum/mind/mind)
+/datum/subsystem/objectives/proc/give_random_mind(datum/mind/mind)
 	var/list/objectives = shuffle(all_objectives)
 	for(var/datum/f13_objective/O in objectives)
+		if(O.kind != INDIVIDUAL && O.kind != BOTH)
+			continue
 		if(O.check_mob(mind.current))
 			O.assignto(mind)
 			break
 	if(!mind.objective)
-		CRASH("Can't give objective to [mind]")
+		CRASH("Can't find objective for [mind]")
+
+/datum/subsystem/objectives/proc/give_random_faction(datum/f13_faction/faction)
+	var/list/objectives = shuffle(all_objectives)
+	for(var/datum/f13_objective/O in objectives)
+		if(O.kind != FACTION && O.kind != BOTH)
+			continue
+		if(O.check_faction(faction))
+			O.assignto(faction)
+			break
+	if(!faction.objective)
+		CRASH("Can't find objective for [faction]")
 
 /datum/subsystem/objectives/proc/give_points(datum/mind/mind, count)
 	return 1
