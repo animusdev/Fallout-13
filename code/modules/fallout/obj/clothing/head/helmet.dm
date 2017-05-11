@@ -325,7 +325,7 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
-	strip_delay = 200
+	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 3
 
@@ -364,7 +364,7 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
-	strip_delay = 200
+	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
 
@@ -403,7 +403,7 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
-	strip_delay = 200
+	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
 
@@ -428,6 +428,42 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/power_armor/t60
+	name = "T-60 power helmet"
+	desc = "An old pre-War power armor helmet.<br>It's comfy inside of it."
+	icon_state = "t60helmet"
+	item_state = "t60helmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
+
+/obj/item/clothing/head/helmet/power_armor/t51b
+	name = "T-51b power helmet"
+	desc = "An old pre-War power armor helmet.<br>It's comfy inside of it."
+	icon_state = "t51bhelmet"
+	item_state = "t51bhelmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"

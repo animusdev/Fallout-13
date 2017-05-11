@@ -20,10 +20,11 @@
 	required_items = list(
 	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/recon,
-	/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-	/obj/item/clothing/head/helmet/power_armor/t45d,
+	/obj/item/clothing/suit/armor/f13/power_armor/t60,
+	/obj/item/clothing/head/helmet/power_armor/t60,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
 	/obj/item/weapon/twohanded/superhammer,
+	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved
 	)
 
@@ -60,14 +61,14 @@
 
 /datum/job/paladin
 	title = "Paladin"
-	desc = "A guardian, the keeper of peace."
+	desc = "A guardian, the keeper of peace.<br>You are the one, who shall protect others."
 	flag = PALADIN
 	department_head = list("elder")
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "paladin"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the Elder"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
@@ -111,8 +112,8 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = /obj/item/clothing/head/helmet/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
+	head = /obj/item/clothing/head/helmet/power_armor/t51b
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rcw
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
@@ -120,14 +121,14 @@
 
 /datum/job/knight
 	title = "Knight"
-	desc = "Bringer of the light."
+	desc = "Bringer of the light.<br>You are the one, who shall bring justice."
 	flag = KNIGHT
 	department_head = list("elder", "paladin")
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "knight"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 7
+	spawn_positions = 7
 	supervisors = "Elder, Paladin"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7

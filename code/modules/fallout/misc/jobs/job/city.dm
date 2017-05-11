@@ -21,6 +21,7 @@
 	required_items = list(
 	/obj/item/clothing/shoes/f13/brownie,
 	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/shoes/f13/cowboy,
 	/obj/item/clothing/under/f13/manager,
 	/obj/item/clothing/under/suit_jacket,
 	/obj/item/clothing/under/suit_jacket/really_black,
@@ -85,13 +86,39 @@
 
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
+	required_items = list(
+	/obj/item/clothing/under/f13/cowboyg,
+	/obj/item/clothing/under/f13/cowboyt,
+	/obj/item/clothing/suit/f13/cowboygvest,
+	/obj/item/clothing/suit/f13/cowboybvest,
+	/obj/item/clothing/suit/f13/duster,
+	/obj/item/ammo_box/magazine/internal/cylinder/m44
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
 /datum/outfit/job/sheriff
 	name = "Sheriff"
 	uniform = /obj/item/clothing/under/f13/cowboyb
-	shoes = /obj/item/clothing/shoes/workboots
+	shoes = /obj/item/clothing/shoes/f13/cowboy
 	suit = /obj/item/clothing/suit/f13/sheriff
 	head = /obj/item/clothing/head/f13/cowboy
-	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
+	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
 	glasses = /obj/item/clothing/glasses/sunglasses
 	back = /obj/item/weapon/gun/ballistic/shotgun
 
@@ -99,7 +126,7 @@
 	title = "Citizen"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "I'll fix it tomorrow. Don't pick this job yet!"
+	desc = "A City dweller.<br>You live a better life than most of Wastelanders will ever have."
 	faction = "city"
 	status = "member"
 	total_positions = 10
@@ -112,9 +139,28 @@
 
 	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
+	required_items = list(
+	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/shoes/f13/cowboy,
+	/obj/item/clothing/under/f13/cowboyg,
+	/obj/item/clothing/under/f13/cowboyb,
+	/obj/item/clothing/suit/f13/cowboygvest,
+	/obj/item/clothing/suit/f13/cowboybvest
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal
+	)
+
 /datum/outfit/job/citizen
 	name = "Citizen"
 	backpack = null
 	satchel = null
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/f13/rag
+	uniform = /obj/item/clothing/under/f13/cowboyt
+	shoes = /obj/item/clothing/shoes/f13/brownie

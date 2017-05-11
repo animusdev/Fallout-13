@@ -32,7 +32,7 @@
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/cazador_alert.ogg'
 
-	damage_coeff = list(BRUTE = 1, BURN = 0, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
+	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 	harm_intent_damage = 10
 	melee_damage_lower = 10
 	melee_damage_upper = 20

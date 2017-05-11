@@ -7,7 +7,6 @@
 //Drones with camogear for hat related memes
 //Drone type for use with polymorph (no preloaded items, random appearance)
 
-
 //More types of drones
 /mob/living/simple_animal/drone/syndrone
 	name = "Syndrone"
@@ -36,8 +35,7 @@
 
 /mob/living/simple_animal/drone/syndrone/Login()
 	..()
-	to_chat(src, "<span class='notice'>You can kill and eat other drones to increase your health!</span>")//Inform the evil lil guy
-
+	src << "<span class='notice'>You can kill and eat other drones to increase your health!</span>" //Inform the evil lil guy
 
 /mob/living/simple_animal/drone/syndrone/badass
 	name = "Badass Syndrone"
@@ -138,10 +136,10 @@
 /mob/living/simple_animal/drone/cogscarab/Login()
 	..()
 	add_servant_of_ratvar(src, TRUE)
-	to_chat(src, "<span class='heavy_brass'>You are a cogscarab</span><b>, a clockwork creation of Ratvar. As a cogscarab, you have low health, an inbuilt proselytizer that can convert brass \
+	src << "<span class='heavy_brass'>You are a cogscarab</span><b>, a clockwork creation of Ratvar. As a cogscarab, you have low health, an inbuilt proselytizer that can convert brass \
 	to liquified alloy, a set of relatively fast tools, </b><span class='heavy_brass'>can communicate over the Hierophant Network with :b</span><b>, and are immune to extreme \
 	temperatures and pressures. \nYour goal is to serve the Justiciar and his servants by repairing and defending all they create. \
-	\nYou yourself are one of these servants, and will be able to utilize almost anything they can[ratvar_awakens ? "":", <i>excluding a clockwork slab</i>"].</b>")
+	\nYou yourself are one of these servants, and will be able to utilize almost anything they can[ratvar_awakens ? "":", <i>excluding a clockwork slab</i>"].</b>"
 
 /mob/living/simple_animal/drone/cogscarab/binarycheck()
 	return FALSE
@@ -161,7 +159,7 @@
 
 /mob/living/simple_animal/drone/cogscarab/try_reactivate(mob/living/user)
 	if(!is_servant_of_ratvar(user))
-		to_chat(user, "<span class='warning'>You fiddle around with [src] to no avail.</span>")
+		user << "<span class='warning'>You fiddle around with [src] to no avail.</span>"
 	else
 		..()
 
@@ -183,3 +181,170 @@
 
 /mob/living/simple_animal/drone/cogscarab/ratvar_act()
 	fully_heal(TRUE)
+
+/mob/living/simple_animal/drone/hand
+	name = "Handbot"
+	desc = ""
+	icon = 'icons/mob/drone.dmi'
+	icon_state = "robobrain"
+	icon_living = "robobrain"
+	icon_dead = "robobrain-frame"
+	picked = TRUE //the appearence of syndrones is static, you don't get to change it.
+	health = 200
+	maxHealth = 200
+	unsuitable_atmos_damage = 0
+	harm_intent_damage = 0
+	response_help  = "passes through"
+	response_disarm = "flails at"
+	response_harm   = "punches"
+	a_intent = INTENT_HARM
+	obj_damage = 40
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+	attacktext = "slashes"
+	attack_sound = 'sound/weapons/bladeslice.ogg'
+	speed = 2
+	sight = 0
+	pass_flags = 0
+	dextrous = TRUE
+	density = TRUE
+	ventcrawler = VENTCRAWLER_NONE
+	healable = 0
+	status_flags = (CANPUSH | CANSTUN)
+	gender = NEUTER
+	voice_name = "synthesized voice"
+	speak_emote = list("clanks", "clinks", "clunks", "clangs")
+	verb_ask = "requests"
+	verb_exclaim = "proclaims"
+	verb_yell = "harangues"
+	bubble_icon = "machine"
+	languages_spoken = ROBOT | HUMAN
+	languages_understood = ROBOT | HUMAN
+	has_unlimited_silicon_privilege = 1
+	can_be_held = FALSE
+	damage_coeff = list(BRUTE = 0.6, BURN = 0.7, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
+	heavy_emp_damage = 25
+	default_storage = /obj/item/weapon/storage/backpack/dufflebag/brassbox
+	mob_size = MOB_SIZE_LARGE
+	see_in_dark = 4
+	laws = \
+	"1. Interfere.\n"+\
+	"2. Kill.\n"+\
+	"3. Destroy."
+	seeStatic = 0 //Our programming is superior.
+
+/mob/living/simple_animal/drone/hand/can_use_guns(obj/item/weapon/gun/G)
+	changeNext_move(CLICK_CD_RANGE*4) //about as much delay as an unupgraded kinetic accelerator
+	return TRUE
+
+/mob/living/simple_animal/drone/hand/attackby(obj/item/weapon/W, mob/user, params)
+	if(istype(W, /obj/item/weapon/weldingtool) && (user.a_intent != INTENT_HARM || user == src))
+		user.changeNext_move(CLICK_CD_MELEE)
+		var/obj/item/weapon/weldingtool/WT = W
+		if (!getBruteLoss())
+			user << "<span class='warning'>[src] is already in good condition!</span>"
+			return
+		if (WT.remove_fuel(0, user)) //The welder has 1u of fuel consumed by it's afterattack, so we don't need to worry about taking any away.
+			if(src == user)
+				user << "<span class='notice'>You start fixing yourself...</span>"
+				if(!do_after(user, 50, target = src))
+					return
+
+			adjustBruteLoss(-30)
+			updatehealth()
+			add_fingerprint(user)
+			visible_message("<span class='notice'>[user] has fixed some of the dents on [src].</span>")
+			return
+		else
+			user << "<span class='warning'>The welder must be on for this task!</span>"
+			return
+
+/mob/living/simple_animal/drone/hand/brainbot
+	name = "RB - "
+	desc = "A robobrain - multi-purpose robot.<br>Its memories and programs are stored inside an organic or partially organic brain, contained in a domed shell atop its chassis.<br>It's considered intuitively superior to most robots, as human brains allow them a wider range of responses and functions.<br>Its hands can operate most tools and weapons usable by humans."
+	health = 200
+	maxHealth = 200
+
+///mob/living/simple_animal/drone/hand/humanoid
+//	name = "C-27"
+//	desc = ""
+//	icon_state = "drone_synd"
+//	icon_living = "drone_synd"
+//	icon_dead = "drone_maint_dead"
+//	health = 300
+//	maxHealth = 300
+//	unsuitable_atmos_damage = 0
+//	status_flags = (CANSTUN)
+//	response_harm = "harmlessly punches"
+//	obj_damage = 60
+//	damage_coeff = list(BRUTE = 0.5, BURN = 0.6, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
+//	melee_damage_lower = 15
+//	melee_damage_upper = 25
+//	attacktext = "smashes their armored gauntlet into"
+//	speed = 3
+//	environment_smash = 2
+//	attack_sound = 'sound/weapons/punch3.ogg'
+//
+///mob/living/simple_animal/drone/hand/humanoid/bullet_act(obj/item/projectile/P)
+//	if(istype(P, /obj/item/projectile/bullet))
+//		var/reflectchance = 80 - round(P.damage/3)
+//		if(prob(reflectchance))
+//			apply_damage(P.damage * 0.2, P.damage_type)
+//			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armored shell!</span>", \
+//							"<span class='userdanger'>The [P.name] is reflected by your armored shell!</span>")
+//
+//			// Find a turf near or on the original location to bounce to
+//			if(P.starting)
+//				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+//				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+//				var/turf/curloc = get_turf(src)
+//
+//				// redirect the projectile
+//				P.original = locate(new_x, new_y, P.z)
+//				P.starting = curloc
+//				P.current = curloc
+//				P.firer = src
+//				P.yo = new_y - curloc.y
+//				P.xo = new_x - curloc.x
+//
+//			return -1 // complete projectile permutation
+//	else if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+//		var/reflectchance2 = 40 - round(P.damage/3)
+//		if(prob(reflectchance2))
+//			apply_damage(P.damage * 0.5, P.damage_type)
+//			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+//							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+//
+//			// Find a turf near or on the original location to bounce to
+//			if(P.starting)
+//				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+//				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+//				var/turf/curloc = get_turf(src)
+//
+//				// redirect the projectile
+//				P.original = locate(new_x, new_y, P.z)
+//				P.starting = curloc
+//				P.current = curloc
+//				P.firer = src
+//				P.yo = new_y - curloc.y
+//				P.xo = new_x - curloc.x
+//
+//			return -1 // complete projectile permutation
+//	return (..(P))
+
+/obj/item/weapon/storage/backpack/dufflebag/brassbox
+	name = "Brassbox"
+	desc = "A large container."
+	icon_state = "brassbox"
+	item_state = "brassbox"
+	resistance_flags = FIRE_PROOF
+
+/obj/item/weapon/storage/backpack/dufflebag/brassbox/New()
+	..()
+
+	new /obj/item/weapon/screwdriver(src)
+	new /obj/item/weapon/wrench(src)
+	new /obj/item/weapon/weldingtool(src)
+	new /obj/item/weapon/crowbar(src)
+	new /obj/item/stack/cable_coil/random(src)
+	new /obj/item/weapon/powergauntlet/robot(src)

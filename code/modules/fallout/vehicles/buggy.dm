@@ -10,7 +10,7 @@
 	pixel_y = -2
 	fuel = 1000
 	max_fuel = 1000
-	self_weight = 450
+	self_weight = 500
 	engine_on_sound = 'sound/f13machines/buggy_start.ogg'
 	engine_loop_sound = 'sound/f13machines/buggy_loop.ogg'
 	var/list/names = list("Badger", "Bandit", "Desert Punk", "Dune Buddy", "Duster", "Rebel", "Rooster")

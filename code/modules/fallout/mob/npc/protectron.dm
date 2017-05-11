@@ -20,7 +20,7 @@
 	maxHealth = 150
 	health = 150
 	self_weight = 200
-
+	healable = 0
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
 
@@ -46,7 +46,7 @@
 	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/laser.ogg'
+	projectilesound = 'sound/weapons/resonator_fire.ogg'
 
 /mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Marvin"
