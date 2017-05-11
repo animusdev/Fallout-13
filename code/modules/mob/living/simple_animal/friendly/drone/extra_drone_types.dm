@@ -221,7 +221,6 @@
 	languages_spoken = ROBOT | HUMAN
 	languages_understood = ROBOT | HUMAN
 	has_unlimited_silicon_privilege = 1
-	picked = FALSE
 	can_be_held = FALSE
 	damage_coeff = list(BRUTE = 0.6, BURN = 0.7, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	heavy_emp_damage = 25

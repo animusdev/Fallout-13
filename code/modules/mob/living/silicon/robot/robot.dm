@@ -1077,24 +1077,12 @@
 
 /mob/living/silicon/robot/handy/nurse
 	icon_state = "nurse"
-	playstyle_string = "<span class='userdanger'>You are a Syndicate medical cyborg!</span><br>\
-						<b>You are armed with powerful medical tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
-						Your hypospray will produce Restorative Nanites, a wonder-drug that will heal most types of bodily damages, including clone and brain damage. It also produces morphine for offense. \
-						Your defibrillator paddles can revive operatives through their hardsuits, or can be used on harm intent to shock enemies! \
-						Your energy saw functions as a circular saw, but can be activated to deal more damage, and your operative pinpointer will find and locate fellow nuclear operatives. \
-						<i>Help the operatives secure the disk at all costs!</i></b>"
 	set_module = /obj/item/weapon/robot_module/nurse
 
 /mob/living/silicon/robot/handy/gutsy
 	icon_state = "gutsy"
 	maxHealth = 300
 	health = 300
-	playstyle_string = "<span class='userdanger'>You are a Syndicate medical cyborg!</span><br>\
-						<b>You are armed with powerful medical tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
-						Your hypospray will produce Restorative Nanites, a wonder-drug that will heal most types of bodily damages, including clone and brain damage. It also produces morphine for offense. \
-						Your defibrillator paddles can revive operatives through their hardsuits, or can be used on harm intent to shock enemies! \
-						Your energy saw functions as a circular saw, but can be activated to deal more damage, and your operative pinpointer will find and locate fellow nuclear operatives. \
-						<i>Help the operatives secure the disk at all costs!</i></b>"
 	set_module = /obj/item/weapon/robot_module/gutsy
 
 /mob/living/silicon/robot/proc/notify_ai(notifytype, oldname, newname)
