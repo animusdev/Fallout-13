@@ -1252,6 +1252,8 @@
 #include "code\modules\fallout\misc\objectives\objective_holder.dm"
 #include "code\modules\fallout\misc\objectives\objectives\assasinate.dm"
 #include "code\modules\fallout\misc\objectives\objectives\jew.dm"
+#include "code\modules\fallout\misc\objectives\objectives\protect.dm"
+#include "code\modules\fallout\misc\objectives\objectives\faction\destroy_faction.dm"
 #include "code\modules\fallout\misc\objectives\objectives\faction\faction_grow.dm"
 #include "code\modules\fallout\misc\objectives\objectives\faction\find.dm"
 #include "code\modules\fallout\misc\sound_system\sound_system.dm"

@@ -21,10 +21,10 @@
 			if(obj.type != item)
 				continue
 			var/area/A = get_area(obj)
-			if(F && A && A.type == F.area)
+			if(F && A && istype(A.type, F.area))
 				return 1
 			for(var/mob/living/M in get_turf(obj))
-				if(obj in M.get_contents())
+				if(M.social_faction == F.id && obj in M.get_contents())
 					return 1
 		return 0
 
