@@ -4,7 +4,7 @@
 	kind = INDIVIDUAL
 
 	assignto_mind(datum/mind/M, var/list/data = list())
-		data["count"] = pick(200, 500, 1000)
+		data["count"] = round(rand(100,500),50)
 		..()
 	check_complete(var/datum/objective_holder/holder)
 		var/datum/mind/mind = holder.owner

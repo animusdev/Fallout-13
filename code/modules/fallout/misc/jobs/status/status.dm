@@ -17,6 +17,16 @@ proc/remove_everyone_from_status(status)
 		if(M.status == S.id)
 			M.set_status("none")
 
+proc/get_mobs_by_status(status)
+	. = list()
+	var/datum/status/S = get_status_datum(status)
+	if(!S)
+		return .
+	for(var/mob/M in world)
+		if(M.status == S.id)
+			. += M
+
+
 /datum/status
 	var/name = "UNKNOWN"
 	var/id = "none"
