@@ -51,7 +51,7 @@
 
 	var/obj/item/item_in_hand = src.get_active_held_item()
 	if(item_in_hand) //this segment checks if the item in your hand is twohanded.
-		if(istype(item_in_hand,/obj/item/weapon/twohanded))
+		if(istype(item_in_hand,/obj/item/weapon))
 			if(item_in_hand:wielded == 1)
 				to_chat(usr, "<span class='warning'>Your other hand is too busy holding the [item_in_hand.name]</span>")
 				return
@@ -162,7 +162,9 @@
 	if(thrown_thing)
 		visible_message("<span class='danger'>[src] has thrown [thrown_thing].</span>")
 		newtonian_move(get_dir(target, src))
+		playsound(src, 'sound/effects/throw.ogg', 50, 1)
 		thrown_thing.throw_at(target, thrown_thing.throw_range, thrown_thing.throw_speed, src)
+
 
 /mob/living/carbon/restrained(ignore_grab)
 	. = (handcuffed || (!ignore_grab && pulledby && pulledby.grab_state >= GRAB_AGGRESSIVE))

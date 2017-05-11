@@ -17,35 +17,39 @@
 //It also tidies stuff up elsewhere.
 
 
+//I rewrote stuff again. Now any weapon can be twohanded by pressing the UI button. - Matt
+
 
 
 /*
  * Twohanded
  */
-/obj/item/weapon/twohanded
+/obj/item/weapon
 	var/wielded = 0
 	var/force_unwielded = 0
 	var/force_wielded = 0
-	var/wieldsound = null
+	var/wieldsound = 'sound/weapons/thudswoosh.ogg'//A familiar grab sound.
 	var/unwieldsound = null
+	var/wielded_icon = null
 
-/obj/item/weapon/twohanded/proc/unwield(mob/living/carbon/user, show_message = TRUE)
-	if(!wielded || !user)
-		return
+/obj/item/weapon/proc/unwield(mob/living/carbon/user, show_message = TRUE)
+	if(!wielded || !user) return
 	wielded = 0
 	if(force_unwielded)
 		force = force_unwielded
+	else
+		force = (force / 1.5)
 	var/sf = findtext(name," (Wielded)")
 	if(sf)
 		name = copytext(name,1,sf)
 	else //something wrong
 		name = "[initial(name)]"
+	update_unwield_icon()
 	update_icon()
-	if(show_message)
-		if(iscyborg(user))
-			to_chat(user, "<span class='notice'>You free up your module.</span>")
-		else
-			to_chat(user, "<span class='notice'>You are now carrying [src] with one hand.</span>")
+	if(iscyborg(user))
+		to_chat(user, "<span class='notice'>You free up your module.</span>")
+	else
+		user.visible_message("<span class='warning'>[user] let's go of their other hand.")
 	if(unwieldsound)
 		playsound(loc, unwieldsound, 50, 1)
 	var/obj/item/weapon/twohanded/offhand/O = user.get_inactive_held_item()
@@ -53,37 +57,54 @@
 		O.unwield()
 	return
 
-/obj/item/weapon/twohanded/proc/wield(mob/living/carbon/user)
-	if(wielded)
+/obj/item/weapon/proc/wield(mob/living/carbon/user)
+	if(wielded) 
 		return
+	
 	if(ismonkey(user))
 		to_chat(user, "<span class='warning'>It's too heavy for you to wield fully.</span>")
 		return
 	if(user.get_inactive_held_item())
 		to_chat(user, "<span class='warning'>You need your other hand to be empty!</span>")
 		return
-	if(user.get_num_arms() < 2)
-		to_chat(user, "<span class='warning'>You don't have enough hands.</span>")
-		return
 	wielded = 1
 	if(force_wielded)
 		force = force_wielded
-	name = "[name] (Wielded)"
-	update_icon()
-	if(iscyborg(user))
-		to_chat(user, "<span class='notice'>You dedicate your module to [src].</span>")
 	else
-		to_chat(user, "<span class='notice'>You grab [src] with both hands.</span>")
-	if (wieldsound)
+		force = (force * 1.5)
+	name = "wielded [name]"
+	update_wield_icon()
+	update_icon()//Legacy
+	if(iscyborg(user))
+		user.visible_message("<span class='warning'>[user] dedicates a module to the [initial(name)]s.")
+	else
+		user.visible_message("<span class='warning'>[user] grabs the [initial(name)] with both hands.")
+	if(wieldsound)
 		playsound(loc, wieldsound, 50, 1)
 	var/obj/item/weapon/twohanded/offhand/O = new(user) ////Let's reserve his other hand~
 	O.name = "[name] - offhand"
-	O.desc = "Your second grip on [src]."
-	O.wielded = TRUE
+	O.desc = "Your second grip on the [name]"
 	user.put_in_inactive_hand(O)
 	return
 
-/obj/item/weapon/twohanded/dropped(mob/user)
+/obj/item/weapon/proc/update_wield_icon()
+	if((wielded) && wielded_icon)
+		item_state = wielded_icon
+
+/obj/item/weapon/proc/update_unwield_icon()//That way it doesn't interupt any other special icon_states.
+	if((wielded) && wielded_icon)
+		item_state = "[initial(item_state)]"
+
+//For general weapons.
+/obj/item/proc/attempt_wield(mob/user)
+	if(istype(src,/obj/item/weapon))//Istype hack to stop the proc from crashing if what you try to wield isn't a weapon.
+		var/obj/item/weapon/W = src
+		if(W.wielded) //Trying to unwield it
+			W.unwield(user)
+		else //Trying to wield it
+			W.wield(user)
+
+/obj/item/weapon/dropped(mob/user)
 	..()
 	//handles unwielding a twohanded weapon when dropped as well as clearing up the offhand
 	if(!wielded)
@@ -97,6 +118,7 @@
 /obj/item/weapon/twohanded/update_icon()
 	return
 
+//Keeping in the attack_self code for legacy purposes.
 /obj/item/weapon/twohanded/attack_self(mob/user)
 	..()
 	if(wielded) //Trying to unwield it
@@ -104,12 +126,12 @@
 	else //Trying to wield it
 		wield(user)
 
-/obj/item/weapon/twohanded/equip_to_best_slot(mob/M)
+/obj/item/weapon/equip_to_best_slot(mob/M)
 	if(..())
 		unwield(M)
 		return
 
-/obj/item/weapon/twohanded/equipped(mob/user, slot)
+/obj/item/weapon/equipped(mob/user, slot)
 	..()
 	if(!user.is_holding(src) && wielded && !istype(src, /obj/item/weapon/twohanded/required))
 		unwield(user)
@@ -123,9 +145,9 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/item/weapon/twohanded/offhand/unwield()
-	if(wielded)//Only delete if we're wielded
-		wielded = FALSE
-		qdel(src)
+	//if(wielded)//Only delete if we're wielded
+	wielded = FALSE
+	qdel(src)
 
 /obj/item/weapon/twohanded/offhand/wield()
 	if(wielded)//Only delete if we're wielded

@@ -96,6 +96,7 @@
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	wielded_icon = "assault-wielded"//Two handing
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	name = "10-mm submachine gun"

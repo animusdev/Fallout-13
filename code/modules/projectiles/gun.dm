@@ -392,6 +392,12 @@
 		to_chat(M, "Your gun is now skinned as [choice]. Say hello to your new friend.")
 		update_icon()
 
+/obj/item/weapon/gun/update_icon()//If it has a special wielded icon we want it to show up here.
+	..()
+	if(wielded && wielded_icon)
+		item_state = wielded_icon
+	else
+		item_state = "[initial(item_state)]"
 
 
 
