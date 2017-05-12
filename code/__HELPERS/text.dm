@@ -630,7 +630,7 @@ proc/FormatText(text, list/data)
 		var/element_lenght = length(element) + 2
 		var/index = findtext(text, "%[element]%")
 		while(index)
-			text = copytext(text, 1, index) + data[element] + copytext(text, index+element_lenght)
+			text = copytext(text, 1, index) + "[data[element]]" + copytext(text, index+element_lenght)
 			index = findtext(text, "%[element]%", index)
 	return text
 

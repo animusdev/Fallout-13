@@ -88,7 +88,9 @@ var/global/BSACooldown = 0
 	body += "<br><br>"
 	body += "<A href='?_src_=holder;traitor=\ref[M]'>Traitor panel</A> | "
 	body += "<A href='?_src_=holder;narrateto=\ref[M]'>Narrate to</A> | "
-	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Subtle message</A>"
+	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Subtle message</A><br><br>"
+
+	body += "<A href='?_src_=holder;objectives_show=\ref[M]'>Objectives</A>"
 
 	if (M.client)
 		if(!isnewplayer(M))
