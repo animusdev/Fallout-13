@@ -28,7 +28,8 @@ var/datum/subsystem/objectives/SSobjectives
 
 	for(var/F in human_factions)
 		var/datum/f13_faction/faction = human_factions[F]
-		give_random_faction(faction)
+		if(faction.id != "none")
+			give_random_faction(faction)
 
 /datum/subsystem/objectives/proc/on_roundend()
 	var/text
@@ -36,6 +37,8 @@ var/datum/subsystem/objectives/SSobjectives
 
 	for(var/F in human_factions)
 		var/datum/f13_faction/faction = human_factions[F]
+		if(!faction.objective)
+			continue
 		var/datum/f13_objective/O = faction.objective.parent
 		var/desc = faction.objective.data["custom_desc"]
 		if(!desc)

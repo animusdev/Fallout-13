@@ -3,19 +3,25 @@
 
 	if(!mind)
 		return
-	if(!mind.objective || !F.objective)
-		to_chat(user, "<span class='danger'>No objectives!</span>")
-		return
+
+	var/f_objective = 1
+	var/m_objective = 1
+
+	if(!mind.objective)
+		m_objective = 0
+	if(!F.objective)
+		f_objective = 0
 	var/objective_completed_ind = "<font color='#ff0000'>&#10008;</font>"
-	if(mind.objective.parent.check_complete(mind.objective))
+	if(m_objective && mind.objective.parent.check_complete(mind.objective))
 		objective_completed_ind = "<font color='#00ff00'>&#10004;</font>"
 
 	var/objective_completed_fac = "<font color='#ff0000'>&#10008;</font>"
-	if(F.objective.parent.check_complete(F.objective))
+	if(f_objective && F.objective.parent.check_complete(F.objective))
 		objective_completed_fac = "<font color='#00ff00'>&#10004;</font>"
 
-	var/html = {"
-	<table>
+	var/faction_data
+	if(f_objective)
+		faction_data += {"
 		<tr>
 			<td>
 				[objective_completed_fac] Faction Objective:
@@ -26,7 +32,11 @@
 				[FormatText(F.objective.data["custom_desc"],F.objective.data)]
 			</td>
 		</tr>
-		<tr>
+		"}
+	var/mind_data
+	if(m_objective)
+		mind_data += {"
+		<tr [!m_objective ? "style='visibility:none'" : ""]>
 			<td>
 				[objective_completed_ind] Role Objective:
 			</td>
@@ -36,9 +46,24 @@
 				[FormatText(mind.objective.data["custom_desc"],mind.objective.data)]
 			</td>
 		</tr>
+		"}
+
+
+
+	var/html = {"
+	<table>
+		[faction_data]
+		[mind_data]
 	</table>
 	"}
-	var/datum/browser/popup = new(user, "objectives", "<div align='center'>Objectives</div>", 500, 200)
+
+	var/title
+	if(user == src)
+		title = "<div align='center'>Objectives</div>"
+	else
+		title = "<div align='center'>[src]'s Objectives</div>"
+
+	var/datum/browser/popup = new(user, "objectives", title, 500, 200)
 	popup.set_content(html)
 	popup.open(0)
 

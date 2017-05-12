@@ -9,7 +9,8 @@
 
 	assignto_mind(datum/mind/M, var/list/data = list())
 		var/mob/living/mob = M.current
-		for(var/f_name in human_factions)
+		var/list/factions = shuffle(human_factions)
+		for(var/f_name in factions)
 			var/datum/f13_faction/target = human_factions[f_name]
 			if(target.id != mob.social_faction)
 				data["target_faction"] = target.id

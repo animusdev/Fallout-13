@@ -2,6 +2,7 @@
 	name = "Protect"
 	desc = "Save dis mothefucker"
 	kind = BOTH
+	available_factions = list("city", "none", "brotherhood")
 
 	check_mob(mob/living/carbon/human/H)
 		if(!..())
