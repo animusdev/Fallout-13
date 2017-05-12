@@ -4,7 +4,7 @@
 	name = "caps"
 	desc = "It's worth 1 cap."
 	singular_name = "cap"
-	icon = 'icons/obj/bottlecap.dmi'
+	icon = 'icons/fallout/objects/bottlecaps.dmi'
 	icon_state = "1"
 	amount = 1
 	max_amount = 3000

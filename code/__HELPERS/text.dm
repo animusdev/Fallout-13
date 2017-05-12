@@ -432,7 +432,7 @@ var/list/binary = list("0","1")
 			s+=3
 		else
 			s+=2
-	return pointization(uppertext_uni(copytext(t, s - 1, s)) + copytext(t, s))
+	return pointization(copytext(t, 1, s - 1) + uppertext_uni(copytext(t, s - 1, s)) + copytext(t, s))
 
 /proc/pointization(text as text)
 	if (!text)
@@ -630,7 +630,7 @@ proc/FormatText(text, list/data)
 		var/element_lenght = length(element) + 2
 		var/index = findtext(text, "%[element]%")
 		while(index)
-			text = copytext(text, 1, index) + data[element] + copytext(text, index+element_lenght)
+			text = copytext(text, 1, index) + "[data[element]]" + copytext(text, index+element_lenght)
 			index = findtext(text, "%[element]%", index)
 	return text
 

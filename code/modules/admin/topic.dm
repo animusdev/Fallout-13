@@ -1793,6 +1793,13 @@
 		var/mob/M = locate(href_list["narrateto"])
 		usr.client.cmd_admin_direct_narrate(M)
 
+	else if(href_list["objectives_show"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		var/mob/M = locate(href_list["objectives_show"])
+		M.show_objectives(usr)
+
 	else if(href_list["subtlemessage"])
 		if(!check_rights(R_ADMIN))
 			return

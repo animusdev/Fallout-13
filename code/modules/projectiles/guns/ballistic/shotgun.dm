@@ -13,6 +13,8 @@
 	var/recentpump = 0 // to prevent spammage
 	var/pumpsound = 'sound/weapons/shotgunpump.ogg'
 	mag_load_sound = 'sound/effects/wep_magazines/insertShotgun.ogg'
+	wielded_icon = "shotgun1"
+	fire_sound = 'sound/f13weapons/shotgun.ogg'//There is no fucking reason that shotguns should have the same sounds as pistols, TG.
 	weapon_weight = WEAPON_MEDIUM
 
 
@@ -111,6 +113,7 @@
 	slot_flags = 0 //no SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
 	var/bolt_open = 0
+	wielded_icon = null
 
 /obj/item/weapon/gun/ballistic/shotgun/boltaction/pump(mob/M)
 	playsound(M, pumpsound, 60, 1)
@@ -194,6 +197,7 @@
 	origin_tech = "combat=6"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
 	w_class = WEIGHT_CLASS_HUGE
+	wielded_icon = "cshotgun1"
 
 //Dual Feed Shotgun
 

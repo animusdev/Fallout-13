@@ -24,6 +24,7 @@
 #define ui_lingchemdisplay "WEST:6,CENTER-1:15"
 #define ui_lingstingdisplay "WEST:6,CENTER-3:11"
 #define ui_crafting	"12:-10,1:5"
+#define ui_wield	"12:-10,1:5"//In case you want to change it's location later.
 #define ui_building "12:-10,1:21"
 
 #define ui_devilsouldisplay "WEST:6,CENTER-1:15"

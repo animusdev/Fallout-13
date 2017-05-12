@@ -20,7 +20,7 @@
 	maxHealth = 70
 	health = 70
 	self_weight = 50
-
+	healable = 0
 	ambient_sound = 'sound/f13npc/eyebot_loop.ogg'
 	sound_speak_chance = 5
 	sound_speak = list('sound/machines/buzz-sigh.ogg','sound/misc/interference.ogg')

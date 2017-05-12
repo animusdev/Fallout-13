@@ -36,6 +36,12 @@ proc/get_faction_members(var/faction)
 
 	var/head_status = null //Main status at this faction. Currently using for leader voting
 
+	var/area/area
+
+	var/datum/objective_holder/objective
+
+	var/list/members = list()
+
 // Frequency settings
 	var/freq
 	var/encryption_key
@@ -173,9 +179,11 @@ mob/proc/set_faction(var/faction)
 		src.verbs -= last_F.verbs
 		src.allow_recipes -= last_F.craft_recipes
 		src.faction -= last_F.id
+		last_F.members -= src
 
 	src.social_faction = F.id
 	src.faction += F.id
+	F.members |= src
 
 	src.allow_recipes += F.craft_recipes
 	src.verbs += F.verbs

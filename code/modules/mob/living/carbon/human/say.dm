@@ -84,6 +84,21 @@
 		if(MODE_HEADSET)
 			if (ears)
 				ears.talk_into(src, message, , spans)
+			// Check both hands
+			for(var/obj/item/r_hand in get_held_items_for_side("r", all = TRUE))
+				if (r_hand)
+					r_hand.talk_into(src, message, , spans)
+
+			for(var/obj/item/l_hand in get_held_items_for_side("l", all = TRUE))
+				if (l_hand)
+					l_hand.talk_into(src, message, , spans)
+			if (r_store)
+				r_store.talk_into(src, message, , spans)
+			if (l_store)
+				l_store.talk_into(src, message, , spans)
+
+			to_chat(world, "Said [message] by [src]")
+
 			return ITALICS | REDUCE_RANGE
 
 		if(MODE_DEPARTMENT)
