@@ -916,7 +916,7 @@
 	qdel(src)
 
 /obj/item/weapon/spellbook/oneuse/random/New()
-	var/real_type = pick(subtypesof(/obj/item/weapon/spellbook/oneuse))
+	var/real_type = pick(subtypesof(/obj/item/weapon/reagent_containers/food/snacks/f13)) //No magic is allowed in wasteland!
 	new real_type(loc)
 	qdel(src)
 
