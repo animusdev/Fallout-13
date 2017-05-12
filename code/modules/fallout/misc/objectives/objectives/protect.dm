@@ -17,6 +17,8 @@
 		var/list/minds = shuffle(ticker.minds)
 		var/datum/mind/target
 		for(var/datum/mind/mind in minds)
+			if(!mind || !mind.current)
+				continue
 			var/mob/living/M = mind.current
 			if(mind != subject)
 				if(F && M && M.social_faction == F.id)

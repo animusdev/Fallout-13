@@ -4,9 +4,9 @@
 	points = 0
 	kind = FACTION
 
-	var/list/bos_items = list()
-	var/list/enclave_items = list()
-	var/list/city_items = list()
+	var/list/bos_items = list(/obj/item/ring)
+	var/list/enclave_items = list(/obj/item/ring)
+	var/list/city_items = list(/obj/item/ring)
 	var/list/other_items = list(/obj/item/ring)
 
 	assignto_faction(var/datum/f13_faction/F, var/list/data = list())
