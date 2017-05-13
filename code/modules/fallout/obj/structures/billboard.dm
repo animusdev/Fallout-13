@@ -5,6 +5,8 @@
 	desc = "Shitspawn detected!<br>Please report the admin abuse immediately!<br>Just kidding, nevermind."
 	icon_state = "null"
 	density = 1
+	anchored = 1
+	layer = FLY_LAYER
 	icon = 'icons/fallout/machines/64x64.dmi'
 	resistance_flags = INDESTRUCTIBLE
 
