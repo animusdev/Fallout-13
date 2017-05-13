@@ -2,7 +2,7 @@
 
 /obj/item/stack/caps
 	name = "caps"
-	desc = "It's worth 1 cap."
+	desc = "Post appocalyptic money."
 	singular_name = "cap"
 	icon = 'icons/fallout/objects/bottlecaps.dmi'
 	icon_state = "1"
@@ -12,6 +12,10 @@
 	throw_speed = 2
 	throw_range = 2
 	w_class = 1
+
+/obj/item/stack/caps/New()
+	..()
+	update_icon()
 
 /obj/item/stack/caps/update_icon()
 	if(amount >= 20)
