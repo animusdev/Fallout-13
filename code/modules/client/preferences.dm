@@ -808,10 +808,14 @@ var/list/preferences_datums = list()
 
 				if("species")
 
-					var/result = input(user, "Select a species", "Species Selection") as null|anything in roundstart_species
+					var/list/species_list = roundstart_species
+					if(parent && parent.allowed_races)
+						species_list = parent.allowed_races
+
+					var/result = input(user, "Select a species", "Species Selection") as null|anything in species_list
 
 					if(result)
-						var/newtype = roundstart_species[result]
+						var/newtype = species_list[result]
 						pref_species = new newtype()
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
 						var/temp_hsv = RGBtoHSV(features["mcolor"])
