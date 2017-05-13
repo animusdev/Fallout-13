@@ -158,6 +158,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	hitsound = 'sound/items/welder.ogg'
 	damtype = "fire"
 	force = 4
+	playsound(src.loc, 'sound/f13items/cig_light.ogg', 50, 0)//A nice little flavor sound that plays before anything else happens.
 	if(reagents.get_reagent_amount("plasma")) // the plasma explodes when exposed to fire
 		var/datum/effect_system/reagents_explosion/e = new()
 		e.set_up(round(reagents.get_reagent_amount("plasma") / 2.5, 1), get_turf(src), 0, 0)
