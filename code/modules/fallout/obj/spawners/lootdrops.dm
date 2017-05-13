@@ -36,9 +36,6 @@
 /obj/effect/spawner/lootdrop/wrange_middle
 	color = "#0AAAFA"
 	loot = list(
-	/obj/item/weapon/gun/energy/laser/rifle = 1,
-	/obj/item/weapon/gun/energy/plasma/pistol = 1,
-	/obj/item/weapon/gun/energy/plasma/glock = 1,
 	/obj/item/weapon/gun/ballistic/automatic/assault_rifle = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/rifle = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/rifle/scope = 1,
@@ -47,9 +44,10 @@
 /obj/effect/spawner/lootdrop/wrange_high
 	color = "#FFAAFA"
 	loot = list(
-	/obj/item/weapon/gun/ballistic/revolver/magnum = 1,
+	/obj/item/weapon/gun/energy/laser/rifle = 1,
+	/obj/item/weapon/gun/energy/plasma/pistol = 1,
+	/obj/item/weapon/gun/energy/plasma/glock = 1,
 	/obj/item/weapon/gun/energy/plasma = 1,
-	/obj/item/weapon/gun/energy/laser/rifle/aer13 = 1,
 	/obj/item/weapon/gun/ballistic/automatic/smg10mm = 1,
 	/obj/item/weapon/gun/ballistic/automatic/rifle = 1)
 
@@ -57,8 +55,10 @@
 	color = "#FF0000"
 	loot = list(
 	/obj/item/weapon/gun/ballistic/automatic/bozar = 25,
+	/obj/item/weapon/gun/ballistic/revolver/magnum = 1,
 	/obj/item/weapon/gun/energy/laser/rifle/tri = 25,
 	/obj/item/weapon/gun/energy/plasma/turbo = 25,
+	/obj/item/weapon/gun/energy/laser/rifle/aer13 = 1,
 	/obj/item/weapon/gun/energy/plasma/tri = 25)
 
 /obj/effect/spawner/lootdrop/ammo

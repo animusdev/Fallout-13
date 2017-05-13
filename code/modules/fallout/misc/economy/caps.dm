@@ -18,3 +18,7 @@
 		icon_state = "20"
 	else
 		icon_state = "[amount]"
+
+/obj/item/stack/caps/random/New()
+	amount = rand(1,100)
+	..()
