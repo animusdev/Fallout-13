@@ -97,8 +97,6 @@
 			if (l_store)
 				l_store.talk_into(src, message, , spans)
 
-			to_chat(world, "Said [message] by [src]")
-
 			return ITALICS | REDUCE_RANGE
 
 		if(MODE_DEPARTMENT)
