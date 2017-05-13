@@ -6,7 +6,7 @@
 	icon_state = "null"
 	density = 1
 	anchored = 1
-	layer = FLY_LAYER
+	layer = 5
 	icon = 'icons/fallout/machines/64x64.dmi'
 	resistance_flags = INDESTRUCTIBLE
 
