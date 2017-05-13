@@ -1,6 +1,6 @@
 /datum/f13_objective/join
 	name = "Join"
-	desc = "Join to %target_faction%."
+	desc = "Join to %faction_name%."
 	points = 0
 	kind = INDIVIDUAL
 
@@ -11,9 +11,12 @@
 		var/mob/living/mob = M.current
 		var/list/factions = shuffle(human_factions)
 		for(var/f_name in factions)
+			if(f_name == "none")
+				continue
 			var/datum/f13_faction/target = human_factions[f_name]
 			if(target.id != mob.social_faction)
 				data["target_faction"] = target.id
+				data["faction_name"] = target.full_name
 				break
 		..()
 

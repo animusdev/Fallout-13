@@ -21,8 +21,8 @@
 	assignto_mind(datum/mind/M, var/list/data = list())
 		var/list/minds = shuffle(ticker.minds)
 		var/datum/mind/target
-		for(var/mind in minds)
-			if(mind != M)
+		for(var/datum/mind/mind in minds)
+			if(mind != M && mind.current && mind.current.stat != DEAD)
 				target = mind
 				break
 		if(target == M)
