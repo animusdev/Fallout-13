@@ -9,6 +9,7 @@
 	desc = "A police hat of dark blue in color with a silver colored badge on the frontside.<br>The badge is inscripted with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"
+	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max 3 1985
 	name = "pith helmet"
@@ -74,6 +75,7 @@
 	desc = "A perfect hat for a ramblin' gamblin' man." //But I got to ramble (ramblin' man) //Oh I got to gamble (gamblin' man) //Got to got to ramble (ramblin' man) //I was born a ramblin' gamblin' man
 	icon_state = "gambler"
 	item_state = "dethat"
+	flags_inv = HIDEHAIR
 
 //Fluff
 
@@ -108,9 +110,10 @@
 	name = "detective's fedora"
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
-	self_weight = 1
 	item_state = "fedora"
+	flags_inv = HIDEHAIR
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
+	self_weight = 1
 
 /obj/item/clothing/head/f13/trilby
 	name = "feather trilby"
@@ -123,7 +126,6 @@
 	desc = "The Yamato is loaded. And so am I."
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
-	self_weight = 3
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0,fire = 0, acid = 0)
 
 //Fluff welding masks
