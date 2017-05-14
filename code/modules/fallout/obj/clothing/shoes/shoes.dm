@@ -30,7 +30,7 @@
 
 /obj/item/clothing/shoes/f13/fancy
 	name = "black shoes"
-	desc = "A pair of fancy black leather shoes." //Nice shoes!
+	desc = "A pair of fancy black shoes." //Nice shoes!
 	icon_state = "fancy"
 	item_state = "fancy"
 
