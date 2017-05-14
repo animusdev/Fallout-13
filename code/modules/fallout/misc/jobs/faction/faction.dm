@@ -205,6 +205,7 @@ mob/proc/set_faction(var/faction)
 	full_name = "City Dwellers"
 	description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - is a group of wastelanders, that have holed up in the town to wait worst things out and hope for the best.<br>As City evolved, its citizens became different from the rest of wasteland dwellers - they value the safety of a city, give preference to better food and clothing, and mostly trust the elect Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
+	area = /area/f13/city
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/raider
@@ -216,6 +217,7 @@ mob/proc/set_faction(var/faction)
 	full_name = "Raider Gang"
 	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - are any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	verbs = list(/mob/proc/begin_head_voting)
+	area = /area/f13/raiders
 
 /datum/f13_faction/vault
 	name = "Vault"
@@ -227,6 +229,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "overseer"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
+	area = /area/f13/vault
 //	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
 
 /datum/f13_faction/brotherhood
@@ -238,6 +241,7 @@ mob/proc/set_faction(var/faction)
 	preview_image = 'html/factions/brotherhood.png'
 	head_status = "elder"
 	flags = HAVE_FREQ
+	area = /area/f13/brotherhood
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/enclave
@@ -249,6 +253,7 @@ mob/proc/set_faction(var/faction)
 	preview_image = 'html/factions/enclave.png'
 	head_status = "colonel"
 	flags = HAVE_FREQ
+	area = /area/f13/enclave
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/ahs
@@ -259,6 +264,7 @@ mob/proc/set_faction(var/faction)
 	description = "<b>Alignment: Neutral Good</b><br>The Adepts of Hubology Studies, or simply Hubologists - are a religious sect that originated as a cult founded before the Great War by a man known as Dick Hubbell aka The Hub.<br>Hubology as a religion promotes the idea that humans are plagued by the spirits of the dead, causing neurodynes to form.<br>The degree to which a member has devoted his or her time, efforts and caps to Hubology accords him or her a numerical rank."
 	preview_image = 'html/factions/ahs.png'
 	head_status = "ahs8"
+	area = /area/f13/ahs
 	verbs = list(/mob/proc/begin_head_voting)
 
 /datum/f13_faction/ncr
@@ -271,6 +277,7 @@ mob/proc/set_faction(var/faction)
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
 	verbs = list(/mob/proc/begin_head_voting)
+	area = /area/f13/ncr
 	welcome_text = "Your current objectives are:<br>\
 1. As an NCR soldier you must uphold the law around the town, exterminate any raiders you see, seek and destroy the Legion members.<br>\
 2. As an NCR soldier you must protect the innocent wastelanders from the horrors of the wasteland.<br>\
@@ -286,6 +293,7 @@ mob/proc/set_faction(var/faction)
 	id = "legion"
 	color = "#C24D44"
 	flags = HAVE_FREQ | HAVE_FLAG
+	area = /area/f13/legion
 //	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
 						 /datum/table_recipe/legion_encryption_key)
 	welcome_text = "Your current objectives:<br>\
@@ -302,6 +310,7 @@ mob/proc/set_faction(var/faction)
 	preview_image = 'html/factions/followers.png'
 	head_status = "leader"
 	verbs = list(/mob/proc/begin_head_voting)
+	area = /area/f13/followers
 
 /datum/f13_faction/acolytes
 	name = "Acolytes"

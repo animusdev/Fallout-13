@@ -331,3 +331,12 @@
 		/datum/job/colonel
 		)
 	price = 1000
+
+/datum/content_pack/glowing_ghoul
+	name = "Glowing Ghoul Race"
+	id = "glowing_ghoul"
+	desc = "Take glowing ghoul race on round start"
+	price = 500
+
+	on_set(client/client)
+		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)

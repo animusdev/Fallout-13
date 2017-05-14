@@ -9,6 +9,7 @@ client
 		list/allowed_roles
 		list/allowed_factions
 		list/content_packs
+		list/allowed_races
 		donate_money
 		next_donate_update
 	proc
@@ -61,6 +62,11 @@ client
 				var/datum/content_pack/D = SScontent.get_pack(pack_id)
 				if(D != null)
 					allowed_roles += D.roles
+
+		add_race(race_name, race_type)
+			if(!allowed_races)
+				allowed_races = roundstart_species.Copy()
+			allowed_races[race_name] = race_type
 
 		update_allowed_factions()
 			allowed_factions = list()

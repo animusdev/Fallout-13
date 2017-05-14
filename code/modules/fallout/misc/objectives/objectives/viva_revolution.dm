@@ -1,6 +1,6 @@
 /datum/f13_objective/revolution
 	name = "Viva Revolution"
-	desc = "Hold control by yourself and became %target_status%."
+	desc = "Hold control by yourself and became %status_name%."
 	points = 0
 	kind = INDIVIDUAL
 
@@ -13,7 +13,9 @@
 	assignto_mind(datum/mind/M, var/list/data = list())
 		var/mob/living/mob = M.current
 		var/datum/f13_faction/faction = get_faction_datum(mob.social_faction)
-		data["target_status"] = faction.head_status
+		var/datum/status/status = get_status_datum(faction.head_status)
+		data["target_status"] = status.id
+		data["status_name"] = status.name
 		..()
 
 	check_complete(var/datum/objective_holder/holder)

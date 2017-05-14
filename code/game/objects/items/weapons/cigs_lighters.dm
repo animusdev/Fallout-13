@@ -158,6 +158,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	hitsound = 'sound/items/welder.ogg'
 	damtype = "fire"
 	force = 4
+	playsound(src.loc, 'sound/f13items/cig_light.ogg', 50, 0)//A nice little flavor sound that plays before anything else happens.
 	if(reagents.get_reagent_amount("plasma")) // the plasma explodes when exposed to fire
 		var/datum/effect_system/reagents_explosion/e = new()
 		e.set_up(round(reagents.get_reagent_amount("plasma") / 2.5, 1), get_turf(src), 0, 0)
@@ -435,6 +436,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
 	var/lit = 0
+	var/onsound = 'sound/f13items/zippo_on.ogg'
+	var/offsound = 'sound/f13items/zippo_off.ogg'
 	heat = 1500
 	resistance_flags = FIRE_PROOF
 
@@ -472,6 +475,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	name = "cheap lighter"
 	desc = "A cheap-as-free lighter."
 	icon_state = "lighter"
+	onsound = 'sound/f13items/lighter_on.ogg'
+	offsound = 'sound/f13items/lighter_off.ogg'
+
 
 /obj/item/weapon/lighter/greyscale/New()
 	..()
@@ -500,6 +506,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			attack_verb = list("burnt", "singed")
 			if(!istype(src, /obj/item/weapon/lighter/greyscale))
 				user.visible_message("Without even breaking stride, [user] flips open and lights [src] in one smooth movement.", "<span class='notice'>Without even breaking stride, you flip open and lights [src] in one smooth movement.</span>")
+				
 			else
 				var/prot = FALSE
 				var/mob/living/carbon/human/H = user
@@ -517,7 +524,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? "r_hand" : "l_hand"
 					user.apply_damage(5, BURN, hitzone)
 					user.visible_message("<span class='warning'>After a few attempts, [user] manages to light [src] - however, [user.p_they()] burn their finger in the process.</span>", "<span class='warning'>You burn yourself while lighting the lighter!</span>")
-
+			if(onsound)
+				playsound(user, onsound, 50, 0)
 			set_light(1)
 			START_PROCESSING(SSobj, src)
 		else
@@ -530,6 +538,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 				user.visible_message("You hear a quiet click, as [user] shuts off [src] without even looking at what [user.p_theyre()] doing. Wow.", "<span class='notice'>You quietly shut off [src] without even looking at what you're doing. Wow.</span>")
 			else
 				user.visible_message("[user] quietly shuts off [src].", "<span class='notice'>You quietly shut off [src].")
+			if(offsound)
+				playsound(user, offsound, 50, 0)
 			set_light(0)
 			STOP_PROCESSING(SSobj, src)
 	else

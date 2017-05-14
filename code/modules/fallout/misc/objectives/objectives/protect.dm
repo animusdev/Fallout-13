@@ -22,7 +22,7 @@
 				continue
 			var/mob/living/M = mind.current
 			if(mind != subject)
-				if(F && M && M.social_faction == F.id)
+				if(F && M && (M.social_faction == F.id || M.stat == DEAD))
 					continue
 				target = mind
 				break

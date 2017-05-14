@@ -40,7 +40,7 @@ mob
 
 atom
 	var
-		list/ambient_hearers = list()
+		list/ambient_hearers
 		ambient_playing = 0
 		ambient_volume = 50
 		ambient_sound = null
@@ -55,6 +55,7 @@ atom
 		ambient_range = range
 		ambient_volume = volume
 		ambient_sound = sound
+		ambient_hearers = list()
 		ambient_playing = 1
 
 		SSambient.processing += src
@@ -78,6 +79,9 @@ atom
 		var/distance
 		for(var/mob/M in player_list) //First we stoping leaved mobs ambient.
 			if(!M.client)
+				continue
+
+			if(M.z != T.z)
 				continue
 
 			distance = get_dist(M, T)
@@ -124,6 +128,7 @@ atom
 		ambient_hearers.Cut()
 		SSambient.processing -= src
 		ambient_playing = 0
+		ambient_hearers = null
 
 
 
