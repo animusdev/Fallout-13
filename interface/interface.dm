@@ -65,12 +65,12 @@
 
 	var/adminhotkeys = {"<font color='purple'>
 Admin:
-\tF5 = admin chat (asay)
-\tF6 = player-panel
-\tF7 = admin-pm
-\tCtrl+F7 = Stealth-Mode
+\tF6 = admin-pm
+\tF7 = admin chat (asay)
 \tF8 = Invisimin
+\tCtrl+F8 = Stealth-Mode
 \tF9 = aghost
+\tF10 = player-panel
 \tF11 = buildmode
 </font>"}
 
@@ -196,8 +196,9 @@ Hotkey-Mode: (hotkey-mode must be on)
 Any-Mode: (hotkey doesn't need to be on)
 \tF1 = admin help (ahelp)
 \tF2 = OOC
-\tF3 = say
-\tF4 = emote (me)
+\tF3 = LOOC
+\tF4 = say
+\tF5 = emote (me)
 \tCtrl+a = left
 \tCtrl+s = down
 \tCtrl+d = right

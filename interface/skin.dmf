@@ -139,28 +139,31 @@ macro "default"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -372,28 +375,31 @@ macro "hotkeys"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -533,28 +539,31 @@ macro "robot-default"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -751,28 +760,31 @@ macro "robot-hotkeys"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -907,7 +919,6 @@ window "mainwindow"
 		size = 37x20
 		anchor1 = 100,100
 		anchor2 = none
-		background-color = none
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"say.is-checked=true ? input.command=\"!say \\\"\" : input.command=\""
@@ -919,7 +930,6 @@ window "mainwindow"
 		size = 200x200
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		saved-params = ""
 	elem "tooltip"
@@ -928,7 +938,6 @@ window "mainwindow"
 		size = 999x999
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		saved-params = ""
 
