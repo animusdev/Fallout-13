@@ -147,11 +147,14 @@
 
 /obj/item/clothing/under/f13/formal
 	name = "pre-War male formal wear"
-	desc = "A dark purple jacket with an old white shirt and dirty dark purple trousers.<br>Traditionally worn by the richest of the post-War world."
-	icon_state = "spring_m"
-	item_state = "brownjsuit"
-	item_color = "spring_m"
+	desc = "A black jacket with an old white shirt and dirty dark purple trousers.<br>Traditionally worn by the richest of the post-War world."
+	icon_state = "formal_m"
+	item_state = "judge"
+	item_color = "formal_m"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/bodyguard
 	name = "bodyguard outfit"
@@ -159,6 +162,7 @@
 	icon_state = "bodyguard"
 	item_state = "sl_suit"
 	item_color = "bodyguard"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 	self_weight = 3
@@ -238,9 +242,9 @@
 	item_state = "bl_suit"
 	item_color = "merca_m"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	self_weight = 3
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/female/mercadv //Female version
 	name = "female merc adventurer outfit"
@@ -249,10 +253,10 @@
 	item_state = "bl_suit"
 	item_color = "merca_f"
 	fitted = FEMALE_UNIFORM_TOP
-	self_weight = 3
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/merccharm //Male version
 	name = "male merc charmer outfit"
@@ -261,9 +265,9 @@
 	item_state = "bl_suit"
 	item_color = "mercc_m"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	self_weight = 3
 	armor = list(melee = 10, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 2
 
 /obj/item/clothing/under/f13/female/merccharm //Female version
 	name = "female merc charmer outfit"
@@ -272,8 +276,8 @@
 	item_state = "bl_suit"
 	item_color = "mercc_f"
 	fitted = FEMALE_UNIFORM_TOP
-	self_weight = 3
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	self_weight = 2
 	armor = list(melee = 10, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -353,7 +357,7 @@
 
 /obj/item/clothing/under/f13/vault/v42
 	name = "Vault 42 jumpsuit"
-	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Great Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 42 on the back."
+	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Ultimate Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 42 on the back."
 	icon_state = "vault42"
 	item_color = "vault42"
 
@@ -402,6 +406,7 @@
 /obj/item/clothing/under/f13/ncr
 	name = "overcoat"
 	desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
 	item_color = "overcoat"
@@ -410,6 +415,7 @@
 /obj/item/clothing/under/f13/ncr/torn
 	name = "torn overcoat"
 	desc = "Some time ago it looked like a regular NCR uniform, but now it looks like a total mess of ripped cloth."
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "tornovercoat"
 	item_color = "tornovercoat"
@@ -437,6 +443,7 @@
 	icon_state = "jensen"
 	item_state = "jensensuit"
 	item_color = "jensen"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 	can_adjust = 0
 
@@ -456,6 +463,7 @@
 	icon_state = "psychturtle"
 	item_state = "b_suit"
 	item_color = "psychturtle"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -465,6 +473,7 @@
 	icon_state = "villain"
 	item_state = "syndicate-green"
 	item_color = "villain"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = -10, bullet = -10, laser = -10, energy = -10, bomb = -10, bio = -10, rad = -10, fire = -10, acid = -10) //Because dying is fun. Especially for evil masterminds.
 	can_adjust = 0
 
@@ -474,6 +483,7 @@
 	icon_state = "gentlesuit"
 	item_state = "gy_suit"
 	item_color = "gentlesuit"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -483,8 +493,8 @@
 	icon_state = "dispatch"
 	item_state = "lb_suit"
 	item_color = "dispatch"
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	body_parts_covered = CHEST|GROIN|LEGS
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/detectivealt
@@ -493,8 +503,8 @@
 	icon_state = "detectivealt"
 	item_state = "bl_suit"
 	item_color = "detectivealt"
-	armor = list(melee = 20, bullet = 20, laser = -10, energy = -10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	body_parts_covered = CHEST|GROIN|LEGS
+	armor = list(melee = 20, bullet = 20, laser = -10, energy = -10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/rdalt
@@ -503,6 +513,7 @@
 	icon_state = "rdalt"
 	item_state = "lb_suit"
 	item_color = "rdalt"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 20, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -512,6 +523,7 @@
 	icon_state = "hopalt"
 	item_state = "b_suit"
 	item_color = "hopalt"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = -10, bullet = 0, laser = 20, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -521,6 +533,7 @@
 	icon_state = "roboticsalt"
 	item_state = "jensensuit"
 	item_color = "roboticsalt"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
 
@@ -530,6 +543,7 @@
 	icon_state = "barmanalt"
 	item_state = "bl_suit"
 	item_color = "barmanalt"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -539,6 +553,7 @@
 	icon_state = "manager"
 	item_state = "bar_suit"
 	item_color = "manager"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 5, bullet = -20, laser = 0, energy = 0, bomb = 0, bio = 5, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
 
@@ -548,6 +563,7 @@
 	icon_state = "spaceship_crewman"
 	item_state = "syndicate-black-red"
 	item_color = "spaceship_crewman"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 5, energy = 5, bomb = 0, bio = 5, rad = 10, fire = 0, acid = 0)
 	can_adjust = 0
 
@@ -556,6 +572,7 @@
 	desc = "The insignia on this uniform tells you that this uniform belongs to some sort of officer."
 	icon_state = "spaceship_officer"
 	item_color = "spaceship_officer"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 10, fire = 0, acid = 0)
 
 /obj/item/clothing/under/f13/spaceship/captain
@@ -563,6 +580,7 @@
 	desc = "The insignia on this uniform tells you that this uniform belongs to some sort of captain."
 	icon_state = "spaceship_captain"
 	item_color = "spaceship_captain"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 0, acid = 0)
 
 //Female clothing! It's not misogyny, yet dresses shall be separate from /f13/ as Fallout build has its own female subtype.
