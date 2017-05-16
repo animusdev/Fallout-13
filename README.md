@@ -52,7 +52,7 @@ Note: This is not associated with Bethesda Softworks in any way! Fallout 13 is n
 
 ##LICENSE
 
-Fallout 13 is based of /tg/ Station 13 source code and thus is licensed and distributed accordingly.
+**Fallout 13 is based of /tg/ Station 13 source code and thus is licensed and distributed accordingly.**
 
 All source code of /tg/ Station 13 after commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under GNU AGPL v3 (http://www.gnu.org/licenses/agpl-3.0.html).
 
