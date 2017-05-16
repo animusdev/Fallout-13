@@ -1,36 +1,37 @@
 ##Fallout 13 Beta 0.1
 
-**Website:** https://www.reddit.com/r/Fallout13 <BR>
-**Code:** https://bitbucket.org/Jackerzz/fallout <BR>
-**Discord:** https://discord.gg/fECUGbv<BR>
+**Website:** https://www.reddit.com/r/Fallout13
+**Code:** https://bitbucket.org/Jackerzz/fallout
+**Discord:** https://discord.gg/fECUGbv
 
 ##Credits
 
-**Code:** <BR>
+**Code:**
 Jackerzz aka Maxyo, Matt Troks, Godsring, Sarumyn, ChowderMcArthor, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please. <BR>
 
-**Graphics / Sprites / Icons:** <BR>
+**Graphics / Sprites / Icons:**
 Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox.
 
-**Origins:** <BR>
+**Origins:**
 Currently the build contains code, graphics, sounds and specific build features of several Space Station 13 communities listed below. <BR>
 Fallout 13 would not exist without the efforts of creative people who did their best to make a game of spessmen more fun. <BR>
-_Praise our Overlords!_ <BR>
+
+_Praise our Overlords!_
 **_/tg/ Station 13, Goon Station 13, Baystation 12, Animus Station, Tau Ceti Station, Soviet Station, Urist McStation, Atlas Station_** <BR>
 And all the others who made our dreams come true.
 
 ##Soundtrack
-Music by Harry James Orchestra 1939-1946. <BR>
-Tracks are listed in order of appearance: <BR>
-1. Harry James Orchestra - Trumpet Blues <BR>
-2. Harry James Orchestra - I've Heard That Song Before <BR>
-3. Harry James Orchestra - Back Beat Boogie <BR>
-4. Harry James Orchestra - Harlem Nocturne <BR>
-5. Harry James Orchestra - All Or Nothing <BR>
-6. Harry James Orchestra - Two O'Clock Jump <BR>
-7. Harry James Orchestra - September Song <BR>
+Music by Harry James Orchestra 1939-1946.
+Tracks are listed in order of appearance:
+1. Harry James Orchestra - Trumpet Blues
+2. Harry James Orchestra - I've Heard That Song Before
+3. Harry James Orchestra - Back Beat Boogie
+4. Harry James Orchestra - Harlem Nocturne
+5. Harry James Orchestra - All Or Nothing
+6. Harry James Orchestra - Two O'Clock Jump
+7. Harry James Orchestra - September Song
 
-You can download zip archive with music here:<BR>
+You can download zip archive with unedited music tracks here:
 http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip
 
 ##Disclaimer
