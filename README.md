@@ -23,7 +23,7 @@ Fallout 13 would not exist without the efforts of creative people who did their 
 
 _Praise our Overlords!_
 
-**_/tg/ Station 13, Goon Station 13, Baystation 12, Animus Station, Tau Ceti Station, Soviet Station, Urist McStation, Atlas Station_**
+**_/tg/ Station 13, Goon Station 13, Baystation 12, Soviet Station, Animus Station, Tau Ceti Station, Urist McStation, Atlas Station_**
 
 And all the others who made our dreams come true.
 
