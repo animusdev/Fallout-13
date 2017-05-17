@@ -10,7 +10,7 @@
 
 **Code:**
 
-Jackerzz aka Maxyo, Matt Troks, Godsring, Sarumyn, ChowderMcArthor, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please.
+Jackerzz aka Maxyo, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please.
 
 **Graphics / Sprites / Icons:**
 
