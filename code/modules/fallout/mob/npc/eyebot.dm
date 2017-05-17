@@ -1,4 +1,4 @@
-//Fallout 13 eyebot directory
+//Fallout 13 eyebot directory wat
 
 /mob/living/simple_animal/hostile/eyebot
 	name = "eyebot"
