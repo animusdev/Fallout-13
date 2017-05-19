@@ -15,7 +15,7 @@
 	minimal_player_age = 7
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "tesla", "super_ten")
 
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/power_armor/shocktrooper,
@@ -73,7 +73,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "tesla", "super_ten")
 
 	required_items = list(
 	/obj/item/clothing/head/soft/f13/enclave,
@@ -135,7 +135,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "tesla", "super_ten")
 
 	required_items = list(
 	/obj/item/clothing/under/f13/bdu,

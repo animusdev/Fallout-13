@@ -312,6 +312,45 @@
 		return 1
 	return ..()
 
+/obj/item/clothing/head/helmet/power_armor/badmin
+	name = "advanced mark III power helmet"
+	desc = "A group of Enclave mad scientists lead by Administrator Badmin, have spent a decade working on the super weapon you see in front of you."
+	icon_state = "badmin"
+	item_state = "badmin"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100, fire = 50)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	self_weight = 3
+
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/badmin/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/badmin/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
 /obj/item/clothing/head/helmet/power_armor/shocktrooper
 	name = "shocktrooper power helmet"
 	desc = "A 'black devil' power armor helmet used exclusively by the Enclave military forces, developed after the Great War, and the destruction of the Enclave Oil Rig in 2241.<br>It looks badass."
@@ -380,6 +419,45 @@
 	visor_toggling()
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	visor_toggling()
+	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		C.head_update(src, forced = 1)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/power_armor/tesla
+	name = "tesla power helmet"
+	desc = "An advanced power armor mark I helmet, typically used by the Enclave.<br>There are three orange energy capacitors on the side."
+	icon_state = "tesla"
+	item_state = "tesla"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 50, bullet = 30, laser = 80, energy = 80, bomb = 30, bio = 100, rad = 80)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	self_weight = 4
+
+	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
+	glass_colour_type = /datum/client_colour/glass_colour/yellow
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
+	can_toggle = 1
+
+/obj/item/clothing/head/helmet/power_armor/tesla/New()
+	..()
+	visor_toggling()
+
+/obj/item/clothing/head/helmet/power_armor/tesla/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)

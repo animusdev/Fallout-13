@@ -178,7 +178,17 @@
 		/obj/item/clothing/suit/armor/f13/power_armor/ncr,
 		/obj/item/weapon/twohanded/largehammer,
 		/obj/item/weapon/gun/ballistic/automatic/rifle,
-		/obj/item/ammo_box/magazine/m308,
+		/obj/item/ammo_box/magazine/m308
+		)
+	price = 180
+
+/datum/content_pack/tesla
+	name = "Enclave Tesla Regiment"
+	id = "tesla"
+	desc = "<b>Available to: Enclave faction only!</b><br>Become the Tesla Trooper with a set of badass tesla power armor!<br><i>Note: Tesla weapons do not apply to this pack (yet).</i>"
+	items = list(
+		/obj/item/clothing/head/helmet/power_armor/tesla,
+		/obj/item/clothing/suit/armor/f13/power_armor/tesla
 		)
 	price = 180
 
@@ -333,9 +343,9 @@
 	price = 1000
 
 /datum/content_pack/glowing_ghoul
-	name = "Glowing Ghoul Race"
+	name = "Player race: Glowing Ghoul"
 	id = "glowing_ghoul"
-	desc = "Take glowing ghoul race on round start"
+	desc = "<b>Available to: All factions except for the Enclave!</b><br>The following pack gives you ability to create a glowing ghoul character on round start!"
 	price = 500
 
 	on_set(client/client)
