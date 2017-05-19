@@ -1,6 +1,6 @@
 /datum/f13_objective/revolution
-	name = "Viva Revolution"
-	desc = "Hold control by yourself and became %status_name%."
+	name = "Viva La Revolution"
+	desc = "A time has come to change the world!<br>Take control over your faction and become a %status_name%."
 	points = 0
 	kind = INDIVIDUAL
 

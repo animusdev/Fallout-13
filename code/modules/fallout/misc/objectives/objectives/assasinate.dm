@@ -1,6 +1,6 @@
 /datum/f13_objective/assassinate
-	name = "Assassinate"
-	desc = "Dis motherfucker killed your father"
+	name = "Assassins Creed"
+	desc = "You were hired by a secret society to get rid of a specific person."
 	kind = BOTH
 
 	check_mob(mob/living/carbon/human/H)
