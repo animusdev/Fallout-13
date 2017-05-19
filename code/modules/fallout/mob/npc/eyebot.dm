@@ -14,7 +14,7 @@
 	response_help = "touches"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	move_to_delay = 0.1
+	move_to_delay = 3
 	stat_attack = 1
 	robust_searching = 1
 	maxHealth = 70
