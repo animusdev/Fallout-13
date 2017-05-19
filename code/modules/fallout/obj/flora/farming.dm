@@ -30,7 +30,7 @@
 	species = "xander"
 	plantname = "Xander Root"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/xander
-	lifespan = 5
+	lifespan = 25
 	endurance = 10
 	yield = 1
 	growthstages = 3
@@ -71,7 +71,7 @@
 	species = "ferocactus"
 	plantname = "Ferocactus"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/ferocactus
-	lifespan = 50
+	lifespan = 60
 	endurance = 20
 	yield = 1
 	growthstages = 3
@@ -92,7 +92,7 @@
 	species = "shroom"
 	plantname = "Shrooms"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/shroom
-	lifespan = 80
+	lifespan = 50
 	endurance = 10
 	yield = 5
 	growthstages = 3
@@ -113,7 +113,7 @@
 	species = "glow"
 	plantname = "Glowing Fungus"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/glow
-	lifespan = 80
+	lifespan = 60
 	endurance = 10
 	yield = 5
 	growthstages = 3
