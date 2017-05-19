@@ -57,6 +57,7 @@
 	icon_dead = "floatingeye_d"
 	icon_gib = "floatingeye_d"
 
+	retreat_distance = 4
 	faction = list("hostile", "bs")
 
 	projectiletype = /obj/item/projectile/energy/electrode
