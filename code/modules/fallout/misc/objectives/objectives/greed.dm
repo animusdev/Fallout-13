@@ -1,3 +1,5 @@
+//Fallout 13 - We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers...
+
 /datum/f13_objective/greed
 	name = "Fear and Loathing in Wasteland"
 	desc = "Your family home has shattered, the promising business went down the drain, and on top of it - you're totally out of money.<br>You have to collect %count% caps to get your life back together."

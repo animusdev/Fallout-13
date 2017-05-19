@@ -1,3 +1,5 @@
+//Fallout 13 dynamic quest system
+
 /datum/f13_objective
 	var
 		name = "Objective"

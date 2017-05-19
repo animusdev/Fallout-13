@@ -1,3 +1,5 @@
+//Fallout 13 objective holder
+
 /datum/objective_holder
 	var/owner
 	var/datum/f13_objective/parent

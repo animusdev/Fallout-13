@@ -1,3 +1,5 @@
+//Fallout 13 - We work in the dark, to serve the light. We are Assassins.
+
 /datum/f13_objective/assassinate
 	name = "Assassins Creed"
 	desc = "You were hired by a secret society to get rid of a specific person."
