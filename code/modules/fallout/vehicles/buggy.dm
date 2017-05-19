@@ -8,9 +8,11 @@
 	datum_type = /datum/riding/motorcycle/buggy
 	pixel_x = -17
 	pixel_y = -2
+	obj_integrity = 700
+	max_integrity = 700
 	fuel = 1000
 	max_fuel = 1000
-	self_weight = 500
+	self_weight = 700
 	engine_on_sound = 'sound/f13machines/buggy_start.ogg'
 	engine_loop_sound = 'sound/f13machines/buggy_loop.ogg'
 	var/list/names = list("Badger", "Bandit", "Desert Punk", "Dune Buddy", "Duster", "Rebel", "Rooster")
