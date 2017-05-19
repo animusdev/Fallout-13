@@ -7,8 +7,8 @@
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"
 	icon_dead = "deathclaw_dead"
-	speed = 1
-	move_to_delay = 1.5
+	speed = 2
+	move_to_delay = 3
 	turns_per_move = 5
 	response_help = "touches"
 	response_disarm = "tries to grab a deathclaw by its large"
@@ -17,6 +17,7 @@
 	maxHealth = 500
 	health = 500
 	self_weight = 300
+	damage_coeff = list(BRUTE = 0.6, BURN = 0.8, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 
 	ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
 	sound_speak_chance = 5
@@ -28,7 +29,7 @@
 	force_threshold = 15
 	faction = list("hostile", "deathclaw")
 	melee_damage_lower = 25
-	armour_penetration = 60
+	armour_penetration = 70
 	melee_damage_upper = 60
 	aggro_vision_range = 12
 	see_in_dark = 8

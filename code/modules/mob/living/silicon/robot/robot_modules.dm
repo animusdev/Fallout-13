@@ -422,7 +422,7 @@
 /obj/item/weapon/robot_module/handy
 	name = "Mr.Handy"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/reagent_containers/borghypo/epi, /obj/item/device/healthanalyzer, \
-	/obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/weapon/wrench/cyborg, /obj/item/weapon/crowbar/cyborg, /obj/item/weapon/portable_destructive_analyzer, \
+	/obj/item/weapon/weldingtool/experimental, /obj/item/weapon/wrench/cyborg, /obj/item/weapon/crowbar/cyborg, /obj/item/weapon/portable_destructive_analyzer, \
 	/obj/item/weapon/extinguisher, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, \
 	/obj/item/weapon/soap/nanotrasen, /obj/item/borg/cyborghug, /obj/item/stack/cable_coil/cyborg)
 	emag_modules = list(/obj/item/weapon/melee/energy/sword/cyborg)
@@ -436,9 +436,9 @@
 	name = "Mrs.Nurse"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/device/healthanalyzer, /obj/item/weapon/reagent_containers/borghypo, \
 	/obj/item/weapon/reagent_containers/glass/beaker/large, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/portable_destructive_analyzer, \
-	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, \
+	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, /obj/item/weapon/soap/nanotrasen, \
 	/obj/item/weapon/hemostat, /obj/item/weapon/cautery, /obj/item/weapon/surgicaldrill, /obj/item/weapon/scalpel, /obj/item/stack/cable_coil/cyborg,\
-	/obj/item/weapon/circular_saw, /obj/item/weapon/extinguisher/mini, /obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/borg/cyborghug/medical, \
+	/obj/item/weapon/circular_saw, /obj/item/weapon/extinguisher/mini, /obj/item/weapon/weldingtool/experimental, /obj/item/borg/cyborghug/medical, \
 	/obj/item/stack/medical/gauze/cyborg, /obj/item/borg/lollipop)
 	emag_modules = list(/obj/item/weapon/reagent_containers/borghypo/hacked)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/medical)
@@ -451,7 +451,7 @@
 /obj/item/weapon/robot_module/gutsy
 	name = "Mr.Gutsy"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, /obj/item/weapon/portable_destructive_analyzer, \
-	/obj/item/weapon/gun/energy/laser/cyborg, /obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/borg/cyborghug/medical, /obj/item/stack/cable_coil/cyborg)
+	/obj/item/weapon/gun/energy/laser/cyborg, /obj/item/weapon/weldingtool/experimental, /obj/item/borg/cyborghug/medical, /obj/item/stack/cable_coil/cyborg)
 	emag_modules = list(/obj/item/weapon/gun/energy/laser/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "gutsy"
@@ -495,7 +495,7 @@
 //					"Eyebot" = "eyebot-standard"
 //				  )
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/portable_destructive_analyzer, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/portable_destructive_analyzer, \
-	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/borg/cyborghug/medical, /obj/item/weapon/powergauntlet/robot, /obj/item/weapon/gun/energy/laser/rcw/robot)
+	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/weldingtool/experimental, /obj/item/borg/cyborghug/medical, /obj/item/weapon/powergauntlet/robot, /obj/item/weapon/gun/energy/laser/rcw/robot)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "Securitron"
 	moduleselect_icon = "malf"
