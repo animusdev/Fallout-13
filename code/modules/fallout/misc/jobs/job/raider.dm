@@ -64,6 +64,8 @@
 	uniform = /obj/item/clothing/under/f13/villain
 	shoes = /obj/item/clothing/shoes/laceup
 
+//Basic Raider
+
 /datum/job/raider
 	title = "Raider"
 	desc = "A bloodthirsty savage.<br>You have broken all of the existing rules but one - Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."

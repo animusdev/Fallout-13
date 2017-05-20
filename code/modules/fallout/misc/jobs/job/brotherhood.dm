@@ -23,8 +23,8 @@
 	/obj/item/clothing/suit/armor/f13/power_armor/t60,
 	/obj/item/clothing/head/helmet/power_armor/t60,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
-	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/twohanded/superhammer,
+	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved
 	)
@@ -59,6 +59,8 @@
 	shoes = /obj/item/clothing/shoes/f13/military
 	suit = /obj/item/clothing/suit/f13/elder
 	weapon = /obj/item/weapon/gun/energy/laser/pistol
+
+//Brotherhood Paladin
 
 /datum/job/paladin
 	title = "Paladin"
@@ -119,6 +121,8 @@
 	weapon = /obj/item/weapon/gun/energy/laser/rcw
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
 	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat)
+
+//Brotherhood Knight
 
 /datum/job/knight
 	title = "Knight"

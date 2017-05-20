@@ -59,6 +59,8 @@
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
 	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat)
 
+//Enclave Sergeant
+
 /datum/job/enclave_sergeant
 	title = "Sergeant"
 	desc = "A loyal soldier.<br>You trust your commander, and orders from above - it's just about time to make America great again!"
@@ -120,6 +122,8 @@
 	weapon = /obj/item/weapon/gun/energy/plasma/pistol
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
 	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat)
+
+//Enclave Private
 
 /datum/job/enclave_private
 	title = "Private"

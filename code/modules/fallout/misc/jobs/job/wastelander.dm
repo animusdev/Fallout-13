@@ -24,6 +24,8 @@
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/f13/rag
 
+//Adventurer
+
 /datum/job/adventurer
 	title = "Adventurer"
 	desc = "An offspring of wasteland wanderers.<br>Your life is a journey, and you are free to choose what kind of a journey it is."
@@ -72,6 +74,8 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/mercadv
 	shoes = /obj/item/clothing/shoes/f13/tan
+
+//Mercenary
 
 /datum/job/mercenary
 	title = "Mercenary"

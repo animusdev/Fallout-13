@@ -181,7 +181,6 @@
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 30, fire = 30, acid = 30)
 	put_on_delay = 60
 	strip_delay = 60
-	resistance_flags = FIRE_PROOF
 	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/leglegate
@@ -313,6 +312,18 @@
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 20, acid = 20)
 	self_weight = 2
+
+/obj/item/clothing/suit/armor/f13/battlecoat //Maxson's battlecoat from Fallout 4
+	name = "battlecoat"
+	desc = "A heavy padded leather coat, worn by pre-War bomber pilots in the past and post-War zeppelin pilots in the future."
+	icon_state = "battlecoat"
+	item_state = "battlecoat"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 50, fire = 30, acid = 30)
+	put_on_delay = 20
+	strip_delay = 30
+	self_weight = 2
+	allowed = list(/obj/item/weapon/gun/ballistic/revolver)
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE

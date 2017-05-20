@@ -2,7 +2,7 @@
 
 /datum/job/legate
 	title = "Legate"
-	desc = "No description."
+	desc = "Caesar's will is the will of the Legion.<br>The Legate is a hand of a Caesar!<br>Veni, vidi, vici!"
 	flag = LEGLEGAT
 	department_head = list("Caesar")
 	department_flag = WASTELAND
@@ -17,7 +17,33 @@
 
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/weapon/machete,
+	/obj/item/weapon/kitchen/knife/combat,
+	/obj/item/weapon/spear,
+	/obj/item/weapon/harpoon,
+	/obj/item/device/radio,
+	/obj/item/weapon/lighter/gold,
+	/obj/item/weapon/reagent_containers/pill/patch/stimpak,
+	/obj/item/weapon/reagent_containers/pill/patch/supstimpak
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
 
 	outfit = /datum/outfit/job/leglegate
 
@@ -26,7 +52,7 @@
 
 /datum/outfit/job/leglegate
 	name = "Legate"
-	uniform = /obj/item/clothing/under/pants/f13/caravan
+	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
 	suit = /obj/item/clothing/suit/armor/f13/leglegate
@@ -34,10 +60,11 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/automatic/rifle
 
-//centurion
+//Legion Centurion
+
 /datum/job/centurion
 	title = "Centurion"
-	desc = "No description."
+	desc = "We are the Legion - a one is many.<br>The Centurion is a guardian of a Caesar!<br>Ab uno disce omnes!"
 	flag = LEGCENTURION
 	department_head = list("legate")
 	department_flag = WASTELAND
@@ -50,7 +77,32 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/weapon/machete,
+	/obj/item/weapon/kitchen/knife/combat,
+	/obj/item/weapon/spear,
+	/obj/item/weapon/harpoon,
+	/obj/item/device/radio,
+	/obj/item/weapon/lighter/engraved,
+	/obj/item/weapon/reagent_containers/pill/patch/stimpak
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
 
 	outfit = /datum/outfit/job/legcenturion
 
@@ -59,7 +111,7 @@
 
 /datum/outfit/job/legcenturion
 	name = "Centurion"
-	uniform = /obj/item/clothing/under/pants/f13/caravan
+	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
@@ -67,10 +119,11 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 
-//vexillarius
+//Legion Vexillarius
+
 /datum/job/vex
 	title = "Vexillarius"
-	desc = "No description."
+	desc = "Mortal actions never deceive the gods.<br>The Vexillarius is an ambassador of a Caesar!<br>Acta deos numquam mortalia fallunt!"
 	flag = LEGVEX
 	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
@@ -83,7 +136,32 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/weapon/machete,
+	/obj/item/weapon/kitchen/knife/combat,
+	/obj/item/weapon/spear,
+	/obj/item/weapon/harpoon,
+	/obj/item/device/radio,
+	/obj/item/weapon/lighter/engraved,
+	/obj/item/weapon/reagent_containers/pill/patch/stimpak
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
 
 	outfit = /datum/outfit/job/legvex
 
@@ -92,7 +170,7 @@
 
 /datum/outfit/job/legvex
 	name = "Vexillarius"
-	uniform = /obj/item/clothing/under/pants/f13/caravan
+	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
@@ -100,10 +178,11 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 
-//decan
+//Legion Decanus
+
 /datum/job/decan
 	title = "Decanus"
-	desc = "No description."
+	desc = "Boldness is our wall, action is our shield.<br>The Decanus is a weapon of a Caesar!<br>Audacia pro muro et scuto opus!"
 	flag = LEGDECAN
 	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
@@ -116,7 +195,31 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/weapon/machete,
+	/obj/item/weapon/kitchen/knife/combat,
+	/obj/item/weapon/spear,
+	/obj/item/weapon/harpoon,
+	/obj/item/device/radio,
+	/obj/item/weapon/reagent_containers/pill/patch/healingpowder
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
 
 	outfit = /datum/outfit/job/legdecan
 
@@ -125,7 +228,7 @@
 
 /datum/outfit/job/legdecan
 	name = "Decanus"
-	uniform = /obj/item/clothing/under/pants/f13/caravan
+	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
@@ -134,10 +237,11 @@
 	mask = /obj/item/clothing/mask/bandana/f13/legdecan
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 
-//prime
+//Legion Prime
+
 /datum/job/prime
 	title = "Prime"
-	desc = "No description."
+	desc = "Victory favors the bravery.<br>The Prime is servant of a Caesar!<br>Ad victoriam!"
 	flag = PRIME
 	department_head = list("Centurion")
 	department_flag = WASTELAND
@@ -150,7 +254,30 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	required_items = list(
+	/obj/item/weapon/machete,
+	/obj/item/weapon/kitchen/knife/combat,
+	/obj/item/weapon/spear,
+	/obj/item/weapon/harpoon,
+	/obj/item/weapon/reagent_containers/pill/patch/healingpowder
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
 
 	outfit = /datum/outfit/job/prime
 
@@ -159,7 +286,7 @@
 
 /datum/outfit/job/prime
 	name = "Prime"
-	uniform = /obj/item/clothing/under/pants/f13/caravan
+	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
@@ -169,4 +296,4 @@
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/weapon/storage/wallet=1)
+	/obj/item/weapon/storage/wallet=1,/obj/item/weapon/reagent_containers/pill/patch/healingpowder)

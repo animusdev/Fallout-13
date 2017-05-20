@@ -56,7 +56,7 @@
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
-/obj/item/clothing/head/f13/ncr
+/obj/item/clothing/head/f13/ncr_officer
 	name = "officer beret"
 	desc = "A soft round cap, usually of wool felt, with a flat crown that tilts to one side, used to identify officers of the New California Republic Army.<br>The beret seems to be camouflaged in various shades of green and brown, and has a cap badge of the NCR two-headed bear roaring up at a gold star."
 	icon_state = "officer"
