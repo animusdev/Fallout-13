@@ -92,6 +92,7 @@
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest,
 	/obj/item/clothing/suit/f13/duster,
+	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/ammo_box/magazine/internal/cylinder/m44
 	)
 

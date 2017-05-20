@@ -57,7 +57,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/plasma/glock
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
-	/obj/item/device/radio = 1)
+	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat)
 
 /datum/job/enclave_sergeant
 	title = "Sergeant"
@@ -119,7 +119,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/plasma/pistol
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=2, \
-	/obj/item/device/radio = 1)
+	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat)
 
 /datum/job/enclave_private
 	title = "Private"
@@ -176,4 +176,4 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/plasma
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \
-	/obj/item/device/radio = 1)
+	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat)
