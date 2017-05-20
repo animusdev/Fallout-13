@@ -14,7 +14,7 @@
 	response_help = "hugs"
 	response_disarm = "pushes aside"
 	response_harm = "slaps"
-	move_to_delay = 2
+	move_to_delay = 3
 	maxHealth = 75
 	health = 75
 	self_weight = 45

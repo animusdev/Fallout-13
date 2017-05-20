@@ -59,7 +59,7 @@
 		// Items
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival,
 		/obj/item/weapon/dice/d6,
-		/obj/item/weapon/deck,
+		/obj/item/toy/cards/deck,
 		/obj/item/weapon/storage/fancy/cigarettes,
 		/obj/item/weapon/storage/fancy/cigarettes/tortoise,
 		/obj/item/weapon/storage/box/matches,

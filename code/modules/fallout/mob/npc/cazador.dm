@@ -15,7 +15,7 @@
 	response_harm = "hits"
 	emote_taunt = list("gnashes")
 	taunt_chance = 30
-	move_to_delay = 1.3
+	move_to_delay = 1.5
 	maxHealth = 50
 	health = 50
 	aggro_vision_range = 10

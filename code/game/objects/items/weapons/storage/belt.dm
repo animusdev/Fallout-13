@@ -34,6 +34,11 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/device/radio,
 		/obj/item/clothing/gloves
+		/obj/item/weapon/lighter,
+		/obj/item/weapon/storage/fancy/cigarettes,
+		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/device/flashlight/pen,
+		/obj/item/weapon/kitchen
 		)
 
 /obj/item/weapon/storage/belt/utility/chief
