@@ -59,7 +59,7 @@
 	icon_state = "steampunk"
 	item_state = "glasses"
 	resistance_flags = ACID_PROOF
-	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 50, rad = 20, fire = 70)
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 50, rad = 20, fire = 70, acid = 100)
 
 //Augmented eye
 

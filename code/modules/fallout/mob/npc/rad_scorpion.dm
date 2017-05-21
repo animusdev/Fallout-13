@@ -30,7 +30,7 @@
 	melee_damage_upper = 20
 	environment_smash = 1
 	faction = list("hostile", "scorpion")
-	move_to_delay = 5
+	move_to_delay = 7
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	see_invisible = SEE_INVISIBLE_MINIMUM

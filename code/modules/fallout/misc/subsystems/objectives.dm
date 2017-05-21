@@ -45,10 +45,10 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(faction.objective))
 //			give_points(mind, O.points)
-			text += "\t<b>[faction.full_name]</b> <font color='#00FF00'>succes</font> [O.name] objective:<br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#00FF00'>successfully completed</font> [O.name] objective:<br>"
 			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 		else
-			text += "\t<b>[faction.full_name]</b> <font color='#FF0000'>fail</font> [O.name] objective:<br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#FF0000'>has failed to complete</font> [O.name] objective:<br>"
 			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 
 	text += "<h2>Individual Objectives Results:</h2>"
@@ -62,10 +62,10 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(mind.objective))
 			give_points(mind, O.points)
-			text += "\t<b>[mind]</b> <font color='#00FF00'>succes</font> [O.name] objective:<br>"
+			text += "\t<b>[mind]</b> <font color='#00FF00'>successfully completed</font> [O.name] objective:<br>"
 			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 		else
-			text += "\t<b>[mind]</b> <font color='#FF0000'>fail</font> [O.name] objective:<br>"
+			text += "\t<b>[mind]</b> <font color='#FF0000'>has failed to complete</font> [O.name] objective:<br>"
 			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 	to_chat(world, text)
 

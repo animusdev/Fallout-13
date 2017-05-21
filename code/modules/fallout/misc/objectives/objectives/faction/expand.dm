@@ -1,6 +1,8 @@
+//Fallout 13 - Veni, vidi, vici
+
 /datum/f13_objective/expand
-	name = "Expand"
-	desc = "Your faction must contain %target_size% alive members."
+	name = "Command and Conquer"
+	desc = "Your faction must contain %target_size% members who are all alive by the end of round."
 	points = 0
 	kind = FACTION
 	available_factions = list("city", "raiders")

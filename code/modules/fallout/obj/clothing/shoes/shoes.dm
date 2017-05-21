@@ -1,10 +1,5 @@
 //Fallout 13 shoes directory
 
-/obj/item/clothing/shoes/combat/light //I'm a ninja!
-	name = "light combat boots"
-	self_weight = 0.1
-	flags = NOSLIP | QUIETSTEPSOUND
-
 /obj/item/clothing/shoes/f13
 	icon = 'icons/fallout/clothing/shoes.dmi'
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
@@ -67,6 +62,12 @@
 	strip_delay = 40
 	resistance_flags = 0
 	self_weight = 1
+
+/obj/item/clothing/shoes/f13/military/light //I'm a ninja!
+	name = "advanced combat boots"
+	desc = "High speed, no drag combat boots designed for use by U.S. special forces before the Great War.<br>Soles were made of aerated rubber to silence the movement of a wearer."
+	self_weight = 0.5
+	flags = NOSLIP | QUIETSTEPSOUND
 
 /obj/item/clothing/shoes/f13/military/diesel
 	name = "male diesel boots"

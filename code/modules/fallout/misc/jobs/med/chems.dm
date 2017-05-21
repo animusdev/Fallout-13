@@ -1,16 +1,13 @@
 //Fallout 13 wasteland medicine directory
 
-/obj/item/weapon/reagent_containers/pill/patch/styptic
-	name = "brute patch"
-	desc = "Helps with brute injuries."
-	list_reagents = list("styptic_powder" = 60)
-	self_weight = 0.1
-
-/obj/item/weapon/reagent_containers/pill/patch/silver_sulf
-	name = "burn patch"
-	desc = "Helps with burn injuries."
-	list_reagents = list("silver_sulfadiazine" = 60)
-	self_weight = 0.1
+/obj/item/weapon/reagent_containers/pill/patch/healingpowder
+	name = "Healing powder"
+	desc = "A foul-smelling primitive healing medicine.<br>Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
+	list_reagents = list("omnizine" = 20)
+	icon = 'icons/fallout/objects/medicine/syringe.dmi'
+	item_state = "bandaid"
+	icon_state = "heal_powder"
+	self_weight = 0.05
 
 /obj/item/weapon/reagent_containers/pill/patch/stimpak
 	name = "Stimpak"
@@ -29,15 +26,6 @@
 	item_state = "syringe_15"
 	icon_state = "superstim_15"
 	self_weight = 0.1
-
-/obj/item/weapon/reagent_containers/pill/patch/healingpowder
-	name = "Healing powder"
-	desc = "A foul-smelling primitive healing medicine.<br>Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
-	list_reagents = list("omnizine" = 20)
-	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	item_state = "bandaid"
-	icon_state = "heal_powder"
-	self_weight = 0.05
 
 /obj/item/weapon/reagent_containers/pill/patch/radaway
 	name = "RadAway"

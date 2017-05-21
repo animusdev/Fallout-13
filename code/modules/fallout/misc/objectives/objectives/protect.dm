@@ -1,6 +1,8 @@
+//Fallout 13 - Come with me if you want to live
+
 /datum/f13_objective/protect
-	name = "Protect"
-	desc = "Save dis mothefucker"
+	name = "Adventure of a Bodyguard"
+	desc = "You know that someone important is in a great danger - save and protect this person whatever it takes!"
 	kind = BOTH
 	available_factions = list("city", "none", "brotherhood")
 

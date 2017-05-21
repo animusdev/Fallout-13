@@ -316,7 +316,7 @@ mob/proc/set_faction(var/faction)
 	name = "Acolytes"
 	color = "#204200"
 	id = "acolytes"
-	full_name = "Acolytes of Atom"
+	full_name = "Acolytes of the Atom"
 	description = "<b>Alignment: Chaotic Neutral</b><br>Have you ever met a bunch of crazed zealots willing to baptize you with radioactive waste?<br>These fanatics are likely to make it so, if you have a smooth skin - as they have all lost theirs decades ago.<br>They are faithful to their glorious God - the Great Atom, who brings salvation to all living.<br>They honor their faith, and are willing to do everything they can to please the Great Atom, and live eternal with a holy green glow."
 	preview_image = 'html/factions/acolytes.png'
 	head_status = "master_atom"

@@ -14,7 +14,7 @@
 	response_disarm = "pushes aside"
 	response_harm = "stomps"
 	environment_smash = 0
-	move_to_delay = 1.8
+	move_to_delay = 2
 	maxHealth = 15
 	health = 15
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB

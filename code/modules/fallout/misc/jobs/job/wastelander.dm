@@ -24,6 +24,8 @@
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/f13/rag
 
+//Adventurer
+
 /datum/job/adventurer
 	title = "Adventurer"
 	desc = "An offspring of wasteland wanderers.<br>Your life is a journey, and you are free to choose what kind of a journey it is."
@@ -73,6 +75,8 @@
 	uniform = /obj/item/clothing/under/f13/mercadv
 	shoes = /obj/item/clothing/shoes/f13/tan
 
+//Mercenary
+
 /datum/job/mercenary
 	title = "Mercenary"
 	desc = "A spawn of guns and bullets.<br>You know that peaceful ways, are not always the best ways.<br>Why waste time for diplomacy, when you can shoot bad guys and earn yourself a fortune."
@@ -107,6 +111,7 @@
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
 	/obj/item/clothing/head/helmet/f13/tribal,
 	/obj/item/clothing/head/helmet/f13/eyebot,
+	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/lighter/detonator
 	)
 

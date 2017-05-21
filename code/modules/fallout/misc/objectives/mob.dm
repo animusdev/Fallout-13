@@ -1,3 +1,5 @@
+//Fallout 13 objectives simulation
+
 /mob/proc/show_objectives(var/mob/user)
 	var/datum/f13_faction/F = get_faction_datum(social_faction)
 

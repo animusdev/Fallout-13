@@ -67,7 +67,7 @@
 	suit = null
 	head = /obj/item/clothing/head/f13/beaver
 
-// /obj/item/clothing/under/f13/female/flapper
+//Sheriff
 
 /datum/job/sheriff
 	title = "Sheriff"
@@ -92,6 +92,7 @@
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest,
 	/obj/item/clothing/suit/f13/duster,
+	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/ammo_box/magazine/internal/cylinder/m44
 	)
 
@@ -122,6 +123,8 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	back = /obj/item/weapon/gun/ballistic/shotgun
 
+//Citizen
+
 /datum/job/citizen
 	title = "Citizen"
 	flag = CITIZEN
@@ -145,7 +148,8 @@
 	/obj/item/clothing/under/f13/cowboyg,
 	/obj/item/clothing/under/f13/cowboyb,
 	/obj/item/clothing/suit/f13/cowboygvest,
-	/obj/item/clothing/suit/f13/cowboybvest
+	/obj/item/clothing/suit/f13/cowboybvest,
+	/obj/item/clothing/under/f13/female/flapper
 	)
 
 	denied_items = list(

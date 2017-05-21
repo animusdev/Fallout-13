@@ -29,7 +29,7 @@
 	item_color = "khan"
 	flags = THICKMATERIAL
 	body_parts_covered = LEGS
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0)
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
 	name = "war boy pants"
@@ -38,7 +38,7 @@
 	item_color = "warboy"
 	flags = THICKMATERIAL
 	body_parts_covered = LEGS
-	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 20)
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 20)
 
 /obj/item/clothing/under/pants/f13/doom
 	name = "green pants"
@@ -49,4 +49,4 @@
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
 	self_weight = 3
-	armor = list(melee = 60, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100)
+	armor = list(melee = 60, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)

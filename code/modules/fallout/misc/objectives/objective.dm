@@ -1,3 +1,5 @@
+//Fallout 13 dynamic quest system
+
 /datum/f13_objective
 	var
 		name = "Objective"
@@ -33,7 +35,7 @@
 			M.objective = holder
 			holders += holder
 
-			to_chat(M.current, "<span class='notice'>Your current objective: <b>[name]</b></span>")
+			to_chat(M.current, "<span class='notice'>Your current objective is: <b>[name]</b></span>")
 			to_chat(M.current, FormatText("\t<i>[desc]<i>", data))
 			if(data["custom_desc"])
 				to_chat(M.current, "\t[FormatText(data["custom_desc"],data)]")
@@ -43,7 +45,7 @@
 			F.objective = holder
 			holders += holder
 			for(var/member in F.members)
-				to_chat(member, "<span class='notice'>Your current <i>faction</i> objective: <b>[name]</b></span>")
+				to_chat(member, "<span class='notice'>Your current <i>faction</i> objective is: <b>[name]</b></span>")
 				to_chat(member, FormatText("\t<i>[desc]<i>", data))
 				if(data["custom_desc"])
 					to_chat(member, "\t[FormatText(data["custom_desc"],data)]")

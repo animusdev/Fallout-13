@@ -17,7 +17,7 @@
 	icon_state = "safari"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
-	armor = list(melee = 40, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0,fire = 30, acid = 0)
+	armor = list(melee = 40, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 30, acid = 0)
 
 /obj/item/clothing/head/f13/stormchaser
 	name = "stormchaser hat"
@@ -56,7 +56,7 @@
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
-/obj/item/clothing/head/f13/ncr
+/obj/item/clothing/head/f13/ncr_officer
 	name = "officer beret"
 	desc = "A soft round cap, usually of wool felt, with a flat crown that tilts to one side, used to identify officers of the New California Republic Army.<br>The beret seems to be camouflaged in various shades of green and brown, and has a cap badge of the NCR two-headed bear roaring up at a gold star."
 	icon_state = "officer"
@@ -112,7 +112,7 @@
 	icon_state = "detectivealt"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
-	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	self_weight = 1
 
 /obj/item/clothing/head/f13/trilby
@@ -126,7 +126,7 @@
 	desc = "The Yamato is loaded. And so am I."
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
-	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 
 //Fluff welding masks
 
@@ -136,11 +136,11 @@
 
 /obj/item/clothing/head/welding/f13/fire
 	name = "cremator welding helmet"
-	desc = "A welding helmet with burning flame painted over it.<br>It sure is creepy but nevertheless badass."
+	desc = "A welding helmet with burning flame painted over it.<br>It sure is creepy but also badass."
 	icon_state = "welding_fire"
 	item_state = "welding"
 	tint = 1
-	armor = list(melee = 20, bullet = 10, laser = 5, energy = 5, bomb = 5, bio = 0, rad = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 5, energy = 5, bomb = 5, bio = 0, rad = 0, fire = 30, acid = 0)
 
 /obj/item/clothing/head/welding/f13/japan
 	name = "nippon welding helmet"
@@ -148,4 +148,4 @@
 	icon_state = "welding_japan"
 	item_state = "welding"
 	tint = 1
-	armor = list(melee = 40, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, acid = 0)
+	armor = list(melee = 40, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 0)
