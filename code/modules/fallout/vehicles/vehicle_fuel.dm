@@ -76,7 +76,7 @@
 			if(25 to 60)
 				to_chat(user, "<span class='notice'>Fuel meter shows 50% ! That should be just enough to find more fuel.</span>	")
 			if(1 to 25)
-				to_chat(user, "<span class='warning'>Fuel meter shows 25% ! The fuel is almost over!</span>")
+				to_chat(user, "<span class='warning'>Fuel meter shows 25% ! It's almost out of fuel!</span>")
 			else
 				to_chat(user, "<span class='danger'>Fuel meter shows 0% ! There is no fuel left!</span>")
 
