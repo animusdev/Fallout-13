@@ -9,6 +9,8 @@
 	burst_size = 1
 	fire_delay = 0
 	actions_types = list()
+	mag_load_sound = 'sound/effects/wep_magazines/handgun_generic_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/handgun_generic_unload.ogg'
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/update_icon()
 	..()
