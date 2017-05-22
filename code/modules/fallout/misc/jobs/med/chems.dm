@@ -48,7 +48,7 @@
 /obj/item/weapon/reagent_containers/pill/patch/psycho
 	name = "Psycho"
 	desc = "Psycho will increase damage resistance, allowing subjects to survive hits more easily."
-	list_reagents = list("methamphetamine" = 10, "epinephrine" = 20, "inacusiate" = 5, "oculine" = 5)
+	list_reagents = list("methamphetamine" = 9, "epinephrine" = 20, "inacusiate" = 5, "oculine" = 5)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "psycho"
@@ -57,7 +57,7 @@
 /obj/item/weapon/reagent_containers/pill/patch/medx
 	name = "Med-X"
 	desc = "Med-X is a potent opiate analgesic that binds to opioid receptors in the brain and central nervous system, reducing the perception of pain as well as the emotional response to pain. Essentially, it is a painkiller delivered by a hypodermic needle."
-	list_reagents = list("methamphetamine" = 10, "krokodil" = 10, "styptic_powder" = 10, "silver_sulfadiazine" = 10)
+	list_reagents = list("methamphetamine" = 9, "krokodil" = 9, "styptic_powder" = 10, "silver_sulfadiazine" = 10)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
 	icon_state = "medx"
@@ -66,7 +66,7 @@
 /obj/item/weapon/reagent_containers/pill/patch/radx
 	name = "Rad-X"
 	desc = "Rad-X is an anti-radiation chemical that can significantly reduce the danger of irradiated areas."
-	list_reagents = list("potass_iodide" = 30, "pen_acid" = 10)
+	list_reagents = list("potass_iodide" = 30, "pen_acid" = 9)
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "radx"
 	item_state = "radx"
@@ -75,7 +75,7 @@
 /obj/item/weapon/reagent_containers/pill/patch/turbo
 	name = "Turbo"
 	desc = "Turbo appears as an inhaler of Jet hastily duct-taped to a can of 'HairStylez-brand hair spray. The effect of turbo is a brief slowdown of the surroundings (time goes at about 35% of its original speed), including everything from your enemies' movements, to projectile speeds (your own projectile speed included), and even the duration of the drug itself. However, you are not slowed down yourself - your own movement speed and fire rate will remain the same."
-	list_reagents = list("stimulants" = 10, "methamphetamine" = 10, "crank" = 10)
+	list_reagents = list("stimulants" = 10, "methamphetamine" = 9, "crank" = 9)
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "turbo"
 	item_state = "turbo"
