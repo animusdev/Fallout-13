@@ -180,7 +180,7 @@
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
-	throwforce = 50
+	throwforce = 35
 	throw_speed = 4
 	embedded_impact_pain_multiplier = 3
 	armour_penetration = 10
