@@ -404,7 +404,7 @@
 		one though."
 	icon_state = "default_human_l_arm"
 	attack_verb = list("slapped", "punched")
-	max_damage = 50
+	max_damage = 40
 	body_zone ="l_arm"
 	body_part = ARM_LEFT
 	held_index = 1
@@ -438,7 +438,7 @@
 		among humans missing their right arm."
 	icon_state = "default_human_r_arm"
 	attack_verb = list("slapped", "punched")
-	max_damage = 50
+	max_damage = 40
 	body_zone = "r_arm"
 	body_part = ARM_RIGHT
 	held_index = 2
@@ -472,7 +472,7 @@
 		luck. In this instance, it probably would not have helped."
 	icon_state = "default_human_l_leg"
 	attack_verb = list("kicked", "stomped")
-	max_damage = 50
+	max_damage = 40
 	body_zone = "l_leg"
 	body_part = LEG_LEFT
 	px_x = -2
@@ -510,7 +510,7 @@
 	// alternative spellings of 'pokey' are availible
 	icon_state = "default_human_r_leg"
 	attack_verb = list("kicked", "stomped")
-	max_damage = 50
+	max_damage = 40
 	body_zone = "r_leg"
 	body_part = LEG_RIGHT
 	px_x = 2
