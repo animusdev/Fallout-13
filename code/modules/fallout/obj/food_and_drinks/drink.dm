@@ -20,7 +20,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola/radioactive //Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive!
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
-	list_reagents = list("coffee" = 20, "radium" = 10)
+	list_reagents = list("coffee" = 25, "radium" = 5)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask
 	name = "metal flask"
