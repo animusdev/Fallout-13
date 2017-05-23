@@ -2,7 +2,7 @@
 
 **Website:** https://www.reddit.com/r/Fallout13
 
-**Main source code:** https://bitbucket.org/Jackerzz/fallout
+**Main source code:** https://bitbucket.org/Jackerzz/fallout-13/
 
 **Discord:** https://discord.gg/fECUGbv
 
