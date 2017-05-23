@@ -6,6 +6,23 @@
 
 **Discord:** https://discord.gg/fECUGbv
 
+##Terms of service
+
+A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under /tg/ Station 13 terms, and thus rendering your project closed-source would cause considerable sanctions on their behalf. Honestly, we tried it ourselves, it didn't work, and Byond administration officially disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
+
+**Please carefully read the following statement:**
+
+If you desire to host your own server based of Fallout 13 source code - you may not pretend to be an "Official Fallout 13" community.
+
+*The only Fallout 13 communities that are considered official at the moment are specified as:*
+
+1. [EN] Fallout 13 - Vault One
+2. [RU] Fallout 13 - CBET ATOMA
+
+**By our terms and conditions you we require any potential host to specify that they are an unofficial server in announcements and the Byond HUB.**
+
+Stated terms of service fully comply with the original AGPL v3 license of /tg/ Station 13, as long as this applies to the running server of unofficial community.
+
 ##Credits
 
 **Code:**
@@ -14,7 +31,7 @@ Jackerzz aka Maxyo, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Pahomlancer
 
 **Graphics / Sprites / Icons:**
 
-Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox.
+Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox.
 
 **Origins:**
 
@@ -48,7 +65,7 @@ http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip
 ##Disclaimer
 
 Note: This is not associated with Bethesda Softworks in any way! Fallout 13 is neither a trademark, nor a commercial product.
-2016 Bethesda Softworks LLC. Trademarks belong to their respective owners.
+2017 Bethesda Softworks LLC. Trademarks belong to their respective owners.
 
 ##LICENSE
 
