@@ -21,6 +21,13 @@
 	. = ..()
 	riding_datum = new datum_type()
 
+/obj/vehicle/fuel/motorcycle/relaymove(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(istype(H.wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
+			to_chat(user, "The [name] will not go, you are too heavy.")
+			return
+
 /obj/vehicle/fuel/motorcycle/post_buckle_mob(mob/living/M)
 	if(has_buckled_mobs())
 		add_overlay(cover)
