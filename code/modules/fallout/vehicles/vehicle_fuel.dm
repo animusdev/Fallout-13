@@ -38,7 +38,7 @@
 			visible_message("<span class='warning'>[src] is damaged badly, the engine blazes!</span>")
 			fuel_wasting += 2
 			PoolOrNew(/obj/effect/hotspot, get_turf(src))
-			if(prob(1)) //MOAR FIRE
+			if(prob(50)) //MOAR FIRE
 				dyn_explosion(epicenter = src, power = fuel_holder.reagents.get_reagent_amount("welding_fuel")/10, flash_range = 2, adminlog = 0, flame_range = 5 ,silent = 1)
 
 	fuel_holder.reagents.remove_reagent("welding_fuel",fuel_wasting)
