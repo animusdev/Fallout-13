@@ -27,6 +27,7 @@
 		if(istype(H.wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
 			to_chat(user, "The [name] will not go, you are too heavy.")
 			return
+	..()
 
 /obj/vehicle/fuel/motorcycle/post_buckle_mob(mob/living/M)
 	if(has_buckled_mobs())
