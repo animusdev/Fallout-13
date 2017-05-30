@@ -73,11 +73,11 @@
 
 	var/server
 	var/banappeals
-	var/wikiurl = "http://fallout-13.wikia.com/wiki/Fallout_13_Wikia" // Default wiki link.
+	var/wikiurl = "http://fallout-13.wikia.com/wiki/Fallout_13_Wikia" // default wiki
 	var/forumurl = "https://www.reddit.com/r/Fallout13/" //default forums
 	var/rulesurl = "http://www.tgstation13.org/wiki/Rules" // default rules
-	var/discord = "https://discordapp.com/invite/fECUGbv" //default github
-	var/bitbucket = "https://bitbucket.org/Jackerzz/fallout/issues?status=new&status=open"
+	var/discord = "https://discordapp.com/invite/fECUGbv" //default chat
+	var/bitbucket = "https://bitbucket.org/Jackerzz/fallout-13/issues/new" //default code
 
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0
