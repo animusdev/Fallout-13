@@ -6,7 +6,7 @@
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 	icon_state = "single"
 	tank_volume = 500
-	reagent_id = "mutagen"
+	reagent_id = "stablemutationtoxin"
 	self_weight = 200
 
 /obj/structure/reagent_dispensers/barrel/dangerous
@@ -86,6 +86,6 @@
 	desc = "An ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
 	icon_state = "four_b"
 	tank_volume = 800
-	reagent_id = "stablemutationtoxin"
+	reagent_id = "mutagen"
 	anchored = 1
 	self_weight = 60

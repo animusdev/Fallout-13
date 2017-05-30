@@ -74,7 +74,7 @@
 "bv" = (/obj/structure/fence,/turf/open/indestructible/ground/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
 "bw" = (/obj/structure/piano/pristine,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
 "bx" = (/obj/structure/chair/wood/modern{dir = 8},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
-"by" = (/obj/item/weapon/paper/crumpled{info = "\[center]\[large]KEBAB\[/large]\[/center]\[br]\[list]\[*]Kebab: \[small]100 kebab\[/small]\[br]\[*]Kebab Kebab: \[small]200 kebab\[/small]\[br]\[*]Remove Kebab: \[small]50 kebab\[/small]\[br]\[/list]"; name = "paper of kebab"},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
+"by" = (/obj/item/weapon/paper/crumpled{info = "<h2>KEBAB</h2><br><b>Kebab:</b> <i>100 kebab</i><br><b>Kebab Kebab:</b> <i>200 kebab</i><br><b>Remove Kebab:</b> <i>50 kebab</i>"; name = "paper of kebab"},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/secret)
 "bz" = (/obj/structure/simple_door/glass,/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
 "bA" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/secret)
 "bB" = (/obj/structure/window/fulltile/house/broken,/obj/structure/decoration/rag,/turf/open/floor/f13/wood,/area/f13/building)
