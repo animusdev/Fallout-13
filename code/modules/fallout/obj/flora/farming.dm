@@ -103,7 +103,7 @@
 	icon_dead = "shroom-dead"
 	icon_harvest = "shroom-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("charcoal" = 0.04, "nutriment" = 0.1, "mutagen" = 0.01, "zombiepowder" = 0.05)
+	reagents_add = list("charcoal" = 0.04, "nutriment" = 0.1, "vitamin" = 0.01, "radium" = 0.05)
 
 /obj/item/seeds/glow
 	name = "pack of glowing fungus seeds"

@@ -3,28 +3,37 @@
 /obj/item/weapon/reagent_containers/pill/patch/healingpowder
 	name = "Healing powder"
 	desc = "A foul-smelling primitive healing medicine.<br>Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
-	list_reagents = list("omnizine" = 20)
-	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	item_state = "bandaid"
+	list_reagents = list("omnizine" = 20, "salglu_solution" = 10)
+	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "heal_powder"
+	item_state = "bandaid"
 	self_weight = 0.05
 
 /obj/item/weapon/reagent_containers/pill/patch/stimpak
 	name = "Stimpak"
 	desc = "Stimpak, or stimulation delivery package, is a type of hand-held medication used for healing the body. This item consists of a syringe for containing and delivering the medication and a gauge for measuring the status of the stimpak's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds."
-	list_reagents = list("styptic_powder" = 30, "silver_sulfadiazine" = 30)
+	list_reagents = list("styptic_powder" = 20, "silver_sulfadiazine" = 20, "oxandrolone" = 5, "morphine" = 5)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
+	icon_state = "stim_15"
 	item_state = "syringe_15"
-	icon_state = "15"
 	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/supstimpak
 	name = "SuperStimpak"
 	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
-	list_reagents = list("styptic_powder" = 60, "silver_sulfadiazine" = 60)
+	list_reagents = list("styptic_powder" = 40, "silver_sulfadiazine" = 40, "oxandrolone" = 10, "morphine" = 10)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	item_state = "syringe_15"
 	icon_state = "superstim_15"
+	item_state = "syringe_15"
+	self_weight = 0.1
+
+/obj/item/weapon/reagent_containers/pill/patch/medx
+	name = "Med-X"
+	desc = "Med-X is a potent opiate analgesic that binds to opioid receptors in the brain and central nervous system, reducing the perception of pain as well as the emotional response to pain.<br>Essentially, it is a painkiller delivered by a hypodermic needle."
+	list_reagents = list("methamphetamine" = 9, "krokodil" = 9, "styptic_powder" = 10, "silver_sulfadiazine" = 10)
+	icon = 'icons/fallout/objects/medicine/syringe.dmi'
+	icon_state = "medx_15"
+	item_state = "syringe_15"
 	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/radaway
@@ -32,17 +41,17 @@
 	desc = "RadAway is an intravenous chemical solution that bonds with radiation particles and passes them through the body's system. It takes some time to work, and is also a potent diuretic."
 	list_reagents = list("charcoal" = 50)
 	icon = 'icons/fallout/objects/medicine/bloodpack.dmi'
-	item_state = "syringe_15"
 	icon_state = "radaway"
+	item_state = "syringe_15"
 	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/jet
 	name = "Jet"
 	desc = "Jet is a highly addictive drug first synthesized by Myron. It is extracted from brahmin dung fumes and administered via an inhaler."
-	list_reagents = list("stimulants" = 30, "crank" = 10)
-	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	item_state = "syringe_15"
+	list_reagents = list("stimulants" = 20, "crank" = 10)
+	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "jet"
+	item_state = "bandaid"
 	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/psycho
@@ -50,17 +59,8 @@
 	desc = "Psycho will increase damage resistance, allowing subjects to survive hits more easily."
 	list_reagents = list("methamphetamine" = 9, "epinephrine" = 20, "inacusiate" = 5, "oculine" = 5)
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	item_state = "syringe_15"
 	icon_state = "psycho"
-	self_weight = 0.1
-
-/obj/item/weapon/reagent_containers/pill/patch/medx
-	name = "Med-X"
-	desc = "Med-X is a potent opiate analgesic that binds to opioid receptors in the brain and central nervous system, reducing the perception of pain as well as the emotional response to pain. Essentially, it is a painkiller delivered by a hypodermic needle."
-	list_reagents = list("methamphetamine" = 9, "krokodil" = 9, "styptic_powder" = 10, "silver_sulfadiazine" = 10)
-	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	item_state = "syringe_15"
-	icon_state = "medx"
 	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/radx
@@ -69,7 +69,7 @@
 	list_reagents = list("potass_iodide" = 30, "pen_acid" = 9)
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "radx"
-	item_state = "radx"
+	item_state = "bandaid"
 	self_weight = 0.1
 
 /obj/item/weapon/reagent_containers/pill/patch/turbo

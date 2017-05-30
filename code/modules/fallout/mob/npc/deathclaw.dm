@@ -29,8 +29,8 @@
 	force_threshold = 15
 	faction = list("hostile", "deathclaw")
 	melee_damage_lower = 25
-	armour_penetration = 60
-	melee_damage_upper = 50
+	armour_penetration = 40
+	melee_damage_upper = 40
 	aggro_vision_range = 12
 	see_in_dark = 8
 	idle_vision_range = 7

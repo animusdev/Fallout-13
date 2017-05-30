@@ -1,28 +1,30 @@
 //Fallout 13 crafting recipes general directory
 
 //Weapons
+
 /datum/crafting_recipe/spear
 	name = "Spear"
 	result = /obj/item/weapon/twohanded/tribal_spear
 	reqs = list(/obj/item/crafting/duct_tape = 1,
-				/obj/item/weapon/kitchen/knife/combat = 1,
+				/obj/item/weapon/kitchen/knife = 1,
 				/obj/item/weapon/grown/log = 1)
-	time = 40
+	time = 200
 	category = CAT_WEAPON
 
 /datum/crafting_recipe/throwing_spear
 	name = "Throwing Spear"
 	result = /obj/item/weapon/spear
 	reqs = list(/obj/item/stack/sheet/metal = 1)
-	time = 600
+	time = 100
 	tools = list(/obj/item/weapon/weldingtool)
 	category = CAT_WEAPON
 
 //Misc
+
 /datum/crafting_recipe/satchel
 	name = "Satchel"
 	result = /obj/item/weapon/storage/backpack/satchel
-	time = 80
+	time = 150
 	reqs = list(/obj/item/stack/sheet/animalhide = 2,
 				/obj/item/crafting/duct_tape = 1,
 				/obj/item/crafting/wonderglue = 1)
@@ -31,7 +33,7 @@
 /datum/crafting_recipe/radio
 	name = "Radio"
 	result = /obj/item/device/radio
-	time = 1000
+	time = 500
 	reqs = list(/obj/item/crafting/diode = 2,
 				/obj/item/crafting/transistor = 1,
 				/obj/item/crafting/capacitor = 2,
@@ -46,10 +48,10 @@
 /datum/crafting_recipe/shoes
 	name = "Shoes"
 	result = /obj/item/clothing/shoes/f13/tan
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
+	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/crafting/wonderglue = 1)
 	tools = /obj/item/weapon/wirecutters
-	time = 120
+	time = 150
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/tribalclothing
@@ -58,7 +60,7 @@
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
 				/obj/item/crafting/wonderglue = 1)
 	tools = /obj/item/weapon/wirecutters
-	time = 120
+	time = 100
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/tribalarmor
@@ -67,7 +69,7 @@
 	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/crafting/duct_tape = 1)
 	tools = /obj/item/weapon/wirecutters
-	time = 120
+	time = 150
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/leatherarmor
@@ -77,7 +79,7 @@
 				/obj/item/crafting/duct_tape = 1,
 				/obj/item/crafting/wonderglue = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
-	time = 120
+	time = 200
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/chestplate
@@ -88,26 +90,40 @@
 				/obj/item/stack/sheet/metal = 3,,
 				/obj/item/crafting/wonderglue = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
-	time = 120
+	time = 100
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/metalarmor
 	name = "Metal Armor"
-	result = /obj/item/clothing/suit/armor/f13/bmetalarmor
+	result = /obj/item/clothing/suit/armor/f13/metalarmor
 	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/stack/sheet/metal = 5,
 				/obj/item/crafting/duct_tape = 2,
 				/obj/item/crafting/wonderglue = 3)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
-	time = 120
+	time = 200
 	category = CAT_PRIMAL
 
-//Med
+/datum/crafting_recipe/bmetalarmor
+	name = "Black Metal Armor"
+	result = /obj/item/clothing/suit/armor/f13/bmetalarmor
+	reqs = list(/obj/item/clothing/suit/armor/f13/metalarmor = 1,
+				/obj/item/stack/sheet/animalhide = 2,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 200
+	category = CAT_PRIMAL
+
+//Chems
+
 /datum/crafting_recipe/healingpowder
 	name = "Healing Powder"
 	result = /obj/item/weapon/reagent_containers/pill/patch/healingpowder
-	time = 20
+	time = 50
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
 	category = CAT_MISC
@@ -119,17 +135,26 @@
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1,
 				/obj/item/crafting/wonderglue = 1)
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
-	time = 60
+	time = 50
 	category = CAT_MISC
 
 /datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"
 	result = /obj/item/weapon/reagent_containers/pill/patch/supstimpak
-	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak = 1,
-				/obj/item/stack/sheet/animalhide = 1,
-				/obj/item/stack/cable_coil = 5,
-				/obj/item/crafting/wonderglue = 2,
+	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 2,
+				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 2,
+				/obj/item/crafting/wonderglue = 2)
+	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
+	time = 100
+	category = CAT_MISC
+
+/datum/crafting_recipe/turbo
+	name = "Turbo"
+	result = /obj/item/weapon/reagent_containers/pill/patch/turbo
+	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/jet = 1,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/turpentine = 1,
 				/obj/item/crafting/abraxo = 1)
-	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/wirecutters)
-	time = 90
+	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
+	time = 100
 	category = CAT_MISC

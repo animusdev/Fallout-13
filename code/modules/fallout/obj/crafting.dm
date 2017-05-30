@@ -109,12 +109,7 @@
 	name = "duct tape"
 	desc = "A pinnacle of engineering - it fixes everything!"
 	icon_state = "duct_tape"
-/*
-/obj/item/crafting/duck_tape
-	name = "duck tape"
-	desc = "A pinnacle of engineering - it fixes everything! Quack!"
-	icon_state = "duck_tape"
-*/
+
 /obj/item/crafting/wonderglue
 	name = "wonder glue"
 	desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
