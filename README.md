@@ -4,7 +4,7 @@
 
 **Main source code:** https://bitbucket.org/Jackerzz/fallout-13/
 
-**Discord:** https://discord.gg/fECUGbv
+**Discord:** https://discord.gg/K2Yxxvs
 
 ##Terms of service
 
@@ -31,7 +31,7 @@ Jackerzz aka Maxyo, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Pahomlancer
 
 **Graphics / Sprites / Icons:**
 
-Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox.
+Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox.
 
 **Origins:**
 
