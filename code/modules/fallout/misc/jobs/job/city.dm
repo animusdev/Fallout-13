@@ -129,7 +129,7 @@
 	title = "Citizen"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "A City dweller.<br>You live a better life than most of Wastelanders will ever have."
+	desc = "A City dweller.<br>You live a better life than most Wastelanders will ever have."
 	faction = "city"
 	status = "member"
 	total_positions = 10

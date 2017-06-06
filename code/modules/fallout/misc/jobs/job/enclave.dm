@@ -2,7 +2,7 @@
 
 /datum/job/colonel
 	title = "Colonel"
-	desc = "An actual American patriot.<br>You live by the principle that Main Goal is more important, than means of achieving it."
+	desc = "An actual American patriot.<br>You live by the principle that the Main Goal is more important than the means of achieving it."
 	flag = COLONEL
 	department_head = list("Enclave command HQ")
 	department_flag = MEDSCI
@@ -63,7 +63,7 @@
 
 /datum/job/enclave_sergeant
 	title = "Sergeant"
-	desc = "A loyal soldier.<br>You trust your commander, and orders from above - it's just about time to make America great again!"
+	desc = "A loyal soldier.<br>You trust your commander and orders from above - it's just about time to make America great again!"
 	flag = ENCLAVE_SERGEANT
 	department_head = list("colonel")
 	department_flag = MEDSCI

@@ -88,7 +88,7 @@ mob/proc/set_status(var/status)
 	set category = "Faction"
 	if(status == "none")
 		return
-	if(alert("You are sure?",,"Yes","No")=="No")
+	if(alert("Are you sure you want to leave?",,"Yes","No")=="No")
 		return
 	set_status("none")
 
@@ -100,11 +100,11 @@ mob/proc/set_status(var/status)
 		return
 	if(M.status == status)
 		return
-	if(alert(M, "[src] invite you to be [status]?",,"Yes","No")=="No")
-		to_chat(src, "<span class='warning'>[M.name] refused your suggestion.</span>")
+	if(alert(M, "[src] invites you to be [status].",,"Yes","No")=="No")
+		to_chat(src, "<span class='warning'>[M.name] refused your invite.</span>")
 		return
 	else
-		to_chat(src, "<span class='notice'>[M.name] accepted your suggestion.</span>")
+		to_chat(src, "<span class='notice'>[M.name] accepted your invite.</span>")
 	var/datum/status/S = get_status_datum(status)
 	if(S && S.change_faction && M.social_faction != src.social_faction)
 		M.set_faction(src.social_faction)

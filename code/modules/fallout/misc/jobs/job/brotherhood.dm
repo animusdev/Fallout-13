@@ -2,7 +2,7 @@
 
 /datum/job/elder
 	title = "Elder"
-	desc = "A source of wisdom.<br>You are the one, who shall fulfill the destiny."
+	desc = "A source of wisdom.<br>You are the one who shall fulfill destiny."
 	flag = ELDER
 	department_head = list("Brotherhood of Steel command HQ")
 	department_flag = ENGSEC
@@ -64,7 +64,7 @@
 
 /datum/job/paladin
 	title = "Paladin"
-	desc = "A guardian, the keeper of peace.<br>You are the one, who shall protect others."
+	desc = "A guardian, the keeper of peace.<br>You are the one who shall protect others."
 	flag = PALADIN
 	department_head = list("elder")
 	department_flag = ENGSEC
@@ -126,7 +126,7 @@
 
 /datum/job/knight
 	title = "Knight"
-	desc = "Bringer of the light.<br>You are the one, who shall bring justice."
+	desc = "Bringer of the light.<br>You are the one who shall bring justice."
 	flag = KNIGHT
 	department_head = list("elder", "paladin")
 	department_flag = ENGSEC

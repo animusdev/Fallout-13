@@ -6,7 +6,7 @@
 
 /obj/item/clothing/under/f13/navy
 	name = "navy jumpsuit"
-	desc = "Pre-War navy military standard uniform."
+	desc = "Pre-War standard naval uniform."
 	icon_state = "navy"
 	item_state = "bl_suit"
 	item_color = "navy"
@@ -16,7 +16,7 @@
 
 /obj/item/clothing/under/f13/navyofficer
 	name = "navy officer jumpsuit"
-	desc = "Pre-War navy military standard uniform for ranked officers."
+	desc = "Pre-War standard naval uniform for ranked officers."
 	icon_state = "navyofficer"
 	item_state = "bl_suit"
 	item_color = "navyofficer"
@@ -26,7 +26,7 @@
 
 /obj/item/clothing/under/f13/machinist
 	name = "workman outfit"
-	desc = "Apparel of an old-time machinist."
+	desc = "The apparel of an old-time machinist."
 	icon_state = "machinist"
 	item_state = "lb_suit"
 	item_color = "machinist"
@@ -34,7 +34,7 @@
 
 /obj/item/clothing/under/f13/lumberjack
 	name = "lumberjack outfit"
-	desc = "Apparel of an old-time lumberjack."
+	desc = "The apparel of an old-time lumberjack."
 	icon_state = "lumberjack"
 	item_state = "r_suit"
 	item_color = "lumberjack"
@@ -76,7 +76,7 @@
 
 /obj/item/clothing/under/f13/female/flapper
 	name = "flapper dress"
-	desc = "An outfit commonly worn by old-time prostitutes from around New Reno, but can be seen all over the wasteland."
+	desc = "An outfit commonly worn by old-time prostitutes from around New Reno. Can be found all over the Wasteland."
 	icon_state = "flapper"
 	item_state = "gy_suit"
 	item_color = "flapper"
@@ -107,7 +107,7 @@
 
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
-	desc = "Perfect outfit for a brave and reckless space cowboy. Shiny!"
+	desc = "The perfect outfit for a brave and reckless space cowboy. Shiny!"
 	icon_state = "shiny"
 	item_state = "owl"
 	item_color = "shiny"
@@ -158,7 +158,7 @@
 
 /obj/item/clothing/under/f13/bodyguard
 	name = "bodyguard outfit"
-	desc = "A grimy pre-War slacks, tie, and a dress shirt with some makeshift pauldrons made of scrap metal attached with leather straps."
+	desc = "A grimy pair of pre-War slacks, tie, and a dress shirt with some makeshift pauldrons made of scrap metal attached with leather straps."
 	icon_state = "bodyguard"
 	item_state = "sl_suit"
 	item_color = "bodyguard"

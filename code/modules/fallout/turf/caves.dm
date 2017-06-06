@@ -92,7 +92,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 		if(last_act+P.digspeed > world.time)//prevents message spam
 			return
 		last_act = world.time
-		user << "<span class='notice'>You start picking...</span>"
+		user << "<span class='notice'>You start mining...</span>"
 		P.playDigSound()
 
 		if(do_after(user,P.digspeed, target = src))
@@ -499,7 +499,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 		add_overlay(I)
 		activated_image = I
 		name = "gibtonite deposit"
-		desc = "An active gibtonite reserve. Run!"
+		desc = "An active gibtonite reserve. RUN!"
 		stage = 1
 		visible_message("<span class='danger'>There was gibtonite inside! It's going to explode!</span>")
 		var/turf/bombturf = get_turf(src)

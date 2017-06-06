@@ -11,7 +11,7 @@
 	var/fuel = 300
 	light_color = LIGHT_COLOR_FIRE
 	var/burned = 0
-	desc = "A warm, bright and hopeful fire source - when it's burning of course."
+	desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 
 	icon = 'icons/fallout/objects/structures/campfire.dmi'
 	icon_state = "campfire20"
@@ -22,7 +22,7 @@
 
 /obj/structure/campfire/attackby(obj/item/P, mob/user, params)
 	if(burned)
-		to_chat(user, "You remove campfire ashes.")
+		to_chat(user, "You remove some campfire ashes.")
 		qdel(src)
 		return
 	if(P.is_hot())
@@ -30,7 +30,7 @@
 	else if(istype(P, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/W = P
 		if(fuel > 400)
-			to_chat(user, "You can't add more fuel - wait till some of it burns away!")
+			to_chat(user, "You can't add more fuel - wait until some of it burns away!")
 			return
 		if(W.use(1))
 			user.visible_message("[user] has added fuel to [src].", "<span class='notice'>You have added fuel to [src].</span>")
@@ -89,7 +89,7 @@
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
 	START_PROCESSING(SSobj, src)
 	fired = 1
-	desc = "Burning campfire... A warm, bright and hopeful fire source.<br><b>It's hot!</b>"
+	desc = "A burning campfire... A warm, bright, and hopeful fire source.<br><b>It's hot!</b>"
 	if(user)
 		user.visible_message("[user] has lit a [src].", "<span class='notice'>You have lit a [src].</span>")
 	update_icon()
