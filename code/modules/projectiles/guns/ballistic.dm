@@ -158,10 +158,11 @@
 		update_icon()
 
 /obj/item/weapon/gun/ballistic/attack_hand(mob/living/user)
-	if(magazine)//God this is so fucking dirty, but Shotguns and Revolvers still have magazines for some fucking reason. I'll fix it later - Matt
-		if(!istype(src,/obj/item/weapon/gun/ballistic/shotgun) && !istype(src,/obj/item/weapon/gun/ballistic/revolver))
-			if(user.get_inactive_held_item() == src)
-				unload_ammo(user)
+	if(magazine)//Yes I know this means you can't switch hands holding a gun. Working on it - Matt
+		if(user.get_inactive_held_item() == src)
+			unload_ammo(user)
+		else 
+			..()
 	else
 		..()
 
