@@ -10,7 +10,7 @@
 	var/turf/turf_source = get_turf(source)
 	var/volume
 	var/distance
-	var/range = world.view + extrarange
+	var/range = (world.view + extrarange) 
  	// Looping through the player list has the added bonus of working for mobs inside containers
 	for (var/P in player_list)
 		var/mob/M = P
@@ -18,7 +18,7 @@
 			continue
 		var/turf/T = get_turf(M)
 		distance = get_dist(T, turf_source)
-		if(distance <= range)
+		if(distance <= (range * 2))
 			if(T && T.z == turf_source.z)
 				volume = vol * (1 - distance/range) * M.client.prefs.sounds_volume
 				M.playsound_local(turf_source, soundin, volume, vary, frequency, falloff, surround)
