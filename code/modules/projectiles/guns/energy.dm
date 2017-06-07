@@ -78,20 +78,31 @@
 		to_chat(user, "<span class='notice'>You load a new power cell into \the [src].</span>")
 		update_icon()
 
-/obj/item/weapon/gun/energy/attack_self(mob/living/user as mob)
+/obj/item/weapon/gun/energy/attack_self(mob/living/user)
 /*
 	if(ammo_instances.len > 1)
 		select_fire(user)
 		update_icon()
 */
 	if(power_supply)
+		unload_ammo(user)
+	else
+		to_chat(user, "<span class='warning'>There is no battery.</span>")
+
+/obj/item/weapon/gun/energy/proc/unload_ammo(mob/living/user)
+	if(power_supply)
 		power_supply.forceMove(get_turf(src.loc))
 		user.put_in_hands(power_supply)
 		power_supply = null
 		update_icon()
 		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+
+/obj/item/weapon/gun/energy/attack_hand(mob/living/user)
+	if(user.get_inactive_held_item() == src)
+		unload_ammo(user)
 	else
-		to_chat(user, "<span class='warning'>There is no battery.</span>")
+		..()
+
 
 /obj/item/weapon/gun/energy/can_shoot()
 	var/obj/item/ammo_casing/energy/shot = ammo_instances[select]
