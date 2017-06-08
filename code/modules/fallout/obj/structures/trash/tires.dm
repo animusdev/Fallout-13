@@ -20,7 +20,7 @@
 
 /obj/structure/tires/two
 	name = "couple of tires"
-	desc = "A ring-shaped vehicle components that cover the wheel's rim to protect it and enable better vehicle performance."
+	desc = "Ring-shaped vehicle components that cover the wheels' rims to protect them and enable better vehicle performance."
 	icon_state = "two_t"
 	max_integrity = 100
 	obj_integrity = 100
@@ -29,7 +29,7 @@
 
 /obj/structure/tires/five
 	name = "pile of tires"
-	desc = "Five tires stacked over each other in an orderly fashion.<br>Is the car shop nearby or something?"
+	desc = "Five tires stacked on top of each other in an orderly fashion.<br>Is the car shop nearby or something?"
 	icon_state = "five_t"
 	obj_integrity = 250
 	max_integrity = 250

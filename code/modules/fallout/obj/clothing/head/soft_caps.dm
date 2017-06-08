@@ -6,7 +6,7 @@
 
 /obj/item/clothing/head/soft/f13/baseball
 	name = "baseball cap"
-	desc = "A type of soft cap with a rounded crown and a stiff peak projecting in front."
+	desc = "A type of soft cap with a rounded crown and a stiff peak projecting out the front."
 	icon_state = "baseball"
 	item_color = "baseball"
 	flags_inv = HIDEHAIR

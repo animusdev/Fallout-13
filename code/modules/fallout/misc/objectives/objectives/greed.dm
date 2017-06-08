@@ -2,7 +2,7 @@
 
 /datum/f13_objective/greed
 	name = "Fear and Loathing in Wasteland"
-	desc = "Your family home has shattered, the promising business went down the drain, and on top of it - you're totally out of money.<br>You have to collect %count% caps to get your life back together."
+	desc = "Your family home has shattered, the promising business went down the drain, and you're totally out of money.<br>You have to collect %count% caps to get your life back together."
 	kind = INDIVIDUAL
 
 	assignto_mind(datum/mind/M, var/list/data = list())

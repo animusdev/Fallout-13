@@ -5,7 +5,7 @@
 
 /obj/item/clothing/head/helmet/f13/broken
 	name = "broken power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it has ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
+	desc = "This power armor helmet is so decrepit and battle-worn that it has ceased its primary function of protecting the wearer from harm.<br>It can still provide some very basic protection."
 	icon_state = "broken"
 	item_state = "broken"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -17,7 +17,7 @@
 
 /obj/item/clothing/head/helmet/f13/tribal
 	name = "tribal power helmet"
-	desc = "This power armor helmet was salvaged by the savages from the battlefield.<br>They believe that helmet captures the spirit of the fallen warrior, so they painted some runes on, to give it a more sacred meaning."
+	desc = "This power armor helmet was salvaged by savages from the battlefield.<br>They believe that these helmets capture the spirits of their fallen wearers, so they painted some runes on to give it a more sacred meaning."
 	icon_state = "tribal"
 	item_state = "tribal"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -41,7 +41,7 @@
 
 /obj/item/clothing/head/helmet/f13/firefighter
 	name = "firefighter helmet"
-	desc = "A firefighter's helmet worn on top of a fire-retardant covering and broken gas mask.<br>It heavily smells with sweat."
+	desc = "A firefighter's helmet worn on top of a fire-retardant covering and broken gas mask.<br>It smells heavily of sweat."
 	icon_state = "firefighter"
 	item_state = "firefighter"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -58,7 +58,7 @@
 
 /obj/item/clothing/head/helmet/f13/supaflyhelmet
 	name = "supa-fly raider helmet"
-	desc = "A makeshift raider helmet, made of leather.<br>It heavily smells with chems and sweat."
+	desc = "A makeshift raider helmet, made of leather.<br>It smells heavily of chems and sweat."
 	icon_state = "supafly"
 	item_state = "supafly"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -70,7 +70,7 @@
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
-	desc = "Long time ago, it has belonged to a football player, now it belongs to wasteland."
+	desc = "A long time ago, this belonged to a football player. Now it belongs to the Wasteland."
 	icon_state = "yankee"
 	item_state = "yankee"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -131,7 +131,7 @@
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"
-	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass produced\" look to it, as it is issued to all NCR soldiers and MPs."
+	desc = "A two-tone helmet designed to provide basic head protection for troopers.<br>It has a very rough \"mass-produced\" look to it, as it is issued to all NCR soldiers and MPs."
 	icon_state = "trooper"
 	item_state = "trooper"
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 10)
@@ -143,7 +143,7 @@
 
 /obj/item/clothing/head/helmet/f13/ranger
 	name = "ranger helmet"
-	desc = "An old military helmet with a built in nightvision device, commonly worn by NCR Veteran Rangers."
+	desc = "An old military helmet with a built-in night vision device, commonly worn by NCR Veteran Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 80, fire = 50, acid = 20)
@@ -178,7 +178,7 @@
 
 /obj/item/clothing/head/helmet/f13/ranger/old
 	name = "old ranger helmet"
-	desc = "An old military helmet, commonly worn by Desert Rangers, that went through the fire and flames, saving a single life in a heavy bloodshed.<br>This particular helmet has a \"Forgive me mama\" insciption on the side."
+	desc = "An old military helmet, commonly worn by Desert Rangers, that went through the fire and the flames, saving a single life amongst heavy bloodshed.<br>This particular helmet has a \"Forgive me mama\" inscription on the side."
 	icon_state = "oldranger"
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 30, acid = 10)
@@ -186,7 +186,7 @@
 
 /obj/item/clothing/head/helmet/f13/legrecruit
 	name = "recruit helmet"
-	desc = "A Legion recruit helmet, that's made of fine molerat leather. Or was it gecko leather? I think this other guy from Legion had a helmet made of brahmin leather..."
+	desc = "A Legion recruit helmet, made of fine molerat leather. Or was it gecko leather? Come to think of it, that other guy from Legion had a helmet made of brahmin leather..."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 10)
@@ -197,7 +197,7 @@
 
 /obj/item/clothing/head/helmet/f13/legvexil
 	name = "vexillarius hat"
-	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
+	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -208,7 +208,7 @@
 
 /obj/item/clothing/head/helmet/f13/legdecan
 	name = "decanus helmet"
-	desc = "A Legion decanus helmet, it's made of tanned leather and decorated with feathers."
+	desc = "A Legion decanus helmet, made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
 	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -219,7 +219,7 @@
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles.
 	name = "decanus helmet"
-	desc = "A Legion decanus helmet, it's made of tanned leather.<br>This one has particularly spiky feathers..."
+	desc = "A Legion decanus helmet, made of tanned leather and decorated with feathers.<br>This one has particularly spiky feathers..."
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
 	flags = HEADCOVERSEYES
@@ -227,7 +227,7 @@
 
 /obj/item/clothing/head/helmet/f13/legcenturion
 	name = "centurion helmet"
-	desc = "A metal helmet commonly worn by Caesar's Legion ranked officer - the Centurion."
+	desc = "A metal helmet commonly worn by the Centurion, a ranked officer of Caesar's Legion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 30, fire = 30, acid = 30)
@@ -238,7 +238,7 @@
 
 /obj/item/clothing/head/helmet/f13/leglegate
 	name = "legate helmet"
-	desc = "A metal helmet destined to adorn the head of Caesar's Legion ranked officer - the Legate."
+	desc = "A metal helmet destined to adorn the head of the Legate, a ranked officer of Caesar's Legion."
 	icon_state = "leglegate"
 	item_state = "leglegate"
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 40, fire = 50, acid = 20)
@@ -251,7 +251,7 @@
 
 /obj/item/clothing/head/f13/strange
 	name = "strange helmet"
-	desc = "That's a very strange metal helmet...<br>I want to believe."
+	desc = "A very strange metal helmet...<br>You want to believe."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "strange"
 	item_state = "helmet"
@@ -268,7 +268,7 @@
 
 /obj/item/clothing/head/helmet/f13/doom
 	name = "marine helmet"
-	desc = "A helmet made of an unknown alloy.<br>You feel like this helmet would allow you to survive through Hell on Earth, or on Mars, it doesn't matter..."
+	desc = "A helmet made of an unknown alloy.<br>You feel like this helmet would allow you to survive through Hell on Earth... er, Mars."
 	icon_state = "doom"
 	item_state = "doom"
 	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
@@ -280,7 +280,7 @@
 
 /obj/item/clothing/head/helmet/f13/magneto
 	name = "magneto's helmet"
-	desc = "This helmet helps to resist all but the strongest or most unexpected of telepathic attacks.<br>This is achieved due to technology wired into the helmet itself."
+	desc = "This helmet allows its wearer to resist all but the strongest or most unexpected telepathic attacks.<br>This is achieved due to technology wired into the helmet itself."
 	icon_state = "magneto"
 	item_state = "magneto"
 	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100, fire = 30, acid = 100)
@@ -318,7 +318,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/badmin
 	name = "advanced mark III power helmet"
-	desc = "A group of Enclave mad scientists lead by Administrator Badmin, have spent a decade working on the super weapon you see in front of you."
+	desc = "A group of Enclave mad scientists lead by Administrator Badmin have spent a decade working on the incredible creation you see in front of you."
 	icon_state = "badmin"
 	item_state = "badmin"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -357,7 +357,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/shocktrooper
 	name = "shocktrooper power helmet"
-	desc = "A 'black devil' power armor helmet used exclusively by the Enclave military forces, developed after the Great War, and the destruction of the Enclave Oil Rig in 2241.<br>It looks badass."
+	desc = "A 'black devil' power armor helmet used exclusively by Enclave military forces, developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>You can't lie, it looks pretty badass."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -396,7 +396,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced
 	name = "advanced mark II power helmet"
-	desc = "An advanced power armor mark II helmet - an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>It looks rather threatening."
+	desc = "An improved model of advanced power armor used exclusively by Enclave military forces, developed after the Great War.<br>It looks rather threatening."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -435,7 +435,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/tesla
 	name = "tesla power helmet"
-	desc = "An advanced power armor mark I helmet, typically used by the Enclave.<br>There are three orange energy capacitors on the side."
+	desc = "A helmet typically used by the Enclave.<br>There are three orange energy capacitors on the side."
 	icon_state = "tesla"
 	item_state = "tesla"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -474,7 +474,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced mark I power helmet"
-	desc = "An advanced power armor mark I helmet, typically used by the Enclave.<br>It looks somewhat threatening."
+	desc = "A helmet typically used by the Enclave.<br>It looks somewhat threatening."
 	icon_state = "advanced"
 	item_state = "advanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -513,7 +513,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t60
 	name = "T-60 power helmet"
-	desc = "An old pre-War power armor helmet.<br>It's comfy inside of it."
+	desc = "An old pre-War power armor helmet.<br>It's very comfy."
 	icon_state = "t60helmet"
 	item_state = "t60helmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -531,7 +531,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t51b
 	name = "T-51b power helmet"
-	desc = "An old pre-War power armor helmet.<br>It's comfy inside of it."
+	desc = "An old pre-War power armor helmet.<br>It's very comfy."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -549,7 +549,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
-	desc = "An old pre-War power armor helmet.<br>It's pretty hot inside of it."
+	desc = "An old pre-War power armor helmet.<br>The inside is stuffy and hot."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -565,7 +565,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "salvaged power helmet"
-	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers.<br>It's damn hot inside of it."
+	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers.<br>The inside is aggravatingly stuffy and hot."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -593,14 +593,20 @@
 	self_weight = 5
 
 /obj/item/clothing/head/helmet/knight/blue
+	name = "blue medieval helmet"
+	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted blue."
 	icon_state = "knight_blue"
 	item_state = "knight_blue"
 
 /obj/item/clothing/head/helmet/knight/yellow
+	name = "yellow medieval helmet"
+	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted yellow."
 	icon_state = "knight_yellow"
 	item_state = "knight_yellow"
 
 /obj/item/clothing/head/helmet/knight/red
+	name = "red medieval helmet"
+	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted red."
 	icon_state = "knight_red"
 	item_state = "knight_red"
 
@@ -612,13 +618,13 @@
 
 /obj/item/clothing/head/helmet/knight/f13/metal
 	name = "metal helmet"
-	desc = "A metal helmet forged in fire, specially for the strongest warriors of the wasteland."
+	desc = "A metal helmet forged in fire. Specially designed for the strongest warriors of the Wasteland."
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 
 /obj/item/clothing/head/helmet/knight/f13/rider
 	name = "rider helmet" //Not raider. Rider.
-	desc = "A fancy dark metal helmet with orange spray painted flames."
+	desc = "A fancy dark metal helmet with orange spray-painted flames."
 	icon_state = "rider"
 	item_state = "rider"
 	self_weight = 1

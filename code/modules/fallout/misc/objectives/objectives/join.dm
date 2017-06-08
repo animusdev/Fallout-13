@@ -2,7 +2,7 @@
 
 /datum/f13_objective/join
 	name = "Goal of a Lifetime"
-	desc = "Since childhood you dreamt of joining the %faction_name% to unite in a fight for better future, now you have finally decided to actually do it.<br>Find and join the %faction_name% !"
+	desc = "Since childhood you've dreamed of joining the %faction_name% to unite in the fight for a better future. Now you have finally decided to go through with it.<br>Find and join the %faction_name%!"
 	points = 0
 	kind = INDIVIDUAL
 

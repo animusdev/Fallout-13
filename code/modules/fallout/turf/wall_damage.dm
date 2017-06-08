@@ -48,5 +48,5 @@
 			take_damage(W.force/4)
 			playsound(src, 'sound/effects/bang.ogg', 50, 1)
 		else
-			to_chat(user, text("<span class='notice'>You punch wall with [W].</span>"))
+			to_chat(user, text("<span class='notice'>You punch the wall with [W].</span>"))
 			playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)

@@ -2,7 +2,7 @@
 
 /datum/job/general
 	title = "General"
-	desc = "A fate of civilization lays on your shoulders.<br>You were chosen to write history anew.<br>Make a two-headed bear proud."
+	desc = "The fate of civilization rests on your shoulders.<br>You were chosen to write history anew.<br>Make a two-headed bear proud."
 	flag = GENERAL
 	department_head = list("NCR Command HQ")
 	department_flag = WASTELAND
@@ -61,7 +61,7 @@
 
 /datum/job/ncr_sergeant
 	title = "Sergeant"
-	desc = "You have to remind Troopers to speak only when spoken to, and the first and last words out of their filthy sewers will be \"Sir\"."
+	desc = "You have to remind Troopers to speak only when spoken to, and that the first and last words out of their filthy sewers will be \"Sir\"."
 	flag = NCR_SERGEANT
 	department_head = list("general")
 	department_flag = WASTELAND
@@ -122,7 +122,7 @@
 
 /datum/job/vranger
 	title = "Veteran Ranger"
-	desc = "You are a shadow, no one can hear you coming - and if they see you, they know things have got serious."
+	desc = "You are a shadow. No one can hear you coming - and if they see you, they know they're a goner."
 	flag = RANGER
 	department_head = list("NCR Command HQ")
 	department_flag = WASTELAND

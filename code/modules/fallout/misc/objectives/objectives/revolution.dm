@@ -1,8 +1,8 @@
 //Fallout 13 - Hasta siempre, Comandante
 
 /datum/f13_objective/revolution
-	name = "Viva La Revolution"
-	desc = "A time has come to change the world!<br>Take control over your faction and become a %status_name%."
+	name = "Viva La Revolucion"
+	desc = "The time has come to change the world!<br>Take control of your faction and become a %status_name%."
 	points = 0
 	kind = INDIVIDUAL
 

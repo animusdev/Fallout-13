@@ -2,7 +2,7 @@
 
 /datum/job/legate
 	title = "Legate"
-	desc = "Caesar's will is the will of the Legion.<br>The Legate is a hand of a Caesar!<br>Veni, vidi, vici!"
+	desc = "Caesar's will is the will of the Legion.<br>The Legate is the hand of Caesar!<br>Veni, vidi, vici!"
 	flag = LEGLEGAT
 	department_head = list("Caesar")
 	department_flag = WASTELAND
@@ -64,7 +64,7 @@
 
 /datum/job/centurion
 	title = "Centurion"
-	desc = "We are the Legion - a one is many.<br>The Centurion is a guardian of a Caesar!<br>Ab uno disce omnes!"
+	desc = "We are the Legion - one is many.<br>The Centurion is a guardian of Caesar!<br>Ab uno disce omnes!"
 	flag = LEGCENTURION
 	department_head = list("legate")
 	department_flag = WASTELAND
@@ -123,7 +123,7 @@
 
 /datum/job/vex
 	title = "Vexillarius"
-	desc = "Mortal actions never deceive the gods.<br>The Vexillarius is an ambassador of a Caesar!<br>Acta deos numquam mortalia fallunt!"
+	desc = "Mortal actions never deceive the gods.<br>The Vexillarius is an ambassador of Caesar!<br>Acta deos numquam mortalia fallunt!"
 	flag = LEGVEX
 	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
@@ -182,7 +182,7 @@
 
 /datum/job/decan
 	title = "Decanus"
-	desc = "Boldness is our wall, action is our shield.<br>The Decanus is a weapon of a Caesar!<br>Audacia pro muro et scuto opus!"
+	desc = "Boldness is our wall, action is our shield.<br>The Decanus is a weapon of Caesar!<br>Audacia pro muro et scuto opus!"
 	flag = LEGDECAN
 	department_head = list("legate", "centurion")
 	department_flag = WASTELAND
@@ -241,7 +241,7 @@
 
 /datum/job/prime
 	title = "Prime"
-	desc = "Victory favors the bravery.<br>The Prime is servant of a Caesar!<br>Ad victoriam!"
+	desc = "Victory favors bravery.<br>The Prime is a servant of Caesar!<br>Ad victoriam!"
 	flag = PRIME
 	department_head = list("Centurion")
 	department_flag = WASTELAND

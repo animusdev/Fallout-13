@@ -1,8 +1,8 @@
 //Fallout 13 - We work in the dark, to serve the light. We are Assassins.
 
 /datum/f13_objective/assassinate
-	name = "Assassins Creed"
-	desc = "You were hired by a secret society to get rid of a specific person."
+	name = "Assassins' Creed"
+	desc = "You were hired by a secret society to make a specific person vanish."
 	kind = BOTH
 
 	check_mob(mob/living/carbon/human/H)
@@ -31,7 +31,7 @@
 			CRASH("Same minds for assassinate objective")
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Your target is <b>%target%</b> as <b>%target_rank%</b>"
+		data["custom_desc"] = "Your target is <b>%target%</b>, the <b>%target_rank%</b>"
 		..()
 
 	assignto_faction(datum/f13_faction/F, var/list/data = list())
@@ -42,7 +42,7 @@
 		var/datum/mind/target = mob.mind
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Your target is <b>%target%</b> as <b>%target_rank%</b>"
+		data["custom_desc"] = "Your target is <b>%target%</b>, the <b>%target_rank%</b>"
 		..()
 
 	check_complete(var/datum/objective_holder/holder)
