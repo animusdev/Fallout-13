@@ -4,7 +4,7 @@
 
 **Main source code:** https://bitbucket.org/Jackerzz/fallout-13/
 
-**Discord:** https://discord.gg/K2Yxxvs
+**Discord:**  https://discord.me/fallout13official
 
 ##Terms of service
 
@@ -27,7 +27,7 @@ Stated terms of service fully comply with the original AGPL v3 license of /tg/ S
 
 **Code:**
 
-Jackerzz aka Maxyo, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please.
+Jackerzz aka Maxyo, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please.
 
 **Graphics / Sprites / Icons:**
 
