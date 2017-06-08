@@ -2,7 +2,7 @@
 
 /obj/item/stack/caps
 	name = "caps"
-	desc = "Post-apocalyptic money."
+	desc = "Post appocalyptic money."
 	singular_name = "cap"
 	icon = 'icons/fallout/objects/bottlecaps.dmi'
 	icon_state = "1"

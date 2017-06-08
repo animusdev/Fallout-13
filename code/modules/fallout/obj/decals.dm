@@ -2,7 +2,7 @@
 
 /obj/effect/decal/cleanable/waste
 	name = "puddle of goo"
-	desc = "A puddle of sticky, incredibly toxic and likely radioactive green goo.<br>This is extremely dangerous."
+	desc = "A puddle of sticky, incredibly toxic and likely radioactive green goo."
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "goo1"
 	anchored = 1
@@ -22,7 +22,7 @@
 
 /obj/effect/decal/marking
 	name = "road marking"
-	desc = "Road surface markings were used on paved roadways to provide guidance and information to drivers and pedestrians.<br>Nowadays, those wandering the Wasteland commonly use them as directional landmarks."
+	desc = "Road surface markings were used on paved roadways to provide guidance and information to drivers and pedestrians."
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "singlevertical" //See decals.dmi for different icon states of road markings.
 	anchored = 1

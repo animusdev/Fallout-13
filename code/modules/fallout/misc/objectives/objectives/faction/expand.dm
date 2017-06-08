@@ -2,7 +2,7 @@
 
 /datum/f13_objective/expand
 	name = "Command and Conquer"
-	desc = "Your faction must contain %target_size% living members by the end of round."
+	desc = "Your faction must contain %target_size% members who are all alive by the end of round."
 	points = 0
 	kind = FACTION
 	available_factions = list("city", "raiders")

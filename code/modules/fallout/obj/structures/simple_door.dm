@@ -208,7 +208,7 @@
 
 /obj/structure/simple_door/metal/barred
 	name = "barred door"
-	desc = "Bars. No matter which side you're on, aren't you always behind them?"
+	desc = "Bars. No matter which side we're on, aren't we always behind them?"
 	icon_state = "barred"
 	door_type = "barred"
 	open_sound = "sound/f13machines/doorchainlink_open.ogg"
@@ -217,7 +217,7 @@
 
 /obj/structure/simple_door/metal/ventilation
 	name = "ventilation system"
-	desc = "As you take a closer look, you notice a handle and a small access hatch on the bottom."
+	desc = "As you take a closer look, you notice a handle at the bottom of ventilation system access hatch."
 	icon_state = "ventilation"
 	door_type = "ventilation"
 	open_sound = "sound/f13machines/doorhidden_open.ogg"
@@ -244,7 +244,7 @@
 
 /obj/structure/simple_door/blast
 	name = "blast door"
-	desc = "A type of door designed to be especially reliable and durable."
+	desc = "A blast door, alternatively referred to as a shielded door or safety door, is a type of door designed to be especially reliable and durable."
 	icon_state = "blastdoor"
 	door_type = "blastdoor"
 	material_type = /obj/item/stack/sheet/plasteel
@@ -257,7 +257,7 @@
 
 /obj/structure/simple_door/bunker
 	name = "airlock"
-	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motors.<br>This particular door looks like a pre-War military model."
+	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunker"
 	door_type = "bunker"
 	material_type = /obj/item/stack/sheet/metal
@@ -267,7 +267,7 @@
 	hard_open = 0
 
 /obj/structure/simple_door/bunker/glass
-	desc = "An olive green painted airlock, with a semi-transparent glass window.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motors.<br>This particular door looks like a pre-War military model."
+	desc = "An olive green painted airlock, with semi-transparent glass window.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunkerglass"
 	door_type = "bunkerglass"
 	explosion_block = 4 //A glass window in it, reduces the resistance, am I right?

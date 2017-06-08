@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/cazador
 	name = "cazador"
-	desc = "A big, ugly flying thing."
+	desc = "A big and ugly flying thing."
 	icon_state = "cazador"
 	icon_living = "cazador"
 	icon_gib = "gib"

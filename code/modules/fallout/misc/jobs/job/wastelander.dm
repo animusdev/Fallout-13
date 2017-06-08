@@ -4,7 +4,7 @@
 	title = "Settler"
 	flag = SETTLER
 	department_flag = WASTELAND
-	desc = "A true child of the Wasteland.<br>In the Wasteland you were born, in the Wasteland lies your grave."
+	desc = "A true child of wasteland.<br>In badlands you are born, in badlands lays your grave."
 	faction = "none"
 	status = "none"
 	total_positions = -1
@@ -28,7 +28,7 @@
 
 /datum/job/adventurer
 	title = "Adventurer"
-	desc = "An offspring of Wasteland wanderers.<br>Your life is a journey, and you are free to choose what kind of a journey it will be."
+	desc = "An offspring of wasteland wanderers.<br>Your life is a journey, and you are free to choose what kind of a journey it is."
 	flag = ADVENTURER
 	department_flag = WASTELAND
 	faction = "none" //desert faction shall disable appearing as scavenger after readying
@@ -79,7 +79,7 @@
 
 /datum/job/mercenary
 	title = "Mercenary"
-	desc = "A spawn of guns and bullets.<br>You know that peace is not always applicable.<br>Why waste time on diplomacy when you can shoot things and earn yourself a fortune?"
+	desc = "A spawn of guns and bullets.<br>You know that peaceful ways, are not always the best ways.<br>Why waste time for diplomacy, when you can shoot bad guys and earn yourself a fortune."
 	flag = MERCENARY
 	department_flag = MEDSCI
 	faction = "none"

@@ -16,14 +16,14 @@
 //The following items are in "crafting" type just to keep code clean.
 /obj/item/crafting
 	name = "Shitspawn"
-	desc = "If you see this, take a screenshot and tell the admins - someone's been spawning shit in."
+	desc = "Why it's here?!<br>Badmins spawn shit!<br>Tell someone about it."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	item_state = "null"
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/crafting/diode
 	name = "diode"
-	desc = "Upon closer inspection, you realize that this l ooks like something out of a broken television set.<br>It's probably also used in some other types of electronic devices."
+	desc = "It looks like something I saw in that useless broken television set once.<br>That thing is probably used in some electronic devices."
 	icon_state = "diode_1"
 /obj/item/crafting/diode/initialize()
 	..()
@@ -31,7 +31,7 @@
 
 /obj/item/crafting/transistor
 	name = "transistor"
-	desc = "Popov would love it, but Tesla needs to see it.<br>The most useful electrical component."
+	desc = "Popov would love it, but Tesla got to see it.<br>The most useful electrical component."
 	icon_state = "transistor_1"
 /obj/item/crafting/transistor/initialize()
 	..()
@@ -39,7 +39,7 @@
 
 /obj/item/crafting/capacitor
 	name = "capacitor"
-	desc = "Upon closer inspection, you realize that this looks like something out of a radio.<br>It's probably also used in other devices that accept basic electrical components."
+	desc = "It looks like something I saw inside of the radio once.<br>It seems like it's the most basic electrical component."
 	icon_state = "capacitor_1"
 /obj/item/crafting/capacitor/initialize()
 	..()
@@ -47,7 +47,7 @@
 
 /obj/item/crafting/fuse
 	name = "fuse"
-	desc = "A tiny glass tube with some wiring stuck inside of it.<br>You wouldn't know how to use this."
+	desc = "A tiny glass tube with some wiring stuck inside of it.<br>I have no idea what it is."
 	icon_state = "fuse_1"
 /obj/item/crafting/furse/initialize()
 	..()
@@ -63,7 +63,7 @@
 
 /obj/item/crafting/switch
 	name = "switch"
-	desc = "A common switch, used to light up a flashlight or activate a bomb timer."
+	desc = "A common switch, used to light up the flashlight or activate a bomb timer." //Why i code it?
 	icon_state = "switch_1"
 /obj/item/crafting/switch/initialize()
 	..()
@@ -79,7 +79,7 @@
 
 /obj/item/crafting/board
 	name = "empty circuit board"
-	desc = "A plastic board used to hold electrical components together.<br>There are no components installed; it's empty."
+	desc = "A plastic board used to hold all other electrical components together."
 	icon_state = "board_1"
 /obj/item/crafting/board/initialize()
 	..()
@@ -87,7 +87,7 @@
 
 /obj/item/crafting/buzzer
 	name = "buzzer"
-	desc = "You think you hear it buzzing, but you realize it's just tinnitus. You must be getting old."
+	desc = "I can almost hear it buzzing. Except it's not."
 	icon_state = "buzzer"
 
 /obj/item/crafting/frame
@@ -112,7 +112,7 @@
 
 /obj/item/crafting/wonderglue
 	name = "wonder glue"
-	desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>The glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
+	desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
 	icon_state = "wonderglue1"
 
 /obj/item/crafting/wonderglue/initialize()
@@ -121,7 +121,7 @@
 
 /obj/item/crafting/turpentine
 	name = "turpentine"
-	desc = "A flammable liquid distilled from pine resin. Used as a solvent."
+	desc = "A flammable liquid distilled from pine resin, used as a solvent."
 	icon_state = "turpentine"
 
 /obj/item/crafting/abraxo
@@ -131,7 +131,7 @@
 
 /obj/item/crafting/reloader
 	name = "cartrige reloader"
-	desc = "This device allows you to hand-load your own gun rounds using certain raw materials."
+	desc = "This device allows to hand-load your own gun rounds using certain raw materials."
 	icon_state = "reloader"
 
 /obj/item/crafting/igniter
@@ -141,7 +141,7 @@
 
 /obj/item/crafting/timer
 	name = "timer"
-	desc = "Used to time things. Works well with contraptions which need to count down.<br>Tick tock."
+	desc = "Used to time things. Works well with contraptions which has to count down. Tick tock."
 	icon_state = "timer"
 
 /obj/item/crafting/sensor

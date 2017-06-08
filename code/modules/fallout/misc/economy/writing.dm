@@ -42,7 +42,7 @@
 
 /obj/item/weapon/pen/blue/quill
 	name = "quill"
-	desc = "A fine brown feather with a golden tip, for writing with ink.<br><i>It has fresh blue ink on the tip. How can that be?</i>"
+	desc = "It's a finest brown feather with a golden tip, for writing with ink.<br><i>It has a fresh blue ink on the tip. How can it be?</i>"
 	icon_state = "quill"
 
 /obj/item/weapon/pen/red
@@ -76,7 +76,7 @@
 			colour = "blue"
 		else
 			colour = "black"
-	to_chat(user, "<span class='notice'>\The [src] will now use [colour] ink.</span>")
+	to_chat(user, "<span class='notice'>\The [src] will now write in [colour].</span>")
 	desc = "It's a fancy four-color ink pen, set to [colour]."
 
 /obj/item/weapon/pen/attack(mob/living/M, mob/user,stealth)
@@ -167,7 +167,7 @@
 
 /obj/item/weapon/pen/pencil
 	name = "pencil"
-	desc = "The most cheap, simple, yet effective writing tool."
+	desc = "The most cheap and simple, yet effective writing tool."
 	icon_state = "pencil-y"
 	colour = "grey"
 

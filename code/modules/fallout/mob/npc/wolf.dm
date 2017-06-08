@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/wolf
 	name = "feral dog"
-	desc = "The dogs that survived the Great War have mutated into a larger, tougher breed.<br>This one seems to be severely malnourished and its eyes are blood red."
+	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>This one seems to be severely malnourished and its eyes are bloody red."
 	icon_state = "dog_angry"
 	icon_living = "dog_angry"
 	icon_dead = "dog_dead"
@@ -38,7 +38,7 @@
 
 /mob/living/simple_animal/hostile/wolf/alpha
 	name = "alpha feral dog"
-	desc = "The dogs that survived the Great War have mutated into a larger, tougher breed.<br>Wait... This one's a wolf!"
+	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>Oh wait... It is a wolf!"
 	icon_state = "wolf_angry"
 	icon_living = "wolf_angry"
 	icon_dead = "wolf_dead"

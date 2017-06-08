@@ -2,7 +2,7 @@
 
 /obj/vehicle/fuel
 	name = "vehicle"
-	desc = "Something went wrong! Badmins spawned shit!"
+	desc = "Something went wrong! Badmins spawn shit!"
 	icon_state = ""
 
 	var/fuel = 500
@@ -35,7 +35,7 @@
 	var/health = (obj_integrity/max_integrity)
 	if(health < 1)
 		if(health < 0.5 && fuel > 100 && prob(10)) // If vehicle is broken it will burn
-			visible_message("<span class='warning'>[src] is badly damaged, the engine has burst into flames!</span>")
+			visible_message("<span class='warning'>[src] is damaged badly, the engine blazes!</span>")
 			fuel_wasting += 2
 			PoolOrNew(/obj/effect/hotspot, get_turf(src))
 			if(prob(50)) //MOAR FIRE
@@ -48,7 +48,7 @@
 
 /obj/vehicle/fuel/start_engine()
 	if(fuel_holder.reagents.get_reagent_amount("welding_fuel") < 1)
-		to_chat(usr, "<span class='warning'>[src] has run out of fuel!</span>")
+		to_chat(usr, "<span class='warning'>[src] has ran out of fuel!</span>")
 		return
 	..()
 	START_PROCESSING(SSobj, src)
@@ -70,15 +70,15 @@
 		var/fuel_percent = fuel_holder.reagents.total_volume / fuel_holder.reagents.maximum_volume * 100
 		switch(fuel_percent)
 			if(95 to INFINITY)
-				to_chat(user, "<span class='notice'>Fuel meter shows 100%. The fuel tank is full to the top. Let's ride!</span>")
+				to_chat(user, "<span class='notice'>Fuel meter shows 100% ! The fuel tank is full to the top. Let's ride!</span>")
 			if(60 to 95)
-				to_chat(user, "<span class='notice'>Fuel meter shows 75%. Not so full, but it'll still last a while.</span>")
+				to_chat(user, "<span class='notice'>Fuel meter shows 75% ! A fuel tank is not so full. It's still quite a lot.</span>")
 			if(25 to 60)
-				to_chat(user, "<span class='notice'>Fuel meter shows 50%. That should be just enough to find more fuel.</span>	")
+				to_chat(user, "<span class='notice'>Fuel meter shows 50% ! That should be just enough to find more fuel.</span>	")
 			if(1 to 25)
-				to_chat(user, "<span class='warning'>Fuel meter shows 25%. It's almost out of fuel!</span>")
+				to_chat(user, "<span class='warning'>Fuel meter shows 25% ! It's almost out of fuel!</span>")
 			else
-				to_chat(user, "<span class='danger'>Fuel meter shows 0%. There is no fuel left!</span>")
+				to_chat(user, "<span class='danger'>Fuel meter shows 0% ! There is no fuel left!</span>")
 
 
 

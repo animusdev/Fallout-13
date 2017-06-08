@@ -9,7 +9,7 @@
 	brightness = 4
 	active_power_usage = 50
 	density = 0
-	desc = "The glow of the sign tempts you to buy a drink..."
+	desc = "The glow of this sign encourages me to buy a drink in the bar... Tempting..."
 	light_color = LIGHT_COLOR_BLUE
 	light_type = null
 

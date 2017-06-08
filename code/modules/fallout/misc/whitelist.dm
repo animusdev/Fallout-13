@@ -24,7 +24,7 @@
 	set name = "Add Player To Whitelist"
 	nickname = ckey(nickname)
 	if(nickname in config.whitelist)
-		to_chat(usr, "That player is already on the whitelist.")
+		to_chat(usr, "Player already in whitelist")
 		return
 	config.whitelist += nickname
 
@@ -33,7 +33,7 @@
 	set name = "Remove Player From Whitelist"
 	nickname = ckey(nickname)
 	if(!(nickname in config.whitelist))
-		to_chat(usr, "That player is not on the whitelist.")
+		to_chat(usr, "No player in whitelist")
 		return
 	config.whitelist -= nickname
 
@@ -47,6 +47,6 @@
 	set category = "Admin"
 	set name = "Whitelist Toggle"
 	config.whitelist_on = !config.whitelist_on
-	to_chat(usr, "The whitelist is now [config.whitelist_on ? "on" : "off"]")
+	to_chat(usr, "Whitelist now is [config.whitelist_on ? "on" : "off"]")
 
 #undef WHITELISTFILE

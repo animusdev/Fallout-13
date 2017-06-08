@@ -2,7 +2,7 @@
 
 /obj/structure/closet/fridge
 	name = "fridge"
-	desc = "An old, pre-War refrigerator.<br>Despite being covered in rust and making noises straight out of a horror film, it still keeps your Nuka-Cola cold."
+	desc = "An old, pre-War refrigerator.<br>While being covered in rust and making blood-chilling noises, it still keeps your Nuka-Cola cold."
 	icon_state = "fridge"
 
 /obj/structure/closet/fridge/standard/New()
@@ -27,7 +27,7 @@
 		new /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human(src)
 
 /obj/structure/closet/crate/freezer
-	desc = "An old, rusted freezer.<br>Despite going through a nuclear holocaust, it's somehow still good at keeping things cold."
+	desc = "An old, rusted freezer, still good at keeping things cold though."
 	name = "freezer"
 	icon_state = "freezer"
 

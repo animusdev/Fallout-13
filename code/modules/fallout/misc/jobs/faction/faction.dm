@@ -31,7 +31,7 @@ proc/get_faction_members(var/faction)
 
 	var/welcome_text = "" //Showing text on faction joining
 	var/color = "#171717"
-	var/description = "<b>Alignment: Chaotic Badmin</b><br>Something's wrong!<br><i>Badmins spawned shit and the Factions engine has broken.</i>"
+	var/description = "<b>Alignment: Chaotic Badmin</b><br>Something's wrong!<br><i>Badmins spawn shit and factions engine has broken.</i>"
 	var/preview_image = 'html/factions/neutral.png'
 
 	var/head_status = null //Main status at this faction. Currently using for leader voting
@@ -76,11 +76,11 @@ mob/proc/begin_head_voting()
 		return 0
 
 	if(F.voting)
-		to_chat(src, "<span class='warning'>A vote has started for a new faction leader.</span>")
+		to_chat(src, "<span class='warning'>Voting is going on.</span>")
 		return 0
 
 	if(src.status == F.head_status)
-		to_chat(src, "<span class='notice'>You are already [F.head_status].</span>")
+		to_chat(src, "<span class='notice'>You already [F.head_status].</span>")
 		return 0
 
 	if(alert("Are you sure?",,"Yes","No")=="No")
@@ -101,7 +101,7 @@ mob/proc/begin_head_voting()
 		if(M in view())
 			correct_candidates += M
 	if(all_head_candidates.len/2 > correct_candidates.len)
-		to_chat(src, "<span class='warning'>To start a vote, you need more active members of your faction to be present.</span>")
+		to_chat(src, "<span class='warning'>To start a vote, you need more active members of your faction to be present at the moment.</span>")
 		return 0
 	//VOTE BEGIN
 
@@ -117,13 +117,13 @@ mob/proc/begin_head_voting()
 		spawn(0)
 			var/choice = input(M,"Make a choice") in correct_candidates
 			if(choice == M)
-				M.say(pick("I'm voting for myself", "I'm gonna be the new [F.head_status]!", "No one but myself is worthy."))
+				M.say(pick("I'm voting for myself", "I'm gonna be the new [F.head_status]!", "No one other but myself is worthy."))
 			else
 				if(prob(1))
 					if(prob(50))
 						M.say("TRUMP FOREVER! MAKE WASTELAND GREAT AGAIN!!!")
 					else
-						M.say("PUTIN IS THE BEST! BOBAH YPA - 3OBET MOCKBA!!!")
+						M.say("PUTIN THE BEST! BOBAH YPA - 3OBET MOCKBA!!!")
 					sleep(20)
 					M.say("I changed my mind...")
 				M.say(pick("I vote for [choice].", "[choice] - I choose you!!!", "I choose [choice] to be [F.head_status].", "I believe [choice] is worthy to be our leader."))
@@ -154,7 +154,7 @@ mob/proc/begin_head_voting()
 			F.voting = 0
 			return 0
 	if(favorite == src)
-		say("I think I'm a new [F.head_status] now")
+		say("I think, I'm a new [F.head_status] now")
 	else
 		say("[favorite] is a new [F.head_status]")
 
@@ -193,7 +193,7 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/neutral
 	name = "Neutral"
 	full_name = "Independent Wastelanders"
-	description = "<b>Alignment: True Neutral</b><br>Wastelanders - A catch-all term for anyone living in the Wasteland who is not affiliated with any other group.<br>They live off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, bands of roaming Raider gangs, and slavers.<br><i>Home, home on the wastes...</i>"
+	description = "<b>Alignment: True Neutral</b><br>Wastelanders - is a catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
 	id = "none"
 
 /datum/f13_faction/city
@@ -203,7 +203,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
 	full_name = "City Dwellers"
-	description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - A group of Wastelanders that have holed up in the town to wait out the worst and hope for the best.<br>As the City evolved, its citizens became different from the rest of the Wasteland dwellers - they value the safety of a city, prefer better food and clothing, and mostly trust the elected Mayor - even if the decisions they make are not the best.<br><i>In Mayor We Trust!</i>"
+	description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - is a group of wastelanders, that have holed up in the town to wait worst things out and hope for the best.<br>As City evolved, its citizens became different from the rest of wasteland dwellers - they value the safety of a city, give preference to better food and clothing, and mostly trust the elect Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
 	area = /area/f13/city
 	verbs = list(/mob/proc/begin_head_voting)
@@ -215,7 +215,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "gangleader"
 	preview_image = 'html/factions/raider.png'
 	full_name = "Raider Gang"
-	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - Any group of Wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
+	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - are any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/raiders
 
@@ -224,7 +224,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "vault"
 	full_name = "Vault-Tec Corporation"
-	description = "<b>Alignment: True Neutral</b><br>The Vault-Tec Corporation - A former company contracted by the United States government before the Great War to design and produce the Vault system, a vast network of complex fallout and research shelters.<br>When the bombs fell, thousands of carefully-selected Vault dwellers were sealed within the safe confinement of the Vaults, and their lucky descendants have (mostly) lived to the present day."
+	description = "<b>Alignment: True Neutral</b><br>The Vault-Tec Corporation, or simply the VTC - was a company contracted by the United States government before the Great War to design and produce the vault system, a vast network of complex bomb and research shelters.<br>When the bombs fell, thousands of carefully selected Vault dwellers, were sealed within the safe confinements of the Vaults, and their lucky descendants have lived to our days."
 	preview_image = 'html/factions/vault.png'
 	head_status = "overseer"
 	flags = HAVE_FREQ
@@ -237,7 +237,7 @@ mob/proc/set_faction(var/faction)
 	color = "#00215a"
 	id = "bs"
 	full_name = "Brotherhood of Steel"
-	description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel - A quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>Brotherhood members rely heavily on subordination and a strict Code of Conduct.<br><i>The Steel Endures!</i>"
+	description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel, or simply the Brotherhood - is a quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on strict subordination and Code of Conduct.<br><i>The Steel Endures!</i>"
 	preview_image = 'html/factions/brotherhood.png'
 	head_status = "elder"
 	flags = HAVE_FREQ
@@ -249,7 +249,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "enclave"
 	full_name = "Enclave"
-	description = "<b>Alignment: Lawful Evil</b><br>The Enclave - A secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government. They claim to be the legally-sanctioned continuation of the United States, while also styling themselves and their overall demeanor as such.<br>Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
+	description = "<b>Alignment: Lawful Evil</b><br>The Enclave - is a secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government, and claims to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>The Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
 	preview_image = 'html/factions/enclave.png'
 	head_status = "colonel"
 	flags = HAVE_FREQ
@@ -261,7 +261,7 @@ mob/proc/set_faction(var/faction)
 	color = "#005A20"
 	id = "ahs"
 	full_name = "Adepts of Hubology Studies"
-	description = "<b>Alignment: Neutral Good</b><br>The Adepts of Hubology Studies, or simply Hubologists - A religious sect that originated as a cult founded before the Great War by a man known as Dick 'The Hub' Hubbell.<br>Hubology as a religion promotes the idea that humans are plagued by the spirits of the dead, causing neurodynes to form.<br>The degree to which a member has devoted his or her time, efforts, and caps to Hubology accords him or her a numerical rank."
+	description = "<b>Alignment: Neutral Good</b><br>The Adepts of Hubology Studies, or simply Hubologists - are a religious sect that originated as a cult founded before the Great War by a man known as Dick Hubbell aka The Hub.<br>Hubology as a religion promotes the idea that humans are plagued by the spirits of the dead, causing neurodynes to form.<br>The degree to which a member has devoted his or her time, efforts and caps to Hubology accords him or her a numerical rank."
 	preview_image = 'html/factions/ahs.png'
 	head_status = "ahs8"
 	area = /area/f13/ahs
@@ -273,22 +273,22 @@ mob/proc/set_faction(var/faction)
 	color = "#020080"
 	flags = HAVE_FREQ | HAVE_FLAG
 	full_name = "New California Republic"
-	description = "<b>Alignment: Lawful Good</b><br>The New California Republic (NCR) - A large, democratic federation with a massive population based in California, with holdings in other States.<br>The NCR emphasizes and claims to support a myriad of old world values, such as democracy, personal liberty, and the rule of law.<br>It also strives to restore general order to the Wasteland through improvements to and development of infrastructure and economic systems, as well as basic common peace between people."
+	description = "<b>Alignment: Lawful Good</b><br>The New California Republic, or simply the NCR - is a large, democratic federation with massive population based in California, with holdings in other States.<br>The NCR emphasizes and claims to support a myriad of old world values, such as: democracy, personal liberty, and the rule of law.<br>It also strives to restore general order to the wasteland - the improvement and development of infrastructure along with economic systems, and a basic common peace between the people."
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/ncr
-	welcome_text = "Your current objectives:<br>\
-1. As an NCR soldier you must uphold the law around the town, exterminate any raiders you see, and seek and destroy the Legion members.<br>\
-2. As an NCR soldier you must protect the innocent from the horrors of the Wasteland.<br>\
-3. Your survival is important - you are important to the NCR and we can't afford to lose you!<br>"
+	welcome_text = "Your current objectives are:<br>\
+1. As an NCR soldier you must uphold the law around the town, exterminate any raiders you see, seek and destroy the Legion members.<br>\
+2. As an NCR soldier you must protect the innocent wastelanders from the horrors of the wasteland.<br>\
+3. Take your survival as your main goal after protecting the citizens - you are important to the NCR and we can't afford to lose you!<br>"
 //	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key)
 
 /datum/f13_faction/legion
 	name = "Legion"
 	head_status = "legate"
 	full_name = "Caesar's Legion"
-	description = "<b>Alignment: Lawful Evil</b><br>Caesar's Legion - An autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well-organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy of roles.<br><i>Ave Caesar!</i>"
+	description = "<b>Alignment: Lawful Evil</b><br>Caesar's Legion, or simply the Legion - is an autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy or division of roles.<br><i>Ave Caesar!</i>"
 	preview_image = 'html/factions/legion.png'
 	id = "legion"
 	color = "#C24D44"
@@ -299,14 +299,14 @@ mob/proc/set_faction(var/faction)
 	welcome_text = "Your current objectives:<br>\
 	1. As a member of the Legion you must obey all orders given by anyone outranking you.<br>\
 	2. You must enslave the occupants of the wasteland, and suppress any resistance unless they can't be overpowered.<br>\
-	3. As a Legion solider you will torture and kill any NCR member you come across. Fight to your death in the name of Caesar!"
+	3. As a Legion solider you will torture and kill any NCR member you come across, fight to your death in a name of Caesar!"
 
 /datum/f13_faction/followers
 	name = "Followers"
 	color = "#005A20"
 	id = "followers"
-	full_name = "Followers of the Apocalypse"
-	description = "<b>Alignment: Neutral Good</b><br>The Followers of the Apocalypse - A post-War organization whose goal is to tend to the inhabitants of the Wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single leader, but instead a handful of independent leaders for each group."
+	full_name = "Followers of Appocalypse"
+	description = "<b>Alignment: Neutral Good</b><br>The Followers of the Apocalypse, or simply the Followers - is a post-War organization that has set a goal to tend the inhabitants of the wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single Great Leader, but a handful of independent Leaders for each group."
 	preview_image = 'html/factions/followers.png'
 	head_status = "leader"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -317,7 +317,7 @@ mob/proc/set_faction(var/faction)
 	color = "#204200"
 	id = "acolytes"
 	full_name = "Acolytes of the Atom"
-	description = "<b>Alignment: Chaotic Neutral</b><br>Have you ever met a bunch of crazed zealots willing to baptize you with radioactive waste?<br>These fanatics are likely to make it so if you have smooth skin, since they all lost theirs decades ago.<br>They are faithful to their glorious God - the Great Atom - who brings salvation to all living.<br>They honor their faith, and are willing to do everything they can to please the Great Atom, and live eternally with a holy green glow."
+	description = "<b>Alignment: Chaotic Neutral</b><br>Have you ever met a bunch of crazed zealots willing to baptize you with radioactive waste?<br>These fanatics are likely to make it so, if you have a smooth skin - as they have all lost theirs decades ago.<br>They are faithful to their glorious God - the Great Atom, who brings salvation to all living.<br>They honor their faith, and are willing to do everything they can to please the Great Atom, and live eternal with a holy green glow."
 	preview_image = 'html/factions/acolytes.png'
 	head_status = "master_atom"
 	verbs = list(/mob/proc/begin_head_voting)

@@ -2,7 +2,7 @@
 
 /datum/f13_objective/protect
 	name = "Adventure of a Bodyguard"
-	desc = "You know that someone important is in a great danger - save and protect them, whatever it takes!"
+	desc = "You know that someone important is in a great danger - save and protect this person whatever it takes!"
 	kind = BOTH
 	available_factions = list("city", "none", "brotherhood")
 
@@ -30,7 +30,7 @@
 				break
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Your target is <b>%target%</b>, the <b>%target_rank%</b>"
+		data["custom_desc"] = "Your target is <b>%target%</b> as <b>%target_rank%</b>"
 		..()
 
 	check_complete(var/datum/objective_holder/holder)

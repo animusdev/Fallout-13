@@ -2,7 +2,7 @@
 
 /obj/structure/reagent_dispensers/barrel
 	name = "barrel"
-	desc = "A metal container with something in it.<br>By the looks of it, it was manufactured recently."
+	desc = "A metal container with something in it.<br>By the look of it, it was manufactured recently."
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 	icon_state = "single"
 	tank_volume = 500
@@ -11,7 +11,7 @@
 
 /obj/structure/reagent_dispensers/barrel/dangerous
 	name = "waste barrel"
-	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a strange label on it, but you can't quite make it out..."
+	desc = "That is one strange metal barrel, made of strange metal that did not rust after all the decades.<br>And it has a strange label on it..."
 	icon_state = "dangerous"
 	tank_volume = 500
 	reagent_id = "radium"
@@ -32,7 +32,7 @@
 
 /obj/structure/reagent_dispensers/barrel/explosive
 	name = "fuel barrel"
-	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a strange label on it, but you can't quite make it out...<br>You wonder if there is anything left in it."
+	desc = "That is one strange metal barrel, made of strange metal that did not rust after all the decades.<br>And it has a strange label on it...<br>I wonder if there is anything left in it."
 	icon_state = "explosive"
 	tank_volume = 500
 	reagent_id = "welding_fuel"
@@ -57,7 +57,7 @@
 
 /obj/structure/reagent_dispensers/barrel/old
 	name = "old barrel"
-	desc = "An old barrel. Oddly enough, it stands undamaged after all this time.<br>You wonder if there is anything left in it."
+	desc = "A single old barrel, oddly enough, it stands undamaged after all the decades.<br>I wonder if there is anything left in it."
 	icon_state = "one_b"
 	tank_volume = 500
 	reagent_id = "water"
@@ -65,7 +65,7 @@
 
 /obj/structure/reagent_dispensers/barrel/two
 	name = "two old barrels"
-	desc = "A couple of old barrels. Oddly enough, they stand undamaged after all this time.<br>You wonder if there is anything left in these."
+	desc = "A couple of old barrels, oddly enough, they stand undamaged after all the decades.<br>I wonder if there is anything left in these."
 	icon_state = "two_b"
 	tank_volume = 1000
 	reagent_id = "lube"
@@ -74,7 +74,7 @@
 
 /obj/structure/reagent_dispensers/barrel/three
 	name = "three old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
+	desc = "An ancient containers with something inside of them. Or are they empty? Actually, why would I know that..."
 	icon_state = "three_b"
 	tank_volume = 1500
 	reagent_id = "water"
@@ -83,7 +83,7 @@
 
 /obj/structure/reagent_dispensers/barrel/four
 	name = "four old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
+	desc = "An ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
 	icon_state = "four_b"
 	tank_volume = 800
 	reagent_id = "mutagen"

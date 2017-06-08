@@ -2,7 +2,7 @@
 
 /datum/job/gangleader
 	title = "Gang Leader"
-	desc = "A criminal mastermind.<br>If someone goes against you, you either make an offer they can't refuse, or make sure no one will find the body later."
+	desc = "A criminal mastermind.<br>If someone goes against you - you either make an offer one can't refuse, or make sure no one will find the dead body later."
 	flag = GANGLEAD
 	department_flag = MEDSCI
 	faction = "raiders"
@@ -68,7 +68,7 @@
 
 /datum/job/raider
 	title = "Raider"
-	desc = "A bloodthirsty savage.<br>You have broken every rule but one - the Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
+	desc = "A bloodthirsty savage.<br>You have broken all of the existing rules but one - Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
 	flag = RAIDER
 	department_head = list("gangleader")
 	department_flag = WASTELAND

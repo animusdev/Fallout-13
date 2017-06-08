@@ -11,7 +11,7 @@
 
 /turf/closed/wall/f13/ruins
 	name = "ruins"
-	desc = "All that's left from the good old days."
+	desc = "That is all what has left from the good old days."
 	icon = 'icons/fallout/turfs/walls/ruins.dmi'
 	icon_state = "ruins0"
 	icontype = "ruins"
@@ -75,7 +75,7 @@
 
 /turf/closed/wall/f13/wood/interior
 	name = "interior wall"
-	desc = "What kind of material did they use such that the wallpaper is still visible after all these centuries?"
+	desc = "Interesting, what kind of material they have used so that these wallpapers are still looking good after all the centuries?"
 	icon = 'icons/fallout/turfs/walls/interior.dmi'
 	icon_state = "interior0"
 	icontype = "interior"
@@ -98,7 +98,7 @@
 
 /turf/closed/wall/f13/supermart
 	name = "supermart wall"
-	desc = "A pre-War supermarket wall made of reinforced concrete."
+	desc = "A pre-War supermart wall made of reinforced concrete."
 	icon = 'icons/fallout/turfs/walls/superstore.dmi'
 	icon_state = "supermart0"
 	icontype = "supermart"
@@ -112,7 +112,7 @@
 
 /turf/closed/wall/f13/tunnel
 	name = "utility tunnel wall"
-	desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
+	desc = "A sturdy and cold metal wall, with various wiring and pipes laid along in a special niche."
 	icon = 'icons/fallout/turfs/walls/tunnel.dmi'
 	icon_state = "tunnel0"
 	icontype = "tunnel"
@@ -125,7 +125,7 @@
 
 /turf/closed/wall/f13/vault
 	name = "vault wall"
-	desc = "A sturdy, cold metal wall."
+	desc = "A sturdy and cold metal wall."
 	icon = 'icons/fallout/turfs/walls/vault.dmi'
 	icon_state = "vault0"
 	icontype = "vault"
@@ -189,7 +189,7 @@
 turf/closed/indestructible/f13/splashscreen/New()
 	.=..()
 	name = "Fallout 13"
-	desc = "The Wasteland is calling!"
+	desc = "The wasteland is calling!"
 	icon = 'icons/fallout/misc/lobby.dmi'
 	icon_state = "title[rand(1,13)]"
 	layer = 60
@@ -208,7 +208,7 @@ turf/closed/indestructible/f13/splashscreen/proc/ticker()
 	while(src && istype(src,/turf/closed/indestructible/f13/splashscreen))
 		src.swapImage()
 		sleep(src.tickerPeriod)
-	to_chat(world, "Badmins spawned shit and the title screen was deleted.<br>Welp.")
+	to_chat(world, "Badmins spawn shit and title screen was deleted.<br>You know... I'm out of here!")
 	return
 
 //Change the time to determine how short/long the fading animation is.

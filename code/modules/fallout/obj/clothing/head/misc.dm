@@ -6,14 +6,14 @@
 
 /obj/item/clothing/head/f13/police
 	name = "pre-War police hat"
-	desc = "A dark blue police hat with a silver-colored badge on the front.<br>The badge is inscribed with the words SPECIAL and POLICE."
+	desc = "A police hat of dark blue in color with a silver colored badge on the frontside.<br>The badge is inscripted with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max 3 1985
 	name = "pith helmet"
-	desc = "A lightweight, cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
+	desc = "A lightweight cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
 	icon_state = "safari"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
@@ -21,14 +21,14 @@
 
 /obj/item/clothing/head/f13/stormchaser
 	name = "stormchaser hat"
-	desc = "Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is glowing all day."
+	desc = "Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is not glowing all day."
 	icon_state = "stormchaser"
 	item_state = "fedora"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/f13/headscarf
 	name = "headscarf"
-	desc = "A piece of cloth worn around the head for a variety of purposes."
+	desc = "A piece of cloth that be worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
 	icon_state = "headscarf"
 	item_state = "dethat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
@@ -51,14 +51,14 @@
 
 /obj/item/clothing/head/f13/bandit
 	name = "bandit hat"
-	desc = "A black cowboy hat with a large brim that's curved to the sides.<br>A silver eagle pin is attached to the front."
+	desc = "A black cowboy hat with a large brim, curved to the sides, and a silver eagle pinned to the front."
 	icon_state = "bandit"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/ncr_officer
 	name = "officer beret"
-	desc = "A soft round cap, usually made of wool, with a flat crown that tilts to one side. Used to identify officers of the New California Republic Army.<br>The beret is camouflaged in various shades of green and brown, and has a badge of the NCR's two-headed bear roaring up at a gold star."
+	desc = "A soft round cap, usually of wool felt, with a flat crown that tilts to one side, used to identify officers of the New California Republic Army.<br>The beret seems to be camouflaged in various shades of green and brown, and has a cap badge of the NCR two-headed bear roaring up at a gold star."
 	icon_state = "officer"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
@@ -90,19 +90,19 @@
 
 /obj/item/clothing/head/f13/fez
 	name = "fez"
-	desc = "Fezzes are cool! I'm cool, right? ...Right?"
+	desc = "Fezzes are cool!"
 	icon_state = "fez"
 	item_state = "secsoft"
 
 /obj/item/clothing/head/f13/beaver
 	name = "beaverkin"
-	desc = "A hat made from felted beaver fur which makes the wearer feel both comfortable and elegant."
+	desc = "A hat made from felted beaver fur which makes this hat both comfortable and elegant."
 	icon_state = "beaver"
 	item_state = "that"
 
 /obj/item/clothing/head/f13/purple
 	name = "purple top hat"
-	desc = "You may not own the best jail in the observed Universe, or the best chocolate factory in the entire world, but at least you have the purple top hat."
+	desc = "You may not own the best jail in the observed Universe, or the best chocolate factory in the entire world, but at least you can try to have that purple top hat."
 	icon_state = "ptophat"
 	item_state = "that"
 
@@ -136,7 +136,7 @@
 
 /obj/item/clothing/head/welding/f13/fire
 	name = "cremator welding helmet"
-	desc = "A welding helmet with flames painted on it.<br>Badass, but creepy."
+	desc = "A welding helmet with burning flame painted over it.<br>It sure is creepy but also badass."
 	icon_state = "welding_fire"
 	item_state = "welding"
 	tint = 1

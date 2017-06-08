@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/ghoul
 	name = "feral ghoul"
-	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are a necrotic post-humans, decrepit, rotting, zombie-like mutants."
 	icon_state = "retro_ghoul"
 	icon_living = "retro_ghoul"
 	icon_dead = "retro_ghoul_d"
@@ -41,7 +41,7 @@
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "feral ghoul"
-	desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
+	desc = "Have you ever seen a hungry ghoul before?<br>It's just like other feral ghouls, yet it's more aggressive and confident about the fact you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul"
 	icon_living = "angry_ghoul"
 	icon_dead = "angry_ghoul_d"
@@ -56,7 +56,7 @@
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing feral ghoul"
-	desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are necrotic post-humans - rotting, zombie-like mutants. They are so irradiated that they actually glow in the dark."
+	desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are a necrotic post-humans, rotting, zombie-like mutants, that are so irradiated they actually glow in the dark."
 	icon_state = "retro_glowghoul"
 	icon_living = "retro_glowghoul"
 	icon_dead = "retro_glowghoul_d"

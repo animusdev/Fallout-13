@@ -45,7 +45,7 @@ obj/dugpit/New(lnk)
 	if(!istype(W))
 		return
 	if (storedindex>=NUMCONTENT)
-		to_chat(usr, "<span class='danger'>The pit is filled to the brim!</span>")
+		to_chat(usr, "<span class='danger'>The pit is filled with items to the limit!</span>")
 		return
 	if(usr)
 		if(!usr.unEquip(W))

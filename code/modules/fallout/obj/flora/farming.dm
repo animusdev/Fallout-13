@@ -2,7 +2,7 @@
 
 /obj/item/seeds/broc
 	name = "pack of broc seeds"
-	desc = "These seeds grow into broc flowers."
+	desc = "These seeds grow into broc flower."
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "seed-broc"
 	species = "broc"
@@ -86,7 +86,7 @@
 
 /obj/item/seeds/shroom
 	name = "pack of shroom seeds"
-	desc = "These seeds grow into mushrooms."
+	desc = "These seeds grow into shrooms."
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "mycelium-shroom"
 	species = "shroom"

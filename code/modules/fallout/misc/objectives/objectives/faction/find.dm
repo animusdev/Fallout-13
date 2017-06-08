@@ -2,7 +2,7 @@
 
 /datum/f13_objective/find
 	name = "Lost and Found"
-	desc = "You must find and hold %item_name%, whatever it takes!<br>The fate of all humankind depends on it!"
+	desc = "You must find and hold %item_name% whatever it takes!<br>A fate of an entire mankind depends on it!"
 	points = 0
 	kind = FACTION
 

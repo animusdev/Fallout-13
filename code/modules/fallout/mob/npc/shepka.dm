@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/shepka
 	name = "Shepard"
-	desc = "A horrible creature from the system of Tau Ceti."
+	desc = "Horrible creature that arrived from the system of Tau Ceti."
 	icon_state = "shepherd"
 	icon_living = "shepherd"
 	icon_dead = "shepherd_dead"

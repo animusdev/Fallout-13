@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/rad_scorpion
 	name = "rad scorpion"
-	desc = "A giant irradiated scorpion with a blue exoskeleton. Its appearance makes you shudder.<br>This one has a razor sharp stinger with lethal venom inside."
+	desc = "It's a rad scorpion with a blue shell, the look of it makes you shudder.<br>This one has razor sharp sting."
 	icon_state = "radscorpion"
 	icon_living = "radscorpion"
 	icon_dead = "radscorpion_d"
@@ -40,7 +40,7 @@
 
 /mob/living/simple_animal/hostile/rad_scorpion/black
 	name = "giant rad scorpion"
-	desc = "A giant irradiated scorpion with a black exoskeleton. Its appearance makes you shudder in fear.<br>This one has giant pincers."
+	desc = "It's a giant rad scorpion with a black shell, the look of it makes you shudder in fear.<br>This one has giant pincers."
 	icon_state = "radscorpion_black"
 	icon_living = "radscorpion_black"
 	icon_dead = "radscorpion_black_d"

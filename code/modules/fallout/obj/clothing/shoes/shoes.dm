@@ -31,20 +31,20 @@
 
 /obj/item/clothing/shoes/f13/cowboy
 	name = "cowboy boots"
-	desc = "A pair of cowhide boots with spurs.<br>They have a Cuban heel, pointed toe, high shaft, and, as is tradition, no lacing."
+	desc = "A pair of cowhide boots with spurs.<br>They have a Cuban heel, rounded to pointed toe, high shaft, and, traditionally, no lacing."
 	icon_state = "cowboy"
 	item_state = "cowboy"
 
 /obj/item/clothing/shoes/f13/explorer
 	name = "worn boots"
-	desc = "A pair of slightly worn, steel-toed work boots.<br>Good at keeping toes safe from falling junk you find in the Wasteland."
+	desc = "A pair of slightly worn, steel-toed work boots.<br>These are still good at keeping toes uncrushed by a falling junk you find amid the ruins."
 	icon_state = "explorer"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 	self_weight = 1
 
 /obj/item/clothing/shoes/f13/khan
 	name = "Great Khan boots"
-	desc = "A pair of leather boots reinforced with metal plates.<br>These are commonly worn by Great Khan's raiders."
+	desc = "A pair of leather boots reinforced with metal plates.<br>These are commonly worn by Great Khans raiders."
 	icon_state = "legionmetal" //It's that simple
 	item_state = "legionmetal"
 	self_weight = 1
@@ -52,7 +52,7 @@
 
 /obj/item/clothing/shoes/f13/military
 	name = "military boots"
-	desc = "High speed, no-drag combat boots designed for use by the U.S. Army before the Great War."
+	desc = "High speed, no drag combat boots designed for use by U.S. army before the Great War."
 	icon_state = "military"
 	item_state = "military"
 	permeability_coefficient = 0.01
@@ -65,13 +65,13 @@
 
 /obj/item/clothing/shoes/f13/military/light //I'm a ninja!
 	name = "advanced combat boots"
-	desc = "High speed, no-drag combat boots designed for use by U.S. special forces before the Great War.<br>The soles are made of aerated rubber to silence the movement of the wearer."
+	desc = "High speed, no drag combat boots designed for use by U.S. special forces before the Great War.<br>Soles were made of aerated rubber to silence the movement of a wearer."
 	self_weight = 0.5
 	flags = NOSLIP | QUIETSTEPSOUND
 
 /obj/item/clothing/shoes/f13/military/diesel
 	name = "male diesel boots"
-	desc = "Fancy mens' steel-toed boots."
+	desc = "Fancy male steel-toed boots."
 	icon_state = "diesel_m"
 	item_state = "diesel_m"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -80,7 +80,7 @@
 
 /obj/item/clothing/shoes/f13/military/female/diesel
 	name = "female diesel boots"
-	desc = "Fancy womens' knee-high platform boots with shiny steel clasps."
+	desc = "Fancy female knee high platform boots with shiny steel clasps."
 	icon_state = "diesel_f"
 	item_state = "diesel_f"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -96,14 +96,14 @@
 
 /obj/item/clothing/shoes/f13/military/legionleather
 	name = "leather boots"
-	desc = "A pair of leather boots commonly worn by Caesar's Legion recruits."
+	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
 	icon_state = "legionleather"
 	item_state = "legionleather"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/legionmetal
 	name = "metal boots"
-	desc = "A pair of metal boots commonly worn by Caesar's Legion veterans."
+	desc = "A pair of metal boots commonly worn by the Caesar's Legion veterans."
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
 	self_weight = 2
@@ -121,14 +121,14 @@
 
 /obj/item/clothing/shoes/f13/swimfins
 	name = "swimming fins"
-	desc = "You see, Ivan, when you wear fin in desert, they help you swim good if you find much water."
+	desc = "You see Ivan, if you wear these in the desert - they help you swim good if you find much water."
 	icon_state = "flippers"
 	item_state = "flippers"
 	flags = NOSLIP
 
 /obj/item/clothing/shoes/f13/moon
 	name = "moon boots"
-	desc = "These boots are constructed with a thin rubber exterior and cellular rubber midsole covered by colorful nylon fabrics and using polyurethane foams.<br>To the Moon!"
+	desc = "These boots are constructed with a thin rubber outsole and cellular rubber midsole covered by colorful Nylon fabrics and using polyurethane foams.<br>To the Moon!"
 	icon_state = "moon"
 	item_state = "moon"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 10, rad = 50, fire = 0, acid = 0)
@@ -141,7 +141,7 @@
 
 /obj/item/clothing/shoes/f13/doom
 	name = "mars boots"
-	desc = "These boots are constructed with a titanium alloy. There are some runes engraved on the side.<br>To Mars!"
+	desc = "These boots are constructed with a titanium alloy and some runes engraved on the side.<br>To the Mars!"
 	icon_state = "mars"
 	item_state = "mars"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 80, rad = 80, fire = 80, acid = 50)
@@ -154,7 +154,7 @@
 
 /obj/item/clothing/shoes/f13/miner
 	name = "mining boots"
-	desc = "Heavy-duty work boots with steel-reinforced toes and some fluffy wool for extra warmth."
+	desc = "A heavy-duty work boots with steel reinforced toes and some fluffy wool for extra warmth."
 	icon_state = "miner"
 	item_state = "miner"
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)

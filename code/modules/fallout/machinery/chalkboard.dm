@@ -24,7 +24,7 @@
 		return
 
 	if(!ishuman(usr))
-		usr << "\red You want to, but you don't. You try, but you can't."
+		usr << "\red You want, but you don't. You try, but you can't."
 		return
 
 	if(content)
@@ -60,7 +60,7 @@
 
 
 	if(!ishuman(usr))
-		usr << "\red You want to, but you don't. You try, but you can't."
+		usr << "\red You want, but you don't. You try, but you can't."
 		return
 
 	if(content)
@@ -71,7 +71,7 @@
 	var/t =  input("What do you want to write here? 20 lines or 2000 symbols max.", "Write", null, null) as message
 
 	if(length(t) > 2048)
-		usr << "\blue Your message is too long for the board!"
+		usr << "\blue You can't post it all on board!"
 		return
 
 	//t = checkhtml(t)
@@ -83,7 +83,7 @@
 	if(!t)
 		return
 	if(count_occurrences(t, "<BR>") > 20)
-		usr << "\blue You can't write that big of a message on the board!"
+		usr << "\blue You can't write it all on the board!"
 		return
 
 	content = t
@@ -104,7 +104,7 @@
 		return
 
 	if(!ishuman(usr))
-		usr << "\red You want to, but you don't. You try, but you can't."
+		usr << "\red You want, but you don't. You try, but you can't."
 		return
 
 	if(status != CB_WET)
@@ -130,7 +130,7 @@
 			content = null
 
 		if(CB_CONTENT)
-			desc = "A classic chalkboard for various activities involving writing and drawing.<br>Something is written on it, so you start reading..."
+			desc = "A classic chalkboard for various activities involving writing and drawing.<br>Something is written out there, you start reading..."
 			desc += "<HR>"
 			desc +=	content
 			desc += "<HR>"
