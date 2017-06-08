@@ -6,25 +6,25 @@
 
 /obj/item/clothing/under/pants/f13/ghoul
 	name = "ripped pants"
-	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't get to see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
+	desc = "A pair of ripped pants that haven't been washed for over a century.<br>Thanks to these, you don't get to see ghouls' genitals too often.<br><i>You can also wear these to pretend you are a feral ghoul, just saying...</i>"
 	icon_state = "ghoul"
 	item_color = "ghoul"
 
 /obj/item/clothing/under/pants/f13/cloth
 	name = "cloth pants"
-	desc = "A pair of worn dusty cloth pants made of various textile pieces.<br>Commonly found all over the wasteland."
+	desc = "A pair of worn, dusty pants made of various textile pieces.<br>Commonly found all over the Wasteland."
 	icon_state = "cloth"
 	item_color = "cloth"
 
 /obj/item/clothing/under/pants/f13/caravan //Caravanner - someone who travels with caravan. Caravaneer - caravan leader.
 	name = "caravanner pants"
-	desc = "A pair of wide dusty cargo pants.<br>Commonly worn by caravanners or caravan robbers."
+	desc = "A pair of wide, dusty cargo pants.<br>Commonly worn by caravanners or caravan robbers."
 	icon_state = "caravan"
 	item_color = "caravan"
 
 /obj/item/clothing/under/pants/f13/khan
 	name = "Great Khan pants"
-	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by the Great Khans raiders."
+	desc = "Cloth pants with leather armor pads attached on the sides.<br>These are commonly worn by the Great Khan's raiders."
 	icon_state = "khan"
 	item_color = "khan"
 	flags = THICKMATERIAL
@@ -33,7 +33,7 @@
 
 /obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
 	name = "war boy pants"
-	desc = "A pair of dark brown pants, perfect for the one who grabs the sun, riding to Valhalla."
+	desc = "A pair of dark brown pants.<br>Perfect for the one who grabs the sun, riding to Valhalla."
 	icon_state = "warboy"
 	item_color = "warboy"
 	flags = THICKMATERIAL
@@ -42,7 +42,7 @@
 
 /obj/item/clothing/under/pants/f13/doom
 	name = "green pants"
-	desc = "An odd green pants made of synthetic material."
+	desc = "Green pants made of a strange synthetic material."
 	icon_state = "green"
 	item_color = "green"
 	flags = THICKMATERIAL
