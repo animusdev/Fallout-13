@@ -13,7 +13,7 @@ var/datum/subsystem/content/SScontent
 
 	var/list/all_content_packs = list()
 
-	wait = 6000
+	wait = 600
 
 /datum/subsystem/content/New()
 	NEW_SS_GLOBAL(SScontent)
@@ -28,7 +28,7 @@ var/datum/subsystem/content/SScontent
 	system_state = check_connection()
 
 /datum/subsystem/content/stat_entry()
-	..("[system_state]")
+	..("[system_state ? "Ok" : "Broken"]")
 
 /datum/subsystem/content/proc/update_all_data()
 	for(var/client/C)
@@ -43,9 +43,11 @@ var/datum/subsystem/content/SScontent
 		return file2text("temp")
 	return "-1:"
 */
-	var/http[] = world.Export("[ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&action=full")
-	if(http)
-		return file2text(http["CONTENT"])
+	if(system_state)
+		var/http[] = world.Export("[ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&action=full")
+		if(http)
+			return file2text(http["CONTENT"])
+	return "-1:"
 
 /datum/subsystem/content/proc/buy_pack(ckey, pack_id, price)
 /*
@@ -55,9 +57,10 @@ var/datum/subsystem/content/SScontent
 			return 1
 	return 0
 */
-	var/http[] = world.Export("[ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&pack=[pack_id]&price=[price]&action=buy")
-	if(http && file2text(http["CONTENT"]) == "SUCCESS")
-		return 1
+	if(system_state)
+		var/http[] = world.Export("[ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&pack=[pack_id]&price=[price]&action=buy")
+		if(http && file2text(http["CONTENT"]) == "SUCCESS")
+			return 1
 	return 0
 
 /datum/subsystem/content/proc/check_connection()
@@ -74,8 +77,8 @@ var/datum/subsystem/content/SScontent
 	var/http[] = world.Export("[ADDRESS_DONATE_DATA]?action=check")
 	if(http)
 		if(file2text(http["CONTENT"]) == "OK")
-			return "OK"
-	return "Can't Connect"
+			return 1
+	return 0
 
 /datum/subsystem/content/proc/load_content_packs()
 	var/list/all_packs = subtypesof(/datum/content_pack)
