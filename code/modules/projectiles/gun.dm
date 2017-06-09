@@ -173,8 +173,8 @@
 				user.drop_item()
 				return
 
-	if(weapon_weight == WEAPON_HEAVY && user.get_inactive_held_item())
-		to_chat(user, "<span class='userdanger'>You need both hands free to fire [src]!</span>")
+	if(weapon_weight == WEAPON_HEAVY && !wielded)//user.get_inactive_held_item())
+		to_chat(user, "<span class='userdanger'>You need to wield \the [src] in both hands free to fire!</span>")
 		return
 
 	//DUAL (or more!) WIELDING
