@@ -148,18 +148,19 @@
 	return
 
 /obj/item/weapon/gun/ballistic/proc/unload_ammo(mob/living/user)//Made this it's own proc so you can unload guns like in Bay.
-	if(magazine)
-		magazine.forceMove(get_turf(src.loc))
-		user.put_in_hands(magazine)
-		magazine.update_icon()
-		magazine = null
-		to_chat(user, "<span class='notice'>You pull the magazine out of \the [src].</span>")
-		playsound(loc, mag_unload_sound, 25)
-		update_icon()
+	if(magazine)//God this is so fucking dirty, but Shotguns and Revolvers still have magazines for some fucking reason. I'll fix it later - Matt
+		if(!istype(src,/obj/item/weapon/gun/ballistic/shotgun) && !istype(src,/obj/item/weapon/gun/ballistic/revolver))
+			magazine.forceMove(get_turf(src.loc))
+			user.put_in_hands(magazine)
+			magazine.update_icon()
+			magazine = null
+			to_chat(user, "<span class='notice'>You pull the magazine out of \the [src].</span>")
+			playsound(loc, mag_unload_sound, 25)
+			update_icon()
 
 /obj/item/weapon/gun/ballistic/attack_hand(mob/living/user)
-	if(magazine)//Yes I know this means you can't switch hands holding a gun. Working on it - Matt
-		if(user.get_inactive_held_item() == src)
+	if(user.get_inactive_held_item() == src)
+		if(magazine)//Yes I know this means you can't switch hands holding a gun. Working on it - Matt
 			unload_ammo(user)
 		else 
 			..()
