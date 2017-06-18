@@ -68,10 +68,3 @@ proc/lightningstrike(var/area/A,var/mob/M,var/turf/T,var/L)
 					M.death()
 				spawn(1)
 					return
-
-proc/dodaychange()
-	day+=1
-	if(day>=31)
-		month+=1
-		day=1
-
