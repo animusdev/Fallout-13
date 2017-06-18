@@ -283,7 +283,7 @@
 /mob/proc/get_contents()
 
 /mob/living/proc/lay_down()
-	set name = "Crawl"
+	set name = "Crawl / Crouch"
 	set category = "IC"
 
 	if(stat)
@@ -309,7 +309,7 @@
 
 		Stun(5)
 		visible_message("<b>[src] surrenders!</b>")
-		playsound(src.loc, 'sound/effects/surrender.ogg', 50, 1)
+		playsound(src.loc, 'sound/f13effects/surrender.ogg', 50, 1)
 
 
 //Recursive function to find everything a mob is holding.

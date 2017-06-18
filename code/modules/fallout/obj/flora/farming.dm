@@ -2,7 +2,7 @@
 
 /obj/item/seeds/broc
 	name = "pack of broc seeds"
-	desc = "These seeds grow into broc flower."
+	desc = "These seeds grow into broc flowers."
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "seed-broc"
 	species = "broc"

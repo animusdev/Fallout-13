@@ -43,9 +43,9 @@
 
 /mob/say_verb(message as text)
 	..()
-	if(message == 'hydro cutter')
+	if(message == "hydro cutter")
 		spawn(6000)
 			cutit()
 proc/cutit()
-	world << ' '
+	world << " "
 	cutit()

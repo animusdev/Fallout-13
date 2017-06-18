@@ -3,7 +3,7 @@
 
 /obj/item/weapon/holodisk
 	name = "holodisk"
-	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time."
+	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "holodisk"
 	item_state = "holodisk"
@@ -47,12 +47,12 @@
 	soundLength = 430
 
 /obj/item/weapon/holodisk/runninggun
-	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This particular holodisk is obviously one of rare Radio New Vegas broadcast records.<br>There is a \"Running Gun\" inscription on the side."
+	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time.<br>This particular holodisk contains a rare Radio New Vegas broadcast.<br>An inscription on the side reads \"Running Gun\""
 	soundFile =  'sound/f13music/new_vegas_show_bonus_1.ogg'
 	soundLength = 1836
 
 /obj/item/weapon/holodisk/bigiron
-	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This particular holodisk is obviously one of rare Radio New Vegas broadcast records.<br>There is a \"Big Iron\" inscription on the side."
+	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time.<br>This particular holodisk contains a rare Radio New Vegas broadcast.<br>An inscription on the side reads \"Big Iron\""
 	soundFile =  'sound/f13music/new_vegas_show_bonus_2.ogg'
 	soundLength = 2448
 
@@ -79,7 +79,7 @@
 
 /obj/item/weapon/holodisk/musicbox
 	name = "music box"
-	desc = "A pre-War music box - it is all what has left from the good old days."
+	desc = "A pre-War music box - remainder of humanity from the good old days."
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "music1"
 	item_state = "music1"

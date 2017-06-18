@@ -22,7 +22,7 @@
 
 /obj/effect/decal/marking
 	name = "road marking"
-	desc = "Road surface markings were used on paved roadways to provide guidance and information to drivers and pedestrians."
+	desc = "Road surface markings were used on paved roadways to provide guidance and information to drivers and pedestrians.<br>Nowadays, those wandering the wasteland commonly use them as directional landmarks."
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "singlevertical" //See decals.dmi for different icon states of road markings.
 	anchored = 1

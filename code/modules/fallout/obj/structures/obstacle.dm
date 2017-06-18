@@ -78,7 +78,7 @@
 
 /obj/structure/barricade/bars //FighterX2500 is this you?
 	name = "metal bars"
-	desc = "An old, corroded bars. Ain't got a file on you, right?" //Description by Mr.Fagetti
+	desc = "Old, corroded metal bars. Ain't got a file on you, right?" //Description by Mr.Fagetti
 	icon = 'icons/fallout/objects/structures/fences.dmi'
 	icon_state = "bars"
 	obj_integrity = 400
@@ -126,7 +126,7 @@
 
 /obj/item/weapon/grenade/barrier
 	name = "barrier grenade"
-	desc = "Instant cover. Alt+click to toggle modes."
+	desc = "Instant cover.<br><i>Alt+click to toggle modes.</i>"
 	icon = 'icons/obj/grenade.dmi'
 	icon_state = "flashbang"
 	item_state = "flashbang"
