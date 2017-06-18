@@ -22,7 +22,7 @@
 	self_weight = 15
 	density = 0
 
-	faction = "radroach"
+	faction = list("hostile", "radroach")
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/roach_charge1.ogg','sound/f13npc/roach_charge2.ogg','sound/f13npc/roach_charge3.ogg')

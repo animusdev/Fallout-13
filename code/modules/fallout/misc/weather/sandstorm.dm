@@ -30,6 +30,7 @@ proc/sandstorm(var/position)
 
 proc/lightingsandloop(var/area/A,var/mob/M)
 	if(A.outdoors)
+		lightningstrike(A,M)
 		spawn(600)
 			lightningstrike(A,M)
 			spawn(600)

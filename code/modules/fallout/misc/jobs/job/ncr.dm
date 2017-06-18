@@ -118,7 +118,7 @@
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	belt_contents = list(/obj/item/ammo_box/magazine/m556 = 3, \
 		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 2, \
-		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
+		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
 		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/blue = 1)
 
@@ -175,7 +175,7 @@
 	head = /obj/item/clothing/head/helmet/f13/ranger
 	belt = /obj/item/weapon/storage/belt/military/assault
 	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
-	belt_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
+	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1, \
 		/obj/item/weapon/reagent_containers/pill/patch/stimpak = 2, \
 		/obj/item/ammo_box/m44 = 3, \
 		/obj/item/device/radio = 1)
@@ -234,5 +234,5 @@
 	glasses = /obj/item/clothing/glasses/f13/biker
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \
+	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak = 1, \
 	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/m556 = 3)

@@ -22,7 +22,7 @@
 	self_weight = 50
 	healable = 0
 
-	faction = "enclave"
+	faction = list("hostile", "enclave")
 
 	ambient_sound = 'sound/f13npc/eyebot_loop.ogg'
 
@@ -65,7 +65,7 @@
 	icon_gib = "floatingeye_d"
 
 	retreat_distance = 4
-	faction = "bs"
+	faction = list("hostile", "bs")
 
 	projectiletype = /obj/item/projectile/energy/electrode
 	projectilesound = 'sound/weapons/resonator_blast.ogg'

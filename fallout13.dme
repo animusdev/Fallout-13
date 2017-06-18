@@ -1271,7 +1271,6 @@
 #include "code\modules\fallout\misc\sun_lighting\source.dm"
 #include "code\modules\fallout\misc\sun_lighting\time_of_day_datums.dm"
 #include "code\modules\fallout\misc\sun_lighting\turf.dm"
-#include "code\modules\fallout\misc\weather\sandstorm.dm"
 #include "code\modules\fallout\mob\crawling.dm"
 #include "code\modules\fallout\mob\step_sounds.dm"
 #include "code\modules\fallout\mob\vision_cone.dm"

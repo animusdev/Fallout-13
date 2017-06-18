@@ -26,7 +26,7 @@
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	self_weight = 40
 
-	faction = "cazador"
+	faction = list("hostile", "cazador")
 
 	sound_speak = list('sound/f13npc/cazador_charge1.ogg','sound/f13npc/cazador_charge2.ogg','sound/f13npc/cazador_charge3.ogg')
 	sound_speak_chance = 5

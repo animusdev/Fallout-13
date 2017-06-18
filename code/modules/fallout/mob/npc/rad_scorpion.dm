@@ -18,7 +18,7 @@
 	health = 80
 	self_weight = 120
 
-	faction = "scorpion"
+	faction = list("hostile", "scorpion")
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/scorpion_charge1.ogg','sound/f13npc/scorpion_charge2.ogg','sound/f13npc/scorpion_charge3.ogg')

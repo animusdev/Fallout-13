@@ -16,7 +16,7 @@
 	health = 50
 	self_weight = 35
 
-	faction = "gecko"
+	faction = list("hostile", "gecko")
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/gecko_charge1.ogg','sound/f13npc/gecko_charge2.ogg','sound/f13npc/gecko_charge3.ogg')

@@ -19,7 +19,7 @@
 	self_weight = 500
 	damage_coeff = list(BRUTE = 0.6, BURN = 0.8, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 
-	faction = "deathclaw"
+	faction = list("hostile", "deathclaw")
 
 	ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
 

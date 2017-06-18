@@ -18,7 +18,7 @@
 	health = 30
 	self_weight = 35
 
-	faction = "molerat"
+	faction = list("hostile", "molerat")
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/molerat_charge1.ogg','sound/f13npc/molerat_charge2.ogg','sound/f13npc/molerat_charge3.ogg')

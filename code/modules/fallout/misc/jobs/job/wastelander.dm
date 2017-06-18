@@ -147,6 +147,6 @@
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/pipe
 	belt_contents = list(/obj/item/ammo_casing/shotgun/rubbershot = 5, \
 		/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 2, \
-		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
+		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
 		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/green = 1)
