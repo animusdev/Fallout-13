@@ -2,7 +2,7 @@
 
 /datum/job/colonel
 	title = "Colonel"
-	desc = "An actual American patriot.<br>You live by the principle that Main Goal is more important, than means of achieving it."
+	desc = "An actual American patriot.<br>You live by the principle that the Main Goal is more important than the means of achieving it."
 	flag = COLONEL
 	department_head = list("Enclave command HQ")
 	department_flag = MEDSCI
@@ -20,6 +20,7 @@
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/power_armor/shocktrooper,
 	/obj/item/clothing/head/helmet/power_armor/shocktrooper,
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/plasma,
 	/obj/item/weapon/lighter/engraved
 	)
@@ -63,7 +64,7 @@
 
 /datum/job/enclave_sergeant
 	title = "Sergeant"
-	desc = "A loyal soldier.<br>You trust your commander, and orders from above - it's just about time to make America great again!"
+	desc = "A loyal soldier.<br>You trust your commander and orders from above - it's just about time to make America great again!"
 	flag = ENCLAVE_SERGEANT
 	department_head = list("colonel")
 	department_flag = MEDSCI
@@ -78,11 +79,13 @@
 	allowed_packs = list("starter", "cigarettes", "bard", "tesla", "super_ten")
 
 	required_items = list(
-	/obj/item/clothing/head/soft/f13/enclave,
+	/obj/item/clothing/head/soft/f13/utility/olive,
+	/obj/item/clothing/head/soft/f13/utility/tan,
 	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/under/f13/dbdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/superadvanced,
 	/obj/item/clothing/head/helmet/power_armor/superadvanced,
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/plasma,
 	/obj/item/weapon/lighter/engraved
 	)
@@ -145,6 +148,7 @@
 	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/suit/armor/f13/power_armor/advanced,
 	/obj/item/clothing/head/helmet/power_armor/advanced,
+	/obj/item/clothing/head/soft/f13/utility/olive,
 	/obj/item/weapon/gun/energy/plasma/pistol
 	)
 
@@ -177,6 +181,7 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/dbdu
 	shoes = /obj/item/clothing/shoes/f13/military
+	head = /obj/item/clothing/head/soft/f13/utility/tan
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/plasma
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak=1, \

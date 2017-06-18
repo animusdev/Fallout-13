@@ -2,7 +2,8 @@
 
 /mob/living/simple_animal/hostile/shepka
 	name = "Shepard"
-	desc = "Horrible creature that arrived from the system of Tau Ceti."
+	desc = "A horrible creature from the system of Tau Ceti."
+	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "shepherd"
 	icon_living = "shepherd"
 	icon_dead = "shepherd_dead"
@@ -16,9 +17,15 @@
 	health = 5000
 	self_weight = 5
 
+	faction = "evil"
+
+	sound_speak_chance = 5
+	sound_speak = list('sound/f13npc/dog_charge1.ogg','sound/f13npc/dog_charge2.ogg','sound/f13npc/dog_charge3.ogg')
+
+	aggro_sound_chance = 50
+	aggro_sound = list('sound/f13npc/dog_alert1.ogg','sound/f13npc/dog_alert2.ogg','sound/f13npc/dog_alert3.ogg')
+
 	environment_smash = 0
-	faction = list("hostile", "evil")
-	icon = 'icons/fallout/mobs/animal.dmi'
 	melee_damage_lower = 5
 	melee_damage_upper = 50
 	aggro_vision_range = 20 //I SEE EVERYTHING

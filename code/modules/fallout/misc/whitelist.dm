@@ -1,6 +1,5 @@
 #define WHITELISTFILE "config/whitelist.txt"
 
-
 /proc/load_whitelist()
 	var/list/whitelist = list()
 	for(var/line in file2list(WHITELISTFILE))
@@ -24,7 +23,7 @@
 	set name = "Add Player To Whitelist"
 	nickname = ckey(nickname)
 	if(nickname in config.whitelist)
-		to_chat(usr, "Player already in whitelist")
+		to_chat(usr, "That player is already on the whitelist!")
 		return
 	config.whitelist += nickname
 
@@ -33,7 +32,7 @@
 	set name = "Remove Player From Whitelist"
 	nickname = ckey(nickname)
 	if(!(nickname in config.whitelist))
-		to_chat(usr, "No player in whitelist")
+		to_chat(usr, "That player is not on the whitelist!")
 		return
 	config.whitelist -= nickname
 
@@ -47,6 +46,6 @@
 	set category = "Admin"
 	set name = "Whitelist Toggle"
 	config.whitelist_on = !config.whitelist_on
-	to_chat(usr, "Whitelist now is [config.whitelist_on ? "on" : "off"]")
+	to_chat(usr, "The whitelist is now [config.whitelist_on ? "on" : "off"]")
 
 #undef WHITELISTFILE

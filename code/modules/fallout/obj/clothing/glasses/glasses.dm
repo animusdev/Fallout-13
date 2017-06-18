@@ -20,7 +20,7 @@
 
 /obj/item/clothing/glasses/sunglasses/f13/legion
 	name = "military goggles"
-	desc = "A flash-resistant goggles commonly worn by Caesar's Legion soldiers."
+	desc = "Flash-resistant goggles commonly worn by Caesar's Legion soldiers."
 	icon_state = "legion"
 	item_state = "legion"
 	flash_protect = 2
@@ -42,7 +42,7 @@
 
 /obj/item/clothing/glasses/thermal/f13/enclave
 	name = "\improper pilot goggles"
-	desc = "A heat sensitive goggles commonly worn by Enclave vertibird pilots."
+	desc = "Heat-sensitive goggles commonly worn by Enclave vertibird pilots."
 	icon_state = "enclavegoggles"
 	item_state = "enclavegoggles"
 
@@ -55,7 +55,7 @@
 
 /obj/item/clothing/glasses/science/f13/steampunk
 	name = "\improper goggles"
-	desc = "If the legends are true, these goggles belonged to a genius alchemist.<br>Or maybe it's just a toy of a steampunk enthusiast."
+	desc = "If the legends are true, these goggles belonged to a genius alchemist.<br>Or maybe it's just a steampunk enthusiast's cherished toy."
 	icon_state = "steampunk"
 	item_state = "glasses"
 	resistance_flags = ACID_PROOF
@@ -70,7 +70,7 @@
 
 /obj/item/clothing/glasses/hud/health/f13/eye
 	name = "augmented eye"
-	desc = "An easy use augment enhancing user's sight properties.<br>Stick it directly in your eye. It might sting a little..."
+	desc = "An easy-to-use augmenation that enhances the user's sight properties.<br>Stick it directly in your eye. It might sting a little..."
 	icon_state = "aug"
 	darkness_view = 4
 	vision_flags = SEE_TURFS

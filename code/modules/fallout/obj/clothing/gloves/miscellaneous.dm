@@ -7,7 +7,7 @@
 
 /obj/item/clothing/gloves/f13/baseball
 	name = "baseball glove"
-	desc = "A baseball glove or mitt is a large leather glove worn by baseball players of the defending team which assist players in catching and fielding balls hit by a batter or thrown by a teammate."
+	desc = "A large leather glove worn by baseball players of the defending team which assists them in catching and fielding balls hit by a batter or thrown by a teammate."
 	icon_state = "baseball"
 	item_state = "b_shoes"
 	item_color = null
@@ -19,7 +19,7 @@
 
 /obj/item/clothing/gloves/f13/leather //Make a craft recipe, and delete this comment.
 	name = "leather gloves"
-	desc = "A large leather gloves made of wasteland animals hides, that were tanned and carefully stiched together."
+	desc = "Gloves made of wasteland animals hides, that were tanned and carefully stiched together."
 	icon_state = "leather"
 	item_state = "leather"
 	item_color = null
@@ -33,7 +33,7 @@
 
 /obj/item/clothing/gloves/f13/military
 	name = "military gloves"
-	desc = "A black leather gloves, destined to strangle foes, break necks, and pull the trigger."
+	desc = "A pair of sturdy, black leather gloves.<br>Destined to strangle foes, break necks, and pull the trigger."
 	icon_state = "military"
 	item_state = "military"
 	item_color = null
@@ -47,7 +47,7 @@
 
 /obj/item/clothing/gloves/f13/ncr
 	name = "trooper gloves"
-	desc = "A large leather gloves commonly worn by NCR servicemen."
+	desc = "Large leather gloves commonly worn by NCR servicemen."
 	icon_state = "ncr"
 	item_state = "ncr"
 	item_color = null
@@ -61,7 +61,7 @@
 
 /obj/item/clothing/gloves/f13/legionlegate
 	name = "legate gloves"
-	desc = "A large metal gloves commonly worn by Caesar's Legion ranked officer - the Legate."
+	desc = "Large metal gloves commonly worn by the Legate, a ranked officer of Caesar's Legion."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
 	item_color = null
@@ -75,7 +75,7 @@
 
 /obj/item/clothing/gloves/f13/doom
 	name = "strange gloves"
-	desc = "These gloves look like a part of some sort of space suit, or maybe an exquisite armor, but you can't tell for sure."
+	desc = "These gloves look like a part of some sort of space suit, or maybe exquisite armor, but you can't tell for sure."
 	icon_state = "doom"
 	item_state = "doom"
 	item_color = null

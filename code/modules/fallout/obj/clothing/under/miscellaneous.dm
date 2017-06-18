@@ -2,11 +2,11 @@
 
 /obj/item/clothing/under/f13
 	icon = 'icons/fallout/clothing/uniforms.dmi'
-	self_weight = 1
+	self_weight = 2
 
 /obj/item/clothing/under/f13/navy
 	name = "navy jumpsuit"
-	desc = "Pre-War navy military standard uniform."
+	desc = "Pre-War standard naval uniform."
 	icon_state = "navy"
 	item_state = "bl_suit"
 	item_color = "navy"
@@ -16,7 +16,7 @@
 
 /obj/item/clothing/under/f13/navyofficer
 	name = "navy officer jumpsuit"
-	desc = "Pre-War navy military standard uniform for ranked officers."
+	desc = "Pre-War standard naval uniform for ranked officers."
 	icon_state = "navyofficer"
 	item_state = "bl_suit"
 	item_color = "navyofficer"
@@ -26,7 +26,7 @@
 
 /obj/item/clothing/under/f13/machinist
 	name = "workman outfit"
-	desc = "Apparel of an old-time machinist."
+	desc = "The apparel of an old-time machinist."
 	icon_state = "machinist"
 	item_state = "lb_suit"
 	item_color = "machinist"
@@ -34,7 +34,7 @@
 
 /obj/item/clothing/under/f13/lumberjack
 	name = "lumberjack outfit"
-	desc = "Apparel of an old-time lumberjack."
+	desc = "The apparel of an old-time lumberjack."
 	icon_state = "lumberjack"
 	item_state = "r_suit"
 	item_color = "lumberjack"
@@ -92,22 +92,22 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/dbdu
 	name = "DBDU"
 	desc = "A military Desert Battle Dress Uniform."
 	icon_state = "dbdu"
-	item_state = "xenos_suit"
+	item_state = "brownjsuit"
 	item_color = "dbdu"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
-	desc = "Perfect outfit for a brave and reckless space cowboy. Shiny!"
+	desc = "The perfect outfit for a brave and reckless space cowboy. Shiny!"
 	icon_state = "shiny"
 	item_state = "owl"
 	item_color = "shiny"
@@ -154,18 +154,18 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/bodyguard
 	name = "bodyguard outfit"
-	desc = "A grimy pre-War slacks, tie, and a dress shirt with some makeshift pauldrons made of scrap metal attached with leather straps."
+	desc = "A grimy pair of pre-War slacks, tie, and a dress shirt with some makeshift pauldrons made of scrap metal attached with leather straps."
 	icon_state = "bodyguard"
 	item_state = "sl_suit"
 	item_color = "bodyguard"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 3
+	self_weight = 4
 
 /obj/item/clothing/under/f13/rag
 	name = "torn rags"
@@ -222,7 +222,6 @@
 	icon_state = "doctor_m"
 	item_state = "brownjsuit"
 	item_color = "doctor_m"
-	allowed = list(/obj/item/weapon/scalpel, /obj/item/weapon/surgical_drapes, /obj/item/weapon/cautery, /obj/item/weapon/hemostat, /obj/item/weapon/retractor)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/doctor //Female version
@@ -232,7 +231,6 @@
 	item_state = "brownjsuit"
 	item_color = "doctor_f"
 	fitted = FEMALE_UNIFORM_TOP
-	allowed = list(/obj/item/weapon/scalpel, /obj/item/weapon/surgical_drapes, /obj/item/weapon/cautery, /obj/item/weapon/hemostat, /obj/item/weapon/retractor)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/mercadv //Male version
@@ -244,7 +242,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/female/mercadv //Female version
 	name = "female merc adventurer outfit"
@@ -256,7 +254,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/merccharm //Male version
 	name = "male merc charmer outfit"
@@ -267,7 +265,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/female/merccharm //Female version
 	name = "female merc charmer outfit"
@@ -277,9 +275,9 @@
 	item_color = "mercc_f"
 	fitted = FEMALE_UNIFORM_TOP
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	self_weight = 2
 	armor = list(melee = 10, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+	self_weight = 3
 
 /obj/item/clothing/under/f13/mechanic
 	name = "worn blue jumpsuit"
@@ -379,7 +377,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
 
 /obj/item/clothing/under/f13/enclave_officer
 	name = "officer uniform"
@@ -390,25 +387,26 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/ncr_officer
 	name = "officer uniform"
 	desc = "A standard NCR officer uniform.<br>Embroided New California Republic flag patches adorn both sleeves."
-	icon_state = "enclave_o"
+	icon_state = "ncr_o"
 	item_state = "lb_suit"
-	item_color = "enclave_o"
+	item_color = "ncr_o"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
-	self_weight = 2
+	self_weight = 3
 
 /obj/item/clothing/under/f13/ncr
 	name = "overcoat"
 	desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
+	item_state = "lb_suit"
 	item_color = "overcoat"
 	can_adjust = 1
 
@@ -420,6 +418,17 @@
 	icon_state = "tornovercoat"
 	item_color = "tornovercoat"
 	can_adjust = 0
+
+/obj/item/clothing/under/f13/general
+	name = "general overcoat"
+	desc = "A grim looking overcoat - preferable standard for General commander of New California Republic.<br>It's decorated with golden stars, and an insignia plaque that adorns the left side."
+	icon_state = "general"
+	item_state = "lb_suit"
+	item_color = "general"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+	self_weight = 3
 
 /obj/item/clothing/under/f13/recon
 	name = "recon armor"
@@ -451,7 +460,7 @@
 	name = "mysterious suit"
 	desc = "This dark suit was made by a blind man named Tommy, who ran a tailor shop in the ruins of Old Chicago.<br>It seems to be reinforced with an unknown material."
 	icon_state = "agent47"
-	item_state = "agent47"
+	item_state = "lawyer_black"
 	item_color = "agent47"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 50, bio = 10, rad = 10, fire = 10, acid = 10)
@@ -587,7 +596,7 @@
 
 /obj/item/clothing/under/female
 	icon = 'icons/fallout/clothing/uniforms.dmi'
-	self_weight = 1
+	self_weight = 2
 
 /obj/item/clothing/under/female/nursesuit
 	desc = "A jumpsuit commonly worn by nursing staff in the medical department."

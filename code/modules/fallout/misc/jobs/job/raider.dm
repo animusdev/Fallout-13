@@ -2,7 +2,7 @@
 
 /datum/job/gangleader
 	title = "Gang Leader"
-	desc = "A criminal mastermind.<br>If someone goes against you - you either make an offer one can't refuse, or make sure no one will find the dead body later."
+	desc = "A criminal mastermind.<br>If someone goes against you, you either make an offer they can't refuse, or make sure no one will find the body later."
 	flag = GANGLEAD
 	department_flag = MEDSCI
 	faction = "raiders"
@@ -39,6 +39,7 @@
 	/obj/item/clothing/head/helmet/knight/f13/rider,
 	/obj/item/clothing/head/welding/f13/fire,
 	/obj/item/clothing/head/welding/f13/japan,
+	/obj/item/clothing/glasses/eyepatch,
 	/obj/item/weapon/golf9,
 	/obj/item/weapon/harpoon,
 	/obj/item/weapon/twohanded/sledgehammer,
@@ -68,7 +69,7 @@
 
 /datum/job/raider
 	title = "Raider"
-	desc = "A bloodthirsty savage.<br>You have broken all of the existing rules but one - Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
+	desc = "A bloodthirsty savage.<br>You have broken every rule but the most important one - the Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
 	flag = RAIDER
 	department_head = list("gangleader")
 	department_flag = WASTELAND
@@ -94,6 +95,7 @@
 	/obj/item/clothing/head/helmet/f13/motorcycle,
 	/obj/item/clothing/head/helmet/f13/firefighter,
 	/obj/item/clothing/head/helmet/f13/yankee,
+	/obj/item/clothing/glasses/eyepatch,
 	/obj/item/weapon/golf9,
 	/obj/item/weapon/harpoon,
 	/obj/item/weapon/twohanded/sledgehammer,

@@ -9,6 +9,7 @@
 	desc = "Only a reptilian would find this robe nice and comfortable."
 	icon_state = "robe_liz"
 	item_state = "brownjsuit"
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 /obj/item/clothing/suit/f13/mantle_liz
 	name = "hide mantle"
@@ -18,19 +19,21 @@
 
 /obj/item/clothing/suit/f13/vest
 	name = "tan vest"
-	desc = "It's a vest made of tanned leather."
+	desc = "A vest made of tanned leather."
 	icon_state = "tanleather"
 	item_state = "det_suit"
 	body_parts_covered = CHEST
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 /obj/item/clothing/suit/f13/puffer
 	name = "puffer vest"
-	desc = "It's a worn thick vest with a brown rubbery, water-resistant shell."
+	desc = "A thick, worn-down vest with a rubbery water-resistant shell."
 	icon_state = "puffervest"
 	item_state = "det_suit"
 	body_parts_covered = CHEST
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/scalpel,/obj/item/weapon/surgical_drapes,/obj/item/weapon/cautery,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/storage/pill_bottle/dice,/obj/item/weapon/dice)
 
 /obj/item/clothing/suit/f13/battlecruiser //Do we have Star Craft here as well?!
 	name = "captain's coat"
@@ -68,12 +71,12 @@
 
 /obj/item/clothing/suit/f13/mfp/raider //"Offbeat" is actually a quote from Mad Max said by Max himself.
 	name = "offbeat jacket"
-	desc = "A black leather jacket with a metal shoulder pad.<br>The right sleeve was obviously ripped or cut away.<br>It looks like it was originally a piece of Main Force Patrol uniform."
+	desc = "A black leather jacket with a single metal shoulder pad on the right side.<br>The right sleeve was obviously ripped or cut away.<br>It looks like it was originally a piece of a Main Force Patrol uniform."
 	icon_state = "mfp_raider"
 
 /obj/item/clothing/suit/f13/lonesome
 	name = "lonesome duster"
-	desc = "A blue leather coat with number 21 on the back.<br><i>If war doesn't change, men must change, and so must their symbols.</i><br><i>Even if there is nothing at all, know what you follow.</i>"
+	desc = "A blue leather coat with the number 21 on the back.<br><i>If war doesn't change, men must change, and so must their symbols.</i><br><i>Even if there is nothing at all, know what you follow.</i>"
 	icon_state = "courier"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|GROIN
@@ -83,7 +86,7 @@
 
 /obj/item/clothing/suit/f13/veteran
 	name = "merc veteran coat"
-	desc = "A blue leather coat along with a few war medals.<br>That type of outfit is common for professional mercenaries and bounty hunters."
+	desc = "A blue leather coat adorned with war medals.<br>This type of outfit is common for professional mercenaries and bounty hunters."
 	icon_state = "veteran"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|GROIN
@@ -93,7 +96,7 @@
 
 /obj/item/clothing/suit/f13/duster
 	name = "duster"
-	desc = "A long brown leather overcoat.<br>Powerful accessory of fearsome bounty hunter."
+	desc = "A long brown leather overcoat.<br>A powerful accessory of fearsome bounty hunter."
 	icon_state = "duster"
 	item_state = "det_suit"
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
@@ -103,7 +106,7 @@
 
 /obj/item/clothing/suit/f13/sheriff
 	name = "sheriff duster"
-	desc = "A long brown leather overcoat.<br>Powerful accessory of a respectful sherif, bringer of justice."
+	desc = "A long brown leather overcoat.<br>A powerful accessory of a respectful sheriff, bringer of justice."
 	icon_state = "sheriff"
 	item_state = "det_suit"
 	self_weight = 8
@@ -113,7 +116,7 @@
 
 /obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
 	name = "tan trenchcoat"
-	desc = "A resistant, tan trenchcoat, typically worn by pre-War generals."
+	desc = "A heavy-duty tan trenchcoat typically worn by pre-War generals."
 	icon_state = "autumn"
 	item_state = "autumn"
 	self_weight = 10
@@ -138,7 +141,7 @@
 
 /obj/item/clothing/suit/f13/elder //Robes are made of finest cloth, so you won't be able to put sharp objects but pens in.
 	name = "Brotherhood Elder's robe"
-	desc = "A blue cloth robe with some scarlet red parts, traditionally worn by the Brotherhood of Steel Elder."
+	desc = "A blue cloth robe with scarlet red highlights, traditionally worn by the Brotherhood of Steel Elders."
 	icon_state = "elder"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|ARMS
@@ -150,7 +153,7 @@
 
 /obj/item/clothing/suit/bio_suit/f13/hazmat
 	name = "hazmat suit"
-	desc = "Yellow Level A , hazmat protective suit.<br>You can see some numbers on the size label: 35 56."
+	desc = "Yellow Level A , hazmat protective suit.<br>You can see some numbers on the tag: 35 56."
 	icon = 'icons/fallout/clothing/suits.dmi'
 	icon_state = "hazmat"
 	item_state = "hazmat_suit"

@@ -3,6 +3,7 @@
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
 	desc = "A giant rodent"
+	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "mole_rat"
 	icon_living = "mole_rat"
 	icon_dead = "mole_rat_dead"
@@ -17,6 +18,8 @@
 	health = 30
 	self_weight = 35
 
+	faction = "molerat"
+
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/molerat_charge1.ogg','sound/f13npc/molerat_charge2.ogg','sound/f13npc/molerat_charge3.ogg')
 
@@ -26,8 +29,6 @@
 	death_sound = 'sound/f13npc/molerat_death.ogg'
 
 	environment_smash = 0
-	faction = list("hostile", "molerat")
-	icon = 'icons/fallout/mobs/animal.dmi'
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	aggro_vision_range = 12 //I SEE EVERYTHING

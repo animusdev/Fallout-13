@@ -32,7 +32,7 @@
 
 /obj/item/clothing/suit/armor/f13/kit
 	name = "makeshift armor kit"
-	desc = "A several armor parts you can wear over the clothing to get the most basic protection against the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
+	desc = "A bunch of armor parts that can be worn over the clothing to get the most basic protection against the dangers of wasteland.<br>This armor is unable to reflect laser beams and probably won't shield the wearer from a random bullet, but it's better than no any armor at all."
 	icon_state = "armorkit"
 	item_state = "armorkit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -43,7 +43,7 @@
 
 /obj/item/clothing/suit/armor/f13/punk
 	name = "armor kit"
-	desc = "A several armor parts you can wear over the clothing for moderate protection against the dangers of wasteland.<br>Do you feel lucky now? Well, do ya, punk?"
+	desc = "A couple of armor parts that can be worn over the clothing for moderate protection against the dangers of wasteland.<br>Do you feel lucky now? Well, do ya, punk?"
 	icon_state = "punkit" //Punk it
 	item_state = "punkit" //Pun kit
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -54,7 +54,7 @@
 
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"
-	desc = "When equipped, the owner takes significantly less damage from attacks to a chest zone.<br>It's heavy and uncomfortable though."
+	desc = "When equipped, the owner takes significantly less damage from attacks to the chest.<br>It's heavy and uncomfortable, though."
 	icon_state = "metal_chestplate"
 	item_state = "metal_chestplate"
 	body_parts_covered = CHEST
@@ -62,11 +62,11 @@
 	put_on_delay = 30
 	strip_delay = 10
 	resistance_flags = FIRE_PROOF
-	self_weight = 15
+	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/tribal
 	name = "tribal armor"
-	desc = "A set of armor made of gecko hides.<br>It's pretty good for a makeshift armor."
+	desc = "A set of armor made of gecko hides.<br>It's pretty good for makeshift armor."
 	icon_state = "tribal"
 	item_state = "tribal"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -78,7 +78,7 @@
 
 /obj/item/clothing/suit/armor/f13/slam
 	name = "slammer raider armor"
-	desc = "A crude armor that appears to employ a tire of some kind as the shoulder pad, around the waist appears to be a mattress or quilt for a bed.<br>Come on and slam and you are turned to the jam!"
+	desc = "Crude armor that appears to employ a tire of some kind as the shoulder pad. What appears to be a quilt is tied around the waist.<br>Come on and slam and turn your foes to jam!"
 	icon_state = "slam"
 	item_state = "slam"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -114,7 +114,7 @@
 
 /obj/item/clothing/suit/armor/f13/leatherarmor
 	name = "leather armor"
-	desc = "A set of light armor made of boiled brahmin leather.<br>It should protect you against your average 9mm peashooter, but anything higher caliber will punch through it like butter."
+	desc = "A set of light armor made of boiled brahmin leather.<br>It should protect against the average 9mm peashooter, but anything higher caliber will punch through it like butter."
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -126,7 +126,7 @@
 
 /obj/item/clothing/suit/armor/f13/metalarmor
 	name = "metal armor"
-	desc = "A craft metal armor created from a variety of scrap pieces put on a black leather armor."
+	desc = "A set of hand-crafted metal armor created from a variety of scrap pieces attached to a black leather base layer."
 	icon_state = "metalarmor"
 	item_state = "metalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -152,7 +152,7 @@
 
 /obj/item/clothing/suit/armor/f13/legrecruit
 	name = "recruit armor"
-	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made of repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
+	desc = "Legion recruit armor is common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made of repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
@@ -163,7 +163,7 @@
 
 /obj/item/clothing/suit/armor/f13/legvexil
 	name = "vexillarius armor"
-	desc = "The armor appears to be based off of a suit of Caesar's Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the emblem of the Legion worn on the back."
+	desc = "The armor appears to be based on a suit of Caesar's Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the emblem of the Legion worn on the back."
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
@@ -185,7 +185,7 @@
 
 /obj/item/clothing/suit/armor/f13/leglegate
 	name = "legate armor"
-	desc = "The armor appears to be a full suit of heavy gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
+	desc = "The armor appears to be a full suit of heavy-gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
 	icon_state = "leglegate"
 	item_state = "leglegate"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -197,7 +197,7 @@
 
 /obj/item/clothing/suit/armor/f13/combat_mk1
 	name = "reinforced combat armor mark I"
-	desc = "An advanced and expensive pre-War model of combat armor made of complex alloys.<br>"
+	desc = "An advanced and expensive pre-War model of combat armor made of complex alloys.<br>It was common for all types of troops before the implementation of reinforced combat armor mark II"
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
@@ -209,7 +209,7 @@
 
 /obj/item/clothing/suit/armor/f13/combat_mk2
 	name = "reinforced combat armor mark II"
-	desc = "An improved version of pre-War reinforced combat armor - designed to replace it, this high tech suit was created as a lightweight, more protective armor reserved for use by American shock troops and special forces."
+	desc = "An improved version of pre-War reinforced combat armor - designed to replace it, this high tech suit was created as a lightweight, more protective set reserved for use by American shock troops and special forces."
 	icon_state = "combat_mk2"
 	item_state = "combat_mk2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
@@ -221,7 +221,7 @@
 
 /obj/item/clothing/suit/armor/f13/ncr
 	name = "trooper armor"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets. Worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
 	icon_state = "ncr_armor1"
 	item_state = "ncr_armor1"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -233,49 +233,49 @@
 
 /obj/item/clothing/suit/armor/f13/ncr/soldier
 	name = "standard issue trooper armor"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR soldiers in combat environments.<br>This one had breastplate emblazoned with the emblem of the NCR, that has slightly faded overtime."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time."
 	icon_state = "ncr_armor2"
 	item_state = "ncr_armor2"
 
 /obj/item/clothing/suit/armor/f13/ncr/patriot
 	name = "trooper armor of \"Patriot\" battalion"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor3"
 	item_state = "ncr_armor3"
 
 /obj/item/clothing/suit/armor/f13/ncr/commie
 	name = "trooper armor of \"Commie\" battalion"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
 	icon_state = "ncr_armor4"
 	item_state = "ncr_armor4"
 
 /obj/item/clothing/suit/armor/f13/ncr/preacher
 	name = "trooper armor of \"Preacher\" battalion"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor5"
 	item_state = "ncr_armor5"
 
 /obj/item/clothing/suit/armor/f13/ncr/lover
 	name = "trooper armor of \"Lover\" battalion"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR lovers in combat environments.<br>This one has a heart symbol painted over the chestplate with pink paint - it must be a battalion insignia."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR lovers in combat environments.<br>This one has a heart symbol painted over the chestplate with pink paint - it must be a battalion insignia."
 	icon_state = "ncr_armor6"
 	item_state = "ncr_armor6"
 
 /obj/item/clothing/suit/armor/f13/ncr/stalker //Cheeki breeki i v damke !!!
 	name = "trooper armor of \"Stalker\" battalion"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR explorers in combat environments.<br>This one has a radiation symbol painted over the chestplate with yellow paint - it must be a battalion insignia."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR explorers in combat environments.<br>This one has a radiation symbol painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor7"
 	item_state = "ncr_armor7"
 
 /obj/item/clothing/suit/armor/f13/ncr/punisher
 	name = "trooper armor of \"Punisher\" battalion"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR heroes and villains in combat environments.<br>This one has a skull symbol painted over the chestplate with white paint - it must be a battalion insignia."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR heroes and villains in combat environments.<br>This one has a skull symbol painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor8"
 	item_state = "ncr_armor8"
 
 /obj/item/clothing/suit/armor/f13/ncr/facewrap
 	name = "face wrap armor"
-	desc = "A set of NCR armor: an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
 	icon_state = "ncr_armor9"
 	item_state = "ncr_armor9"
 	self_weight = 6
@@ -283,7 +283,7 @@
 
 /obj/item/clothing/suit/armor/f13/sergeant
 	name = "ranger patrol armor"
-	desc = "A military-grade combat armor designed to protect key sections of the human body from ballistic trauma with hard armored plates made from complex polymers and ceramics, with a flexible body suit interwoven with thermal-dissipative membranes and bulletproof material.<br>It has a matte-finish olive drab coloring by default, making it suitable for woodland and/or urban camouflage."
+	desc = "Military-grade combat armor designed to protect key sections of the human body from ballistic trauma with hard armored plates made from complex polymers and ceramics, with a flexible body suit interwoven with thermal-dissipative membranes and bulletproof material.<br>It has a matte-finish olive drab coloring by default, making it suitable for woodland and/or urban camouflage."
 	icon_state = "sergeant"
 	item_state = "sergeant"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -295,7 +295,7 @@
 
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "veteran ranger trenchcoat"
-	desc = "An armored leather trenchcoat - traditional uniform of the Desert Rangers."
+	desc = "An armored leather trenchcoat - the traditional uniform of the Desert Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -307,7 +307,7 @@
 
 /obj/item/clothing/suit/armor/f13/rangercombat/old
 	name = "worn veteran ranger combat armor"
-	desc = "A unique armor, that has been in countless battles, and a lot of blood was shed around it."
+	desc = "A unique armor, that has been in countless battles and caused much bloodshed."
 	icon_state = "oldranger"
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 40, fire = 20, acid = 20)
@@ -378,7 +378,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla
 	name = "tesla power armor"
-	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - material is notably weaker against kinetic impacts."
+	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
 	icon_state = "tesla"
 	item_state = "tesla"
 	armor = list(melee = 50, bullet = 30, laser = 80, energy = 80, bomb = 30, bio = 100, rad = 80, fire = 80, acid = 80)
@@ -394,7 +394,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/shocktrooper
 	name = "shocktrooper power armor"
-	desc = "A \"black devil\" power armor, is a high-end model of power armor used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the mark I and II."
+	desc = "A \"Black Devil\" power armor - a high-end model used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the mark I and II."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
 	armor = list(melee = 90, bullet = 70, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 90, fire = 90, acid = 90)
@@ -437,6 +437,6 @@
 
 /obj/item/clothing/suit/armor/riot/knight/tabard
 	name = "tabard plate armor"
-	desc = "A set of plate armor with tabard for owner's high-visibility during the combat."
+	desc = "A set of plate armor with tabard for the user's high-visibility during combat."
 	icon_state = "knight_tabard"
 	item_state = "knight_tabard"

@@ -14,7 +14,7 @@
 	light_color = LIGHT_COLOR_RED
 
 /obj/machinery/vending/nukacolavend/initialize()
-	desc = pick("You can barely read the engravement on the side of a machine:<br>\"Warning: If you tamper with this unit you will have to answer to the Nuka-Cola Corporation.\"","The machine makes you nostalgic for the best days of your childhood.<br>What if there are still some bottles left? Or maybe not.","If there is anything left from humanity after all the decades of rage and stagnation, that sure is Nuka-Cola.")
+	desc = pick("You can barely read the engraving on the side of the machine...<br>\"WARNING: Those found tampering with this unit will face severe consequences from The Nuka-Cola Coporation.\"","The machine makes you nostalgic for the days of your childhood.<br>What if there are still some bottles left?","If there is anything left of humanity after all these years, certainly it is Nuka-Cola.")
 	..()
 
 /obj/machinery/vending/nukacolavend/full
@@ -27,7 +27,7 @@
 	refill_canister = /obj/item/weapon/vending_refill/nukacolavend/full
 
 /obj/machinery/vending/nukacolavend/full/initialize()
-	desc = pick("You can clearly read the engravement on the side of a machine:<br>\"Warning: If you tamper with this unit you will have to answer to the Nuka-Cola Corporation.\"","This particular machine seems to be in a better condition than something you could see out in the wastes.<br>What if there are still some bottles left?","Cola. Cola never changes.<br>The Romans waged war because they didn't try Nuka-Cola. Spain built an empire from its lust for everything but Nuka-Cola.<br>All the empires on Earth have fallen, but Cola never changes.")
+	desc = pick("You read the engraving on the side of the machine...<br>\"WARNING: Those found tampering with this unit will face severe consequences from The Nuka-Cola Corporation.\"","This particular machine seems to be in a better condition than others you have seen.<br>What if there are still some bottles left?","Cola. Cola never changes.<br>The Romans waged war because they didn't try Nuka-Cola. Spain built an empire from its lust for everything but Nuka-Cola.<br>All the empires on Earth have fallen, but Cola never changes.")
 	..()
 
 /obj/item/weapon/vending_refill/nukacolavend

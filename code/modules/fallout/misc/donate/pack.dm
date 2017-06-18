@@ -43,6 +43,8 @@
 		// Hats
 		/obj/item/clothing/head/f13/headscarf,
 		/obj/item/clothing/head/f13/pot,
+		// Goggles
+		/obj/item/clothing/glasses/regular,
 		// Uniforms
 		/obj/item/clothing/under/pants/f13/ghoul,
 		/obj/item/clothing/under/pants/f13/cloth,
@@ -106,6 +108,7 @@
 	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Experience power of Fallout 13 with our accurately developed hat simulation system.<br>This set includes five additional hats!"
 	items = list(
 		/obj/item/clothing/head/soft/f13/baseball,
+		/obj/item/clothing/head/soft/f13/utility,
 		/obj/item/clothing/head/f13/cowboy,
 		/obj/item/clothing/head/f13/bandit,
 		/obj/item/clothing/head/f13/stormchaser,
@@ -116,7 +119,7 @@
 /datum/content_pack/wardrobe
 	name = "High fashion"
 	id = "wardrobe"
-	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of worn but sturdy work boots, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: Bonus item - a dark red wasteland wanderer jacket that can be zipped up as well.</i>"
+	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of worn but sturdy work boots, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: A dark red wasteland wanderer jacket can be zipped up as well.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/explorer,
 		// Uniforms
@@ -130,6 +133,7 @@
 		/obj/item/clothing/under/f13/lumberjack,
 		/obj/item/clothing/under/f13/machinist,
 		// Suits
+		/obj/item/clothing/suit/f13/puffer,
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 		)
 	price = 120

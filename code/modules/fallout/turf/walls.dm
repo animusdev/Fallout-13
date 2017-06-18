@@ -11,7 +11,7 @@
 
 /turf/closed/wall/f13/ruins
 	name = "ruins"
-	desc = "That is all what has left from the good old days."
+	desc = "All what has left from the good old days."
 	icon = 'icons/fallout/turfs/walls/ruins.dmi'
 	icon_state = "ruins0"
 	icontype = "ruins"
@@ -75,7 +75,7 @@
 
 /turf/closed/wall/f13/wood/interior
 	name = "interior wall"
-	desc = "Interesting, what kind of material they have used so that these wallpapers are still looking good after all the centuries?"
+	desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
 	icon = 'icons/fallout/turfs/walls/interior.dmi'
 	icon_state = "interior0"
 	icontype = "interior"
@@ -112,7 +112,7 @@
 
 /turf/closed/wall/f13/tunnel
 	name = "utility tunnel wall"
-	desc = "A sturdy and cold metal wall, with various wiring and pipes laid along in a special niche."
+	desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
 	icon = 'icons/fallout/turfs/walls/tunnel.dmi'
 	icon_state = "tunnel0"
 	icontype = "tunnel"
@@ -208,7 +208,7 @@ turf/closed/indestructible/f13/splashscreen/proc/ticker()
 	while(src && istype(src,/turf/closed/indestructible/f13/splashscreen))
 		src.swapImage()
 		sleep(src.tickerPeriod)
-	to_chat(world, "Badmins spawn shit and title screen was deleted.<br>You know... I'm out of here!")
+	to_chat(world, "Badmins spawn shit and the title screen was deleted.<br>You know... I'm out of here!")
 	return
 
 //Change the time to determine how short/long the fading animation is.

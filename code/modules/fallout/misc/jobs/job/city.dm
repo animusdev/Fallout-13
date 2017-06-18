@@ -38,6 +38,7 @@
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest,
 	/obj/item/clothing/head/f13/purple,
+	/obj/item/clothing/glasses/monocle,
 	/obj/item/weapon/lighter/gold
 	)
 
@@ -92,6 +93,7 @@
 	/obj/item/clothing/suit/f13/cowboygvest,
 	/obj/item/clothing/suit/f13/cowboybvest,
 	/obj/item/clothing/suit/f13/duster,
+	/obj/item/clothing/glasses/eyepatch,
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/ammo_box/magazine/internal/cylinder/m44
 	)
@@ -129,7 +131,7 @@
 	title = "Citizen"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "A City dweller.<br>You live a better life than most of Wastelanders will ever have."
+	desc = "A City dweller.<br>You live a better life than most Wastelanders will ever have."
 	faction = "city"
 	status = "member"
 	total_positions = 10

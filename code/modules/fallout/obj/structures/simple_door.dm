@@ -162,6 +162,7 @@
 	can_disasemble = 1
 
 /obj/structure/simple_door/dirtyglass
+	desc = "A glass is dirty, you can't see a thing behind it."
 	icon_state = "dirtyglass"
 	door_type = "dirtyglass"
 
@@ -179,6 +180,7 @@
 	opaque = 0
 
 /obj/structure/simple_door/glass
+	desc = "A glass is quite clean, someone took care of this door."
 	icon_state = "glass"
 	door_type = "glass"
 	opaque = 0
@@ -196,7 +198,7 @@
 	explosion_block = 2
 
 /obj/structure/simple_door/metal/dirtystore
-	desc = "It's a metal door with dirty glass."
+	desc = "A metal door with dirty glass, you can't see a thing behind it."
 	icon_state = "dirtystore"
 	door_type = "dirtystore"
 
@@ -223,6 +225,8 @@
 	open_sound = "sound/f13machines/doorhidden_open.ogg"
 	close_sound = "sound/f13machines/doorhidden_close.ogg"
 	hard_open = 0
+	opening_time = 25
+	closing_time = 20
 
 /obj/structure/simple_door/metal/vault
 	name = "vault wall"
@@ -253,7 +257,7 @@
 	explosion_block = 10
 	hard_open = 0
 	opening_time = 30
-	closing_time = 10
+	closing_time = 20
 
 /obj/structure/simple_door/bunker
 	name = "airlock"

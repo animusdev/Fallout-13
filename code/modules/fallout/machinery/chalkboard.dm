@@ -71,7 +71,7 @@
 	var/t =  input("What do you want to write here? 20 lines or 2000 symbols max.", "Write", null, null) as message
 
 	if(length(t) > 2048)
-		usr << "\blue You can't post it all on board!"
+		usr << "\blue Your message does not fit in the board!"
 		return
 
 	//t = checkhtml(t)
@@ -130,7 +130,7 @@
 			content = null
 
 		if(CB_CONTENT)
-			desc = "A classic chalkboard for various activities involving writing and drawing.<br>Something is written out there, you start reading..."
+			desc = "A classic chalkboard for various activities involving writing and drawing.<br>Something is written on it, you start reading..."
 			desc += "<HR>"
 			desc +=	content
 			desc += "<HR>"

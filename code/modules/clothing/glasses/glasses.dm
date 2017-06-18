@@ -145,7 +145,7 @@
 //Here lies green glasses, so ugly they died. RIP
 
 /obj/item/clothing/glasses/sunglasses
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flashes."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover."
 	name = "sunglasses"
 	icon_state = "sun"
 	item_state = "sunglasses"

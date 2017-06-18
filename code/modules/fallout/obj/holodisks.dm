@@ -12,7 +12,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 3
 	throw_range = 7
-	attack_verb = list("Played holodisk")
+	attack_verb = list("had a wonderful day, and was about to examine the holodisk, but suddenly noticed that someone nearby is making rather abusive gestures, and decided to hit")
 	var/busy = 0
 	var/soundLength = 50
 	var/soundFile = 'sound/f13music/mysterious_stranger.ogg'

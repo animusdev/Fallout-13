@@ -2,7 +2,7 @@
 
 /datum/job/elder
 	title = "Elder"
-	desc = "A source of wisdom.<br>You are the one, who shall fulfill the destiny."
+	desc = "A mentor, the source of wisdom.<br>You are the one who shall fulfill destiny."
 	flag = ELDER
 	department_head = list("Brotherhood of Steel command HQ")
 	department_flag = ENGSEC
@@ -22,6 +22,8 @@
 	/obj/item/clothing/under/f13/recon,
 	/obj/item/clothing/suit/armor/f13/power_armor/t60,
 	/obj/item/clothing/head/helmet/power_armor/t60,
+	/obj/item/clothing/head/soft/f13/utility/navy,
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
 	/obj/item/weapon/twohanded/superhammer,
 	/obj/item/weapon/kitchen/knife/combat,
@@ -64,7 +66,7 @@
 
 /datum/job/paladin
 	title = "Paladin"
-	desc = "A guardian, the keeper of peace.<br>You are the one, who shall protect others."
+	desc = "A guardian, the bringer of light.<br>You are the one who shall protect others."
 	flag = PALADIN
 	department_head = list("elder")
 	department_flag = ENGSEC
@@ -82,6 +84,7 @@
 
 	required_items = list(
 	/obj/item/clothing/under/f13/recon,
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/laser/pistol,
 	/obj/item/weapon/gun/energy/laser/rifle/aer13,
 	/obj/item/weapon/twohanded/superhammer,
@@ -126,7 +129,7 @@
 
 /datum/job/knight
 	title = "Knight"
-	desc = "Bringer of the light.<br>You are the one, who shall bring justice."
+	desc = "A warrior, the keeper of peace.<br>You are the one who shall bring justice."
 	flag = KNIGHT
 	department_head = list("elder", "paladin")
 	department_flag = ENGSEC

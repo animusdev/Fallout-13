@@ -2,7 +2,7 @@
 
 /datum/job/general
 	title = "General"
-	desc = "A fate of civilization lays on your shoulders.<br>You were chosen to write history anew.<br>Make a two-headed bear proud."
+	desc = "The fate of civilization rests on your shoulders.<br>You were chosen to write history anew.<br>Make a two-headed bear proud."
 	flag = GENERAL
 	department_head = list("NCR Command HQ")
 	department_flag = WASTELAND
@@ -18,6 +18,7 @@
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	required_items = list(
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/device/radio,
 	/obj/item/weapon/lighter/gold,
@@ -51,9 +52,9 @@
 	name = "General"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
-	uniform = /obj/item/clothing/under/f13/ncr_officer
+	uniform = /obj/item/clothing/under/f13/general
 	shoes = /obj/item/clothing/shoes/laceup
-	suit = /obj/item/clothing/suit/armor/f13/sergeant
+	suit = null
 	head = /obj/item/clothing/head/f13/sergeant
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 
@@ -61,7 +62,7 @@
 
 /datum/job/ncr_sergeant
 	title = "Sergeant"
-	desc = "You have to remind Troopers to speak only when spoken to, and the first and last words out of their filthy sewers will be \"Sir\"."
+	desc = "You have to remind Troopers to speak only when spoken to, and that the first and last words out of their filthy sewers will be \"Sir\"."
 	flag = NCR_SERGEANT
 	department_head = list("general")
 	department_flag = WASTELAND
@@ -78,6 +79,7 @@
 	required_items = list(
 	/obj/item/clothing/head/f13/ncr_officer,
 	/obj/item/clothing/under/f13/ncr,
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/lighter/engraved
 	)
@@ -122,7 +124,7 @@
 
 /datum/job/vranger
 	title = "Veteran Ranger"
-	desc = "You are a shadow, no one can hear you coming - and if they see you, they know things have got serious."
+	desc = "You are a shadow. No one can hear you coming - and if they see you, they know they're a goner."
 	flag = RANGER
 	department_head = list("NCR Command HQ")
 	department_flag = WASTELAND
@@ -139,6 +141,7 @@
 	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
 
 	required_items = list(
+	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/lighter/engraved
 	)
@@ -166,7 +169,7 @@
 /datum/outfit/job/vranger
 	name = "Veteran Ranger"
 	gloves = /obj/item/clothing/gloves/f13/military
-	uniform = /obj/item/clothing/under/f13/ncr
+	uniform = /obj/item/clothing/under/f13/mechanic
 	shoes = /obj/item/clothing/shoes/f13/military/light
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/ranger

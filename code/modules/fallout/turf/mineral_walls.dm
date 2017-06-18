@@ -131,7 +131,7 @@
 
 /turf/closed/wall/mineral/wood
 	name = "wooden wall"
-	desc = "A wall made by wasteland dweller."
+	desc = "A wall made by a wasteland dweller."
 	icon = 'icons/fallout/turfs/walls/wood_crafted.dmi'
 	icon_state = "wood"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
@@ -204,7 +204,7 @@
 
 /turf/closed/wall/mineral/titanium //has to use this path due to how building walls works
 	name = "wall"
-	desc = "A light-weight titanium wall used in shuttles."
+	desc = "A lightweight titanium wall used in shuttles."
 	icon = 'icons/turf/walls/shuttle_wall.dmi'
 	icon_state = "map-shuttle"
 	sheet_type = /obj/item/stack/sheet/mineral/titanium

@@ -56,7 +56,7 @@
 	var/keyname = key
 	if(prefs.unlock_content)
 		if(prefs.toggles & MEMBER_PUBLIC)
-			keyname = "<font color='[prefs.ooccolor ? prefs.ooccolor : normal_ooc_colour]'><img style='width:9px;height:9px;' class=icon src=\ref['icons/member_content.dmi'] iconstate=blag>[keyname]</font>"
+			keyname = "<font color='[prefs.ooccolor ? prefs.ooccolor : normal_ooc_colour]'><img style='width:9px;height:9px;' class=icon src=\ref['icons/vault.dmi'] iconstate=boy[rand(1,8)]>[keyname]</font>"
 
 	for(var/client/C in clients)
 		if(C.prefs.chat_toggles & CHAT_OOC)
@@ -80,9 +80,9 @@
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
 
-	if(!mob)	
+	if(!mob)
 		return
-	
+
 	if(IsGuestKey(key))
 		to_chat(src, "Guests may not use OOC.")
 		return
