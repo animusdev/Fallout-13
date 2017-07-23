@@ -2162,7 +2162,7 @@
 "aPD" = (/obj/structure/chair{dir = 1},/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/village)
 "aPE" = (/obj/structure/table/wood/settler,/obj/machinery/microwave,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/f13/wood,/area/f13/village)
 "aPF" = (/obj/structure/chair/wood{tag = "icon-wooden_chair_settler (NORTH)"; icon_state = "wooden_chair_settler"; dir = 1},/obj/effect/landmark/start{name = "Citizen"},/turf/open/floor/f13/wood,/area/f13/village)
-"aPG" = (/obj/structure/simple_door/metal/ventilation,/turf/closed/wall/f13/tunnel,/area/f13/caves)
+"aPG" = (/obj/structure/simple_door/metal/ventilation,/turf/open/floor/plating,/area/f13/caves)
 "aPH" = (/obj/effect/spawner/lootdrop/trash,/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottomright"; icon_state = "horizontalbottomborderbottomright"},/area/f13/wasteland)
 "aPI" = (/obj/effect/spawner/lootdrop/trash,/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom2left"; icon_state = "horizontalbottomborderbottom2left"},/area/f13/wasteland)
 "aPJ" = (/obj/structure/simple_door/house{tag = "icon-dirtyglassopen"; icon_state = "dirtyglassopen"},/turf/open/floor/f13/wood,/area/f13/village)

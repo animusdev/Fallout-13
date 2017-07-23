@@ -7,7 +7,10 @@
 	kind = INDIVIDUAL
 
 	check_mob(mob/living/carbon/human/H)
-		return 1
+		var/faction = H.social_faction
+		if(faction == "city" || faction == "raiders" || faction == "neutral")
+			return 1
+		return 0
 
 	assignto_mind(datum/mind/M, var/list/data = list())
 		var/mob/living/mob = M.current
