@@ -22,7 +22,7 @@
 	self_weight = 200
 	healable = 0
 
-	faction = list("hostile", "enclave")
+	faction = list("hostile")
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
