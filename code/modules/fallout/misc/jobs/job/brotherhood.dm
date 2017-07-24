@@ -185,3 +185,50 @@
 	weapon = /obj/item/weapon/gun/energy/laser/rifle
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak = 1, \
 	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat = 1)
+
+/datum/job/scriber
+	title = "Scriber"
+	desc = "Brotherhood's memory holder."
+	flag = KNIGHT
+	department_head = list("elder", "paladin")
+	department_flag = ENGSEC
+	faction = "bs"
+	status = "scriber"
+	total_positions = 7
+	spawn_positions = 7
+	supervisors = "Elder"
+	selection_color = "#ec9d9d"
+	minimal_player_age = 7
+
+	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+
+	outfit = /datum/outfit/job/scriber
+
+	access = list()
+	minimal_access = list()
+
+/datum/outfit/job/scriber
+	name = "Scriber"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/combat
+	shoes = /obj/item/clothing/shoes/f13/tan
+	suit = /obj/item/clothing/suit/f13/scribe

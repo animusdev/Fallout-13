@@ -297,7 +297,7 @@ mob/proc/set_status(var/status)
 /datum/status/elder
 	name = "Elder"
 	id = "elder"
-	can_invite_to = list("paladin", "knight", "initiate")
+	can_invite_to = list("paladin", "knight", "scriber", "initiate")
 	purge_faction = "bs"
 	color = "#13306d"
 
@@ -310,6 +310,12 @@ mob/proc/set_status(var/status)
 /datum/status/knight
 	name = "Knight"
 	id = "knight"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/scriber
+	name = "Scriber"
+	id = "scriber"
 	purge_faction = "bs"
 	color = "#13306d"
 
