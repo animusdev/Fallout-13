@@ -1,4 +1,4 @@
-##Fallout 13 Beta 0.1
+## Fallout 13 Beta 0.1
 
 **Website:** https://www.reddit.com/r/Fallout13
 
@@ -6,7 +6,7 @@
 
 **Discord:**  https://discord.me/fallout13official
 
-##Terms of service
+## Terms of service
 
 A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under /tg/ Station 13 terms, and thus rendering your project closed-source will likely cause considerable sanctions on their behalf. Honestly, we tried it ourselves - it didn't work, and Byond administration officially disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
 
@@ -23,7 +23,7 @@ If you desire to host your own server based of Fallout 13 source code - you may 
 
 Stated terms of service fully comply with the original AGPL v3 license of /tg/ Station 13, as long as this applies to the running server of unofficial community.
 
-##Credits
+## Credits
 
 **Code:**
 
@@ -44,7 +44,7 @@ _Praise our Overlords!_
 
 And all the others who made our dreams come true.
 
-##Soundtrack
+## Soundtrack
 
 Music by Harry James Orchestra 1939-1946.
 
@@ -60,31 +60,29 @@ Tracks are listed in order of appearance:
 
 You can download zip archive with unedited music tracks here:
 
-http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip
+[click](http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip)
 
-##Disclaimer
+## Disclaimer
 
 **Note: This is not associated with Bethesda Softworks in any way! Fallout 13 is neither a trademark, nor a commercial product.
 2017 Bethesda Softworks LLC. Trademarks belong to their respective owners.**
 
-##LICENSE
+## LICENSE
 
 **Fallout 13 is based of /tg/ Station 13 source code and thus is licensed and distributed accordingly.**
 
-All source code of /tg/ Station 13 after commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under GNU AGPL v3 (http://www.gnu.org/licenses/agpl-3.0.html).
+All source code of /tg/ Station 13 after commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU AGPL v3](http://www.gnu.org/licenses/agpl-3.0.html).
 
-All source code of /tg/ Station 13 code before commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under GNU GPL v3 (https://www.gnu.org/licenses/gpl-3.0.html).
+All source code of /tg/ Station 13 code before commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).
 (Including tools unless their readme specifies otherwise.)
 
 See LICENSE-AGPLv3.txt and LICENSE-GPLv3.txt for more details.
 
 tgui clientside is licensed as a subproject under the MIT license.
 Font Awesome font files, used by tgui, are licensed under the SIL Open Font License v1.1
-tgui assets are licensed under a Creative Commons Attribution-ShareAlike 4.0 International License
-(http://creativecommons.org/licenses/by-sa/4.0/).
+tgui assets are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 See tgui/LICENSE.md for the MIT license.
 See tgui/assets/fonts/SIL-OFL-1.1-LICENSE.md for the SIL Open Font License.
 
-All assets including icons and sound are under a Creative Commons 3.0 BY-SA
-license (http://creativecommons.org/licenses/by-sa/3.0/) unless otherwise indicated.
+All assets including icons and sound are under a [Creative Commons 3.0 BY-SA license](http://creativecommons.org/licenses/by-sa/3.0/) unless otherwise indicated.
