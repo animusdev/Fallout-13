@@ -319,12 +319,7 @@ var/inerror = 0
 
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
-
 	s += "<b>[station_name()]</b>";
-	s += " ("
-	s += "<a href=\"https://ss13.ru">"
-	s += "</a>"
-	s += ")"
 
 	var/list/features = list()
 
