@@ -74,10 +74,10 @@
 	var/server
 	var/banappeals
 	var/wikiurl = "http://fallout-13.wikia.com/wiki/Fallout_13_Wikia" // default wiki
-	var/forumurl = "https://www.reddit.com/r/Fallout13/" //default forums
-	var/rulesurl = "https://goo.gl/IsvOqU" // default rules
-	var/discord = "https://discord.gg/K2Yxxvs" //default chat
-	var/bitbucket = "https://bitbucket.org/Jackerzz/fallout-13/issues/new" //default code
+	var/forumurl = "https://forum.ss13.ru" //default forums
+	var/rulesurl = "https://wiki.ss13.ru/index.php?title=Заглавная_страница" // default rules
+	var/discord = "https://discord.gg/NQsQdJC" //default chat
+	var/bitbucket = "https://github.com/animusdev/Fallout-13" //default code
 
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0

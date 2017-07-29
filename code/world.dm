@@ -322,12 +322,9 @@ var/inerror = 0
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://discord.gg/K2Yxxvs\">" //Change this to wherever you want the hub to link to.
-//	s += "[game_version]"
-	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "<a href=\"https://ss13.ru">"
 	s += "</a>"
 	s += ")"
-	s += "<img src='http://i.imgur.com/UrVghOE.gif'><br>"
 
 	var/list/features = list()
 
