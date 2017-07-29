@@ -348,7 +348,7 @@ var/inerror = 0
 		features += "~[n] player"
 
 	if (!host && config && config.hostedby)
-		features += "follow us at <b>reddit.com/r/Fallout13</b>"
+		features += "hosted by <b>Zlofenix</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
