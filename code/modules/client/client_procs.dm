@@ -344,9 +344,11 @@ var/next_external_rsc = 0
 	var/admin_rank = "Player"
 	if (src.holder && src.holder.rank)
 		admin_rank = src.holder.rank.name
-	else
-		if (check_randomizer(connectiontopic))
-			return
+
+	// TODO: FIX RANDOMIZER CHECK
+	//else
+	//	if (check_randomizer(connectiontopic))
+	//		return
 
 	var/watchreason = check_watchlist(sql_ckey)
 	if(watchreason)
