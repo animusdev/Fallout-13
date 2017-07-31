@@ -72,7 +72,6 @@
 	w_class = 3
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
-	fire_delay = 5
 
 /obj/item/weapon/gun/energy/laser/pistol
 	name ="Laser Pistol"
@@ -105,7 +104,7 @@
 	icon_state = "laser-rifle13"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/aer13)
 	burst_size = 2
-	fire_delay = 5
+	fire_delay = 3
 
 /obj/item/weapon/gun/energy/laser/rifle/tri
 	name ="Tribeam"
