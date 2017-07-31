@@ -189,7 +189,7 @@
 /datum/job/scriber
 	title = "Scriber"
 	desc = "Brotherhood's memory holder."
-	flag = KNIGHT
+	flag = SCRIBER
 	department_head = list("elder", "paladin")
 	department_flag = ENGSEC
 	faction = "bs"
