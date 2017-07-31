@@ -2,8 +2,8 @@
 
 /obj/item/projectile/beam/plasma
 	name = "plasma"
-	damage = 40
-	irradiate = 15
+	damage = 32
+	irradiate = 4
 	icon_state = "plasma"
 	icon = 'icons/fallout/objects/guns/projectiles.dmi'
 	impact_effect_type = /obj/effect/overlay/temp/impact_effect/plasma
@@ -12,4 +12,4 @@
 
 /obj/item/projectile/beam/plasma/turbo
 	name = "turbo plasma"
-	damage = 75
+	damage = 64

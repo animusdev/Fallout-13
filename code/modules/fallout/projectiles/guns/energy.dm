@@ -1,42 +1,16 @@
-//Fallout 13 energy firearms directory
-
-/*
-/obj/item/weapon/gun/energy/laser/wattz1000
-	name = "Laser pistol"
-	desc = "A Wattz 1000 Laser Pistol. Civilian model, so the wattage is lower than military or police versions"
-	icon_state = "wattz1000"
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
-	origin_tech = "combat=2;magnets=2"
-
-/obj/item/weapon/gun/energy/wattz2000
-	name = "wattz2000"
-	desc = "A Wattz 2000 Laser Rifle"
-	icon_state = "wattz2000"
-	item_state = "wattz2000"
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	w_class = 4
-	force = 10
-	flags =  CONDUCT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
-	ammo_x_offset = 3
-*/
-
-//////////PLASMA/////////
-
 /obj/item/weapon/gun/energy/plasma
 	name ="Plasma Rifle"
 	icon_state = "plasma"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
-	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
+	desc = "A Plasma Rifle Shoots a bolt of superheated plasma."
 	origin_tech = "combat=4;magnets=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma)
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 	fire_sound = 'sound/f13weapons/plasmarifle.ogg'
-	burst_size = 2
+	burst_size = 1
 	shaded_charge = 1
-	fire_delay = 20
+	fire_delay = 5
 
 /obj/item/weapon/gun/energy/plasma/glock
 	name ="Glock86"
@@ -50,6 +24,7 @@
 	zoomable = TRUE
 	zoom_amt = 3
 	scopetype = /obj/screen/fullscreen/scope/tech
+	fire_delay = 10
 
 /obj/item/weapon/gun/energy/plasma/pistol
 	name ="Plasma Pistol"
@@ -60,6 +35,7 @@
 	weapon_weight = WEAPON_LIGHT
 	w_class = WEIGHT_CLASS_NORMAL
 	burst_size = 1
+	fire_delay = 6
 
 /obj/item/weapon/gun/energy/plasma/tri
 	name ="Multiplas"
@@ -69,6 +45,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	burst_size = 1
 	w_class = 3
+	fire_delay = 15
 
 /obj/item/weapon/gun/energy/plasma/turbo
 	name ="turbo plasma rifle"
@@ -79,7 +56,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/turbo)
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_HUGE
-	fire_delay = 20
+	fire_delay = 15
 	w_class = 4
 
 ///////LASERS//////
@@ -91,10 +68,11 @@
 	desc = "Rapid capacitor weapon."
 	origin_tech = "combat=6;magnets=6"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
-	burst_size = 5 //Fuck yeah
+	burst_size = 3 //Fuck yeah
 	w_class = 3
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
+	fire_delay = 5
 
 /obj/item/weapon/gun/energy/laser/pistol
 	name ="Laser Pistol"
@@ -104,7 +82,7 @@
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser)
 	burst_size = 1
-	fire_delay = 2
+	fire_delay = 3
 	w_class = 2
 	weapon_weight = WEAPON_LIGHT
 	w_class = WEIGHT_CLASS_NORMAL
@@ -116,7 +94,8 @@
 	desc = "Laser rifles are high-tech weapons that emit a concentrated beam of coherent light, with sufficient wattage to do considerable damage."
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle)
-	burst_size = 2
+	burst_size = 1
+	fire_delay = 3
 	w_class = 3
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
@@ -125,7 +104,8 @@
 	name ="Laser Rifle AER13"
 	icon_state = "laser-rifle13"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/aer13)
-	burst_size = 3
+	burst_size = 2
+	fire_delay = 5
 
 /obj/item/weapon/gun/energy/laser/rifle/tri
 	name ="Tribeam"
@@ -133,4 +113,5 @@
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/tri)
 	burst_size = 1
+	fire_delay = 5
 	w_class = 3
