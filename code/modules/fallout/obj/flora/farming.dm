@@ -19,7 +19,7 @@
 	icon_dead = "broc-dead"
 	icon_harvest = "broc-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("nutriment" = 0.1, "salglu_solution" = 0.05, "initropidril" = 0.08)
+	reagents_add = list("nutriment" = 0.1, "salglu_solution" = 0.05)
 
 
 /obj/item/seeds/xander
@@ -40,7 +40,7 @@
 	icon_grow = "xander-grow"
 	icon_dead = "xander-dead"
 	icon_harvest = "xander-harvest"
-	reagents_add = list("vitamin" = 0.1, "nutriment" = 0.1, "crank" = 0.1, "bath_salts" = 0.02)
+	reagents_add = list("vitamin" = 0.1, "nutriment" = 0.1)
 
 /obj/item/seeds/mutfruit
 	name = "pack of mutfruit seeds"
@@ -61,7 +61,7 @@
 	icon_dead = "mutfruit-dead"
 	icon_harvest = "mutfruit-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1, "vitfro" = 0.01)
+	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1)
 
 /obj/item/seeds/ferocactus
 	name = "pack of ferocactus seeds"

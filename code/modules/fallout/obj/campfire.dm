@@ -78,9 +78,6 @@
 	else
 		set_light(1)
 	var/turf/open/location = get_turf(src)//shity code detected
-	if(istype(location))
-		var/datum/gas_mixture/affected = location.air
-		affected.temperature *= 1.01
 
 /obj/structure/campfire/proc/fire(mob/living/user)
 

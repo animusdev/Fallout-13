@@ -433,7 +433,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 
 //Get saved outfit of "job"
 /datum/preferences/proc/GetOutfit(job)
-	if(!outfits || !job)
+	if(!job)
 		return null
 	if(ispath(job))
 		. = outfits[job]
