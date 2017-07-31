@@ -109,7 +109,7 @@
 	desc = "A pre-War ballistic assembly, designed to provide moderate protection in combat.<br>Overtime the model became significantly less effective, and was replaced with reinforced combat helmet mark I."
 	icon_state = "marine"
 	item_state = "marine"
-	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 20)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 30
@@ -122,7 +122,7 @@
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
 	flags = HEADCOVERSEYES
-	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 20, acid = 20)
+	armor = list(melee = 50, bullet = 50, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 40
@@ -134,7 +134,7 @@
 	desc = "A complex ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
 	icon_state = "combat_mk2"
 	item_state = "combat_mk2"
-	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 40, acid = 40)
+	armor = list(melee = 60, bullet = 50, laser = 40, energy = 30, bomb = 50, bio = 0, rad = 0, fire = 50, acid = 40)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 30
@@ -158,7 +158,7 @@
 	desc = "An old military helmet with a built-in night vision device, commonly worn by Veteran Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
-	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 80, fire = 50, acid = 20)
+	armor = list(melee = 60, bullet = 50, laser = 40, energy = 30, bomb = 50, bio = 0, rad = 80, fire = 50, acid = 40)
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 10
@@ -374,7 +374,7 @@
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 90, bullet = 70, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 90, fire = 90, acid = 90)
+	armor = list(melee = 90, bullet = 90, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -413,7 +413,7 @@
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80, fire = 90, acid = 90)
+	armor = list(melee = 80, bullet = 80, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -452,7 +452,7 @@
 	icon_state = "tesla"
 	item_state = "tesla"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 50, bullet = 30, laser = 80, energy = 80, bomb = 30, bio = 100, rad = 80, fire = 80, acid = 80)
+	armor = list(melee = 80, bullet = 50, laser = 80, energy = 100, bomb = 70, bio = 100, rad = 100, fire = 80, acid = 80)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -491,7 +491,7 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 70, bullet = 50, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70, fire = 80, acid = 80)
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -530,7 +530,7 @@
 	icon_state = "t60helmet"
 	item_state = "t60helmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80, fire = 70, acid = 70)
+	armor = list(melee = 80, bullet = 60, laser = 50, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -548,7 +548,7 @@
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80, fire = 70, acid = 70)
+	armor = list(melee = 80, bullet = 60, laser = 40, energy = 20, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -566,7 +566,7 @@
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 100, rad = 60, fire = 60, acid = 60)
+	armor = list(melee = 80, bullet = 50, laser = 40, energy = 20, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT

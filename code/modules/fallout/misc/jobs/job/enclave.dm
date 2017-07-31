@@ -146,8 +146,8 @@
 
 	required_items = list(
 	/obj/item/clothing/under/f13/bdu,
-	/obj/item/clothing/suit/armor/f13/power_armor/advanced,
-	/obj/item/clothing/head/helmet/power_armor/advanced,
+	/obj/item/clothing/suit/armor/f13/combat_mk2,
+	/obj/item/clothing/head/helmet/f13/combat_mk2,
 	/obj/item/clothing/head/soft/f13/utility/olive,
 	/obj/item/weapon/gun/energy/plasma/pistol
 	)

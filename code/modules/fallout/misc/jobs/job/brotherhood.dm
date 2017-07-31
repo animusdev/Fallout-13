@@ -179,8 +179,8 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = /obj/item/clothing/head/helmet/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/combat_mk1
+	head = /obj/item/clothing/head/helmet/f13/combat_mk1
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rifle
 	belt_contents = list(/obj/item/weapon/reagent_containers/pill/patch/stimpak = 1, \
