@@ -42,14 +42,14 @@ var/datum/subsystem/content/SScontent
 	return all_content_packs[id]
 
 /datum/subsystem/content/proc/get_user_money(ckey)
-	var/DBQuery/query = Db.NewQuery("SELECT sum FROM Z_donators WHERE byond = \"[ckey]\"")
+	var/DBQuery/query = Db.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
 	query.Execute()
 	if(!query.NextRow())
 		return 0
 
 	var/amount = round(text2num(query.item[1]))
 
-	query = Db.NewQuery("SELECT sum(price) FROM donate WHERE ckey = \"[ckey]\"")
+	query = Db.NewQuery("SELECT sum(price) FROM donate WHERE ckey = '[ckey]'")
 	query.Execute()
 
 	if(!query.NextRow())
@@ -60,7 +60,7 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content/proc/get_packs(ckey)
 	var/list/results = list()
-	var/DBQuery/query = Db.NewQuery("SELECT pack FROM donate WHERE ckey = \"[ckey]\"")
+	var/DBQuery/query = Db.NewQuery("SELECT pack FROM donate WHERE ckey = '[ckey]'")
 	query.Execute()
 
 	while(query.NextRow())
@@ -70,8 +70,9 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content/proc/buy_pack(ckey, pack_id, price)
 	if(system_state)
-		var/DBQuery/query = Db.NewQuery("INSERT INTO 'donate' VALUES(\"[ckey]\", \"[pack_id]\", [price])")
+		var/DBQuery/query = Db.NewQuery("INSERT INTO donate(ckey, pack, price) VALUES ('[ckey]', '[pack_id]', [price])");
 		query.Execute()
+
 		return 1
 	return 0
 
