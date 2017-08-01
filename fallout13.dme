@@ -1223,6 +1223,7 @@
 #include "code\modules\fallout\misc\death_screens.dm"
 #include "code\modules\fallout\misc\overlays.dm"
 #include "code\modules\fallout\misc\radiation.dm"
+#include "code\modules\fallout\misc\respawn_mob.dm"
 #include "code\modules\fallout\misc\scope_screens.dm"
 #include "code\modules\fallout\misc\weight.dm"
 #include "code\modules\fallout\misc\whitelist.dm"
