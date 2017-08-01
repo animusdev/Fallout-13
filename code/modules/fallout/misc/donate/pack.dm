@@ -159,6 +159,23 @@
 		)
 	price = 180
 
+/datum/content_pack/followers
+	name = "Followers set"
+	id = "follower"
+	desc = "<b>Available to: All factions!</b> : If all doctors on the wasteland are dead, then who is he?"
+	items = list(
+		/obj/item/clothing/suit/toggle/labcoat/f13/followers,
+		/obj/item/clothing/under/f13/doctor,
+		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/gloves/color/latex,
+		/obj/item/clothing/glasses/regular,
+		/obj/item/clothing/mask/joy,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/weapon/storage/backpack/satchel/leather,
+		/obj/item/weapon/storage/firstaid
+	)
+	price = 220
+
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor"
 	id = "trooper_armor"
