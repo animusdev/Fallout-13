@@ -70,6 +70,10 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	if(step > time_cycle_steps.len)
 		step = STEP_DAY
 		dodaychange()
+
+	if(step == STEP_NIGHT)
+		respawn_mob()
+
 		/*
 	switch(step)
 		if(STEP_MORNING)
