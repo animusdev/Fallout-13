@@ -120,7 +120,7 @@
 		new_player_panel()
 
 	if(href_list["contribute"])
-		src << link("http://fallout13.ru/payment/index.php?ckey=[client.ckey]")
+		src << link("http://zlobilling.org/services/ss13-5")
 
 	if(href_list["observe"])
 
