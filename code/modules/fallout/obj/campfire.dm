@@ -77,7 +77,6 @@
 		set_light(3)
 	else
 		set_light(1)
-	var/turf/open/location = get_turf(src)//shity code detected
 
 /obj/structure/campfire/proc/fire(mob/living/user)
 

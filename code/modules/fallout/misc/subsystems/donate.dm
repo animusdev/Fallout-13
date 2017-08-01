@@ -15,14 +15,10 @@ var/datum/subsystem/content/SScontent
 
 	wait = 600
 
-	var/DBConnection/Db = new()
-
 /datum/subsystem/content/New()
 	NEW_SS_GLOBAL(SScontent)
 
 /datum/subsystem/content/Initialize(start_timeofday)
-	Db.Connect("dbi:mysql:forum2:[sqladdress]:[sqlport]","[sqlfdbklogin]","[sqlfdbkpass]")
-
 	system_state = check_connection()
 	load_content_packs()
 	update_all_data()
@@ -42,14 +38,14 @@ var/datum/subsystem/content/SScontent
 	return all_content_packs[id]
 
 /datum/subsystem/content/proc/get_user_money(ckey)
-	var/DBQuery/query = Db.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
+	var/DBQuery/query = dbcon.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
 	query.Execute()
 	if(!query.NextRow())
 		return 0
 
 	var/amount = round(text2num(query.item[1]))
 
-	query = Db.NewQuery("SELECT sum(price) FROM donate WHERE ckey = '[ckey]'")
+	query = dbcon.NewQuery("SELECT sum(price) FROM donate WHERE ckey = '[ckey]'")
 	query.Execute()
 
 	if(!query.NextRow())
@@ -60,7 +56,7 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content/proc/get_packs(ckey)
 	var/list/results = list()
-	var/DBQuery/query = Db.NewQuery("SELECT pack FROM donate WHERE ckey = '[ckey]'")
+	var/DBQuery/query = dbcon.NewQuery("SELECT pack FROM donate WHERE ckey = '[ckey]'")
 	query.Execute()
 
 	while(query.NextRow())
@@ -70,7 +66,7 @@ var/datum/subsystem/content/SScontent
 
 /datum/subsystem/content/proc/buy_pack(ckey, pack_id, price)
 	if(system_state)
-		var/DBQuery/query = Db.NewQuery("INSERT INTO donate(ckey, pack, price) VALUES ('[ckey]', '[pack_id]', [price])");
+		var/DBQuery/query = dbcon.NewQuery("INSERT INTO donate(ckey, pack, price) VALUES ('[ckey]', '[pack_id]', [price])");
 		query.Execute()
 
 		return 1
@@ -78,7 +74,7 @@ var/datum/subsystem/content/SScontent
 
 
 /datum/subsystem/content/proc/check_connection()
-	return Db.IsConnected()
+	return dbcon.IsConnected()
 
 /datum/subsystem/content/proc/load_content_packs()
 	var/list/all_packs = subtypesof(/datum/content_pack)
