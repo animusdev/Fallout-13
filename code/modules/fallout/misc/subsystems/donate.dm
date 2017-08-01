@@ -44,6 +44,10 @@ var/datum/subsystem/content/SScontent
 /datum/subsystem/content/proc/get_user_money(ckey)
 	var/DBQuery/query = Db.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
 	query.Execute()
+
+	if(query.ErrorMsg() != "")
+		world.log << "SQL Error: [query.ErrorMsg()]"
+
 	if(!query.NextRow())
 		return 0
 
@@ -51,6 +55,9 @@ var/datum/subsystem/content/SScontent
 
 	query = dbcon.NewQuery("SELECT sum(price) FROM donate WHERE ckey = '[ckey]'")
 	query.Execute()
+
+	if(query.ErrorMsg() != "")
+		world.log << "SQL Error: [query.ErrorMsg()]"
 
 	if(!query.NextRow())
 		return amount
@@ -63,6 +70,9 @@ var/datum/subsystem/content/SScontent
 	var/DBQuery/query = dbcon.NewQuery("SELECT pack FROM donate WHERE ckey = '[ckey]'")
 	query.Execute()
 
+	if(query.ErrorMsg() != "")
+		world.log << "SQL Error: [query.ErrorMsg()]"
+
 	while(query.NextRow())
 		results += query.item[1]
 
@@ -72,6 +82,9 @@ var/datum/subsystem/content/SScontent
 	if(system_state)
 		var/DBQuery/query = dbcon.NewQuery("INSERT INTO donate(ckey, pack, price) VALUES ('[ckey]', '[pack_id]', [price])");
 		query.Execute()
+
+		if(query.ErrorMsg() != "")
+			world.log << "SQL Error: [query.ErrorMsg()]"
 
 		return 1
 	return 0
