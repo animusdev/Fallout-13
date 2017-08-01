@@ -15,10 +15,14 @@ var/datum/subsystem/content/SScontent
 
 	wait = 600
 
+	var/DBConnection/Db = new()
+
 /datum/subsystem/content/New()
 	NEW_SS_GLOBAL(SScontent)
 
 /datum/subsystem/content/Initialize(start_timeofday)
+	Db.Connect("dbi:mysql:forum2:[sqladdress]:[sqlport]","[sqlfdbklogin]","[sqlfdbkpass]")
+
 	system_state = check_connection()
 	load_content_packs()
 	update_all_data()
@@ -38,7 +42,7 @@ var/datum/subsystem/content/SScontent
 	return all_content_packs[id]
 
 /datum/subsystem/content/proc/get_user_money(ckey)
-	var/DBQuery/query = dbcon.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
+	var/DBQuery/query = Db.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
 	query.Execute()
 	if(!query.NextRow())
 		return 0
@@ -74,7 +78,7 @@ var/datum/subsystem/content/SScontent
 
 
 /datum/subsystem/content/proc/check_connection()
-	return dbcon.IsConnected()
+	return dbcon.IsConnected() && Db.IsConnected()
 
 /datum/subsystem/content/proc/load_content_packs()
 	var/list/all_packs = subtypesof(/datum/content_pack)
