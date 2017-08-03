@@ -440,6 +440,9 @@ var/datum/subsystem/job/SSjob
 	if(job && H)
 		job.after_spawn(H)
 
+	else
+		H.forceMove(get_turf(pick(latejoin)))
+
 	return H
 
 
