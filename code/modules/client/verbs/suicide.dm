@@ -166,9 +166,22 @@
 	if(!..())
 		return
 	if(!canmove || restrained())	//just while I finish up the new 'fun' suiciding verb. This is to prevent metagaming via suicide
-		to_chat(src, "You can't commit suicide whilst restrained! ((You can type Ghost instead however.))")
+		to_chat(src, "You can't commit suicide whilst restrained!")
 		return
 	if(has_brain_worms())
 		to_chat(src, "You can't bring yourself to commit suicide!")
 		return
+	return TRUE
+
+/mob/living/carbon/human/canSuicide()
+	if(!..())
+		return FALSE
+
+	if(!src.mind)
+		return FALSE
+
+	if(src.mind.assigned_role == "Raider")
+		to_chat(src, "Fuck off, piece of grief shit.")
+		return FALSE
+
 	return TRUE
