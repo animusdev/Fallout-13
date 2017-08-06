@@ -56,8 +56,10 @@ var/datum/subsystem/vote/SSvote
 		total_votes += votes
 		if(votes > greatest_votes)
 			greatest_votes = votes
+
+	// FUCK U -- Konata
 	//default-vote for everyone who didn't vote
-	if(!config.vote_no_default && choices.len)
+	/*if(!config.vote_no_default && choices.len)
 		var/list/non_voters = directory.Copy()
 		non_voters -= voted
 		for (var/non_voter_ckey in non_voters)
@@ -73,7 +75,7 @@ var/datum/subsystem/vote/SSvote
 				if(master_mode in choices)
 					choices[master_mode] += non_voters.len
 					if(choices[master_mode] >= greatest_votes)
-						greatest_votes = choices[master_mode]
+						greatest_votes = choices[master_mode]*/
 	//get all options with that many votes and return them in a list
 	. = list()
 	if(greatest_votes)
