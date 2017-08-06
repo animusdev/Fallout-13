@@ -427,6 +427,10 @@ var/next_mob_id = 0
 		to_chat(usr, "<span class='boldnotice'>You must be dead to use this!</span>")
 		return
 
+	if(world.time - src.timeofdeath < 6660) // Ave Satanas
+		to_chat(usr, "<span class='boldnotice'>You must wait [Floor((world.time - src.timeofdeath)/10)] seconds to respawn!</span>")
+		return
+
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
 	to_chat(usr, "<span class='boldnotice'>Please roleplay correctly!</span>")

@@ -220,12 +220,6 @@
 /mob/living/verb/succumb(whispered as null)
 	set hidden = 1
 
-	if(ishuman(src))
-		var/mob/living/carbon/human/H = src
-		if(H.mind && H.mind.assigned_role == "Raider")
-			to_chat(src, "Fuck off, piece of grief shit.")
-			return
-
 	if (InCritical())
 		src.attack_log += "[src] has [whispered ? "whispered his final words" : "succumbed to death"] with [round(health, 0.1)] points of health!"
 		src.adjustOxyLoss(src.health - HEALTH_THRESHOLD_DEAD)

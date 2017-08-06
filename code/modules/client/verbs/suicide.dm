@@ -180,8 +180,4 @@
 	if(!src.mind)
 		return FALSE
 
-	if(src.mind.assigned_role == "Raider")
-		to_chat(src, "Fuck off, piece of grief shit.")
-		return FALSE
-
 	return TRUE
