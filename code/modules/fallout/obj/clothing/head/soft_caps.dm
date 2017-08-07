@@ -21,6 +21,7 @@
 	desc = "An eight-pointed hat, with a visor similar to a baseball cap, known as utility cover, also called the utility cap or eight-pointed cover."
 	icon_state = "utility_gsoft"
 	item_color = "utility_g"
+
 /obj/item/clothing/head/soft/f13/utility/navy
 	name = "navy utility cover"
 	icon_state = "utility_nsoft"
