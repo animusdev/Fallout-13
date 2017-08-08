@@ -71,12 +71,18 @@
 /obj/item/weapon/gun/energy/attackby(obj/item/A, mob/user, params)
 	..()
 	if (istype(A, /obj/item/weapon/stock_parts/cell))
+		var/obj/O = power_supply
+
 		user.remove_from_mob(A)
 		power_supply = A
 		power_supply.forceMove(src)
 		recharge_newshot(1)
 		to_chat(user, "<span class='notice'>You load a new power cell into \the [src].</span>")
 		update_icon()
+
+		if(O)
+			O.forceMove(get_turf(src.loc))
+			user.put_in_hands(O)
 
 /obj/item/weapon/gun/energy/attack_self(mob/living/user)
 /*
