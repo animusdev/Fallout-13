@@ -353,6 +353,8 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	can_toggle = 1
+	if(cooldown < world.time - 30) // Cooldown что бы не ложили сервер
+	recent_uses++
 
 /obj/item/clothing/head/helmet/power_armor/badmin/New()
 	..()
@@ -433,6 +435,8 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	can_toggle = 1
+	if(cooldown < world.time - 30) // Cooldown что бы не ложили сервер
+	recent_uses++
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced/New()
 	..()
@@ -473,6 +477,8 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	can_toggle = 1
+	if(cooldown < world.time - 30) // Cooldown что бы не ложили сервер
+	recent_uses++
 
 /obj/item/clothing/head/helmet/power_armor/tesla/New()
 	..()
@@ -513,6 +519,8 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	can_toggle = 1
+	if(cooldown < world.time - 30) // Cooldown что бы не ложили сервер
+	recent_uses++
 
 /obj/item/clothing/head/helmet/power_armor/advanced/New()
 	..()
