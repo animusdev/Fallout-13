@@ -10,11 +10,13 @@
 	icon_state = "baseballsoft"
 	item_color = "baseball"
 
+
 /obj/item/clothing/head/soft/f13/enclave
 	name = "officer hat"
 	desc = "A standard-issue Enclave officer's cap."
 	icon_state = "enclavesoft"
 	item_color = "enclave"
+
 
 /obj/item/clothing/head/soft/f13/utility
 	name = "grey utility cover"

@@ -179,6 +179,7 @@
 
 /obj/item/clothing/head/helmet/f13/ranger/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	sleep(32)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
@@ -359,6 +360,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/badmin/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	sleep(32)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
@@ -398,6 +400,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/shocktrooper/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	sleep(32)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
@@ -437,6 +440,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	sleep(32)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
@@ -476,6 +480,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/tesla/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	sleep(32)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))
@@ -515,6 +520,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/advanced/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	sleep(32)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)
 	if(iscarbon(user))

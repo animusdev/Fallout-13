@@ -9,7 +9,6 @@
 	desc = "A police peaked cap of dark blue in color with a silver-colored badge on the frontside.<br>The badge is inscribed with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max 3 1985
 	name = "pith helmet"
@@ -24,21 +23,18 @@
 	desc = "A foldable military cap with straight sides, with insignia of People's Liberation Army, that was supposedly worn by regular troops."
 	icon_state = "chinese_s"
 	item_state = "secsoft"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/chinese_officer
 	name = "chinese side cap"
 	desc = "A foldable military cap with straight sides, with insignia of People's Liberation Army, that was supposedly worn by low rank officers."
 	icon_state = "chinese_o"
 	item_state = "secsoft"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/chinese_commander
 	name = "chinese peaked cap"
 	desc = "A peaked cap of dark green in color with a red star on the frontside.<br>It obviously belonged to a high rank officer of People's Liberation Army."
 	icon_state = "chinese_c"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/stormchaser
 	name = "stormchaser hat"
