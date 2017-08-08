@@ -174,7 +174,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 //Returns whether or not a player is a guest using their ckey as an input
 /proc/IsGuestKey(key)
-	if (findtext(key, "Guest-", 1, 7) != 1) //was findtextEx
+	return 0 // REMOVE WHEN EVERYTHING ENDS
+
+	/*if (findtext(key, "Guest-", 1, 7) != 1) //was findtextEx
 		return 0
 
 	var/i, ch, len = length(key)
@@ -183,7 +185,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		ch = text2ascii(key, i)
 		if (ch < 48 || ch > 57)
 			return 0
-	return 1
+	return 1*/
 
 //Generalised helper proc for letting mobs rename themselves. Used to be clname() and ainame()
 /mob/proc/rename_self(role)
