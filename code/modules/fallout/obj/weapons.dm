@@ -74,7 +74,7 @@
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
-	w_class = 2
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/golf10
 	name = "10 iron"
@@ -87,7 +87,7 @@
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
-	w_class = 2
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/golf/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
