@@ -1217,6 +1217,7 @@
 #include "code\modules\fallout\machinery\light_sources\bar.dm"
 #include "code\modules\fallout\machinery\light_sources\street_light.dm"
 #include "code\modules\fallout\misc\air_clearing.dm"
+#include "code\modules\fallout\misc\autolate_designs.dm"
 #include "code\modules\fallout\misc\boarding.dm"
 #include "code\modules\fallout\misc\craft_recipes.dm"
 #include "code\modules\fallout\misc\curl.dm"

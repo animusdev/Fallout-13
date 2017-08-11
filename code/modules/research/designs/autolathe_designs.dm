@@ -640,14 +640,6 @@
 	build_path = /obj/item/ammo_casing/shotgun/dart
 	category = list("hacked", "Security")
 
-/datum/design/incendiary_slug
-	name = "Incendiary slug"
-	id = "incendiary_slug"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
-	build_path = /obj/item/ammo_casing/shotgun/incendiary
-	category = list("hacked", "Security")
-
 /datum/design/a357
 	name = "Ammo box (.357)"
 	id = "a357"
@@ -656,28 +648,60 @@
 	build_path = /obj/item/ammo_box/a357
 	category = list("hacked", "Security")
 
-/datum/design/c10mm
-	name = "Ammo box (10mm)"
-	id = "c10mm"
+/datum/design/c9mm
+	name = "Magazine (9mm)"
+	id = "c9mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 30000)
-	build_path = /obj/item/ammo_box/c10mm
+	build_path = /obj/item/ammo_box/magazine/F13/m9
+	category = list("hacked", "Security")
+
+/datum/design/c10mm
+	name = "Magazine (10mm)"
+	id = "c10mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 40000)
+	build_path = /obj/item/ammo_box/magazine/F13/m10
 	category = list("hacked", "Security")
 
 /datum/design/c45
 	name = "Ammo box (.45)"
 	id = "c45"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
+	materials = list(MAT_METAL = 40000)
 	build_path = /obj/item/ammo_box/c45
 	category = list("hacked", "Security")
 
-/datum/design/c9mm
-	name = "Ammo box (9mm)"
-	id = "c9mm"
+/datum/design/c44mm
+	name = "speed loader (.44)"
+	id = "c44mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
-	build_path = /obj/item/ammo_box/c9mm
+	materials = list(MAT_METAL = 50000)
+	build_path = /obj/item/ammo_box/F13/m44
+	category = list("hacked", "Security")
+
+/datum/design/c44mm
+	name = "rifle magazine (.308)"
+	id = "c308mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 60000)
+	build_path = /obj/item/ammo_box/magazine/F13/m308
+	category = list("hacked", "Security")
+
+/datum/design/c308mm
+	name = "rifle magazine (.308)"
+	id = "c308mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 60000)
+	build_path = /obj/item/ammo_box/magazine/F13/m308
+	category = list("hacked", "Security")
+
+/datum/design/c223mm
+	name = "rifle magazine (.223)"
+	id = "c223mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 60000)
+	build_path = /obj/item/ammo_box/magazine/F13/m223
 	category = list("hacked", "Security")
 
 /datum/design/cleaver
