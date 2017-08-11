@@ -26,8 +26,8 @@
 	/obj/item/weapon/harpoon,
 	/obj/item/device/radio,
 	/obj/item/weapon/lighter/gold,
-	/obj/item/weapon/reagent_containers/pill/patch/stimpak,
-	/obj/item/weapon/reagent_containers/pill/patch/supstimpak
+	/obj/item/weapon/reagent_containers/f13stimpack,
+	/obj/item/weapon/reagent_containers/f13stimpack/super
 	)
 
 	denied_items = list(
@@ -86,7 +86,7 @@
 	/obj/item/weapon/harpoon,
 	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved,
-	/obj/item/weapon/reagent_containers/pill/patch/stimpak
+	/obj/item/weapon/reagent_containers/f13stimpack
 	)
 
 	denied_items = list(
@@ -145,7 +145,7 @@
 	/obj/item/weapon/harpoon,
 	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved,
-	/obj/item/weapon/reagent_containers/pill/patch/stimpak
+	/obj/item/weapon/reagent_containers/f13stimpack
 	)
 
 	denied_items = list(
