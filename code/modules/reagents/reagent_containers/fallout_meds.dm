@@ -1,4 +1,4 @@
-//Fallout 13 syringes by (moron) Gargule
+//Fallout 13 syringes by Gargule
 /obj/item/weapon/reagent_containers/f13stimpack //(Gargule)
 	name = "Stimpack"
 	desc = "A stimpak, or stimulation delivery package, is a type of hand-held medication used for healing the body. This item consists of a syringe for containing and delivering the medication and a gauge for measuring the status of the stimpak's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds."
@@ -13,13 +13,6 @@
 	var/def_volume = 8
 	var/reloadable = 0
 	var/ignore_flags = 1
-
-/obj/item/weapon/reagent_containers/f13stimpack/New()
-	..()
-
-	// u r braindead, Gargule -- Konata
-	for(var/r in src.list_reagents)
-		src.reagents.add_reagent(r, list_reagents[r])
 
 /obj/item/weapon/reagent_containers/f13stimpack/update_icon()
 	if(reagents.total_volume > 0)
