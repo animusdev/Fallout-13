@@ -78,7 +78,7 @@
 /obj/item/ammo_box/F13/m44
 	name = "speed loader (.44)"
 	desc = "Designed to quickly reload revolvers."
-	icon_state = "38"
+	icon_state = "b38"
 	ammo_type = /obj/item/ammo_casing/F13/m44
 	max_ammo = 6
 	multiple_sprites = 1
