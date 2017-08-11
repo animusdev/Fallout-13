@@ -1345,6 +1345,7 @@
 #include "code\modules\fallout\obj\structures\well.dm"
 #include "code\modules\fallout\obj\structures\window.dm"
 #include "code\modules\fallout\projectiles\projectile.dm"
+#include "code\modules\fallout\projectiles\ammunition\bullets.dm"
 #include "code\modules\fallout\projectiles\ammunition\energy.dm"
 #include "code\modules\fallout\projectiles\ammunition\magazines.dm"
 #include "code\modules\fallout\projectiles\guns\ballistic.dm"

@@ -199,7 +199,7 @@
 		/obj/item/clothing/suit/armor/f13/power_armor/ncr,
 		/obj/item/weapon/twohanded/largehammer,
 		/obj/item/weapon/gun/ballistic/automatic/rifle,
-		/obj/item/ammo_box/magazine/m308
+		/obj/item/ammo_box/magazine/F13/m308
 		)
 	price = 180
 
@@ -234,9 +234,15 @@
 	items = list(
 		/obj/item/weapon/golf10,
 		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
-		/obj/item/ammo_box/magazine/m10mm_adv,
+		/obj/item/ammo_box/magazine/F13/m10,
+		/obj/item/ammo_box/magazine/F13/m10/heap,
+		/obj/item/ammo_box/magazine/F13/m10/armourpiercing,
+		/obj/item/ammo_box/magazine/F13/m10/toxic,
 		/obj/item/weapon/gun/ballistic/automatic/smg10mm,
-		/obj/item/ammo_box/magazine/m10mm_auto
+		/obj/item/ammo_box/magazine/F13/m10smg,
+		/obj/item/ammo_box/magazine/F13/m10smg/heap,
+		/obj/item/ammo_box/magazine/F13/m10smg/armourpiercing,
+		/obj/item/ammo_box/magazine/F13/m10smg/toxic,
 		)
 	price = 240
 
