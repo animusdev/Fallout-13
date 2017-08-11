@@ -129,9 +129,9 @@
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
 	category = CAT_MISC
 
-/obj/item/weapon/reagent_containers/f13stimpack
+/datum/crafting_recipe/stimpak
 	name = "Stimpak"
-	result = /obj/item/weapon/reagent_containers/pill/patch/stimpak
+	result = /obj/item/weapon/reagent_containers/f13stimpack
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 1,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1,
 				/obj/item/crafting/wonderglue = 1)
@@ -139,9 +139,9 @@
 	time = 50
 	category = CAT_MISC
 
-/obj/item/weapon/reagent_containers/f13stimpack/super
+/datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"
-	result = /obj/item/weapon/reagent_containers/pill/patch/supstimpak
+	result = /obj/item/weapon/reagent_containers/f13stimpack/super
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 2,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 2,
 				/obj/item/crafting/wonderglue = 2)
