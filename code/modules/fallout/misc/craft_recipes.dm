@@ -129,7 +129,7 @@
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
 	category = CAT_MISC
 
-/datum/crafting_recipe/stimpak
+/obj/item/weapon/reagent_containers/f13stimpack
 	name = "Stimpak"
 	result = /obj/item/weapon/reagent_containers/pill/patch/stimpak
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 1,
@@ -139,7 +139,7 @@
 	time = 50
 	category = CAT_MISC
 
-/datum/crafting_recipe/superstimpak
+/obj/item/weapon/reagent_containers/f13stimpack/super
 	name = "Super Stimpak"
 	result = /obj/item/weapon/reagent_containers/pill/patch/supstimpak
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 2,
