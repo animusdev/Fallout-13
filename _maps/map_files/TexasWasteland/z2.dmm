@@ -996,7 +996,7 @@
 "th" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
 "ti" = (/obj/structure/chair{dir = 4},/mob/living/simple_animal/hostile/molerat,/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
 "tj" = (/obj/effect/spawner/lootdrop/trash,/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
-"tk" = (/obj/structure/table/reinforced,/obj/effect/spawner/lootdrop/ammo,/obj/effect/spawner/lootdrop/ammo,/obj/item/ammo_box/m308{pixel_y = -10},/obj/item/ammo_box/c10mm,/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
+"tk" = (/obj/structure/table/reinforced,/obj/effect/spawner/lootdrop/ammo,/obj/effect/spawner/lootdrop/ammo,/obj/item/ammo_box/c10mm,/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
 "tl" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/ammo,/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
 "tm" = (/obj/structure/rack,/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "dark"},/area/f13/building)
 "tn" = (/obj/structure/foamedmetal,/turf/open/indestructible/ground/mountain,/area/f13/caves)

@@ -8,7 +8,7 @@
 	w_class = 2
 	force = 13
 	origin_tech = "combat=2;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
+	mag_type = /obj/item/ammo_box/magazine/F13/m10
 	fire_sound = "10mmfire"
 	can_suppress = 1
 	burst_size = 1
@@ -44,7 +44,7 @@
 	item_state = "shotgun"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/m308
+	mag_type = /obj/item/ammo_box/magazine/F13/m308
 	can_suppress = 1
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM
@@ -79,33 +79,14 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	scopetype = /obj/screen/fullscreen/scope/medium
 
-/obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	name = "Assault Rifle 5.56mm"
-	desc = "Also known as a Service Rifle by NCR troops, the Assault Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
-	icon_state = "assault-rifle"
-	item_state = "assault"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	origin_tech = "combat=3;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/m556
-	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
-	can_suppress = 0
-	casing_ejector = 1
-	weapon_weight = WEAPON_MEDIUM
-	slot_flags = SLOT_BACK
-	w_class = WEIGHT_CLASS_BULKY
-	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
-	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
-	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
-	wielded_icon = "assault-wielded"//Two handing
-
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	name = "10-mm submachine gun"
 	desc = "An H&K MP9 submachine gun (10mm caliber variant). A average submachine gun which can operate in both single and automatic fire modes."
 	icon_state = "smg10mm"
-	item_state = "m90"
+	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
+	mag_type = /obj/item/ammo_box/magazine/F13/m10smg
 	fire_sound = "10mmfire"
 	can_suppress = 0
 	burst_size = 3
@@ -138,6 +119,25 @@
 	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
 	recoil = 2
 
+/obj/item/weapon/gun/ballistic/automatic/assault_rifle
+	name = "Assault Rifle 5.56mm"
+	desc = "Also known as a Service Rifle by NCR troops, the Assault Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
+	icon_state = "assault-rifle"
+	item_state = "assault"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	origin_tech = "combat=3;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/F13/m223
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	can_suppress = 0
+	casing_ejector = 1
+	weapon_weight = WEAPON_MEDIUM
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	wielded_icon = "assault-wielded"//Two handing
+
 /obj/item/weapon/gun/ballistic/automatic/bozar
 	name = "\improper Bozar"
 	desc = "The ultimate refinement of the sniper's art.<br>Although somewhat finicky and prone to jamming if not kept immacuately clean, its accuracy more than makes up for its extra maintenance requirements."
@@ -146,14 +146,14 @@
 	item_state = "arg" //Looks like bozar
 	slot_flags = 0
 	origin_tech = "combat=6;engineering=3;"
-	mag_type = /obj/item/ammo_box/magazine/m223
-	weapon_weight = WEAPON_HEAVY
+	mag_type = /obj/item/ammo_box/magazine/F13/m223
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
 	can_suppress = 0
 	burst_size = 3
 	fire_delay = 1
 	zoomable = TRUE
 	zoom_amt = 7
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_HUGE
-	recoil = 3
+	recoil = 2
 	scopetype = /obj/screen/fullscreen/scope/long

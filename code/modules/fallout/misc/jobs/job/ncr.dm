@@ -175,9 +175,9 @@
 	head = /obj/item/clothing/head/helmet/f13/ranger
 	belt = /obj/item/weapon/storage/belt/military/assault
 	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
-	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1, \
-		/obj/item/weapon/reagent_containers/f13stimpack = 2, \
-		/obj/item/ammo_box/m44 = 3, \
+	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1,
+		/obj/item/weapon/reagent_containers/f13stimpack = 2,
+		/obj/item/ammo_box/F13/m44/heap = 3,
 		/obj/item/device/radio = 1)
 
 
