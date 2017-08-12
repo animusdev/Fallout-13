@@ -1,32 +1,5 @@
 //Fallout 13 wasteland medicine directory
 
-/obj/item/weapon/reagent_containers/pill/patch/healingpowder
-	name = "Healing powder"
-	desc = "A foul-smelling primitive healing medicine.<br>It is widespread in the wasteland due to easy production - all kinds of Wastelanders from Settlers to Mercenaries use it to heal minor injuries.<br>Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
-	list_reagents = list("omnizine" = 20, "salglu_solution" = 10)
-	icon = 'icons/fallout/objects/medicine/chemical.dmi'
-	icon_state = "heal_powder"
-	item_state = "bandaid"
-	self_weight = 0.05
-
-/obj/item/weapon/reagent_containers/pill/patch/stimpak
-	name = "Stimpak"
-	desc = "A stimpak, or stimulation delivery package, is a type of hand-held medication used for healing the body. This item consists of a syringe for containing and delivering the medication and a gauge for measuring the status of the stimpak's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds."
-	list_reagents = list("styptic_powder" = 20, "silver_sulfadiazine" = 20, "oxandrolone" = 5, "morphine" = 5)
-	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	icon_state = "stim_15"
-	item_state = "syringe_15"
-	self_weight = 0.1
-
-/obj/item/weapon/reagent_containers/pill/patch/supstimpak
-	name = "SuperStimpak"
-	desc = "The super version of the Stimpak has an additional vial containing more powerful drugs than the basic model, as well as a leather belt to strap the needle to the injured limb."
-	list_reagents = list("styptic_powder" = 40, "silver_sulfadiazine" = 40, "oxandrolone" = 10, "morphine" = 10, "salglu_solution" = 20)
-	icon = 'icons/fallout/objects/medicine/syringe.dmi'
-	icon_state = "superstim_15"
-	item_state = "syringe_15"
-	self_weight = 0.1
-
 /obj/item/weapon/reagent_containers/pill/patch/medx
 	name = "Med-X"
 	desc = "Med-X is a potent opiate analgesic that binds to opioid receptors in the brain and central nervous system, reducing the perception of pain as well as the emotional response to pain.<br>Essentially, it is a painkiller delivered via hypodermic needle."

@@ -105,8 +105,26 @@
 	//mentats pills
 /obj/item/weapon/reagent_containers/pill/mentats
 	name = "Mentats"
-	desc = "Help you, if you stupid. Possible..."
+	desc = "Helps you, if you stupid. Possible..."
 	icon_state = "pill10"
-	list_reagents = list("mentats" = 50)
-	roundstart = 1
+	list_reagents = list("mentats" = 20)
+	roundstart = 0
 
+//magic_powder
+/obj/item/stack/medical/healingpowder
+	name = "Healing powder"
+	singular_name = "healing powder"
+	desc = "A foul-smelling primitive healing medicine.<br>It is widespread in the wasteland due to easy production - all kinds of Wastelanders from Settlers to Mercenaries use it to heal minor injuries.<br>Soldiers of the Legion use healing powder as their primary source of medicine and healing, since the Legion bans the use of other chems, such as stimpaks."
+	icon = 'icons/fallout/objects/medicine/chemical.dmi'
+	icon_state = "heal_powder"
+	item_state = "bandaid"
+	heal_brute = 15
+	heal_burn = 15
+	self_delay = 20
+
+/obj/item/stack/medical/attack(mob/living/M, mob/user) //need MORE hardcode by your moron
+	if(iscarbon(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.bleedsuppress) //so you can't stack bleed suppression
+			H.suppress_bloodloss(600)
+	..()

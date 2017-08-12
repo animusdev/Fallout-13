@@ -204,7 +204,7 @@
 	/obj/item/weapon/spear,
 	/obj/item/weapon/harpoon,
 	/obj/item/device/radio,
-	/obj/item/weapon/reagent_containers/pill/patch/healingpowder
+	/obj/item/stack/medical/healingpowder
 	)
 
 	denied_items = list(
@@ -262,7 +262,7 @@
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/spear,
 	/obj/item/weapon/harpoon,
-	/obj/item/weapon/reagent_containers/pill/patch/healingpowder
+	/obj/item/stack/medical/healingpowder
 	)
 
 	denied_items = list(
@@ -297,4 +297,4 @@
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/weapon/storage/wallet=1,/obj/item/weapon/reagent_containers/pill/patch/healingpowder)
+	/obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder)
