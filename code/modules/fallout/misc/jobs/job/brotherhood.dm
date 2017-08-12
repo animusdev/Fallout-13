@@ -15,7 +15,7 @@
 	minimal_player_age = 7
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/clothing/gloves/f13/military,
@@ -78,7 +78,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	outfit = /datum/outfit/job/paladin
 
@@ -141,7 +141,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/clothing/under/f13/recon,
@@ -200,7 +200,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	denied_items = list(
 	/obj/item/clothing/shoes/f13/rag,

@@ -17,7 +17,7 @@
 
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/weapon/machete,
@@ -77,7 +77,7 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/weapon/machete,
@@ -136,7 +136,7 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/weapon/machete,
@@ -195,7 +195,7 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/clothing/head/helmet/f13/legdecan/alt,
@@ -255,7 +255,7 @@
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
 
-	allowed_packs = list("starter", "cigarettes", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(
 	/obj/item/weapon/machete,

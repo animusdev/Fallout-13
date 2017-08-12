@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/gangleader
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/military,
@@ -83,7 +83,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/raider
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/glasses/f13/biker,

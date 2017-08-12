@@ -34,7 +34,7 @@
 	damage_type = TOX
 
 /obj/item/projectile/bullet/F13/c9mmBullet/fire
-	damage = 10
+	damage = 7
 
 /obj/item/projectile/bullet/F13/c9mmBullet/fire/on_hit(atom/target, blocked = 0)
 	if(..(target, blocked))
@@ -59,7 +59,7 @@
 	damage_type = TOX
 
 /obj/item/projectile/bullet/F13/c10mmBullet/fire
-	damage = 12
+	damage = 8
 
 /obj/item/projectile/bullet/F13/c10mmBullet/fire/on_hit(atom/target, blocked = 0)
 	if(..(target, blocked))
@@ -67,7 +67,32 @@
 		M.adjust_fire_stacks(1)
 		M.IgniteMob()
 
-//Bullets library: 44mm
+//Bullets library: 5.56
+/obj/item/projectile/bullet/F13/c556Bullet
+	damage = 22
+
+/obj/item/projectile/bullet/F13/c556Bullet/heap
+	damage = 36
+	armour_penetration = -28
+
+/obj/item/projectile/bullet/F13/c556Bullet/armourpiercing
+	damage = 18
+	armour_penetration = 28
+
+/obj/item/projectile/bullet/F13/c556Bullet/toxic
+	damage = 20
+	damage_type = TOX
+
+/obj/item/projectile/bullet/F13/c556Bullet/fire
+	damage = 11
+
+/obj/item/projectile/bullet/F13/c556Bullet/fire/on_hit(atom/target, blocked = 0)
+	if(..(target, blocked))
+		var/mob/living/M = target
+		M.adjust_fire_stacks(1)
+		M.IgniteMob()
+
+//Bullets library: .44
 /obj/item/projectile/bullet/F13/c44mmBullet
 	damage = 34
 
@@ -92,7 +117,7 @@
 		M.adjust_fire_stacks(1)
 		M.IgniteMob()
 
-//Bullets library: 308mm
+//Bullets library: .308
 /obj/item/projectile/bullet/F13/c308mmBullet
 	damage = 36
 
@@ -109,7 +134,7 @@
 	armour_penetration = 44
 
 /obj/item/projectile/bullet/F13/c308mmBullet/fire
-	damage = 28
+	damage = 18
 
 /obj/item/projectile/bullet/F13/c308mmBullet/fire/on_hit(atom/target, blocked = 0)
 	if(..(target, blocked))
@@ -117,26 +142,26 @@
 		M.adjust_fire_stacks(1)
 		M.IgniteMob()
 
-//Bullets library: 223mm
-/obj/item/projectile/bullet/F13/c223mmBullet
-	damage = 22
+//Bullets library: .223
+/obj/item/projectile/bullet/F13/c223Bullet
+	damage = 28
 
-/obj/item/projectile/bullet/F13/c223mmBullet/toxic
-	damage = 20
+/obj/item/projectile/bullet/F13/c223Bullet/toxic
+	damage = 24
 	damage_type = TOX
 
-/obj/item/projectile/bullet/F13/c223mmBullet/heap
-	damage = 36
+/obj/item/projectile/bullet/F13/c223Bullet/heap
+	damage = 44
 	armour_penetration = -32
 
-/obj/item/projectile/bullet/F13/c223mmBullet/armourpiercing
-	damage = 18
+/obj/item/projectile/bullet/F13/c223Bullet/armourpiercing
+	damage = 22
 	armour_penetration = 32
 
-/obj/item/projectile/bullet/F13/c223mmBullet/fire
-	damage = 16
+/obj/item/projectile/bullet/F13/c223Bullet/fire
+	damage = 14
 
-/obj/item/projectile/bullet/F13/c223mmBullet/fire/on_hit(atom/target, blocked = 0)
+/obj/item/projectile/bullet/F13/c223Bullet/fire/on_hit(atom/target, blocked = 0)
 	if(..(target, blocked))
 		var/mob/living/M = target
 		M.adjust_fire_stacks(1)
