@@ -79,6 +79,16 @@
 		return ..()
 
 /obj/item/clothing/attackby(obj/item/W, mob/user, params)
+	//Sasargule [moron]
+	if(istype(W,/obj/item/weapon/kitchen/knife))
+		//bidlokod_mode = true. Someone, fix it, pls.
+		new /obj/item/stack/sheet/cloth/(get_turf(user))
+		new /obj/item/stack/sheet/cloth/(get_turf(user))
+		new /obj/item/stack/sheet/cloth/(get_turf(user))
+		new /obj/item/stack/sheet/cloth/(get_turf(user))
+		del src
+		return
+
 	if(damaged_clothes && istype(W, /obj/item/stack/sheet/cloth))
 		var/obj/item/stack/sheet/cloth/C = W
 		C.use(1)
