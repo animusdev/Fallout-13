@@ -88,3 +88,25 @@
 	list_reagents = list("supstimpackium" = 12)
 //end
 
+//Mentats
+
+/obj/item/weapon/storage/pill_bottle/mentats
+	name = "Mentats"
+	desc = "Old, torn box with some pills in it."
+	icon = 'icons/fallout/objects/medicine/chemical.dmi'
+	icon_state = "mentats"
+	storage_slots = 8
+
+/obj/item/weapon/storage/pill_bottle/mentats/New()
+	..()
+	for(var/i in 1 to 8)
+		new /obj/item/weapon/reagent_containers/pill/mentats(src)
+
+	//mentats pills
+/obj/item/weapon/reagent_containers/pill/mentats
+	name = "Mentats"
+	desc = "Help you, if you stupid. Possible..."
+	icon_state = "pill10"
+	list_reagents = list("mentats" = 50)
+	roundstart = 1
+
