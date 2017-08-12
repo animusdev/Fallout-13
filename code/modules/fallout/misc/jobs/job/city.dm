@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/mayor
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/brownie,
@@ -85,7 +85,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/under/f13/cowboyg,
@@ -142,7 +142,7 @@
 	minimal_access = list()
 	outfit = /datum/outfit/job/citizen
 
-	allowed_packs = list("starter", "cigarettes", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
+	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
