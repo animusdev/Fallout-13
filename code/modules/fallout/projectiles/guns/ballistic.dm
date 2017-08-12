@@ -120,14 +120,15 @@
 	recoil = 2
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	name = "Assault Rifle 5.56mm"
-	desc = "Also known as a Service Rifle by NCR troops, the Assault Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
+	name = "Battle Rifle Ра15"
+	desc = "Also known as a Service Rifle by NCR troops, the Battle Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
 	icon_state = "assault-rifle"
 	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/F13/m223
+	mag_type = /obj/item/ammo_box/magazine/F13/m556
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	burst_size = 2
 	can_suppress = 0
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM

@@ -124,6 +124,30 @@
 	name = "rifle magazine (.308) (+FIRE!)"
 	ammo_type = /obj/item/ammo_casing/F13/m308/fire
 
+/obj/item/ammo_box/magazine/F13/m556
+	name = "rifle magazine (5.56mm)"
+	icon_state = "5.56m"
+	ammo_type = /obj/item/ammo_casing/F13/a556
+	caliber = "a556"
+	max_ammo = 20
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/F13/m556/heap
+	name = "rifle magazine (5.56mm) (+Heap!)"
+	ammo_type = /obj/item/ammo_casing/F13/a556/heap
+
+/obj/item/ammo_box/magazine/F13/m556/armourpiercing
+	name = "rifle magazine (5.56mm) (+AP!)"
+	ammo_type = /obj/item/ammo_casing/F13/a556/armourpiercing
+
+/obj/item/ammo_box/magazine/F13/m556/toxic
+	name = "rifle magazine (5.56mm) (+TOXIC!)"
+	ammo_type = /obj/item/ammo_casing/F13/a556/toxic
+
+/obj/item/ammo_box/magazine/F13/m556/fire
+	name = "rifle magazine (5.56mm) (+FIRE!)"
+	ammo_type = /obj/item/ammo_casing/F13/a556/fire
+
 /obj/item/ammo_box/F13/m308
 	name = "ammo box (.308)"
 	icon_state = "9mmbox"
@@ -193,6 +217,8 @@
 /obj/item/ammo_box/F13/m223/fire
 	name = "ammo box (.223) (+FIRE!)"
 	ammo_type = /obj/item/ammo_casing/F13/m223/fire
+
+
 
 //Internal magazines
 /obj/item/ammo_box/magazine/internal/shot/m308

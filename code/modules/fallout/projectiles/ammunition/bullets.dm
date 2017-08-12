@@ -80,18 +80,37 @@
 /obj/item/ammo_casing/F13/m223
 	desc = "A .223 bullet casing."
 	caliber = "223mm"
-	projectile_type = /obj/item/projectile/bullet/F13/c223mmBullet
+	projectile_type = /obj/item/projectile/bullet/F13/c223Bullet
 	randomspread = 1
 	variance = 3
 
 /obj/item/ammo_casing/F13/m223/heap
-	projectile_type = /obj/item/projectile/bullet/F13/c223mmBullet/heap
+	projectile_type = /obj/item/projectile/bullet/F13/c223Bullet/heap
 
 /obj/item/ammo_casing/F13/m223/armourpiercing
-	projectile_type = /obj/item/projectile/bullet/F13/c223mmBullet/armourpiercing
+	projectile_type = /obj/item/projectile/bullet/F13/c223Bullet/armourpiercing
 
 /obj/item/ammo_casing/F13/m223/toxic
-	projectile_type = /obj/item/projectile/bullet/F13/c223mmBullet/toxic
+	projectile_type = /obj/item/projectile/bullet/F13/c223Bullet/toxic
 
 /obj/item/ammo_casing/F13/m223/fire
-	projectile_type = /obj/item/projectile/bullet/F13/c223mmBullet/fire
+	projectile_type = /obj/item/projectile/bullet/F13/c223Bullet/fire
+
+/obj/item/ammo_casing/F13/a556
+	desc = "A 5.56 bullet casing."
+	caliber = "223mm"
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet
+	randomspread = 1
+	variance = 2
+
+/obj/item/ammo_casing/F13/a556/heap
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/heap
+
+/obj/item/ammo_casing/F13/a556/armourpiercing
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/armourpiercing
+
+/obj/item/ammo_casing/F13/a556/toxic
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/toxic
+
+/obj/item/ammo_casing/F13/a556/fire
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/fire

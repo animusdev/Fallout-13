@@ -116,7 +116,8 @@
 	head = /obj/item/clothing/head/f13/sergeant
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	belt_contents = list(/obj/item/ammo_box/magazine/m556 = 3, \
+	belt_contents = list(/obj/item/ammo_box/magazine/F13/m556 = 2, \
+		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1, \
 		/obj/item/weapon/reagent_containers/f13stimpack = 2, \
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
 		/obj/item/device/radio = 1, \
@@ -235,4 +236,5 @@
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, \
-	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/m556 = 3)
+	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/F13/m556 = 2, \
+		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1)

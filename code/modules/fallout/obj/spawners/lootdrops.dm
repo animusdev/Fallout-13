@@ -26,6 +26,14 @@
 	/obj/item/crafting/timer = 5,
 	/obj/item/crafting/sensor = 5)
 
+/obj/effect/spawner/lootdrop/med_medium
+	color = "#FFAAFA"
+	loot = list(
+	/obj/item/weapon/reagent_containers/pill/patch/radaway = 1,
+	/obj/item/weapon/reagent_containers/f13stimpack = 1,
+	/obj/item/weapon/reagent_containers/f13stimpack = 1,
+	/obj/item/weapon/reagent_containers/f13stimpack/super = 1)
+
 /obj/effect/spawner/lootdrop/wrange_low
 	color = "#CCCCCC"
 	loot = list(
@@ -95,7 +103,12 @@
 	/obj/item/ammo_box/F13/m223 = 1,
 	/obj/item/ammo_box/F13/m223/heap = 1,
 	/obj/item/ammo_box/F13/m223/armourpiercing = 1,
-	/obj/item/ammo_box/F13/m223/toxic = 1)
+	/obj/item/ammo_box/F13/m223/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m556 = 1,
+	/obj/item/ammo_box/magazine/F13/m556/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m556/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m556/fire = 1)
 
 /obj/effect/spawner/lootdrop/snacks
 	color = "#FF00FF"
