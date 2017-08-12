@@ -123,7 +123,7 @@
 
 /datum/crafting_recipe/healingpowder
 	name = "Healing Powder"
-	result = /obj/item/weapon/reagent_containers/pill/patch/healingpowder
+	result = /obj/item/stack/medical/healingpowder
 	time = 50
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
@@ -132,7 +132,7 @@
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/weapon/reagent_containers/f13stimpack
-	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 1,
+	reqs = list(/obj/item/stack/medical/healingpowder = 1,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1,
 				/obj/item/crafting/wonderglue = 1)
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
@@ -142,7 +142,7 @@
 /datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"
 	result = /obj/item/weapon/reagent_containers/f13stimpack/super
-	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/healingpowder = 2,
+	reqs = list(/obj/item/stack/medical/healingpowder = 2,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 2,
 				/obj/item/crafting/wonderglue = 2)
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
