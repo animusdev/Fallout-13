@@ -30,8 +30,8 @@
 	department_flag = MEDSCI
 	faction = "acolytes"
 	status = "priest_atom"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the master of the atom"
 	selection_color = "#204200"
 	access = list()

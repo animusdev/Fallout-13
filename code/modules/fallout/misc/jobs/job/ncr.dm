@@ -61,7 +61,7 @@
 //NCR Sergeant
 
 /datum/job/ncr_sergeant
-	title = "Sergeant"
+	title = "Sergeant NCR"
 	desc = "You have to remind Troopers to speak only when spoken to, and that the first and last words out of their filthy sewers will be \"Sir\"."
 	flag = NCR_SERGEANT
 	department_head = list("general")
@@ -107,7 +107,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/ncr_sergeant
-	name = "Sergeant"
+	name = "Sergeant NCR"
 	id = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr_officer
