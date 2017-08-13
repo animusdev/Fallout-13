@@ -12,7 +12,7 @@
 	spawn_positions = 1
 	supervisors = "the NCR Command HQ"
 	selection_color = "#9d9fec"
-	minimal_player_age = 7
+	minimal_player_age = 36
 	whitelist_on = 1
 
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
@@ -72,9 +72,9 @@
 	spawn_positions = 2
 	supervisors = "the General"
 	selection_color = "#9d9fec"
-	minimal_player_age = 7
+	minimal_player_age = 31
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper")
 
 	required_items = list(
 	/obj/item/clothing/head/f13/ncr_officer,
@@ -131,11 +131,11 @@
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "vranger"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the NCR Command HQ"
 	selection_color = "#9d9fec"
-	minimal_player_age = 7
+	minimal_player_age = 25
 
 	outfit = /datum/outfit/job/vranger
 
@@ -190,13 +190,13 @@
 	department_flag = WASTELAND
 	faction = "ncr"
 	status = "trooper"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the General"
 	selection_color = "#9d9fec"
-	minimal_player_age = 7
+	minimal_player_age = 16
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper")
 
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/ncr/facewrap,

@@ -680,12 +680,13 @@
 	build_path = /obj/item/ammo_box/F13/m44
 	category = list("hacked", "Security")
 
-/datum/design/c44mm
-	name = "rifle magazine (.308)"
-	id = "c308mm"
+
+/datum/design/a556mm
+	name = "rifle magazine (5.56)"
+	id = "a556"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60000)
-	build_path = /obj/item/ammo_box/magazine/F13/m308
+	materials = list(MAT_METAL = 50000)
+	build_path = /obj/item/ammo_box/magazine/F13/m556
 	category = list("hacked", "Security")
 
 /datum/design/c308mm

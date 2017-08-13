@@ -134,8 +134,8 @@
 	desc = "A City dweller.<br>You live a better life than most Wastelanders will ever have."
 	faction = "city"
 	status = "member"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "none"
 	selection_color = "#ece19d"
 	access = list()
