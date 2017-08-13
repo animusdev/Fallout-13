@@ -74,7 +74,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 31
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper")
 
 	required_items = list(
 	/obj/item/clothing/head/f13/ncr_officer,
@@ -196,7 +196,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 16
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper")
 
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/ncr/facewrap,
