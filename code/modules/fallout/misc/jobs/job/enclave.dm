@@ -12,7 +12,7 @@
 	spawn_positions = 1
 	supervisors = "the Enclave command HQ"
 	selection_color = "#ec9d9d"
-	minimal_player_age = 7
+	minimal_player_age = 31
 	whitelist_on = 1
 
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "tesla", "super_ten")
@@ -74,7 +74,7 @@
 	spawn_positions = 2
 	supervisors = "the Colonel"
 	selection_color = "#ec9d9d"
-	minimal_player_age = 7
+	minimal_player_age = 24
 
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "tesla", "super_ten")
 
@@ -136,11 +136,11 @@
 	department_flag = MEDSCI
 	faction = "enclave"
 	status = "private"
-	total_positions = 7
-	spawn_positions = 7
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "The Colonel"
 	selection_color = "#ec9d9d"
-	minimal_player_age = 7
+	minimal_player_age = 19
 
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "tesla", "super_ten")
 
