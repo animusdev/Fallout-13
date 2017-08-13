@@ -5,8 +5,8 @@
 	description = "Strange mixture for healing wounds."
 
 datum/reagent/stimpackium/on_mob_life(mob/living/M)
-	M.adjustFireLoss(-1.05*REM, 0)
-	M.adjustBruteLoss(-1.05*REM, 0)
+	M.adjustFireLoss(-1.10*REM, 0)
+	M.adjustBruteLoss(-1.10*REM, 0)
 	..()
 	. = 1
 
@@ -17,35 +17,35 @@ datum/reagent/stimpackium/on_mob_life(mob/living/M)
 	description = "Strange mixture for healing wounds."
 
 datum/reagent/supstimpackium/on_mob_life(mob/living/M)
-	M.adjustFireLoss(-1.60*REM, 0)
-	M.adjustBruteLoss(-1.60*REM, 0)
+	M.adjustFireLoss(-1.70*REM, 0)
+	M.adjustBruteLoss(-1.70*REM, 0)
 	..()
 	. = 1
 
 //Unrefined --for ELITE mechanics
 /datum/reagent/stimpackium_oxy
 	name = "Stimpackium"
-	id = "stimpackium"
+	id = "stimpackium_oxy"
 	color = "#FF0033"
 	description = "Strange mixture for healing wounds."
 
 datum/reagent/stimpackium_oxy/on_mob_life(mob/living/M)
 	M.adjustFireLoss(-0.5*REM, 0)
 	M.adjustBruteLoss(-0.5*REM, 0)
-	M.adjustToxLoss(0.80*REM, 0)
+	M.adjustToxLoss(1.10*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/supstimpackium_oxy
 	name = "SuperStimpackium"
-	id = "supstimpackium"
+	id = "supstimpackium_oxy"
 	color = "#FF3300"
 	description = "Strange mixture for healing wounds."
 
 datum/reagent/supstimpackium_oxy/on_mob_life(mob/living/M)
 	M.adjustFireLoss(-0.80*REM, 0)
 	M.adjustBruteLoss(-0.80*REM, 0)
-	M.adjustToxLoss(1.5*REM, 0)
+	M.adjustToxLoss(1.6*REM, 0)
 	..()
 	. = 1
 ///unrefined
