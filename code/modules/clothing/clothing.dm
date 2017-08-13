@@ -78,6 +78,7 @@
 	else
 		return ..()
 
+/obj/item/clothing/attackby(obj/item/W, mob/user, params)
 	if(damaged_clothes && istype(W, /obj/item/stack/sheet/cloth))
 		var/obj/item/stack/sheet/cloth/C = W
 		C.use(1)
@@ -513,10 +514,9 @@ BLIND     // can't see anything
 	//Sasargule [moron]
 	if(istype(W,/obj/item/weapon/kitchen/knife))
 		//bidlokod_mode = true. Someone, fix it, pls.
-		new /obj/item/stack/sheet/cloth/(get_turf(user))
-		new /obj/item/stack/sheet/cloth/(get_turf(user))
-		new /obj/item/stack/sheet/cloth/(get_turf(user))
-		new /obj/item/stack/sheet/cloth/(get_turf(user))
+		var/rnd = rand(3, 5)
+		for(var/i=0, i <rnd, i++)
+			new /obj/item/stack/sheet/cloth/(get_turf(user))
 		del src
 		return
 
