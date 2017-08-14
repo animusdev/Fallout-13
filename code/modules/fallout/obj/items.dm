@@ -24,3 +24,8 @@
 			M.adjustOxyLoss(-2)
 			flick("one_ring_anim", src)
 			icon_state = initial(icon_state)
+
+/obj/item/weapon/storage/box/doom_slayer/New()
+	..()
+	new /obj/item/weapon/twohanded/required/chainsaw/doomslayer(src)
+

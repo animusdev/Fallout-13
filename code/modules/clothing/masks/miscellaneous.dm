@@ -40,7 +40,7 @@
 	icon_state = "fake-moustache"
 	flags_inv = HIDEFACE
 
-/obj/item/clothing/mask/joy
+/obj/item/clothing/mask/surgical/joy
 	name = "joy mask"
 	desc = "Express your happiness or hide your sorrows with this laughing face with crying tears of joy cutout."
 	icon_state = "joy"

@@ -169,7 +169,7 @@
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/gloves/color/latex,
 		/obj/item/clothing/glasses/regular,
-		/obj/item/clothing/mask/joy,
+		/obj/item/clothing/mask/surgical/joy,
 		/obj/item/clothing/mask/surgical,
 		/obj/item/weapon/storage/backpack/satchel/leather,
 		/obj/item/weapon/storage/firstaid
@@ -297,7 +297,7 @@
 		/obj/item/clothing/under/pants/f13/doom,
 		/obj/item/clothing/gloves/f13/doom,
 		/obj/item/clothing/shoes/f13/doom,
-		/obj/item/weapon/twohanded/required/chainsaw
+		/obj/item/weapon/storage/box/doom_slayer
 		)
 	price = 1000
 
