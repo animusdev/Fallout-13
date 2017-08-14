@@ -121,13 +121,12 @@
 	desc = "A ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
-	flags = HEADCOVERSEYES
 	armor = list(melee = 50, bullet = 50, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 40
 	resistance_flags = FIRE_PROOF
-	self_weight = 2
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/combat_mk2
 	name = "reinforced combat helmet mark II"
@@ -139,7 +138,7 @@
 	put_on_delay = 20
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
-	self_weight = 1
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"
