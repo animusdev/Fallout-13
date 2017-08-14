@@ -5,15 +5,14 @@
 	desc = "The N99 self-loading pistol is known for its ability to survive in the harshest of conditions.<br>This great weapon is able to be reliably restored to working condition, even after extended exposure to hard elements without maintenance."
 	icon_state = "n99"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	w_class = 2
-	force = 13
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/F13/m10
 	fire_sound = "10mmfire"
+	force = 13
 	can_suppress = 1
 	burst_size = 1
 	fire_delay = 0
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = 2
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99/update_icon()
 	..()
@@ -75,8 +74,10 @@
 	item_state = "shotgun"
 	can_suppress = 1
 	zoomable = TRUE
-	zoom_amt = 7
-	w_class = WEIGHT_CLASS_NORMAL
+	zoom_amt = 10
+	weapon_weight = WEAPON_MEDIUM
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	scopetype = /obj/screen/fullscreen/scope/medium
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
@@ -103,7 +104,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/pipe
 	casing_ejector = 1
 	weapon_weight = WEAPON_LIGHT
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/ballistic/shotgun/trail
 	name = "trail carbine"
@@ -113,9 +114,10 @@
 	item_state = "shotgun"
 	origin_tech = "combat=1;materials=1"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/trail
-	weapon_weight = WEAPON_MEDIUM
 	casing_ejector = 1
-	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
 	recoil = 2
 
