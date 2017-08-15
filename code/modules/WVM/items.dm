@@ -24,6 +24,7 @@ obj/item/weapon/lock_part
 	name = "Vending Machine Lock"
 	desc = "Выглядит как замок для торгового автомата. Если его раскрутить отверткой, то можно запомнить в нем ваш ключ."
 	icon = 'icons/WVM/lock_icon.dmi'
+	icon_state = "lock"
 
 	var/is_open = 0
 	var/is_secured = 1
