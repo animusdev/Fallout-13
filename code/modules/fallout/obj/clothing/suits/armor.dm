@@ -157,6 +157,7 @@
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 10)
+	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 5
@@ -168,6 +169,7 @@
 	item_state = "legvexil"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
 	armor = list(melee = 40, bullet = 30, laser = 10, energy = 10, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 20)
+	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 5
@@ -179,6 +181,7 @@
 	item_state = "legcenturion"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 30, fire = 30, acid = 30)
+	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 10
@@ -190,6 +193,7 @@
 	item_state = "leglegate"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 60, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 40, fire = 40, acid = 40)
+	flags_inv = HIDEJUMPSUIT
 	put_on_delay = 60
 	strip_delay = 60
 	resistance_flags = FIRE_PROOF
