@@ -74,7 +74,7 @@
 	item_state = "shotgun"
 	can_suppress = 1
 	zoomable = TRUE
-	zoom_amt = 10
+	zoom_amt = 12
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY

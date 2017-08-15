@@ -39,7 +39,26 @@
 /mob/living/bullet_act(obj/item/projectile/P, def_zone)
 	var/armor = run_armor_check(def_zone, P.flag, "","",P.armour_penetration)
 	if(!P.nodamage)
-		apply_damage(P.damage, P.damage_type, def_zone, armor)
+
+
+		if(def_zone == "r_arm" || def_zone == "l_arm")
+			apply_damage(round(P.damage* 0.6 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
+			if(prob(60))
+				drop_item()
+
+		if(def_zone == "r_leg" || def_zone == "l_leg")
+			apply_damage(round(P.damage* 0.6 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
+			if(prob(60))
+				apply_effect(2, WEAKEN, 0)
+
+		if(def_zone == "head")
+			apply_damage(round(P.damage* 2 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
+
+		else
+			apply_damage(round(P.damage*rand(6, 14)/10,1), P.damage_type, def_zone, armor)
+
+//crc
+	//	apply_damage(P.damage, P.damage_type, def_zone, armor)
 		attacked_trigger(P.firer)
 		if(P.dismemberment)
 			check_projectile_dismemberment(P, def_zone)
@@ -82,7 +101,39 @@
 			visible_message("<span class='danger'>[src] has been hit by [I].</span>", \
 							"<span class='userdanger'>[src] has been hit by [I].</span>")
 			var/armor = run_armor_check(zone, "melee", "Your armor has protected your [parse_zone(zone)].", "Your armor has softened hit to your [parse_zone(zone)].",I.armour_penetration)
-			apply_damage(I.throwforce, dtype, zone, armor)
+
+			//crc
+			if(zone == "r_arm" || zone == "l_arm")
+				var/melee_damage = round(I.throwforce* 0.6 * rand(6, 14)/10, 1)
+
+				apply_damage(melee_damage, dtype, zone, armor)
+				if(prob(60))
+					drop_item()
+
+			if(zone == "r_leg" || zone == "l_leg")
+
+				var/melee_damage = round(I.throwforce* 0.6 * rand(6, 14)/10, 1)
+
+
+				apply_damage(melee_damage, dtype, zone, armor)
+				if(prob(60))
+					apply_effect(2, WEAKEN, 0)
+
+			if(zone == "head")
+				var/melee_damage = round(I.throwforce* 2 * rand(6, 14)/10, 1)
+
+				apply_damage(melee_damage, dtype, zone, armor)
+
+			else
+
+
+				var/melee_damage = round(I.throwforce * rand(6, 14)/10, 1)
+
+				apply_damage(melee_damage, dtype, zone, armor)
+
+
+
+			//apply_damage(I.throwforce, dtype, zone, armor)
 			if(I.thrownby)
 				attacked_trigger(I.thrownby)
 				add_logs(I.thrownby, src, "hit", I)
