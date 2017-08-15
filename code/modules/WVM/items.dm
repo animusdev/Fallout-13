@@ -1,3 +1,4 @@
+/* Code by Tienn */
 
 // -- Key --
 obj/item/weapon/key/vending
@@ -10,6 +11,7 @@ obj/item/weapon/key/vending
 obj/item/weapon/key/vending/proc/set_name(newname)
 	if(name != newname)
 		name = newname + " key"
+		playsound(src, 'sound/misc/splort.ogg', 60, 1)
 
 obj/item/weapon/key/vending/attackby(obj/item/weapon/P, mob/living/carbon/human/user, params)
 	if(istype(P, /obj/item/weapon/pen) || istype(P, /obj/item/toy/crayon))
@@ -42,11 +44,13 @@ obj/item/weapon/lock_part/proc/store_key(obj/item/weapon/key/vending/K)
 		to_chat(usr, "Nothing happens. I need to use screwdriver first")
 		return
 
-	if(!keys.Find(K))
-		keys += K
-		to_chat(usr, "Now you can unlock this lock by your key..")
-	else
+	if(K in keys)
 		to_chat(usr, "Key already stored.")
+	else
+		keys += K
+		playsound(src, 'sound/machines/ding.ogg', 60, 1)
+		to_chat(usr, "Now you can unlock this lock by your key..")
+
 
 obj/item/weapon/lock_part/attackby(obj/item/weapon/P, mob/living/carbon/human/user, params)
 	if(istype(P, /obj/item/weapon/screwdriver))
@@ -56,6 +60,7 @@ obj/item/weapon/lock_part/attackby(obj/item/weapon/P, mob/living/carbon/human/us
 		else
 			is_secured = 1
 			to_chat(usr, "Now this lock can be attached to vending machine.")
+		playsound(src, 'sound/items/Screwdriver2.ogg', 60, 1)
 
 
 	if(istype(P, /obj/item/weapon/key/vending))
