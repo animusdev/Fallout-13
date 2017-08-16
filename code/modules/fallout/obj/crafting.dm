@@ -146,18 +146,18 @@
 		if(pow_loaded <= 0)
 			to_chat(user, "<span class='notice'>There are no materials left for reload ammo casing.</span>")
 		else
-			//var/obj/item/ammo_casing/AM = I
+			var/obj/item/ammo_casing/AC = I
 			I.Del()
-			New(I)
+			new I(src)
 			I.forceMove(src)
 			pow_loaded -= 1
 
 /obj/item/crafting/reloader/examine()
 	..()
 	if(pow_loaded > 0)
-		to_chat(user, "<span class='notice'>There are [pow_loaded] materials left.</span>")
+		usr.show_message("There are [pow_loaded] materials left.",1)
 	else
-		to_chat(user, "<span class='notice'>There are no materials left.</span>")
+		usr.show_message("<span class='notice'>There are no materials left.",1)
 
 ///
 /obj/item/crafting/igniter
