@@ -57,6 +57,13 @@
 	suit = null
 	head = /obj/item/clothing/head/f13/sergeant
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
+	belt = /obj/item/weapon/storage/belt/military/army
+	belt_contents = list(/obj/item/ammo_box/magazine/F13/m556 = 1, \
+		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1, \
+		/obj/item/weapon/reagent_containers/f13stimpack = 1, \
+		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
+		/obj/item/device/radio = 1, \
+		/obj/item/device/flashlight/torch/flare/blue = 1)
 
 //NCR Sergeant
 
@@ -116,9 +123,9 @@
 	head = /obj/item/clothing/head/f13/sergeant
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	belt_contents = list(/obj/item/ammo_box/magazine/F13/m556 = 2, \
+	belt_contents = list(/obj/item/ammo_box/magazine/F13/m556 = 1, \
 		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1, \
-		/obj/item/weapon/reagent_containers/f13stimpack = 2, \
+		/obj/item/weapon/reagent_containers/f13stimpack = 1, \
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
 		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/blue = 1)
@@ -177,8 +184,8 @@
 	belt = /obj/item/weapon/storage/belt/military/assault
 	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
 	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1,
-		/obj/item/weapon/reagent_containers/f13stimpack = 2,
-		/obj/item/ammo_box/F13/m44/heap = 3,
+		/obj/item/weapon/reagent_containers/f13stimpack = 1,
+		/obj/item/ammo_box/F13/m44/heap = 1,
 		/obj/item/device/radio = 1)
 
 
@@ -234,7 +241,6 @@
 	head = /obj/item/clothing/head/helmet/f13/trooper
 	glasses = /obj/item/clothing/glasses/f13/biker
 	belt = /obj/item/weapon/storage/belt/military/army
-	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, \
-	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/F13/m556 = 2, \
-		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1)
+	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol
+	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
+	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/F13/m9 = 3)
