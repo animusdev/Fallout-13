@@ -81,7 +81,7 @@
 	icon_state = "b38"
 	ammo_type = /obj/item/ammo_casing/F13/m44
 	max_ammo = 6
-	multiple_sprites = 1
+	multiple_sprites = 2
 	self_weight = 0.2
 
 /obj/item/ammo_box/F13/m44/heap

@@ -133,7 +133,33 @@
 	name = "cartrige reloader"
 	desc = "This device allows to hand-load your own gun rounds using certain raw materials."
 	icon_state = "reloader"
+	var pow_loaded = 0
 
+//crc
+/obj/item/crafting/reloader/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/crafting/reloader_set))
+		if(pow_loaded < 100)
+			visible_message("<span class='notice'>[user] put the materials in reloader</span>")
+			pow_loaded = 100
+
+	if(istype(I, /obj/item/ammo_casing))
+		if(pow_loaded <= 0)
+			to_chat(user, "<span class='notice'>There are no materials left for reload ammo casing.</span>")
+		else
+			//var/obj/item/ammo_casing/AM = I
+			I.Del()
+			New(I)
+			I.forceMove(src)
+			pow_loaded -= 1
+
+/obj/item/crafting/reloader/examine()
+	..()
+	if(pow_loaded > 0)
+		to_chat(user, "<span class='notice'>There are [pow_loaded] materials left.</span>")
+	else
+		to_chat(user, "<span class='notice'>There are no materials left.</span>")
+
+///
 /obj/item/crafting/igniter
 	name = "igniter"
 	desc = "A small electronic device able to ignite combustable substances."
@@ -148,3 +174,26 @@
 	name = "proximity sensor"
 	desc = "Used for scanning and alerting when someone enters a certain proximity."
 	icon_state = "sensor"
+
+
+//crc
+
+/obj/item/crafting/reloader_set
+	name = "Reloader cartridges"
+	desc = "Materials for reloader device."
+	icon_state = "reloader_set"
+//	var cartridges = 100
+/*
+/obj/item/crafting/reloader/examine()
+	..()
+	if(cartridges > 0)
+		usr << "<span class='notice'>There are [cartridges] cartridges left.</span>"
+	else
+		usr << "<span class='notice'>There are no cartridges left.</span>"
+*/
+
+
+/obj/item/crafting/weapon_repair_kit
+	name = "Weapon repair kit"
+	desc = "It can be used to repair weapons."
+	icon_state = "weapon_repair_set"

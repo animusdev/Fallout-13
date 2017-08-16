@@ -24,7 +24,9 @@
 	/obj/item/crafting/reloader = 5,
 	/obj/item/crafting/igniter = 5,
 	/obj/item/crafting/timer = 5,
-	/obj/item/crafting/sensor = 5)
+	/obj/item/crafting/sensor = 5,
+	/obj/item/crafting/weapon_repair_kit = 5,
+	/obj/item/crafting/reloader_set = 5)
 
 /obj/effect/spawner/lootdrop/med_medium
 	color = "#FFAAFA"

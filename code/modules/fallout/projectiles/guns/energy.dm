@@ -5,7 +5,7 @@
 	desc = "A Plasma Rifle Shoots a bolt of superheated plasma."
 	origin_tech = "combat=4;magnets=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma)
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	fire_sound = 'sound/f13weapons/plasmarifle.ogg'
 	burst_size = 1
@@ -42,6 +42,7 @@
 	icon_state = "multiplas"
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/tri)
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	burst_size = 1
 	w_class = 3
@@ -54,7 +55,7 @@
 	desc = "A modified winchester P94 plasma rifle. The plasma bolt chamber has been hotwired to accelerate the bolt formation process."
 	origin_tech = "combat=6;magnets=6"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/turbo)
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	fire_delay = 15
 	w_class = 4
@@ -70,7 +71,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
 	burst_size = 3 //Fuck yeah
 	w_class = 3
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/energy/laser/pistol
@@ -95,13 +96,14 @@
 	burst_size = 1
 	fire_delay = 3
 	w_class = 3
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/energy/laser/rifle/aer13
 	name ="Laser Rifle AER13"
 	icon_state = "laser-rifle13"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/aer13)
+	weapon_weight = WEAPON_HEAVY
 	burst_size = 2
 	fire_delay = 3
 
@@ -110,6 +112,7 @@
 	icon_state = "tribeam"
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/tri)
+	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
 	fire_delay = 5
 	w_class = 3

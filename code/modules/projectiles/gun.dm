@@ -330,6 +330,17 @@
 		return
 
 /obj/item/weapon/gun/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/crafting/weapon_repair_kit))
+		if(condition < 90)
+			if(prob(70))
+				to_chat(user, "<span class='notice'>You partially repaired your weapon.</span>")
+				condition += 20
+			else
+				to_chat(user, "<span class='userdanger'>Oh, repair kit is broke!</span>")
+				I.Del()
+		else
+			to_chat(user, "<span class='notice'>No need, weapon in good condition.</span>")
+
 	if(can_flashlight)
 		if(istype(I, /obj/item/device/flashlight/seclite))
 			var/obj/item/device/flashlight/seclite/S = I

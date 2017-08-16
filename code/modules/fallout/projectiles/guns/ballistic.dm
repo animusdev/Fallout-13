@@ -46,7 +46,7 @@
 	mag_type = /obj/item/ammo_box/magazine/F13/m308
 	can_suppress = 1
 	casing_ejector = 1
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
@@ -63,7 +63,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/m308
 	can_suppress = 1
 	casing_ejector = 0
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_NORMAL
 	pumpsound = 'sound/weapons/boltpump.ogg'
 	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
@@ -75,7 +75,7 @@
 	can_suppress = 1
 	zoomable = TRUE
 	zoom_amt = 12
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	scopetype = /obj/screen/fullscreen/scope/medium
@@ -103,7 +103,7 @@
 	origin_tech = "combat=1;materials=1"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/pipe
 	casing_ejector = 1
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/ballistic/shotgun/trail
@@ -115,7 +115,7 @@
 	origin_tech = "combat=1;materials=1"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/trail
 	casing_ejector = 1
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
@@ -133,7 +133,7 @@
 	burst_size = 2
 	can_suppress = 0
 	casing_ejector = 1
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'

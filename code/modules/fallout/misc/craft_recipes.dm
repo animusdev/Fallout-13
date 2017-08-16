@@ -159,3 +159,26 @@
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
 	time = 100
 	category = CAT_MISC
+
+
+///crc
+
+/datum/crafting_recipe/reloader_set
+	name = "Reloader cartridges"
+	result = /obj/item/crafting/reloader_set
+	time = 100
+	reqs = list(/obj/item/crafting/turpentine = 1,
+				/datum/reagent/consumable/sodiumchloride = 10,
+				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1)
+	category = CAT_MISC
+
+/datum/crafting_recipe/weapon_repair_kit
+	name = "Weapon repair kit"
+	result = /obj/item/crafting/weapon_repair_kit
+	time = 100
+	reqs = list(/obj/item/crafting/small_gear = 2,
+				/obj/item/crafting/large_gear = 1 ,
+				/obj/item/crafting/duct_tape =2,
+				/obj/item/crafting/wonderglue = 1,
+				/obj/item/weapon/screwdriver = 1)
+	category = CAT_MISC
