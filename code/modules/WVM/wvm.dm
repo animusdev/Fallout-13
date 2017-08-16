@@ -438,7 +438,7 @@
 				dat += "<font color = 'red'>No product loaded!</font>"
 			else
 				for(var/obj/item/Itm in content)
-					var/item_name = url_encode(Itm.name);
+					var/item_name = url_encode(Itm.name)
 					var/price = content[Itm]
 					dat += "<a href='byond://?src=\ref[src];vend=[item_name];current_price=[price]'>[Itm.name] | [price] caps</a> "
 					dat += "<a href='byond://?src=\ref[src];examine=[item_name];current_price=[price]'>Examine</a><br> "
@@ -455,9 +455,9 @@
 				dat += "<font color = 'red'>No product loaded!</font>"
 			else
 				for(var/obj/item/Itm in content)
-					var/item_name = Itm
+					var/item_name = url_encode(Itm.name)
 					var/price = content[Itm]
-					dat += "<b>[item_name]</b> - [content[Itm]] caps"
+					dat += "<b>[Itm.name]</b> - [content[Itm]] caps"
 					dat += "<a href='?src=\ref[src];setprice=[item_name];current_price=[price]'>Set price</a> "
 					dat += "<a href='?src=\ref[src];remove=[item_name];current_price=[price]'>Remove</a> <br>"
 
