@@ -118,8 +118,10 @@
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "heal_powder"
 	item_state = "bandaid"
-	heal_brute = 15
-	heal_burn = 15
+	amount = 4
+	max_amount = 4
+	heal_brute = 10
+	heal_burn = 5
 	self_delay = 20
 
 /obj/item/stack/medical/attack(mob/living/M, mob/user) //need MORE hardcode by your moron
