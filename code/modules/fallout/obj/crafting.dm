@@ -141,15 +141,16 @@
 		if(pow_loaded < 100)
 			visible_message("<span class='notice'>[user] put the materials in reloader</span>")
 			pow_loaded = 100
+			I.Del()
 
 	if(istype(I, /obj/item/ammo_casing))
 		if(pow_loaded <= 0)
 			to_chat(user, "<span class='notice'>There are no materials left for reload ammo casing.</span>")
 		else
-			var/obj/item/ammo_casing/AC = I
-			I.Del()
-			new I(src)
+			I.New()
 			I.forceMove(src)
+			to_chat(user, "<span class='notice'>You take a round from reloader</span>")
+
 			pow_loaded -= 1
 
 /obj/item/crafting/reloader/examine()

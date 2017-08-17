@@ -134,7 +134,9 @@ var/list/radiochannels = list(
 	"Syndicate" = 1213,
 	"Supply" = 1347,
 	"Service" = 1349,
-	"AI Private" = 1447
+	"AI Private" = 1447,
+	//crc
+	"CRC Radio" = 1475
 )
 
 var/list/radiochannelsreverse = list(
@@ -148,7 +150,9 @@ var/list/radiochannelsreverse = list(
 	"1213" = "Syndicate",
 	"1347" = "Supply",
 	"1349" = "Service",
-	"1447" = "AI Private"
+	"1447" = "AI Private",
+	//crc
+	"1475" = "CRC Radio"
 )
 
 //depenging helpers
@@ -162,6 +166,9 @@ var/const/ENG_FREQ = 1357 //engineering, coloured orange in chat window
 var/const/SEC_FREQ = 1359 //security, coloured red in chat window
 var/const/CENTCOM_FREQ = 1337 //centcom frequency, coloured grey in chat window
 var/const/AIPRIV_FREQ = 1447 //AI private, colored magenta in chat window
+//crc
+var/const/CRCRAD_FREQ = 1475 //AI private, colored magenta in chat window
+
 
 #define TRANSMISSION_WIRE	0
 #define TRANSMISSION_RADIO	1
