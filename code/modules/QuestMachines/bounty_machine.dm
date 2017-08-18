@@ -82,57 +82,59 @@
 		UpdateActiveQuests()
 
 /* Check quest objectives and complete it. */
-/obj/machinery/bounty_machine/proc/ProcessQuestComplete(var/quest_index as num)
+/obj/machinery/bounty_machine/proc/ProcessQuestComplete(var/quest_index, var/mob/user)
+	quest_index = text2num(quest_index)
 	if(quest_index > active_quests.len)
-		return "Contract not found"
+		return 0
 
 	// Check for connected pod
 	if(!connected_pod)
-		return "Not connected pod"
+		return 0
 
 	var/turf/location = get_turf(connected_pod)
 	var/quest_objects[0]
 	var/datum/bounty_quest/current_quest = active_quests[quest_index]
 
 	// Create list of all object of taget types
-	for(var/Itm in location.contents)
-		to_chat(usr, "Checking [Itm]")
-		if(current_quest.ItsATarget(Itm:type))
-			quest_objects += Itm
-			to_chat(usr, "[Itm] added...")
+	for(var/atom/Itm in location.contents)
+		if(current_quest.ItsATarget(Itm))
+			quest_objects.Add(Itm)
 
 	// If no target objects - fail to complete
 	if(quest_objects.len == 0)
-		return "No target objects on pod"
+		return 0
 
-	var/target_items = current_quest.target_items.Copy()
-	for(var/Itm in quest_objects)
-		if(Itm:type in target_items)
-			target_items[Itm] -= 1
+	var/list/target_items = current_quest.target_items.Copy()
+	for(var/atom/Itm in quest_objects)
+		for(var/target_type in target_items)
+			if(istype(Itm, target_type))
+				target_items[target_type] -= 1
 
 	// If objective not completed - fail
 	for(var/Itm in target_items)
 		if(target_items[Itm] > 0)
-			return "Contract objectives not completed. Reject!"
+			return 0
 
 	// Here we know - quest is complete
 	// 1. Remove quest objects. ALL QUEST OBJECTS WILL BE REMOVED! IF YOU PUT 2 GHOULS AND QUEST NEEDS ONLY ONE - ALL GHOULES ON POD TURF WILL BE DESTROYED
+	to_chat(user, "DEBUG: Start deleting items")
 	for(var/Itm in quest_objects)
-		del Itm
+		qdel(Itm)
 
 	// 2. Spawn reward
 	var/obj/item/stack/caps/C = new /obj/item/stack/caps
-	C.add(current_quest.caps_reward)
-	C.forceMove(src.loc)
+	C.add(current_quest.caps_reward - 1)
+	C.forceMove(connected_pod.loc)
 
 	// 3. Delete quest
+	to_chat(user, current_quest.end_message)
 	active_quests -= current_quest
-	del current_quest
+	qdel(current_quest)
 
 	// 4. Update active quests
 	UpdateActiveQuests()
 
-	return "Contract completed. Take your reward!"
+	return 1
 	// -- END
 
 /*
@@ -150,13 +152,10 @@
  *	GUI
 */
 /obj/machinery/bounty_machine/proc/ShowUI()
-	var/datum/browser/popup = new(usr, "bounty", "Wasteland Contracts Database", 640, 400) // Set up the popup browser window
-	popup.set_content(GetUIData())
-	popup.set_title_image(usr.browse_rsc_icon(src.icon, src.icon_state))
-	popup.open()
-
-/obj/machinery/bounty_machine/proc/GetUIData()
 	var/dat = ""
+	var/datum/asset/assets = get_asset_datum(/datum/asset/simple/bounty_employers)
+	assets.send(usr)
+
 	dat += "<h1>Wasteland Bounty Station</h1>"
 	if(connected_pod)
 		dat += "<font color='green'>Pod found</font>"
@@ -165,25 +164,35 @@
 		dat += "<font color='red'>Pod not found</font>"
 		dat += "<a href='?src=\ref[src];findpod=1'>Rescan</a><br>"
 
+	dat += "<style>.leftimg {float:left;margin: 7px 7px 7px 0;}</style>"
+
 	dat += "<h2>Contracts:</h2>"
 	var/item_index = 1
 	for(var/datum/bounty_quest/Q in active_quests)
+		//usr << browse_rsc(Q.GetIconWithPath(), Q.employer_icon)
 		dat += "<div class='statusDisplay'>"
+		dat += "<img src=\ref=[Q.employer_icon] class='leftimg' width = 59 height = 70></img>"
 		dat += "<font color='green'><b>ID: </b> [Q.name]</font><br>"
+		dat += "<font color='green'><b>Employer: </b> [Q.employer]</font><br>"
 		dat += "<font color='green'><b>Message:</b><br></font>"
-		dat += "<font color='green'>[Q.desc]</font><br>"
+		dat += "<font color='green'>[Q.desc]</font><br><br>"
+		dat += "<font color='green'><b>Acceptable package: </b></font>"
+		dat += "<font color='green'><i>[Q.need_message]. </i></font><br>"
 		dat += "<font color='green'><b>Reward:</b></font>"
-		dat += "<font color='green'>[Q.caps_reward] caps</font><br>"
+		dat += "<font color='green'> [Q.caps_reward] caps</font><br>"
 		dat += "<a href='?src=\ref[src];completequest=[item_index]'>Send package</a><br>"
 		dat += "</div>"
 		item_index++
 
-	return dat
+	var/datum/browser/popup = new(usr, "bounty", "Wasteland Contracts Database", 640, 400) // Set up the popup browser window
+	popup.set_content(dat)
+	popup.set_title_image(usr.browse_rsc_icon(src.icon, src.icon_state))
+	popup.open()
 
 /obj/machinery/bounty_machine/Topic(href, href_list)
 	if(href_list["completequest"])
 		if(connected_pod)
-			var/result_msg = ProcessQuestComplete(href_list["completequest"])
+			var/result_msg = ProcessQuestComplete(href_list["completequest"], usr)
 			to_chat(usr, result_msg)
 		else
 			to_chat(usr, "Pod not found")
