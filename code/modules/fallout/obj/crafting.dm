@@ -147,11 +147,12 @@
 		if(pow_loaded <= 0)
 			to_chat(user, "<span class='notice'>There are no materials left for reload ammo casing.</span>")
 		else
-			I.New()
-			I.forceMove(src)
-			to_chat(user, "<span class='notice'>You take a round from reloader</span>")
+			if(do_after(user, 5, target = src))
+				I.New()
+				I.forceMove(src)
+				to_chat(user, "<span class='notice'>You take a round from reloader</span>")
 
-			pow_loaded -= 1
+				pow_loaded -= 1
 
 /obj/item/crafting/reloader/examine()
 	..()

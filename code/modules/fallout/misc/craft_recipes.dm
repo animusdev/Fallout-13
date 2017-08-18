@@ -182,3 +182,16 @@
 				/obj/item/crafting/wonderglue = 1,
 				/obj/item/weapon/screwdriver = 1)
 	category = CAT_MISC
+
+
+/datum/crafting_recipe/ghillie
+	name = "Ghillie suit"
+	result = /obj/item/clothing/suit/armor/f13/ghillie
+	time = 200
+	reqs = list(/obj/item/stack/sheet/animalhide = 2,
+				/obj/item/crafting/duct_tape = 2,
+				/obj/item/crafting/wonderglue = 2,
+				/obj/item/stack/cable_coil = 3,
+				/obj/item/clothing/suit/ = 1)
+	tools = /obj/item/weapon/wirecutters
+	category = CAT_MISC

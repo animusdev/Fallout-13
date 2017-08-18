@@ -696,7 +696,15 @@
 	materials = list(MAT_METAL = 240000)
 	build_path = /obj/item/ammo_box/magazine/F13/m308
 	category = list("hacked", "Security")
-
+//crc
+/datum/design/g308mm
+	name = "garand clip (.308)"
+	id = "g308mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 80000)
+	build_path = /obj/item/ammo_box/magazine/F13/g308
+	category = list("hacked", "Security")
+//crc
 /datum/design/c223mm
 	name = "rifle magazine (.223)"
 	id = "c223mm"

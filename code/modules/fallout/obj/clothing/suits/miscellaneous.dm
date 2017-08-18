@@ -167,3 +167,17 @@
 	item_state = "hazmat_helmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	self_weight = 15
+
+
+//crc
+/obj/item/clothing/suit/armor/f13/ghillie
+	name = "ghillie suit"
+	desc = "Perfect for hiding in desert environment."
+	icon_state = "ghillie"
+	item_state = "ghillie"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0, fire = 0, acid = 10)
+	flags_inv = HIDEJUMPSUIT|HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	put_on_delay = 40
+	strip_delay = 40
+	self_weight = 15

@@ -43,12 +43,12 @@
 
 		if(def_zone == "r_arm" || def_zone == "l_arm")
 			apply_damage(round(P.damage* 0.6 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
-			if(prob(60) && P.damage_type == BRUTE)
+			if(prob(30) && P.damage_type == BRUTE)
 				drop_item()
 
 		if(def_zone == "r_leg" || def_zone == "l_leg")
 			apply_damage(round(P.damage* 0.6 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
-			if(prob(60) && P.damage_type == BRUTE)
+			if(prob(30) && P.damage_type == BRUTE)
 				apply_effect(2, WEAKEN, 0)
 
 		if(def_zone == "head")

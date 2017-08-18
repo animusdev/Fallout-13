@@ -241,6 +241,11 @@
 	head = /obj/item/clothing/head/helmet/f13/trooper
 	glasses = /obj/item/clothing/glasses/f13/biker
 	belt = /obj/item/weapon/storage/belt/military/army
-	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol
+	weapon = /obj/item/weapon/gun/ballistic/automatic/garand
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
-	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/F13/m9 = 3)
+	/obj/item/device/radio = 1, /obj/item/ammo_box/magazine/F13/g308 = 3)
+
+	//weapon = /obj/item/weapon/gun/ballistic/automatic/pistol
+	//belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
+	//obj/item/device/radio = 1, /obj/item/ammo_box/magazine/F13/m9 = 3)
+

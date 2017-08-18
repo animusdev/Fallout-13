@@ -53,6 +53,57 @@
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 	recoil = 2
 
+//crc
+/obj/item/weapon/gun/ballistic/automatic/garand
+	name = "Garand M1"
+	desc = "Vintage semi-automatic rifle. Advanced."
+	icon_state = "garand"
+	item_state = "shotgun"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	origin_tech = "combat=3;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/F13/g308
+	can_suppress = 1
+	casing_ejector = 1
+	burst_size = 0
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/weapons/garandclip.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	recoil = 2
+	fire_sound = 'sound/weapons/garandshot.ogg'
+
+
+/obj/item/weapon/gun/ballistic/automatic/garand/shoot_with_empty_chamber(mob/living/user as mob)
+	if(magazine.stored_ammo.len <= 1)
+		to_chat(user, "<span class='notice'>clip ejected!</span>")
+		magazine.dropped()
+		magazine.forceMove(get_turf(src.loc))
+		magazine.update_icon()
+		magazine = null
+		playsound(user, 'sound/weapons/garandclip.ogg', 100, 1)
+
+
+/obj/item/weapon/gun/ballistic/automatic/gauss
+	name = "M72 Gauss EM rifle"
+	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed."
+	icon_state = "gauss"
+	item_state = "shotgun"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	origin_tech = "combat=4;materials=4"
+	mag_type = /obj/item/ammo_box/magazine/F13/gaussmag
+	suppressed = 1
+	casing_ejector = 1
+	burst_size = 0
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	fire_sound = 'sound/weapons/bulletflyby.ogg'
+//crc
+
+
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
 	desc = "A pre-War bolt-action hunting rifle."
