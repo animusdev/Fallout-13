@@ -19,7 +19,7 @@
 	icon_dead = "broc-dead"
 	icon_harvest = "broc-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("nutriment" = 0.1, "salglu_solution" = 0.05)
+	reagents_add = list("nutriment" = 0.1, "broc_extract" = 0.05)
 
 
 /obj/item/seeds/xander
@@ -40,7 +40,7 @@
 	icon_grow = "xander-grow"
 	icon_dead = "xander-dead"
 	icon_harvest = "xander-harvest"
-	reagents_add = list("vitamin" = 0.1, "nutriment" = 0.1)
+	reagents_add = list("vitamin" = 0.1, "xander_extract" = 0.07)
 
 /obj/item/seeds/mutfruit
 	name = "pack of mutfruit seeds"

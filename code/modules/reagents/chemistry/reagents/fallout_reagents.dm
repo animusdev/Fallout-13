@@ -5,8 +5,8 @@
 	description = "Strange mixture for healing wounds."
 
 datum/reagent/stimpackium/on_mob_life(mob/living/M)
-	M.adjustFireLoss(-1.10*REM, 0)
-	M.adjustBruteLoss(-1.10*REM, 0)
+	M.adjustFireLoss(-1.10*2*REM, 0)
+	M.adjustBruteLoss(-1.10*2*REM, 0)
 	..()
 	. = 1
 
@@ -17,8 +17,8 @@ datum/reagent/stimpackium/on_mob_life(mob/living/M)
 	description = "Strange mixture for healing wounds."
 
 datum/reagent/supstimpackium/on_mob_life(mob/living/M)
-	M.adjustFireLoss(-1.70*REM, 0)
-	M.adjustBruteLoss(-1.70*REM, 0)
+	M.adjustFireLoss(-1.70*2*REM, 0)
+	M.adjustBruteLoss(-1.70*2*REM, 0)
 	..()
 	. = 1
 
@@ -67,3 +67,59 @@ datum/reagent/supstimpackium_oxy/on_mob_life(mob/living/M)
 	M.adjustBrainLoss(7*REM)
 	..()
 	. = 1
+
+/datum/reagent/broc_extract
+	name = "Broc extract"
+	id = "broc_extract"
+	description = "Smashed flower. Can help with minor burns"
+	color = "#2222FF"
+	overdose_threshold = 10
+
+/datum/reagent/broc_extract/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-0.20*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/broc_extract/overdose_process(mob/living/M)
+	M.set_drugginess(15)
+	if(isturf(M.loc) && !isspaceturf(M.loc))
+		if(M.canmove)
+			if(prob(10)) step(M, pick(cardinal))
+	if(prob(7))
+		M.emote(pick("twitch","drool","moan","giggle"))
+	..()
+	if(M.hallucination < volume && prob(20))
+		M.hallucination += 5
+	..()
+	. = 1
+
+/datum/reagent/xander_extract
+	name = "Xander extract"
+	id = "xander_extract"
+	description = "Grinded root. Helps you if you minor bruised"
+	color = "#2222FF"
+	overdose_threshold = 10
+
+/datum/reagent/xander_extract/on_mob_life(mob/living/M)
+	M.adjustBruteLoss(-0.20*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/xander_extract/overdose_process(mob/living/M)
+	M.set_drugginess(15)
+	if(isturf(M.loc) && !isspaceturf(M.loc))
+		if(M.canmove)
+			if(prob(10)) step(M, pick(cardinal))
+	if(prob(7))
+		M.emote(pick("twitch","drool","moan","giggle"))
+	..()
+	if(M.hallucination < volume && prob(20))
+		M.hallucination += 5
+	..()
+	. = 1
+
+/datum/reagent/improve_reagent
+	name = "Improver reagent"
+	id = "improve_reagent"
+	description = "Does nothing, but can improve other reagents"
+	color = "#000011"
