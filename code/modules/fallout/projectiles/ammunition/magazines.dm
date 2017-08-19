@@ -138,7 +138,7 @@
 	ammo_type = /obj/item/ammo_casing/penetrator
 	caliber = ".50"
 	icon_state = "gaussmag"
-	max_ammo = 20
+	max_ammo = 8
 	multiple_sprites = 2
 
 

@@ -262,11 +262,12 @@
 					break
 			if(chambered && chambered.BB)
 			        //crc
-				if(prob(110 - condition))
+				if(prob((110 - condition)/2))
 					condition -= 1
 					if(condition < 10 && prob(40))
 						explosion(src.loc, -1, 0, 1, 3)
 					if(condition < 50)
+						process_chamber()
 						shoot_with_empty_chamber(user)
 						break
 
@@ -292,14 +293,14 @@
 		firing_burst = 0
 	else
 		if(chambered)
-			if(prob(110 - condition))
+			if(prob((110 - condition)/2))
 				condition -= 1
 				if(condition < 10 && prob(40))
 					explosion(src.loc, -1, 0, 1, 3)
 				if(condition < 50)
+					process_chamber()
 					shoot_with_empty_chamber(user)
-
-
+					return
 			sprd = round((pick(1,-1)) * (randomized_gun_spread + randomized_bonus_spread))
 			if(!chambered.fire_casing(target, user, params, , suppressed, zone_override, sprd))
 				shoot_with_empty_chamber(user)

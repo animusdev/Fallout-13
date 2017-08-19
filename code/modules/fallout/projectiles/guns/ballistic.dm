@@ -47,7 +47,8 @@
 	can_suppress = 1
 	casing_ejector = 1
 	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
@@ -65,8 +66,10 @@
 	can_suppress = 1
 	casing_ejector = 1
 	burst_size = 0
+	wielded_icon = "shotgun1"
 	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/weapons/garandclip.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
@@ -95,8 +98,10 @@
 	suppressed = 1
 	casing_ejector = 1
 	burst_size = 0
+	wielded_icon = "shotgun1"
 	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
@@ -115,7 +120,8 @@
 	can_suppress = 1
 	casing_ejector = 0
 	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	pumpsound = 'sound/weapons/boltpump.ogg'
 	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
 	recoil = 2
