@@ -21,6 +21,9 @@
 	/* This items can be sold in this terminal */
 	var/obj/item/items_to_sell[0]
 
+	/* Subtypes will be selected for all quest list */
+	var/quest_type = /datum/bounty_quest/faction/wasteland
+
 	/* All quest */
 	var/list/all_quests = list()
 
@@ -28,7 +31,7 @@
 	var/datum/bounty_quest/active_quests[0]
 
 	/* Max active quest count */
-	var/quest_limit = 3
+	var/quest_limit = 4
 
 	/* Connected bounty pod */
 	var/obj/machinery/bounty_pod/connected_pod
@@ -53,10 +56,10 @@
 /* Create all quests list */
 /obj/machinery/bounty_machine/proc/InitQuestList()
 	all_quests = get_all_quests()
-	all_quests.Remove(/datum/bounty_quest)
+	all_quests.Remove(quest_type)
 
 /obj/machinery/bounty_machine/proc/get_all_quests()
-	return typesof(/datum/bounty_quest)
+	return typesof(quest_type)
 
 /* Returns random quest from database */
 /obj/machinery/bounty_machine/proc/GetRandomQuest()
@@ -117,7 +120,7 @@
 
 	// Here we know - quest is complete
 	// 1. Remove quest objects. ALL QUEST OBJECTS WILL BE REMOVED! IF YOU PUT 2 GHOULS AND QUEST NEEDS ONLY ONE - ALL GHOULES ON POD TURF WILL BE DESTROYED
-	to_chat(user, "DEBUG: Start deleting items")
+	flick("tele0", connected_pod)
 	for(var/Itm in quest_objects)
 		qdel(Itm)
 
@@ -158,7 +161,7 @@
 
 	dat += "<h1>Wasteland Bounty Station</h1>"
 	if(connected_pod)
-		dat += "<font color='green'>Pod found</font>"
+		dat += "<font color='green'>Pod found</font><br>"
 		dat += "<a href='?src=\ref[src];findpod=1'>Rescan</a><br>"
 	else
 		dat += "<font color='red'>Pod not found</font>"
@@ -170,17 +173,18 @@
 	var/item_index = 1
 	for(var/datum/bounty_quest/Q in active_quests)
 		//usr << browse_rsc(Q.GetIconWithPath(), Q.employer_icon)
+		//usr.browse_rsc_icon(Q.GetIconWithPath(), Q.employer_icon)
 		dat += "<div class='statusDisplay'>"
-		dat += "<img src=\ref=[Q.employer_icon] class='leftimg' width = 59 height = 70></img>"
-		dat += "<font color='green'><b>ID: </b> [Q.name]</font><br>"
+		//dat += "<img src=\ref=[Q.employer_icon] class='leftimg' width = 59 height = 70></img>"
+		//dat += "<font color='green'><b>ID: </b> [Q.name]</font><br>"
 		dat += "<font color='green'><b>Employer: </b> [Q.employer]</font><br>"
-		dat += "<font color='green'><b>Message:</b><br></font>"
-		dat += "<font color='green'>[Q.desc]</font><br><br>"
+		//dat += "<font color='green'><b>Message:</b></font>"
+		//dat += "<font color='green'>[Q.desc]</font><br><br>"
 		dat += "<font color='green'><b>Acceptable package: </b></font>"
 		dat += "<font color='green'><i>[Q.need_message]. </i></font><br>"
 		dat += "<font color='green'><b>Reward:</b></font>"
-		dat += "<font color='green'> [Q.caps_reward] caps</font><br>"
-		dat += "<a href='?src=\ref[src];completequest=[item_index]'>Send package</a><br>"
+		dat += "<font color='green'> [Q.caps_reward] caps</font> "
+		dat += "<a href='?src=\ref[src];completequest=[item_index]'>Send package</a>"
 		dat += "</div>"
 		item_index++
 
