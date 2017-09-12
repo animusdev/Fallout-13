@@ -6,7 +6,7 @@
 	icon_state = "nuka_vending"
 	icon_deny = "nuka_vending-deny"
 	product_slogans = "Take the leap... enjoy a Quantum!"
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola/radioactive = 20)
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola/radioactive = 8)
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 4)
 	refill_canister = /obj/item/weapon/vending_refill/nukacolavend
 	self_weight = 150
@@ -22,7 +22,8 @@
 	icon_state = "nuka_vending"
 	icon_deny = "nuka_vending-deny"
 	product_slogans = "Take the leap... enjoy a Quantum!"
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 20)
+//	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 20)
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 5)
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 10)
 	refill_canister = /obj/item/weapon/vending_refill/nukacolavend/full
 
