@@ -804,8 +804,7 @@
 		else
 			H.throw_alert("thirst", /obj/screen/alert/thirst, 4)
 	if(H.water_level < THIRST_LEVEL_DEADLY || H.nutrition < NUTRITION_LEVEL_STARVING)
-		H.adjustOxyLoss(2)
-		H.adjustToxLoss(2)
+		H.adjustStaminaLoss(6)//sasargule
 	return 1
 
 
