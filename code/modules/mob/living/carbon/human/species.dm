@@ -1160,7 +1160,26 @@
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 
 	var/weakness = H.check_weakness(I, user)
-	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H)
+
+	    //crc
+
+
+	if(def_zone == "r_arm" || def_zone == "l_arm")
+		apply_damage(round(I.force* 0.6 * rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+	if(def_zone == "r_leg" || def_zone == "l_leg")
+		apply_damage(round(I.force* 0.6 * rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+	if(def_zone == "head")
+		apply_damage(round(I.force* 2 * rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+	else
+		apply_damage(round(I.force*rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+
+
+
+//	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H)
 	H.damage_clothes(I.force, I.damtype, "melee", affecting.body_zone)
 
 	H.send_item_attack_message(I, user, hit_area)

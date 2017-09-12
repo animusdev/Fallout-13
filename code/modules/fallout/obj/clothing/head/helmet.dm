@@ -121,13 +121,12 @@
 	desc = "A ballistic assembly, designed to protect the wearer from projectile and energy weapon impacts, bladed weapons, blunt trauma, and concussion."
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
-	flags = HEADCOVERSEYES
 	armor = list(melee = 50, bullet = 50, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 40
 	resistance_flags = FIRE_PROOF
-	self_weight = 2
+	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/combat_mk2
 	name = "reinforced combat helmet mark II"
@@ -139,7 +138,7 @@
 	put_on_delay = 20
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
-	self_weight = 1
+	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"
@@ -306,6 +305,10 @@
 
 //Power armor helmets
 /obj/item/clothing/head/helmet/power_armor
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	resistance_flags = FIRE_PROOF
+	heat_protection = HEAD
+	cold_protection = HEAD
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 	light_color = LIGHT_COLOR_YELLOW
@@ -336,8 +339,8 @@
 	icon_state = "badmin"
 	item_state = "badmin"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100, fire = 50, acid = 100)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100, fire = 50, acid = 100)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -375,24 +378,23 @@
 	desc = "A 'black devil' power armor helmet used exclusively by Enclave military forces, developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>You can't lie, it looks pretty badass."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 90, bullet = 90, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
-	self_weight = 3
-
+	self_weight = 4
 	darkness_view = 8
-	invis_view = SEE_INVISIBLE_MINIMUM
+	can_toggle = 1
 	glass_colour_type = /datum/client_colour/glass_colour/yellow
 	actions_types = list(/datum/action/item_action/toggle)
+	armor = list(melee = 70, bullet = 70, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100, fire = 100, acid = 50)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
-	can_toggle = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	heat_protection = HEAD
+	invis_view = SEE_INVISIBLE_MINIMUM
 
 /obj/item/clothing/head/helmet/power_armor/shocktrooper/New()
 	..()
@@ -415,24 +417,23 @@
 	desc = "An improved model of advanced power armor used exclusively by Enclave military forces, developed after the Great War.<br>It looks rather threatening."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 80, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
-
 	darkness_view = 8
-	invis_view = SEE_INVISIBLE_MINIMUM
+	can_toggle = 1
 	glass_colour_type = /datum/client_colour/glass_colour/yellow
 	actions_types = list(/datum/action/item_action/toggle)
+	armor = list(melee = 70, bullet = 70, laser = 50, energy = 50, bomb = 80, bio = 100, rad = 100, fire = 100, acid = 30)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
-	can_toggle = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	heat_protection = HEAD
+	invis_view = SEE_INVISIBLE_MINIMUM
 
 /obj/item/clothing/head/helmet/power_armor/superadvanced/New()
 	..()
@@ -455,24 +456,23 @@
 	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
 	icon_state = "tesla"
 	item_state = "tesla"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 50, laser = 80, energy = 100, bomb = 70, bio = 100, rad = 100, fire = 80, acid = 80)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
-	self_weight = 4
-
-	darkness_view = 8
-	invis_view = SEE_INVISIBLE_MINIMUM
+	self_weight = 6
+	darkness_view = 6
+	can_toggle = 1
 	glass_colour_type = /datum/client_colour/glass_colour/yellow
 	actions_types = list(/datum/action/item_action/toggle)
+	armor = list(melee = 50, bullet = 40, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
-	can_toggle = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	heat_protection = HEAD
+	invis_view = SEE_INVISIBLE_MINIMUM
 
 /obj/item/clothing/head/helmet/power_armor/tesla/New()
 	..()
@@ -495,24 +495,23 @@
 	desc = "A helmet typically used by Enclave regular troops.<br>It looks somewhat threatening."
 	icon_state = "advanced"
 	item_state = "advanced"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 60, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
-
-	darkness_view = 8
-	invis_view = SEE_INVISIBLE_MINIMUM
+	darkness_view = 6
+	can_toggle = 1
 	glass_colour_type = /datum/client_colour/glass_colour/yellow
 	actions_types = list(/datum/action/item_action/toggle)
+	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
-	can_toggle = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	heat_protection = HEAD
+	invis_view = SEE_INVISIBLE_MINIMUM
 
 /obj/item/clothing/head/helmet/power_armor/advanced/New()
 	..()
@@ -535,52 +534,52 @@
 	desc = "An old pre-War power armor helmet.<br>It's very comfy."
 	icon_state = "t60helmet"
 	item_state = "t60helmet"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 60, laser = 50, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	armor = list(melee = 80, bullet = 70, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	cold_protection = HEAD
+	heat_protection = HEAD
 
 /obj/item/clothing/head/helmet/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "An old pre-War power armor helmet.<br>It's fairly comfy."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 60, laser = 40, energy = 20, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	armor = list(melee = 80, bullet = 70, laser = 40, energy = 40, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	cold_protection = HEAD
+	heat_protection = HEAD
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "An old pre-War power armor helmet.<br>The inside is stuffy and hot."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
-	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
-	armor = list(melee = 80, bullet = 50, laser = 40, energy = 20, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	put_on_delay = 50
 	strip_delay = 100
-	resistance_flags = FIRE_PROOF | UNACIDABLE
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	armor = list(melee = 80, bullet = 60, laser = 40, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	cold_protection = HEAD
 
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "salvaged power helmet"
@@ -588,7 +587,7 @@
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 80, rad = 40, fire = 30, acid = 30)
+	armor = list(melee = 50, bullet = 40, laser = 40, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 40)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 50
 	strip_delay = 100

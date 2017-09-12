@@ -5,15 +5,14 @@
 	desc = "The N99 self-loading pistol is known for its ability to survive in the harshest of conditions.<br>This great weapon is able to be reliably restored to working condition, even after extended exposure to hard elements without maintenance."
 	icon_state = "n99"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	w_class = 2
-	force = 13
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/F13/m10
 	fire_sound = "10mmfire"
+	force = 13
 	can_suppress = 1
 	burst_size = 1
 	fire_delay = 0
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = 2
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99/update_icon()
 	..()
@@ -47,12 +46,68 @@
 	mag_type = /obj/item/ammo_box/magazine/F13/m308
 	can_suppress = 1
 	casing_ejector = 1
-	weapon_weight = WEAPON_MEDIUM
-	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 	recoil = 2
+
+//crc
+/obj/item/weapon/gun/ballistic/automatic/garand
+	name = "Garand M1"
+	desc = "Vintage semi-automatic rifle. Advanced."
+	icon_state = "garand"
+	item_state = "shotgun"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	origin_tech = "combat=3;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/F13/g308
+	can_suppress = 1
+	casing_ejector = 1
+	burst_size = 0
+	wielded_icon = "shotgun1"
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/weapons/garandclip.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	recoil = 2
+	fire_sound = 'sound/weapons/garandshot.ogg'
+
+
+/obj/item/weapon/gun/ballistic/automatic/garand/shoot_with_empty_chamber(mob/living/user as mob)
+	if(magazine.stored_ammo.len <= 1)
+		to_chat(user, "<span class='notice'>clip ejected!</span>")
+		magazine.dropped()
+		magazine.forceMove(get_turf(src.loc))
+		magazine.update_icon()
+		magazine = null
+		playsound(user, 'sound/weapons/garandclip.ogg', 100, 1)
+
+
+/obj/item/weapon/gun/ballistic/automatic/gauss
+	name = "M72 Gauss EM rifle"
+	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed."
+	icon_state = "gauss"
+	item_state = "shotgun"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	origin_tech = "combat=4;materials=4"
+	mag_type = /obj/item/ammo_box/magazine/F13/gaussmag
+	suppressed = 1
+	casing_ejector = 1
+	burst_size = 0
+	wielded_icon = "shotgun1"
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	fire_sound = 'sound/weapons/bulletflyby.ogg'
+//crc
+
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
@@ -64,8 +119,9 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/m308
 	can_suppress = 1
 	casing_ejector = 0
-	weapon_weight = WEAPON_MEDIUM
-	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	pumpsound = 'sound/weapons/boltpump.ogg'
 	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
 	recoil = 2
@@ -75,8 +131,10 @@
 	item_state = "shotgun"
 	can_suppress = 1
 	zoomable = TRUE
-	zoom_amt = 7
-	w_class = WEIGHT_CLASS_NORMAL
+	zoom_amt = 12
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	scopetype = /obj/screen/fullscreen/scope/medium
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
@@ -102,8 +160,8 @@
 	origin_tech = "combat=1;materials=1"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/pipe
 	casing_ejector = 1
-	weapon_weight = WEAPON_LIGHT
-	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/ballistic/shotgun/trail
 	name = "trail carbine"
@@ -113,9 +171,10 @@
 	item_state = "shotgun"
 	origin_tech = "combat=1;materials=1"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/trail
-	weapon_weight = WEAPON_MEDIUM
 	casing_ejector = 1
-	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
 	recoil = 2
 
@@ -131,7 +190,7 @@
 	burst_size = 2
 	can_suppress = 0
 	casing_ejector = 1
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'

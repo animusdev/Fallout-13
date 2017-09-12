@@ -63,6 +63,11 @@
 	//Gun safety.
 	var/safety = 0
 
+	    //crc
+	var/condition = 100
+
+    //var/loaded = 0
+
 
 /obj/item/weapon/gun/New()
 	..()
@@ -72,6 +77,7 @@
 		verbs += /obj/item/weapon/gun/proc/toggle_gunlight
 		new /datum/action/item_action/toggle_gunlight(src)
 	build_zooming()
+	condition = rand(40,100)
 
 
 /obj/item/weapon/gun/CheckParts(list/parts_list)
@@ -96,6 +102,20 @@
 		to_chat(user, "<span class='notice'>The safety is on.</span>")
 	else
 		to_chat(user, "<span class='notice'>The safety is off.</span>")
+
+	//crc
+	if(condition > 75)
+		to_chat(user, "<span class='notice'>The weapon looks almost new</span>")
+
+	if(condition < 75 && condition > 50)
+		to_chat(user, "<span class='notice'>The weapon looks used</span>")
+
+	if(condition < 50 && condition > 25)
+		to_chat(user, "<span class='notice'>The weapon looks worn</span>")
+
+	if(condition < 25)
+		to_chat(user, "<span class='notice'>The weapon in poor condition</span>")
+    //crc
 
 //called after the gun has successfully fired its chambered ammo.
 /obj/item/weapon/gun/proc/process_chamber()
@@ -241,6 +261,17 @@
 				if(target == user)
 					break
 			if(chambered && chambered.BB)
+			        //crc
+				if(prob((110 - condition)/2))
+					condition -= 1
+					if(condition < 10 && prob(40))
+						explosion(src.loc, -1, 0, 1, 3)
+					if(condition < 50)
+						process_chamber()
+						shoot_with_empty_chamber(user)
+						break
+
+
 				if(randomspread)
 					sprd = round((rand() - 0.5) * (randomized_gun_spread + randomized_bonus_spread))
 				else //Smart spread
@@ -262,6 +293,14 @@
 		firing_burst = 0
 	else
 		if(chambered)
+			if(prob((110 - condition)/2))
+				condition -= 1
+				if(condition < 10 && prob(40))
+					explosion(src.loc, -1, 0, 1, 3)
+				if(condition < 50)
+					process_chamber()
+					shoot_with_empty_chamber(user)
+					return
 			sprd = round((pick(1,-1)) * (randomized_gun_spread + randomized_bonus_spread))
 			if(!chambered.fire_casing(target, user, params, , suppressed, zone_override, sprd))
 				shoot_with_empty_chamber(user)
@@ -292,6 +331,18 @@
 		return
 
 /obj/item/weapon/gun/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/crafting/weapon_repair_kit))
+		if(condition < 80)
+			if(do_after(user, 20, target = src))
+				if(prob(70))
+					to_chat(user, "<span class='notice'>You partially repaired your weapon.</span>")
+					condition += 20
+				else
+					to_chat(user, "<span class='userdanger'>Oh, repair kit is broke!</span>")
+					I.Del()
+		else
+			to_chat(user, "<span class='notice'>No need, weapon in good condition.</span>")
+
 	if(can_flashlight)
 		if(istype(I, /obj/item/device/flashlight/seclite))
 			var/obj/item/device/flashlight/seclite/S = I
@@ -519,14 +570,16 @@
 
 		user.client.pixel_x = world.icon_size*_x
 		user.client.pixel_y = world.icon_size*_y
-		if(scopetype)
-			user.overlay_fullscreen("scope", scopetype)
+		user.client.view = 12
+//		if(scopetype)
+//			user.overlay_fullscreen("scope", scopetype)
 	else
 		user.zoomgun = null
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
-		if(scopetype)
-			user.clear_fullscreen("scope", 0)
+		user.client.view =  world.view
+//		if(scopetype)
+//			user.clear_fullscreen("scope", 0)
 	user.update_fov_position()
 
 //Proc, so that gun accessories/scopes/etc. can easily add zooming.

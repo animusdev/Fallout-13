@@ -35,6 +35,41 @@
 				playsound(loc, WT.usesound, 40, 1)
 				if(do_after(user, 40*I.toolspeed, target = src))
 					obj_integrity = Clamp(obj_integrity + 20, 0, max_integrity)
+
+//crc
+	var/obj/item/stack/sheet/S = I
+	if(istype(S,/obj/item/stack/sheet/metal))
+		if(S.get_amount() < 2)
+			to_chat(user, "<span class='warning'>You need two sheets of metal to finish a wall!</span>")
+			return
+		to_chat(user, "<span class='notice'>You start adding plating...</span>")
+		if (do_after(user, 40, target = src))
+			if(loc == null || S.get_amount() < 2)
+				return
+			S.use(2)
+			to_chat(user, "<span class='notice'>You add the plating.</span>")
+			var/turf/T = get_turf(src)
+			T.ChangeTurf(/turf/closed/wall/f13/store)
+			transfer_fingerprints_to(T)
+			qdel(src)
+		return
+	if(istype(S,/obj/item/stack/sheet/mineral/wood))
+		if(S.get_amount() < 2)
+			to_chat(user, "<span class='warning'>You need two wood planks to finish a wall!</span>")
+			return
+		to_chat(user, "<span class='notice'>You start adding plating...</span>")
+		if (do_after(user, 40, target = src))
+			if(loc == null || S.get_amount() < 2)
+				return
+			S.use(2)
+			to_chat(user, "<span class='notice'>You add the plating.</span>")
+			var/turf/T = get_turf(src)
+			T.ChangeTurf(/turf/closed/wall/f13/wood/house)
+			transfer_fingerprints_to(T)
+			qdel(src)
+		return
+
+//crc
 	else
 		return ..()
 

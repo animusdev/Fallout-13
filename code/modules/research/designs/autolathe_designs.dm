@@ -620,7 +620,7 @@
 	name = "Shotgun slug"
 	id = "shotgun_slug"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/ammo_casing/shotgun
 	category = list("hacked", "Security")
 
@@ -628,7 +628,7 @@
 	name = "Buckshot shell"
 	id = "buckshot_shell"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/ammo_casing/shotgun/buckshot
 	category = list("hacked", "Security")
 
@@ -636,7 +636,7 @@
 	name = "Shotgun dart"
 	id = "shotgun_dart"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/ammo_casing/shotgun/dart
 	category = list("hacked", "Security")
 
@@ -644,7 +644,7 @@
 	name = "Ammo box (.357)"
 	id = "a357"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
+	materials = list(MAT_METAL = 120000)
 	build_path = /obj/item/ammo_box/a357
 	category = list("hacked", "Security")
 
@@ -652,7 +652,7 @@
 	name = "Magazine (9mm)"
 	id = "c9mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
+	materials = list(MAT_METAL = 120000)
 	build_path = /obj/item/ammo_box/magazine/F13/m9
 	category = list("hacked", "Security")
 
@@ -660,7 +660,7 @@
 	name = "Magazine (10mm)"
 	id = "c10mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 40000)
+	materials = list(MAT_METAL = 160000)
 	build_path = /obj/item/ammo_box/magazine/F13/m10
 	category = list("hacked", "Security")
 
@@ -668,7 +668,7 @@
 	name = "Ammo box (.45)"
 	id = "c45"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 40000)
+	materials = list(MAT_METAL = 160000)
 	build_path = /obj/item/ammo_box/c45
 	category = list("hacked", "Security")
 
@@ -676,7 +676,7 @@
 	name = "speed loader (.44)"
 	id = "c44mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 50000)
+	materials = list(MAT_METAL = 200000)
 	build_path = /obj/item/ammo_box/F13/m44
 	category = list("hacked", "Security")
 
@@ -685,7 +685,7 @@
 	name = "rifle magazine (5.56)"
 	id = "a556"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 50000)
+	materials = list(MAT_METAL = 200000)
 	build_path = /obj/item/ammo_box/magazine/F13/m556
 	category = list("hacked", "Security")
 
@@ -693,15 +693,23 @@
 	name = "rifle magazine (.308)"
 	id = "c308mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60000)
+	materials = list(MAT_METAL = 240000)
 	build_path = /obj/item/ammo_box/magazine/F13/m308
 	category = list("hacked", "Security")
-
+//crc
+/datum/design/g308mm
+	name = "garand clip (.308)"
+	id = "g308mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 80000)
+	build_path = /obj/item/ammo_box/magazine/F13/g308
+	category = list("hacked", "Security")
+//crc
 /datum/design/c223mm
 	name = "rifle magazine (.223)"
 	id = "c223mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60000)
+	materials = list(MAT_METAL = 240000)
 	build_path = /obj/item/ammo_box/magazine/F13/m223
 	category = list("hacked", "Security")
 

@@ -57,22 +57,23 @@
 	burst_select()
 
 /obj/item/weapon/gun/ballistic/automatic/proc/burst_select()
-	var/mob/living/carbon/human/user = usr
-	select = !select
-	if(!select)
-		burst_size = 1
-		fire_delay = 0
-		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
-	else
-		burst_size = initial(burst_size)
-		fire_delay = initial(fire_delay)
-		to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+	if(burst_size>0)
+		var/mob/living/carbon/human/user = usr
+		select = !select
+		if(!select)
+			burst_size = 1
+			fire_delay = 0
+			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+		else
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 
-	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
-	update_icon()
-	for(var/X in actions)
-		var/datum/action/A = X
-		A.UpdateButtonIcon()
+		playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+		update_icon()
+		for(var/X in actions)
+			var/datum/action/A = X
+			A.UpdateButtonIcon()
 
 /obj/item/weapon/gun/ballistic/automatic/can_shoot()
 	return get_ammo()

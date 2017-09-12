@@ -6,6 +6,7 @@
 
         #include "map_files\TexasWasteland\texas_wasteland.dmm"
         #include "map_files\TexasWasteland\z2.dmm"
+        #include "map_files\TexasWasteland\z3.dmm"
 
 		#define MAP_PATH "map_files/TexasWasteland"
         #define MAP_FILE "texas_wasteland.dmm"

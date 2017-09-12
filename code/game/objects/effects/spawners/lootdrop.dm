@@ -145,6 +145,8 @@
 				/obj/item/weapon/relic = 3,
 				/obj/item/weaponcrafting/reciever = 2,
 				/obj/item/clothing/head/cone = 2,
+				/obj/item/crafting/weapon_repair_kit = 4,
+				/obj/item/crafting/reloader_set = 6,
 				/obj/item/weapon/grenade/smokebomb = 2,
 				/obj/item/device/geiger_counter = 3,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/citrus/orange = 1,

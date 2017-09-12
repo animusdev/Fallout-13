@@ -123,7 +123,26 @@
 /obj/item/ammo_box/magazine/F13/m308/fire
 	name = "rifle magazine (.308) (+FIRE!)"
 	ammo_type = /obj/item/ammo_casing/F13/m308/fire
+//crc
 
+/obj/item/ammo_box/magazine/F13/g308
+	name = "garand clip(.308)"
+	ammo_type = /obj/item/ammo_casing/F13/m308
+	caliber = "308mm"
+	icon_state = "gclip"
+	max_ammo = 8
+	multiple_sprites = 1
+
+/obj/item/ammo_box/magazine/F13/gaussmag
+	name = "gauss magazine"
+	ammo_type = /obj/item/ammo_casing/penetrator
+	caliber = ".50"
+	icon_state = "gaussmag"
+	max_ammo = 8
+	multiple_sprites = 2
+
+
+//crc
 /obj/item/ammo_box/magazine/F13/m556
 	name = "rifle magazine (5.56mm)"
 	icon_state = "5.56m"

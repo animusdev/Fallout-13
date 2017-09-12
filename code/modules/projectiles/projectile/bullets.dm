@@ -282,7 +282,6 @@
 
 
 /obj/item/projectile/bullet/sniper/penetrator
-	icon_state = "gauss"
 	name = "penetrator round"
 	damage = 60
 	forcedodge = 1

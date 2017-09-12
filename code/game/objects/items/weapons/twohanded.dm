@@ -58,9 +58,9 @@
 	return
 
 /obj/item/weapon/proc/wield(mob/living/carbon/user)
-	if(wielded) 
+	if(wielded)
 		return
-	
+
 	if(ismonkey(user))
 		to_chat(user, "<span class='warning'>It's too heavy for you to wield fully.</span>")
 		return
@@ -444,7 +444,7 @@
 /obj/item/weapon/twohanded/required/chainsaw/doomslayer
 	name = "THE GREAT COMMUNICATOR"
 	desc = "<span class='warning'>VRRRRRRR!!!</span>"
-	armour_penetration = 100
+	armour_penetration = 40
 	force_on = 30
 
 /obj/item/weapon/twohanded/required/chainsaw/doomslayer/hit_reaction(mob/living/carbon/human/owner, attack_text, final_block_chance, damage, attack_type)

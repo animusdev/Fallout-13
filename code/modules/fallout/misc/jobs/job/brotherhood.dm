@@ -61,6 +61,8 @@
 	shoes = /obj/item/clothing/shoes/f13/military
 	suit = /obj/item/clothing/suit/f13/elder
 	weapon = /obj/item/weapon/gun/energy/laser/pistol
+	belt = /obj/item/weapon/storage/belt/military/army
+	belt_contents = list(/obj/item/device/radio = 1)
 
 //Brotherhood Paladin
 

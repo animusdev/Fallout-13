@@ -50,7 +50,7 @@
 	result = /obj/item/clothing/shoes/f13/tan
 	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/crafting/wonderglue = 1)
-	tools = /obj/item/weapon/wirecutters
+	tools = list(/obj/item/weapon/wirecutters)
 	time = 150
 	category = CAT_PRIMAL
 
@@ -59,7 +59,7 @@
 	result = /obj/item/clothing/under/f13/tribal
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
 				/obj/item/crafting/wonderglue = 1)
-	tools = /obj/item/weapon/wirecutters
+	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_PRIMAL
 
@@ -68,7 +68,7 @@
 	result = /obj/item/clothing/suit/armor/f13/tribal
 	reqs = list(/obj/item/stack/sheet/animalhide = 3,
 				/obj/item/crafting/duct_tape = 1)
-	tools = /obj/item/weapon/wirecutters
+	tools = list(/obj/item/weapon/wirecutters)
 	time = 150
 	category = CAT_PRIMAL
 
@@ -159,3 +159,52 @@
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
 	time = 100
 	category = CAT_MISC
+
+
+///crc
+
+/datum/crafting_recipe/reloader_set
+	name = "Reloader cartridges"
+	result = /obj/item/crafting/reloader_set
+	time = 100
+	reqs = list(/obj/item/crafting/turpentine = 1,
+				/datum/reagent/consumable/sodiumchloride = 10,
+				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1)
+	category = CAT_MISC
+
+/datum/crafting_recipe/weapon_repair_kit
+	name = "Weapon repair kit"
+	result = /obj/item/crafting/weapon_repair_kit
+	time = 100
+	reqs = list(/obj/item/crafting/small_gear = 2,
+				/obj/item/crafting/large_gear = 1 ,
+				/obj/item/crafting/duct_tape =2,
+				/obj/item/crafting/wonderglue = 1,
+				/obj/item/weapon/screwdriver = 1)
+	category = CAT_MISC
+
+
+/datum/crafting_recipe/ghillie
+	name = "Ghillie suit"
+	result = /obj/item/clothing/suit/armor/f13/ghillie
+	time = 200
+	reqs = list(/obj/item/stack/sheet/animalhide = 2,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 2,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/clothing/suit/ = 1)
+	tools = list(/obj/item/weapon/wirecutters)
+	category = CAT_MISC
+
+/datum/crafting_recipe/ghillie_hat
+	name = "Ghillie hood"
+	result = /obj/item/clothing/head/armor/f13/ghillie_hat
+	time = 100
+	reqs = list(/obj/item/stack/sheet/animalhide = 1,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 1,
+				/obj/item/stack/cable_coil = 1,
+				/obj/item/clothing/head/ = 1)
+	tools = list(/obj/item/weapon/wirecutters)
+	category = CAT_MISC
+

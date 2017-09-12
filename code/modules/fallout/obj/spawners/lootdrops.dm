@@ -24,7 +24,9 @@
 	/obj/item/crafting/reloader = 5,
 	/obj/item/crafting/igniter = 5,
 	/obj/item/crafting/timer = 5,
-	/obj/item/crafting/sensor = 5)
+	/obj/item/crafting/sensor = 5,
+	/obj/item/crafting/weapon_repair_kit = 5,
+	/obj/item/crafting/reloader_set = 5)
 
 /obj/effect/spawner/lootdrop/med_medium
 	color = "#FFAAFA"
@@ -46,6 +48,7 @@
 	loot = list(
 	/obj/item/weapon/gun/ballistic/automatic/assault_rifle = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/rifle = 1,
+	/obj/item/weapon/gun/ballistic/automatic/garand = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/rifle/scope = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/trail = 1)
 
@@ -62,6 +65,7 @@
 /obj/effect/spawner/lootdrop/wrange_legend
 	color = "#FF0000"
 	loot = list(
+	/obj/item/weapon/gun/ballistic/automatic/gauss = 1,
 	/obj/item/weapon/gun/ballistic/automatic/bozar = 25,
 	/obj/item/weapon/gun/ballistic/revolver/magnum = 1,
 	/obj/item/weapon/gun/energy/laser/rifle/tri = 25,
@@ -92,6 +96,7 @@
 	/obj/item/ammo_box/magazine/F13/m308/heap = 1,
 	/obj/item/ammo_box/magazine/F13/m308/armourpiercing = 1,
 	/obj/item/ammo_box/magazine/F13/m308/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/g308 = 1,
 	/obj/item/ammo_box/F13/m308 = 1,
 	/obj/item/ammo_box/F13/m308/heap = 1,
 	/obj/item/ammo_box/F13/m308/armourpiercing = 1,
