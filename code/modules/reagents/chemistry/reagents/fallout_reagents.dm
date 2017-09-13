@@ -123,3 +123,19 @@ datum/reagent/supstimpackium_oxy/on_mob_life(mob/living/M)
 	id = "improve_reagent"
 	description = "Does nothing, but can improve other reagents"
 	color = "#000011"
+
+//foods and drinks
+
+/datum/reagent/sunset
+	name = "Sunset Sarsaparilla"
+	id = "sunset"
+	description = "A traditional radiation-free carbonated beverage of a root-beer-type.<br>Tastes like sunshine!"
+	color = "#5555ffaa" // rgb: 170, 170, 170, 77 (alpha)
+	water_factor = 5 * REAGENTS_METABOLISM
+
+/datum/reagent/nuka
+	name = "Nuka-cola"
+	id = "nuka"
+	description = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state."
+	color = "#ff9955aa" // rgb: 170, 170, 170, 77 (alpha)
+	water_factor = 5 * REAGENTS_METABOLISM

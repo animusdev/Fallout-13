@@ -7,7 +7,7 @@
 	item_state = "beer"
 	materials = list(MAT_GLASS=500)
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
-	list_reagents = list("beer" = 10, "mannitol" = 10, "potass_iodide" = 10)
+	list_reagents = list("sunset" = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola //It's actually a coffee...
 	name = "Nuka-Cola"
@@ -16,11 +16,11 @@
 	item_state = "beer"
 	materials = list(MAT_GLASS=500)
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
-	list_reagents = list("coffee" = 30)
+	list_reagents = list("nuka" = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola/radioactive //Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive!
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
-	list_reagents = list("coffee" = 25, "radium" = 5)
+	list_reagents = list("nuka" = 25, "radium" = 5)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask
 	name = "metal flask"
