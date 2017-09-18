@@ -49,6 +49,7 @@
 	aggro_vision_range = 10
 	idle_vision_range = 7
 	ranged = 1
+	ranged_cooldown_time = 105
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
 
