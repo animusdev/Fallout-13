@@ -107,7 +107,7 @@
 		if(M.client)
 			if(iscarbon(M))
 				var/mob/living/carbon/C = M
-				if(!C.handcuffed)
+				if(!C.handcuffed & !C.buckled)
 					SwitchState(animate)
 					return 1
 			else

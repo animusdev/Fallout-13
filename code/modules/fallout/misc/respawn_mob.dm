@@ -1,6 +1,6 @@
 proc/respawn_mob()
 	for(var/area/A in world)
-		if(mob_list.len<70)// && ispath(get_turf(A), /turf/open/)
+		if(mob_list.len>0)// && ispath(get_turf(A), /turf/open/) /Gargule (damn shit, it's a kostil`)
 			var/mob/living/carbon/human/H
 			var/mob/living/simple_animal/hostile/HS
 
