@@ -50,3 +50,16 @@ var/const/CITIZEN			=(1<<4)
 /var/const/VAULT_BOTANIST	=(1<<6)
 /var/const/VAULT_BARTENDER	=(1<<7)
 */
+
+
+var/list/fallout_head_positions = list(
+	"Paladin",
+	"Sergeant",
+	"Centurion",
+	"Sergeant NCR",
+	"Veteran Ranger"
+)
+
+
+/proc/whitelist_jobbans(job)
+	return (job in fallout_head_positions)

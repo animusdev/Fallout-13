@@ -1,5 +1,5 @@
 #define WHITELISTFILE "config/whitelist.txt"
-
+/*
 /proc/load_whitelist()
 	var/list/whitelist = list()
 	for(var/line in file2list(WHITELISTFILE))
@@ -11,6 +11,34 @@
 
 	if(!whitelist.len)
 		whitelist = null
+	return whitelist
+*/
+/proc/load_whitelist()
+
+	log_admin("Loading whitelist")
+	var/list/whitelist = list()
+
+	establish_db_connection()
+	if(!dbcon.IsConnected())
+		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]")
+		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]"
+		return
+	var/DBQuery/query = dbcon.NewQuery("SELECT byond FROM whitelist ORDER BY byond ASC")
+	if(!query.Execute())
+		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]")
+		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]"
+		return
+	while(query.NextRow())
+		whitelist += "[query.item[1]]"
+
+	if(!whitelist.len)
+		log_admin("Failed to load whitelist or its empty")
+		world.log << "Failed to load whitelist or its empty"
+		whitelist = null
+	else
+		log_admin("Loaded [whitelist.len] ckeys in whitelist.")
+		world.log << "Loaded [whitelist.len] ckeys in whitelist."
+
 	return whitelist
 
 /proc/check_whitelist(var/ckey)

@@ -122,10 +122,12 @@ var/list/nonhuman_positions = list(
 	"pAI"
 )
 
+/*
+//Look for proc in fallout/misc/jobs/jobs.dm
 
 /proc/guest_jobbans(job)
 	return ((job in command_positions) || (job in nonhuman_positions) || (job in security_positions))
-
+*/
 
 
 //this is necessary because antags happen before job datums are handed out, but NOT before they come into existence

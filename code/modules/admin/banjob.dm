@@ -3,6 +3,10 @@
 	if(!M || !istype(M) || !M.ckey)
 		return 0
 
+	if (whitelist_jobbans(rank))
+		if (config.usewhitelist && ismob(M) && !check_whitelist(M))
+			return "WHITELISTED"
+
 	if(!M.client) //no cache. fallback to a DBQuery
 		var/DBQuery/query = dbcon.NewQuery("SELECT reason FROM [format_table_name("ban")] WHERE ckey = '[sanitizeSQL(M.ckey)]' AND job = '[sanitizeSQL(rank)]' AND (bantype = 'JOB_PERMABAN'  OR (bantype = 'JOB_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
 		if(!query.Execute())

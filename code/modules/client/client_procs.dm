@@ -109,9 +109,9 @@ var/next_external_rsc = 0
 
 
 /client/New(TopicData)
-	if(config.whitelist_on && !check_whitelist(src.ckey))
+/*	if(config.whitelist_on && !check_whitelist(src.ckey))
 		Destroy(src)
-		return
+		return */
 	if(SScontent && SScontent.all_content_packs && SScontent.all_content_packs.len)
 		update_content_data()
 	chatOutput = new(src)
