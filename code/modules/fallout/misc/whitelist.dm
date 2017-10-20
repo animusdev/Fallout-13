@@ -23,7 +23,7 @@
 		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]")
 		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]"
 		return
-	var/DBQuery/query = dbcon.NewQuery("SELECT byond FROM whitelist ORDER BY byond ASC")
+	var/DBQuery/query = dbcon.NewQuery("SELECT byond FROM forum2.Z_whitelist")
 	if(!query.Execute())
 		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]")
 		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]"
