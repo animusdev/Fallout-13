@@ -20,13 +20,13 @@
 
 	establish_db_connection()
 	if(!dbcon.IsConnected())
-		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]")
-		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]"
+		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]. DB is not connected.")
+		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]. DB is not connected."
 		return
 	var/DBQuery/query = dbcon.NewQuery("SELECT byond FROM forum2.Z_whitelist")
 	if(!query.Execute())
-		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]")
-		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]"
+		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]. Failed to execute query.")
+		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]. Failed to execute query."
 		return
 	while(query.NextRow())
 		whitelist += "[query.item[1]]"
