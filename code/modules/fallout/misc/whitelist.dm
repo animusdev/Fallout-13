@@ -17,7 +17,7 @@
 
 	log_admin("Loading whitelist")
 	var/list/whitelist = list()
-
+        establish_db_connection()
 	var/DBQuery/query = dbcon.NewQuery("SELECT byond FROM forum2.Z_whitelist")
 
 	if(!query.Execute())
