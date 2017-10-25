@@ -573,7 +573,7 @@
 	id = "flamethrower"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 90000)
-	build_path = /obj/item/weapon/flamethrower/full
+	build_path = /obj/item/weapon/flamethrower/full/tank
 	category = list("hacked", "Security")
 
 /datum/design/rcd
