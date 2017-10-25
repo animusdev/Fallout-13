@@ -572,9 +572,9 @@
 	name = "Flamethrower"
 	id = "flamethrower"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 500)
+	materials = list(MAT_METAL = 90000)
 	build_path = /obj/item/weapon/flamethrower/full
-	category = list("hacked", "Weapons and ammo")
+	category = list("hacked", "Security")
 
 /datum/design/rcd
 	name = "Rapid construction device (RCD)"
