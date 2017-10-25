@@ -1,8 +1,8 @@
 /obj/item/weapon/flamethrower
 	name = "flamethrower"
 	desc = "You are a firestarter!"
-	icon = 'icons/obj/flamethrower.dmi'
-	icon_state = "flamethrowerbase"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "flamer"
 	item_state = "flamethrower_0"
 	flags = CONDUCT
 	force = 3
@@ -10,7 +10,7 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = WEIGHT_CLASS_NORMAL
-	materials = list(MAT_METAL=500)
+	materials = list(MAT_METAL=90000)
 	origin_tech = "combat=1;plasmatech=2;engineering=2"
 	resistance_flags = FIRE_PROOF
 	var/status = 0
