@@ -78,7 +78,8 @@
 
 /obj/item/weapon/gun/ballistic/automatic/atlauncher
 	desc = "A pre-loaded, single shot anti-armour launcher."
-	name = "anti-armour grenade launcher"
+	name = "anti-armour rocket launcher"
+	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
 	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher
