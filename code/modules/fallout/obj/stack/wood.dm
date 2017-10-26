@@ -17,7 +17,7 @@
 		var/obj/structure/window/fulltile/F = A
 		for(var/atom/S in F.loc)
 			if(istype(S, /obj/structure/barricade/wooden/planks))
-				..()
+				return ..()
 //			var/obj/structure/barricade/wooden/planks/B = S
 //				B.attackby(src,user)
 //				return
@@ -33,7 +33,7 @@
 		var/obj/structure/simple_door/F = A
 		for(var/atom/S in F.loc)
 			if(istype(S, /obj/structure/barricade/wooden/planks))
-				..()
+				return ..()
 //			var/obj/structure/barricade/wooden/planks/B = S
 //				B.attackby(src,user)
 //				return

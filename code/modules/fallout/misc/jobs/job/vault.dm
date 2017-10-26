@@ -1,3 +1,5 @@
+//I'm warning you - this code section is under construction. Ceiling, walls, and floor are unstable.
+
 /datum/job/overseer
 	title = "Overseer"
 	flag = CAPTAIN

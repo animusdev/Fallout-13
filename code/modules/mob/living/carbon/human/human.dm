@@ -16,6 +16,7 @@
 /mob/living/carbon/human/New()
 	verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
+	verbs += /mob/living/proc/surrender
 
 	//initialize limbs first
 	create_bodyparts()

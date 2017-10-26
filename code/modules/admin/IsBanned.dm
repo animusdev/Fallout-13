@@ -20,7 +20,7 @@
 		admin = 1
 
 	//Whitelist
-	if(config.usewhitelist)
+/*	if(config.usewhitelist)
 		if(!check_whitelist(ckey(key)))
 			if (admin)
 				log_admin("The admin [key] has been allowed to bypass the whitelist")
@@ -29,7 +29,7 @@
 			else
 				log_access("Failed Login: [key] - Not on whitelist")
 				return list("reason"="whitelist", "desc" = "\nReason: You are not on the white list for this server")
-
+*/
 	//Guest Checking
 	if(IsGuestKey(key))
 		if (!guests_allowed)

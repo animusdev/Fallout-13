@@ -4,7 +4,7 @@
 
 /obj/structure/handrail
 	name = "blue handrail"
-	desc = "It's a heavy-duty metal handrail. It's painted blue.<br>You shall not pass!"
+	desc = "A heavy-duty metal handrail. It's painted blue.<br>You shall not pass!"
 	icon = 'icons/fallout/objects/structures/fences.dmi'
 	icon_state = "b_handrail0"
 	icontype = "b_handrail"
@@ -16,7 +16,7 @@
 
 /obj/structure/handrail/yellow //We remember the Yellow server!
 	name = "yellow handrail"
-	desc = "It's a heavy-duty metal handrail. It's painted yellow.<br>You shall not pass!"
+	desc = "A heavy-duty metal handrail. It's painted yellow.<br>You shall not pass!"
 	icon_state = "y_handrail0"
 	icontype = "y_handrail"
 

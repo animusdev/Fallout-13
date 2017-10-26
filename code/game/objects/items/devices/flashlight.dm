@@ -11,6 +11,8 @@
 	actions_types = list(/datum/action/item_action/toggle_light)
 	var/on = 0
 	var/brightness_on = 4 //luminosity when on
+	var/sound_toggleON = 'sound/f13items/flashlight_on.ogg'
+	var/sound_toggleOFF = 'sound/f13items/flashlight_off.ogg'
 	light_color = LIGHT_COLOR_LED
 
 /obj/item/device/flashlight/New()
@@ -27,6 +29,7 @@
 
 /obj/item/device/flashlight/attack_self(mob/user)
 	on = !on
+	playsound(loc, on ? sound_toggleON : sound_toggleOFF, 25, 1, -3)
 	update_brightness(user)
 	for(var/X in actions)
 		var/datum/action/A = X
@@ -175,6 +178,8 @@
 	var/on_damage = 10
 	var/produce_heat = 1500
 	heat = 1000
+	sound_toggleON = 'sound/f13items/matchstick_lit.ogg'
+	sound_toggleOFF = 'sound/f13items/matchstick_hit.ogg'
 	light_color = LIGHT_COLOR_FIRE
 
 /obj/item/device/flashlight/torch/New()

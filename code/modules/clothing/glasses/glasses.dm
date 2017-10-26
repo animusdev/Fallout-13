@@ -85,7 +85,7 @@
 	origin_tech = "materials=4;magnets=4;plasmatech=4;engineering=4"
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
-	glass_colour_type = /datum/client_colour/glass_colour/green
+	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
 
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
@@ -145,7 +145,7 @@
 //Here lies green glasses, so ugly they died. RIP
 
 /obj/item/clothing/glasses/sunglasses
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flashes."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover."
 	name = "sunglasses"
 	icon_state = "sun"
 	item_state = "sunglasses"
@@ -243,7 +243,7 @@
 	vision_flags = SEE_MOBS
 	invis_view = 2
 	flash_protect = 0
-	glass_colour_type = /datum/client_colour/glass_colour/red
+	glass_colour_type = /datum/client_colour/glass_colour/lightblue
 
 /obj/item/clothing/glasses/thermal/emp_act(severity)
 	thermal_overload()

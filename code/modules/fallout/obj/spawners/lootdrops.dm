@@ -24,7 +24,17 @@
 	/obj/item/crafting/reloader = 5,
 	/obj/item/crafting/igniter = 5,
 	/obj/item/crafting/timer = 5,
-	/obj/item/crafting/sensor = 5)
+	/obj/item/crafting/sensor = 5,
+	/obj/item/crafting/weapon_repair_kit = 5,
+	/obj/item/crafting/reloader_set = 5)
+
+/obj/effect/spawner/lootdrop/med_medium
+	color = "#FFAAFA"
+	loot = list(
+	/obj/item/weapon/reagent_containers/pill/patch/radaway = 1,
+	/obj/item/weapon/reagent_containers/f13stimpack = 1,
+	/obj/item/weapon/reagent_containers/f13stimpack = 1,
+	/obj/item/weapon/reagent_containers/f13stimpack/super = 1)
 
 /obj/effect/spawner/lootdrop/wrange_low
 	color = "#CCCCCC"
@@ -36,44 +46,90 @@
 /obj/effect/spawner/lootdrop/wrange_middle
 	color = "#0AAAFA"
 	loot = list(
-	/obj/item/weapon/gun/energy/laser/rifle = 1,
-	/obj/item/weapon/gun/energy/plasma/pistol = 1,
-	/obj/item/weapon/gun/energy/plasma/glock = 1,
 	/obj/item/weapon/gun/ballistic/automatic/assault_rifle = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/rifle = 1,
+	/obj/item/weapon/gun/ballistic/automatic/garand = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/rifle/scope = 1,
 	/obj/item/weapon/gun/ballistic/shotgun/trail = 1)
 
 /obj/effect/spawner/lootdrop/wrange_high
 	color = "#FFAAFA"
 	loot = list(
-	/obj/item/weapon/gun/ballistic/revolver/magnum = 1,
+	/obj/item/weapon/gun/energy/laser/rifle = 1,
+	/obj/item/weapon/gun/energy/plasma/pistol = 1,
+	/obj/item/weapon/gun/energy/plasma/glock = 1,
 	/obj/item/weapon/gun/energy/plasma = 1,
-	/obj/item/weapon/gun/energy/laser/rifle/aer13 = 1,
 	/obj/item/weapon/gun/ballistic/automatic/smg10mm = 1,
 	/obj/item/weapon/gun/ballistic/automatic/rifle = 1)
 
 /obj/effect/spawner/lootdrop/wrange_legend
 	color = "#FF0000"
 	loot = list(
+	/obj/item/weapon/gun/ballistic/automatic/gauss = 1,
 	/obj/item/weapon/gun/ballistic/automatic/bozar = 25,
+	/obj/item/weapon/gun/ballistic/revolver/magnum = 1,
 	/obj/item/weapon/gun/energy/laser/rifle/tri = 25,
 	/obj/item/weapon/gun/energy/plasma/turbo = 25,
+	/obj/item/weapon/gun/energy/laser/rifle/aer13 = 1,
 	/obj/item/weapon/gun/energy/plasma/tri = 25)
 
 /obj/effect/spawner/lootdrop/ammo
 	color = "#FF00FF"
 	loot = list(
-	/obj/item/ammo_box/magazine/m10mm = 1,
-	/obj/item/ammo_box/magazine/m10mm_adv = 1,
-	/obj/item/ammo_box/magazine/m10mm_auto = 1,
-	/obj/item/ammo_box/m44 = 1,
-	/obj/item/ammo_box/magazine/m308 = 1,
-	/obj/item/ammo_box/m308 = 1,
-	/obj/item/ammo_box/magazine/m223 = 1,
-	/obj/item/ammo_box/m223 = 1,
-	/obj/item/ammo_casing/shotgun/buckshot = 1,
-	/obj/item/weapon/stock_parts/cell = 1)
+	/obj/item/ammo_box/magazine/F13/m9 = 1,
+	/obj/item/ammo_box/magazine/F13/m9/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m9/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m9/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m10 = 1,
+	/obj/item/ammo_box/magazine/F13/m10/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m10/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m10/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m10smg = 1,
+	/obj/item/ammo_box/magazine/F13/m10smg/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m10smg/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m10smg/toxic = 1,
+	/obj/item/ammo_box/F13/m44 = 1,
+	/obj/item/ammo_box/F13/m44/heap = 1,
+	/obj/item/ammo_box/F13/m44/armourpiercing = 1,
+	/obj/item/ammo_box/F13/m44/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m308 = 1,
+	/obj/item/ammo_box/magazine/F13/m308/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m308/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m308/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/g308 = 1,
+	/obj/item/ammo_box/F13/m308 = 1,
+	/obj/item/ammo_box/F13/m308/heap = 1,
+	/obj/item/ammo_box/F13/m308/armourpiercing = 1,
+	/obj/item/ammo_box/F13/m308/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m223 = 1,
+	/obj/item/ammo_box/magazine/F13/m223/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m223/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m223/toxic = 1,
+	/obj/item/ammo_box/F13/m223 = 1,
+	/obj/item/ammo_box/F13/m223/heap = 1,
+	/obj/item/ammo_box/F13/m223/armourpiercing = 1,
+	/obj/item/ammo_box/F13/m223/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m556 = 1,
+	/obj/item/ammo_box/magazine/F13/m556/heap = 1,
+	/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1,
+	/obj/item/ammo_box/magazine/F13/m556/toxic = 1,
+	/obj/item/ammo_box/magazine/F13/m556/fire = 1)
+
+/obj/effect/spawner/lootdrop/snacks
+	color = "#FF00FF"
+	loot = list(/obj/item/ring = 1)
+
+/obj/effect/spawner/lootdrop/fire_ammo
+	color = "#FF00FF"
+	loot = list(
+	/obj/item/ammo_box/magazine/F13/m9/fire = 1,
+	/obj/item/ammo_box/magazine/F13/m10/fire = 1,
+	/obj/item/ammo_box/magazine/F13/m10smg/fire = 1,
+	/obj/item/ammo_box/F13/m44/fire = 1,
+	/obj/item/ammo_box/magazine/F13/m308/fire = 1,
+	/obj/item/ammo_box/F13/m308/fire = 1,
+	/obj/item/ammo_box/magazine/F13/m223/fire = 1,
+	/obj/item/ammo_box/F13/m223/fire = 1)
 
 /obj/effect/spawner/lootdrop/wmelee_low
 	color = "#FF0000"

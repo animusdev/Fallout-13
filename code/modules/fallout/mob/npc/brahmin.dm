@@ -13,7 +13,7 @@
 	emote_hear = list("brays.")
 	emote_see = list("shakes its head.")
 	speed = 4
-	self_weight = 120
+	self_weight = 150
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/animalhide/generic=2)
 
 	/mob/living/simple_animal/cow/brahmin/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)

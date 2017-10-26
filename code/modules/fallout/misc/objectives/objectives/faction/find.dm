@@ -1,6 +1,8 @@
+//Fallout 13 - Where in the World is Carmen Sandiego?
+
 /datum/f13_objective/find
-	name = "Find"
-	desc = "Find and hold %item_name%."
+	name = "Lost and Found"
+	desc = "You must find and hold %item_name%, whatever it takes!<br>The fate of an entire mankind depends on it!"
 	points = 0
 	kind = FACTION
 

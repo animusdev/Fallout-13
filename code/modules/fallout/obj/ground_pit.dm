@@ -27,12 +27,12 @@ obj/dugpit/New(lnk)
 	..()
 	parent = lnk
 
-/obj/dugpit/proc/dugresist(usr)
+/obj/dugpit/container_resist(usr) // RESIST
 	//try to unbury self
 	var/mob/living/user = usr
 	user << "<span class='danger'>You start digging from the inside, trying to unbury yourself!</span>"
 	if(do_after(user, (5*10), target = src))
-		if (prob(10))
+		if (prob(25))
 			user << "<span class='danger'>You have managed to move some of the ground!</span>"
 			parent.unburylevel++
 			if (parent.unburylevel>=NUMBURYTIMES)
@@ -45,7 +45,7 @@ obj/dugpit/New(lnk)
 	if(!istype(W))
 		return
 	if (storedindex>=NUMCONTENT)
-		to_chat(usr, "<span class='danger'>The pit is filled with items to the limit!</span>")
+		to_chat(usr, "<span class='danger'>The pit is filled to the brim!</span>")
 		return
 	if(usr)
 		if(!usr.unEquip(W))

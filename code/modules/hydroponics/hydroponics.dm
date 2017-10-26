@@ -711,7 +711,7 @@
 			user.unEquip(G)
 			to_chat(user, "<span class='notice'>You plant [G].</span>")
 			dead = 0
-			myseed = new G.seed()
+			myseed = G.seed
 			age = 1
 			plant_health = myseed.endurance
 			lastcycle = world.time

@@ -576,8 +576,8 @@
 //Regular jobs
 	//Command (Blue)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='ccccff'><th colspan='[length(command_positions)]'><a href='?src=\ref[src];jobban3=commanddept;jobban4=\ref[M]'>Command Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in command_positions)
+		dat += "<tr align='center' bgcolor='ccccff'><th colspan='[length(fallout_head_positions)]'><a href='?src=\ref[src];jobban3=commanddept;jobban4=\ref[M]'>Command Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in fallout_head_positions)
 			if(!jobPos)
 				continue
 			if(jobban_isbanned(M, jobPos))
@@ -591,7 +591,8 @@
 				dat += "</tr><tr>"
 				counter = 0
 		dat += "</tr></table>"
-
+//To fill with fallout jobs later
+/*
 	//Security (Red)
 		counter = 0
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
@@ -841,7 +842,7 @@
 		dat += "</tr></table>"
 		usr << browse(dat, "window=jobban2;size=800x450")
 		return
-
+*/
 	//JOBBAN'S INNARDS
 	else if(href_list["jobban3"])
 		if(!check_rights(R_BAN))
@@ -857,10 +858,11 @@
 		var/list/joblist = list()
 		switch(href_list["jobban3"])
 			if("commanddept")
-				for(var/jobPos in command_positions)
+				for(var/jobPos in fallout_head_positions)
 					if(!jobPos)
 						continue
 					joblist += jobPos
+/*
 			if("securitydept")
 				for(var/jobPos in security_positions)
 					if(!jobPos)
@@ -899,6 +901,7 @@
 			if("ghostroles")
 				joblist += list("pAI", "posibrain", "drone", "deathsquad", "lavaland")
 			else
+*/
 				joblist += href_list["jobban3"]
 
 		//Create a list of unbanned jobs within joblist
@@ -1792,6 +1795,13 @@
 
 		var/mob/M = locate(href_list["narrateto"])
 		usr.client.cmd_admin_direct_narrate(M)
+
+	else if(href_list["objectives_show"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		var/mob/M = locate(href_list["objectives_show"])
+		M.show_objectives(usr)
 
 	else if(href_list["subtlemessage"])
 		if(!check_rights(R_ADMIN))

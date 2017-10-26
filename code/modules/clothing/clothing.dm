@@ -510,6 +510,16 @@ BLIND     // can't see anything
 	var/obj/item/clothing/tie/hastie = null
 	var/mutantrace_variation = NO_MUTANTRACE_VARIATION //Are there special sprites for specific situations? Don't use this unless you need to.
 
+/obj/item/clothing/under/attackby(obj/item/W, mob/user, params)
+	//Sasargule [moron]
+	if(istype(W,/obj/item/weapon/kitchen/knife))
+		//bidlokod_mode = true. Someone, fix it, pls.
+		var/rnd = rand(3, 5)
+		for(var/i=0, i <rnd, i++)
+			new /obj/item/stack/sheet/cloth/(get_turf(user))
+		del src
+		return
+
 /obj/item/clothing/under/worn_overlays(isinhands = FALSE)
 	. = list()
 

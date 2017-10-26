@@ -109,9 +109,9 @@ var/next_external_rsc = 0
 
 
 /client/New(TopicData)
-	if(config.whitelist_on && !check_whitelist(src.ckey))
+/*	if(config.whitelist_on && !check_whitelist(src.ckey))
 		Destroy(src)
-		return
+		return */
 	if(SScontent && SScontent.all_content_packs && SScontent.all_content_packs.len)
 		update_content_data()
 	chatOutput = new(src)
@@ -344,9 +344,11 @@ var/next_external_rsc = 0
 	var/admin_rank = "Player"
 	if (src.holder && src.holder.rank)
 		admin_rank = src.holder.rank.name
-	else
-		if (check_randomizer(connectiontopic))
-			return
+
+	// TODO: FIX RANDOMIZER CHECK
+	//else
+	//	if (check_randomizer(connectiontopic))
+	//		return
 
 	var/watchreason = check_watchlist(sql_ckey)
 	if(watchreason)

@@ -41,7 +41,7 @@ em						{font-style: normal;	font-weight: bold;}
 .legion					{color: #6d3f40;}
 .den					{color: #193a7a;}
 .town					{color: #001760;}
-.enclave				{color: #6eaa2c;}
+.enclave				{color: #6d3f40;}
 .brotherhood			{color: #6b4819;}
 
 .yell					{					font-weight: bold;}

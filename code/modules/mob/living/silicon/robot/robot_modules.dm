@@ -422,9 +422,9 @@
 /obj/item/weapon/robot_module/handy
 	name = "Mr.Handy"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/reagent_containers/borghypo/epi, /obj/item/device/healthanalyzer, \
-	/obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/weapon/wrench/cyborg, /obj/item/weapon/crowbar/cyborg, \
-	/obj/item/weapon/extinguisher, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw \
-	, /obj/item/weapon/soap/nanotrasen, /obj/item/borg/cyborghug, /obj/item/stack/cable_coil/cyborg)
+	/obj/item/weapon/weldingtool/experimental, /obj/item/weapon/wrench/cyborg, /obj/item/weapon/crowbar/cyborg, /obj/item/weapon/portable_destructive_analyzer, \
+	/obj/item/weapon/extinguisher, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, \
+	/obj/item/weapon/soap/nanotrasen, /obj/item/borg/cyborghug, /obj/item/stack/cable_coil/cyborg)
 	emag_modules = list(/obj/item/weapon/melee/energy/sword/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "handy"
@@ -435,10 +435,10 @@
 /obj/item/weapon/robot_module/nurse
 	name = "Mrs.Nurse"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/device/healthanalyzer, /obj/item/weapon/reagent_containers/borghypo, \
-	/obj/item/weapon/reagent_containers/glass/beaker/large, /obj/item/weapon/reagent_containers/dropper, \
-	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, \
+	/obj/item/weapon/reagent_containers/glass/beaker/large, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/portable_destructive_analyzer, \
+	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, /obj/item/weapon/soap/nanotrasen, \
 	/obj/item/weapon/hemostat, /obj/item/weapon/cautery, /obj/item/weapon/surgicaldrill, /obj/item/weapon/scalpel, /obj/item/stack/cable_coil/cyborg,\
-	/obj/item/weapon/circular_saw, /obj/item/weapon/extinguisher/mini, /obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/borg/cyborghug/medical, \
+	/obj/item/weapon/circular_saw, /obj/item/weapon/extinguisher/mini, /obj/item/weapon/weldingtool/experimental, /obj/item/borg/cyborghug/medical, \
 	/obj/item/stack/medical/gauze/cyborg, /obj/item/borg/lollipop)
 	emag_modules = list(/obj/item/weapon/reagent_containers/borghypo/hacked)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/medical)
@@ -450,8 +450,8 @@
 
 /obj/item/weapon/robot_module/gutsy
 	name = "Mr.Gutsy"
-	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, \
-	/obj/item/weapon/gun/energy/laser/cyborg, /obj/item/weapon/weldingtool/largetank/cyborg, /obj/item/borg/cyborghug/medical, /obj/item/stack/cable_coil/cyborg)
+	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/circular_saw, /obj/item/weapon/portable_destructive_analyzer, \
+	/obj/item/weapon/gun/energy/laser/cyborg, /obj/item/weapon/weldingtool/experimental, /obj/item/borg/cyborghug/medical, /obj/item/stack/cable_coil/cyborg)
 	emag_modules = list(/obj/item/weapon/gun/energy/laser/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "gutsy"
@@ -479,9 +479,25 @@
 /obj/item/weapon/robot_module/sentry
 	name = "Sentrybot"
 	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/gun/energy/printer, \
-	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/crowbar/cyborg, /obj/item/weapon/powergauntlet)
+	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/crowbar/cyborg, /obj/item/weapon/powergauntlet/robot)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
 	cyborg_base_icon = "sentrybot"
+	moduleselect_icon = "malf"
+	can_be_pushed = FALSE
+	hat_offset = 3
+
+/obj/item/weapon/robot_module/sesurity
+	name = "Securitron"
+//	sprites = list(	"Basic" = "robot_old",
+//					"Android" = "droid",
+//					"Default" = "robot",
+//					"Drone" = "drone-standard",
+//					"Eyebot" = "eyebot-standard"
+//				  )
+	basic_modules = list(/obj/item/device/assembly/flash/cyborg, /obj/item/weapon/portable_destructive_analyzer, /obj/item/weapon/restraints/handcuffs/cable/zipties/cyborg, /obj/item/weapon/portable_destructive_analyzer, \
+	/obj/item/weapon/gun/ballistic/revolver/grenadelauncher/cyborg, /obj/item/weapon/weldingtool/experimental, /obj/item/borg/cyborghug/medical, /obj/item/weapon/powergauntlet/robot, /obj/item/weapon/gun/energy/laser/rcw/robot)
+	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security, /obj/item/clockwork/ratvarian_spear/cyborg)
+	cyborg_base_icon = "Securitron"
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
 	hat_offset = 3
@@ -525,3 +541,61 @@
 	max_energy = 2500
 	recharge_rate = 250
 	name = "Medical Synthesizer"
+
+/obj/item/weapon/portable_destructive_analyzer
+	name = "Gripper"
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "powergauntlet"
+	desc = "This is gripper. Not big suprise."
+
+	var/min_reliability = 90 //Can't upgrade, call it laziness or a drawback
+
+	var/obj/item/weapon/loaded_item	//What is currently inside the analyzer.
+
+
+/obj/item/weapon/portable_destructive_analyzer/New()
+	..()
+
+/obj/item/weapon/portable_destructive_analyzer/attack_self(user as mob)
+	var/response = alert(user, 	"Analyzing the item inside will *DESTROY* the item for good.\n\
+							Ejecting will place the loaded item onto the floor.",
+							"What would you like to do?", "Eject")
+	if(response == "Eject")
+		if(loaded_item)
+			loaded_item.loc = get_turf(src)
+			desc = initial(desc)
+			icon_state = initial(icon_state)
+			loaded_item = null
+		else
+			to_chat(user, "The [src] is already empty.")
+
+
+/obj/item/weapon/portable_destructive_analyzer/afterattack(var/atom/target, var/mob/living/user, proximity)
+	if(!target)
+		return
+	if(!proximity)
+		return
+	if(!isturf(target.loc)) // Don't load up stuff if it's inside a container or mob!
+		return
+	if(istype(target,/obj/item))
+		if(loaded_item)
+			to_chat(user, "Your [src] already has something inside.  Analyze or eject it first.")
+			return
+		var/obj/item/I = target
+		I.loc = src
+		loaded_item = I
+		for(var/mob/M in viewers())
+			M.show_message(text("<span class='notice'>[user] adds the [I] to the [src].</span>"), 1)
+		desc = initial(desc) + "<br>It is holding \the [loaded_item]."
+		flick("portable_analyzer_load", src)
+		icon_state = "portable_analyzer_full"
+
+/obj/item/weapon/gun/energy/laser/rcw/robot
+	name ="Rapid Laser"
+	burst_size = 3 //Fuck yeah
+	use_cyborg_cell = 1
+	can_charge = 0
+/obj/item/weapon/powergauntlet/robot
+    name = "robot's fist"
+    desc = "Most consider it the best weapon for close combat."
+    force = 25

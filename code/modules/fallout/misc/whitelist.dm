@@ -1,6 +1,5 @@
 #define WHITELISTFILE "config/whitelist.txt"
-
-
+/*
 /proc/load_whitelist()
 	var/list/whitelist = list()
 	for(var/line in file2list(WHITELISTFILE))
@@ -13,6 +12,30 @@
 	if(!whitelist.len)
 		whitelist = null
 	return whitelist
+*/
+/proc/load_whitelist()
+
+	log_admin("Loading whitelist")
+	var/list/whitelist = list()
+	establish_db_connection()
+	var/DBQuery/query = dbcon.NewQuery("SELECT byond FROM forum2.Z_whitelist")
+
+	if(!query.Execute())
+		log_admin("Failed to load whitelist. Error: [dbcon.ErrorMsg()]. Failed to execute query.")
+		world.log << "Failed to load whitelist. Error: [dbcon.ErrorMsg()]. Failed to execute query."
+		return
+	while(query.NextRow())
+		whitelist += "[query.item[1]]"
+
+	if(!whitelist.len)
+		log_admin("Failed to load whitelist or its empty")
+		world.log << "Failed to load whitelist or its empty"
+		whitelist = null
+	else
+		log_admin("Loaded [whitelist.len] ckeys in whitelist.")
+		world.log << "Loaded [whitelist.len] ckeys in whitelist."
+
+	return whitelist
 
 /proc/check_whitelist(var/ckey)
 	if(!config.whitelist)
@@ -24,7 +47,7 @@
 	set name = "Add Player To Whitelist"
 	nickname = ckey(nickname)
 	if(nickname in config.whitelist)
-		to_chat(usr, "Player already in whitelist")
+		to_chat(usr, "That player is already on the whitelist!")
 		return
 	config.whitelist += nickname
 
@@ -33,7 +56,7 @@
 	set name = "Remove Player From Whitelist"
 	nickname = ckey(nickname)
 	if(!(nickname in config.whitelist))
-		to_chat(usr, "No player in whitelist")
+		to_chat(usr, "That player is not on the whitelist!")
 		return
 	config.whitelist -= nickname
 
@@ -47,6 +70,6 @@
 	set category = "Admin"
 	set name = "Whitelist Toggle"
 	config.whitelist_on = !config.whitelist_on
-	to_chat(usr, "Whitelist now is [config.whitelist_on ? "on" : "off"]")
+	to_chat(usr, "The whitelist is now [config.whitelist_on ? "on" : "off"]")
 
 #undef WHITELISTFILE

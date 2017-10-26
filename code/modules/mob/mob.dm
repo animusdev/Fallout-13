@@ -427,6 +427,10 @@ var/next_mob_id = 0
 		to_chat(usr, "<span class='boldnotice'>You must be dead to use this!</span>")
 		return
 
+	if(world.time - src.timeofdeath < 1800) //sadly, but satana eats my online(((
+		to_chat(usr, "<span class='boldnotice'>Wait. Respawn button not recharged! They recharges 180 seconds, how [Floor((world.time - src.timeofdeath)/10)] seconds!</span>")
+		return
+
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
 	to_chat(usr, "<span class='boldnotice'>Please roleplay correctly!</span>")

@@ -9,6 +9,7 @@ client
 		list/allowed_roles
 		list/allowed_factions
 		list/content_packs
+		list/allowed_races
 		donate_money
 		next_donate_update
 	proc
@@ -25,12 +26,13 @@ client
 		update_content_packs(reload)
 			content_packs = list()
 			add_pack("starter", reload)
-			var/data = SScontent.get_data(ckey(ckey))
-			var/data_array = splittext(data,":")
-			donate_money = text2num(data_array[1])
 
-			for(var/pack in splittext(data_array[2],","))
+			donate_money = SScontent.get_user_money(ckey(ckey))
+
+			for(var/pack in SScontent.get_packs(ckey(ckey)))
 				add_pack(pack, reload)
+
+
 #if defined(ALL_PACKS_AVAILABLE)
 			for(var/pack in SScontent.all_content_packs)
 				add_pack(pack, reload)
@@ -61,6 +63,11 @@ client
 				var/datum/content_pack/D = SScontent.get_pack(pack_id)
 				if(D != null)
 					allowed_roles += D.roles
+
+		add_race(race_name, race_type)
+			if(!allowed_races)
+				allowed_races = roundstart_species.Copy()
+			allowed_races[race_name] = race_type
 
 		update_allowed_factions()
 			allowed_factions = list()

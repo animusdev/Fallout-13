@@ -96,7 +96,7 @@
 	icon_state = "harmonica"
 	item_state = "harmonica"
 	force = 2
-	w_class = 1
+	w_class = WEIGHT_CLASS_TINY
 	materials = list(MAT_METAL=500)
 	var/spam_flag = 0
 	var/cooldown = 70

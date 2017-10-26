@@ -219,6 +219,7 @@
 
 /mob/living/verb/succumb(whispered as null)
 	set hidden = 1
+
 	if (InCritical())
 		src.attack_log += "[src] has [whispered ? "whispered his final words" : "succumbed to death"] with [round(health, 0.1)] points of health!"
 		src.adjustOxyLoss(src.health - HEALTH_THRESHOLD_DEAD)
@@ -283,7 +284,7 @@
 /mob/proc/get_contents()
 
 /mob/living/proc/lay_down()
-	set name = "Crawl"
+	set name = "Crawl / Crouch"
 	set category = "IC"
 
 	if(stat)
@@ -298,6 +299,19 @@
 		Stun(1)
 		apply_damage(5, BRUTE, get_bodypart("head"))
 		to_chat(src, "<span class='danger'>As you try to get up, you bang [under_object] with your head!<br>Ouch!</span>")
+
+/mob/living/proc/surrender()
+	set name = "Surrender"
+	set category = "IC"
+
+	if(canmove)
+		if(!lying)
+			lay_down()
+
+		Stun(5)
+		visible_message("<b>[src] surrenders!</b>")
+		playsound(src.loc, 'sound/f13effects/surrender.ogg', 50, 1)
+
 
 //Recursive function to find everything a mob is holding.
 /mob/living/get_contents(obj/item/weapon/storage/Storage = null)

@@ -739,7 +739,7 @@
 			H.update_inv_wear_suit()
 
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && \
+	if (H.nutrition > 0 && H.client && H.stat != DEAD && \
 		H.dna && H.dna.species && (!(NOHUNGER in H.dna.species.species_traits)))
 		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
@@ -804,8 +804,7 @@
 		else
 			H.throw_alert("thirst", /obj/screen/alert/thirst, 4)
 	if(H.water_level < THIRST_LEVEL_DEADLY || H.nutrition < NUTRITION_LEVEL_STARVING)
-		H.adjustOxyLoss(2)
-		H.adjustToxLoss(2)
+		H.adjustStaminaLoss(6)//sasargule
 	return 1
 
 
@@ -1160,7 +1159,26 @@
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 
 	var/weakness = H.check_weakness(I, user)
-	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H)
+
+	    //crc
+
+
+	if(def_zone == "r_arm" || def_zone == "l_arm")
+		apply_damage(round(I.force* 0.6 * rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+	if(def_zone == "r_leg" || def_zone == "l_leg")
+		apply_damage(round(I.force* 0.6 * rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+	if(def_zone == "head")
+		apply_damage(round(I.force* 2 * rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+	else
+		apply_damage(round(I.force*rand(6, 14)/10,1)* weakness, I.damtype, def_zone, armor_block, H)
+
+
+
+
+//	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H)
 	H.damage_clothes(I.force, I.damtype, "melee", affecting.body_zone)
 
 	H.send_item_attack_message(I, user, hit_area)

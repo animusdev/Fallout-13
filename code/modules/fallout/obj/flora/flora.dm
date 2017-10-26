@@ -2,15 +2,16 @@
 
 /obj/structure/flora/grass/wasteland
 	icon = 'icons/fallout/flora/flora.dmi'
+	desc = "You see nothing out of the ordinary."
 	icon_state = "tall_grass_1"
 
 /obj/structure/flora/grass/wasteland/New()
 	..()
-	icon_state = "tall_grass_[rand(1, 8)]"//16)]"
+	icon_state = "tall_grass_[rand(1,8)]"
 
 /obj/structure/flora/grass/wasteland/attackby(obj/item/weapon/W, mob/user, params)
 	if(W.sharpness && W.force > 0 && !(NODECONSTRUCT in flags))
-		to_chat(user, "You are begin cutting [src]...")
+		to_chat(user, "You begin to harvest [src]...")
 		if(do_after(user, 100/W.force, target = user))
 			to_chat(user, "<span class='notice'>You've collected [src]</span>")
 			var/obj/item/stack/sheet/grass/G = user.get_inactive_held_item()
@@ -33,7 +34,7 @@
 	max_integrity = 100
 
 /obj/structure/flora/tree/wasteland/New()
-	icon_state = "deadtree_[rand(1, 6)]"
+	icon_state = "deadtree_[rand(1,6)]"
 	..()
 
 /obj/structure/flora/tree/wasteland/attackby(obj/item/weapon/W, mob/user, params)
@@ -44,7 +45,7 @@
 
 /obj/structure/flora/tree/tall
 	name = "dead tree"
-	desc = "A rather tall tree that has been dead for a long time.<br>Interestingly it is still standing after all the time."
+	desc = "A rather tall tree that has been dead for a long time.<br>Interestingly it is still standing, as a reminder of its green past."
 	icon = 'icons/fallout/flora/talltrees.dmi'
 	icon_state = "tree_1"
 	log_amount = 7
@@ -52,7 +53,7 @@
 	max_integrity = 350
 
 /obj/structure/flora/tree/tall/New()
-	icon_state = "tree_[rand(1, 3)]"
+	icon_state = "tree_[rand(1,3)]"
 	..()
 
 /obj/structure/flora/tree/tall/attackby(obj/item/weapon/W, mob/user, params)

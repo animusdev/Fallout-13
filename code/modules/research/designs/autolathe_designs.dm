@@ -419,7 +419,7 @@
 	name = "Rubber shot"
 	id = "rubber_shot"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 500)
 	build_path = /obj/item/ammo_casing/shotgun/rubbershot
 	category = list("initial", "Security")
 
@@ -427,7 +427,7 @@
 	name = "Speed loader (.38)"
 	id = "c38"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
+	materials = list(MAT_METAL = 6000)
 	build_path = /obj/item/ammo_box/c38
 	category = list("initial", "Security")
 
@@ -572,9 +572,9 @@
 	name = "Flamethrower"
 	id = "flamethrower"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 500)
-	build_path = /obj/item/weapon/flamethrower/full
-	category = list("hacked", "Weapons and ammo")
+	materials = list(MAT_METAL = 90000)
+	build_path = /obj/item/weapon/flamethrower/full/tank
+	category = list("hacked", "Security")
 
 /datum/design/rcd
 	name = "Rapid construction device (RCD)"
@@ -620,7 +620,7 @@
 	name = "Shotgun slug"
 	id = "shotgun_slug"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 1500)
 	build_path = /obj/item/ammo_casing/shotgun
 	category = list("hacked", "Security")
 
@@ -628,7 +628,7 @@
 	name = "Buckshot shell"
 	id = "buckshot_shell"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 1500)
 	build_path = /obj/item/ammo_casing/shotgun/buckshot
 	category = list("hacked", "Security")
 
@@ -636,48 +636,81 @@
 	name = "Shotgun dart"
 	id = "shotgun_dart"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
+	materials = list(MAT_METAL = 1000)
 	build_path = /obj/item/ammo_casing/shotgun/dart
-	category = list("hacked", "Security")
-
-/datum/design/incendiary_slug
-	name = "Incendiary slug"
-	id = "incendiary_slug"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
-	build_path = /obj/item/ammo_casing/shotgun/incendiary
 	category = list("hacked", "Security")
 
 /datum/design/a357
 	name = "Ammo box (.357)"
 	id = "a357"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
+	materials = list(MAT_METAL = 7000)
 	build_path = /obj/item/ammo_box/a357
 	category = list("hacked", "Security")
 
+/datum/design/c9mm
+	name = "Magazine (9mm)"
+	id = "c9mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/F13/m9
+	category = list("hacked", "Security")
+
 /datum/design/c10mm
-	name = "Ammo box (10mm)"
+	name = "Magazine (10mm)"
 	id = "c10mm"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
-	build_path = /obj/item/ammo_box/c10mm
+	materials = list(MAT_METAL = 8000)
+	build_path = /obj/item/ammo_box/magazine/F13/m10
 	category = list("hacked", "Security")
 
 /datum/design/c45
 	name = "Ammo box (.45)"
 	id = "c45"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 30000)
+	materials = list(MAT_METAL = 20000)
 	build_path = /obj/item/ammo_box/c45
 	category = list("hacked", "Security")
 
-/datum/design/c9mm
-	name = "Ammo box (9mm)"
-	id = "c9mm"
+/datum/design/c44mm
+	name = "speed loader (.44)"
+	id = "c44mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 6000)
+	build_path = /obj/item/ammo_box/F13/m44
+	category = list("hacked", "Security")
+
+
+/datum/design/a556mm
+	name = "rifle magazine (5.56)"
+	id = "a556"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 20000)
+	build_path = /obj/item/ammo_box/magazine/F13/m556
+	category = list("hacked", "Security")
+
+/datum/design/c308mm
+	name = "rifle magazine (.308)"
+	id = "c308mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 24000)
+	build_path = /obj/item/ammo_box/magazine/F13/m308
+	category = list("hacked", "Security")
+//crc
+/datum/design/g308mm
+	name = "garand clip (.308)"
+	id = "g308mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 8000)
+	build_path = /obj/item/ammo_box/magazine/F13/g308
+	category = list("hacked", "Security")
+//crc
+/datum/design/c223mm
+	name = "rifle magazine (.223)"
+	id = "c223mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 30000)
-	build_path = /obj/item/ammo_box/c9mm
+	build_path = /obj/item/ammo_box/magazine/F13/m223
 	category = list("hacked", "Security")
 
 /datum/design/cleaver
@@ -716,7 +749,7 @@
 	name = "Geiger counter"
 	id = "geigercounter"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 150, MAT_GLASS = 150)
+	materials = list(MAT_METAL = 50000, MAT_GLASS = 10000)
 	build_path = /obj/item/device/geiger_counter
 	category = list("initial", "Tools")
 

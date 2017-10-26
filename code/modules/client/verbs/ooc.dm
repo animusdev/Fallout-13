@@ -56,7 +56,7 @@
 	var/keyname = key
 	if(prefs.unlock_content)
 		if(prefs.toggles & MEMBER_PUBLIC)
-			keyname = "<font color='[prefs.ooccolor ? prefs.ooccolor : normal_ooc_colour]'><img style='width:9px;height:9px;' class=icon src=\ref['icons/member_content.dmi'] iconstate=blag>[keyname]</font>"
+			keyname = "<font color='[prefs.ooccolor ? prefs.ooccolor : normal_ooc_colour]'><img style='width:9px;height:9px;' class=icon src=\ref['icons/vault.dmi'] iconstate=boy[rand(1,8)]>[keyname]</font>"
 
 	for(var/client/C in clients)
 		if(C.prefs.chat_toggles & CHAT_OOC)
@@ -80,9 +80,9 @@
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
 
-	if(!mob)	
+	if(!mob)
 		return
-	
+
 	if(IsGuestKey(key))
 		to_chat(src, "Guests may not use OOC.")
 		return
@@ -197,9 +197,8 @@ var/global/normal_ooc_colour = OOC_COLOR
 	set name = "Set Your OOC Color"
 	set category = "Preferences"
 
-	if(!holder || check_rights_for(src, R_ADMIN))
-		if(!is_content_unlocked())
-			return
+	if(!check_rights_for(src, R_ADMIN))
+		return
 
 	var/new_ooccolor = input(src, "Please select your OOC color.", "OOC color", prefs.ooccolor) as color|null
 	if(new_ooccolor)
@@ -213,12 +212,11 @@ var/global/normal_ooc_colour = OOC_COLOR
 	set desc = "Returns your OOC Color to default"
 	set category = "Preferences"
 
-	if(!holder || check_rights_for(src, R_ADMIN))
-		if(!is_content_unlocked())
-			return
+	if(!check_rights_for(src, R_ADMIN))
+		return
 
-		prefs.ooccolor = initial(prefs.ooccolor)
-		prefs.save_preferences()
+	prefs.ooccolor = initial(prefs.ooccolor)
+	prefs.save_preferences()
 
 //Checks admin notice
 /client/verb/admin_notice()

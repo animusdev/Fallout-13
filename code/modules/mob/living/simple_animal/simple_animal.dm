@@ -501,7 +501,7 @@
 		hand_index = (active_hand_index % held_items.len)+1
 	var/obj/item/held_item = get_active_held_item()
 	if(held_item)
-		if(istype(held_item, /obj/item/weapon/twohanded))
+		if(istype(held_item, /obj/item/weapon))
 			var/obj/item/weapon/twohanded/T = held_item
 			if(T.wielded == 1)
 				to_chat(usr, "<span class='warning'>Your other hand is too busy holding the [T.name].</span>")

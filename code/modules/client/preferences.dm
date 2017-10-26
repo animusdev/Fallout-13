@@ -9,7 +9,7 @@ var/list/preferences_datums = list()
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
-	var/max_save_slots = 3
+	var/max_save_slots = 4
 
 	//non-preference stuff
 	var/muted = 0
@@ -97,7 +97,7 @@ var/list/preferences_datums = list()
 		// OOC Metadata:
 	var/metadata = ""
 
-	var/unlock_content = 0
+	var/unlock_content = 1 //I'd like to see an actual, functional, fascinating, non-Byond remake of Space Station 13 some day
 
 	var/list/ignoring = list()
 
@@ -124,7 +124,7 @@ var/list/preferences_datums = list()
 			load_path(C.ckey)
 			unlock_content = C.IsByondMember()
 			if(unlock_content)
-				max_save_slots = 8
+				max_save_slots = 6
 	var/loaded_preferences_successfully = load_preferences()
 	if(loaded_preferences_successfully)
 		if(load_character())
@@ -808,10 +808,14 @@ var/list/preferences_datums = list()
 
 				if("species")
 
-					var/result = input(user, "Select a species", "Species Selection") as null|anything in roundstart_species
+					var/list/species_list = roundstart_species
+					if(parent && parent.allowed_races)
+						species_list = parent.allowed_races
+
+					var/result = input(user, "Select a species", "Species Selection") as null|anything in species_list
 
 					if(result)
-						var/newtype = roundstart_species[result]
+						var/newtype = species_list[result]
 						pref_species = new newtype()
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
 						var/temp_hsv = RGBtoHSV(features["mcolor"])

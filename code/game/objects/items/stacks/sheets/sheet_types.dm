@@ -13,28 +13,31 @@
  * Metal
  */
 var/global/list/datum/stack_recipe/metal_recipes = list ( \
-	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("chair", /obj/structure/chair, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("swivel chair", /obj/structure/chair/office/blue, 5, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("comfy chair", /obj/structure/chair/comfy/beige, 2, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = 1), \
+	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = 1), \
+	new/datum/stack_recipe("chair", /obj/structure/chair, one_per_turf = 1), \
+	new/datum/stack_recipe("swivel chair", /obj/structure/chair/office/blue, 5, one_per_turf = 1), \
+	new/datum/stack_recipe("comfy chair", /obj/structure/chair/comfy/beige, 2, one_per_turf = 1), \
+	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = 1), \
 	null, \
 	new/datum/stack_recipe("rack parts", /obj/item/weapon/rack_parts), \
-	new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = 1), \
 	null, \
 /*	new/datum/stack_recipe("canister", /obj/machinery/portable_atmospherics/canister, 10, time = 15, one_per_turf = 1, on_floor = 1), \
 	null, \*/
 	new/datum/stack_recipe("floor tile", /obj/item/stack/tile/plasteel, 1, 4, 20), \
 	new/datum/stack_recipe("metal rod", /obj/item/stack/rods, 1, 2, 60), \
 	null, \
-	new/datum/stack_recipe("wall girders", /obj/structure/girder, 2, time = 40, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("wall girders", /obj/structure/girder, 2, time = 40, one_per_turf = 1), \
 	null, \
-/*	new/datum/stack_recipe("computer frame", /obj/structure/frame/computer, 5, time = 25, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("computer frame", /obj/structure/frame/computer, 5, time = 25, one_per_turf = 1, on_floor = 1), \
+	//crc
+	new/datum/stack_recipe("storefront door", /obj/structure/simple_door/metal/store, 6, time = 50, one_per_turf = 1, on_floor = 1), \
+	//crc
 	new/datum/stack_recipe("modular console", /obj/machinery/modular_computer/console/buildable/, 10, time = 25, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("machine frame", /obj/structure/frame/machine, 5, time = 25, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("airlock assembly", /obj/structure/door_assembly, 4, time = 50, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("firelock frame", /obj/structure/firelock_frame, 3, time = 50, one_per_turf = 1, on_floor = 1), \*/
+//	new/datum/stack_recipe("firelock frame", /obj/structure/firelock_frame, 3, time = 50, one_per_turf = 1, on_floor = 1), \*/
 /*	new/datum/stack_recipe("turret frame", /obj/machinery/porta_turret_construct, 5, time = 25, one_per_turf = 1, on_floor = 1), \*/
 /*	new/datum/stack_recipe("meatspike frame", /obj/structure/kitchenspike_frame, 5, time = 25, one_per_turf = 1, on_floor = 1), \*/
 /*	new/datum/stack_recipe("reflector frame", /obj/structure/reflector, 5, time = 25, one_per_turf = 1, on_floor = 1), \*/
@@ -47,9 +50,9 @@ var/global/list/datum/stack_recipe/metal_recipes = list ( \
 /*	new/datum/stack_recipe("air alarm frame", /obj/item/wallframe/airalarm, 2), \*/
 /*	new/datum/stack_recipe("fire alarm frame", /obj/item/wallframe/firealarm, 2), \*/
 	new/datum/stack_recipe("extinguisher cabinet frame", /obj/item/wallframe/extinguisher_cabinet, 2), \
-/*	new/datum/stack_recipe("button frame", /obj/item/wallframe/button, 1), \
+	new/datum/stack_recipe("button frame", /obj/item/wallframe/button, 1), \
 	null, \
-	new/datum/stack_recipe("iron door", /obj/structure/mineral_door/iron, 20, one_per_turf = 1, on_floor = 1), \*/
+//	new/datum/stack_recipe("iron door", /obj/structure/mineral_door/iron, 20, one_per_turf = 1, on_floor = 1), \*/
 )
 
 /obj/item/stack/sheet/metal
@@ -124,26 +127,32 @@ var/global/list/datum/stack_recipe/plasteel_recipes = list ( \
  * Wood
  */
 var/global/list/datum/stack_recipe/wood_recipes = list ( \
+	new/datum/stack_recipe("campfire", /obj/structure/campfire, 5, time = 10, one_per_turf = 1), \
+	new/datum/stack_recipe("cross", /obj/structure/statue/wood/headstonewood, 2, time = 15, one_per_turf = 1), \
 	new/datum/stack_recipe("wooden sandals", /obj/item/clothing/shoes/sandal, 1), \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
-/*	new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
-	new/datum/stack_recipe("rolling pin", /obj/item/weapon/kitchen/rollingpin, 2, time = 30), \*/
-	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood, 3, time = 10, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 50, one_per_turf = 1, on_floor = 1), \
-/*	new/datum/stack_recipe("wooden door", /obj/structure/mineral_door/wood, 10, time = 20, one_per_turf = 1, on_floor = 1), \*/
-	new/datum/stack_recipe("coffin", /obj/structure/closet/coffin, 5, time = 15, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("book case", /obj/structure/bookcase, 4, time = 15, one_per_turf = 1, on_floor = 1), \
-/*	new/datum/stack_recipe("drying rack", /obj/machinery/smartfridge/drying_rack, 10, time = 15, one_per_turf = 1, on_floor = 1), \*/
-	new/datum/stack_recipe("dog bed", /obj/structure/bed/dogbed, 10, time = 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
+	new/datum/stack_recipe("rolling pin", /obj/item/weapon/kitchen/rollingpin, 2, time = 30), \
+	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood, 3, time = 10, one_per_turf = 1), \
+	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 50, one_per_turf = 1), \
+//	new/datum/stack_recipe("wooden door", /obj/structure/mineral_door/wood, 10, time = 20, one_per_turf = 1, on_floor = 1), \
+	//crc
+	new/datum/stack_recipe("regular wooden door", /obj/structure/simple_door/house, 10, time = 20, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("interior wooden door", /obj/structure/simple_door/interior, 10, time = 20, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("room wooden door", /obj/structure/simple_door/room, 10, time = 20, one_per_turf = 1, on_floor = 1), \
+	//crc
+	new/datum/stack_recipe("coffin", /obj/structure/closet/coffin, 5, time = 15, one_per_turf = 1), \
+	new/datum/stack_recipe("book case", /obj/structure/bookcase, 4, time = 15, one_per_turf = 1), \
+	new/datum/stack_recipe("drying rack", /obj/machinery/smartfridge/drying_rack, 10, time = 15, one_per_turf = 1), \
+	new/datum/stack_recipe("dog bed", /obj/structure/bed/dogbed, 10, time = 10, one_per_turf = 1), \
 	new/datum/stack_recipe("picture frame", /obj/item/weapon/picture_frame, 1, time = 10),\
-/*	new/datum/stack_recipe("display case chassis", /obj/structure/displaycase_chassis, 5, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("wooden buckler", /obj/item/weapon/shield/riot/buckler, 20, time = 40), \*/
+	new/datum/stack_recipe("display case chassis", /obj/structure/displaycase_chassis, 5, one_per_turf = 1), \
+	new/datum/stack_recipe("wooden buckler", /obj/item/weapon/shield/riot/buckler, 20, time = 40), \
 /*	new/datum/stack_recipe("apiary", /obj/structure/beebox, 40, time = 50),\
 	new/datum/stack_recipe("honey frame", /obj/item/honey_frame, 5, time = 10),\*/
 /*	new/datum/stack_recipe("ore box", /obj/structure/ore_box, 4, time = 50, one_per_turf = 1, on_floor = 1),\*/
-	new/datum/stack_recipe("cross", /obj/structure/statue/wood/headstonewood, time = 15, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("baseball bat", /obj/item/weapon/melee/baseball_bat, 5, time = 15),\
+	new/datum/stack_recipe("baseball bat", /obj/item/weapon/twohanded/baseball, 5, time = 15),\
 	)
 
 /obj/item/stack/sheet/mineral/wood

@@ -2,21 +2,39 @@
 
 /obj/item/clothing/head/f13
 	icon = 'icons/fallout/clothing/hats.dmi'
-	self_weight = 0.8
+	self_weight = 1
 
 /obj/item/clothing/head/f13/police
-	name = "pre-War police hat"
-	desc = "A police hat of dark blue in color with a silver colored badge on the frontside.<br>The badge is inscripted with the words SPECIAL and POLICE."
+	name = "pre-War police cap"
+	desc = "A police peaked cap of dark blue in color with a silver-colored badge on the frontside.<br>The badge is inscribed with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"
 
 /obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max 3 1985
 	name = "pith helmet"
-	desc = "A lightweight cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
+	desc = "A lightweight, cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
 	icon_state = "safari"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
-	armor = list(melee = 40, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0,fire = 30, acid = 0)
+	armor = list(melee = 40, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 30, acid = 0)
+
+/obj/item/clothing/head/f13/chinese_soldier
+	name = "chinese side cap"
+	desc = "A foldable military cap with straight sides, with insignia of People's Liberation Army, that was supposedly worn by regular troops."
+	icon_state = "chinese_s"
+	item_state = "secsoft"
+
+/obj/item/clothing/head/f13/chinese_officer
+	name = "chinese side cap"
+	desc = "A foldable military cap with straight sides, with insignia of People's Liberation Army, that was supposedly worn by low rank officers."
+	icon_state = "chinese_o"
+	item_state = "secsoft"
+
+/obj/item/clothing/head/f13/chinese_commander
+	name = "chinese peaked cap"
+	desc = "A peaked cap of dark green in color with a red star on the frontside.<br>It obviously belonged to a high rank officer of People's Liberation Army."
+	icon_state = "chinese_c"
+	item_state = "fedora"
 
 /obj/item/clothing/head/f13/stormchaser
 	name = "stormchaser hat"
@@ -27,7 +45,7 @@
 
 /obj/item/clothing/head/f13/headscarf
 	name = "headscarf"
-	desc = "A piece of cloth that be worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
+	desc = "A piece of cloth worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
 	icon_state = "headscarf"
 	item_state = "dethat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
@@ -50,14 +68,21 @@
 
 /obj/item/clothing/head/f13/bandit
 	name = "bandit hat"
-	desc = "A black cowboy hat with a large brim, curved to the sides, and a silver eagle pinned to the front."
+	desc = "A black cowboy hat with a large brim that's curved to the sides.<br>A silver eagle pin is attached to the front."
 	icon_state = "bandit"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
-/obj/item/clothing/head/f13/ncr
+/obj/item/clothing/head/f13/gambler
+	name = "gambler hat"
+	desc = "A perfect hat for a ramblin' gamblin' man." //But I got to ramble (ramblin' man) //Oh I got to gamble (gamblin' man) //Got to got to ramble (ramblin' man) //I was born a ramblin' gamblin' man
+	icon_state = "gambler"
+	item_state = "dethat"
+	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/f13/ncr_officer
 	name = "officer beret"
-	desc = "A soft round cap, usually of wool felt, with a flat crown that tilts to one side, used to identify officers of the New California Republic Army.<br>The beret seems to be camouflaged in various shades of green and brown, and has a cap badge of the NCR two-headed bear roaring up at a gold star."
+	desc = "A soft round cap, usually made of wool, with a flat crown that tilts to one side. Used to identify officers of the New California Republic Army.<br>The beret is camouflaged in various shades of green and brown, and has a badge of the NCR's two-headed bear roaring up at a gold star."
 	icon_state = "officer"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
@@ -68,12 +93,15 @@
 	icon_state = "sergeant"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 30, acid = 0)
 
-/obj/item/clothing/head/f13/gambler
-	name = "gambler hat"
-	desc = "A perfect hat for a ramblin' gamblin' man." //But I got to ramble (ramblin' man) //Oh I got to gamble (gamblin' man) //Got to got to ramble (ramblin' man) //I was born a ramblin' gamblin' man
-	icon_state = "gambler"
-	item_state = "dethat"
+/obj/item/clothing/head/f13/general
+	name = "general cap"
+	desc = "A military peaked cap of dark green in color with a golden colored badge on the frontside.<br>The badge is inscripted with the words New California Republic."
+	icon_state = "general"
+	item_state = "fedora"
+	flags_inv = HIDEHAIR
+	armor = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 30, acid = 0)
 
 //Fluff
 
@@ -94,7 +122,7 @@
 
 /obj/item/clothing/head/f13/beaver
 	name = "beaverkin"
-	desc = "A hat made from felted beaver fur which makes this hat both comfortable and elegant."
+	desc = "A hat made from felted beaver fur which makes the wearer feel both comfortable and elegant."
 	icon_state = "beaver"
 	item_state = "that"
 
@@ -108,9 +136,10 @@
 	name = "detective's fedora"
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
-	self_weight = 1
 	item_state = "fedora"
-	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0,fire = 0, acid = 0)
+	flags_inv = HIDEHAIR
+	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	self_weight = 1
 
 /obj/item/clothing/head/f13/trilby
 	name = "feather trilby"
@@ -123,8 +152,7 @@
 	desc = "The Yamato is loaded. And so am I."
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
-	self_weight = 3
-	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0,fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 
 //Fluff welding masks
 
@@ -134,11 +162,11 @@
 
 /obj/item/clothing/head/welding/f13/fire
 	name = "cremator welding helmet"
-	desc = "A welding helmet with burning flame painted over it.<br>It sure is creepy but nevertheless badass."
+	desc = "A welding helmet with flames painted on it.<br>It sure is creepy but also badass."
 	icon_state = "welding_fire"
 	item_state = "welding"
 	tint = 1
-	armor = list(melee = 20, bullet = 10, laser = 5, energy = 5, bomb = 5, bio = 0, rad = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 5, energy = 5, bomb = 5, bio = 0, rad = 0, fire = 30, acid = 0)
 
 /obj/item/clothing/head/welding/f13/japan
 	name = "nippon welding helmet"
@@ -146,4 +174,4 @@
 	icon_state = "welding_japan"
 	item_state = "welding"
 	tint = 1
-	armor = list(melee = 40, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, acid = 0)
+	armor = list(melee = 40, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 0)

@@ -2,7 +2,7 @@
 
 /obj/item/seeds/broc
 	name = "pack of broc seeds"
-	desc = "These seeds grow into broc flower."
+	desc = "These seeds grow into broc flowers."
 	icon = 'icons/fallout/objects/seeds.dmi'
 	icon_state = "seed-broc"
 	species = "broc"
@@ -19,7 +19,7 @@
 	icon_dead = "broc-dead"
 	icon_harvest = "broc-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("nutriment" = 0.1, "salglu_solution" = 0.05, "initropidril" = 0.08)
+	reagents_add = list("nutriment" = 0.1, "broc_extract" = 0.05)
 
 
 /obj/item/seeds/xander
@@ -30,7 +30,7 @@
 	species = "xander"
 	plantname = "Xander Root"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/xander
-	lifespan = 5
+	lifespan = 25
 	endurance = 10
 	yield = 1
 	growthstages = 3
@@ -40,7 +40,7 @@
 	icon_grow = "xander-grow"
 	icon_dead = "xander-dead"
 	icon_harvest = "xander-harvest"
-	reagents_add = list("vitamin" = 0.1, "nutriment" = 0.1, "crank" = 0.1, "bath_salts" = 0.02)
+	reagents_add = list("vitamin" = 0.1, "xander_extract" = 0.07)
 
 /obj/item/seeds/mutfruit
 	name = "pack of mutfruit seeds"
@@ -61,7 +61,7 @@
 	icon_dead = "mutfruit-dead"
 	icon_harvest = "mutfruit-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1, "vitfro" = 0.01)
+	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1)
 
 /obj/item/seeds/ferocactus
 	name = "pack of ferocactus seeds"
@@ -71,7 +71,7 @@
 	species = "ferocactus"
 	plantname = "Ferocactus"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/ferocactus
-	lifespan = 50
+	lifespan = 60
 	endurance = 20
 	yield = 1
 	growthstages = 3
@@ -92,7 +92,7 @@
 	species = "shroom"
 	plantname = "Shrooms"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/shroom
-	lifespan = 80
+	lifespan = 50
 	endurance = 10
 	yield = 5
 	growthstages = 3
@@ -103,7 +103,7 @@
 	icon_dead = "shroom-dead"
 	icon_harvest = "shroom-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("charcoal" = 0.04, "nutriment" = 0.1, "mutagen" = 0.01, "zombiepowder" = 0.05)
+	reagents_add = list("charcoal" = 0.04, "nutriment" = 0.1, "vitamin" = 0.01, "radium" = 0.05)
 
 /obj/item/seeds/glow
 	name = "pack of glowing fungus seeds"
@@ -113,7 +113,7 @@
 	species = "glow"
 	plantname = "Glowing Fungus"
 	product = /obj/item/weapon/reagent_containers/food/snacks/grown/glow
-	lifespan = 80
+	lifespan = 60
 	endurance = 10
 	yield = 5
 	growthstages = 3

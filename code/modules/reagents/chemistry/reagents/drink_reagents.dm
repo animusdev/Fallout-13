@@ -395,7 +395,7 @@
 	id = "sodawater"
 	description = "A can of club soda. Why not make a scotch and soda?"
 	color = "#619494" // rgb: 97, 148, 148
-	water_factor = 1 * REAGENTS_METABOLISM
+	water_factor = 4 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/sodawater/on_mob_life(mob/living/M)
 	M.dizziness = max(0,M.dizziness-5)

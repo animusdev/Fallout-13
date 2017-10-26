@@ -310,43 +310,43 @@
 "fX" = (/turf/open/floor/f13{icon_state = "warndark"},/area/f13/tunnel)
 "fY" = (/turf/open/floor/f13{dir = 6; icon_state = "warndark"},/area/f13/tunnel)
 "fZ" = (/turf/closed/wall/f13/store,/area/f13/chapel)
-"ga" = (/obj/structure/car,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"gb" = (/obj/structure/tires/half,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"gc" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelwastelandfull"},/area/f13/sewer)
-"gd" = (/obj/structure/simple_door/blast,/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/tunnel)
-"ge" = (/obj/item/weapon/reagent_containers/pill/patch/jet,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gf" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/chapel)
-"gg" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
-"gh" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/chapel)
-"gi" = (/turf/open/floor/f13,/area/f13/chapel)
-"gj" = (/obj/structure/table_frame,/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"gk" = (/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/tunnel)
-"gl" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
-"gm" = (/turf/open/floor/f13{dir = 5; icon_state = "warndark"},/area/f13/tunnel)
-"gn" = (/turf/closed/mineral/random/high_chance,/area/f13/caves)
-"go" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/chapel)
-"gp" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
-"gq" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/chapel)
-"gr" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"gs" = (/obj/structure/tires/five,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"gt" = (/obj/structure/tires,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"gu" = (/obj/structure/decoration/vent/rusty{pixel_y = 32},/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"gv" = (/obj/structure/tires/two,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"gw" = (/obj/machinery/light/small/red{dir = 8},/turf/open/floor/plating/tunnel{icon_state = "tunnelchess"},/area/f13/sewer)
-"gx" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
-"gy" = (/obj/machinery/light/small/red,/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
-"gz" = (/obj/effect/decal/cleanable/shreds,/turf/open/indestructible/ground/mountain,/area/f13/caves)
-"gA" = (/turf/closed/wall/f13/store,/area/f13/hub)
-"gB" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/hub)
-"gC" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/hub)
-"gD" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/hub)
-"gE" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/hub)
-"gF" = (/turf/open/floor/f13,/area/f13/hub)
-"gG" = (/obj/structure/simple_door/blast,/turf/open/floor/plating/tunnel,/area/f13/sewer)
-"gH" = (/obj/structure/table,/obj/item/weapon/screwdriver,/turf/open/floor/plating/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
-"gI" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/hub)
-"gJ" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/hub)
-"gK" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/hub)
+"ga" = (/obj/structure/tires/half,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"gb" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelwastelandfull"},/area/f13/sewer)
+"gc" = (/obj/structure/simple_door/blast,/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/tunnel)
+"gd" = (/obj/item/weapon/reagent_containers/pill/patch/jet,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"ge" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/chapel)
+"gf" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
+"gg" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/chapel)
+"gh" = (/turf/open/floor/f13,/area/f13/chapel)
+"gi" = (/obj/structure/table_frame,/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"gj" = (/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/tunnel)
+"gk" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/tunnel)
+"gl" = (/turf/open/floor/f13{dir = 5; icon_state = "warndark"},/area/f13/tunnel)
+"gm" = (/turf/closed/mineral/random/high_chance,/area/f13/caves)
+"gn" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/chapel)
+"go" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/chapel)
+"gp" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/chapel)
+"gq" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"gr" = (/obj/structure/tires/five,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"gs" = (/obj/structure/tires,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"gt" = (/obj/structure/decoration/vent/rusty{pixel_y = 32},/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"gu" = (/obj/structure/tires/two,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"gv" = (/obj/machinery/light/small/red{dir = 8},/turf/open/floor/plating/tunnel{icon_state = "tunnelchess"},/area/f13/sewer)
+"gw" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/tunnel)
+"gx" = (/obj/machinery/light/small/red,/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
+"gy" = (/obj/effect/decal/cleanable/shreds,/turf/open/indestructible/ground/mountain,/area/f13/caves)
+"gz" = (/turf/closed/wall/f13/store,/area/f13/hub)
+"gA" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/hub)
+"gB" = (/obj/machinery/power/smes{charge = 5e+006},/turf/open/floor/f13,/area/f13/hub)
+"gC" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; pixel_x = 0},/turf/open/floor/f13,/area/f13/hub)
+"gD" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-8"; d2 = 8},/obj/machinery/power/apc{cell_type = 40000; pixel_y = 24},/turf/open/floor/f13,/area/f13/hub)
+"gE" = (/turf/open/floor/f13,/area/f13/hub)
+"gF" = (/obj/structure/simple_door/blast,/turf/open/floor/plating/tunnel,/area/f13/sewer)
+"gG" = (/obj/structure/table,/obj/item/weapon/screwdriver,/turf/open/floor/plating/tunnel{icon_state = "tunnelchess2"},/area/f13/sewer)
+"gH" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/power/terminal{icon_state = "term"; dir = 1},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/open/floor/f13,/area/f13/hub)
+"gI" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; pixel_x = 0},/turf/open/floor/f13,/area/f13/hub)
+"gJ" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13,/area/f13/hub)
+"gK" = (/obj/structure/car,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "gL" = (/obj/structure/table,/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
 "gM" = (/obj/structure/table,/obj/item/weapon/wrench,/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/sewer)
 "gN" = (/obj/item/weapon/gun/ballistic/automatic/pistol/n99,/turf/open/indestructible/ground/mountain,/area/f13/caves)
@@ -577,40 +577,40 @@ aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeV
 aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafaeWfqfafeeXfCeTfDeTfEeXeWeWeWfFfafceWaaeYeYeYeYeUeUeUeUfGeUeUeUeYeYeYfHfIeUfJeYeYaaadadeZfpfpfpfpeZadadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWfcfaeWeWfeeWeXfLeTeTfMfNeXfafOfafafPfaeWaaeYeYeYeUeUeUeYeUeUeYeUeUeUeUeYfQeUfReYeYeYaaadadeZeZeZeZeZeZadadaa
 aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfVfKeVaaeWfafafaeWfqfaeXfWfXeTfXfYeXfafafafafcfaeWaaeYeYeUeUeUeYeYeYeUeYeYeUeUeUeUeUeUeYeYeYeYaaadadfZfZfZfZfZfZadadaa
-aaadadgaadgbadadadadadadadadadadadadadadadadaaeVfKfSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfVfKeVaaeWfFgcfaeWeWeWeXeXeXgdeXeXeXfreWeWfafafaeWaaeYeYeUeUeYeYeYeYeYeYeYeYeYeYgeeUeYeYeYeYeYaaadadfZgfggghgifZadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfVfKeVaaeWfafafqeWgjgjfaeXgkglgmeXfafqfaeWfqfafaeWaaeYeUeUeUeYeYgngngneYeYeYeYeYeYeYeYfjfjfjeYaaadadfZgogpgigigqadadaa
-aaadadadadadddadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWeWfreWeWfcfagreXfCglfNeXgcfafaeWeWeWeWeWaaeYeUeUeUeUeYeYeYeYeYfkeUeUeYeYeYeYfjfjfjeYaaadadfZgigigigifZadadaa
-aaadgsgtgsadadadadgaadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafafceWfafqfaeXfCglfNeXfafafqfafcgufaeWaaeYeYeUeUeUfJeYeYeYeUeUeUeUeUeYeYeYfjfjfjeYaaadadfZfZfZfZfZfZadadaa
-aaadgtgvadgvadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWgwfafafefafafaeXgxglfNeXfafcgyfafafafqeWaaeYeYeYeYeUeUgzeUeYeUeUeYeYeUeUeUeYeYeYeYeYaaadadgAgAgAgAgAgAadadaa
-aaadadgsgbadadadadadadadadadadadadadadadadadaaeVeVeVeVeVgBeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfcfafaeWfafafceXfCglfNeXeWeWeWeWeWfafaeWaaeYfjeYeYeYeUeUeUeUeUeYeYeYeYeUeUeUeYeYeYeYaaadadgAgCgDgEgFgAadadaa
-aaadadadadadadadadadadadadadgbadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWeWgGeWeWgHfagreXfCglfNeXfafcfdfafqfafaeWaaeYfjeYeYeYeYeYeUeUeYeYgneYeYeUeUeUeUeUeYeYaaadadgAgIgJgFgFgKadadaa
-aaadadadadgaadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfcfafaeWgLgMgLeXfCglfNeXfqfefcfafafafqeWaaeYeYeYfkeUeYeYeYeYeYeYeYeYgNgOeUeYeYeUeUeYaaadadgAgFgFgFgFgAadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWgwfafceWeWeWeWeXgxglfNeXeXgdeXeXeXeXeXeXaaeYeYeUeUeUeUeUeYeUeUeYeYgPeUfweUeYeYeYgQeYaaadadgAgAgAgAgAgAadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafafaeWfafdfaeXfCglgRfgfgglfgfgfgfggmeXaaeYeUeUeUeYeUeUeUeUeUeUfQeUgSeUeYeYeYeYeYeYaaadadadadadadadadadadaa
-aagTgTgUgVadadadadgWgXgYgTgTgTgTgTgTgTgTgTgTaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWeWfreWeWfcfafPeXfCglglglglglglglglglfNeXaaeYeUgZeUeYeYeUeUeUeYeYeUeUeYeYeYeYeYfjfjeYaaadadhahahahahahaadadaa
-aahbhbhchdadadadadhehfhfhghbhbhbhhhbhbhbhbhbaaeVfKhifTfTfUeSeSeSeSeSeSeSeSeSfUfTfThjfKeVaaeWfqfafafqfafafqeXhkfXfXfXfXfXfXfXhlglfNeXaaeYeYeUeUeYeYeYeYeYeYeYeYeYeYgngngneYfjfjeYaaadadhahmhnhohphaadadaa
-aahqhqhrhshtadadadhuhrhvhvhwhqhqhqhqhqhqhxhqaaeVfKhifTfTfUeSeSeSeSeSeSeSeSeSfUfTfThjfKeVaaeWfafafqfafafcfaeXeXeXeXeXeXeXeXeXfCglhyeXaaeYeYeUeUeUeYeUeYeYeUeYeYeUeYgngngneYeYeYeYaaadadhahzhAhphphBadadaa
-aahqhqhvhvhshtadadhChDhrhvhvhwhqhxhqhqhEhqhqaaeVfKhifTfTfUeSeSeSeSeSeSeSeSeSfUfTfThjfKeVaaeWeWeWeWeWeWfafaeXhFhGhHeXhFhIhFeXfCglfNeXaaeYeYeYeUeUeUeUeUeYeUeUeUeUeYeYeYeYeYeUeUeYaaadadhahphphphphaadadaa
-aahJhJhJhJhJhKadadadhLhJhJhJhJhJhJhJhJhJhJhJaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWhMhNhNhOeWfafaeXfDeTeTeXeTfDeTeXhPglfNeXaaeYfjeYeYeYeUeUeUeUeUeUeUeUfJeYeYeYeUfHeUeYaaadadhahahahahahaadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWhQhRhRhSeWfqfaeXhFfDhFeXhTeThTeXfCglfNeXaaeYfjeYeYeYeYeYeUfQeUeYeYeUeUeUeYeUgzhUeUeYaaadadhVhVhVhVhVhVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWhWhRhRhXeWfahYeXeXfseXeXeXfseXeXfCglfNeXaaeYeYeYeUfQeYeYeYeYeYeYeYeYeUeUeUeUeUeUeYeYaaadadhVhZiaibichVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWidiehRifeWfafceXigglfgihfgglgmeXfCglfNeXaaeYeYhUiieUfJeYeYeYeUijeYeUeUeUeUeUeYeYeYeYaaadadhVikilicicimadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWeWeWineWeWfafaeXfLglglglglglioeXhPglfNeXaaeYfQeUiphUeYeYeYfkiqeUeUeUeUeUeYeYeYfjfjeYaaadadhVicicicichVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfcfafafafqfafaeXfLglglglglglireXfCglfNeXaaeYeUeUeYeYeYiseUeUeUeUeUfQeUeUeUeYeYfjfjeYaaadadhVhVhVhVhVhVadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfafafafafafafaeXhkfXfXglfXfXiteXfCglfNeXaaeYeUeUeUeYiueUiviweUeUeUeUeUeUeUfJeYeYeYeYaaadadixixixixixixadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafaeWeWeWeWeWeXeXeXeXfseXeXeXeXfCglhyeXaaeYeUeUeUeUeUeUeUeUeUeUiyeUeUhUeUeUfQeYeYeYaaadadixiziAiBiCixadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWgwfaeWfaiDfafaeXgkfgfgglfgfgfgfgiEglfNeXaaeYeYeUeUeUeUeYeYijeUhUeUeUeUeUeYeUeUeUiFeYaaadadixiGiHiCiCiIadadaa
-aaadadadadadadadadadadadadadadadddadadadadadaaeVfKiJfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTiKfKeVaaeWfafceWfafqfafceXgxglglglglglglglglglfNeXaaeYeYeYeUeUeYeYeYeYfQiLeUeYeYeYeYeYiMeUeYeYaaadadixiCiCiCiCixadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVfKiNiOfTfUeSeSeSeSeSeSeSeSeSfUfTfTiPfKeVaaeWfafaeWiQfafahYeXfCgliRfXfXfXfXfXfXfXfYeXaaeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYaaadadixixixixixixadadaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVfKiSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTiKfKeVaaeWfafaeWfafqiTfaeXfCglfNeXeXeXeXeXeXeXeXeXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWiUfaeWfafafagceXfCglfNeXglgleXfDiViWiXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXaaiYiYiYiYiYiYiYiYiYiYiYiYiYiYiY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafaeWeWfeeWeWeXgxglfNeXglglfseTfDfDiZeXjaglgljbglglglglglgljbglglglglglgleXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfafafafafafafqeXfCglfNeXglgleXfDeTeTfDeXjdglglglglglglglglglglglglglglglgleXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfafqfafafqfafafsglglgljeglgleXeXeXeXeXeXglglgleXeXeXeXeXeXeXjeeXeXeXeXfseXeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWeWineWeWeWineWeXfCglfNeXglgljbglglglgljbglglgleXjfhGjgeXfDeTeTeTjheXfDeTfDeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWjijijieWjijijieXeXfseXeXglglglglglglglglglglgleXjjeTeTfseTeTfDeTjkeXjjfDiWeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWjljmjleWjljmjleXjnglgleXeXeXeXeXeXeXeXeXeXeXeXeXiWiWeTeXeTfDeTfDeTeXiWjojjeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
-aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBgBeVeVeVeVeVeVeVaaeWeWeWeWeWeWeWeWeXeXglglgljpgljqgljpgljrgleXfsfseXeXeXeXeXeXeXfseXeXeXeXeXeXeXaaiYjcjcjcjcjcjcjsjcjcjcjcjcjciY
+aaadadadadgaadadadadadadadadadadadadadadadadaaeVfKfSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfVfKeVaaeWfFgbfaeWeWeWeXeXeXgceXeXeXfreWeWfafafaeWaaeYeYeUeUeYeYeYeYeYeYeYeYeYeYgdeUeYeYeYeYeYaaadadfZgegfggghfZadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfVfKeVaaeWfafafqeWgigifaeXgjgkgleXfafqfaeWfqfafaeWaaeYeUeUeUeYeYgmgmgmeYeYeYeYeYeYeYeYfjfjfjeYaaadadfZgngoghghgpadadaa
+aaadadadadadddadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWeWfreWeWfcfagqeXfCgkfNeXgbfafaeWeWeWeWeWaaeYeUeUeUeUeYeYeYeYeYfkeUeUeYeYeYeYfjfjfjeYaaadadfZghghghghfZadadaa
+aaadgrgsadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafafceWfafqfaeXfCgkfNeXfafafqfafcgtfaeWaaeYeYeUeUeUfJeYeYeYeUeUeUeUeUeYeYeYfjfjfjeYaaadadfZfZfZfZfZfZadadaa
+aaadgsguadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWgvfafafefafafaeXgwgkfNeXfafcgxfafafafqeWaaeYeYeYeYeUeUgyeUeYeUeUeYeYeUeUeUeYeYeYeYeYaaadadgzgzgzgzgzgzadadaa
+aaadadadgaadadadadadadadadadadadadadadadadadaaeVeVeVeVeVgAeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfcfafaeWfafafceXfCgkfNeXeWeWeWeWeWfafaeWaaeYfjeYeYeYeUeUeUeUeUeYeYeYeYeUeUeUeYeYeYeYaaadadgzgBgCgDgEgzadadaa
+aaadadadadadadadadadadadadadgaadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWeWgFeWeWgGfagqeXfCgkfNeXfafcfdfafqfafaeWaaeYfjeYeYeYeYeYeUeUeYeYgmeYeYeUeUeUeUeUeYeYaaadadgzgHgIgEgEgJadadaa
+aaadadadadgKadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfcfafaeWgLgMgLeXfCgkfNeXfqfefcfafafafqeWaaeYeYeYfkeUeYeYeYeYeYeYeYeYgNgOeUeYeYeUeUeYaaadadgzgEgEgEgEgzadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWgvfafceWeWeWeWeXgwgkfNeXeXgceXeXeXeXeXeXaaeYeYeUeUeUeUeUeYeUeUeYeYgPeUfweUeYeYeYgQeYaaadadgzgzgzgzgzgzadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafafaeWfafdfaeXfCgkgRfgfggkfgfgfgfggleXaaeYeUeUeUeYeUeUeUeUeUeUfQeUgSeUeYeYeYeYeYeYaaadadadadadadadadadadaa
+aagTgTgUgVadadadadgWgXgYgTgTgTgTgTgTgTgTgTgTaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWeWfreWeWfcfafPeXfCgkgkgkgkgkgkgkgkgkfNeXaaeYeUgZeUeYeYeUeUeUeYeYeUeUeYeYeYeYeYfjfjeYaaadadhahahahahahaadadaa
+aahbhbhchdadadadadhehfhfhghbhbhbhhhbhbhbhbhbaaeVfKhifTfTfUeSeSeSeSeSeSeSeSeSfUfTfThjfKeVaaeWfqfafafqfafafqeXhkfXfXfXfXfXfXfXhlgkfNeXaaeYeYeUeUeYeYeYeYeYeYeYeYeYeYgmgmgmeYfjfjeYaaadadhahmhnhohphaadadaa
+aahqhqhrhshtadadadhuhrhvhvhwhqhqhqhqhqhqhxhqaaeVfKhifTfTfUeSeSeSeSeSeSeSeSeSfUfTfThjfKeVaaeWfafafqfafafcfaeXeXeXeXeXeXeXeXeXfCgkhyeXaaeYeYeUeUeUeYeUeYeYeUeYeYeUeYgmgmgmeYeYeYeYaaadadhahzhAhphphBadadaa
+aahqhqhvhvhshtadadhChDhrhvhvhwhqhxhqhqhEhqhqaaeVfKhifTfTfUeSeSeSeSeSeSeSeSeSfUfTfThjfKeVaaeWeWeWeWeWeWfafaeXhFhGhHeXhFhIhFeXfCgkfNeXaaeYeYeYeUeUeUeUeUeYeUeUeUeUeYeYeYeYeYeUeUeYaaadadhahphphphphaadadaa
+aahJhJhJhJhJhKadadadhLhJhJhJhJhJhJhJhJhJhJhJaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWhMhNhNhOeWfafaeXfDeTeTeXeTfDeTeXhPgkfNeXaaeYfjeYeYeYeUeUeUeUeUeUeUeUfJeYeYeYeUfHeUeYaaadadhahahahahahaadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWhQhRhRhSeWfqfaeXhFfDhFeXhTeThTeXfCgkfNeXaaeYfjeYeYeYeYeYeUfQeUeYeYeUeUeUeYeUgyhUeUeYaaadadhVhVhVhVhVhVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWhWhRhRhXeWfahYeXeXfseXeXeXfseXeXfCgkfNeXaaeYeYeYeUfQeYeYeYeYeYeYeYeYeUeUeUeUeUeUeYeYaaadadhVhZiaibichVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWidiehRifeWfafceXiggkfgihfggkgleXfCgkfNeXaaeYeYhUiieUfJeYeYeYeUijeYeUeUeUeUeUeYeYeYeYaaadadhVikilicicimadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWeWeWineWeWfafaeXfLgkgkgkgkgkioeXhPgkfNeXaaeYfQeUiphUeYeYeYfkiqeUeUeUeUeUeYeYeYfjfjeYaaadadhVicicicichVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfcfafafafqfafaeXfLgkgkgkgkgkireXfCgkfNeXaaeYeUeUeYeYeYiseUeUeUeUeUfQeUeUeUeYeYfjfjeYaaadadhVhVhVhVhVhVadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfafafafafafafaeXhkfXfXgkfXfXiteXfCgkfNeXaaeYeUeUeUeYiueUiviweUeUeUeUeUeUeUfJeYeYeYeYaaadadixixixixixixadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafaeWeWeWeWeWeXeXeXeXfseXeXeXeXfCgkhyeXaaeYeUeUeUeUeUeUeUeUeUeUiyeUeUhUeUeUfQeYeYeYaaadadixiziAiBiCixadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWgvfaeWfaiDfafaeXgjfgfggkfgfgfgfgiEgkfNeXaaeYeYeUeUeUeUeYeYijeUhUeUeUeUeUeYeUeUeUiFeYaaadadixiGiHiCiCiIadadaa
+aaadadadadadadadadadadadadadadadddadadadadadaaeVfKiJfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTiKfKeVaaeWfafceWfafqfafceXgwgkgkgkgkgkgkgkgkgkfNeXaaeYeYeYeUeUeYeYeYeYfQiLeUeYeYeYeYeYiMeUeYeYaaadadixiCiCiCiCixadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVfKiNiOfTfUeSeSeSeSeSeSeSeSeSfUfTfTiPfKeVaaeWfafaeWiQfafahYeXfCgkiRfXfXfXfXfXfXfXfYeXaaeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYaaadadixixixixixixadadaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVfKiSfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTiKfKeVaaeWfafaeWfafqiTfaeXfCgkfNeXeXeXeXeXeXeXeXeXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaaeWiUfaeWfafafagbeXfCgkfNeXgkgkeXfDiViWiXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXeXaaiYiYiYiYiYiYiYiYiYiYiYiYiYiYiY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBeVeVeVeVeVeVeVeVaaeWfafaeWeWfeeWeWeXgwgkfNeXgkgkfseTfDfDiZeXjagkgkjbgkgkgkgkgkgkjbgkgkgkgkgkgkeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfafafafafafafqeXfCgkfNeXgkgkeXfDeTeTfDeXjdgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWfafqfafafqfafafsgkgkgkjegkgkeXeXeXeXeXeXgkgkgkeXeXeXeXeXeXeXjeeXeXeXeXfseXeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWeWineWeWeWineWeXfCgkfNeXgkgkjbgkgkgkgkjbgkgkgkeXjfhGjgeXfDeTeTeTjheXfDeTfDeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWjijijieWjijijieXeXfseXeXgkgkgkgkgkgkgkgkgkgkgkeXjjeTeTfseTeTfDeTjkeXjjfDiWeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVeVeSeSeSeVeVeVeVeVeVeVeVeVaaeWjljmjleWjljmjleXjngkgkeXeXeXeXeXeXeXeXeXeXeXeXeXiWiWeTeXeTfDeTfDeTeXiWjojjeXaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
+aaadadadadadadadadadadadadadadadadadadadadadaaeVeVeVeVeVeVeVeVfAeSeSeSfBgAeVeVeVeVeVeVeVaaeWeWeWeWeWeWeWeWeXeXgkgkgkjpgkjqgkjpgkjrgkeXfsfseXeXeXeXeXeXeXfseXeXeXeXeXeXeXaaiYjcjcjcjcjcjcjsjcjcjcjcjcjciY
 aaadadadadadadadadadadadadadadadadadadadadadaaeVfKfKfKfKfKeVeVeVeSeSeSeVeVeVfKfKfKfKfKeVaajtjujvjwjxjyjvjzjtjAjBjBjBjBjBjBjBjBjBjBjBjAjtjujCjvjvjCjzjtjAjDjAjtjujvjvjzjtaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
 aaadadadadadadadadadadadadadadadadadadadadadaaeVfKjEfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfTfKeVaajFjFjFjFjFjFjFjFjGjAjHjHjHjHjHjIjHjHjHjHjHjAjJjFjFjFjKjFjFjFjFjFjFjFjFjFjFjFjFaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY
 aaadadadadadadadadadadadadadadadadadadadadadaaeVfKjEfTfTfUeSeSeSeSeSeSeSeSeSfUfTfTfTfKeVaajLjLjMjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLjLaaiYjcjcjcjcjcjcjcjcjcjcjcjcjciY

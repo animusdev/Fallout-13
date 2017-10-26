@@ -16,7 +16,7 @@
 
 
 /obj/structure/ladder/initialize()
-	spawn(1200)
+	spawn(120)
 		for(var/obj/structure/ladder/L in world)
 			if(L.id == id)
 				if(L.height == (height - 1))
@@ -73,6 +73,15 @@
 
 	if(!is_ghost)
 		add_fingerprint(user)
+
+/obj/structure/ladder/MouseDrop_T(atom/movable/M, mob/living/user)
+	. = ..()
+	if(user.restrained() || user.stat || !in_range(user, src) || M == src)
+		return 0
+	add_fingerprint(user)
+	user.visible_message("[user] moved [M] by \the [src].","<span class='notice'>You move [M] to \the [src].</span>")
+	to_chat(M, "You moved to [src] by [user].")
+	use(M)
 
 /obj/structure/ladder/attack_hand(mob/user)
 	if(can_use(user))

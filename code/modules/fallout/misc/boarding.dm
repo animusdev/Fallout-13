@@ -20,7 +20,7 @@
 
 /obj/structure/barricade/wooden/planks/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/crowbar))
-		visible_message("<span class='danger'>[user] begins pry off a board...</span>")
+		visible_message("<span class='danger'>[user] begins to pry off a board...</span>")
 		if(do_after(user, 25, target = src))
 			visible_message("<span class='danger'>[user] pries off a board!</span>")
 			planks --

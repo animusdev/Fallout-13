@@ -65,6 +65,19 @@
 		return
 	M.OpenCraftingMenu()
 
+/obj/screen/wield
+	name = "wield"
+	icon = 'icons/mob/screen_midnight.dmi'
+	icon_state = "wield"
+	screen_loc = ui_wield
+
+/obj/screen/wield/Click()
+	var/mob/living/M = usr
+	var/obj/item/W = M.get_active_held_item()
+	if(W)
+		W.attempt_wield(M)
+
+
 /obj/screen/area_creator
 	name = "create new area"
 	icon = 'icons/mob/screen_midnight.dmi'
@@ -610,10 +623,10 @@
 	screen_loc = "11:6,2:-11"
 	wheel_buttons_type = /obj/screen/wheel_button/talk
 	buttons_names = list("help","hello","bye","stop","thanks","come","out", "yes", "no")
-	var/list/word_messages = list(list("Help!","Help me!"), list("Hello.", "Hi."), list("Bye.", "Goodbye."),\
-									list("Stop!", "Halt!"), list("Thanks.", "Thanks!", "Thank you."), \
-									list("Come.", "Follow me."), list("Out!", "Go away!", "Get out!"), \
-									list("Yes.", "Affirmative."), list("No.", "Negative"))
+	var/list/word_messages = list(list("Помогите!","Помогите мне!"), list("Привет.", "Здравствуй."), list("Пока.", "До свидания."),\
+									list("Стой!", "Стоять!"), list("Спасибо.", "Спасибо!", "Благодарю."), \
+									list("Идём.", "За мной."), list("Уходи!", "Убирайся!", "Свали!"), \
+									list("Да.", "Так точно."), list("Нет.", "Никак нет."))
 
 /obj/screen/wheel/talk/set_button(obj/screen/wheel_button/WB, button_number)
 	..()

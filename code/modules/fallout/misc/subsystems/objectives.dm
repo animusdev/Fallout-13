@@ -28,7 +28,8 @@ var/datum/subsystem/objectives/SSobjectives
 
 	for(var/F in human_factions)
 		var/datum/f13_faction/faction = human_factions[F]
-		give_random_faction(faction)
+		if(faction.id != "none")
+			give_random_faction(faction)
 
 /datum/subsystem/objectives/proc/on_roundend()
 	var/text
@@ -36,17 +37,19 @@ var/datum/subsystem/objectives/SSobjectives
 
 	for(var/F in human_factions)
 		var/datum/f13_faction/faction = human_factions[F]
+		if(!faction.objective)
+			continue
 		var/datum/f13_objective/O = faction.objective.parent
 		var/desc = faction.objective.data["custom_desc"]
 		if(!desc)
 			desc = O.desc
 		if(O.check_complete(faction.objective))
 //			give_points(mind, O.points)
-			text += "\t<b>[faction.full_name]</b> <font color='#00FF00'>succes</font> objective:<br>"
-			text += "\t\t <i>[desc]</i><br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#00FF00'>successfully completed</font> [O.name] objective:<br>"
+			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 		else
-			text += "\t<b>[faction.full_name]</b> <font color='#FF0000'>fail</font> objective:<br>"
-			text += "\t\t <i>[desc]</i><br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#FF0000'>has failed to complete</font> [O.name] objective:<br>"
+			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 
 	text += "<h2>Individual Objectives Results:</h2>"
 
@@ -59,11 +62,11 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(mind.objective))
 			give_points(mind, O.points)
-			text += "\t<b>[mind]</b> <font color='#00FF00'>succes</font> objective:<br>"
-			text += "\t\t <i>[desc]</i><br>"
+			text += "\t<b>[mind]</b> <font color='#00FF00'>successfully completed</font> [O.name] objective:<br>"
+			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 		else
-			text += "\t<b>[mind]</b> <font color='#FF0000'>fail</font> objective:<br>"
-			text += "\t\t <i>[desc]</i><br>"
+			text += "\t<b>[mind]</b> <font color='#FF0000'>has failed to complete</font> [O.name] objective:<br>"
+			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 	to_chat(world, text)
 
 	return 1

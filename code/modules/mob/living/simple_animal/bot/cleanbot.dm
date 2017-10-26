@@ -176,7 +176,7 @@
 		/obj/effect/decal/cleanable/pie_smudge,
 		/obj/effect/decal/cleanable/flour,
 		/obj/effect/decal/cleanable/ash,
-		/obj/effect/decal/cleanable/greenglow,
+		/obj/effect/decal/cleanable/waste,
 		/obj/effect/decal/cleanable/dirt,
 		/obj/effect/decal/cleanable/deadcockroach
 		)

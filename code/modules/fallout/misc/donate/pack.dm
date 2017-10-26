@@ -43,6 +43,8 @@
 		// Hats
 		/obj/item/clothing/head/f13/headscarf,
 		/obj/item/clothing/head/f13/pot,
+		// Goggles
+		/obj/item/clothing/glasses/regular,
 		// Uniforms
 		/obj/item/clothing/under/pants/f13/ghoul,
 		/obj/item/clothing/under/pants/f13/cloth,
@@ -59,7 +61,7 @@
 		// Items
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival,
 		/obj/item/weapon/dice/d6,
-		/obj/item/weapon/deck,
+		/obj/item/toy/cards/deck,
 		/obj/item/weapon/storage/fancy/cigarettes,
 		/obj/item/weapon/storage/fancy/cigarettes/tortoise,
 		/obj/item/weapon/storage/box/matches,
@@ -106,6 +108,7 @@
 	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Experience power of Fallout 13 with our accurately developed hat simulation system.<br>This set includes five additional hats!"
 	items = list(
 		/obj/item/clothing/head/soft/f13/baseball,
+		/obj/item/clothing/head/soft/f13/utility,
 		/obj/item/clothing/head/f13/cowboy,
 		/obj/item/clothing/head/f13/bandit,
 		/obj/item/clothing/head/f13/stormchaser,
@@ -116,7 +119,7 @@
 /datum/content_pack/wardrobe
 	name = "High fashion"
 	id = "wardrobe"
-	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of worn but sturdy work boots, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: Bonus item - a dark red wasteland wanderer jacket that can be zipped up as well.</i>"
+	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of worn but sturdy work boots, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: A dark red wasteland wanderer jacket can be zipped up as well.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/explorer,
 		// Uniforms
@@ -130,6 +133,7 @@
 		/obj/item/clothing/under/f13/lumberjack,
 		/obj/item/clothing/under/f13/machinist,
 		// Suits
+		/obj/item/clothing/suit/f13/puffer,
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 		)
 	price = 120
@@ -155,6 +159,23 @@
 		)
 	price = 180
 
+/datum/content_pack/followers
+	name = "Followers set"
+	id = "follower"
+	desc = "<b>Available to: All factions!</b> : If all doctors on the wasteland are dead, then who is he?"
+	items = list(
+		/obj/item/clothing/suit/toggle/labcoat/f13/followers,
+		/obj/item/clothing/under/f13/doctor,
+		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/gloves/color/latex,
+		/obj/item/clothing/glasses/regular,
+		/obj/item/clothing/mask/surgical/joy,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/weapon/storage/backpack/satchel/leather,
+		/obj/item/weapon/storage/firstaid
+	)
+	price = 220
+
 /datum/content_pack/trooper_armor
 	name = "Batallion themed NCR armor"
 	id = "trooper_armor"
@@ -178,7 +199,17 @@
 		/obj/item/clothing/suit/armor/f13/power_armor/ncr,
 		/obj/item/weapon/twohanded/largehammer,
 		/obj/item/weapon/gun/ballistic/automatic/rifle,
-		/obj/item/ammo_box/magazine/m308,
+		/obj/item/ammo_box/magazine/F13/m308
+		)
+	price = 180
+
+/datum/content_pack/tesla
+	name = "Enclave Tesla Regiment"
+	id = "tesla"
+	desc = "<b>Available to: Enclave faction only!</b><br>Become the Tesla Trooper with a set of badass tesla power armor!<br><i>Note: Tesla weapons do not apply to this pack (yet).</i>"
+	items = list(
+		/obj/item/clothing/head/helmet/power_armor/tesla,
+		/obj/item/clothing/suit/armor/f13/power_armor/tesla
 		)
 	price = 180
 
@@ -203,9 +234,15 @@
 	items = list(
 		/obj/item/weapon/golf10,
 		/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
-		/obj/item/ammo_box/magazine/m10mm_adv,
+		/obj/item/ammo_box/magazine/F13/m10,
+		/obj/item/ammo_box/magazine/F13/m10/heap,
+		/obj/item/ammo_box/magazine/F13/m10/armourpiercing,
+		/obj/item/ammo_box/magazine/F13/m10/toxic,
 		/obj/item/weapon/gun/ballistic/automatic/smg10mm,
-		/obj/item/ammo_box/magazine/m10mm_auto
+		/obj/item/ammo_box/magazine/F13/m10smg,
+		/obj/item/ammo_box/magazine/F13/m10smg/heap,
+		/obj/item/ammo_box/magazine/F13/m10smg/armourpiercing,
+		/obj/item/ammo_box/magazine/F13/m10smg/toxic,
 		)
 	price = 240
 
@@ -260,7 +297,7 @@
 		/obj/item/clothing/under/pants/f13/doom,
 		/obj/item/clothing/gloves/f13/doom,
 		/obj/item/clothing/shoes/f13/doom,
-		/obj/item/weapon/twohanded/required/chainsaw
+		/obj/item/weapon/storage/box/doom_slayer
 		)
 	price = 1000
 
@@ -331,3 +368,12 @@
 		/datum/job/colonel
 		)
 	price = 1000
+
+/datum/content_pack/glowing_ghoul
+	name = "Player race: Glowing Ghoul"
+	id = "glowing_ghoul"
+	desc = "<b>Available to: All factions except for the Enclave!</b><br>The following pack gives you ability to create a glowing ghoul character on round start!"
+	price = 500
+
+	on_set(client/client)
+		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)

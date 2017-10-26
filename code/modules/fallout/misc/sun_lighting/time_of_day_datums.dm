@@ -22,6 +22,13 @@
 	name = "Night"
 	color = "#050d29"
 	duration = 9000
+
 var/day=1
 var/month=1
 //var/year=2255
+
+proc/dodaychange()
+	day+=1
+	if(day>=31)
+		month+=1
+		day=1

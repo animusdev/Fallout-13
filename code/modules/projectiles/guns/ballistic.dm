@@ -37,7 +37,7 @@
 		if(casing_ejector)
 			AC.forceMove(get_turf(src)) //Eject casing onto ground.
 			AC.SpinAnimation(10, 1) //next gen special effects
-			playsound(loc, pick('sound/effects/wep_misc/casing_bounce1.ogg', 'sound/effects/wep_misc/casing_bounce2.ogg', 'sound/effects/wep_misc/casing_bounce3.ogg'), 50)
+			playsound(loc, pick('sound/effects/wep_misc/casing_bounce1.ogg', 'sound/effects/wep_misc/casing_bounce2.ogg', 'sound/effects/wep_misc/casing_bounce3.ogg'), 25)
 			chambered = null
 		else if(empty_chamber)
 			chambered = null
@@ -65,7 +65,7 @@
 			magazine = AM
 			magazine.forceMove(src)
 			to_chat(user, "<span class='notice'>You load a new magazine into \the [src].</span>")
-			playsound(loc, mag_load_sound, 50)
+			playsound(loc, mag_load_sound, 25)
 			chamber_round()
 			A.update_icon()
 			update_icon()
@@ -110,7 +110,8 @@
 			update_icon()
 			return
 	..()
-
+/*
+//This isn't used anymore.
 /obj/item/weapon/gun/ballistic/attack_self(mob/living/user)
 	var/obj/item/ammo_casing/AC = chambered //Find chambered round
 	if(magazine)
@@ -130,6 +131,41 @@
 		to_chat(user, "<span class='notice'>There's no magazine in \the [src].</span>")
 	update_icon()
 	return
+*/
+/obj/item/weapon/gun/ballistic/attack_self(mob/living/user)
+	var/obj/item/ammo_casing/AC = chambered //Find chambered round
+	if(magazine)
+		unload_ammo(user)
+	else if(chambered)
+		AC.loc = get_turf(src)
+		AC.SpinAnimation(10, 1)
+		chambered = null
+		to_chat(user, "<span class='notice'>You unload the round from \the [src]'s chamber.</span>")
+		playsound(loc, chamber_sound, 25)
+	else
+		to_chat(user, "<span class='notice'>There's no magazine in \the [src].</span>")
+	update_icon()
+	return
+
+/obj/item/weapon/gun/ballistic/proc/unload_ammo(mob/living/user)//Made this it's own proc so you can unload guns like in Bay.
+	if(magazine)//God this is so fucking dirty, but Shotguns and Revolvers still have magazines for some fucking reason. I'll fix it later - Matt
+		if(!istype(src,/obj/item/weapon/gun/ballistic/shotgun) && !istype(src,/obj/item/weapon/gun/ballistic/revolver))
+			magazine.forceMove(get_turf(src.loc))
+			user.put_in_hands(magazine)
+			magazine.update_icon()
+			magazine = null
+			to_chat(user, "<span class='notice'>You pull the magazine out of \the [src].</span>")
+			playsound(loc, mag_unload_sound, 25)
+			update_icon()
+
+/obj/item/weapon/gun/ballistic/attack_hand(mob/living/user)
+	if(user.get_inactive_held_item() == src)
+		if(magazine)//Yes I know this means you can't switch hands holding a gun. Working on it - Matt
+			unload_ammo(user)
+		else 
+			..()
+	else
+		..()
 
 
 /obj/item/weapon/gun/ballistic/examine(mob/user)

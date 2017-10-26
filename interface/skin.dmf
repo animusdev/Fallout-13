@@ -139,28 +139,31 @@ macro "default"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -372,28 +375,31 @@ macro "hotkeys"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -533,28 +539,31 @@ macro "robot-default"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -751,28 +760,31 @@ macro "robot-hotkeys"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F4"
-		command = "me"
+		command = "say"
 	elem 
 		name = "F5"
-		command = "asay"
+		command = "me"
 	elem 
 		name = "F6"
-		command = "Player-Panel"
-	elem 
-		name = "F7"
 		command = "Admin-PM"
 	elem 
-		name = "CTRL+F7"
-		command = "Stealth-Mode"
+		name = "F7"
+		command = "asay"
 	elem 
 		name = "F8"
 		command = "Invisimin"
 	elem 
+		name = "CTRL+F8"
+		command = "Stealth-Mode"
+	elem 
 		name = "F9"
 		command = "Aghost"
+	elem 
+		name = "F10"
+		command = "Player-Panel"
 	elem 
 		name = "F11"
 		command = "Toggle-Build-Mode-Self"
@@ -870,11 +882,11 @@ menu "menu"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 219,0
+		pos = 281,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
-		background-color = #3c4438
+		background-color = #ffffff
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		icon = 'icons\\ss13_64.png'
@@ -886,7 +898,7 @@ window "mainwindow"
 		size = 634x417
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #3c4438
+		background-color = #ffffff
 		saved-params = "splitter"
 		left = "mapwindow"
 		right = "infowindow"
@@ -935,11 +947,11 @@ window "mainwindow"
 window "mapwindow"
 	elem "mapwindow"
 		type = MAIN
-		pos = 219,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #3c4438
+		background-color = #ffffff
 		border = line
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
@@ -954,8 +966,8 @@ window "mapwindow"
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		font-family = "Verdana"
-		text-color = #3c4438
+		font-family = "Arial"
+		text-color = #000000
 		is-default = true
 		border = sunken
 		saved-params = "icon-size"
@@ -963,11 +975,11 @@ window "mapwindow"
 window "infowindow"
 	elem "infowindow"
 		type = MAIN
-		pos = 219,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #3c4438
+		background-color = #ffffff
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -981,7 +993,7 @@ window "infowindow"
 		size = 638x420
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #454943
+		background-color = none
 		saved-params = "splitter"
 		left = "statwindow"
 		right = "outputwindow"
@@ -992,9 +1004,8 @@ window "infowindow"
 		size = 104x20
 		anchor1 = 3,0
 		anchor2 = 19,0
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #3c4438
+		font-family = "Arial"
+		background-color = #ffffff
 		border = line
 		saved-params = "is-checked"
 		text = "Changelog"
@@ -1005,9 +1016,8 @@ window "infowindow"
 		size = 99x20
 		anchor1 = 19,0
 		anchor2 = 34,0
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #3c4438
+		font-family = "Arial"
+		background-color = #ffffff
 		border = line
 		saved-params = "is-checked"
 		text = "Rules"
@@ -1018,9 +1028,8 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 34,0
 		anchor2 = 50,0
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #3c4438
+		font-family = "Arial"
+		background-color = #ffffff
 		border = line
 		saved-params = "is-checked"
 		text = "Wiki"
@@ -1031,9 +1040,8 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 50,0
 		anchor2 = 66,0
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #3c4438
+		font-family = "Arial"
+		background-color = #ffffff
 		border = line
 		saved-params = "is-checked"
 		text = "Forum"
@@ -1044,9 +1052,8 @@ window "infowindow"
 		size = 99x20
 		anchor1 = 66,0
 		anchor2 = 81,0
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #3c4438
+		font-family = "Arial"
+		background-color = #ffffff
 		border = line
 		saved-params = "is-checked"
 		text = "Discord"
@@ -1057,9 +1064,8 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 81,0
 		anchor2 = 97,0
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #3c4438
+		font-family = "Arial"
+		background-color = #ffffff
 		border = line
 		saved-params = "is-checked"
 		text = "Report Issue"
@@ -1068,11 +1074,11 @@ window "infowindow"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
-		pos = 219,0
+		pos = 281,0
 		size = 640x453
 		anchor1 = none
 		anchor2 = none
-		background-color = #747a70
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1086,7 +1092,7 @@ window "outputwindow"
 		size = 638x428
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #747a70
+		background-color = none
 		is-disabled = true
 		saved-params = ""
 		auto-format = false
@@ -1094,11 +1100,11 @@ window "outputwindow"
 window "statwindow"
 	elem "statwindow"
 		type = MAIN
-		pos = 219,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #3c4438
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1110,15 +1116,13 @@ window "statwindow"
 	elem "stat"
 		type = INFO
 		pos = 0,0
-		size = 636x430
+		size = 636x808
 		anchor1 = 0,0
 		anchor2 = 100,100
-		font-family = "Verdana"
-		text-color = #ffffff
-		background-color = #454943
+		font-family = "Arial"
+		background-color = none
 		is-default = true
 		saved-params = ""
-		tab-text-color = #ffffff
-		tab-background-color = #3c4438
-		tab-font-family = "Verdana"
+		tab-background-color = none
+		tab-font-family = "Arial"
 

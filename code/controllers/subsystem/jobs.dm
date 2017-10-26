@@ -414,7 +414,7 @@ var/datum/subsystem/job/SSjob
 			S = pick(latejoin)
 		if(!S) //final attempt, lets find some area in the arrivals shuttle to spawn them in to.
 			world.log << "Couldn't find a round start latejoin spawn point."
-			for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
+			for(var/turf/T in get_area_turfs(/area/f13/wasteland))
 				if(!T.density)
 					var/clear = 1
 					for(var/obj/O in T)
@@ -425,7 +425,7 @@ var/datum/subsystem/job/SSjob
 						S = T
 						continue
 		if(istype(S, /obj/effect/landmark) && isturf(S.loc))
-			H.forceMove(S.loc)
+			H.forceMove(get_turf(pick(latejoin)))
 
 	if(H.mind)
 		H.mind.assigned_role = job.title

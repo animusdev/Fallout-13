@@ -13,12 +13,16 @@ var/datum/subsystem/content/SScontent
 
 	var/list/all_content_packs = list()
 
-	wait = 6000
+	wait = 600
+
+	var/DBConnection/Db = new()
 
 /datum/subsystem/content/New()
 	NEW_SS_GLOBAL(SScontent)
 
 /datum/subsystem/content/Initialize(start_timeofday)
+	Db.Connect("dbi:mysql:forum2:[sqladdress]:[sqlport]","[sqlfdbklogin]","[sqlfdbkpass]")
+
 	system_state = check_connection()
 	load_content_packs()
 	update_all_data()
@@ -28,7 +32,7 @@ var/datum/subsystem/content/SScontent
 	system_state = check_connection()
 
 /datum/subsystem/content/stat_entry()
-	..("[system_state]")
+	..("[system_state ? "Ok" : "Broken"]")
 
 /datum/subsystem/content/proc/update_all_data()
 	for(var/client/C)
@@ -37,45 +41,57 @@ var/datum/subsystem/content/SScontent
 /datum/subsystem/content/proc/get_pack(id)
 	return all_content_packs[id]
 
-/datum/subsystem/content/proc/get_data(ckey)
-/* //CURL using
-	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "action" = "full"), "temp"))
-		return file2text("temp")
-	return "-1:"
-*/
-	var/http[] = world.Export("[ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&action=full")
-	if(http)
-		return file2text(http["CONTENT"])
+/datum/subsystem/content/proc/get_user_money(ckey)
+	var/DBQuery/query = Db.NewQuery("SELECT sum FROM Z_donators WHERE byond = '[ckey]'")
+	query.Execute()
+
+	if(query.ErrorMsg() != "")
+		world.log << "SQL Error: [query.ErrorMsg()]"
+
+	if(!query.NextRow())
+		return 0
+
+	var/amount = round(text2num(query.item[1]))
+
+	query = dbcon.NewQuery("SELECT sum(price) FROM donate WHERE ckey = '[ckey]'")
+	query.Execute()
+
+	if(query.ErrorMsg() != "")
+		world.log << "SQL Error: [query.ErrorMsg()]"
+
+	if(!query.NextRow())
+		return amount
+
+	var/sum = round(text2num(query.item[1]))
+	return amount - sum
+
+/datum/subsystem/content/proc/get_packs(ckey)
+	var/list/results = list()
+	var/DBQuery/query = dbcon.NewQuery("SELECT pack FROM donate WHERE ckey = '[ckey]'")
+	query.Execute()
+
+	if(query.ErrorMsg() != "")
+		world.log << "SQL Error: [query.ErrorMsg()]"
+
+	while(query.NextRow())
+		results += query.item[1]
+
+	return results
 
 /datum/subsystem/content/proc/buy_pack(ckey, pack_id, price)
-/*
-	if(curl.Http(ADDRESS_DONATE_DATA, list("ckey" = "[ckey(ckey)]", "pack" = "[pack_id]", "price" = "[price]", "action" = "buy"), "temp"))
-		var/result = file2text("temp")
-		if(result == "SUCCESS")
-			return 1
-	return 0
-*/
-	var/http[] = world.Export("[ADDRESS_DONATE_DATA]?ckey=[ckey(ckey)]&pack=[pack_id]&price=[price]&action=buy")
-	if(http && file2text(http["CONTENT"]) == "SUCCESS")
+	if(system_state)
+		var/DBQuery/query = dbcon.NewQuery("INSERT INTO donate(ckey, pack, price) VALUES ('[ckey]', '[pack_id]', [price])");
+		query.Execute()
+
+		if(query.ErrorMsg() != "")
+			world.log << "SQL Error: [query.ErrorMsg()]"
+
 		return 1
 	return 0
 
+
 /datum/subsystem/content/proc/check_connection()
-/*
-	var/R = curl.Http(ADDRESS_DONATE_DATA, list("action" = "check"), "temp")
-	if(R)
-		var/data = file2text("temp")
-		if(data == "OK")
-			return "Work"
-		else
-			return "Error: " + data
-	return "Can't connect: [R]"
-*/
-	var/http[] = world.Export("[ADDRESS_DONATE_DATA]?action=check")
-	if(http)
-		if(file2text(http["CONTENT"]) == "OK")
-			return "OK"
-	return "Can't Connect"
+	return dbcon.IsConnected() && Db.IsConnected()
 
 /datum/subsystem/content/proc/load_content_packs()
 	var/list/all_packs = subtypesof(/datum/content_pack)

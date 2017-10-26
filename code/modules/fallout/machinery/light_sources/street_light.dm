@@ -11,7 +11,7 @@
 	flags = NODECONSTRUCT
 	layer = 8
 	pixel_x = 8
-	desc = "Obviously it's a raised source of light on the edge of a road or walkway.<br>Have you now satisfied your curiosity?"
+	desc = "Obviously, it's a raised source of light on the edge of a road or walkway.<br>Have you satisfied your curiosity?"
 	light_type = null
 	light_color = LIGHT_COLOR_YELLOW
 
