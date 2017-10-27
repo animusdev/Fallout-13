@@ -575,6 +575,14 @@
 	materials = list(MAT_METAL = 90000)
 	build_path = /obj/item/weapon/flamethrower/full/tank
 	category = list("hacked", "Security")
+	
+/datum/design/fexplosive_mine
+	name = "Explosive_mine"
+	id = "Explosive_mine"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 30000)
+	build_path = /obj/item/weapon/grenade/mine/explosive
+	category = list("hacked", "Security")
 
 /datum/design/rcd
 	name = "Rapid construction device (RCD)"
