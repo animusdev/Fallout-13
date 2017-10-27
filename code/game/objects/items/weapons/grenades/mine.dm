@@ -32,7 +32,7 @@
 /obj/item/weapon/grenade/mine/proc/mineEffect(mob/victim)																//Ñþäà ïèøåì ýôôåêò îò ìèíû. Ïî-õîðîøåìó, íóæíî ïåðåïèñàòü, ÷òîá þçàëñÿ ïðîê prime()
 	to_chat(victim, "<span class='danger'>*click*</span>")
 
-/obj/item/weapon/grenade/mine/Crossed(AM as mob|obj/item)
+/obj/item/weapon/grenade/mine/Crossed(AM as mob|obj)
 	if(active)
 		if(ismob(AM))
 			var/mob/MM = AM
