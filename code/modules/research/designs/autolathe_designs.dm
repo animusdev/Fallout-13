@@ -576,9 +576,9 @@
 	build_path = /obj/item/weapon/flamethrower/full/tank
 	category = list("hacked", "Security")
 	
-/datum/design/fexplosive_mine
-	name = "Explosive_mine"
-	id = "Explosive_mine"
+/datum/design/explosive_mine
+	name = "explosivemine"
+	id = "emine"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 30000)
 	build_path = /obj/item/weapon/grenade/mine/explosive
