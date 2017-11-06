@@ -17,7 +17,7 @@
 	health = 100
 	self_weight = 5
 
-	faction = list("hostile", "neutral", "city", "ncr")
+	faction = list("city", "ncr")
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/dog_charge1.ogg','sound/f13npc/dog_charge2.ogg','sound/f13npc/dog_charge3.ogg')
