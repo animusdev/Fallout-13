@@ -1274,6 +1274,7 @@
 #include "code\modules\fallout\mob\human\species\ghoul.dm"
 #include "code\modules\fallout\mob\human\species\supermutant.dm"
 #include "code\modules\fallout\mob\npc\brahmin.dm"
+#include "code\modules\fallout\mob\npc\securitron.dm"
 #include "code\modules\fallout\mob\npc\cazador.dm"
 #include "code\modules\fallout\mob\npc\deathclaw.dm"
 #include "code\modules\fallout\mob\npc\eyebot.dm"
