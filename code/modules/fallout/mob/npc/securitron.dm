@@ -51,11 +51,3 @@
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
-
-/mob/living/simple_animal/hostile/securitron/handle_automated_speech()
-	..()
-	if(speech_buffer.len && prob(speech_shuffle_rate)) //shuffle out a phrase and add in a new one
-		if(speak.len)
-			speak.Remove(pick(speak))
-
-		speak.Add(pick(speech_buffer))
