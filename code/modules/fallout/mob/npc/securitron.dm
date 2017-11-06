@@ -22,10 +22,10 @@
 	self_weight = 200
 	healable = 0
 
-	faction = list("hostile", "neutral", "city", "ncr")
+	faction = list("neutral", "city", "ncr")
 
-	emote_hear = list("подмигнул.")
-	speak = list("Уот-так-уот!","Представьте! Целых 510 лет! Мы столько не живем.", "Руки вверх! Вы арестованы! Ха-ха, шутка.")
+	emote_hear = list("ГЇГ®Г¤Г¬ГЁГЈГ­ГіГ«.")
+	speak = list("Г“Г®ГІ-ГІГ ГЄ-ГіГ®ГІ!","ГЏГ°ГҐГ¤Г±ГІГ ГўГјГІГҐ! Г–ГҐГ«Г»Гµ 510 Г«ГҐГІ! ГЊГ» Г±ГІГ®Г«ГјГЄГ® Г­ГҐ Г¦ГЁГўГҐГ¬.", "ГђГіГЄГЁ ГўГўГҐГ°Гµ! Г‚Г» Г Г°ГҐГ±ГІГ®ГўГ Г­Г»! Г•Г -ГµГ , ГёГіГІГЄГ .")
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
 
