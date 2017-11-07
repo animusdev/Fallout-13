@@ -24,8 +24,8 @@
 
 	faction = list("neutral", "city", "ncr")
 
-	emote_hear = list("ïîäìèãíóë.")
-	speak = list("Óîò-òàê-óîò!","Ïðåäñòàâüòå! Öåëûõ 510 ëåò! Ìû ñòîëüêî íå æèâåì.", "Ðóêè ââåðõ! Âû àðåñòîâàíû! Õà-õà, øóòêà.")
+	emote_hear = list("подмигнул.")
+	speak = list("Уот так уот!","Представьте! Целых 510 лет! Мы столько не живем.", "Руки вверх, вы арестованы! Ха-ха, шутка.")
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
 
