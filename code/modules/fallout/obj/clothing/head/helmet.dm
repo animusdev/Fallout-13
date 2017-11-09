@@ -637,12 +637,14 @@
 /obj/item/clothing/head/helmet/knight/f13/metal
 	name = "metal helmet"
 	desc = "A metal helmet forged in fire.<br>Specially designed for the most fearsome and strongest warriors of the wasteland."
+	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 
 /obj/item/clothing/head/helmet/knight/f13/rider
 	name = "rider helmet" //Not raider. Rider.
 	desc = "A fancy dark metal helmet with orange spray-painted flames."
+	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "rider"
 	item_state = "rider"
 	self_weight = 1
